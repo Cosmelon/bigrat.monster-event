@@ -1,0 +1,21 @@
+#     ___   ______
+#    /   | / ____/ 
+#   / /| |/ /      By jonagamerpro1234
+#  / ___ / /___    Version 1.6.0
+# /_/  |_\____/    Thanks for using AdvancedChat <3
+#  
+Players:
+  Cosmelon:
+    UUID: 7b563b90-23d8-4591-9c8b-c65c0fd108ca
+    Command:
+      '2021-12-26':
+        00:19:00: /gamemode creative
+        00:19:07: /advancedchat help
+        00:19:22: /ac color
+        00:20:38: /ac player Cosmelon Blue
+        00:20:50: /ac info
+        00:20:56: /cc
+        00:27:08: /ok
+        00:30:09: /ok
+        00:33:08: /vault-info
+        00:33:25: /op Cosmelon

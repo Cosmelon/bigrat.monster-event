@@ -1,0 +1,442 @@
+[00:00:08] [Server thread/INFO]: [Yellow] SpiceBoat fell out of the world
+[00:00:09] [Server thread/INFO]: [Green] fruitlukes fell out of the world
+[00:00:17] [Server thread/INFO]: [Blue] Cosmelon fell out of the world
+[00:00:22] [Server thread/INFO]: Cosmelon issued server command: /function main:spleef/startspleef
+[00:00:22] [Server thread/INFO]: [[Blue] Cosmelon: Executed 103 commands from function 'main:spleef/startspleef']
+[00:00:57] [Server thread/INFO]: [Red] PokeyFinn fell out of the world
+[00:01:08] [Server thread/INFO]: Cosmelon issued server command: /imagemap download piepe https://media.discordapp.net/attachments/720764802552823828/936848261833166888/image0.png?width=649&height=683
+[00:01:22] [Server thread/INFO]: Cosmelon issued server command: /imagemap place piepe
+[00:01:27] [Server thread/INFO]: Cosmelon issued server command: /gmc
+[00:01:27] [Server thread/INFO]: [[Blue] Cosmelon: Set own game mode to Creative Mode]
+[00:02:33] [Server thread/INFO]: Cosmelon issued server command: /tp PokeyFinn
+[00:02:33] [Server thread/INFO]: [[Blue] Cosmelon: Teleported [Blue] Cosmelon to [Red] PokeyFinn]
+[00:02:39] [Server thread/INFO]: PokeyFinn issued server command: /gamemode creative PokeyFinn
+[00:02:39] [Server thread/INFO]: [[Red] PokeyFinn: Set own game mode to Creative Mode]
+[00:02:47] [Server thread/INFO]: PokeyFinn issued server command: /gamemode creative PokeyFinn
+[00:02:47] [Server thread/INFO]: [[Red] PokeyFinn: Set own game mode to Creative Mode]
+[00:02:48] [Server thread/INFO]: PokeyFinn issued server command: /gamemode creative
+[00:02:48] [Server thread/INFO]: [[Red] PokeyFinn: Set own game mode to Creative Mode]
+[00:02:51] [Server thread/INFO]: PokeyFinn issued server command: /gamemode adventure
+[00:02:51] [Server thread/INFO]: [[Red] PokeyFinn: Set own game mode to Adventure Mode]
+[00:02:53] [Server thread/INFO]: Cosmelon issued server command: /gma
+[00:02:53] [Server thread/INFO]: [[Blue] Cosmelon: Set own game mode to Adventure Mode]
+[00:03:09] [Server thread/INFO]: Cosmelon issued server command: /thru
+[00:03:40] [Server thread/INFO]: Cosmelon issued server command: /cls
+[00:03:40] [Server thread/INFO]: [[Blue] Cosmelon: Removed 28 items from player [Blue] Cosmelon]
+[00:03:49] [Server thread/INFO]: Cosmelon issued server command: /clsw
+[00:03:51] [Server thread/INFO]: Cosmelon issued server command: /cls
+[00:03:51] [Server thread/INFO]: [[Blue] Cosmelon: Removed 44 items from player [Blue] Cosmelon]
+[00:04:53] [Server thread/INFO]: [Blue] Cosmelon fell out of the world
+[00:04:58] [Server thread/INFO]: Cosmelon issued server command: /kill SpiceBoat
+[00:04:58] [Server thread/INFO]: [Yellow] SpiceBoat fell out of the world
+[00:04:58] [Server thread/INFO]: [[Blue] Cosmelon: Killed [Yellow] SpiceBoat]
+[00:05:35] [Server thread/INFO]: Cosmelon issued server command: /function main:spleef/endspleef
+[00:05:35] [Server thread/INFO]: [[Blue] Cosmelon: Executed 7 commands from function 'main:spleef/endspleef']
+[00:06:03] [Server thread/INFO]: [Green] fruitlukes fell out of the world
+[00:06:10] [Server thread/INFO]: [Green] fruitlukes fell out of the world
+[00:06:18] [Server thread/INFO]: [Yellow] SpiceBoat fell out of the world
+[00:06:18] [Server thread/INFO]: [Green] fruitlukes fell out of the world
+[00:06:25] [Server thread/INFO]: [Yellow] SpiceBoat fell out of the world
+[00:06:25] [Server thread/INFO]: [Green] fruitlukes fell out of the world
+[00:06:32] [Server thread/INFO]: [Yellow] SpiceBoat fell out of the world
+[00:06:39] [Server thread/INFO]: [Yellow] SpiceBoat fell out of the world
+[00:06:41] [Server thread/INFO]: Cosmelon issued server command: /function main:lobby
+[00:06:41] [Server thread/INFO]: [[Blue] Cosmelon: Executed 14 commands from function 'main:lobby']
+[00:06:49] [Server thread/INFO]: Cosmelon issued server command: /telemenu
+[00:06:49] [Server thread/INFO]: [[Blue] Cosmelon: Executed 21 commands from function 'main:telemenu']
+[00:06:51] [Server thread/INFO]: Cosmelon issued server command: /tp @s -497 66 -461
+[00:06:51] [Server thread/INFO]: [[Blue] Cosmelon: Teleported [Blue] Cosmelon to -496.500000, 66.000000, -460.500000]
+[00:07:06] [Server thread/INFO]: Cosmelon issued server command: /function main:spleef/reloadfloor
+[00:07:06] [Server thread/INFO]: [[Blue] Cosmelon: Executed 77 commands from function 'main:spleef/reloadfloor']
+[00:07:11] [Server thread/INFO]: SpiceBoat lost connection: Disconnected
+[00:07:11] [Server thread/INFO]: SpiceBoat left the game
+[00:07:21] [Server thread/INFO]: PokeyFinn issued server command: /give PokeyFinn minecraft:netherite_sword
+[00:07:21] [Server thread/INFO]: [[Red] PokeyFinn: Gave 1 [Netherite Sword] to [Red] PokeyFinn]
+[00:07:24] [Server thread/INFO]: fruitlukes lost connection: Disconnected
+[00:07:24] [Server thread/INFO]: fruitlukes left the game
+[00:07:25] [Server thread/INFO]: Cosmelon issued server command: /function main:spleef/endspleef
+[00:07:25] [Server thread/INFO]: [[Blue] Cosmelon: Executed 7 commands from function 'main:spleef/endspleef']
+[00:08:09] [User Authenticator #5/INFO]: UUID of player fruitlukes is 49de31c2-9b19-4ea8-96d0-8b51ff16b851
+[00:08:09] [Server thread/INFO]: [Green] fruitlukes joined the game
+[00:08:09] [Server thread/INFO]: fruitlukes[/73.196.221.176:39123] logged in with entity id 12854 at ([World]-191.26529492727602, 12.0, 129.77416626502605)
+[00:08:11] [Server thread/INFO]: fruitlukes issued server command: /gamemode creative
+[00:08:11] [Server thread/INFO]: [[Green] fruitlukes: Set own game mode to Creative Mode]
+[00:08:14] [Server thread/INFO]: fruitlukes issued server command: /telemenu
+[00:08:14] [Server thread/INFO]: [[Green] fruitlukes: Executed 21 commands from function 'main:telemenu']
+[00:08:16] [Server thread/INFO]: fruitlukes issued server command: /tp @s -1984 133 -1984
+[00:08:16] [Server thread/INFO]: [[Green] fruitlukes: Teleported [Green] fruitlukes to -1983.500000, 133.000000, -1983.500000]
+[00:09:38] [Server thread/INFO]: PokeyFinn issued server command: /tp fruitlukes
+[00:09:38] [Server thread/INFO]: [[Red] PokeyFinn: Teleported [Red] PokeyFinn to [Green] fruitlukes]
+[00:09:50] [Server thread/INFO]: PokeyFinn issued server command: /gamemode creative
+[00:09:50] [Server thread/INFO]: [[Red] PokeyFinn: Set own game mode to Creative Mode]
+[00:16:18] [Server thread/INFO]: PokeyFinn lost connection: Disconnected
+[00:16:18] [Server thread/INFO]: PokeyFinn left the game
+[00:16:18] [Server thread/INFO]: fruitlukes lost connection: Disconnected
+[00:16:18] [Server thread/INFO]: fruitlukes left the game
+[00:16:18] [Server thread/INFO]: Cosmelon lost connection: Disconnected
+[00:16:18] [Server thread/INFO]: Cosmelon left the game
+[00:23:51] [User Authenticator #7/INFO]: UUID of player fruitlukes is 49de31c2-9b19-4ea8-96d0-8b51ff16b851
+[00:23:51] [User Authenticator #8/INFO]: UUID of player PokeyFinn is ce542a32-105c-4462-b100-956e081e752a
+[00:23:51] [User Authenticator #6/INFO]: UUID of player Cosmelon is 7b563b90-23d8-4591-9c8b-c65c0fd108ca
+[00:23:51] [Server thread/INFO]: [Green] fruitlukes joined the game
+[00:23:51] [Server thread/INFO]: fruitlukes[/73.196.221.176:47925] logged in with entity id 12869 at ([World]-2023.850685946311, 89.67277405204895, -2043.6631827595077)
+[00:23:51] [Server thread/INFO]: [Blue] Cosmelon joined the game
+[00:23:51] [Server thread/INFO]: Cosmelon[/74.137.222.126:37151] logged in with entity id 12871 at ([World]-504.0507632719803, 45.0, -483.45423726867256)
+[00:23:51] [Server thread/INFO]: [Red] PokeyFinn joined the game
+[00:23:51] [Server thread/INFO]: PokeyFinn[/96.227.116.172:41492] logged in with entity id 12870 at ([World]-2052.27684216306, 99.45000021156757, -2058.699999988079)
+[00:24:39] [Server thread/INFO]: fruitlukes lost connection: Disconnected
+[00:24:39] [Server thread/INFO]: fruitlukes left the game
+[00:25:16] [Server thread/INFO]: Cosmelon issued server command: /reload confirm
+[00:25:16] [Server thread/INFO]: Cosmelon: Please note that this command is not supported and may cause issues when using some plugins.
+[00:25:16] [Server thread/INFO]: Cosmelon: If you encounter any issues please use the /stop command to restart your server.
+[00:25:16] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[00:25:16] [Server thread/INFO]: Using 4 threads for Netty based IO
+[00:25:16] [Server thread/INFO]: -------- World Settings For [World] --------
+[00:25:16] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+[00:25:16] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+[00:25:16] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+[00:25:16] [Server thread/INFO]: Experience Merge Radius: 3.0
+[00:25:16] [Server thread/INFO]: Cactus Growth Modifier: 100%
+[00:25:16] [Server thread/INFO]: Cane Growth Modifier: 100%
+[00:25:16] [Server thread/INFO]: Melon Growth Modifier: 100%
+[00:25:16] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+[00:25:16] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+[00:25:16] [Server thread/INFO]: Sapling Growth Modifier: 100%
+[00:25:16] [Server thread/INFO]: Beetroot Growth Modifier: 100%
+[00:25:16] [Server thread/INFO]: Carrot Growth Modifier: 100%
+[00:25:16] [Server thread/INFO]: Potato Growth Modifier: 100%
+[00:25:16] [Server thread/INFO]: Wheat Growth Modifier: 100%
+[00:25:16] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+[00:25:16] [Server thread/INFO]: Vine Growth Modifier: 100%
+[00:25:16] [Server thread/INFO]: Cocoa Growth Modifier: 100%
+[00:25:16] [Server thread/INFO]: Bamboo Growth Modifier: 100%
+[00:25:16] [Server thread/INFO]: SweetBerry Growth Modifier: 100%
+[00:25:16] [Server thread/INFO]: Kelp Growth Modifier: 100%
+[00:25:16] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Ra 48 / Mi 16 / Tiv true
+[00:25:16] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 1 Hopper Amount: 1
+[00:25:16] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Desert: 14357617 Igloo: 14357618 Jungle: 14357619 Swamp: 14357620 Monument: 10387313 Ocean: 14357621 Shipwreck: 165745295 End City: 10387313 Slime: 987234911 Bastion: 30084232 Fortress: 30084232 Mansion: 10387319 Fossil: 14357921 Portal: 34222645
+[00:25:16] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+[00:25:16] [Server thread/INFO]: Max TNT Explosions: 100
+[00:25:16] [Server thread/INFO]: Item Merge Radius: 2.5
+[00:25:16] [Server thread/INFO]: Item Despawn Rate: 6000
+[00:25:16] [Server thread/INFO]: View Distance: 10
+[00:25:16] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+[00:25:16] [Server thread/INFO]: Mob Spawn Range: 6
+[00:25:16] [Server thread/INFO]: Arrow Despawn Rate: 1200 Trident Respawn Rate:1200
+[00:25:16] [Server thread/INFO]: -------- World Settings For [World_nether] --------
+[00:25:16] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+[00:25:16] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+[00:25:16] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+[00:25:16] [Server thread/INFO]: Experience Merge Radius: 3.0
+[00:25:16] [Server thread/INFO]: Cactus Growth Modifier: 100%
+[00:25:16] [Server thread/INFO]: Cane Growth Modifier: 100%
+[00:25:16] [Server thread/INFO]: Melon Growth Modifier: 100%
+[00:25:16] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+[00:25:16] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+[00:25:16] [Server thread/INFO]: Sapling Growth Modifier: 100%
+[00:25:16] [Server thread/INFO]: Beetroot Growth Modifier: 100%
+[00:25:16] [Server thread/INFO]: Carrot Growth Modifier: 100%
+[00:25:16] [Server thread/INFO]: Potato Growth Modifier: 100%
+[00:25:16] [Server thread/INFO]: Wheat Growth Modifier: 100%
+[00:25:16] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+[00:25:16] [Server thread/INFO]: Vine Growth Modifier: 100%
+[00:25:16] [Server thread/INFO]: Cocoa Growth Modifier: 100%
+[00:25:16] [Server thread/INFO]: Bamboo Growth Modifier: 100%
+[00:25:16] [Server thread/INFO]: SweetBerry Growth Modifier: 100%
+[00:25:16] [Server thread/INFO]: Kelp Growth Modifier: 100%
+[00:25:16] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Ra 48 / Mi 16 / Tiv true
+[00:25:16] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 1 Hopper Amount: 1
+[00:25:16] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Desert: 14357617 Igloo: 14357618 Jungle: 14357619 Swamp: 14357620 Monument: 10387313 Ocean: 14357621 Shipwreck: 165745295 End City: 10387313 Slime: 987234911 Bastion: 30084232 Fortress: 30084232 Mansion: 10387319 Fossil: 14357921 Portal: 34222645
+[00:25:16] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+[00:25:16] [Server thread/INFO]: Max TNT Explosions: 100
+[00:25:16] [Server thread/INFO]: Item Merge Radius: 2.5
+[00:25:16] [Server thread/INFO]: Item Despawn Rate: 6000
+[00:25:16] [Server thread/INFO]: View Distance: 10
+[00:25:16] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+[00:25:16] [Server thread/INFO]: Mob Spawn Range: 6
+[00:25:16] [Server thread/INFO]: Arrow Despawn Rate: 1200 Trident Respawn Rate:1200
+[00:25:16] [Server thread/INFO]: -------- World Settings For [World_the_end] --------
+[00:25:16] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+[00:25:16] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+[00:25:16] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+[00:25:16] [Server thread/INFO]: Experience Merge Radius: 3.0
+[00:25:16] [Server thread/INFO]: Cactus Growth Modifier: 100%
+[00:25:16] [Server thread/INFO]: Cane Growth Modifier: 100%
+[00:25:16] [Server thread/INFO]: Melon Growth Modifier: 100%
+[00:25:16] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+[00:25:16] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+[00:25:16] [Server thread/INFO]: Sapling Growth Modifier: 100%
+[00:25:16] [Server thread/INFO]: Beetroot Growth Modifier: 100%
+[00:25:16] [Server thread/INFO]: Carrot Growth Modifier: 100%
+[00:25:16] [Server thread/INFO]: Potato Growth Modifier: 100%
+[00:25:16] [Server thread/INFO]: Wheat Growth Modifier: 100%
+[00:25:16] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+[00:25:16] [Server thread/INFO]: Vine Growth Modifier: 100%
+[00:25:16] [Server thread/INFO]: Cocoa Growth Modifier: 100%
+[00:25:16] [Server thread/INFO]: Bamboo Growth Modifier: 100%
+[00:25:16] [Server thread/INFO]: SweetBerry Growth Modifier: 100%
+[00:25:16] [Server thread/INFO]: Kelp Growth Modifier: 100%
+[00:25:16] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Ra 48 / Mi 16 / Tiv true
+[00:25:16] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 1 Hopper Amount: 1
+[00:25:16] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Desert: 14357617 Igloo: 14357618 Jungle: 14357619 Swamp: 14357620 Monument: 10387313 Ocean: 14357621 Shipwreck: 165745295 End City: 10387313 Slime: 987234911 Bastion: 30084232 Fortress: 30084232 Mansion: 10387319 Fossil: 14357921 Portal: 34222645
+[00:25:16] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+[00:25:16] [Server thread/INFO]: Max TNT Explosions: 100
+[00:25:16] [Server thread/INFO]: Item Merge Radius: 2.5
+[00:25:16] [Server thread/INFO]: Item Despawn Rate: 6000
+[00:25:16] [Server thread/INFO]: View Distance: 10
+[00:25:16] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+[00:25:16] [Server thread/INFO]: Mob Spawn Range: 6
+[00:25:16] [Server thread/INFO]: Arrow Despawn Rate: 1200 Trident Respawn Rate:1200
+[00:25:16] [Server thread/INFO]: [LPC] Disabling LPC v3.2.0
+[00:25:16] [Server thread/INFO]: [ImageMaps] Disabling ImageMaps v1.0.10
+[00:25:16] [Server thread/INFO]: [WorldEdit] Disabling WorldEdit v7.2.7+9f3e795
+[00:25:16] [Server thread/INFO]: Unregistering com.sk89q.worldedit.bukkit.BukkitServerInterface from WorldEdit
+[00:25:16] [Server thread/INFO]: [BroadcastDC] Disabling BroadcastDC v1.0
+[00:25:16] [Server thread/INFO]: [BroadcastDC] [STDOUT] [BroadcastDC] ShutDown
+[00:25:16] [Server thread/WARN]: Nag author(s): '[9e_Docteur]' of 'BroadcastDC' about their usage of System.out/err.print. Please use your plugin's logger instead (JavaPlugin#getLogger).
+[00:25:16] [Server thread/INFO]: [SpigotPing] Disabling SpigotPing v2.6
+[00:25:16] [Server thread/INFO]: [SpigotPing] Cancelling tasks...
+[00:25:16] [Server thread/INFO]: [LuckPerms] Disabling LuckPerms v5.3.98
+[00:25:16] [Server thread/INFO]: [LuckPerms] Starting shutdown process...
+[00:25:16] [Server thread/INFO]: [LuckPerms] Closing messaging service...
+[00:25:16] [Server thread/INFO]: [LuckPerms] Closing storage...
+[00:25:16] [Server thread/INFO]: [me.lucko.luckperms.lib.hikari.HikariDataSource] luckperms-hikari - Shutdown initiated...
+[00:25:16] [Server thread/INFO]: [me.lucko.luckperms.lib.hikari.HikariDataSource] luckperms-hikari - Shutdown completed.
+[00:25:16] [Server thread/INFO]: [LuckPerms] Goodbye!
+[00:25:16] [Server thread/INFO]: Reloading ResourceManager: Default, bukkit, lukerealm
+[00:25:16] [Server thread/INFO]: Loaded 7 recipes
+[00:25:17] [Server thread/WARN]: Legacy plugin BroadcastDC v1.0 does not specify an api-version.
+[00:25:17] [Server thread/INFO]: [LuckPerms] Loading LuckPerms v5.3.98
+[00:25:17] [Server thread/INFO]: [SpigotPing] Loading SpigotPing v2.6
+[00:25:17] [Server thread/INFO]: [BroadcastDC] Loading BroadcastDC v1.0
+[00:25:17] [Server thread/INFO]: [WorldEdit] Loading WorldEdit v7.2.7+9f3e795
+[00:25:17] [Server thread/INFO]: Got request to register class com.sk89q.worldedit.bukkit.BukkitServerInterface with WorldEdit [com.sk89q.worldedit.extension.platform.PlatformManager@71646daa]
+[00:25:17] [Server thread/INFO]: [ImageMaps] Loading ImageMaps v1.0.10
+[00:25:17] [Server thread/INFO]: [LPC] Loading LPC v3.2.0
+[00:25:17] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[00:25:17] [Server thread/INFO]: [LuckPerms] Enabling LuckPerms v5.3.98
+[00:25:17] [Server thread/INFO]:         __    
+[00:25:17] [Server thread/INFO]:   |    |__)   LuckPerms v5.3.98
+[00:25:17] [Server thread/INFO]:   |___ |      Running on Bukkit - Paper
+[00:25:17] [Server thread/INFO]: 
+[00:25:17] [Server thread/INFO]: [LuckPerms] Loading configuration...
+[00:25:17] [Server thread/INFO]: [LuckPerms] Loading storage provider... [MYSQL]
+[00:25:17] [Server thread/INFO]: [me.lucko.luckperms.lib.hikari.HikariDataSource] luckperms-hikari - Starting...
+[00:25:17] [Server thread/INFO]: [me.lucko.luckperms.lib.hikari.HikariDataSource] luckperms-hikari - Start completed.
+[00:25:18] [Server thread/INFO]: [LuckPerms] Loading messaging service... [SQL]
+[00:25:18] [Server thread/INFO]: [LuckPerms] Loading internal permission managers...
+[00:25:18] [Server thread/INFO]: [LuckPerms] Performing initial data load...
+[00:25:19] [Server thread/INFO]: [LuckPerms] Successfully enabled. (took 1792ms)
+[00:25:19] [Server thread/INFO]: [WorldEdit] Enabling WorldEdit v7.2.7+9f3e795
+[00:25:19] [Server thread/INFO]: Registering commands with com.sk89q.worldedit.bukkit.BukkitServerInterface
+[00:25:19] [Server thread/INFO]: WEPIF: Using the Bukkit Permissions API.
+[00:25:19] [Server thread/WARN]: [WorldEdit] Server reload detected. This may cause various issues with WorldEdit and dependent plugins.
+[00:25:19] [Server thread/INFO]: Using com.sk89q.worldedit.bukkit.adapter.impl.v1_17_R1_2.PaperweightAdapter as the Bukkit adapter
+[00:25:19] [Server thread/INFO]: [SpigotPing] Enabling SpigotPing v2.6
+[00:25:19] [Server thread/INFO]: [SpigotPing] The tablist is disabled, the ping will not be shown as a prefix. You can change this option in the config.
+[00:25:19] [Server thread/INFO]: [BroadcastDC] Enabling BroadcastDC v1.0*
+[00:25:19] [Server thread/INFO]: [BroadcastDC] [STDOUT] [BroadcastDC] Enable with success
+[00:25:19] [Server thread/INFO]: [ImageMaps] Enabling ImageMaps v1.0.10
+[00:25:20] [Server thread/INFO]: [LPC] Enabling LPC v3.2.0
+[00:25:21] [Server thread/INFO]: Cosmelon: Reload complete.
+[00:25:21] [Server thread/INFO]: Timings Reset
+[00:25:35] [Server thread/INFO]: PokeyFinn lost connection: Disconnected
+[00:25:35] [Server thread/INFO]: PokeyFinn left the game
+[00:25:48] [Server thread/INFO]: Cosmelon issued server command: /function main:spleef/killspleef
+[00:25:48] [Server thread/INFO]: [[Blue] Cosmelon: Executed 8 commands from function 'main:spleef/killspleef']
+[00:40:14] [Server thread/INFO]: CONSOLE: Please note that this command is not supported and may cause issues when using some plugins.
+[00:40:14] [Server thread/INFO]: CONSOLE: If you encounter any issues please use the /stop command to restart your server.
+[00:40:14] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[00:40:14] [Server thread/INFO]: Using 4 threads for Netty based IO
+[00:40:14] [Server thread/INFO]: -------- World Settings For [World] --------
+[00:40:14] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+[00:40:14] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+[00:40:14] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+[00:40:14] [Server thread/INFO]: Experience Merge Radius: 3.0
+[00:40:14] [Server thread/INFO]: Cactus Growth Modifier: 100%
+[00:40:14] [Server thread/INFO]: Cane Growth Modifier: 100%
+[00:40:14] [Server thread/INFO]: Melon Growth Modifier: 100%
+[00:40:14] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+[00:40:14] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+[00:40:14] [Server thread/INFO]: Sapling Growth Modifier: 100%
+[00:40:14] [Server thread/INFO]: Beetroot Growth Modifier: 100%
+[00:40:14] [Server thread/INFO]: Carrot Growth Modifier: 100%
+[00:40:14] [Server thread/INFO]: Potato Growth Modifier: 100%
+[00:40:14] [Server thread/INFO]: Wheat Growth Modifier: 100%
+[00:40:14] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+[00:40:14] [Server thread/INFO]: Vine Growth Modifier: 100%
+[00:40:14] [Server thread/INFO]: Cocoa Growth Modifier: 100%
+[00:40:14] [Server thread/INFO]: Bamboo Growth Modifier: 100%
+[00:40:14] [Server thread/INFO]: SweetBerry Growth Modifier: 100%
+[00:40:14] [Server thread/INFO]: Kelp Growth Modifier: 100%
+[00:40:14] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Ra 48 / Mi 16 / Tiv true
+[00:40:14] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 1 Hopper Amount: 1
+[00:40:14] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Desert: 14357617 Igloo: 14357618 Jungle: 14357619 Swamp: 14357620 Monument: 10387313 Ocean: 14357621 Shipwreck: 165745295 End City: 10387313 Slime: 987234911 Bastion: 30084232 Fortress: 30084232 Mansion: 10387319 Fossil: 14357921 Portal: 34222645
+[00:40:14] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+[00:40:14] [Server thread/INFO]: Max TNT Explosions: 100
+[00:40:14] [Server thread/INFO]: Item Merge Radius: 2.5
+[00:40:14] [Server thread/INFO]: Item Despawn Rate: 6000
+[00:40:14] [Server thread/INFO]: View Distance: 10
+[00:40:14] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+[00:40:14] [Server thread/INFO]: Mob Spawn Range: 6
+[00:40:14] [Server thread/INFO]: Arrow Despawn Rate: 1200 Trident Respawn Rate:1200
+[00:40:14] [Server thread/INFO]: -------- World Settings For [World_nether] --------
+[00:40:14] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+[00:40:14] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+[00:40:14] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+[00:40:14] [Server thread/INFO]: Experience Merge Radius: 3.0
+[00:40:14] [Server thread/INFO]: Cactus Growth Modifier: 100%
+[00:40:14] [Server thread/INFO]: Cane Growth Modifier: 100%
+[00:40:14] [Server thread/INFO]: Melon Growth Modifier: 100%
+[00:40:14] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+[00:40:14] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+[00:40:14] [Server thread/INFO]: Sapling Growth Modifier: 100%
+[00:40:14] [Server thread/INFO]: Beetroot Growth Modifier: 100%
+[00:40:14] [Server thread/INFO]: Carrot Growth Modifier: 100%
+[00:40:14] [Server thread/INFO]: Potato Growth Modifier: 100%
+[00:40:14] [Server thread/INFO]: Wheat Growth Modifier: 100%
+[00:40:14] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+[00:40:14] [Server thread/INFO]: Vine Growth Modifier: 100%
+[00:40:14] [Server thread/INFO]: Cocoa Growth Modifier: 100%
+[00:40:14] [Server thread/INFO]: Bamboo Growth Modifier: 100%
+[00:40:14] [Server thread/INFO]: SweetBerry Growth Modifier: 100%
+[00:40:14] [Server thread/INFO]: Kelp Growth Modifier: 100%
+[00:40:14] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Ra 48 / Mi 16 / Tiv true
+[00:40:14] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 1 Hopper Amount: 1
+[00:40:14] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Desert: 14357617 Igloo: 14357618 Jungle: 14357619 Swamp: 14357620 Monument: 10387313 Ocean: 14357621 Shipwreck: 165745295 End City: 10387313 Slime: 987234911 Bastion: 30084232 Fortress: 30084232 Mansion: 10387319 Fossil: 14357921 Portal: 34222645
+[00:40:14] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+[00:40:14] [Server thread/INFO]: Max TNT Explosions: 100
+[00:40:14] [Server thread/INFO]: Item Merge Radius: 2.5
+[00:40:14] [Server thread/INFO]: Item Despawn Rate: 6000
+[00:40:14] [Server thread/INFO]: View Distance: 10
+[00:40:14] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+[00:40:14] [Server thread/INFO]: Mob Spawn Range: 6
+[00:40:14] [Server thread/INFO]: Arrow Despawn Rate: 1200 Trident Respawn Rate:1200
+[00:40:14] [Server thread/INFO]: -------- World Settings For [World_the_end] --------
+[00:40:14] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+[00:40:14] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+[00:40:14] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+[00:40:14] [Server thread/INFO]: Experience Merge Radius: 3.0
+[00:40:14] [Server thread/INFO]: Cactus Growth Modifier: 100%
+[00:40:14] [Server thread/INFO]: Cane Growth Modifier: 100%
+[00:40:14] [Server thread/INFO]: Melon Growth Modifier: 100%
+[00:40:14] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+[00:40:14] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+[00:40:14] [Server thread/INFO]: Sapling Growth Modifier: 100%
+[00:40:14] [Server thread/INFO]: Beetroot Growth Modifier: 100%
+[00:40:14] [Server thread/INFO]: Carrot Growth Modifier: 100%
+[00:40:14] [Server thread/INFO]: Potato Growth Modifier: 100%
+[00:40:14] [Server thread/INFO]: Wheat Growth Modifier: 100%
+[00:40:14] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+[00:40:14] [Server thread/INFO]: Vine Growth Modifier: 100%
+[00:40:14] [Server thread/INFO]: Cocoa Growth Modifier: 100%
+[00:40:14] [Server thread/INFO]: Bamboo Growth Modifier: 100%
+[00:40:14] [Server thread/INFO]: SweetBerry Growth Modifier: 100%
+[00:40:14] [Server thread/INFO]: Kelp Growth Modifier: 100%
+[00:40:14] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Ra 48 / Mi 16 / Tiv true
+[00:40:14] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 1 Hopper Amount: 1
+[00:40:14] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Desert: 14357617 Igloo: 14357618 Jungle: 14357619 Swamp: 14357620 Monument: 10387313 Ocean: 14357621 Shipwreck: 165745295 End City: 10387313 Slime: 987234911 Bastion: 30084232 Fortress: 30084232 Mansion: 10387319 Fossil: 14357921 Portal: 34222645
+[00:40:14] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+[00:40:14] [Server thread/INFO]: Max TNT Explosions: 100
+[00:40:14] [Server thread/INFO]: Item Merge Radius: 2.5
+[00:40:14] [Server thread/INFO]: Item Despawn Rate: 6000
+[00:40:14] [Server thread/INFO]: View Distance: 10
+[00:40:14] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+[00:40:14] [Server thread/INFO]: Mob Spawn Range: 6
+[00:40:14] [Server thread/INFO]: Arrow Despawn Rate: 1200 Trident Respawn Rate:1200
+[00:40:14] [Server thread/INFO]: [LPC] Disabling LPC v3.2.0
+[00:40:14] [Server thread/INFO]: [ImageMaps] Disabling ImageMaps v1.0.10
+[00:40:15] [Server thread/INFO]: [WorldEdit] Disabling WorldEdit v7.2.7+9f3e795
+[00:40:15] [Server thread/INFO]: Unregistering com.sk89q.worldedit.bukkit.BukkitServerInterface from WorldEdit
+[00:40:15] [Server thread/INFO]: [BroadcastDC] Disabling BroadcastDC v1.0
+[00:40:15] [Server thread/INFO]: [BroadcastDC] [STDOUT] [BroadcastDC] ShutDown
+[00:40:15] [Server thread/WARN]: Nag author(s): '[9e_Docteur]' of 'BroadcastDC' about their usage of System.out/err.print. Please use your plugin's logger instead (JavaPlugin#getLogger).
+[00:40:15] [Server thread/INFO]: [SpigotPing] Disabling SpigotPing v2.6
+[00:40:15] [Server thread/INFO]: [SpigotPing] Cancelling tasks...
+[00:40:15] [Server thread/INFO]: [LuckPerms] Disabling LuckPerms v5.3.98
+[00:40:15] [Server thread/INFO]: [LuckPerms] Starting shutdown process...
+[00:40:15] [Server thread/INFO]: [LuckPerms] Closing messaging service...
+[00:40:15] [Server thread/INFO]: [LuckPerms] Closing storage...
+[00:40:15] [Server thread/INFO]: [me.lucko.luckperms.lib.hikari.HikariDataSource] luckperms-hikari - Shutdown initiated...
+[00:40:15] [Server thread/INFO]: [me.lucko.luckperms.lib.hikari.HikariDataSource] luckperms-hikari - Shutdown completed.
+[00:40:15] [Server thread/INFO]: [LuckPerms] Goodbye!
+[00:40:15] [Server thread/INFO]: Reloading ResourceManager: Default, bukkit, lukerealm
+[00:40:15] [Server thread/INFO]: Loaded 7 recipes
+[00:40:15] [Server thread/WARN]: Legacy plugin BroadcastDC v1.0 does not specify an api-version.
+[00:40:15] [Server thread/INFO]: [LuckPerms] Loading LuckPerms v5.3.98
+[00:40:15] [Server thread/INFO]: [SpigotPing] Loading SpigotPing v2.6
+[00:40:15] [Server thread/INFO]: [BroadcastDC] Loading BroadcastDC v1.0
+[00:40:15] [Server thread/INFO]: [WorldEdit] Loading WorldEdit v7.2.7+9f3e795
+[00:40:15] [Server thread/INFO]: Got request to register class com.sk89q.worldedit.bukkit.BukkitServerInterface with WorldEdit [com.sk89q.worldedit.extension.platform.PlatformManager@74ea036a]
+[00:40:15] [Server thread/INFO]: [ImageMaps] Loading ImageMaps v1.0.10
+[00:40:15] [Server thread/INFO]: [LPC] Loading LPC v3.2.0
+[00:40:15] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[00:40:15] [Server thread/INFO]: [LuckPerms] Enabling LuckPerms v5.3.98
+[00:40:16] [Server thread/INFO]:         __    
+[00:40:16] [Server thread/INFO]:   |    |__)   LuckPerms v5.3.98
+[00:40:16] [Server thread/INFO]:   |___ |      Running on Bukkit - Paper
+[00:40:16] [Server thread/INFO]: 
+[00:40:16] [Server thread/INFO]: [LuckPerms] Loading configuration...
+[00:40:16] [Server thread/INFO]: [LuckPerms] Loading storage provider... [MYSQL]
+[00:40:16] [Server thread/INFO]: [me.lucko.luckperms.lib.hikari.HikariDataSource] luckperms-hikari - Starting...
+[00:40:16] [Server thread/INFO]: [me.lucko.luckperms.lib.hikari.HikariDataSource] luckperms-hikari - Start completed.
+[00:40:16] [Server thread/INFO]: [LuckPerms] Loading messaging service... [SQL]
+[00:40:17] [Server thread/INFO]: [LuckPerms] Loading internal permission managers...
+[00:40:17] [Server thread/INFO]: [LuckPerms] Performing initial data load...
+[00:40:17] [Server thread/INFO]: [LuckPerms] Successfully enabled. (took 1658ms)
+[00:40:17] [Server thread/INFO]: [WorldEdit] Enabling WorldEdit v7.2.7+9f3e795
+[00:40:17] [Server thread/INFO]: Registering commands with com.sk89q.worldedit.bukkit.BukkitServerInterface
+[00:40:17] [Server thread/INFO]: WEPIF: Using the Bukkit Permissions API.
+[00:40:17] [Server thread/WARN]: [WorldEdit] Server reload detected. This may cause various issues with WorldEdit and dependent plugins.
+[00:40:17] [Server thread/INFO]: Using com.sk89q.worldedit.bukkit.adapter.impl.v1_17_R1_2.PaperweightAdapter as the Bukkit adapter
+[00:40:18] [Server thread/INFO]: [SpigotPing] Enabling SpigotPing v2.6
+[00:40:18] [Server thread/INFO]: [SpigotPing] The tablist is disabled, the ping will not be shown as a prefix. You can change this option in the config.
+[00:40:18] [Server thread/INFO]: [BroadcastDC] Enabling BroadcastDC v1.0*
+[00:40:18] [Server thread/INFO]: [BroadcastDC] [STDOUT] [BroadcastDC] Enable with success
+[00:40:18] [Server thread/INFO]: [ImageMaps] Enabling ImageMaps v1.0.10
+[00:40:19] [Server thread/INFO]: [LPC] Enabling LPC v3.2.0
+[00:40:19] [Server thread/INFO]: CONSOLE: Reload complete.
+[00:40:19] [Server thread/INFO]: Timings Reset
+[00:41:50] [User Authenticator #9/INFO]: UUID of player SpiceBoat is 72e0fb65-3ce3-44c6-a0f1-ce9edca1722f
+[00:41:50] [Server thread/INFO]: [Yellow] SpiceBoat joined the game
+[00:41:50] [Server thread/INFO]: SpiceBoat[/74.137.222.126:33807] logged in with entity id 12923 at ([World]-194.69999998807907, 12.0, 131.70340939129338)
+[00:42:06] [Server thread/INFO]: Cosmelon issued server command: /startspleef
+[00:42:06] [Server thread/INFO]: [[Blue] Cosmelon: Executed 103 commands from function 'main:spleef/startspleef']
+[00:42:25] [Server thread/INFO]: [Yellow] SpiceBoat fell out of the world
+[00:42:49] [Server thread/INFO]: [Yellow] SpiceBoat fell out of the world
+[00:43:13] [Server thread/INFO]: [Yellow] SpiceBoat fell out of the world
+[00:44:22] [Server thread/INFO]: Cosmelon issued server command: /killspleef
+[00:44:22] [Server thread/INFO]: [[Blue] Cosmelon: Executed 8 commands from function 'main:spleef/killspleef']
+[00:44:32] [Server thread/INFO]: Cosmelon issued server command: /stop
+[00:44:32] [Server thread/INFO]: [[Blue] Cosmelon: Stopping the server]
+[00:44:32] [Server thread/INFO]: Stopping server
+[00:44:32] [Server thread/INFO]: [LPC] Disabling LPC v3.2.0
+[00:44:32] [Server thread/INFO]: [ImageMaps] Disabling ImageMaps v1.0.10
+[00:44:32] [Server thread/INFO]: [WorldEdit] Disabling WorldEdit v7.2.7+9f3e795
+[00:44:32] [Server thread/INFO]: Unregistering com.sk89q.worldedit.bukkit.BukkitServerInterface from WorldEdit
+[00:44:32] [Server thread/INFO]: [BroadcastDC] Disabling BroadcastDC v1.0
+[00:44:32] [Server thread/INFO]: [BroadcastDC] [STDOUT] [BroadcastDC] ShutDown
+[00:44:32] [Server thread/INFO]: [SpigotPing] Disabling SpigotPing v2.6
+[00:44:32] [Server thread/INFO]: [SpigotPing] Cancelling tasks...
+[00:44:32] [Server thread/INFO]: [LuckPerms] Disabling LuckPerms v5.3.98
+[00:44:32] [Server thread/INFO]: [LuckPerms] Starting shutdown process...
+[00:44:32] [Server thread/INFO]: [LuckPerms] Closing messaging service...
+[00:44:32] [Server thread/INFO]: [LuckPerms] Closing storage...
+[00:44:32] [Server thread/INFO]: [me.lucko.luckperms.lib.hikari.HikariDataSource] luckperms-hikari - Shutdown initiated...
+[00:44:32] [Server thread/INFO]: [me.lucko.luckperms.lib.hikari.HikariDataSource] luckperms-hikari - Shutdown completed.
+[00:44:32] [Server thread/INFO]: [LuckPerms] Goodbye!
+[00:44:32] [Server thread/INFO]: Saving players
+[00:44:32] [Server thread/INFO]: Cosmelon lost connection: Server closed
+[00:44:32] [Server thread/INFO]: Cosmelon left the game
+[00:44:32] [Server thread/INFO]: SpiceBoat lost connection: Server closed
+[00:44:32] [Server thread/INFO]: SpiceBoat left the game
+[00:44:32] [Server thread/INFO]: Saving worlds
+[00:44:32] [Server thread/INFO]: Saving chunks for level 'ServerLevel[World]'/minecraft:overworld
+[00:44:33] [Server thread/INFO]: Saving chunks for level 'ServerLevel[World_nether]'/minecraft:the_nether
+[00:44:33] [Server thread/INFO]: Saving chunks for level 'ServerLevel[World_the_end]'/minecraft:the_end
+[00:44:33] [Server thread/INFO]: ThreadedAnvilChunkStorage (World): All chunks are saved
+[00:44:33] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[00:44:33] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[00:44:33] [Server thread/INFO]: ThreadedAnvilChunkStorage: All dimensions are saved
+[00:44:33] [Server thread/INFO]: Flushing Chunk IO
+[00:44:33] [Server thread/INFO]: Closing Thread Pool

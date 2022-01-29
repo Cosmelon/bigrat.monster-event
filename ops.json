@@ -1,0 +1,32 @@
+[
+  {
+    "uuid": "de1440ae-6851-4f61-b9b9-28008afbc931",
+    "name": "imstillsleepy",
+    "level": 4,
+    "bypassesPlayerLimit": false
+  },
+  {
+    "uuid": "74dc36dc-c967-40c4-9d66-5433300a976b",
+    "name": "Solawr",
+    "level": 4,
+    "bypassesPlayerLimit": false
+  },
+  {
+    "uuid": "49de31c2-9b19-4ea8-96d0-8b51ff16b851",
+    "name": "fruitlukes",
+    "level": 4,
+    "bypassesPlayerLimit": false
+  },
+  {
+    "uuid": "7b563b90-23d8-4591-9c8b-c65c0fd108ca",
+    "name": "Cosmelon",
+    "level": 4,
+    "bypassesPlayerLimit": false
+  },
+  {
+    "uuid": "72e0fb65-3ce3-44c6-a0f1-ce9edca1722f",
+    "name": "SpiceBoat",
+    "level": 4,
+    "bypassesPlayerLimit": false
+  }
+]
