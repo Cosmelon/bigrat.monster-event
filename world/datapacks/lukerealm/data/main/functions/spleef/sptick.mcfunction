@@ -73,3 +73,11 @@ execute if score $gameActive spleef matches 1 run execute if score $notifRedDead
 execute if score $gameActive spleef matches 1 run execute if score $notifRedDead spleef matches 1 run execute if score $notifBlueDead spleef matches 1 run execute if score $notifYellowDead spleef matches 1 run function main:spleef/wins/green
 # yellow win
 execute if score $gameActive spleef matches 1 run execute if score $notifRedDead spleef matches 1 run execute if score $notifBlueDead spleef matches 1 run execute if score $notifGreenDead spleef matches 1 run function main:spleef/wins/yellow
+
+# Making players leave their teams when they leave the game
+# execute as @a[scores={Quit=1..}] run team leave @s
+# execute as @a[scores={Quit=1..}] run execute if score $game GameActive matches 1 run tp @s 1 22 17
+# execute as @a[scores={Quit=1..}] run execute if score $game GameActive matches 0 run tp @s 0 100 0
+# execute as @a[scores={Quit=1..}] run tellraw @s {"text":"You were kicked from your team because you left the game.","color":"dark_gray"}
+# execute as @a[scores={Quit=1..}] run scoreboard players set @s Quit 0
+# execute as @a[scores={Quit=1..}] run clear @s
