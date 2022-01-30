@@ -49,8 +49,8 @@ execute if score $gameActive spleef matches 1 run gamemode spectator @a[scores={
 kill @e[type=minecraft:item,nbt={Item:{id:"minecraft:snowball"}}]
 
 # snowball get on block break
-execute as @a[scores={spleefSnowball=1..}] run give @s snowball 2
-scoreboard players reset * spleefSnowball
+execute as @a[scores={spleefSnowBall=1..}] run give @s snowball 2
+scoreboard players reset * spleefSnowBall
 
 # snowball break blocks
 execute if score $gameActive spleef matches 1 run function main:spleef/snowball
