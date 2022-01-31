@@ -46,3 +46,13 @@ team add Yellow {"text":"Yellow","color":"yellow"}
 team modify Yellow collisionRule never
 team modify Yellow color yellow
 team modify Yellow prefix {"text":"[Yellow] ","color":"yellow"}
+
+team add Admin {"text":"Admin","color":"dark_red"}
+team modify Admin collisionRule never
+team modify Admin color dark_red
+team modify Admin prefix {"text":"[Admin] ","color":"dark_red"}
+
+team add Spectator {"text":"Spectator","color":"gray"}
+team modify Spectator collisionRule never
+team modify Spectator color gray
+team modify Spectator prefix {"text":"[Spectator] ","color":"gray"}
