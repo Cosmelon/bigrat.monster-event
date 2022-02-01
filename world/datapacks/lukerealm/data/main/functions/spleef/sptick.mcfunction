@@ -12,8 +12,9 @@ execute if score $gameActive spleef matches 1 run time set midnight
 # spawnpoint during game
 execute if score $gameActive spleef matches 1 run spawnpoint @a -496 66 -459
 
-# syncs round count bossbar with scoreboard
+# syncs bossbars with scoreboard
 execute store result bossbar minecraft:spleefroundcount value run scoreboard players get $round spleef
+execute store result bossbar minecraft:shrink1timer value run scoreboard players get $shrink1Timer spleef
 
 # updates round count bossbar name
 # execute if score $round spleef matches 0 run bossbar set minecraft:spleefroundcount name {"text":"Round: 0/3","bold":true}
@@ -49,7 +50,7 @@ execute if score $gameActive spleef matches 1 run gamemode spectator @a[scores={
 kill @e[type=minecraft:item,nbt={Item:{id:"minecraft:snowball"}}]
 
 # snowball get on block break
-execute as @a[scores={spleefSnowBall=1..}] run give @s snowball 2
+execute as @a[scores={spleefSnowBall=1..}] run give @s snowball 1
 scoreboard players reset * spleefSnowBall
 
 # snowball break blocks
@@ -62,7 +63,6 @@ execute if score $gameActive spleef matches 1 run clear @a minecraft:snow_block
 execute if score $gameActive spleef matches 1 run effect give @a weakness 1 255 true
 execute if score $gameActive spleef matches 1 run execute as @a[nbt={SelectedItem:{id:"minecraft:stick"}}] run effect clear @s minecraft:weakness
 
-
 # does team death messaage
 execute if score $gameActive spleef matches 1 run function main:spleef/checkdead
 # red win
@@ -74,9 +74,12 @@ execute if score $gameActive spleef matches 1 run execute if score $notifRedDead
 # yellow win
 execute if score $gameActive spleef matches 1 run execute if score $notifRedDead spleef matches 1 run execute if score $notifBlueDead spleef matches 1 run execute if score $notifGreenDead spleef matches 1 run function main:spleef/wins/yellow
 
-# border stuff
+# border
 execute if score $gameActive spleef matches 0 run worldborder center 0 0
+execute if score $gameActive spleef matches 0 run worldborder set 30000000 1
 execute if score $gameActive spleef matches 1 run worldborder center -497 -461
+execute if score $gameActive spleef matches 0 run scoreboard players set $shrink1Timer spleef 2100
+execute if score $gameActive spleef matches 1 run scoreboard players remove $shrink1Timer spleef 1
 
 
 # Making players leave their teams when they leave the game
