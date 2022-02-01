@@ -5,10 +5,11 @@ clear @a
 #  scoreboard players add $yellow Score <amount to winning team>
 title @a title {"text":"Yellow team wins!","bold":true,"color":"yellow"}
 execute unless score $round spleef matches 3 run title @a subtitle {"text":"Loading...","color":"red"}
-execute unless score $round spleef matches 3 run schedule function main:spleef/startspleef 5s
+execute unless score $round spleef matches 3 run schedule function main:spleef/startspleef 6s
 execute if score $round spleef matches 3 run title @a title {"text":"Returning to lobby...","color":"orange","bold":true}
 execute if score $round spleef matches 3 run schedule function main:lobby 2s
 # execute unless score $round spleef matches 3 run title @a title {"text":"Round Over!","bold":true,"color":"red"}
 scoreboard players reset * spleefDeaths
 playsound minecraft:block.note_block.chime ambient @a ~ ~ ~ 100000 1
 scoreboard players add $round spleef 1
+bossbar set minecraft:shrink1timer visible false
