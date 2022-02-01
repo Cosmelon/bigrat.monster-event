@@ -7,3 +7,5 @@ scoreboard players set $notifRedDead spleef 0
 scoreboard players set $notifBlueDead spleef 0
 scoreboard players set $notifGreenDead spleef 0
 scoreboard players set $notifYellowDead spleef 0 
+scoreboard players set $shrink1Timer spleef 2400
+scoreboard players set $shrink1Active spleef 0
