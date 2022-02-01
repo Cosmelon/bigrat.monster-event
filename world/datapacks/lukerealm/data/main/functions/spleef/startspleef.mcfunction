@@ -1,5 +1,8 @@
 # all these commands start spleef
 
+# reset arena floor
+function main:spleef/reloadfloor
+
 # clear inventories
 clear @a[team=!Admin]
 kill @e[type=item]
@@ -25,9 +28,6 @@ tp @a[team=Red] -500 61 -458 -135 10
 tp @a[team=Blue] -494 61 -464 45 10
 tp @a[team=Green] -500 61 -464 -45 10
 tp @a[team=Yellow] -494 61 -458 135 10
-
-# reset arena floor
-function main:spleef/reloadfloor
 
 # give shovels and kb
 schedule function main:spleef/shovelsandkb 15s replace

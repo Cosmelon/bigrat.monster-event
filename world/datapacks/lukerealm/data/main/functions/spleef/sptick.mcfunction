@@ -74,6 +74,11 @@ execute if score $gameActive spleef matches 1 run execute if score $notifRedDead
 # yellow win
 execute if score $gameActive spleef matches 1 run execute if score $notifRedDead spleef matches 1 run execute if score $notifBlueDead spleef matches 1 run execute if score $notifGreenDead spleef matches 1 run function main:spleef/wins/yellow
 
+# border stuff
+execute if score $gameActive spleef matches 0 run worldborder center 0 0
+execute if score $gameActive spleef matches 1 run worldborder center -497 -461
+
+
 # Making players leave their teams when they leave the game
 # execute as @a[scores={Quit=1..}] run team leave @s
 # execute as @a[scores={Quit=1..}] run execute if score $game GameActive matches 1 run tp @s 1 22 17
