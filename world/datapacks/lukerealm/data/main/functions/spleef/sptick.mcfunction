@@ -80,8 +80,6 @@ execute if score $gameActive spleef matches 0 run worldborder set 30000000 1
 execute if score $gameActive spleef matches 1 run worldborder center -497 -461
 execute if score $gameActive spleef matches 0 run scoreboard players set $shrink1Timer spleef 2400
 execute if score $gameActive spleef matches 1 run scoreboard players remove $shrink1Timer spleef 1
-execute if score $gameActive spleef matches 1 run execute if score $shrink1Active spleef matches 1 run worldborder set 69 0
-execute if score $gameActive spleef matches 1 run execute if score $shrink1Active spleef matches 1 run worldborder set 41 10
 
 # Making players leave their teams when they leave the game
 # execute as @a[scores={Quit=1..}] run team leave @s
