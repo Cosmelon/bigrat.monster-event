@@ -45,3 +45,6 @@ scoreboard players set $notifRedDead spleef 0
 scoreboard players set $notifBlueDead spleef 0
 scoreboard players set $notifGreenDead spleef 0
 scoreboard players set $notifYellowDead spleef 0
+
+# border
+schedule function main:spleef/border/shrink1 120s replace
