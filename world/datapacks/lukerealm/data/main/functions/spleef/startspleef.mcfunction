@@ -16,6 +16,7 @@ effect give @a[team=Yellow] glowing 10000 1 true
 # reset $countDown and $gameActive
 scoreboard players set $countDown spleef 160
 scoreboard players set $gameActive spleef 1
+scoreboard players set $shrink1Timer spleef 2100
 #    scoreboard players set $round spleef 0
 
 # teleport players to box
@@ -37,6 +38,7 @@ scoreboard players reset @a spleefDeaths
 
 # bossbar visible
 bossbar set minecraft:spleefroundcount visible true
+bossbar set minecraft:shrink1timer visible true
 
 # reset notifs
 scoreboard players set $notifRedDead spleef 0
