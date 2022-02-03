@@ -21,6 +21,8 @@ worldborder set 6000000 1
 worldborder center 0 0
 schedule clear main:spleef/border/shrink1
 schedule clear main:spleef/border/shrink2
+schedule clear main:spleef/border/shrink3
 schedule clear main:spleef/border/shrink1bar
 schedule clear main:spleef/border/shrink2bar
+schedule clear main:spleef/border/shrink3bar
 clear @a[team=!Admin]
