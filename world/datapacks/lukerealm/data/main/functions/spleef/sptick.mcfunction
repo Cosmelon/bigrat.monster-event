@@ -86,6 +86,10 @@ execute if score $gameActive spleef matches 1 run scoreboard players remove $shr
 execute if score $gameActive spleef matches 1 run scoreboard players remove $shrink3Timer spleefBorder 1
 
 # shrink timer bossbars
+execute if score $gameActive spleef matches 1 run execute if score $shrink1Timer spleefBorder matches 600 run bossbar set minecraft:shrink1timer visible true
+execute if score $gameActive spleef matches 1 run execute if score $shrink2Timer spleefBorder matches 600 run bossbar set minecraft:shrink2timer visible true
+execute if score $gameActive spleef matches 1 run execute if score $shrink3Timer spleefBorder matches 600 run bossbar set minecraft:shrink3timer visible true
+
 execute if score $gameActive spleef matches 1 run execute if score $shrink1Timer spleefBorder matches 0 run bossbar set minecraft:shrink1timer visible false
 execute if score $gameActive spleef matches 1 run execute if score $shrink2Timer spleefBorder matches 0 run bossbar set minecraft:shrink2timer visible false
 execute if score $gameActive spleef matches 1 run execute if score $shrink3Timer spleefBorder matches 0 run bossbar set minecraft:shrink3timer visible false
