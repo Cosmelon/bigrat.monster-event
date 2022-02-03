@@ -16,6 +16,12 @@ scoreboard players set $notifRedDead spleef 0
 scoreboard players set $notifBlueDead spleef 0
 scoreboard players set $notifGreenDead spleef 0
 scoreboard players set $notifYellowDead spleef 0
+scoreboard players set $shrink3Timer spleefBorder 5000
+scoreboard players set $shrink2Timer spleefBorder 3400
+scoreboard players set $shrink1Timer spleefBorder 2400
+scoreboard players set $shrink3Active spleefBorder 0
+scoreboard players set $shrink2Active spleefBorder 0
+scoreboard players set $shrink1Active spleefBorder 0
 scoreboard players set $countDown spleef 160
 scoreboard players set $round spleef 1
 worldborder set 6000000 1
