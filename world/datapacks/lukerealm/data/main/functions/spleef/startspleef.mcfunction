@@ -58,5 +58,5 @@ schedule function main:spleef/border/shrink1 95s replace
 schedule function main:spleef/border/shrink1bar 65s replace
 schedule function main:spleef/border/shrink2 170s replace
 schedule function main:spleef/border/shrink2bar 140s replace
-schedule function main:spleef/border/shrink3 260s replace
+schedule function main:spleef/border/shrink3 250s replace
 schedule function main:spleef/border/shrink3bar 230s replace
