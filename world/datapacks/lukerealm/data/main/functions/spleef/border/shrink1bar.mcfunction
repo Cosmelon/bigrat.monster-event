@@ -1,2 +1,2 @@
 # turns on the shrink1 bossbar
-bossbar set minecraft:shrink2timer visible true
+bossbar set minecraft:shrink1timer visible true
