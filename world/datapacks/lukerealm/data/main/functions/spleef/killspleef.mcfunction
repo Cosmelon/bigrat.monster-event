@@ -12,9 +12,11 @@ scoreboard players set $shrink2Timer spleef 3400
 scoreboard players set $shrink1Active spleef 0
 scoreboard players set $shrink2Active spleef 0
 bossbar set minecraft:shrink1timer visible false
+bossbar set minecraft:shrink2timer visible false
 bossbar set minecraft:spleefroundcount visible false
 worldborder center 0 0
 worldborder set 6000000 1
 schedule clear minecraft:spleef/border/shrink1
 schedule clear minecraft:spleef/border/shrink2
 schedule clear minecraft:spleef/border/shrink2bar
+clear @a[team=!Admin]
