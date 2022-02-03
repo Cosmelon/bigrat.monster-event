@@ -11,3 +11,5 @@ scoreboard players set $shrink1Timer spleef 2400
 scoreboard players set $shrink1Active spleef 0
 bossbar set minecraft:shrink1timer visible false
 bossbar set minecraft:spleefroundcount visible false
+worldborder center 0 0
+worldborder set 60000000
