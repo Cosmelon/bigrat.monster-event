@@ -76,9 +76,6 @@ execute if score $gameActive spleef matches 1 run execute if score $notifRedDead
 execute if score $gameActive spleef matches 1 run execute if score $notifRedDead spleef matches 1 run execute if score $notifBlueDead spleef matches 1 run execute if score $notifGreenDead spleef matches 1 run function main:spleef/wins/yellow
 
 # border
-#  execute if score $gameActive spleef matches 0 run worldborder center 0 0
-#  execute if score $gameActive spleef matches 0 run worldborder set 30000000 1
-#  execute if score $gameActive spleef matches 1 run worldborder center -497 -461
 execute if score $gameActive spleef matches 0 run scoreboard players set $shrink1Timer spleef 1900
 execute if score $gameActive spleef matches 0 run scoreboard players set $shrink2Timer spleef 3400
 execute if score $gameActive spleef matches 1 run scoreboard players remove $shrink1Timer spleef 1
