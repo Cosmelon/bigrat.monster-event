@@ -78,9 +78,9 @@ execute if score $gameActive spleef matches 1 run execute if score $notifRedDead
 execute if score $gameActive spleef matches 1 run execute if score $notifRedDead spleef matches 1 run execute if score $notifBlueDead spleef matches 1 run execute if score $notifGreenDead spleef matches 1 run function main:spleef/wins/yellow
 
 # border
-# execute if score $gameActive spleef matches 0 run scoreboard players set $shrink1Timer spleefBorder 1900
-# execute if score $gameActive spleef matches 0 run scoreboard players set $shrink2Timer spleefBorder 3400
-# execute if score $gameActive spleef matches 0 run scoreboard players set $shrink3Timer spleefBorder 5000
+execute if score $gameActive spleef matches 0 run scoreboard players set $shrink1Timer spleefBorder 1900
+execute if score $gameActive spleef matches 0 run scoreboard players set $shrink2Timer spleefBorder 3400
+execute if score $gameActive spleef matches 0 run scoreboard players set $shrink3Timer spleefBorder 5000
 execute if score $gameActive spleef matches 1 run scoreboard players remove $shrink1Timer spleefBorder 1
 execute if score $gameActive spleef matches 1 run scoreboard players remove $shrink2Timer spleefBorder 1
 execute if score $gameActive spleef matches 1 run scoreboard players remove $shrink3Timer spleefBorder 1
@@ -93,6 +93,9 @@ execute if score $gameActive spleef matches 1 run execute if score $shrink3Timer
 execute if score $gameActive spleef matches 1 run execute if score $shrink1Timer spleefBorder matches 0 run bossbar set minecraft:shrink1timer visible false
 execute if score $gameActive spleef matches 1 run execute if score $shrink2Timer spleefBorder matches 0 run bossbar set minecraft:shrink2timer visible false
 execute if score $gameActive spleef matches 1 run execute if score $shrink3Timer spleefBorder matches 0 run bossbar set minecraft:shrink3timer visible false
+execute if score $gameActive spleef matches 1 run execute if score $shrink1Timer spleefBorder matches 0 run function main:spleef/border/shrink1
+execute if score $gameActive spleef matches 1 run execute if score $shrink2Timer spleefBorder matches 0 run function main:spleef/border/shrink2
+execute if score $gameActive spleef matches 1 run execute if score $shrink3Timer spleefBorder matches 0 run function main:spleef/border/shrink3
 
 # Making players leave their teams when they leave the game
 # execute as @a[scores={Quit=1..}] run team leave @s
