@@ -19,4 +19,5 @@ tellraw @s {"text":"Spleef","color":"yellow","clickEvent":{"action":"run_command
 tellraw @s {"text":"Lobby i think","color":"red","clickEvent":{"action":"run_command","value":"/tp @s -191 12 132"}}
 tellraw @s {"text":"Literally 1984 [Old SG map]","color":"gray","clickEvent":{"action":"run_command","value":"/tp @s 1984 133 1984"}}
 tellraw @s {"text":"New SG Map","color":"#9051DF","clickEvent":{"action":"run_command","value":"/tp @s -1984 133 -1984"}}
+tellraw @s {"text":"Water rising parkour","color":"brown","clickEvent":{"action":"run_command","value":"/tp @s -1000 50 1000"}}
 tellraw @s {"text":"________________________________________","bold":true}
