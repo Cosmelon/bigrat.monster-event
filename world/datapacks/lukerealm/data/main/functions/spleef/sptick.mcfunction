@@ -15,6 +15,7 @@ execute if score $gameActive spleef matches 1 run spawnpoint @a -496 66 -459
 # syncs bossbars with scoreboard
 execute store result bossbar minecraft:spleefroundcount value run scoreboard players get $round spleef
 execute store result bossbar minecraft:shrink1timer value run scoreboard players get $shrink1Timer spleef
+execute store result bossbar minecraft:shrink2timer value run scoreboard players get $shrink2Timer spleef
 
 # updates round count bossbar name
 # execute if score $round spleef matches 0 run bossbar set minecraft:spleefroundcount name {"text":"Round: 0/3","bold":true}
@@ -80,6 +81,10 @@ execute if score $gameActive spleef matches 1 run execute if score $notifRedDead
 #  execute if score $gameActive spleef matches 1 run worldborder center -497 -461
 execute if score $gameActive spleef matches 0 run scoreboard players set $shrink1Timer spleef 1900
 execute if score $gameActive spleef matches 1 run scoreboard players remove $shrink1Timer spleef 1
+
+# shrink timer bossbars
+execute if score $gameActive spleef matches 1 run execute if score $shrink1Timer spleef matches 0 run bossbar set minecraft:shrink1timer visible false
+execute if score $gameActive spleef matches 1 run execute if score $shrink2Timer spleef matches 0 run bossbar set minecraft:shrink1timer visible false
 
 # Making players leave their teams when they leave the game
 # execute as @a[scores={Quit=1..}] run team leave @s
