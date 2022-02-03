@@ -13,6 +13,7 @@ scoreboard players reset * spleefDeaths
 playsound minecraft:block.note_block.chime ambient @a ~ ~ ~ 100000 1
 scoreboard players add $round spleef 1
 bossbar set minecraft:shrink1timer visible false
+bossbar set minecraft:strink2timer visible false
 
 # reset all shrink
 scoreboard players set $shrink1Active spleef 0
