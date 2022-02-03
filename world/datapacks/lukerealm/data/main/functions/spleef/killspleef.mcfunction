@@ -8,7 +8,9 @@ scoreboard players set $notifBlueDead spleef 0
 scoreboard players set $notifGreenDead spleef 0
 scoreboard players set $notifYellowDead spleef 0 
 scoreboard players set $shrink1Timer spleef 2400
+scoreboard players set $shrink2Timer spleef 3400
 scoreboard players set $shrink1Active spleef 0
+scoreboard players set $shrink2Active spleef 0
 bossbar set minecraft:shrink1timer visible false
 bossbar set minecraft:spleefroundcount visible false
 worldborder center 0 0
