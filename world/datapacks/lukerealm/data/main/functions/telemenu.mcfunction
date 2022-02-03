@@ -20,4 +20,5 @@ tellraw @s {"text":"Lobby i think","color":"red","clickEvent":{"action":"run_com
 tellraw @s {"text":"Literally 1984 [Old SG map]","color":"gray","clickEvent":{"action":"run_command","value":"/tp @s 1984 133 1984"}}
 tellraw @s {"text":"New SG Map","color":"#9051DF","clickEvent":{"action":"run_command","value":"/tp @s -1984 133 -1984"}}
 tellraw @s {"text":"Water rising parkour","color":"brown","clickEvent":{"action":"run_command","value":"/tp @s -1000 50 1000"}}
+tellraw @s {"text":"Luke Placeholder","color":"green","clickEvent":{"action":"run_command","value":"/tp @s -2000 50 2000"}}
 tellraw @s {"text":"________________________________________","bold":true}
