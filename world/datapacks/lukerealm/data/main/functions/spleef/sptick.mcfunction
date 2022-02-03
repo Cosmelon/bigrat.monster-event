@@ -86,7 +86,7 @@ execute if score $gameActive spleef matches 1 run scoreboard players remove $shr
 
 # shrink timer bossbars
 execute if score $gameActive spleef matches 1 run execute if score $shrink1Timer spleef matches 0 run bossbar set minecraft:shrink1timer visible false
-execute if score $gameActive spleef matches 1 run execute if score $shrink2Timer spleef matches 0 run bossbar set minecraft:shrink1timer visible false
+execute if score $gameActive spleef matches 1 run execute if score $shrink2Timer spleef matches 0 run bossbar set minecraft:shrink2timer visible false
 
 # Making players leave their teams when they leave the game
 # execute as @a[scores={Quit=1..}] run team leave @s
