@@ -19,6 +19,7 @@ bossbar set minecraft:shrink3timer visible false
 bossbar set minecraft:spleefroundcount visible false
 worldborder set 6000000 1
 worldborder center 0 0
+schedule clear main:spleef/shovelsandkb
 schedule clear main:spleef/border/shrink1
 schedule clear main:spleef/border/shrink2
 schedule clear main:spleef/border/shrink3
