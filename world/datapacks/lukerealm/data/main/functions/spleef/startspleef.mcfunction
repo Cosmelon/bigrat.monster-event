@@ -47,4 +47,6 @@ scoreboard players set $notifGreenDead spleef 0
 scoreboard players set $notifYellowDead spleef 0
 
 # border
-schedule function main:spleef/border/shrink1 120s replace
+worldborder center -497 -461
+worldborder set 69 0
+schedule function main:spleef/border/shrink1 95s replace
