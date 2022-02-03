@@ -9,3 +9,4 @@ effect give @a saturation 10000 0 true
 bossbar set minecraft:spleefroundcount players @a
 bossbar set minecraft:shrink1timer players @a
 bossbar set minecraft:shirnk2timer players @a
+bossbar set minecraft:shrink3timer players @a
