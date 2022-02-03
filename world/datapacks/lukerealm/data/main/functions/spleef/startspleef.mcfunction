@@ -39,6 +39,7 @@ scoreboard players reset @a spleefDeaths
 # bossbar visible
 bossbar set minecraft:spleefroundcount visible true
 bossbar set minecraft:shrink1timer visible true
+bossbar set minecraft:shrink2tiemr visible false
 
 # reset notifs
 scoreboard players set $notifRedDead spleef 0
