@@ -15,3 +15,4 @@ worldborder center 0 0
 worldborder set 6000000 1
 schedule clear minecraft:spleef/border/shrink1
 schedule clear minecraft:spleef/border/shrink2
+schedule clear minecraft:spleef/border/shrink2bar
