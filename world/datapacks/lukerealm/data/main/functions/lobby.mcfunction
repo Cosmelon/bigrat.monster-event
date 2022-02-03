@@ -18,3 +18,5 @@ scoreboard players set $notifGreenDead spleef 0
 scoreboard players set $notifYellowDead spleef 0
 scoreboard players set $countDown spleef 160
 scoreboard players set $round spleef 1
+worldborder center 0 0
+worldborder set 6000000 1
