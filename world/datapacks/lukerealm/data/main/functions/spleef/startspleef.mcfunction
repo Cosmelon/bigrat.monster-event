@@ -17,6 +17,7 @@ effect give @a[team=Yellow] glowing 10000 1 true
 scoreboard players set $countDown spleef 160
 scoreboard players set $gameActive spleef 1
 scoreboard players set $shrink1Timer spleef 2100
+scoreboard players set $shrink2Timer spleef 3400
 #    scoreboard players set $round spleef 0
 
 # teleport players to box
