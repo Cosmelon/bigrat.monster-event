@@ -27,7 +27,7 @@ scoreboard players set $shrink3Active spleefBorder 0
 gamemode adventure @a[team=!Admin]
 gamemode spectator @a[team=Admin]
 gamemode spectator @a[team=Spectator]
-# tp @a[team=Admin] -496 66 -459 -180 5
+tp @a[team=Admin] -496 66 -459 -180 5
 tp @a[team=Spectator] -496 66 -459 -180 5
 tp @a[team=Red] -500 61 -458 -135 10
 tp @a[team=Blue] -494 61 -464 45 10
@@ -44,6 +44,7 @@ scoreboard players reset @a spleefDeaths
 bossbar set minecraft:spleefroundcount visible true
 bossbar set minecraft:shrink1timer visible false
 bossbar set minecraft:shrink2timer visible false
+bossbar set minecraft:shrink3timer visible false
 
 # reset notifs
 scoreboard players set $notifRedDead spleef 0
