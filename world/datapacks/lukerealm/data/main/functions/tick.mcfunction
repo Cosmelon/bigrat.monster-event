@@ -6,6 +6,11 @@
 
 effect give @a saturation 10000 0 true
 
+execute if score $gameActive spleef matches 0 run scoreboard players set $spleef currentGame 0
+execute if score $gameActive spleef matches 1 run scoreboard players set $spleef currentGame 1
+
+execute if score $gameActive spleef matches 0 run effect give @a weakness 10000 100
+
 bossbar set minecraft:spleefroundcount players @a
 bossbar set minecraft:shrink1timer players @a
 bossbar set minecraft:shirnk2timer players @a
