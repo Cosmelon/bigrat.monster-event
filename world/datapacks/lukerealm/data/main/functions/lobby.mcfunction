@@ -24,5 +24,6 @@ scoreboard players set $shrink2Active spleefBorder 0
 scoreboard players set $shrink1Active spleefBorder 0
 scoreboard players set $countDown spleef 160
 scoreboard players set $round spleef 1
+scoreboard players set $shrinkActual spleefBorder 400
 worldborder set 6000000 1
 worldborder center 0 0
