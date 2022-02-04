@@ -16,6 +16,7 @@ scoreboard players set $shrink3Active spleefBorder 0
 bossbar set minecraft:shrink1timer visible false
 bossbar set minecraft:shrink2timer visible false
 bossbar set minecraft:shrink3timer visible false
+bossbar set minecraft:shrinkactual visible false
 bossbar set minecraft:spleefroundcount visible false
 worldborder set 6000000 1
 worldborder center 0 0
