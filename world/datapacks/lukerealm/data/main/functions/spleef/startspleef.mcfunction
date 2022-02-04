@@ -13,7 +13,7 @@ effect give @a[team=Green] glowing 10000 1 true
 effect give @a[team=Yellow] glowing 10000 1 true
 
 
-# reset $countDown and $gameActive
+# reset scoreboards
 scoreboard players set $countDown spleef 160
 scoreboard players set $gameActive spleef 1
 scoreboard players set $shrink1Timer spleefBorder 1900
@@ -22,6 +22,7 @@ scoreboard players set $shrink3Timer spleefBorder 5000
 scoreboard players set $shrink1Active spleefBorder 0
 scoreboard players set $shrink2Active spleefBorder 0
 scoreboard players set $shrink3Active spleefBorder 0
+scoreboard players set $shrinkActual spleefBorder 600
 
 # teleport players to box
 gamemode adventure @a[team=!Admin]
