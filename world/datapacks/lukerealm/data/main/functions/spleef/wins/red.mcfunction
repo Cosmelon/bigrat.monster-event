@@ -15,6 +15,7 @@ scoreboard players add $round spleef 1
 bossbar set minecraft:shrink1timer visible false
 bossbar set minecraft:shrink2timer visible false
 bossbar set minecraft:shrink3timer visible false
+bossbar set minecraft:shrinkactual visible false
 
 # reset all shrink
 scoreboard players set $shrink1Active spleef 0
