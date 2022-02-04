@@ -46,6 +46,7 @@ bossbar set minecraft:spleefroundcount visible true
 bossbar set minecraft:shrink1timer visible false
 bossbar set minecraft:shrink2timer visible false
 bossbar set minecraft:shrink3timer visible false
+bossbar set minecraft:shrinkactual visible false
 
 # reset notifs
 scoreboard players set $notifRedDead spleef 0
