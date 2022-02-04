@@ -100,6 +100,7 @@ execute if score $gameActive spleef matches 1 run execute if score $shrink3Timer
 # trigger shrinkActual
 execute if score $gameActive spleef matches 1 run scoreboard players remove $shrinkActual spleefBorder 1
 execute if score $gameActive spleef matches 0 run scoreboard players set $shrinkActual spleefBorder 600
+execute if score $gameActive spleef matches 1 run execute if score $shrinkActual spleefBorder matches 0 run bossbar set minecraft:shrinkactual visible false
 
 # Making players leave their teams when they leave the game
 # execute as @a[scores={Quit=1..}] run team leave @s
