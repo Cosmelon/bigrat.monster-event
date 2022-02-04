@@ -18,6 +18,7 @@ execute store result bossbar minecraft:spleefroundcount value run scoreboard pla
 execute store result bossbar minecraft:shrink1timer value run scoreboard players get $shrink1Timer spleefBorder
 execute store result bossbar minecraft:shrink2timer value run scoreboard players get $shrink2Timer spleefBorder
 execute store result bossbar minecraft:shrink3timer value run scoreboard players get $shrink3Timer spleefBorder
+execute store result bossbar minecraft:shrinkactual value run scoreboard players get $shrinkActual spleefBorder
 
 # updates round count bossbar name
 # execute if score $round spleef matches 0 run bossbar set minecraft:spleefroundcount name {"text":"Round: 0/3","bold":true}
@@ -96,6 +97,9 @@ execute if score $gameActive spleef matches 1 run execute if score $shrink3Timer
 execute if score $gameActive spleef matches 1 run execute if score $shrink1Timer spleefBorder matches 0 run function main:spleef/border/shrink1
 execute if score $gameActive spleef matches 1 run execute if score $shrink2Timer spleefBorder matches 0 run function main:spleef/border/shrink2
 execute if score $gameActive spleef matches 1 run execute if score $shrink3Timer spleefBorder matches 0 run function main:spleef/border/shrink3
+# trigger shrinkActual
+execute if score $gameActive spleef matches 1 run scoreboard players remove $shrinkActual spleefBorder 1
+execute if score $gameActive spleef matches 0 run scoreboard players set $shrinkActual spleefBorder 600
 
 # Making players leave their teams when they leave the game
 # execute as @a[scores={Quit=1..}] run team leave @s
@@ -103,4 +107,4 @@ execute if score $gameActive spleef matches 1 run execute if score $shrink3Timer
 # execute as @a[scores={Quit=1..}] run execute if score $game GameActive matches 0 run tp @s 0 100 0
 # execute as @a[scores={Quit=1..}] run tellraw @s {"text":"You were kicked from your team because you left the game.","color":"dark_gray"}
 # execute as @a[scores={Quit=1..}] run scoreboard players set @s Quit 0
-# execute as @a[scores={Quit=1..}] run clear @s
+# execute as @a[scores={Quit=1..}] run clear @a
