@@ -22,7 +22,7 @@ scoreboard players set $shrink3Timer spleefBorder 5000
 scoreboard players set $shrink1Active spleefBorder 0
 scoreboard players set $shrink2Active spleefBorder 0
 scoreboard players set $shrink3Active spleefBorder 0
-scoreboard players set $shrinkActual spleefBorder 600
+scoreboard players set $shrinkActual spleefBorder 500
 
 # teleport players to box
 gamemode adventure @a[team=!Admin]
