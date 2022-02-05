@@ -17,7 +17,7 @@ fill -526 44 -452 -526 44 -470 red_concrete
 # three
 fill -509 44 -489 -485 44 -489 red_concrete
 fill -469 44 -473 -469 44 -449 red_concrete
-fill -485 44 -433 -409 44 -433 red_concrete
+fill -485 44 -433 -509 44 -433 red_concrete
 fill -525 44 -449 -525 44 -473 red_concrete
 # four
 fill -511 44 -488 -483 44 -488 red_concrete
@@ -64,7 +64,7 @@ fill -526 38 -452 -526 38 -470 red_concrete
 # three
 fill -509 38 -489 -485 38 -489 red_concrete
 fill -469 38 -473 -469 38 -449 red_concrete
-fill -485 38 -433 -409 38 -433 red_concrete
+fill -485 38 -433 -509 38 -433 red_concrete
 fill -525 38 -449 -525 38 -473 red_concrete
 # four
 fill -511 38 -488 -483 38 -488 red_concrete
