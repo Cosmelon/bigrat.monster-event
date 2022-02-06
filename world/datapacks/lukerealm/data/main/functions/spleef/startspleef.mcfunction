@@ -19,9 +19,6 @@ scoreboard players set $gameActive spleef 1
 scoreboard players set $shrink1Timer spleefBorder 1900
 scoreboard players set $shrink2Timer spleefBorder 3400
 scoreboard players set $shrink3Timer spleefBorder 5000
-scoreboard players set $shrink1Active spleefBorder 0
-scoreboard players set $shrink2Active spleefBorder 0
-scoreboard players set $shrink3Active spleefBorder 0
 scoreboard players set $shrinkActual spleefBorder 0
 
 # teleport players to box
