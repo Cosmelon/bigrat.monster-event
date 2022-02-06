@@ -3,7 +3,7 @@
 #   this file is also only called while a round is active
 
 #controls the scoreboard running the below code
-scoreboard players remove $shrink2Break spleefBorder 1
+scoreboard players remove $shrink3Break spleefBorder 1
 
 #top layer
 # directions go north, east, south, west
