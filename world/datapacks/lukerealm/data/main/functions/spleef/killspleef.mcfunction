@@ -10,6 +10,9 @@ scoreboard players set $notifYellowDead spleef 0
 scoreboard players set $shrink1Timer spleefBorder 2400
 scoreboard players set $shrink2Timer spleefBorder 3400
 scoreboard players set $shrink3Timer spleefBorder 5000
+scoreboard players set $shrink1Break spleefBorder 0
+scoreboard players set $shrink2Break spleefBorder 0
+scoreboard players set $shrink3Break spleefBorder 0
 bossbar set minecraft:shrink1timer visible false
 bossbar set minecraft:shrink2timer visible false
 bossbar set minecraft:shrink3timer visible false
