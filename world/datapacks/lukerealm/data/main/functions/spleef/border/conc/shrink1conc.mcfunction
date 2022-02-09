@@ -8,40 +8,40 @@ scoreboard players remove $shrink1Break spleefBorder 1
 #top layer
 # directions go north, east, south, west
 # one
-execute if score $shrink1Break spleefBorder matches 270 run fill -502 44 -491 -499 44 -491 red_concrete replace snow_block
-execute if score $shrink1Break spleefBorder matches 270 run fill -495 44 -491 -492 44 -491 red_concrete replace snow_block
-execute if score $shrink1Break spleefBorder matches 270 run fill -467 44 -466 -467 44 -463 red_concrete replace snow_block
-execute if score $shrink1Break spleefBorder matches 270 run fill -467 44 -459 -467 44 -456 red_concrete replace snow_block
-execute if score $shrink1Break spleefBorder matches 270 run fill -492 44 -431 -495 44 -431 red_concrete replace snow_block
-execute if score $shrink1Break spleefBorder matches 270 run fill -499 44 -431 -502 44 -431 red_concrete replace snow_block
-execute if score $shrink1Break spleefBorder matches 270 run fill -527 44 -456 -527 44 -459 red_concrete replace snow_block
-execute if score $shrink1Break spleefBorder matches 270 run fill -527 44 -463 -527 44 -466 red_concrete replace snow_block
-execute if score $shrink1Break spleefBorder matches 237 run fill -502 44 -491 -499 44 -491 air
-execute if score $shrink1Break spleefBorder matches 237 run fill -495 44 -491 -492 44 -491 air
-execute if score $shrink1Break spleefBorder matches 237 run fill -467 44 -466 -467 44 -463 air
-execute if score $shrink1Break spleefBorder matches 237 run fill -467 44 -459 -467 44 -456 air
-execute if score $shrink1Break spleefBorder matches 237 run fill -492 44 -431 -495 44 -431 air
-execute if score $shrink1Break spleefBorder matches 237 run fill -499 44 -431 -502 44 -431 air
-execute if score $shrink1Break spleefBorder matches 237 run fill -527 44 -456 -527 44 -459 air
-execute if score $shrink1Break spleefBorder matches 237 run fill -527 44 -463 -527 44 -466 air
+execute if score $shrink1Break spleefBorder matches 237 run fill -502 44 -491 -499 44 -491 red_concrete replace snow_block
+execute if score $shrink1Break spleefBorder matches 237 run fill -495 44 -491 -492 44 -491 red_concrete replace snow_block
+execute if score $shrink1Break spleefBorder matches 237 run fill -467 44 -466 -467 44 -463 red_concrete replace snow_block
+execute if score $shrink1Break spleefBorder matches 237 run fill -467 44 -459 -467 44 -456 red_concrete replace snow_block
+execute if score $shrink1Break spleefBorder matches 237 run fill -492 44 -431 -495 44 -431 red_concrete replace snow_block
+execute if score $shrink1Break spleefBorder matches 237 run fill -499 44 -431 -502 44 -431 red_concrete replace snow_block
+execute if score $shrink1Break spleefBorder matches 237 run fill -527 44 -456 -527 44 -459 red_concrete replace snow_block
+execute if score $shrink1Break spleefBorder matches 237 run fill -527 44 -463 -527 44 -466 red_concrete replace snow_block
+execute if score $shrink1Break spleefBorder matches 227 run fill -502 44 -491 -499 44 -491 air
+execute if score $shrink1Break spleefBorder matches 227 run fill -495 44 -491 -492 44 -491 air
+execute if score $shrink1Break spleefBorder matches 227 run fill -467 44 -466 -467 44 -463 air
+execute if score $shrink1Break spleefBorder matches 227 run fill -467 44 -459 -467 44 -456 air
+execute if score $shrink1Break spleefBorder matches 227 run fill -492 44 -431 -495 44 -431 air
+execute if score $shrink1Break spleefBorder matches 227 run fill -499 44 -431 -502 44 -431 air
+execute if score $shrink1Break spleefBorder matches 227 run fill -527 44 -456 -527 44 -459 air
+execute if score $shrink1Break spleefBorder matches 227 run fill -527 44 -463 -527 44 -466 air
 # two
-execute if score $shrink1Break spleefBorder matches 236 run fill -506 44 -490 -488 44 -490 red_concrete replace snow_block
-execute if score $shrink1Break spleefBorder matches 236 run fill -468 44 -470 -468 44 -452 red_concrete replace snow_block
-execute if score $shrink1Break spleefBorder matches 236 run fill -488 44 -432 -506 44 -432 red_concrete replace snow_block
-execute if score $shrink1Break spleefBorder matches 236 run fill -526 44 -452 -526 44 -470 red_concrete replace snow_block
-execute if score $shrink1Break spleefBorder matches 204 run fill -506 44 -490 -488 44 -490 air
-execute if score $shrink1Break spleefBorder matches 204 run fill -468 44 -470 -468 44 -452 air
-execute if score $shrink1Break spleefBorder matches 204 run fill -488 44 -432 -506 44 -432 air
-execute if score $shrink1Break spleefBorder matches 204 run fill -526 44 -452 -526 44 -470 air
+execute if score $shrink1Break spleefBorder matches 204 run fill -506 44 -490 -488 44 -490 red_concrete replace snow_block
+execute if score $shrink1Break spleefBorder matches 204 run fill -468 44 -470 -468 44 -452 red_concrete replace snow_block
+execute if score $shrink1Break spleefBorder matches 204 run fill -488 44 -432 -506 44 -432 red_concrete replace snow_block
+execute if score $shrink1Break spleefBorder matches 204 run fill -526 44 -452 -526 44 -470 red_concrete replace snow_block
+execute if score $shrink1Break spleefBorder matches 199 run fill -506 44 -490 -488 44 -490 air
+execute if score $shrink1Break spleefBorder matches 199 run fill -468 44 -470 -468 44 -452 air
+execute if score $shrink1Break spleefBorder matches 199 run fill -488 44 -432 -506 44 -432 air
+execute if score $shrink1Break spleefBorder matches 199 run fill -526 44 -452 -526 44 -470 air
 # three
-execute if score $shrink1Break spleefBorder matches 203 run fill -509 44 -489 -485 44 -489 red_concrete replace snow_block
-execute if score $shrink1Break spleefBorder matches 203 run fill -469 44 -473 -469 44 -449 red_concrete replace snow_block
-execute if score $shrink1Break spleefBorder matches 203 run fill -485 44 -433 -509 44 -433 red_concrete replace snow_block
-execute if score $shrink1Break spleefBorder matches 203 run fill -525 44 -449 -525 44 -473 red_concrete replace snow_block
-execute if score $shrink1Break spleefBorder matches 171 run fill -509 44 -489 -485 44 -489 air
-execute if score $shrink1Break spleefBorder matches 171 run fill -469 44 -473 -469 44 -449 air
-execute if score $shrink1Break spleefBorder matches 171 run fill -485 44 -433 -509 44 -433 air
-execute if score $shrink1Break spleefBorder matches 171 run fill -525 44 -449 -525 44 -473 air
+execute if score $shrink1Break spleefBorder matches 171 run fill -509 44 -489 -485 44 -489 red_concrete replace snow_block
+execute if score $shrink1Break spleefBorder matches 171 run fill -469 44 -473 -469 44 -449 red_concrete replace snow_block
+execute if score $shrink1Break spleefBorder matches 171 run fill -485 44 -433 -509 44 -433 red_concrete replace snow_block
+execute if score $shrink1Break spleefBorder matches 171 run fill -525 44 -449 -525 44 -473 red_concrete replace snow_block
+execute if score $shrink1Break spleefBorder matches 166 run fill -509 44 -489 -485 44 -489 air
+execute if score $shrink1Break spleefBorder matches 166 run fill -469 44 -473 -469 44 -449 air
+execute if score $shrink1Break spleefBorder matches 166 run fill -485 44 -433 -509 44 -433 air
+execute if score $shrink1Break spleefBorder matches 166 run fill -525 44 -449 -525 44 -473 air
 # four
 execute if score $shrink1Break spleefBorder matches 170 run fill -511 44 -488 -483 44 -488 red_concrete replace snow_block
 execute if score $shrink1Break spleefBorder matches 170 run fill -470 44 -475 -470 44 -447 red_concrete replace snow_block
@@ -91,40 +91,40 @@ execute if score $shrink1Break spleefBorder matches 6 run fill -520 44 -442 -520
 #bottom layer
 # directions go north, east, south, west
 # one
-execute if score $shrink1Break spleefBorder matches 270 run fill -502 38 -491 -499 38 -491 red_concrete replace snow_block
-execute if score $shrink1Break spleefBorder matches 270 run fill -495 38 -491 -492 38 -491 red_concrete replace snow_block
-execute if score $shrink1Break spleefBorder matches 270 run fill -467 38 -466 -467 38 -463 red_concrete replace snow_block
-execute if score $shrink1Break spleefBorder matches 270 run fill -467 38 -459 -467 38 -456 red_concrete replace snow_block
-execute if score $shrink1Break spleefBorder matches 270 run fill -492 38 -431 -495 38 -431 red_concrete replace snow_block
-execute if score $shrink1Break spleefBorder matches 270 run fill -499 38 -431 -502 38 -431 red_concrete replace snow_block
-execute if score $shrink1Break spleefBorder matches 270 run fill -527 38 -456 -527 38 -459 red_concrete replace snow_block
-execute if score $shrink1Break spleefBorder matches 270 run fill -527 38 -463 -527 38 -466 red_concrete replace snow_block
-execute if score $shrink1Break spleefBorder matches 237 run fill -502 38 -491 -499 38 -491 air
-execute if score $shrink1Break spleefBorder matches 237 run fill -495 38 -491 -492 38 -491 air
-execute if score $shrink1Break spleefBorder matches 237 run fill -467 38 -466 -467 38 -463 air
-execute if score $shrink1Break spleefBorder matches 237 run fill -467 38 -459 -467 38 -456 air
-execute if score $shrink1Break spleefBorder matches 237 run fill -492 38 -431 -495 38 -431 air
-execute if score $shrink1Break spleefBorder matches 237 run fill -499 38 -431 -502 38 -431 air
-execute if score $shrink1Break spleefBorder matches 237 run fill -527 38 -456 -527 38 -459 air
-execute if score $shrink1Break spleefBorder matches 237 run fill -527 38 -463 -527 38 -466 air
+execute if score $shrink1Break spleefBorder matches 237 run fill -502 38 -491 -499 38 -491 red_concrete replace snow_block
+execute if score $shrink1Break spleefBorder matches 237 run fill -495 38 -491 -492 38 -491 red_concrete replace snow_block
+execute if score $shrink1Break spleefBorder matches 237 run fill -467 38 -466 -467 38 -463 red_concrete replace snow_block
+execute if score $shrink1Break spleefBorder matches 237 run fill -467 38 -459 -467 38 -456 red_concrete replace snow_block
+execute if score $shrink1Break spleefBorder matches 237 run fill -492 38 -431 -495 38 -431 red_concrete replace snow_block
+execute if score $shrink1Break spleefBorder matches 237 run fill -499 38 -431 -502 38 -431 red_concrete replace snow_block
+execute if score $shrink1Break spleefBorder matches 237 run fill -527 38 -456 -527 38 -459 red_concrete replace snow_block
+execute if score $shrink1Break spleefBorder matches 237 run fill -527 38 -463 -527 38 -466 red_concrete replace snow_block
+execute if score $shrink1Break spleefBorder matches 227 run fill -502 38 -491 -499 38 -491 air
+execute if score $shrink1Break spleefBorder matches 227 run fill -495 38 -491 -492 38 -491 air
+execute if score $shrink1Break spleefBorder matches 227 run fill -467 38 -466 -467 38 -463 air
+execute if score $shrink1Break spleefBorder matches 227 run fill -467 38 -459 -467 38 -456 air
+execute if score $shrink1Break spleefBorder matches 227 run fill -492 38 -431 -495 38 -431 air
+execute if score $shrink1Break spleefBorder matches 227 run fill -499 38 -431 -502 38 -431 air
+execute if score $shrink1Break spleefBorder matches 227 run fill -527 38 -456 -527 38 -459 air
+execute if score $shrink1Break spleefBorder matches 227 run fill -527 38 -463 -527 38 -466 air
 # two
-execute if score $shrink1Break spleefBorder matches 236 run fill -506 38 -490 -488 38 -490 red_concrete replace snow_block
-execute if score $shrink1Break spleefBorder matches 236 run fill -468 38 -470 -468 38 -452 red_concrete replace snow_block
-execute if score $shrink1Break spleefBorder matches 236 run fill -488 38 -432 -506 38 -432 red_concrete replace snow_block
-execute if score $shrink1Break spleefBorder matches 236 run fill -526 38 -452 -526 38 -470 red_concrete replace snow_block
-execute if score $shrink1Break spleefBorder matches 204 run fill -506 38 -490 -488 38 -490 air
-execute if score $shrink1Break spleefBorder matches 204 run fill -468 38 -470 -468 38 -452 air
-execute if score $shrink1Break spleefBorder matches 204 run fill -488 38 -432 -506 38 -432 air
-execute if score $shrink1Break spleefBorder matches 204 run fill -526 38 -452 -526 38 -470 air
+execute if score $shrink1Break spleefBorder matches 204 run fill -506 38 -490 -488 38 -490 red_concrete replace snow_block
+execute if score $shrink1Break spleefBorder matches 204 run fill -468 38 -470 -468 38 -452 red_concrete replace snow_block
+execute if score $shrink1Break spleefBorder matches 204 run fill -488 38 -432 -506 38 -432 red_concrete replace snow_block
+execute if score $shrink1Break spleefBorder matches 204 run fill -526 38 -452 -526 38 -470 red_concrete replace snow_block
+execute if score $shrink1Break spleefBorder matches 199 run fill -506 38 -490 -488 38 -490 air
+execute if score $shrink1Break spleefBorder matches 199 run fill -468 38 -470 -468 38 -452 air
+execute if score $shrink1Break spleefBorder matches 199 run fill -488 38 -432 -506 38 -432 air
+execute if score $shrink1Break spleefBorder matches 199 run fill -526 38 -452 -526 38 -470 air
 # three
-execute if score $shrink1Break spleefBorder matches 203 run fill -509 38 -489 -485 38 -489 red_concrete replace snow_block
-execute if score $shrink1Break spleefBorder matches 203 run fill -469 38 -473 -469 38 -449 red_concrete replace snow_block
-execute if score $shrink1Break spleefBorder matches 203 run fill -485 38 -433 -509 38 -433 red_concrete replace snow_block
-execute if score $shrink1Break spleefBorder matches 203 run fill -525 38 -449 -525 38 -473 red_concrete replace snow_block
-execute if score $shrink1Break spleefBorder matches 171 run fill -509 38 -489 -485 38 -489 air
-execute if score $shrink1Break spleefBorder matches 171 run fill -469 38 -473 -469 38 -449 air
-execute if score $shrink1Break spleefBorder matches 171 run fill -485 38 -433 -509 38 -433 air
-execute if score $shrink1Break spleefBorder matches 171 run fill -525 38 -449 -525 38 -473 air
+execute if score $shrink1Break spleefBorder matches 171 run fill -509 38 -489 -485 38 -489 red_concrete replace snow_block
+execute if score $shrink1Break spleefBorder matches 171 run fill -469 38 -473 -469 38 -449 red_concrete replace snow_block
+execute if score $shrink1Break spleefBorder matches 171 run fill -485 38 -433 -509 38 -433 red_concrete replace snow_block
+execute if score $shrink1Break spleefBorder matches 171 run fill -525 38 -449 -525 38 -473 red_concrete replace snow_block
+execute if score $shrink1Break spleefBorder matches 166 run fill -509 38 -489 -485 38 -489 air
+execute if score $shrink1Break spleefBorder matches 166 run fill -469 38 -473 -469 38 -449 air
+execute if score $shrink1Break spleefBorder matches 166 run fill -485 38 -433 -509 38 -433 air
+execute if score $shrink1Break spleefBorder matches 166 run fill -525 38 -449 -525 38 -473 air
 # four
 execute if score $shrink1Break spleefBorder matches 170 run fill -511 38 -488 -483 38 -488 red_concrete replace snow_block
 execute if score $shrink1Break spleefBorder matches 170 run fill -470 38 -475 -470 38 -447 red_concrete replace snow_block
