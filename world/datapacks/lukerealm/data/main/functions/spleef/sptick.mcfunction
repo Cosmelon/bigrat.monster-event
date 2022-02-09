@@ -88,37 +88,6 @@ execute if score $gameActive spleef matches 1 run scoreboard players remove $shr
 
 # shrink timer bossbars
 execute if score $gameActive spleef matches 1 run execute if score $shrink1Timer spleefBorder matches 600 run bossbar set minecraft:shrink1timer visible true
-execute if score $shrink1Timer spleefBorder matches 600 run bossbar set minecraft:shrink1timer name [{"text":"First Shrink: ","color":"red","bold":true},{"text":"0:30","color":"white","bold":true}]
-execute if score $shrink1Timer spleefBorder matches 580 run bossbar set minecraft:shrink1timer name [{"text":"First Shrink: ","color":"red","bold":true},{"text":"0:30","color":"white","bold":true}]
-execute if score $shrink1Timer spleefBorder matches 560 run bossbar set minecraft:shrink1timer name [{"text":"First Shrink: ","color":"red","bold":true},{"text":"0:30","color":"white","bold":true}]
-execute if score $shrink1Timer spleefBorder matches 540 run bossbar set minecraft:shrink1timer name [{"text":"First Shrink: ","color":"red","bold":true},{"text":"0:30","color":"white","bold":true}]
-execute if score $shrink1Timer spleefBorder matches 520 run bossbar set minecraft:shrink1timer name [{"text":"First Shrink: ","color":"red","bold":true},{"text":"0:30","color":"white","bold":true}]
-execute if score $shrink1Timer spleefBorder matches 500 run bossbar set minecraft:shrink1timer name [{"text":"First Shrink: ","color":"red","bold":true},{"text":"0:30","color":"white","bold":true}]
-execute if score $shrink1Timer spleefBorder matches 480 run bossbar set minecraft:shrink1timer name [{"text":"First Shrink: ","color":"red","bold":true},{"text":"0:30","color":"white","bold":true}]
-execute if score $shrink1Timer spleefBorder matches 460 run bossbar set minecraft:shrink1timer name [{"text":"First Shrink: ","color":"red","bold":true},{"text":"0:30","color":"white","bold":true}]
-execute if score $shrink1Timer spleefBorder matches 440 run bossbar set minecraft:shrink1timer name [{"text":"First Shrink: ","color":"red","bold":true},{"text":"0:30","color":"white","bold":true}]
-execute if score $shrink1Timer spleefBorder matches 420 run bossbar set minecraft:shrink1timer name [{"text":"First Shrink: ","color":"red","bold":true},{"text":"0:30","color":"white","bold":true}]
-execute if score $shrink1Timer spleefBorder matches 400 run bossbar set minecraft:shrink1timer name [{"text":"First Shrink: ","color":"red","bold":true},{"text":"0:30","color":"white","bold":true}]
-execute if score $shrink1Timer spleefBorder matches 380 run bossbar set minecraft:shrink1timer name [{"text":"First Shrink: ","color":"red","bold":true},{"text":"0:30","color":"white","bold":true}]
-execute if score $shrink1Timer spleefBorder matches 360 run bossbar set minecraft:shrink1timer name [{"text":"First Shrink: ","color":"red","bold":true},{"text":"0:30","color":"white","bold":true}]
-execute if score $shrink1Timer spleefBorder matches 340 run bossbar set minecraft:shrink1timer name [{"text":"First Shrink: ","color":"red","bold":true},{"text":"0:30","color":"white","bold":true}]
-execute if score $shrink1Timer spleefBorder matches 320 run bossbar set minecraft:shrink1timer name [{"text":"First Shrink: ","color":"red","bold":true},{"text":"0:30","color":"white","bold":true}]
-execute if score $shrink1Timer spleefBorder matches 300 run bossbar set minecraft:shrink1timer name [{"text":"First Shrink: ","color":"red","bold":true},{"text":"0:30","color":"white","bold":true}]
-execute if score $shrink1Timer spleefBorder matches 280 run bossbar set minecraft:shrink1timer name [{"text":"First Shrink: ","color":"red","bold":true},{"text":"0:30","color":"white","bold":true}]
-execute if score $shrink1Timer spleefBorder matches 260 run bossbar set minecraft:shrink1timer name [{"text":"First Shrink: ","color":"red","bold":true},{"text":"0:30","color":"white","bold":true}]
-execute if score $shrink1Timer spleefBorder matches 240 run bossbar set minecraft:shrink1timer name [{"text":"First Shrink: ","color":"red","bold":true},{"text":"0:30","color":"white","bold":true}]
-execute if score $shrink1Timer spleefBorder matches 220 run bossbar set minecraft:shrink1timer name [{"text":"First Shrink: ","color":"red","bold":true},{"text":"0:30","color":"white","bold":true}]
-execute if score $shrink1Timer spleefBorder matches 200 run bossbar set minecraft:shrink1timer name [{"text":"First Shrink: ","color":"red","bold":true},{"text":"0:30","color":"white","bold":true}]
-execute if score $shrink1Timer spleefBorder matches 180 run bossbar set minecraft:shrink1timer name [{"text":"First Shrink: ","color":"red","bold":true},{"text":"0:30","color":"white","bold":true}]
-execute if score $shrink1Timer spleefBorder matches 160 run bossbar set minecraft:shrink1timer name [{"text":"First Shrink: ","color":"red","bold":true},{"text":"0:30","color":"white","bold":true}]
-execute if score $shrink1Timer spleefBorder matches 140 run bossbar set minecraft:shrink1timer name [{"text":"First Shrink: ","color":"red","bold":true},{"text":"0:30","color":"white","bold":true}]
-execute if score $shrink1Timer spleefBorder matches 120 run bossbar set minecraft:shrink1timer name [{"text":"First Shrink: ","color":"red","bold":true},{"text":"0:30","color":"white","bold":true}]
-execute if score $shrink1Timer spleefBorder matches 100 run bossbar set minecraft:shrink1timer name [{"text":"First Shrink: ","color":"red","bold":true},{"text":"0:30","color":"white","bold":true}]
-execute if score $shrink1Timer spleefBorder matches 80 run bossbar set minecraft:shrink1timer name [{"text":"First Shrink: ","color":"red","bold":true},{"text":"0:30","color":"white","bold":true}]
-execute if score $shrink1Timer spleefBorder matches 60 run bossbar set minecraft:shrink1timer name [{"text":"First Shrink: ","color":"red","bold":true},{"text":"0:30","color":"white","bold":true}]
-execute if score $shrink1Timer spleefBorder matches 40 run bossbar set minecraft:shrink1timer name [{"text":"First Shrink: ","color":"red","bold":true},{"text":"0:30","color":"white","bold":true}]
-execute if score $shrink1Timer spleefBorder matches 20 run bossbar set minecraft:shrink1timer name [{"text":"First Shrink: ","color":"red","bold":true},{"text":"0:30","color":"white","bold":true}]
-execute if score $shrink1Timer spleefBorder matches 0 run bossbar set minecraft:shrink1timer name [{"text":"First Shrink: ","color":"red","bold":true},{"text":"0:30","color":"white","bold":true}]
 execute if score $gameActive spleef matches 1 run execute if score $shrink2Timer spleefBorder matches 600 run bossbar set minecraft:shrink2timer visible true
 execute if score $gameActive spleef matches 1 run execute if score $shrink3Timer spleefBorder matches 600 run bossbar set minecraft:shrink3timer visible true
 execute if score $gameActive spleef matches 1 run function main:spleef/border/shrinkcountdown
