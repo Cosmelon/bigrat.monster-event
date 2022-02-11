@@ -7,6 +7,9 @@
 #  spleef_sb - tracks snowballs
 #  spleefBorder - worldborder stuff
 
+# prevents players from going out of the arena
+execute if score $gameActive spleef matches 1 run execute positioned -496 45 -461 run tp @a[gamemode=spectator,team=!Admin,distance=40..70] -497 69 -461
+
 # sets time of day
 execute if score $gameActive spleef matches 1 run time set midnight
 
