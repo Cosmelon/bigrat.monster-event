@@ -3,6 +3,10 @@
 # reset arena floor
 function main:spleef/reloadfloor
 
+# title reset
+title @a title ""
+title @a actionbar ""
+
 # clear inventories
 clear @a[team=!Admin]
 kill @e[type=item]
@@ -11,7 +15,6 @@ effect give @a[team=Red] glowing 10000 1 true
 effect give @a[team=Blue] glowing 10000 1 true
 effect give @a[team=Green] glowing 10000 1 true
 effect give @a[team=Yellow] glowing 10000 1 true
-
 
 # reset scoreboards
 scoreboard players set $countDown spleef 160

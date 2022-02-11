@@ -12,6 +12,8 @@ effect clear @a
 bossbar set minecraft:spleefroundcount visible false
 
 # reset stuff for spleef
+title @a title ""
+title @a subtitle ""
 scoreboard players set $notifRedDead spleef 0
 scoreboard players set $notifBlueDead spleef 0
 scoreboard players set $notifGreenDead spleef 0
