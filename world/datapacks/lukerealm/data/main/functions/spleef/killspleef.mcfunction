@@ -30,3 +30,4 @@ schedule clear main:spleef/border/shrink1bar
 schedule clear main:spleef/border/shrink2bar
 schedule clear main:spleef/border/shrink3bar
 clear @a[team=!Admin]
+playsound minecraft:block.beacon.deactivate master @a
