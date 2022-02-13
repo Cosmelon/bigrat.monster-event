@@ -5,6 +5,9 @@
 #controls the scoreboard running the below code
 scoreboard players remove $shrink3Break spleefBorder 1
 
+#sounds
+execute if score $shrink1Break spleefBorder matches 6 run playsound minecraft:block.anvil.destroy ambient @a
+
 #top layer
 # directions go north, east, south, west
 # one
