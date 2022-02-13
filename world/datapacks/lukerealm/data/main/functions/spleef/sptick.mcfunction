@@ -6,6 +6,7 @@
 #  spleefSnowBall - tracks spleef giving snowball stuff
 #  spleef_sb - tracks snowballs
 #  spleefBorder - worldborder stuff
+#  spleefQuit - tracks logouts during spleef
 
 # prevents players from going out of the arena
 execute if score $gameActive spleef matches 1 run execute positioned -496 45 -461 run tp @a[gamemode=spectator,team=!Admin,distance=40..70] -497 69 -461
@@ -24,7 +25,6 @@ execute store result bossbar minecraft:shrink3timer value run scoreboard players
 execute store result bossbar minecraft:shrinkactual value run scoreboard players get $shrinkActual spleefBorder
 
 # updates round count bossbar name
-# execute if score $round spleef matches 0 run bossbar set minecraft:spleefroundcount name {"text":"Round: 0/3","bold":true}
 execute if score $round spleef matches 1 run bossbar set minecraft:spleefroundcount name {"text":"Round: 1/3","bold":true}
 execute if score $round spleef matches 2 run bossbar set minecraft:spleefroundcount name {"text":"Round: 2/3","bold":true}
 execute if score $round spleef matches 3 run bossbar set minecraft:spleefroundcount name {"text":"Round: 3/3","bold":true}
