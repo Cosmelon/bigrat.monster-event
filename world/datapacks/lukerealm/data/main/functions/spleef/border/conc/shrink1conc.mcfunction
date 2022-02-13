@@ -6,7 +6,7 @@
 scoreboard players remove $shrink1Break spleefBorder 1
 
 # end sound
-playsound minecraft:block.anvil.destroy master @a
+execute if score $shrink1Break spleefBorder matches 1 run playsound minecraft:block.anvil.destroy master @a
 
 #top layer
 # directions go north, east, south, west
