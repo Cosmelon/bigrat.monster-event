@@ -71,8 +71,9 @@ execute positioned -191 12 132 run tp @a[team=Yellow,limit=1,sort=random,distanc
 execute positioned -191 12 132 run tp @a[team=Yellow,limit=1,sort=random,distance=..50] 286.5 14 44.5 -90 5
 execute positioned -191 12 132 run tp @a[team=Yellow,limit=1,sort=random,distance=..50] 286.5 14 45.5 -90 5
 execute positioned -191 12 132 run tp @a[team=Yellow,limit=1,sort=random,distance=..50] 286.5 14 46.5 -90 5
-
-execute if score $yes Start matches 1 run execute at @a[team=!Spectator] run setblock ~ ~1 ~-1 barrier
-execute if score $yes Start matches 1 run execute at @a[team=!Spectator] run setblock ~ ~1 ~1 barrier
-execute if score $yes Start matches 1 run execute at @a[team=!Spectator] run setblock ~-1 ~1 ~ barrier
-execute if score $yes Start matches 1 run execute at @a[team=!Spectator] run setblock ~1 ~1 ~ barrier
+#barriers
+fill 294 18 37 294 14 47 light_gray_stained_glass
+setblock 294 18 38 white_wool
+setblock 294 18 39 black_wool
+setblock 294 18 45 black_wool
+setblock 294 18 46 white_wool
