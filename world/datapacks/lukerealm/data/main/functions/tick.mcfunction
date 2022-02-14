@@ -15,4 +15,5 @@ bossbar set minecraft:shirnk2timer players @a
 bossbar set minecraft:shrink3timer players @a
 bossbar set minecraft:shrinkactual players @a
 
-execute if score !gameActive race matches 0 run tag @a remove player
+execute if score $gameActive spleef matches 0 run execute if score !gameActive race matches 0 run spawnpoint @a -191 12 132
+execute if score $gameActive spleef matches 0 run execute if score !gameActive race matches 0 run setworldspawn -191 12 132
