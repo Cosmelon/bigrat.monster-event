@@ -25,6 +25,7 @@ gamemode spectator @a[team=Admin]
 gamemode spectator @a[team=Spectator]
 
 # teleporting
+tp @a -191 12 132
 tp @a[team=Admin] 284.5 15 42.5 -90 5
 tp @a[team=Spectator] 284.5 15 42.5 -90 5
 execute positioned -191 12 132 run tp @a[team=Red,limit=1,sort=random,distance=..50] 290.5 14 38.5 -90 5
