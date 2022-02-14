@@ -17,6 +17,3 @@ bossbar set minecraft:shrink2timer visible false
 bossbar set minecraft:shrink3timer visible false
 bossbar set minecraft:shrinkactual visible false
 gamemode spectator @a
-
-# reset all shrink
-scoreboard players set $shrink1Active spleef 0
