@@ -5,6 +5,10 @@
 #  time set 13000
 #  time set 23000
 
+# start
+scoreboard players set !gameActive race 1
+scoreboard players set !countDown race 160
+
 # clear inventory pre-game
 clear @a[team=Red]
 clear @a[team=Blue]
@@ -96,7 +100,6 @@ fill 286 16 43 286 16 46 barrier
 fill 285 15 43 285 15 46 barrier
 setblock 286 15 42 barrier
 setblock 286 15 47 barrier
-
 #startline
 fill 294 18 37 294 14 47 light_gray_stained_glass
 setblock 294 18 38 white_wool
