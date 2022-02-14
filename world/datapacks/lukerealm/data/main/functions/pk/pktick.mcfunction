@@ -13,7 +13,6 @@
 execute if score $gameActive parkour matches 1 run scoreboard players remove $countDown parkour 1
 
 # countdown
-title @a times 0 25 0
 execute if score $countDown parkour matches 60 run fill 10 6 92 10 4 98 red_stained_glass replace light_gray_stained_glass
 execute if score $countDown parkour matches 60 run title @a title {"text":"3","color":"red"}
 execute if score $countDown parkour matches 60 run playsound minecraft:block.note_block.chime master @a ~ ~ ~ 10 1
