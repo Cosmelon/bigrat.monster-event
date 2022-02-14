@@ -50,6 +50,6 @@ aliases:
   reloadspleef:
   - function main:spleef/reloadfloor
   startrace:
-  - function main:race/start
+  - function main:race/startrace
   killrace:
-  - function main:race/kill
+  - function main:race/killrace
