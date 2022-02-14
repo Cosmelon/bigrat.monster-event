@@ -26,3 +26,7 @@ execute if score !gameActive race matches 1 run execute as @a[gamemode=adventure
 execute if score !gameActive race matches 1 run execute as @a[gamemode=adventure] run execute positioned as @s if block ~ ~-1 ~ light_blue_glazed_terracotta run item replace entity @s armor.chest with elytra
 # remove chest
 execute if score !gameActive race matches 1 run execute as @a[gamemode=adventure] run execute positioned as @s if block ~ ~-1 ~ orange_glazed_terracotta run item replace entity @s armor.chest with air
+
+# before elytra checkpoint, most likely temporary
+execute if score !gameActive race matches 1 run execute as @a[gamemode=adventure] run execute positioned as @s if block ~ ~-1 ~ granite run spawnpoint @s ~ ~ ~ 
+execute if score !gameActive race matches 1 run kill @a[y=6,dy=0]
