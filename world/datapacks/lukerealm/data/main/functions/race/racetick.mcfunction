@@ -18,3 +18,11 @@ execute if score !countDown race matches 0 run fill 294 18 37 294 14 47 air repl
 execute if score !countDown race matches 0 run title @a title {"text":"Go!","color":"green"}
 execute if score !countDown race matches 0 run playsound minecraft:block.note_block.chime master @a ~ ~ ~ 10 2
 execute if score !countDown race matches -20 run title @a title ""
+
+# speedpads (magenta_glazed_terracotta)
+execute if score !gameActive race matches 1 run execute as @a[gamemode=adventure] run execute positioned as @s if block ~ ~-1 ~ minecraft:magenta_glazed_terracotta run effect give @s speed 2 3 true
+execute if score !gameActive race matches 1 run execute as @a[gamemode=adventure] run execute positioned as @s if block ~ ~-1 ~ minecraft:magenta_glazed_terracotta run effect give @a dolphins_grace 3 3 true
+# give elytra (light_blue_glazed_terracotta)
+execute if score !gameActive race matches 1 run execute as @a[gamemode=adventure] run execute positioned as @s if block ~ ~-1 ~ light_blue_glazed_terracotta run item replace entity @s armor.chest with elytra
+# remove chest
+execute if score !gameActive race matches 1 run execute as @a[gamemode=adventure] run execute positioned as @s if block ~ ~-1 ~ orange_glazed_terracotta run item replace entity @s armor.chest with air
