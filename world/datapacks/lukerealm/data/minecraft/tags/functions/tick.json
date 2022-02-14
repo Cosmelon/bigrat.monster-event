@@ -1,6 +1,7 @@
 {
     "values":[
         "main:tick",
-        "main:spleef/sptick"
+        "main:spleef/sptick",
+        "main:race/racetick"
     ]
 }
