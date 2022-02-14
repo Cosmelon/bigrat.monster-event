@@ -16,4 +16,5 @@ bossbar set minecraft:shrink1timer visible false
 bossbar set minecraft:shrink2timer visible false
 bossbar set minecraft:shrink3timer visible false
 bossbar set minecraft:shrinkactual visible false
+summon lightning_bolt -496.5 51.23 -460.5
 gamemode spectator @a
