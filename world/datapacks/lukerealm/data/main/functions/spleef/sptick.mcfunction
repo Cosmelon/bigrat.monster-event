@@ -115,8 +115,8 @@ execute if score $gameActive spleef matches 1 run function main:spleef/border/co
 execute if score $gameActive spleef matches 1 run function main:spleef/border/conc/shrink3conc
 
 # Making players leave their teams when they leave the game
-execute if score $gameActive spleef matches 1 run execute as @a[scores={Quit=1..},team=!Admin] run gamemode spectator @s
-execute if score $gameActive spleef matches 1 run execute as @a[scores={Quit=1..}] run tellraw @s {"text":"You were killed because of a disconnect","color":"dark_gray"}
-execute if score $gameActive spleef matches 1 run execute as @a[scores={Quit=1..}] run scoreboard players set @s spleefQuit 0
-execute if score $gameActive spleef matches 1 run execute as @a[scores={Quit=1..}] run clear @a
+execute if score $gameActive spleef matches 1 run execute as @a[scores={spleefQuit=1..},team=!Admin] run gamemode spectator @s
+execute if score $gameActive spleef matches 1 run execute as @a[scores={spleefQuit=1..}] run tellraw @s {"text":"You were killed because of a disconnect","color":"dark_gray"}
+execute if score $gameActive spleef matches 1 run execute as @a[scores={spleefQuit=1..}] run scoreboard players set @s spleefQuit 0
+execute if score $gameActive spleef matches 1 run execute as @a[scores={spleefQuit=1..}] run clear @a
 execute if score $gameActive spleef matches 0 run scoreboard players reset @a spleefQuit
