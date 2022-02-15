@@ -1,6 +1,7 @@
 # kills race
 scoreboard players set !gameActive race 0
 scoreboard players set !countDown race 160
+effect clear @a
 
 # regenerate start
 fill 285 16 47 291 15 37 air replace barrier

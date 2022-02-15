@@ -1,7 +1,10 @@
 # tick files for race
+
 execute if score !gameActive race matches 0 run scoreboard players set !countDown race 160
 execute if score !gameActive race matches 1 run scoreboard players remove !countDown race 1
 execute if score !gameActive race matches 1 run title @a times 0 25 0
+execute if score !gameActive race matches 1 run effect give @a water_breathing 100000 0 true
+execute if score !gameActive race matches 1 run effect give @a speed 10000 0 true
 
 # countdown
 execute if score !countDown race matches 80 run fill 285 16 47 291 15 37 air replace barrier
@@ -32,4 +35,4 @@ execute if score !gameActive race matches 1 run execute as @a[gamemode=adventure
 execute if score !gameActive race matches 1 run kill @a[gamemode=adventure,scores={yCos=6}]
 
 # spawnpoints
-execute if score !gameActive race matches 1 run setworldspawn 284 14 42
+execute if score !gameActive race matches 1 run setworldspawn 284 14 4
