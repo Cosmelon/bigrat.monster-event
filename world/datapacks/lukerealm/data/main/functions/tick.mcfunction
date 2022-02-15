@@ -8,6 +8,8 @@ effect give @a saturation 100000 0 true
 
 execute if score $gameActive spleef matches 0 run scoreboard players set $spleef currentGame 0
 execute if score $gameActive spleef matches 1 run scoreboard players set $spleef currentGame 1
+execute if score !gameActive race matches 0 run scoreboard players set $race currentGame 0
+execute if score !gameActive race matches 1 run scoreboard players set $race currentGame 1
 
 bossbar set minecraft:spleefroundcount players @a
 bossbar set minecraft:shrink1timer players @a
