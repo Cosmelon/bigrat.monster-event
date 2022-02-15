@@ -30,3 +30,6 @@ execute if score !gameActive race matches 1 run execute as @a[gamemode=adventure
 # before elytra checkpoint, most likely temporary
 execute if score !gameActive race matches 1 run execute as @a[gamemode=adventure] run execute positioned as @s if block ~ ~-1 ~ granite run spawnpoint @s ~ ~ ~ 
 execute if score !gameActive race matches 1 run kill @a[gamemode=adventure,scores={yCos=6}]
+
+# spawnpoints
+execute if score !gameActive race matches 1 run setworldspawn 284 14 42
