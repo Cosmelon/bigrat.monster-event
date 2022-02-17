@@ -53,3 +53,5 @@ aliases:
   - function main:race/startrace
   killrace:
   - function main:race/killrace
+  lobby:
+  - tp @s -191 12 132
