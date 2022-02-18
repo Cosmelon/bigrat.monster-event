@@ -10,7 +10,7 @@ execute if score $round spleef matches 3 run schedule function main:spleef/wins/
 execute if score $round spleef matches 3 run schedule function main:lobby 10s replace
 # execute unless score $round spleef matches 3 run title @a title {"text":"Round Over!","bold":true,"color":"red"}
 scoreboard players reset * spleefDeaths
-playsound minecraft:block.note_block.chime ambient @a ~ ~ ~ 100000 1
+# playsound minecraft:block.note_block.chime ambient @a ~ ~ ~ 100000 1
 scoreboard players add $round spleef 1
 scoreboard players set $toolsGiven spleef 0
 bossbar set minecraft:shrink1timer visible false
