@@ -71,7 +71,7 @@ execute if score $gameActive spleef matches 1 run function main:spleef/snowball
 execute if score $gameActive spleef matches 1 run clear @a minecraft:snow_block
 
 # weakness when holding shovel
-execute if score $gameActive spleef matches 1 run effect give @a weakness 1 255 true
+execute if score $gameActive spleef matches 1 run effect give @a[team=!Admin] weakness 1 255 true
 execute if score $gameActive spleef matches 1 run execute as @a[nbt={SelectedItem:{id:"minecraft:stick"}}] run effect clear @s minecraft:weakness
 
 # does team death messaage
