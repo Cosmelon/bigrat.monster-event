@@ -45,7 +45,11 @@ execute if score $countDown spleef matches 0 run fill -491 60 -467 -503 65 -455 
 execute if score $countDown spleef matches -40 run function main:cleartitle
 
 # kills people who fell off L
-execute if score $gameActive spleef matches 1 run execute positioned -497 0 -461 run kill @a[distance=..32]
+execute if score $gameActive spleef matches 1 run execute positioned -497 0 -461 run kill @a[team=Red,distance=..32]
+execute if score $gameActive spleef matches 1 run execute positioned -497 0 -461 run kill @a[team=Blue,distance=..32]
+execute if score $gameActive spleef matches 1 run execute positioned -497 0 -461 run kill @a[team=Green,distance=..32]
+execute if score $gameActive spleef matches 1 run execute positioned -497 0 -461 run kill @a[team=Yellow,distance=..32]
+execute if score $gameActive spleef matches 1 run tp @a[team=Spectator,scores={yCos=20}] -496 66 -459 -180 5
 
 # tracks # of players on a team
 # alive:
