@@ -86,6 +86,9 @@ execute if score $gameActive spleef matches 1 run clear @a minecraft:snow_block
 execute if score $gameActive spleef matches 1 run effect give @a[team=!Admin] weakness 1 255 true
 execute if score $gameActive spleef matches 1 run execute as @a[nbt={SelectedItem:{id:"minecraft:stick"}}] run effect clear @s minecraft:weakness
 
+execute if score $gameActive spleef matches 1 run execute as @e[type=item,nbt={Item:{id:"minecraft:stick",Count:1b}}] run data modify entity @s PickupDelay set value 0t
+execute if score $gameActive spleef matches 1 run execute as @e[type=item,nbt={Item:{id:"minecraft:stick",Count:1b}}] run data modify entity @s Owner set from entity @s Thrower
+
 # does team death messaage
 execute if score $gameActive spleef matches 1 run function main:spleef/checkdead
 # red win
