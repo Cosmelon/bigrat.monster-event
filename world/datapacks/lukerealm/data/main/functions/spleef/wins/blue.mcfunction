@@ -12,6 +12,7 @@ execute if score $round spleef matches 3 run schedule function main:lobby 10s
 scoreboard players reset * spleefDeaths
 playsound minecraft:block.note_block.chime ambient @a ~ ~ ~ 100000 1
 scoreboard players add $round spleef 1
+scoreboard players reset $toolsGiven spleef
 bossbar set minecraft:shrink1timer visible false
 bossbar set minecraft:shrink2timer visible false
 bossbar set minecraft:shrink3timer visible false
