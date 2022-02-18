@@ -18,3 +18,6 @@ tellraw @a[team=Red] {"text":"You got tools!","color":"gold"}
 tellraw @a[team=Blue] {"text":"You got tools!","color":"gold"}
 tellraw @a[team=Green] {"text":"You got tools!","color":"gold"}
 tellraw @a[team=Yellow] {"text":"You got tools!","color":"gold"}
+
+# tools given score
+scoreboard players set $toolsGiven spleef 1
