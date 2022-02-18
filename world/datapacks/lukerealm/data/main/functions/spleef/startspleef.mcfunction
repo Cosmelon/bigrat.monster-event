@@ -40,6 +40,7 @@ tp @a[team=Yellow] -494 61 -458 135 10
 
 # give shovels and kb
 schedule function main:spleef/shovelsandkb 15s replace
+scoreboard players set $toolsGiven spleef 0
 
 # reset spleefDeaths for everyone
 scoreboard players reset @a spleefDeaths
