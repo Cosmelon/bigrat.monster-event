@@ -72,6 +72,10 @@ execute if score $gameActive spleef matches 1 run effect clear @a[team=Spectator
 # kills ground snowballs
 kill @e[type=minecraft:item,nbt={Item:{id:"minecraft:snowball"}}]
 
+# glowberries
+execute if score $gameActive spleef matches 1 run item replace entity @a armor.head with glow_berries
+execute if score $gameActive spleef matches 1 run clear @a glow_berries
+
 # snowball get on block break
 execute as @a[scores={spleefSnowBall=1..}] run give @s snowball 1
 scoreboard players reset * spleefSnowBall
