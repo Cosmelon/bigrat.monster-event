@@ -62,10 +62,10 @@ execute store result score $aliveYellow spleef if entity @a[team=Yellow,gamemode
 execute if score $gameActive spleef matches 1 run gamemode spectator @a[scores={spleefDeaths=1}]
 
 # ensures all players on a team have glowing
-execute if score $gameActive spleef matches 1 run effect give @a[team=Red] glowing
-execute if score $gameActive spleef matches 1 run effect give @a[team=Blue] glowing
-execute if score $gameActive spleef matches 1 run effect give @a[team=Green] glowing
-execute if score $gameActive spleef matches 1 run effect give @a[team=Yellow] glowing
+execute if score $gameActive spleef matches 1 run effect give @a[team=Red] glowing 100000 0 true
+execute if score $gameActive spleef matches 1 run effect give @a[team=Blue] glowing 100000 0 true
+execute if score $gameActive spleef matches 1 run effect give @a[team=Green] glowing 100000 0 true
+execute if score $gameActive spleef matches 1 run effect give @a[team=Yellow] glowing 100000 0 true
 execute if score $gameActive spleef matches 1 run effect clear @a[team=Admin] glowing
 execute if score $gameActive spleef matches 1 run effect clear @a[team=Spectator] glowing
 
