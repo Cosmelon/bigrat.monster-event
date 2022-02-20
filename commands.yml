@@ -55,3 +55,9 @@ aliases:
   - function main:race/killrace
   lobby:
   - tp @s -191 12 132
+  testeradd:
+  - whitelist add Spicv
+  - tellraw @a {"text":"Testers Added!","color":"green"}
+  testercut:
+  - whitelist remove Spicv
+  - tellraw @a {"text":"Testers Removed!","color":"red"}
