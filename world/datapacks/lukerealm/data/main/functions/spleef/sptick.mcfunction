@@ -34,13 +34,13 @@ execute if score $gameActive spleef matches 0 run scoreboard players set $countD
 execute if score $gameActive spleef matches 1 run scoreboard players remove $countDown spleef 1
 execute if score $gameActive spleef matches 1 run title @a times 0 25 5
 execute if score $countDown spleef matches 60 run title @a title {"text":"3","color":"red"}
-execute if score $countDown spleef matches 60 run playsound minecraft:block.note_block.guitar master @a ^0 ^ ^ 1 0.749154 1
+execute if score $countDown spleef matches 60 run playsound minecraft:block.note_block.chime master @s ^0 ^ ^ 1 1.259921 1
 execute if score $countDown spleef matches 40 run title @a title {"text":"2","color":"yellow"}
-execute if score $countDown spleef matches 40 run playsound minecraft:block.note_block.guitar master @a ^0 ^ ^ 1 0.749154 1
+execute if score $countDown spleef matches 40 run playsound minecraft:block.note_block.chime master @s ^0 ^ ^ 1 1.259921 1
 execute if score $countDown spleef matches 20 run title @a title {"text":"1","color":"green"}
-execute if score $countDown spleef matches 20 run playsound minecraft:block.note_block.guitar master @a ^0 ^ ^ 1 0.749154 1
+execute if score $countDown spleef matches 20 run playsound minecraft:block.note_block.chime master @s ^0 ^ ^ 1 1.259921 1
 execute if score $countDown spleef matches 0 run title @a title {"text":"Spread out!","color":"red"}
-execute if score $countDown spleef matches 0 run playsound minecraft:block.note_block.guitar master @a ^0 ^ ^ 1 1.122462 1
+execute if score $countDown spleef matches 0 run playsound minecraft:block.note_block.chime master @s ^0 ^ ^ 1 1.414214 1
 execute if score $countDown spleef matches 0 run fill -491 60 -467 -503 65 -455 minecraft:air
 execute if score $countDown spleef matches -40 run function main:cleartitle
 
