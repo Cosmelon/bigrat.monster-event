@@ -6,3 +6,6 @@ effect clear @a
 # regenerate start
 fill 285 77 47 291 76 37 air replace barrier
 fill 294 79 37 294 75 4 light_gray_stained_glass replace air
+
+# sound
+playsound minecraft:block.beacon.deactivate master @a
