@@ -29,12 +29,18 @@ execute if score !gameActive race matches 1 run execute as @a[gamemode=adventure
 execute if score !gameActive race matches 1 run execute as @a[gamemode=adventure] run execute positioned as @s if block ~ ~-1 ~ light_blue_glazed_terracotta run item replace entity @s armor.chest with elytra
 # remove chest
 execute if score !gameActive race matches 1 run execute as @a[gamemode=adventure] run execute positioned as @s if block ~ ~-1 ~ orange_glazed_terracotta run item replace entity @s armor.chest with air
+execute if score !gameActive race matches 1 run execute as @a[gamemode=adventure] at @s if block ~ ~-1 ~ water run item replace entity @s armor.chest with air
+execute if score !gameActive race matches 1 run execute as @a[gamemode=adventure] at @s if block ~ ~-1 ~ stone run item replace entity @s armor.chest with air
+execute if score !gameACtive race matches 1 run execute as @a[gamemode=adventure] at @s if block ~ ~-1 ~ andesite run item replace entity @s armor.chest with air
+execute if score !gameActive race matches 1 run execute as @a[gamemode=adventure] at @s if block ~ ~-1 ~ stone_slab run item replace entity @s armor.chest with air
+execute if score !gameActive race matches 1 run execute as @a[gamemode=adventure] at @s if block ~ ~-1 ~ andesite_slab run item replace entity @s armor.chest with air
+execute if score !gameActive race matches 1 run execute as @a[gamemode=adventure] at @s if block ~ ~-1 ~ polished_andesite run item replace entity @s armor.chest with air
+execute if score !gameActive race matches 1 run execute as @a[gamemode=adventure] at @s if block ~ ~-1 ~ polished_andesite_slab run item replace entity @s armor.chest with air
 
 # before elytra checkpoint, most likely temporary
 execute if score !gameActive race matches 1 run execute as @a[gamemode=adventure] run execute positioned as @s if block ~ ~-1 ~ granite run spawnpoint @s ~ ~ ~ 
 execute if score !gameActive race matches 1 run kill @a[gamemode=adventure,scores={yCos=6}]
 
 # spawnpoints
-execute if score !gameActive race matches 0 run setworldspawn 284 14 4
 execute if score !gameActive race matches 1 run setworldspawn 287 75 42
 execute if score !gameActive race matches 1 run spawnpoint @a 287 75 42
