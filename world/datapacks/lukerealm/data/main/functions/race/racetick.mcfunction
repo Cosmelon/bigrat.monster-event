@@ -1,10 +1,12 @@
 # tick files for race
+# everything in this file is preceeded by execute if score !gameActive race matches 1 run ...
+# no need to type it in every single time
 
-execute if score !gameActive race matches 0 run scoreboard players set !countDown race 160
-execute if score !gameActive race matches 1 run scoreboard players remove !countDown race 1
-execute if score !gameActive race matches 1 run title @a times 0 25 0
-execute if score !gameActive race matches 1 run effect give @a water_breathing 100000 0 true
-execute if score !gameActive race matches 1 run effect give @a speed 10000 0 true
+scoreboard players set !countDown race 160
+scoreboard players remove !countDown race 1
+title @a times 0 25 0
+effect give @a water_breathing 100000 0 true
+effect give @a speed 10000 0 true
 
 # countdown
 execute if score !countDown race matches 80 run fill 285 77 47 291 76 37 air replace barrier
