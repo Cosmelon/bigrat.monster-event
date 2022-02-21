@@ -6,6 +6,7 @@ function main:spleef/reloadfloor
 # title reset
 title @a title ""
 title @a actionbar ""
+title @a times 0 25 0
 
 # clear inventories
 clear @a[team=!Admin]
