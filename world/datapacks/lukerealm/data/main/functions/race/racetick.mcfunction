@@ -35,4 +35,6 @@ execute if score !gameActive race matches 1 run execute as @a[gamemode=adventure
 execute if score !gameActive race matches 1 run kill @a[gamemode=adventure,scores={yCos=6}]
 
 # spawnpoints
-execute if score !gameActive race matches 1 run setworldspawn 284 14 4
+execute if score !gameActive race matches 0 run setworldspawn 284 14 4
+execute if score !gameActive race matches 1 run setworldspawn 287 75 42
+execute if score !gameActive race matches 1 run spawnpoint @a 287 75 42
