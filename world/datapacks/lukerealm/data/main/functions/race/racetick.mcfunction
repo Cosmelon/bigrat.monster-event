@@ -2,7 +2,6 @@
 # everything in this file is preceeded by execute if score !gameActive race matches 1 run ...
 # no need to type it in every single time
 
-scoreboard players set !countDown race 160
 scoreboard players remove !countDown race 1
 title @a times 0 25 0
 effect give @a water_breathing 100000 0 true
