@@ -22,3 +22,7 @@ execute if score $gameActive spleef matches 0 run execute if score !gameActive r
 
 # constant yCos (yPosition) tracker, can be used for multiple games
 execute as @a store result score @s yCos run data get entity @s Pos[1]
+
+# racetick
+execute if score !gameActive race matches 1 run function main:race/racetick
+execute if score !gameActive race matches 0 run scoreboard players set !countDown race 160
