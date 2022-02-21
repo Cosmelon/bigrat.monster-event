@@ -14,10 +14,11 @@ give @a[team=Green] stick{display:{Name:'[{"text":"Bastard Blaster"}]',Lore:['[{
 give @a[team=Yellow] stick{display:{Name:'[{"text":"Bastard Blaster"}]',Lore:['[{"text":"Never gonna give you up"}]','[{"text":"Never gonna let you down","italic":true}]','[{"text":"Never gonna run around and desert you","italic":true}]','[{"text":"Never gonna make you cry","italic":true}]','[{"text":"Never gonna say goodbye","italic":true}]','[{"text":"Never gonna tell a lie and hurt you","italic":true}]']},Enchantments:[{id:"knockback",lvl:2}],HideFlags:27} 1
 
 # tellraw
-tellraw @a[team=Red] {"text":"You got tools!","color":"gold"}
-tellraw @a[team=Blue] {"text":"You got tools!","color":"gold"}
-tellraw @a[team=Green] {"text":"You got tools!","color":"gold"}
-tellraw @a[team=Yellow] {"text":"You got tools!","color":"gold"}
+title @a times 0 40 20
+title @a[team=Red] actionbar {"text":"You got tools!","color":"gold"}
+title @a[team=Blue] actionbar {"text":"You got tools!","color":"gold"}
+title @a[team=Green] actionbar {"text":"You got tools!","color":"gold"}
+title @a[team=Yellow] actionbar {"text":"You got tools!","color":"gold"}
 
 # tools given score
 scoreboard players set $toolsGiven spleef 1
