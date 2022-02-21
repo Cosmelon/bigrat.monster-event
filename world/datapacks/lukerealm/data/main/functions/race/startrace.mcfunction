@@ -78,32 +78,28 @@ execute positioned -191 12 132 run tp @a[team=Yellow,limit=1,sort=random,distanc
 execute positioned -191 12 132 run tp @a[team=Yellow,limit=1,sort=random,distance=..50] 286.5 75 46.5 -90 5
 #barriers (face-top-back-left-right)
 # red
-fill 291 15 38 291 15 41 barrier
-fill 290 16 38 290 16 41 barrier
-fill 289 15 38 289 15 41 barrier
-setblock 290 15 37 barrier
-setblock 290 15 42 barrier
+fill 291 76 38 291 76 41 barrier
+fill 290 77 38 290 77 41 barrier
+fill 289 76 38 289 76 41 barrier
+setblock 290 76 37 barrier
+setblock 290 76 42 barrier
 # blue
-fill 291 15 43 291 15 46 barrier
-fill 290 16 43 290 16 46 barrier
-fill 289 15 43 289 15 46 barrier
-setblock 290 15 42 barrier
-setblock 290 15 47 barrier
+fill 291 76 43 291 76 46 barrier
+fill 290 77 43 290 77 46 barrier
+fill 289 76 43 289 76 46 barrier
+setblock 290 76 42 barrier
+setblock 290 76 47 barrier
 # green
-fill 287 15 38 287 15 41 barrier
-fill 286 16 38 286 16 41 barrier
-fill 285 15 38 285 15 41 barrier
-setblock 286 15 37 barrier
-setblock 286 15 42 barrier
+fill 287 76 38 287 76 41 barrier
+fill 286 77 38 286 77 41 barrier
+fill 285 76 38 285 76 41 barrier
+setblock 286 76 37 barrier
+setblock 286 76 42 barrier
 # yellow
-fill 287 15 43 287 15 46 barrier
-fill 286 16 43 286 16 46 barrier
-fill 285 15 43 285 15 46 barrier
-setblock 286 15 42 barrier
-setblock 286 15 47 barrier
+fill 287 76 43 287 76 46 barrier
+fill 286 77 43 286 77 46 barrier
+fill 285 76 43 285 76 46 barrier
+setblock 286 76 42 barrier
+setblock 286 76 47 barrier
 #startline
-fill 294 18 37 294 14 47 light_gray_stained_glass
-setblock 294 18 38 white_wool
-setblock 294 18 39 black_wool
-setblock 294 18 45 black_wool
-setblock 294 18 46 white_wool
+fill 294 79 37 294 75 47 light_gray_stained_glass replace air
