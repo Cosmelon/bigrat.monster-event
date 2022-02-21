@@ -32,7 +32,7 @@ execute if score $round spleef matches 3 run bossbar set minecraft:spleefroundco
 # does the countdown timer
 execute if score $gameActive spleef matches 0 run scoreboard players set $countDown spleef 160
 execute if score $gameActive spleef matches 1 run scoreboard players remove $countDown spleef 1
-execute if score $gameActive spleef matches 1 run title @a times 0 25 5
+execute if score $countDown spleef matches 60 run title @a times 0 25 10
 execute if score $countDown spleef matches 60 run title @a title {"text":"3","color":"red"}
 execute if score $countDown spleef matches 60 run playsound minecraft:block.note_block.chime master @s ^0 ^ ^ 1 1.259921 1
 execute if score $countDown spleef matches 40 run title @a title {"text":"2","color":"yellow"}
