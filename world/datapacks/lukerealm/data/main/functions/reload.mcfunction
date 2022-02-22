@@ -12,6 +12,7 @@ scoreboard objectives add spleefDeaths deathCount
 scoreboard objectives add spleef_sb dummy
 scoreboard objectives add spleefSnowBall minecraft.mined:minecraft.snow_block
 scoreboard objectives add currentGame dummy
+scoreboard objectives add spleefQuit minecraft.custom:minecraft.leave_game
 
 # gamerules
 gamerule announceAdvancements false
