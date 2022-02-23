@@ -3,3 +3,5 @@ wants multiple rounds of sg, "2, maybe 3"
 "but if you want skybattle pace then 3"
 "but i feel like 2 fits sg more"
 "chests will be talked about later, but i can signifiy locations when needed"
+
+Need to look more into how loot tables work, I'm just not confident in my ability to do it rn.
