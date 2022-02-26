@@ -1,0 +1,21 @@
+# barriers
+execute as @a[team=Red] run setblock ~1 ~1 ~ barrier
+execute as @a[team=Red] run setblock ~ ~2 ~ barrier
+execute as @a[team=Red] run setblock ~ ~1 ~1 barrier
+execute as @a[team=Red] run setblock ~ ~1 ~-1 barrier
+execute as @a[team=Red] run setblock ~-1 ~1 ~ barrier
+execute as @a[team=Blue] run setblock ~1 ~1 ~ barrier
+execute as @a[team=Blue] run setblock ~ ~2 ~ barrier
+execute as @a[team=Blue] run setblock ~ ~1 ~1 barrier
+execute as @a[team=Blue] run setblock ~ ~1 ~-1 barrier
+execute as @a[team=Blue] run setblock ~-1 ~1 ~ barrier
+execute as @a[team=Green] run setblock ~1 ~1 ~ barrier
+execute as @a[team=Green] run setblock ~ ~2 ~ barrier
+execute as @a[team=Green] run setblock ~ ~1 ~1 barrier
+execute as @a[team=Green] run setblock ~ ~1 ~-1 barrier
+execute as @a[team=Green] run setblock ~-1 ~1 ~ barrier
+execute as @a[team=Yellow] run setblock ~1 ~1 ~ barrier
+execute as @a[team=Yellow] run setblock ~ ~2 ~ barrier
+execute as @a[team=Yellow] run setblock ~ ~1 ~1 barrier
+execute as @a[team=Yellow] run setblock ~ ~1 ~-1 barrier
+execute as @a[team=Yellow] run setblock ~-1 ~1 ~ barrier
