@@ -26,6 +26,15 @@ execute if score ~countDown sg matches 0 run execute at @a[team=Blue] run fill ~
 execute if score ~countDown sg matches 0 run execute at @a[team=Green] run fill ~1 ~1 ~1 ~-1 ~2 ~-1 air replace barrier
 execute if score ~countDown sg matches 0 run execute at @a[team=Yellow] run fill ~1 ~1 ~1 ~-1 ~2 ~-1 air replace barrier
 
+# tracks # of players on a team
+execute store result score ~aliveRed sg if entity @a[team=Red,gamemode=!spectator]
+execute store result score ~aliveBlue sg if entity @a[team=Blue,gamemode=!spectator]
+execute store result score ~aliveGreen sg if entity @a[team=Green,gamemode=!spectator]
+execute store result score ~aliveYellow sg if entity @a[team=Yellow,gamemode=!spectator]
+
+# puts dead into spectator
+gamemode spectator @a[scores={sgDeaths=1}]
+
 # team death message
 function main:sg/checkdead
 # red win
