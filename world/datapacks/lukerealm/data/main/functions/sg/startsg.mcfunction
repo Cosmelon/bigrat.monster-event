@@ -53,3 +53,25 @@ execute positioned -1983 133 -1983 run tp @a[team=Yellow,limit=1,sort=random,dis
 execute positioned -1983 133 -1983 run tp @a[team=Yellow,limit=1,sort=random,distance=..5] -2008.5 76 -1980.5 0 10
 execute positioned -1983 133 -1983 run tp @a[team=Yellow,limit=1,sort=random,distance=..5] -2008.5 76 -1986.5 0 10
 execute positioned -1983 133 -1983 run tp @a[team=Yellow,limit=1,sort=random,distance=..5] -2008.5 76 -1992.5 0 10
+
+# barriers
+execute as @a[team=Red] run setblock ~1 ~1 ~ barrier
+execute as @a[team=Red] run setblock ~ ~2 ~ barrier
+execute as @a[team=Red] run setblock ~ ~1 ~1 barrier
+execute as @a[team=Red] run setblock ~ ~1 ~-1 barrier
+execute as @a[team=Red] run setblock ~-1 ~1 ~ barrier
+execute as @a[team=Blue] run setblock ~1 ~1 ~ barrier
+execute as @a[team=Blue] run setblock ~ ~2 ~ barrier
+execute as @a[team=Blue] run setblock ~ ~1 ~1 barrier
+execute as @a[team=Blue] run setblock ~ ~1 ~-1 barrier
+execute as @a[team=Blue] run setblock ~-1 ~1 ~ barrier
+execute as @a[team=Green] run setblock ~1 ~1 ~ barrier
+execute as @a[team=Green] run setblock ~ ~2 ~ barrier
+execute as @a[team=Green] run setblock ~ ~1 ~1 barrier
+execute as @a[team=Green] run setblock ~ ~1 ~-1 barrier
+execute as @a[team=Green] run setblock ~-1 ~1 ~ barrier
+execute as @a[team=Yellow] run setblock ~1 ~1 ~ barrier
+execute as @a[team=Yellow] run setblock ~ ~2 ~ barrier
+execute as @a[team=Yellow] run setblock ~ ~1 ~1 barrier
+execute as @a[team=Yellow] run setblock ~ ~1 ~-1 barrier
+execute as @a[team=Yellow] run setblock ~-1 ~1 ~ barrier
