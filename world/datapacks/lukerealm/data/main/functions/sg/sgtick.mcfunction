@@ -34,7 +34,7 @@ execute store result score ~aliveGreen sg if entity @a[team=Green,gamemode=!spec
 execute store result score ~aliveYellow sg if entity @a[team=Yellow,gamemode=!spectator]
 
 # puts dead into spectator
-gamemode spectator @a[scores={sgDeaths=1}]
+gamemode spectator @a[scores={sgDeaths=1..}]
 
 # team death message
 function main:sg/checkdead
