@@ -58,7 +58,7 @@ aliases:
   killsg:
   - function main:sg/killsg
   lobby:
-  - tp @s -191 12 132
+  - tp @s -181.5 5 137.5 0 10
   testeradd:
   - whitelist add Spicv
   - tellraw @a {"text":"Testers Added!","color":"green"}
