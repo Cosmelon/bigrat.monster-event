@@ -87,6 +87,13 @@ execute if score $toolsGiven spleef matches 1 run execute as @a[team=Green,nbt=!
 execute if score $toolsGiven spleef matches 1 run execute as @a[team=Yellow,nbt=!{Inventory:[{id:"minecraft:stick"}]}] at @s run give @s stick{display:{Name:'[{"text":"Bastard Blaster"}]',Lore:['[{"text":"Never gonna give you up"}]','[{"text":"Never gonna let you down","italic":true}]','[{"text":"Never gonna run around and desert you","italic":true}]','[{"text":"Never gonna make you cry","italic":true}]','[{"text":"Never gonna say goodbye","italic":true}]','[{"text":"Never gonna tell a lie and hurt you","italic":true}]']},Enchantments:[{id:"knockback",lvl:2}],HideFlags:27} 1
 execute if score $gameActive spleef matches 1 run kill @e[type=item]
 
+# weakness when holding shovel
+execute if score $gameActive spleef matches 1 run effect give @a[team=!Admin] weakness 1 255 true
+execute if score $gameActive spleef matches 1 run execute as @a[nbt={SelectedItem:{id:"minecraft:stick"}}] run effect clear @s minecraft:weakness
+
+execute if score $gameActive spleef matches 1 run execute as @e[type=item,nbt={Item:{id:"minecraft:stick",Count:1b}}] run data modify entity @s PickupDelay set value 0t
+execute if score $gameActive spleef matches 1 run execute as @e[type=item,nbt={Item:{id:"minecraft:stick",Count:1b}}] run data modify entity @s Owner set from entity @s Thrower
+
 # snowball get on block break
 execute as @a[scores={spleefSnowBall=1..}] run give @s snowball 1
 scoreboard players reset * spleefSnowBall
@@ -96,13 +103,6 @@ execute if score $gameActive spleef matches 1 run function main:spleef/snowball
 
 # yeets snow blocks made by players
 execute if score $gameActive spleef matches 1 run clear @a minecraft:snow_block
-
-# weakness when holding shovel
-execute if score $gameActive spleef matches 1 run effect give @a[team=!Admin] weakness 1 255 true
-execute if score $gameActive spleef matches 1 run execute as @a[nbt={SelectedItem:{id:"minecraft:stick"}}] run effect clear @s minecraft:weakness
-
-execute if score $gameActive spleef matches 1 run execute as @e[type=item,nbt={Item:{id:"minecraft:stick",Count:1b}}] run data modify entity @s PickupDelay set value 0t
-execute if score $gameActive spleef matches 1 run execute as @e[type=item,nbt={Item:{id:"minecraft:stick",Count:1b}}] run data modify entity @s Owner set from entity @s Thrower
 
 # does team death messaage
 execute if score $gameActive spleef matches 1 run function main:spleef/checkdead
