@@ -13,4 +13,3 @@ scoreboard players reset * sgDeaths
 # playsound minecraft:block.note_block.chime ambient @a ~ ~ ~ 100000 1
 scoreboard players add ~round sg 1
 playsound minecraft:entity.wither.death master @a
-gamemode spectator @a
