@@ -2,6 +2,10 @@
 # everything in here is triggered if ~gameActive sg matches 1,
 # so no need to worry about doing that all manually
 
+# scoreboards associated with sg
+#  sg - main sg scoreboard, main stuff here
+#  sgDeaths - tracks dead players during sg
+
 title @a times 0 25 10
 
 # countdown
