@@ -1,2 +1,2 @@
 # turns off shrinkActual
-bossbar set minecraft:shrinkactual visible false
+bossbar set minecraft:spleefshrinkactual visible false

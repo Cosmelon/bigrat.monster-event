@@ -16,10 +16,10 @@ scoreboard players set $shrink3Timer spleefBorder 5000
 scoreboard players set $shrink1Break spleefBorder 0
 scoreboard players set $shrink2Break spleefBorder 0
 scoreboard players set $shrink3Break spleefBorder 0
-bossbar set minecraft:shrink1timer visible false
-bossbar set minecraft:shrink2timer visible false
-bossbar set minecraft:shrink3timer visible false
-bossbar set minecraft:shrinkactual visible false
+bossbar set minecraft:spleefshrink1timer visible false
+bossbar set minecraft:spleefshrink2timer visible false
+bossbar set minecraft:spleefshrink3timer visible false
+bossbar set minecraft:spleefshrinkactual visible false
 bossbar set minecraft:spleefroundcount visible false
 worldborder set 6000000 1
 worldborder center 0 0

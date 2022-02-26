@@ -19,10 +19,10 @@ execute if score $gameActive spleef matches 1 run spawnpoint @a -496 66 -459
 
 # syncs bossbars with scoreboard
 execute store result bossbar minecraft:spleefroundcount value run scoreboard players get $round spleef
-execute store result bossbar minecraft:shrink1timer value run scoreboard players get $shrink1Timer spleefBorder
-execute store result bossbar minecraft:shrink2timer value run scoreboard players get $shrink2Timer spleefBorder
-execute store result bossbar minecraft:shrink3timer value run scoreboard players get $shrink3Timer spleefBorder
-execute store result bossbar minecraft:shrinkactual value run scoreboard players get $shrinkActual spleefBorder
+execute store result bossbar minecraft:spleefshrink1timer value run scoreboard players get $shrink1Timer spleefBorder
+execute store result bossbar minecraft:spleefshrink2timer value run scoreboard players get $shrink2Timer spleefBorder
+execute store result bossbar minecraft:spleefshrink3timer value run scoreboard players get $shrink3Timer spleefBorder
+execute store result bossbar minecraft:spleefshrinkactual value run scoreboard players get $shrinkActual spleefBorder
 
 # updates round count bossbar name
 execute if score $round spleef matches 1 run bossbar set minecraft:spleefroundcount name {"text":"Round: 1/3","bold":true}
@@ -124,21 +124,21 @@ execute if score $gameActive spleef matches 1 run scoreboard players remove $shr
 execute if score $gameActive spleef matches 1 run scoreboard players remove $shrink3Timer spleefBorder 1
 
 # shrink timer bossbars
-execute if score $gameActive spleef matches 1 run execute if score $shrink1Timer spleefBorder matches 600 run bossbar set minecraft:shrink1timer visible true
-execute if score $gameActive spleef matches 1 run execute if score $shrink2Timer spleefBorder matches 600 run bossbar set minecraft:shrink2timer visible true
-execute if score $gameActive spleef matches 1 run execute if score $shrink3Timer spleefBorder matches 600 run bossbar set minecraft:shrink3timer visible true
+execute if score $gameActive spleef matches 1 run execute if score $shrink1Timer spleefBorder matches 600 run bossbar set minecraft:spleefshrink1timer visible true
+execute if score $gameActive spleef matches 1 run execute if score $shrink2Timer spleefBorder matches 600 run bossbar set minecraft:spleefshrink2timer visible true
+execute if score $gameActive spleef matches 1 run execute if score $shrink3Timer spleefBorder matches 600 run bossbar set minecraft:spleefshrink3timer visible true
 execute if score $gameActive spleef matches 1 run function main:spleef/border/shrinkcountdown
 
-execute if score $gameActive spleef matches 1 run execute if score $shrink1Timer spleefBorder matches 0 run bossbar set minecraft:shrink1timer visible false
-execute if score $gameActive spleef matches 1 run execute if score $shrink2Timer spleefBorder matches 0 run bossbar set minecraft:shrink2timer visible false
-execute if score $gameActive spleef matches 1 run execute if score $shrink3Timer spleefBorder matches 0 run bossbar set minecraft:shrink3timer visible false
+execute if score $gameActive spleef matches 1 run execute if score $shrink1Timer spleefBorder matches 0 run bossbar set minecraft:spleefshrink1timer visible false
+execute if score $gameActive spleef matches 1 run execute if score $shrink2Timer spleefBorder matches 0 run bossbar set minecraft:spleefshrink2timer visible false
+execute if score $gameActive spleef matches 1 run execute if score $shrink3Timer spleefBorder matches 0 run bossbar set minecraft:spleefshrink3timer visible false
 execute if score $gameActive spleef matches 1 run execute if score $shrink1Timer spleefBorder matches 0 run function main:spleef/border/shrink1
 execute if score $gameActive spleef matches 1 run execute if score $shrink2Timer spleefBorder matches 0 run function main:spleef/border/shrink2
 execute if score $gameActive spleef matches 1 run execute if score $shrink3Timer spleefBorder matches 0 run function main:spleef/border/shrink3
 # trigger shrinkActual
 execute if score $gameActive spleef matches 1 run scoreboard players remove $shrinkActual spleefBorder 1
 execute if score $gameActive spleef matches 0 run scoreboard players set $shrinkActual spleefBorder 400
-execute if score $gameActive spleef matches 1 run execute if score $shrinkActual spleefBorder matches 0 run bossbar set minecraft:shrinkactual visible false
+execute if score $gameActive spleef matches 1 run execute if score $shrinkActual spleefBorder matches 0 run bossbar set minecraft:spleefshrinkactual visible false
 #remove blocks
 execute if score $gameActive spleef matches 1 run function main:spleef/border/conc/shrink1conc
 execute if score $gameActive spleef matches 1 run function main:spleef/border/conc/shrink2conc
