@@ -1,6 +1,6 @@
 scoreboard players set $gameActive spleef 0
 title @a times 0 50 0
-clear @a
+clear @a[team=!Admin]
 # this is where we figure out how many points to give the winning team for winning
 #  scoreboard players add $blue Score <amount to winning team>
 title @a title {"text":"Blue team wins!","color":"blue"}
