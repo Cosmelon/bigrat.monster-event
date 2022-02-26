@@ -13,7 +13,7 @@ execute if score !countDown race matches 60 run fill 294 79 37 294 75 47 red_sta
 execute if score !countDown race matches 60 run title @a title {"text":"3","color":"red"}
 execute if score !countDown race matches 60 run playsound minecraft:block.note_block.chime master @a ~ ~ ~ 10 1
 execute if score !countDown race matches 40 run fill 294 79 37 294 75 47 yellow_stained_glass replace red_stained_glass
-execute if score !countDown race matches 40 run title @a title {"text":"2","color":"yellow"}
+execute if score !countDown race matches 40 run title @a title {"text":"2","color":"gold"}
 execute if score !countDown race matches 40 run playsound minecraft:block.note_block.chime master @a ~ ~ ~ 10 1
 execute if score !countDown race matches 20 run fill 294 79 37 294 75 47 lime_stained_glass replace yellow_stained_glass
 execute if score !countDown race matches 20 run title @a title {"text":"1","color":"green"}
