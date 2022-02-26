@@ -29,4 +29,4 @@ execute if score !gameActive race matches 0 run scoreboard players set !countDow
 
 # sgtick
 execute if score ~gameActive sg matches 1 run function main:sg/sgtick
-execute if score ~gameActive sg matches 0 run scoreboard players set ~countDown sg 160
+execute if score ~gameActive sg matches 0 run scoreboard players set ~countDown sg 300
