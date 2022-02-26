@@ -93,5 +93,5 @@ execute at @a[team=Yellow] run setblock ~ ~1 ~-1 barrier
 execute at @a[team=Yellow] run setblock ~-1 ~1 ~ barrier
 
 # worldborder
-worldborder center -1983 -1983
+worldborder center -1983.5 -1983.5
 worldborder set 1120 0
