@@ -1,6 +1,13 @@
 # starts sg
 
+# gameActive
 scoreboard players set ~gameActive sg 1
+
+# reset notifs
+scoreboard players set ~notifRedDead sg 0
+scoreboard players set ~notifBlueDead sg 0
+scoreboard players set ~notifGreenDead sg 0
+scoreboard players set ~notifYellowDead sg 0
 
 # teleporting
 # player spreader goes clockwise
@@ -75,3 +82,7 @@ execute at @a[team=Yellow] run setblock ~ ~2 ~ barrier
 execute at @a[team=Yellow] run setblock ~ ~1 ~1 barrier
 execute at @a[team=Yellow] run setblock ~ ~1 ~-1 barrier
 execute at @a[team=Yellow] run setblock ~-1 ~1 ~ barrier
+
+# worldborder
+worldborder center -1983 -1983
+worldborder set 1120 0
