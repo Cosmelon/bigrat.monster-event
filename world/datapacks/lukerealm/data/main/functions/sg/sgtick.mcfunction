@@ -17,3 +17,7 @@ execute if score ~countDown sg matches 60 run title @a title {"text":"3","color"
 execute if score ~countDown sg matches 40 run title @a title {"text":"2","color":"red"}
 execute if score ~countDown sg matches 20 run title @a title {"text":"1","color":"gold"}
 execute if score ~countDown sg matches 0 run title @a title {"text":"GO!","color":"green"}
+execute if score ~countDown sg matches 0 run execute at @a[team=Red] run fill ~1 ~1 ~1 ~-1 ~2 ~-1 air replace barrier
+execute if score ~countDown sg matches 0 run execute at @a[team=Blue] run fill ~1 ~1 ~1 ~-1 ~2 ~-1 air replace barrier
+execute if score ~countDown sg matches 0 run execute at @a[team=Green] run fill ~1 ~1 ~1 ~-1 ~2 ~-1 air replace barrier
+execute if score ~countDown sg matches 0 run execute at @a[team=Yellow] run fill ~1 ~1 ~1 ~-1 ~2 ~-1 air replace barrier
