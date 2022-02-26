@@ -26,3 +26,7 @@ execute as @a store result score @s yCos run data get entity @s Pos[1]
 # racetick
 execute if score !gameActive race matches 1 run function main:race/racetick
 execute if score !gameActive race matches 0 run scoreboard players set !countDown race 160
+
+# sgtick
+execute if score ~gameActive sg matches 1 run function main:sg/sgtick
+execute if score ~gameActive sg matches 0 run scoreboard players set ~countDown sg 160
