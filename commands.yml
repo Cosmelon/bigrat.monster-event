@@ -53,6 +53,10 @@ aliases:
   - function main:race/startrace
   killrace:
   - function main:race/killrace
+  startsg:
+  - function main:sg/startsg
+  killsg:
+  - function main:sg/killsg
   lobby:
   - tp @s -191 12 132
   testeradd:
