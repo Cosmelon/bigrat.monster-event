@@ -1,6 +1,6 @@
 # starts sg
 
-scoreboard players set ~gameActive spleef 1
+scoreboard players set ~gameActive sg 1
 
 # teleporting
 # player spreader goes clockwise
