@@ -9,7 +9,7 @@ execute positioned -1983 133 -1983 run tp @a[team=Red,limit=1,sort=random,distan
 execute positioned -1983 133 -1983 run tp @a[team=Red,limit=1,sort=random,distance=..5] -1986.5 76 -2008.5 0 10
 execute positioned -1983 133 -1983 run tp @a[team=Red,limit=1,sort=random,distance=..5] -1980.5 76 -2008.5 0 10
 execute positioned -1983 133 -1983 run tp @a[team=Red,limit=1,sort=random,distance=..5] -1974.5 76 -2008.5 0 10
-execute positioned -1983 133 -1983 run tp @a[team=Blue,limit=1,sort=random,distance=..5] -1958.5 76 -2008.5 0 10
+execute positioned -1983 133 -1983 run tp @a[team=Blue,limit=1,sort=random,distance=..5] -1958.5 76 -1992.5 0 10
 execute positioned -1983 133 -1983 run tp @a[team=Blue,limit=1,sort=random,distance=..5] -1958.5 76 -1986.5 0 10
 execute positioned -1983 133 -1983 run tp @a[team=Blue,limit=1,sort=random,distance=..5] -1958.5 76 -1980.5 0 10
 execute positioned -1983 133 -1983 run tp @a[team=Blue,limit=1,sort=random,distance=..5] -1958.5 76 -1974.5 0 10
@@ -25,7 +25,7 @@ execute positioned -1983 133 -1983 run tp @a[team=Red,limit=1,sort=random,distan
 execute positioned -1983 133 -1983 run tp @a[team=Red,limit=1,sort=random,distance=..5] -1986.5 76 -2008.5 0 10
 execute positioned -1983 133 -1983 run tp @a[team=Red,limit=1,sort=random,distance=..5] -1980.5 76 -2008.5 0 10
 execute positioned -1983 133 -1983 run tp @a[team=Red,limit=1,sort=random,distance=..5] -1974.5 76 -2008.5 0 10
-execute positioned -1983 133 -1983 run tp @a[team=Blue,limit=1,sort=random,distance=..5] -1958.5 76 -2008.5 0 10
+execute positioned -1983 133 -1983 run tp @a[team=Blue,limit=1,sort=random,distance=..5] -1958.5 76 -1992.5 0 10
 execute positioned -1983 133 -1983 run tp @a[team=Blue,limit=1,sort=random,distance=..5] -1958.5 76 -1986.5 0 10
 execute positioned -1983 133 -1983 run tp @a[team=Blue,limit=1,sort=random,distance=..5] -1958.5 76 -1980.5 0 10
 execute positioned -1983 133 -1983 run tp @a[team=Blue,limit=1,sort=random,distance=..5] -1958.5 76 -1974.5 0 10
@@ -41,7 +41,7 @@ execute positioned -1983 133 -1983 run tp @a[team=Red,limit=1,sort=random,distan
 execute positioned -1983 133 -1983 run tp @a[team=Red,limit=1,sort=random,distance=..5] -1986.5 76 -2008.5 0 10
 execute positioned -1983 133 -1983 run tp @a[team=Red,limit=1,sort=random,distance=..5] -1980.5 76 -2008.5 0 10
 execute positioned -1983 133 -1983 run tp @a[team=Red,limit=1,sort=random,distance=..5] -1974.5 76 -2008.5 0 10
-execute positioned -1983 133 -1983 run tp @a[team=Blue,limit=1,sort=random,distance=..5] -1958.5 76 -2008.5 0 10
+execute positioned -1983 133 -1983 run tp @a[team=Blue,limit=1,sort=random,distance=..5] -1958.5 76 -1992.5 0 10
 execute positioned -1983 133 -1983 run tp @a[team=Blue,limit=1,sort=random,distance=..5] -1958.5 76 -1986.5 0 10
 execute positioned -1983 133 -1983 run tp @a[team=Blue,limit=1,sort=random,distance=..5] -1958.5 76 -1980.5 0 10
 execute positioned -1983 133 -1983 run tp @a[team=Blue,limit=1,sort=random,distance=..5] -1958.5 76 -1974.5 0 10
