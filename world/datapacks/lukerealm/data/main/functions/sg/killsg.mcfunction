@@ -2,6 +2,7 @@
 title @a title ""
 title @a subtitle ""
 scoreboard players set ~gameActive sg 0
+scoreboard players set ~round sg 1
 scoreboard players set ~countDown sg 300
 scoreboard players set ~notifRedDead sg 0
 scoreboard players set ~notifBlueDead sg 0
