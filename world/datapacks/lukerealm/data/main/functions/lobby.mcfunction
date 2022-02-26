@@ -4,7 +4,7 @@ scoreboard players set $kitPvp currentGame 0
 scoreboard players set $race currentGame 0
 scoreboard players set $spleef currentGame 0
 # once a new lobby is built, these tp locations need to be adjusted
-tp @a -190.5 12 132.5
+tp @a -181.5 5 137.5 0 10
 gamemode adventure @a
 clear @a
 effect clear @a
