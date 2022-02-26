@@ -25,6 +25,8 @@ execute if score ~countDown sg matches 0 run execute at @a[team=Red] run fill ~1
 execute if score ~countDown sg matches 0 run execute at @a[team=Blue] run fill ~1 ~1 ~1 ~-1 ~2 ~-1 air replace barrier
 execute if score ~countDown sg matches 0 run execute at @a[team=Green] run fill ~1 ~1 ~1 ~-1 ~2 ~-1 air replace barrier
 execute if score ~countDown sg matches 0 run execute at @a[team=Yellow] run fill ~1 ~1 ~1 ~-1 ~2 ~-1 air replace barrier
+execute if score ~countDown sg matches -20 run title @a title ""
+execute if score ~countDown sg matches -20 run title @a subtitle ""
 
 # tracks # of players on a team
 execute store result score ~aliveRed sg if entity @a[team=Red,gamemode=!spectator]
