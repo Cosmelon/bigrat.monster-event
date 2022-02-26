@@ -3,6 +3,11 @@
 # gameActive
 scoreboard players set ~gameActive sg 1
 
+# set gamemodes
+gamemode adventure @a[team=!Admin]
+gamemode spectator @a[team=Admin]
+gamemode spectator @a[team=Spectator]
+
 # reset notifs
 scoreboard players set ~notifRedDead sg 0
 scoreboard players set ~notifBlueDead sg 0
