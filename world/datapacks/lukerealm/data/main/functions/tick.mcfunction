@@ -14,10 +14,10 @@ execute if score ~gameActive sg matches 0 run scoreboard players set $sg current
 execute if score ~gameActive sg matches 1 run scoreboard players set $sg currentGame 1
 
 bossbar set minecraft:spleefroundcount players @a
-bossbar set minecraft:shrink1timer players @a
-bossbar set minecraft:shirnk2timer players @a
-bossbar set minecraft:shrink3timer players @a
-bossbar set minecraft:shrinkactual players @a
+bossbar set minecraft:spleefshrink1timer players @a
+bossbar set minecraft:spleefshirnk2timer players @a
+bossbar set minecraft:spleefshrink3timer players @a
+bossbar set minecraft:spleefshrinkactual players @a
 
 execute if score $gameActive spleef matches 0 run execute if score !gameActive race matches 0 run execute if score ~gameActive sg matches 0 run spawnpoint @a -191 12 132
 execute if score $gameActive spleef matches 0 run execute if score !gameActive race matches 0 run execute if score ~gameActive sg matches 0 run setworldspawn -191 12 132
