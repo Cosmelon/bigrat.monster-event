@@ -46,3 +46,8 @@ execute if score ~notifRedDead sg matches 1 run execute if score ~notifGreenDead
 execute if score ~notifRedDead sg matches 1 run execute if score ~notifBlueDead sg matches 1 run execute if score ~notifYellowDead sg matches 1 run function main:sg/wins/green
 # yellow win
 execute if score ~notifRedDead sg matches 1 run execute if score ~notifBlueDead sg matches 1 run execute if score ~notifGreenDead sg matches 1 run function main:sg/wins/yellow
+
+# effects
+#levitation
+#  - block: dried kelp, for 5 seconds, amp 5
+execute as @a run execute positioned as @s if block ~ ~-1 ~ minecraft:dried_kelp_block run effect give @s minecraft:levitation 5 5 true
