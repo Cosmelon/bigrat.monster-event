@@ -3,7 +3,6 @@ scoreboard players set $fossilDig currentGame 0
 scoreboard players set $kitPvp currentGame 0
 scoreboard players set $race currentGame 0
 scoreboard players set $spleef currentGame 0
-# once a new lobby is built, these tp locations need to be adjusted
 tp @a -181.5 5 137.5 0 10
 gamemode adventure @a
 clear @a
@@ -38,3 +37,5 @@ scoreboard players set ~countDown sg 300
 scoreboard players set ~round sg 1
 worldborder set 6000000 1
 worldborder center 0 0
+
+clear @a[team=!Admin]
