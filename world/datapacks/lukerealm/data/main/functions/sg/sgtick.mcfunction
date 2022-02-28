@@ -50,4 +50,4 @@ execute if score ~notifRedDead sg matches 1 run execute if score ~notifBlueDead 
 # effects
 #levitation
 #  - block: dried kelp, for 5 seconds, amp 5
-execute as @a run execute positioned as @s if block ~ ~-1 ~ minecraft:dried_kelp_block run effect give @s minecraft:levitation 5 5 true
+execute as @a[gamemode=adventure] run execute positioned as @s if block ~ ~-1 ~ minecraft:dried_kelp_block run effect give @s minecraft:levitation 5 5 true
