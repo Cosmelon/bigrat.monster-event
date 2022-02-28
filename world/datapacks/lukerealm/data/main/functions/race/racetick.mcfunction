@@ -38,7 +38,7 @@ execute as @a[gamemode=adventure] at @s if block ~ ~-1 ~ andesite_slab run item 
 execute as @a[gamemode=adventure] at @s if block ~ ~-1 ~ polished_andesite run item replace entity @s armor.chest with air
 execute as @a[gamemode=adventure] at @s if block ~ ~-1 ~ polished_andesite_slab run item replace entity @s armor.chest with air
 # jump boost (lime_glazed_terracotta)
-execute as @a[gamemode=adventure] run execute positioned as @s if block ~ ~-1 ~ lime_glazed_terracotta run effect give @s minecraft:levitation 1 7 true
+execute as @a[gamemode=adventure] run execute positioned as @s if block ~ ~-1 ~ lime_glazed_terracotta run effect give @s minecraft:jump_boost 1 7 true
 
 # before elytra checkpoint, most likely temporary
 execute as @a[gamemode=adventure] run execute positioned as @s if block ~ ~-1 ~ granite run spawnpoint @s ~ ~ ~ 
