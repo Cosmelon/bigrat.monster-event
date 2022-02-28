@@ -25,7 +25,7 @@ execute if score !countDown race matches -20 run title @a title ""
 
 # speedpads (magenta_glazed_terracotta)
 execute as @a[gamemode=adventure] run execute positioned as @s if block ~ ~-1 ~ minecraft:magenta_glazed_terracotta run effect give @s speed 2 3 true
-execute as @a[gamemode=adventure] run execute positioned as @s if block ~ ~-1 ~ minecraft:magenta_glazed_terracotta run effect give @a dolphins_grace 3 3 true
+# execute as @a[gamemode=adventure] run execute positioned as @s if block ~ ~-1 ~ minecraft:magenta_glazed_terracotta run effect give @a dolphins_grace 3 3 true
 # give elytra (light_blue_glazed_terracotta)
 execute as @a[gamemode=adventure] run execute positioned as @s if block ~ ~-1 ~ light_blue_glazed_terracotta run item replace entity @s armor.chest with elytra
 # remove chest
