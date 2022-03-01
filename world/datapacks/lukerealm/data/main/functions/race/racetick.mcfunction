@@ -23,9 +23,17 @@ execute if score !countDown race matches 0 run title @a title {"text":"Go!","col
 execute if score !countDown race matches 0 run playsound minecraft:block.note_block.chime master @a ~ ~ ~ 10 2
 execute if score !countDown race matches -20 run title @a title ""
 
+# gate
+#  intended be open for five seconds, then closed for two
+scoreboard players remove !gate race 1
+execute if score !gate race matches 140 run fill 351 83 42 351 81 44 air
+execute if score !gate race matches 40 run fill 351 83 42 351 81 44 warped_fence
+execute if score !gate race matches 0 run scoreboard players set !gate race 140
+
 # speedpads (magenta_glazed_terracotta)
 execute as @a[gamemode=adventure] run execute positioned as @s if block ~ ~-1 ~ minecraft:magenta_glazed_terracotta run effect give @s speed 2 3 true
-# execute as @a[gamemode=adventure] run execute positioned as @s if block ~ ~-1 ~ minecraft:magenta_glazed_terracotta run effect give @a dolphins_grace 3 3 true
+# jump boost (lime_glazed_terracotta)
+execute as @a[gamemode=adventure] run execute positioned as @s if block ~ ~-1 ~ lime_glazed_terracotta run effect give @s minecraft:jump_boost 1 7 true
 # give elytra (light_blue_glazed_terracotta)
 execute as @a[gamemode=adventure] run execute positioned as @s if block ~ ~-1 ~ light_blue_glazed_terracotta run item replace entity @s armor.chest with elytra
 # remove chest
@@ -37,8 +45,6 @@ execute as @a[gamemode=adventure] at @s if block ~ ~-1 ~ stone_slab run item rep
 execute as @a[gamemode=adventure] at @s if block ~ ~-1 ~ andesite_slab run item replace entity @s armor.chest with air
 execute as @a[gamemode=adventure] at @s if block ~ ~-1 ~ polished_andesite run item replace entity @s armor.chest with air
 execute as @a[gamemode=adventure] at @s if block ~ ~-1 ~ polished_andesite_slab run item replace entity @s armor.chest with air
-# jump boost (lime_glazed_terracotta)
-execute as @a[gamemode=adventure] run execute positioned as @s if block ~ ~-1 ~ lime_glazed_terracotta run effect give @s minecraft:jump_boost 1 7 true
 
 # before elytra checkpoint, most likely temporary
 execute as @a[gamemode=adventure] run execute positioned as @s if block ~ ~-1 ~ granite run spawnpoint @s ~ ~ ~ 
