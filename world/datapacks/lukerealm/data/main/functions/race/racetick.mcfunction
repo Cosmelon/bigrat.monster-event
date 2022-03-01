@@ -36,7 +36,7 @@ execute as @a[gamemode=adventure] run execute positioned as @s if block ~ ~-1 ~ 
 execute as @a[gamemode=adventure] run execute positioned as @s if block ~ ~-1 ~ lime_glazed_terracotta run effect give @s minecraft:jump_boost 1 7 true
 # give elytra (light_blue_glazed_terracotta)
 execute as @a[gamemode=adventure] run execute positioned as @s if block ~ ~-1 ~ light_blue_glazed_terracotta run item replace entity @s armor.chest with elytra
-execute as @a[gamemode=adventure] at @s unless block ~ ~-1 ~ air run item replace entity @s armor.chest with air
+execute as @a[gamemode=adventure] at @s unless block ~ ~-0.25 ~ air run item replace entity @s armor.chest with air
 
 # before elytra checkpoint, most likely temporary
 execute as @a[gamemode=adventure] run execute positioned as @s if block ~ ~-1 ~ granite run spawnpoint @s ~ ~ ~ 
