@@ -37,7 +37,6 @@ execute as @a[gamemode=adventure] run execute positioned as @s if block ~ ~-1 ~ 
 # give elytra (light_blue_glazed_terracotta)
 execute as @a[gamemode=adventure] run execute positioned as @s if block ~ ~-1 ~ light_blue_glazed_terracotta run item replace entity @s armor.chest with elytra
 # remove chest
-execute as @a[gamemode=adventure] run execute positioned as @s if block ~ ~-1 ~ orange_glazed_terracotta run item replace entity @s armor.chest with air
 execute as @a[gamemode=adventure] at @s if block ~ ~-1 ~ water run item replace entity @s armor.chest with air
 execute as @a[gamemode=adventure] at @s if block ~ ~-1 ~ stone run item replace entity @s armor.chest with air
 execute as @a[gamemode=adventure] at @s if block ~ ~-1 ~ andesite run item replace entity @s armor.chest with air
