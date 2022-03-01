@@ -1,6 +1,7 @@
 # kills race
 scoreboard players set !gameActive race 0
 scoreboard players set !countDown race 160
+scoreboard players set !gate race 140
 effect clear @a
 clear @a
 
