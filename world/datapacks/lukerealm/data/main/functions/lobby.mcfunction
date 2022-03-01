@@ -1,4 +1,5 @@
 # returns players to lobby
+time set 12750
 scoreboard players set $fossilDig currentGame 0
 scoreboard players set $kitPvp currentGame 0
 scoreboard players set $race currentGame 0
