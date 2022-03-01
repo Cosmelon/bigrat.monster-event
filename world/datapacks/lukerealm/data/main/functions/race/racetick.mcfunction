@@ -26,9 +26,9 @@ execute if score !countDown race matches -20 run title @a title ""
 # gate
 #  intended be open for five seconds, then closed for two
 scoreboard players remove !gate race 1
-execute if score !gate race matches 140 run fill 351 83 42 351 81 44 air
+execute if score !gate race matches 140 run fill 351 83 42 351 81 44 air destroy
 execute if score !gate race matches 40 run fill 351 83 42 351 81 44 warped_fence
-execute if score !gate race matches 0 run scoreboard players set !gate race 140
+execute if score !gate race matches 0 run scoreboard players set !gate race 141
 
 # speedpads (magenta_glazed_terracotta)
 execute as @a[gamemode=adventure] run execute positioned as @s if block ~ ~-1 ~ minecraft:magenta_glazed_terracotta run effect give @s speed 2 3 true
