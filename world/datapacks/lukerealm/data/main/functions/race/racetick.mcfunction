@@ -39,9 +39,7 @@ execute as @a[gamemode=adventure] run execute positioned as @s if block ~ ~-1 ~ 
 execute as @a[gamemode=adventure] at @s unless block ~ ~-0.25 ~ air run item replace entity @s armor.chest with air
 execute as @a[gamemode=adventure] at @s if block ~ ~-0.25 ~ light_blue_glazed_terracotta run item replace entity @s armor.chest with elytra
 
-# before elytra checkpoint, most likely temporary
-execute as @a[gamemode=adventure] run execute positioned as @s if block ~ ~-1 ~ granite run spawnpoint @s ~ ~ ~ 
-kill @a[gamemode=adventure,scores={yCos=6}]
+kill @a[gamemode=adventure,scores={yCos=..6}]
 
 # spawnpoints
 setworldspawn 287 75 42
