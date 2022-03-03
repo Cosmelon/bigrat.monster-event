@@ -37,7 +37,7 @@ execute as @a[gamemode=adventure] run execute positioned as @s if block ~ ~-1 ~ 
 # give elytra (light_blue_glazed_terracotta)
 # again credit to /u/PunchTunnel! They're carrying this ong
 execute as @a[gamemode=adventure] at @s unless block ~ ~-0.25 ~ air run item replace entity @s armor.chest with air
-execute as @a[gamemode=adventure] at @s if block ~ ~-0.25 ~ light_blue_glazed_terracotta run item replace entity @s armor.chest with elytra{Enchantments:[{id:"binding_curse",lvl:1}],HideFlags:1}
+execute as @a[gamemode=adventure] at @s if block ~ ~-0.25 ~ light_blue_glazed_terracotta run item replace entity @s armor.chest with elytra{Enchantments:[{id:"binding_curse",lvl:1},{id:"unbreaking",lvl:255}],HideFlags:1}
 
 kill @a[gamemode=adventure,scores={yCos=..6}]
 
