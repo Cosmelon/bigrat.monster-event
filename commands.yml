@@ -72,28 +72,28 @@ aliases:
   - whitelist add lerdkanu
   - whitelist add kittycatelite
   - whitelist add AK1089
-  - whitelist add dobby 728
   - whitelist add emmuse
   - whitelist add emmdrews
   - whitelist add felidae_
   - whitelist add theglorythief
   - whitelist add visuumii
   - whitelist add Spicv
-  - whitelist add Dobby728
   - whitelist add gemuse
+  - whitelist add dobby728
+  - whitelist add 0l_
   - tellraw @a {"text":"Testers Added!","color":"green"}
   testercut:
   - whitelist remove marvelfamily
   - whitelist remove lerdkanu
   - whitelist remove kittycatelite
   - whitelist remove AK1089
-  - whitelist remove dobby 728
+  - whitelist remove dobby728
   - whitelist remove emmuse
   - whitelist remove emmdrews
   - whitelist remove felidae_
   - whitelist remove theglorythief
   - whitelist remove visuumii
   - whitelist remove Spicv
-  - whitelist remove Dobby728
   - whitelist remove gemuse
+  - whitelist remove 0l_
   - tellraw @a {"text":"Testers Removed!","color":"red"}
