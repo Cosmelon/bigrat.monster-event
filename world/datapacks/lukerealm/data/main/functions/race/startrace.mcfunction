@@ -16,6 +16,7 @@ clear @a[team=Blue]
 clear @a[team=Green]
 clear @a[team=Yellow]
 clear @a[team=Spectator]
+scoreboard players reset @a raceCP
 
 # gamemodes
 gamemode adventure @a[team=Red]
