@@ -59,9 +59,41 @@ aliases:
   - function main:sg/killsg
   lobby:
   - tp @s -181.5 5 137.5 0 10
+  allspec:
+  - team join Spectator @a
+  addadmins:
+  - team join Admin Cosmelon
+  - team join Admin fruitlukes
+  - team join Admin Solawr
+  - team join Admin PokeyFinn
+  - team join Admin imstillsleepy
   testeradd:
+  - whitelist add marvelfamily
+  - whitelist add lerdkanu
+  - whitelist add kittycatelite
+  - whitelist add AK1089
+  - whitelist add dobby 728
+  - whitelist add emmuse
+  - whitelist add emmdrews
+  - whitelist add felidae_
+  - whitelist add theglorythief
+  - whitelist add visuumii
   - whitelist add Spicv
+  - whitelist add Dobby728
+  - whitelist add gemuse
   - tellraw @a {"text":"Testers Added!","color":"green"}
   testercut:
+  - whitelist remove marvelfamily
+  - whitelist remove lerdkanu
+  - whitelist remove kittycatelite
+  - whitelist remove AK1089
+  - whitelist remove dobby 728
+  - whitelist remove emmuse
+  - whitelist remove emmdrews
+  - whitelist remove felidae_
+  - whitelist remove theglorythief
+  - whitelist remove visuumii
   - whitelist remove Spicv
+  - whitelist remove Dobby728
+  - whitelist remove gemuse
   - tellraw @a {"text":"Testers Removed!","color":"red"}
