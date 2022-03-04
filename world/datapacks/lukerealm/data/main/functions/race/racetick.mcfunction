@@ -25,10 +25,10 @@ execute if score !countDown race matches -20 run title @a title ""
 
 # checkpoints
 execute as @a[gamemode=adventure,x=310.5,dx=3,y=81,dy=3,z=57.5,dz=1] run scoreboard players set @s raceCP 1
-execute as @a[gamemode=adventure,x=368,dx=1,y=81,dy=2,z=-18.5,dz=3] run scoreboard players set @a raceCP 2
+execute as @a[gamemode=adventure,x=368,dx=1,y=81,dy=2,z=-18.5,dz=3] run scoreboard players set @s raceCP 2
 execute as @a[gamemode=adventure,x=292.5,dx=2,y=39,dy=4,z=-48,dz=4] run scoreboard players set @s raceCP 3
-execute as @a[gamemode=adventure,x=253.5,dx=2,y=40,dy=4,z=-73.5,dz=4] run scoreboard players set @a raceCP 4
-execute as @a[gamemode=adventure,x=258.5,dx=1,y=78,dy=2,z=-32.5,dz=2] run scoreboard players set @a raceCP 5
+execute as @a[gamemode=adventure,x=253.5,dx=2,y=40,dy=4,z=-73.5,dz=4] run scoreboard players set @s raceCP 4
+execute as @a[gamemode=adventure,x=258.5,dx=1,y=78,dy=2,z=-32.5,dz=2] run scoreboard players set @s raceCP 5
 execute as @a[gamemode=adventure,x=247.5,dx=5,y=88,dy=8,z=8.5,dz=1] run scoreboard players set @s raceCP 6
 execute as @a[gamemode=adventure,x=295.5,dx=2,y=77,dy=3,z=42.5,dz=6] run scoreboard players set @s raceCP 0
 
