@@ -11,6 +11,7 @@
 # prevents players from going out of the arena
 execute if score $gameActive spleef matches 1 run execute positioned -496 45 -461 run tp @a[gamemode=spectator,team=!Admin,distance=40..70] -497 69 -461
 execute if score $gameActive spleef matches 1 run effect give @a[gamemode=spectator] night_vision 10000 1 true
+execute if score $gameActive spleef matches 1 run effect clear @a[gamemode=creative] night_vision
 
 # sets time of day
 execute if score $gameActive spleef matches 1 run time set midnight
