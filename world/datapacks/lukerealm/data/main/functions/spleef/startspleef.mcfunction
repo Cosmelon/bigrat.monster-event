@@ -32,8 +32,8 @@ scoreboard players set $shrink3Break spleefBorder 0
 gamemode adventure @a[team=!Admin]
 gamemode spectator @a[team=Admin]
 gamemode spectator @a[team=Spectator]
-tp @a[team=Admin] -496 66 -459 -180 5
-tp @a[team=Spectator] -496 66 -459 -180 5
+tp @a[team=Admin] -496.5 66 -460.5 -180 5
+tp @a[team=Spectator] -496.5 66 -460.5 -180 5
 tp @a[team=Red] -500 61 -458 -135 10
 tp @a[team=Blue] -494 61 -464 45 10
 tp @a[team=Green] -500 61 -464 -45 10
