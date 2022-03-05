@@ -32,6 +32,7 @@ execute positioned 258.5 78 -32.5 run scoreboard players set @a[gamemode=adventu
 execute as @a[gamemode=adventure,x=247.5,dx=5,y=88,dy=8,z=8.5,dz=1] run scoreboard players set @s raceCP 6
 execute as @a[gamemode=adventure,x=294,dx=1,y=75,dy=10,z=37,dz=10] run execute if score @s raceCP matches 6 run scoreboard players add @s raceLap 1
 execute as @a[gamemode=adventure,x=294,dx=1,y=75,dy=10,z=37,dz=10] run scoreboard players set @s raceCP 0
+gamemode spectator @a[scores={raceLap=3..}]
 # execute as @a[x=294,dx=1,y=75,dy=10,z=37,dz=10] run execute if score @s raceCP matches 6 run execute if score @s raceLap matches 0 run scoreboard players set @s raceLap 1
 # execute as @a[x=294,dx=1,y=75,dy=10,z=37,dz=10] run execute if score @s raceCP matches 6 run execute if score @s raceLap matches 1 run scoreboard players set @s raceLap 2
 # execute as @a[x=294,dx=1,y=75,dy=10,z=37,dz=10] run execute if score @s raceCP matches 6 run execute if score @s raceLap matches 0 run scoreboard players set @s raceLap 1
