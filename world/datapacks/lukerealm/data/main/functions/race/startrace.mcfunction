@@ -10,6 +10,7 @@ scoreboard players set !gameActive race 1
 scoreboard players set !countDown race 160
 scoreboard players set !gate race 141
 scoreboard players reset * raceCP
+scoreboard players reset * raceLap
 
 # clear inventory pre-game
 clear @a[team=Red]
