@@ -11,6 +11,7 @@ scoreboard players set !countDown race 160
 scoreboard players set !gate race 141
 scoreboard players reset * raceCP
 scoreboard players reset * raceLap
+scoreboard players set @a[gamemode=adventure] raceLap 0
 
 # clear inventory pre-game
 clear @a[team=Red]
