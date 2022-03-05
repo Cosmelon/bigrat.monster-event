@@ -30,7 +30,7 @@ execute positioned 292.5 39 -49.5 run scoreboard players set @a[gamemode=adventu
 execute positioned 253.5 40 -73.5 run scoreboard players set @a[gamemode=adventure,distance=..5] raceCP 4
 execute positioned 258.5 78 -32.5 run scoreboard players set @a[gamemode=adventure,distance=..3] raceCP 5
 execute as @a[gamemode=adventure,x=247.5,dx=5,y=88,dy=8,z=8.5,dz=1] run scoreboard players set @s raceCP 6
-execute as @a[gamemode=adventure,x=294.5,dx=2,y=77,dy=3,z=42.5,dz=7] run scoreboard players set @s raceCP 0
+execute as @a[gamemode=adventure,x=294.5,dx=1,y=76,dy=3,z=42.5,dz=7] run scoreboard players set @s raceCP 0
 
 # gate
 #  intended be open for five seconds, then closed for two
