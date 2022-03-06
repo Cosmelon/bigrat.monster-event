@@ -35,13 +35,13 @@ execute as @a[gamemode=adventure,x=294,dx=1,y=75,dy=10,z=37,dz=10] run scoreboar
 gamemode spectator @a[scores={raceLap=3..}]
 
 # checkpoint title (probably gonna yeet at some point)
-title @a[scores={raceCP=0}] actionbar {"text":"Start","color":"red","bold":true}
-title @a[scores={raceCP=1}] actionbar {"text":"River","color":"red","bold":true}
-title @a[scores={raceCP=2}] actionbar {"text":"Elytra","color":"red","bold":true}
-title @a[scores={raceCP=3}] actionbar {"text":"Sewer","color":"red","bold":true}
-title @a[scores={raceCP=4}] actionbar {"text":"Block City","color":"red","bold":true}
-title @a[scores={raceCP=5}] actionbar {"text":"idek","color":"red","bold":true}
-title @a[scores={raceCP=6}] actionbar {"text":"Finish!","color":"red","bold":true}
+#title @a[scores={raceCP=0}] actionbar {"text":"Start","color":"red","bold":true}
+#title @a[scores={raceCP=1}] actionbar {"text":"River","color":"red","bold":true}
+#title @a[scores={raceCP=2}] actionbar {"text":"Elytra","color":"red","bold":true}
+#title @a[scores={raceCP=3}] actionbar {"text":"Sewer","color":"red","bold":true}
+#title @a[scores={raceCP=4}] actionbar {"text":"Block City","color":"red","bold":true}
+#title @a[scores={raceCP=5}] actionbar {"text":"idek","color":"red","bold":true}
+#title @a[scores={raceCP=6}] actionbar {"text":"Finish!","color":"red","bold":true}
 
 #  intended be open for five seconds, then closed for two
 scoreboard players remove !gate race 1
