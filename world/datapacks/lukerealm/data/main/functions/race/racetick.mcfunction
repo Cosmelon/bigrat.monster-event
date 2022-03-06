@@ -68,10 +68,10 @@ execute as @a[gamemode=adventure] run execute if score @s raceLap matches 2 run 
 execute as @a[gamemode=adventure] run execute if score @s raceLap matches 2 run execute if score @s raceCP matches 5 run title @s actionbar [{"text":"In: ","color":"gold"},{"text":"idek   ","color":"green"},{"text":"Lap: ","color":"gold"},{"text":"3/3","color":"green"}]
 execute as @a[gamemode=adventure] run execute if score @s raceLap matches 2 run execute if score @s raceCP matches 6 run title @s actionbar [{"text":"In: ","color":"gold"},{"text":"Finish!   ","color":"green"},{"text":"Lap: ","color":"gold"},{"text":"3/3","color":"green"}]
 #finish
-title @a[team=Red,gamemode=spectator] subtitle {"text":"Finished!","color":"gold"}
-title @a[team=Blue,gamemode=spectator] subtitle {"text":"Finished!","color":"gold"}
-title @a[team=Green,gamemode=spectator] subtitle {"text":"Finished!","color":"gold"}
-title @a[team=Yellow,gamemode=spectator] subtitle {"text":"Finished!","color":"gold"}
+title @a[team=Red,gamemode=spectator] actionbar {"text":"Finished!","color":"gold"}
+title @a[team=Blue,gamemode=spectator] actionbar {"text":"Finished!","color":"gold"}
+title @a[team=Green,gamemode=spectator] actionbar {"text":"Finished!","color":"gold"}
+title @a[team=Yellow,gamemode=spectator] actionbar {"text":"Finished!","color":"gold"}
 
 #  intended be open for five seconds, then closed for two
 scoreboard players remove !gate race 1
