@@ -23,6 +23,7 @@ execute if score !countDown race matches 0 run title @a title {"text":"Go!","col
 execute if score !countDown race matches 0 run playsound minecraft:block.note_block.chime master @a ~ ~ ~ 10 2
 execute if score !countDown race matches -20 run title @a title ""
 
+execute as @a[gamemode=adventure] run execute if score @s raceLap matches 0 run execute if score @s raceCP matches 6 run title @s actionbar [{"text":"In: ","color":"gold"},{"text":"Finish!   ","color":"green"},{"text":"Lap: ","color":"gold"},{"text":"1/3","color":"green"}]
 # checkpoints
 execute as @a[gamemode=adventure,x=310.5,dx=3,y=81,dy=3,z=57.5,dz=1] run scoreboard players set @s raceCP 1
 execute as @a[gamemode=adventure,x=368,dx=1,y=81,dy=2,z=-18.5,dz=3] run scoreboard players set @s raceCP 2
@@ -42,6 +43,35 @@ gamemode spectator @a[scores={raceLap=3..}]
 #title @a[scores={raceCP=4}] actionbar {"text":"Block City","color":"red","bold":true}
 #title @a[scores={raceCP=5}] actionbar {"text":"idek","color":"red","bold":true}
 #title @a[scores={raceCP=6}] actionbar {"text":"Finish!","color":"red","bold":true}
+#lap1
+execute as @a[gamemode=adventure] run execute if score @s raceLap matches 0 run execute if score @s raceCP matches 0 run title @s actionbar [{"text":"In: ","color":"gold"},{"text":"Start   ","color":"green"},{"text":"Lap: ","color":"gold"},{"text":"1/3","color":"green"}]
+execute as @a[gamemode=adventure] run execute if score @s raceLap matches 0 run execute if score @s raceCP matches 1 run title @s actionbar [{"text":"In: ","color":"gold"},{"text":"River   ","color":"green"},{"text":"Lap: ","color":"gold"},{"text":"1/3","color":"green"}]
+execute as @a[gamemode=adventure] run execute if score @s raceLap matches 0 run execute if score @s raceCP matches 2 run title @s actionbar [{"text":"In: ","color":"gold"},{"text":"Elytra   ","color":"green"},{"text":"Lap: ","color":"gold"},{"text":"1/3","color":"green"}]
+execute as @a[gamemode=adventure] run execute if score @s raceLap matches 0 run execute if score @s raceCP matches 3 run title @s actionbar [{"text":"In: ","color":"gold"},{"text":"Sewer   ","color":"green"},{"text":"Lap: ","color":"gold"},{"text":"1/3","color":"green"}]
+execute as @a[gamemode=adventure] run execute if score @s raceLap matches 0 run execute if score @s raceCP matches 4 run title @s actionbar [{"text":"In: ","color":"gold"},{"text":"Block City   ","color":"green"},{"text":"Lap: ","color":"gold"},{"text":"1/3","color":"green"}]
+execute as @a[gamemode=adventure] run execute if score @s raceLap matches 0 run execute if score @s raceCP matches 5 run title @s actionbar [{"text":"In: ","color":"gold"},{"text":"idek   ","color":"green"},{"text":"Lap: ","color":"gold"},{"text":"1/3","color":"green"}]
+execute as @a[gamemode=adventure] run execute if score @s raceLap matches 0 run execute if score @s raceCP matches 6 run title @s actionbar [{"text":"In: ","color":"gold"},{"text":"Finish!   ","color":"green"},{"text":"Lap: ","color":"gold"},{"text":"1/3","color":"green"}]
+#lap2
+execute as @a[gamemode=adventure] run execute if score @s raceLap matches 1 run execute if score @s raceCP matches 0 run title @s actionbar [{"text":"In: ","color":"gold"},{"text":"Start   ","color":"green"},{"text":"Lap: ","color":"gold"},{"text":"2/3","color":"green"}]
+execute as @a[gamemode=adventure] run execute if score @s raceLap matches 1 run execute if score @s raceCP matches 1 run title @s actionbar [{"text":"In: ","color":"gold"},{"text":"River   ","color":"green"},{"text":"Lap: ","color":"gold"},{"text":"2/3","color":"green"}]
+execute as @a[gamemode=adventure] run execute if score @s raceLap matches 1 run execute if score @s raceCP matches 2 run title @s actionbar [{"text":"In: ","color":"gold"},{"text":"Elytra   ","color":"green"},{"text":"Lap: ","color":"gold"},{"text":"2/3","color":"green"}]
+execute as @a[gamemode=adventure] run execute if score @s raceLap matches 1 run execute if score @s raceCP matches 3 run title @s actionbar [{"text":"In: ","color":"gold"},{"text":"Sewer   ","color":"green"},{"text":"Lap: ","color":"gold"},{"text":"2/3","color":"green"}]
+execute as @a[gamemode=adventure] run execute if score @s raceLap matches 1 run execute if score @s raceCP matches 4 run title @s actionbar [{"text":"In: ","color":"gold"},{"text":"Block City   ","color":"green"},{"text":"Lap: ","color":"gold"},{"text":"2/3","color":"green"}]
+execute as @a[gamemode=adventure] run execute if score @s raceLap matches 1 run execute if score @s raceCP matches 5 run title @s actionbar [{"text":"In: ","color":"gold"},{"text":"idek   ","color":"green"},{"text":"Lap: ","color":"gold"},{"text":"2/3","color":"green"}]
+execute as @a[gamemode=adventure] run execute if score @s raceLap matches 1 run execute if score @s raceCP matches 6 run title @s actionbar [{"text":"In: ","color":"gold"},{"text":"Finish!   ","color":"green"},{"text":"Lap: ","color":"gold"},{"text":"2/3","color":"green"}]
+#lap3
+execute as @a[gamemode=adventure] run execute if score @s raceLap matches 2 run execute if score @s raceCP matches 0 run title @s actionbar [{"text":"In: ","color":"gold"},{"text":"Start   ","color":"green"},{"text":"Lap: ","color":"gold"},{"text":"3/3","color":"green"}]
+execute as @a[gamemode=adventure] run execute if score @s raceLap matches 2 run execute if score @s raceCP matches 1 run title @s actionbar [{"text":"In: ","color":"gold"},{"text":"River   ","color":"green"},{"text":"Lap: ","color":"gold"},{"text":"3/3","color":"green"}]
+execute as @a[gamemode=adventure] run execute if score @s raceLap matches 2 run execute if score @s raceCP matches 2 run title @s actionbar [{"text":"In: ","color":"gold"},{"text":"Elytra   ","color":"green"},{"text":"Lap: ","color":"gold"},{"text":"3/3","color":"green"}]
+execute as @a[gamemode=adventure] run execute if score @s raceLap matches 2 run execute if score @s raceCP matches 3 run title @s actionbar [{"text":"In: ","color":"gold"},{"text":"Sewer   ","color":"green"},{"text":"Lap: ","color":"gold"},{"text":"3/3","color":"green"}]
+execute as @a[gamemode=adventure] run execute if score @s raceLap matches 2 run execute if score @s raceCP matches 4 run title @s actionbar [{"text":"In: ","color":"gold"},{"text":"Block City   ","color":"green"},{"text":"Lap: ","color":"gold"},{"text":"3/3","color":"green"}]
+execute as @a[gamemode=adventure] run execute if score @s raceLap matches 2 run execute if score @s raceCP matches 5 run title @s actionbar [{"text":"In: ","color":"gold"},{"text":"idek   ","color":"green"},{"text":"Lap: ","color":"gold"},{"text":"3/3","color":"green"}]
+execute as @a[gamemode=adventure] run execute if score @s raceLap matches 2 run execute if score @s raceCP matches 6 run title @s actionbar [{"text":"In: ","color":"gold"},{"text":"Finish!   ","color":"green"},{"text":"Lap: ","color":"gold"},{"text":"3/3","color":"green"}]
+#finish
+title @a[team=Red,gamemode=spectator] subtitle {"text":"Finished!","color":"gold"}
+title @a[team=Blue,gamemode=spectator] subtitle {"text":"Finished!","color":"gold"}
+title @a[team=Green,gamemode=spectator] subtitle {"text":"Finished!","color":"gold"}
+title @a[team=Yellow,gamemode=spectator] subtitle {"text":"Finished!","color":"gold"}
 
 #  intended be open for five seconds, then closed for two
 scoreboard players remove !gate race 1
