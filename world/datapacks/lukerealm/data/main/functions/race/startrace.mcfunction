@@ -9,15 +9,9 @@
 scoreboard players set !gameActive race 1
 scoreboard players set !countDown race 160
 scoreboard players set !gate race 141
-scoreboard players reset * raceCP
-scoreboard players reset * raceLap
 
 # clear inventory pre-game
-clear @a[team=Red]
-clear @a[team=Blue]
-clear @a[team=Green]
-clear @a[team=Yellow]
-clear @a[team=Spectator]
+clear @a[team=!Admin]
 
 # gamemodes
 gamemode adventure @a[team=Red]
@@ -28,6 +22,9 @@ gamemode spectator @a[team=Admin]
 gamemode spectator @a[team=Spectator]
 scoreboard players set @a[gamemode=adventure] raceLap 0
 scoreboard players set @a[gamemode=adventure] raceCP 0
+scoreboard players set @a[gamemode=adventure] raceMilli 0
+scoreboard players set @a[gamemode=adventure] raceSec 0
+scoreboard players set @a[gamemode=adventure] raceMin 0
 
 # teleporting
 tp @a -191 12 132

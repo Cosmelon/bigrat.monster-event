@@ -2,9 +2,9 @@
 scoreboard players set !gameActive race 0
 scoreboard players set !countDown race 160
 scoreboard players set !gate race 141
-scoreboard players set * raceMilli 0
-scoreboard players set * raceSec 0
-scoreboard players set * raceMin 0
+scoreboard players reset * raceMilli
+scoreboard players reset * raceSec
+scoreboard players reset * raceMin
 scoreboard players reset * raceCP
 scoreboard players reset * raceLap
 effect clear @a
