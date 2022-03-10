@@ -22,6 +22,15 @@ bossbar set minecraft:spleefshrinkactual players @a
 execute if score $gameActive spleef matches 0 run execute if score !gameActive race matches 0 run execute if score ~gameActive sg matches 0 run spawnpoint @a -181 5 137
 execute if score $gameActive spleef matches 0 run execute if score !gameActive race matches 0 run execute if score ~gameActive sg matches 0 run setworldspawn -181 5 137
 
+# tagging player system
+tag @a[team=Red] add player
+tag @a[team=Blue] add player
+tag @a[team=Green] add player
+tag @a[team=Yellow] add player
+tag @a[team=Admin] remove player
+tag @a[team=Spectator] remove player
+team join Spectator @a[team=]
+
 # constant yCos (yPosition) tracker, can be used for multiple games
 execute as @a store result score @s yCos run data get entity @s Pos[1]
 
