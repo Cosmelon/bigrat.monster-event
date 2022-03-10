@@ -9,7 +9,7 @@ effect give @a speed 10000 0 true
 
 # stuff for the stopwatch
 scoreboard players add !milli race 5
-execute if score !milli race matches 1.. run scoreboard players add @a[gamemode=adventure] raceMilli 5
+execute if score !milli race matches 1.. run scoreboard players add @a[gamemode=adventure,tag=player] raceMilli 5
 execute if score !milli race matches 100.. run scoreboard players set !milli race 0
 execute as @a[scores={raceMilli=100}] run scoreboard players add @s raceSec 1
 execute as @a[scores={raceMilli=100}] run scoreboard players set @s raceMilli 0
@@ -32,17 +32,16 @@ execute if score !countDown race matches 0 run title @a title {"text":"Go!","col
 execute if score !countDown race matches 0 run playsound minecraft:block.note_block.chime master @a ~ ~ ~ 10 2
 execute if score !countDown race matches -20 run title @a title ""
 
-execute as @a[gamemode=adventure] run execute if score @s raceLap matches 0 run execute if score @s raceCP matches 6 run title @s actionbar [{"text":"In: ","color":"gold"},{"text":"Finish!   ","color":"green"},{"text":"Lap: ","color":"gold"},{"text":"1/3","color":"green"}]
 # checkpoints
-execute as @a[gamemode=adventure,x=310.5,dx=3,y=81,dy=3,z=57.5,dz=1] run scoreboard players set @s raceCP 1
-execute as @a[gamemode=adventure,x=368,dx=1,y=81,dy=2,z=-18.5,dz=3] run scoreboard players set @s raceCP 2
-execute positioned 292.5 39 -49.5 run scoreboard players set @a[gamemode=adventure,distance=..5] raceCP 3
-execute positioned 253.5 40 -73.5 run scoreboard players set @a[gamemode=adventure,distance=..5] raceCP 4
-execute positioned 258.5 78 -32.5 run scoreboard players set @a[gamemode=adventure,distance=..3] raceCP 5
-execute as @a[gamemode=adventure,x=247.5,dx=5,y=88,dy=8,z=8.5,dz=1] run scoreboard players set @s raceCP 6
-execute as @a[gamemode=adventure,x=294,dx=1,y=75,dy=10,z=37,dz=10] run execute if score @s raceCP matches 6 run scoreboard players add @s raceLap 1
-execute as @a[gamemode=adventure,x=294,dx=1,y=75,dy=10,z=37,dz=10] run scoreboard players set @s raceCP 0
-gamemode spectator @a[scores={raceLap=3..}]
+execute as @a[gamemode=adventure,tag=player,x=310.5,dx=3,y=81,dy=3,z=57.5,dz=1] run scoreboard players set @s raceCP 1
+execute as @a[gamemode=adventure,tag=player,x=368,dx=1,y=81,dy=2,z=-18.5,dz=3] run scoreboard players set @s raceCP 2
+execute positioned 292.5 39 -49.5 run scoreboard players set @a[gamemode=adventure,tag=player,distance=..5] raceCP 3
+execute positioned 253.5 40 -73.5 run scoreboard players set @a[gamemode=adventure,tag=player,distance=..5] raceCP 4
+execute positioned 258.5 78 -32.5 run scoreboard players set @a[gamemode=adventure,tag=player,distance=..3] raceCP 5
+execute as @a[gamemode=adventure,tag=player,x=247.5,dx=5,y=88,dy=8,z=8.5,dz=1] run scoreboard players set @s raceCP 6
+execute as @a[gamemode=adventure,tag=player,x=294,dx=1,y=75,dy=10,z=37,dz=10] run execute if score @s raceCP matches 6 run scoreboard players add @s raceLap 1
+execute as @a[gamemode=adventure,tag=player,x=294,dx=1,y=75,dy=10,z=37,dz=10] run scoreboard players set @s raceCP 0
+gamemode spectator @a[tag=player,scores={raceLap=3..}]
 
 # player GUI
 #lap0
@@ -70,11 +69,9 @@ execute as @a[gamemode=adventure] run execute if score @s raceLap matches 2 run 
 execute as @a[gamemode=adventure] run execute if score @s raceLap matches 2 run execute if score @s raceCP matches 5 run title @s actionbar [{"text":"In: ","color":"gold"},{"text":"idek   ","color":"green"},{"text":"Lap: ","color":"gold"},{"text":"3/3","color":"green"}]
 execute as @a[gamemode=adventure] run execute if score @s raceLap matches 2 run execute if score @s raceCP matches 6 run title @s actionbar [{"text":"In: ","color":"gold"},{"text":"Finish!   ","color":"green"},{"text":"Lap: ","color":"gold"},{"text":"3/3","color":"green"}]
 
+#lap0
 #finish
-title @a[team=Red,gamemode=spectator] actionbar {"text":"Finished!","color":"gold"}
-title @a[team=Blue,gamemode=spectator] actionbar {"text":"Finished!","color":"gold"}
-title @a[team=Green,gamemode=spectator] actionbar {"text":"Finished!","color":"gold"}
-title @a[team=Yellow,gamemode=spectator] actionbar {"text":"Finished!","color":"gold"}
+title @a[tag=player,gamemode=spectator] actionbar {"text":"Finished!","color":"gold"}
 
 #  intended be open for five seconds, then closed for two
 scoreboard players remove !gate race 1
@@ -83,15 +80,15 @@ execute if score !gate race matches 40 run fill 351 83 42 351 81 44 warped_fence
 execute if score !gate race matches 0 run scoreboard players set !gate race 141
 
 # speedpads (magenta_glazed_terracotta)
-execute as @a[gamemode=adventure] run execute positioned as @s if block ~ ~-1 ~ minecraft:magenta_glazed_terracotta run effect give @s speed 2 3 true
+execute as @a[tag=player,gamemode=adventure] run execute positioned as @s if block ~ ~-1 ~ minecraft:magenta_glazed_terracotta run effect give @s speed 2 3 true
 # jump boost (lime_glazed_terracotta)
-execute as @a[gamemode=adventure] run execute positioned as @s if block ~ ~-1 ~ lime_glazed_terracotta run effect give @s minecraft:jump_boost 1 7 true
+execute as @a[tag=player,gamemode=adventure] run execute positioned as @s if block ~ ~-1 ~ lime_glazed_terracotta run effect give @s minecraft:jump_boost 1 7 true
 # give elytra (light_blue_glazed_terracotta)
 # again credit to /u/PunchTunnel! They're carrying this ong
-execute as @a[gamemode=adventure] at @s unless block ~ ~-0.25 ~ air run item replace entity @s armor.chest with air
-execute as @a[gamemode=adventure] at @s if block ~ ~-0.25 ~ light_blue_glazed_terracotta run item replace entity @s armor.chest with elytra{Enchantments:[{id:"binding_curse",lvl:1},{id:"unbreaking",lvl:255}],HideFlags:1}
+execute as @a[tag=player,gamemode=adventure] at @s unless block ~ ~-0.25 ~ air run item replace entity @s armor.chest with air
+execute as @a[tag=player,gamemode=adventure] at @s if block ~ ~-0.25 ~ light_blue_glazed_terracotta run item replace entity @s armor.chest with elytra{Enchantments:[{id:"binding_curse",lvl:1},{id:"unbreaking",lvl:255}],HideFlags:1}
 
-kill @a[gamemode=adventure,scores={yCos=..6}]
+kill @a[tag=player,gamemode=adventure,scores={yCos=..6}]
 
 # spawnpoints
 setworldspawn 287 75 42

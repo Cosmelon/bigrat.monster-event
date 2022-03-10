@@ -8,7 +8,7 @@ scoreboard players reset * raceMin
 scoreboard players reset * raceCP
 scoreboard players reset * raceLap
 effect clear @a
-clear @a
+clear @a[team=!Admin]
 
 # regenerate start
 fill 285 77 47 291 76 37 air replace barrier

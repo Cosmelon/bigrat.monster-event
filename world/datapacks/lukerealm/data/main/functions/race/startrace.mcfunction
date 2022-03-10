@@ -14,22 +14,17 @@ scoreboard players set !gate race 141
 clear @a[team=!Admin]
 
 # gamemodes
-gamemode adventure @a[team=Red]
-gamemode adventure @a[team=Blue]
-gamemode adventure @a[team=Green]
-gamemode adventure @a[team=Yellow]
-gamemode spectator @a[team=Admin]
-gamemode spectator @a[team=Spectator]
-scoreboard players set @a[gamemode=adventure] raceLap 0
-scoreboard players set @a[gamemode=adventure] raceCP 0
-scoreboard players set @a[gamemode=adventure] raceMilli 0
-scoreboard players set @a[gamemode=adventure] raceSec 0
-scoreboard players set @a[gamemode=adventure] raceMin 0
+gamemode adventure @a[tag=player]
+gamemode spectator @a[tag=!player]
+scoreboard players set @a raceLap 0
+scoreboard players set @a raceCP 0
+scoreboard players set @a raceMilli 0
+scoreboard players set @a raceSec 0
+scoreboard players set @a raceMin 0
 
 # teleporting
 tp @a -191 12 132
-tp @a[team=Admin] 284.5 75 42.5 -90 5
-tp @a[team=Spectator] 284.5 75 42.5 -90 5
+tp @a[tag=!player] 284.5 75 42.5 -90 5
 execute positioned -191 12 132 run tp @a[team=Red,limit=1,sort=random,distance=..50] 290.5 75 38.5 -90 5
 execute positioned -191 12 132 run tp @a[team=Red,limit=1,sort=random,distance=..50] 290.5 75 39.5 -90 5
 execute positioned -191 12 132 run tp @a[team=Red,limit=1,sort=random,distance=..50] 290.5 75 40.5 -90 5
