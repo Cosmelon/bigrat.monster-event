@@ -9,6 +9,9 @@
 scoreboard players set !gameActive race 1
 scoreboard players set !countDown race 160
 scoreboard players set !gate race 141
+scoreboard players set !raceTime raceMilli 0
+scoreboard players set !raceTime raceSec 0
+scoreboard players set !raceTime raceMin 0
 
 # clear inventory pre-game
 clear @a[team=!Admin]
