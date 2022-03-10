@@ -11,13 +11,13 @@ gamemode spectator @a[tag=!player,team=!Admin]
 # stuff for the stopwatch
 execute if score !countDown race matches ..0 run scoreboard players add !milli race 5
 execute if score !countDown race matches ..0 run execute if score !milli race matches 1.. run scoreboard players add @a[gamemode=adventure,tag=player] raceMilli 5
-# execute if score !countDown race matches ..0 run execute if score !milli race matches 1.. run scoreboard players add !raceTime raceMilli 5
+execute if score !countDown race matches ..0 run execute if score !milli race matches 1.. run scoreboard players add !raceTime raceMilli 5
 execute if score !milli race matches 100.. run scoreboard players set !milli race 0
 execute as @a[scores={raceMilli=100}] run scoreboard players add @s raceSec 1
 execute as @a[scores={raceMilli=100}] run scoreboard players set @s raceMilli 0
 execute as @a[scores={raceSec=60}] run scoreboard players add @s raceMin 1
 execute as @a[scores={raceSec=60}] run scoreboard players set @s raceSec 0
-# bossbar set minecraft:racetime name [{"text":"Time: ","color":"gold"},{"score":{"name": "!raceTime","objective":"raceMin"},"color":"green"},{"text":":0","color":"green"},{"score":{"name":"!raceTime","objective":"raceSec"},"color":"green"},{"text":".0","color":"green"},{"score":{"name":"!raceTime","objective":"raceMilli"},"color":"green"}]
+bossbar set minecraft:racetime name [{"text":"Time: ","color":"gold"},{"score":{"name": "!raceTime","objective":"raceMin"},"color":"green"},{"text":":0","color":"green"},{"score":{"name":"!raceTime","objective":"raceSec"},"color":"green"},{"text":".0","color":"green"},{"score":{"name":"!raceTime","objective":"raceMilli"},"color":"green"}]
 
 # countdown
 execute if score !countDown race matches 80 run fill 285 77 47 291 76 37 air replace barrier
