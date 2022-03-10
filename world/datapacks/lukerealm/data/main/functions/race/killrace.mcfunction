@@ -9,7 +9,7 @@ scoreboard players set @a raceCP 0
 scoreboard players set @a raceLap 0
 effect clear @a
 clear @a[team=!Admin]
-title @a clear
+title @a actionbar ""
 
 # regenerate start
 fill 285 77 47 291 76 37 air replace barrier
