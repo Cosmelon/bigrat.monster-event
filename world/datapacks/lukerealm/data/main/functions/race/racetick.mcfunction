@@ -9,6 +9,7 @@ effect give @a speed 10000 0 true
 gamemode spectator @a[tag=!player,team=!Admin]
 
 # stuff for the stopwatch
+execute if score !countDown race matches ..0 run bossbar set minecraft:racetime visible true
 execute if score !countDown race matches ..0 run scoreboard players add !milli race 5
 execute if score !countDown race matches ..0 run execute if score !milli race matches 1.. run scoreboard players add @a[gamemode=adventure,tag=player] raceMilli 5
 execute if score !countDown race matches ..0 run execute if score !milli race matches 1.. run scoreboard players add !raceTime raceMilli 5
