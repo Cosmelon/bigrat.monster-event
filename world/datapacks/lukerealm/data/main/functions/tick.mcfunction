@@ -18,6 +18,7 @@ bossbar set minecraft:spleefshrink1timer players @a
 bossbar set minecraft:spleefshirnk2timer players @a
 bossbar set minecraft:spleefshrink3timer players @a
 bossbar set minecraft:spleefshrinkactual players @a
+bossbar set minecraft:racetimer players @a
 
 execute if score $gameActive spleef matches 0 run execute if score !gameActive race matches 0 run execute if score ~gameActive sg matches 0 run spawnpoint @a -181 5 137
 execute if score $gameActive spleef matches 0 run execute if score !gameActive race matches 0 run execute if score ~gameActive sg matches 0 run setworldspawn -181 5 137
