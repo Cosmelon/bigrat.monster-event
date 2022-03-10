@@ -7,6 +7,15 @@ title @a times 0 25 0
 effect give @a water_breathing 100000 0 true
 effect give @a speed 10000 0 true
 
+# stuff for the stopwatch
+scoreboard players add !milli race 5
+execute if score !milli race matches 1.. run scoreboard players add @a[gamemode=adventure] raceMilli 5
+execute if score !milli race matches 100.. run scoreboard players set !milli race 0
+execute as @a[scores={raceMilli=100}] run scoreboard players add @s raceSec 1
+execute as @a[scores={raceMilli=100}] run scoreboard players set @s raceMilli 0
+execute as @a[scores={raceSec=60}] run scoreboard players add @s raceMin 1
+execute as @a[scores={raceSec=60}] run scoreboard players set @s raceSec 0
+
 # countdown
 execute if score !countDown race matches 80 run fill 285 77 47 291 76 37 air replace barrier
 execute if score !countDown race matches 60 run fill 294 79 37 294 75 47 red_stained_glass replace light_gray_stained_glass
@@ -35,14 +44,7 @@ execute as @a[gamemode=adventure,x=294,dx=1,y=75,dy=10,z=37,dz=10] run execute i
 execute as @a[gamemode=adventure,x=294,dx=1,y=75,dy=10,z=37,dz=10] run scoreboard players set @s raceCP 0
 gamemode spectator @a[scores={raceLap=3..}]
 
-# checkpoint title (probably gonna yeet at some point)
-#title @a[scores={raceCP=0}] actionbar {"text":"Start","color":"red","bold":true}
-#title @a[scores={raceCP=1}] actionbar {"text":"River","color":"red","bold":true}
-#title @a[scores={raceCP=2}] actionbar {"text":"Elytra","color":"red","bold":true}
-#title @a[scores={raceCP=3}] actionbar {"text":"Sewer","color":"red","bold":true}
-#title @a[scores={raceCP=4}] actionbar {"text":"Block City","color":"red","bold":true}
-#title @a[scores={raceCP=5}] actionbar {"text":"idek","color":"red","bold":true}
-#title @a[scores={raceCP=6}] actionbar {"text":"Finish!","color":"red","bold":true}
+# player GUI
 #lap1
 execute as @a[gamemode=adventure] run execute if score @s raceLap matches 0 run execute if score @s raceCP matches 0 run title @s actionbar [{"text":"In: ","color":"gold"},{"text":"Start   ","color":"green"},{"text":"Lap: ","color":"gold"},{"text":"1/3","color":"green"}]
 execute as @a[gamemode=adventure] run execute if score @s raceLap matches 0 run execute if score @s raceCP matches 1 run title @s actionbar [{"text":"In: ","color":"gold"},{"text":"River   ","color":"green"},{"text":"Lap: ","color":"gold"},{"text":"1/3","color":"green"}]
