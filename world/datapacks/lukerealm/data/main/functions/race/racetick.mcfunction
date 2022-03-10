@@ -6,6 +6,7 @@ scoreboard players remove !countDown race 1
 title @a times 0 25 0
 effect give @a water_breathing 100000 0 true
 effect give @a speed 10000 0 true
+gamemode spectator @a[tag=!player,team=!Admin]
 
 # stuff for the stopwatch
 scoreboard players add !milli race 5
@@ -69,7 +70,7 @@ execute as @a[gamemode=adventure] run execute if score @s raceLap matches 2 run 
 execute as @a[gamemode=adventure] run execute if score @s raceLap matches 2 run execute if score @s raceCP matches 5 run title @s actionbar [{"text":"In: ","color":"gold"},{"text":"idek   ","color":"green"},{"text":"Lap: ","color":"gold"},{"text":"3/3","color":"green"}]
 execute as @a[gamemode=adventure] run execute if score @s raceLap matches 2 run execute if score @s raceCP matches 6 run title @s actionbar [{"text":"In: ","color":"gold"},{"text":"Finish!   ","color":"green"},{"text":"Lap: ","color":"gold"},{"text":"3/3","color":"green"}]
 
-#lap0
+
 #finish
 title @a[tag=player,gamemode=spectator] actionbar {"text":"Finished!","color":"gold"}
 
