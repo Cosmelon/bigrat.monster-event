@@ -26,10 +26,8 @@ execute store result bossbar minecraft:spleefshrink2timer value run scoreboard p
 execute store result bossbar minecraft:spleefshrink3timer value run scoreboard players get $shrink3Timer spleefBorder
 execute store result bossbar minecraft:spleefshrinkactual value run scoreboard players get $shrinkActual spleefBorder
 
-# updates round count bossbar name
-execute if score $round spleef matches 1 run bossbar set minecraft:spleefroundcount name {"text":"Round: 1/3","bold":true}
-execute if score $round spleef matches 2 run bossbar set minecraft:spleefroundcount name {"text":"Round: 2/3","bold":true}
-execute if score $round spleef matches 3 run bossbar set minecraft:spleefroundcount name {"text":"Round: 3/3","bold":true}
+# round count bossbar name
+bossbar set minecraft:spleefroundcount name [{"text":"Round: ","bold":true},{"score":{"name":"$round","objective":"spleef"},"bold":true},{"text":"/3","bold":true}]
 
 # does the countdown timer
 execute if score $gameActive spleef matches 0 run scoreboard players set $countDown spleef 160
@@ -47,10 +45,7 @@ execute if score $countDown spleef matches 0 run fill -491 60 -467 -503 65 -455 
 execute if score $countDown spleef matches -40 run function main:cleartitle
 
 # kills people who fell off L
-execute if score $gameActive spleef matches 1 run kill @a[gamemode=adventure,scores={yCos=30}]
-execute if score $gameActive spleef matches 1 run kill @a[gamemode=adventure,scores={yCos=29}]
-execute if score $gameActive spleef matches 1 run kill @a[gamemode=adventure,scores={yCos=28}]
-execute if score $gameActive spleef matches 1 run kill @a[gamemode=adventure,scores={yCos=27}]
+execute if score $gameActive spleef matches 1 run kill @a[gamemode=adventure,scores={yCos=27..30}]
 execute if score $gameActive spleef matches 1 run tp @a[team=Spectator,scores={yCos=20}] -496 66 -459 -180 5
 
 # tracks # of players on a team
