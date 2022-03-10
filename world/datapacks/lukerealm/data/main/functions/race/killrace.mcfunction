@@ -14,7 +14,7 @@ effect clear @a
 clear @a[team=!Admin]
 title @a actionbar ""
 title @a title ""
-bossbar set minecraft:racetimer visible false
+bossbar set minecraft:racetime visible false
 
 # regenerate start
 fill 285 77 47 291 76 37 air replace barrier
