@@ -2,6 +2,9 @@
 scoreboard players set !gameActive race 0
 scoreboard players set !countDown race 160
 scoreboard players set !gate race 141
+scoreboard players set !raceTime raceMilli 0
+scoreboard players set !raceTime raceSec 0
+scoreboard players set !raceTime raceMin 0
 scoreboard players set @a raceMilli 0
 scoreboard players set @a raceSec 0
 scoreboard players set @a raceMin 0
@@ -10,6 +13,8 @@ scoreboard players set @a raceLap 0
 effect clear @a
 clear @a[team=!Admin]
 title @a actionbar ""
+title @a title ""
+bossbar set minecraft:racetimer visible false
 
 # regenerate start
 fill 285 77 47 291 76 37 air replace barrier
