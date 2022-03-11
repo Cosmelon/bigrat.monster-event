@@ -1,4 +1,4 @@
-# everything in here is already executed when $gameActive spleef matches 1
+# shrink countdown bossbar digital timer
 
 # shrink1Timer
 execute if score $shrink1Timer spleefBorder matches 600 run bossbar set minecraft:spleefshrink1timer name [{"text":"First Shrink: ","color":"red","bold":true},{"text":"0:30","color":"white","bold":true}]
