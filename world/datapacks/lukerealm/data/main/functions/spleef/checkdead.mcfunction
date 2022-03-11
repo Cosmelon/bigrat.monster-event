@@ -1,6 +1,4 @@
-# this file is called from the main tick.mcfunction, be careful
-#  but everything in here is only executed when a spleef game is active
-#  i.e.: you don't need to do the execute if $gameActive every time
+# checks dead players in spleef
 
 execute if score $notifRedDead spleef matches 0 run execute if score $aliveRed spleef matches 0 run tellraw @a {"text":"Red team has been eliminated!","color":"red","bold":true}
 execute if score $notifRedDead spleef matches 0 run execute if score $aliveRed spleef matches 0 run scoreboard players set $notifRedDead spleef 1
