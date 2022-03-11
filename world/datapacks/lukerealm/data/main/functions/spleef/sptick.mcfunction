@@ -97,7 +97,6 @@ scoreboard players remove $shrinkActual spleefBorder 1
 scoreboard players remove $shrink1Timer spleefBorder 1
 scoreboard players remove $shrink2Timer spleefBorder 1
 scoreboard players remove $shrink3Timer spleefBorder 1
-# function main:spleef/border/shrinkcountdown
 # shrink bossbar timer reading
 execute if score $shrink1Timer spleefBorder matches 0..600 run scoreboard players add $tick spleefBorder 1
 execute if score $shrink2Timer spleefBorder matches 0..600 run scoreboard players add $tick spleefBorder 1
