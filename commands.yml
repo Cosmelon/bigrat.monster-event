@@ -96,3 +96,7 @@ aliases:
   - whitelist remove gemuse
   - whitelist remove 0l_
   - tellraw @a {"text":"Testers Removed!","color":"red"}
+  nvoff:
+  - tag @s add noNV
+  nvon:
+  - tag @s remove noNV

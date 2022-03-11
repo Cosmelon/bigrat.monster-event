@@ -12,6 +12,7 @@
 execute positioned -496 45 -461 run tp @a[gamemode=spectator,team=!Admin,distance=40..70] -497 69 -461
 effect give @a[gamemode=spectator] night_vision 10000 1 true
 effect clear @a[tag=!player,gamemode=!spectator] night_vision
+effect clear @a[tag=noNV] night_vision
 
 # roundCount bossbar sync
 execute store result bossbar minecraft:spleefroundcount value run scoreboard players get $round spleef
