@@ -17,5 +17,5 @@ bossbar set minecraft:spleefshrink1timer visible false
 bossbar set minecraft:spleefshrink2timer visible false
 bossbar set minecraft:spleefshrink3timer visible false
 bossbar set minecraft:spleefshrinkactual visible false
-execute positioned as @a run playsound minecraft:entity.wither.death master @a -496 45 -461 50
+execute as @a run playsound minecraft:entity.wither.death master @s ~ ~ ~ 10
 gamemode spectator @a
