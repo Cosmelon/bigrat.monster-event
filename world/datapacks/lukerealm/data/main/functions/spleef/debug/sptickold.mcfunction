@@ -1,4 +1,6 @@
 # spleef tick stuff, be careful!
+# This is a now outdated version of sptick.mcfunction as of 3/11/2022 at 2:36PM EST
+#  it has been rearranged and this still exists purely as an archive
 
 # scoreboards associated with spleef:
 #  spleef - main scoreboard for spleef
