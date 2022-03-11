@@ -45,6 +45,7 @@ execute if score $gameActive spleef matches 0 run scoreboard players set $shrink
 execute if score $gameActive spleef matches 0 run scoreboard players set $shrink3Timer spleefBorder 5000
 execute if score $gameActive spleef matches 0 run scoreboard players set $shrinkActual spleefBorder 400
 execute if score $gameActive spleef matches 0 run scoreboard players reset * spleefQuit
+effect clear @a[tag=noNV] night_vision
 
 # racetick
 execute if score !gameActive race matches 1 run function main:race/racetick

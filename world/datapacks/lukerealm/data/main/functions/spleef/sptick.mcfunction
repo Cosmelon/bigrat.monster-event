@@ -10,7 +10,7 @@
 
 # prevents players from going out of the arena
 execute positioned -496 45 -461 run tp @a[gamemode=spectator,team=!Admin,distance=40..70] -497 69 -461
-effect give @a[gamemode=spectator] night_vision 10000 1 true
+effect give @a[gamemode=spectator,tag=!noNV] night_vision 10000 1 true
 effect clear @a[tag=!player,gamemode=!spectator] night_vision
 effect clear @a[tag=noNV] night_vision
 
