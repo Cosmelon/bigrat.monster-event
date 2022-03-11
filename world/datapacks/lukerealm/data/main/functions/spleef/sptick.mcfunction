@@ -11,7 +11,7 @@
 # prevents players from going out of the arena
 execute positioned -496 45 -461 run tp @a[gamemode=spectator,team=!Admin,distance=40..70] -497 69 -461
 effect give @a[gamemode=spectator] night_vision 10000 1 true
-effect clear @a[gamemode=creative] night_vision
+effect clear @a[tag=!player,gamemode=!spectator] night_vision
 
 # sets time of day
 time set midnight
@@ -25,8 +25,6 @@ execute store result bossbar minecraft:spleefshrink1timer value run scoreboard p
 execute store result bossbar minecraft:spleefshrink2timer value run scoreboard players get $shrink2Timer spleefBorder
 execute store result bossbar minecraft:spleefshrink3timer value run scoreboard players get $shrink3Timer spleefBorder
 execute store result bossbar minecraft:spleefshrinkactual value run scoreboard players get $shrinkActual spleefBorder
-
-# round count bossbar name
 bossbar set minecraft:spleefroundcount name [{"text":"Round: ","bold":true},{"score":{"name":"$round","objective":"spleef"},"bold":true},{"text":"/3","bold":true}]
 
 # does the countdown timer
