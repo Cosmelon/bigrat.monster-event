@@ -9,7 +9,9 @@ scoreboard players set $toolsGiven spleef 0
 scoreboard players set $notifRedDead spleef 0
 scoreboard players set $notifBlueDead spleef 0
 scoreboard players set $notifGreenDead spleef 0
-scoreboard players set $notifYellowDead spleef 0 
+scoreboard players set $notifYellowDead spleef 0
+scoreboard players set $tick spleefBorder 0
+scoreboard players set $sec spleefBorder 30
 scoreboard players set $shrink1Timer spleefBorder 2400
 scoreboard players set $shrink2Timer spleefBorder 3400
 scoreboard players set $shrink3Timer spleefBorder 5000

@@ -28,6 +28,8 @@ effect give @a[tag=player] glowing 10000 1 true
 # reset scoreboards
 scoreboard players set $countDown spleef 160
 scoreboard players set $gameActive spleef 1
+scoreboard players set $tick spleefBorder 0
+scoreboard players set $sec spleefBorder 30
 scoreboard players set $shrink1Timer spleefBorder 1900
 scoreboard players set $shrink2Timer spleefBorder 3400
 scoreboard players set $shrink3Timer spleefBorder 5000
