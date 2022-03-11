@@ -18,4 +18,4 @@ bossbar set minecraft:spleefshrink2timer visible false
 bossbar set minecraft:spleefshrink3timer visible false
 bossbar set minecraft:spleefshrinkactual visible false
 execute as @a run playsound minecraft:entity.wither.death master @s ~ ~ ~ 10
-gamemode spectator @a
+gamemode spectator @a[team=!Admin]
