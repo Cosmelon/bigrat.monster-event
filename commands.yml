@@ -68,7 +68,7 @@ aliases:
   - team join Admin PokeyFinn
   testeradd:
   - whitelist add marvelfamily
-  - whitelist add lerdkanu
+  - whitelist add LerdKanu
   - whitelist add kittycatelite
   - whitelist add AK1089
   - whitelist add emmuse
@@ -82,8 +82,21 @@ aliases:
   - whitelist add 0l_
   - tellraw @a {"text":"Testers Added!","color":"green"}
   testercut:
+  - team leave marvelfamily
+  - team leave LerdKanu
+  - team leave kittycatelite
+  - team leave AK1089
+  - team leave dobby728
+  - team leave emmuse
+  - team leave emmdrews
+  - team leave felidae_
+  - team leave theglorythief
+  - team leave visuumii
+  - team leave Spicv
+  - team leave gemuse
+  - team leave 0l_
   - whitelist remove marvelfamily
-  - whitelist remove lerdkanu
+  - whitelist remove LerdKanu
   - whitelist remove kittycatelite
   - whitelist remove AK1089
   - whitelist remove dobby728
