@@ -100,3 +100,5 @@ aliases:
   - tag @s add noNV
   nvon:
   - tag @s remove noNV
+  megaSpleefTroll:
+  - execute at $$1 run fill ~5 ~-1 ~5 ~-5 ~-1 ~-5 air replace minecraft:snow_block
