@@ -38,6 +38,8 @@ execute as @a store result score @s yCos run data get entity @s Pos[1]
 # spleeftick
 execute if score $gameActive spleef matches 1 run function main:spleef/sptick
 execute if score $gameActive spleef matches 0 run scoreboard players set $countDown spleef 160
+execute if score $gameActive spleef matches 0 run scoreboard players set $tick spleefBorder 0
+execute if score $gameActive spleef matches 0 run scoreboard players set $sec spleefBorder 30
 execute if score $gameActive spleef matches 0 run scoreboard players set $shrink1Timer spleefBorder 1900
 execute if score $gameActive spleef matches 0 run scoreboard players set $shrink2Timer spleefBorder 3400
 execute if score $gameActive spleef matches 0 run scoreboard players set $shrink3Timer spleefBorder 5000
