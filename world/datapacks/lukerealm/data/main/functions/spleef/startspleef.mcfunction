@@ -38,13 +38,14 @@ tp @a[team=Red] -500 61 -458 -135 10
 tp @a[team=Blue] -494 61 -464 45 10
 tp @a[team=Green] -500 61 -464 -45 10
 tp @a[team=Yellow] -494 61 -458 135 10
+function main:spleef/reloadfloor
 
 # give shovels and kb
 schedule function main:spleef/shovelsandkb 15s replace
 scoreboard players set $toolsGiven spleef 0
 
 # reset spleefDeaths for everyone
-scoreboard players reset @a spleefDeaths
+scoreboard players reset * spleefDeaths
 
 # bossbar visible
 bossbar set minecraft:spleefroundcount visible true
