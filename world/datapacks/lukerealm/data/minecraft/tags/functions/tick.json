@@ -1,6 +1,5 @@
 {
     "values":[
-        "main:tick",
-        "main:spleef/sptick"
+        "main:tick"
     ]
 }
