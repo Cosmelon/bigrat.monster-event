@@ -8,14 +8,22 @@ title @a title ""
 title @a actionbar ""
 title @a times 0 25 0
 
+# teleport players to box
+gamemode adventure @a[tag=player]
+gamemode spectator @a[tag=!player]
+# make this differential tp in future
+tp @a[tag=!player] -496.5 66 -460.5 -180 5
+tp @a[team=Red] -500 61 -458 -135 10
+tp @a[team=Blue] -494 61 -464 45 10
+tp @a[team=Green] -500 61 -464 -45 10
+tp @a[team=Yellow] -494 61 -458 135 10
+function main:spleef/reloadfloor
+
 # clear inventories
 clear @a[team=!Admin]
 kill @e[type=item]
 effect clear @a
-effect give @a[team=Red] glowing 10000 1 true
-effect give @a[team=Blue] glowing 10000 1 true
-effect give @a[team=Green] glowing 10000 1 true
-effect give @a[team=Yellow] glowing 10000 1 true
+effect give @a glowing 10000 1 true
 
 # reset scoreboards
 scoreboard players set $countDown spleef 160
@@ -27,18 +35,6 @@ scoreboard players set $shrinkActual spleefBorder 0
 scoreboard players set $shrink1Break spleefBorder 0
 scoreboard players set $shrink2Break spleefBorder 0
 scoreboard players set $shrink3Break spleefBorder 0
-
-# teleport players to box
-gamemode adventure @a[team=!Admin]
-gamemode spectator @a[team=Admin]
-gamemode spectator @a[team=Spectator]
-tp @a[team=Admin] -496.5 66 -460.5 -180 5
-tp @a[team=Spectator] -496.5 66 -460.5 -180 5
-tp @a[team=Red] -500 61 -458 -135 10
-tp @a[team=Blue] -494 61 -464 45 10
-tp @a[team=Green] -500 61 -464 -45 10
-tp @a[team=Yellow] -494 61 -458 135 10
-function main:spleef/reloadfloor
 
 # give shovels and kb
 schedule function main:spleef/shovelsandkb 15s replace
