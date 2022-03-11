@@ -19,12 +19,8 @@ time set midnight
 # spawnpoint during game
 spawnpoint @a -496 66 -459
 
-# syncs bossbars with scoreboard
+# roundCount bossbar sync
 execute store result bossbar minecraft:spleefroundcount value run scoreboard players get $round spleef
-execute store result bossbar minecraft:spleefshrink1timer value run scoreboard players get $shrink1Timer spleefBorder
-execute store result bossbar minecraft:spleefshrink2timer value run scoreboard players get $shrink2Timer spleefBorder
-execute store result bossbar minecraft:spleefshrink3timer value run scoreboard players get $shrink3Timer spleefBorder
-execute store result bossbar minecraft:spleefshrinkactual value run scoreboard players get $shrinkActual spleefBorder
 bossbar set minecraft:spleefroundcount name [{"text":"Round: ","bold":true},{"score":{"name":"$round","objective":"spleef"},"bold":true},{"text":"/3","bold":true}]
 
 # does the countdown timer
@@ -104,6 +100,10 @@ scoreboard players remove $shrink2Timer spleefBorder 1
 scoreboard players remove $shrink3Timer spleefBorder 1
 
 # shrink timer bossbars
+execute store result bossbar minecraft:spleefshrink1timer value run scoreboard players get $shrink1Timer spleefBorder
+execute store result bossbar minecraft:spleefshrink2timer value run scoreboard players get $shrink2Timer spleefBorder
+execute store result bossbar minecraft:spleefshrink3timer value run scoreboard players get $shrink3Timer spleefBorder
+execute store result bossbar minecraft:spleefshrinkactual value run scoreboard players get $shrinkActual spleefBorder
 execute if score $shrink1Timer spleefBorder matches 600 run bossbar set minecraft:spleefshrink1timer visible true
 execute if score $shrink2Timer spleefBorder matches 600 run bossbar set minecraft:spleefshrink2timer visible true
 execute if score $shrink3Timer spleefBorder matches 600 run bossbar set minecraft:spleefshrink3timer visible true
