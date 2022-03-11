@@ -23,7 +23,7 @@ function main:spleef/reloadfloor
 clear @a[team=!Admin]
 kill @e[type=item]
 effect clear @a
-effect give @a glowing 10000 1 true
+effect give @a[tag=player] glowing 10000 1 true
 
 # reset scoreboards
 scoreboard players set $countDown spleef 160
