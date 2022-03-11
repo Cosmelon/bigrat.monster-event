@@ -2,6 +2,7 @@
 
 # scoreboards associated with spleef:
 #  spleef - main scoreboard for spleef
+#       note: now at the maximum visible limit for it
 #  spleefDeaths - tracks spleef deaths; note - dont have a use for it yet
 #  spleefSnowBall - tracks spleef giving snowball stuff
 #  spleef_sb - tracks snowballs
@@ -97,8 +98,22 @@ scoreboard players remove $shrinkActual spleefBorder 1
 scoreboard players remove $shrink1Timer spleefBorder 1
 scoreboard players remove $shrink2Timer spleefBorder 1
 scoreboard players remove $shrink3Timer spleefBorder 1
-function main:spleef/border/shrinkcountdown
-# shrink timer bossbars
+# function main:spleef/border/shrinkcountdown
+# shrink bossbar timer reading
+execute if score $shrink1Timer spleefBorder matches 0..600 run scoreboard players add $tick spleefBorder 1
+execute if score $shrink2Timer spleefBorder matches 0..600 run scoreboard players add $tick spleefBorder 1
+execute if score $shrink3Timer spleefBorder matches 0..600 run scoreboard players add $tick spleefBorder 1
+execute if score $tick spleefBorder matches 20.. run scoreboard players remove $sec spleefBorder 1
+execute if score $tick spleefBorder matches 20.. run scoreboard players set $tick spleefBorder 0
+execute if score $sec spleefBorder matches 10.. run bossbar set minecraft:spleefshrink1timer name [{"text":"First Shrink: ","color":"red","bold":true},{"text":"0:","color":"white","bold":true},{"score":{"name":"$sec","objective":"spleefBorder"},"color":"white","bold":true}]
+execute if score $sec spleefBorder matches 0..9 run bossbar set minecraft:spleefshrink1timer name [{"text":"First Shrink: ","color":"red","bold":true},{"text":"0:0","color":"white","bold":true},{"score":{"name":"$sec","objective":"spleefBorder"},"color":"white","bold":true}]
+execute if score $sec spleefBorder matches 10.. run bossbar set minecraft:spleefshrink2timer name [{"text":"Second Shrink: ","color":"red","bold":true},{"text":"0:","color":"white","bold":true},{"score":{"name":"$sec","objective":"spleefBorder"},"color":"white","bold":true}]
+execute if score $sec spleefBorder matches 0..9 run bossbar set minecraft:spleefshrink2timer name [{"text":"Second Shrink: ","color":"red","bold":true},{"text":"0:0","color":"white","bold":true},{"score":{"name":"$sec","objective":"spleefBorder"},"color":"white","bold":true}]
+execute if score $sec spleefBorder matches 10.. run bossbar set minecraft:spleefshrink3timer name [{"text":"Deathmatch starts in: ","color":"red","bold":true},{"text":"0:","color":"white","bold":true},{"score":{"name":"$sec","objective":"spleefBorder"},"color":"white","bold":true}]
+execute if score $sec spleefBorder matches 0..9 run bossbar set minecraft:spleefshrink3timer name [{"text":"Deathmatch starts in: ","color":"red","bold":true},{"text":"0:0","color":"white","bold":true},{"score":{"name":"$sec","objective":"spleefBorder"},"color":"white","bold":true}]
+
+execute if score $sec spleefBorder matches ..0 run scoreboard players set $sec spleefBorder 30
+# shrink timer bossbars sync
 execute store result bossbar minecraft:spleefshrinkactual value run scoreboard players get $shrinkActual spleefBorder
 execute store result bossbar minecraft:spleefshrink1timer value run scoreboard players get $shrink1Timer spleefBorder
 execute store result bossbar minecraft:spleefshrink2timer value run scoreboard players get $shrink2Timer spleefBorder
