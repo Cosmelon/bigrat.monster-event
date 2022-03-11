@@ -1,4 +1,6 @@
 # shrink countdown bossbar digital timer
+# this was a old method I used that isn't used anymore but kept for archive purposes
+# last edit: 3:40PM EST 3/11/2022
 
 # shrink1Timer
 execute if score $shrink1Timer spleefBorder matches 600 run bossbar set minecraft:spleefshrink1timer name [{"text":"First Shrink: ","color":"red","bold":true},{"text":"0:30","color":"white","bold":true}]
