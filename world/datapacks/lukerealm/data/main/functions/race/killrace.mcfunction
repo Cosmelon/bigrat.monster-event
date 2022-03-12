@@ -2,6 +2,7 @@
 scoreboard players set !gameActive race 0
 scoreboard players set !countDown race 160
 scoreboard players set !gate race 141
+scoreboard players set !milli race 0
 scoreboard players set !raceTime raceMilli 0
 scoreboard players set !raceTime raceSec 0
 scoreboard players set !raceTime raceMin 0
