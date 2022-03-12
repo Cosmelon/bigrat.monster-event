@@ -39,7 +39,7 @@ scoreboard players set $shrink2Break spleefBorder 0
 scoreboard players set $shrink3Break spleefBorder 0
 
 # give shovels and kb
-schedule function main:spleef/shovelsandkb 15s replace
+schedule function main:spleef/shovelsandkb 22s replace
 scoreboard players set $toolsGiven spleef 0
 
 # reset spleefDeaths for everyone
