@@ -6,7 +6,6 @@ scoreboard players set $race currentGame 0
 scoreboard players set $spleef currentGame 0
 tp @a -181.5 5 137.5 0 10
 gamemode adventure @a
-clear @a
 effect clear @a
 
 bossbar set minecraft:spleefroundcount visible false
@@ -40,3 +39,4 @@ worldborder set 6000000 1
 worldborder center 0 0
 
 clear @a[team=!Admin]
+effect give @a[team=!Admin] weakness 10000 255 true
