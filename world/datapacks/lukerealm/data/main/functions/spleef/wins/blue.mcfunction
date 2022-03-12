@@ -7,7 +7,6 @@ title @a title {"text":"Blue team wins!","color":"blue"}
 execute unless score $round spleef matches 3 run title @a subtitle {"text":"Loading...","color":"red"}
 execute unless score $round spleef matches 3 run schedule function main:spleef/startspleef 6s replace
 execute if score $round spleef matches 3 run schedule function main:spleef/wins/returnlobby 3s replace
-execute if score $round spleef matches 3 run schedule function main:lobby 10s replace
 # execute unless score $round spleef matches 3 run title @a title {"text":"Round Over!","bold":true,"color":"red"}
 scoreboard players reset * spleefDeaths
 # playsound minecraft:block.note_block.chime ambient @a ~ ~ ~ 100000 1
@@ -19,3 +18,8 @@ bossbar set minecraft:spleefshrink3timer visible false
 bossbar set minecraft:spleefshrinkactual visible false
 execute as @a run playsound minecraft:entity.wither.death master @s ~ ~ ~ 10
 gamemode spectator @a[team=!Admin]
+
+
+
+# solution to infinite game repeat problem
+execute if score $red spleefPlayers matches 0 if score $blue spleefPlayers matches 1.. if score $green spleefPlayers matches 0 if score $yellow spleefPlayers matches 0 run function main:spleef/killspleef
