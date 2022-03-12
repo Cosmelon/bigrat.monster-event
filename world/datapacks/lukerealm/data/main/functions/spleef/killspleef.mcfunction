@@ -25,6 +25,9 @@ bossbar set minecraft:spleefshrinkactual visible false
 bossbar set minecraft:spleefroundcount visible false
 worldborder set 6000000 1
 worldborder center 0 0
+schedule clear main:returnlobby
+schedule clear main:spleef/startspleef
+schedule clear main:spleef/wins/returnlobby
 schedule clear main:spleef/shovelsandkb
 schedule clear main:spleef/border/shrink1
 schedule clear main:spleef/border/shrink2
@@ -34,3 +37,7 @@ schedule clear main:spleef/border/shrink2bar
 schedule clear main:spleef/border/shrink3bar
 clear @a[team=!Admin]
 playsound minecraft:block.beacon.deactivate master @a
+
+tellraw @a[tag=admin] ""
+tellraw @a[tag=admin] {"text":"Killed spleef! Return to lobby?","color":"dark_red","bold":true,"clickEvent":{"action":"run_command","value":"main:lobby"}}
+tellraw @a[tag=admin] ""
