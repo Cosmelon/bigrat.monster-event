@@ -94,10 +94,10 @@ execute positioned 351.5 81 43.5 run tag @a[distance=..3] add gate
 execute positioned 351.5 81 43.5 run tag @a[distance=2.6..] remove gate
 bossbar set minecraft:racegateopen players @a[tag=gate]
 bossbar set minecraft:racegateshut players @a[tag=gate]
-execute if score !gateOpen race matches ..0 run bossbar set minecraft:racegateopen visible false
-execute if score !gateOpen race matches 41.. run bossbar set minecraft:racegateopen visible true
-execute if score !gateShut race matches 1.. run bossbar set minecraft:racegateshut visible true
-execute if score !gateShut race matches ..0 run bossbar set minecraft:racegateshut visible false
+execute if score !gateOpen race matches 0 run bossbar set minecraft:racegateopen visible false
+execute if score !gateOpen race matches 100 run bossbar set minecraft:racegateopen visible true
+execute if score !gateShut race matches 40 run bossbar set minecraft:racegateshut visible true
+execute if score !gateShut race matches 0 run bossbar set minecraft:racegateshut visible false
 
 
 
