@@ -1,7 +1,8 @@
 # kills race
 scoreboard players set !gameActive race 0
 scoreboard players set !countDown race 160
-scoreboard players set !gate race 141
+scoreboard players set !gateOpen race 0
+scoreboard players set !gateClosed race 100
 scoreboard players set !milli race 0
 scoreboard players set !raceTime raceMilli 0
 scoreboard players set !raceTime raceSec 0
