@@ -8,8 +8,8 @@
 # start
 scoreboard players set !gameActive race 1
 scoreboard players set !countDown race 160
-scoreboard players set !gateOpen race 0
-scoreboard players set !gateShut race 80
+scoreboard players set !gateOpen race 100
+scoreboard players set !gateShut race 0
 scoreboard players set !raceTime raceMilli 0
 scoreboard players set !raceTime raceSec 0
 scoreboard players set !raceTime raceMin 0
