@@ -84,7 +84,7 @@ title @a[tag=player,gamemode=spectator] actionbar {"text":"Finished!","color":"g
 #  intended be open for five seconds, then closed for two
 scoreboard players remove !gateOpen race 1
 scoreboard players remove !gateShut race 1
-execute if score !gateOpen race matches -20 run scoreboard players set !gateOpen race 100
+execute if score !gateOpen race matches -40 run scoreboard players set !gateOpen race 100
 execute if score !gateShut race matches -100 run scoreboard players set !gateShut race 40
 execute store result bossbar minecraft:racegateopen value run scoreboard players get !gateOpen race
 execute store result bossbar minecraft:racegateshut value run scoreboard players get !gateShut race
