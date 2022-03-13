@@ -82,10 +82,22 @@ execute as @a[gamemode=adventure,scores={raceMilli=10..99,raceSec=10..,raceMin=1
 title @a[tag=player,gamemode=spectator] actionbar {"text":"Finished!","color":"gold"}
 
 #  intended be open for five seconds, then closed for two
-scoreboard players remove !gate race 1
-execute if score !gate race matches 140 run fill 351 83 42 351 81 44 air destroy
-execute if score !gate race matches 40 run fill 351 83 42 351 81 44 warped_fence
-execute if score !gate race matches 0 run scoreboard players set !gate race 141
+scoreboard players remove !gateOpen race 1
+scoreboard players remove !gateClosed race 1
+execute if score !gateOpen race matches -20 run scoreboard players set !gateOpen race 100
+execute if score !gateClosed race matches -100 run scoreboard players set !gateClosed race 40
+execute if score !gateOpen race matches 100 run fill 351 83 42 351 81 44 air destroy
+execute if score !gateClosed race matches 40 run fill 351 83 42 351 81 44 warped_fence
+execute positioned 351.5 81 43.5 run tag @a[distance=..3] add gate
+execute positioned 351.5 81 43.5 run tag @a[distance=2.6..] remove gate
+bossbar set minecraft:racegateopen players @a[tag=gate]
+bossbar set minecraft:racegatenopen players @a[tag=gate]
+execute if score !gate race matches 41.. run bossbar set minecraft:racegateopen visible true
+execute if score !gate race matches ..40 run bossbar set minecraft:racegateopen visible false
+execute if score !gate race matches ..40 run bossbar set minecraft:racegatenopen visible true
+execute if score !gate race matches 41.. run bossbar set minecraft:racegatenopen visible false
+
+
 
 # speedpads (magenta_glazed_terracotta)
 execute as @a[tag=player,gamemode=adventure] run execute positioned as @s if block ~ ~-1 ~ minecraft:magenta_glazed_terracotta run effect give @s speed 2 3 true
