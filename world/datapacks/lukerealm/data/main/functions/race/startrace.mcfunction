@@ -27,7 +27,7 @@ scoreboard players set @a raceSec 0
 scoreboard players set @a raceMin 0
 
 # teleporting
-tp @a 284.5 75 42.5 -90 5
+tp @a[team=!DeBug] 284.5 75 42.5 -90 5
 execute positioned 284 75 42 run tp @a[team=Red,limit=1,sort=random,distance=..50] 290.5 75 38.5 -90 5
 execute positioned 284 75 42 run tp @a[team=Red,limit=1,sort=random,distance=..50] 290.5 75 39.5 -90 5
 execute positioned 284 75 42 run tp @a[team=Red,limit=1,sort=random,distance=..50] 290.5 75 40.5 -90 5
