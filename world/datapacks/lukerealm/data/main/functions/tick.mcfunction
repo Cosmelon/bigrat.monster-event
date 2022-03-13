@@ -51,7 +51,7 @@ effect clear @a[tag=noNV] night_vision
 execute if score !gameActive race matches 1 run function main:race/racetick
 execute if score !gameActive race matches 0 run scoreboard players set !countDown race 160
 execute positioned 298 111 -22 run tp @a[tag=tester,distance=..100] -181.5 5 137.5
-tag @a[tag=!Admin] add tester
+tag @a[tag=!admin] add tester
 
 # sgtick
 execute if score ~gameActive sg matches 1 run function main:sg/sgtick
