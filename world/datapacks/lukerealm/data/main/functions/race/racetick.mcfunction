@@ -91,13 +91,13 @@ execute store result bossbar minecraft:racegateshut value run scoreboard players
 execute if score !gateOpen race matches 100 run fill 351 83 42 351 81 44 air destroy
 execute if score !gateShut race matches 40 run fill 351 83 42 351 81 44 warped_fence
 execute positioned 351.5 81 43.5 run tag @a[distance=..3] add gate
-execute positioned 351.5 81 43.5 run tag @a[distance=2.6..] remove gate
-bossbar set minecraft:racegateopen players @a[tag=gate]
-bossbar set minecraft:racegateshut players @a[tag=gate]
+execute positioned 351.5 81 43.5 run tag @a[distance=3.1..] remove gate
 execute if score !gateOpen race matches 0 run bossbar set minecraft:racegateopen visible false
 execute if score !gateOpen race matches 100 run bossbar set minecraft:racegateopen visible true
 execute if score !gateShut race matches 40 run bossbar set minecraft:racegateshut visible true
 execute if score !gateShut race matches 0 run bossbar set minecraft:racegateshut visible false
+bossbar set minecraft:racegateopen players @a[tag=gate]
+bossbar set minecraft:racegateshut players @a[tag=gate]
 
 
 
