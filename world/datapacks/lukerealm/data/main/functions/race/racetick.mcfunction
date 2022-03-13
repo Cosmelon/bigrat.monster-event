@@ -6,7 +6,7 @@ scoreboard players remove !countDown race 1
 title @a times 0 25 0
 effect give @a water_breathing 100000 0 true
 effect give @a speed 10000 0 true
-gamemode spectator @a[tag=!player,team=!DeBug]
+gamemode spectator @a[tag=!player,team=!Admin]
 
 # stuff for the stopwatch
 execute if score !countDown race matches ..0 run bossbar set minecraft:racetime visible true
