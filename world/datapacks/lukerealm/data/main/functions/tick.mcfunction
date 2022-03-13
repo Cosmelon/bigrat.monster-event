@@ -30,6 +30,7 @@ tag @a[team=Green] add player
 tag @a[team=Yellow] add player
 tag @a[team=Admin] remove player
 tag @a[team=Spectator] remove player
+tag @a[team=DeBug] remove player
 team join Spectator @a[team=]
 
 # constant yCos (yPosition) tracker, can be used for multiple games
