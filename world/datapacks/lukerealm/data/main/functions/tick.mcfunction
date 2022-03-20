@@ -19,9 +19,14 @@ bossbar set minecraft:spleefshirnk2timer players @a
 bossbar set minecraft:spleefshrink3timer players @a
 bossbar set minecraft:spleefshrinkactual players @a
 bossbar set minecraft:racetimer players @a
+bossbar set minecraft:buildmode players @a
 
-execute if score $gameActive spleef matches 0 run execute if score !gameActive race matches 0 run execute if score ~gameActive sg matches 0 run spawnpoint @a -181 5 137
-execute if score $gameActive spleef matches 0 run execute if score !gameActive race matches 0 run execute if score ~gameActive sg matches 0 run setworldspawn -181 5 137
+execute if score $gameActive spleef matches 0 if score !gameActive race matches 0 if score ~gameActive sg matches 0 run spawnpoint @a -181 5 137
+execute if score $gameActive spleef matches 0 if score !gameActive race matches 0 if score ~gameActive sg matches 0 run setworldspawn -181 5 137
+execute if score $gameActive spleef matches 0 if score !gameActive race matches 0 if score ~gameActive sg matches 0 run scoreboard players set $lobby currentGame 1
+execute if score $buildMode currentGame matches 0 if score $lobby currentGame matches 1 run effect give @a[gamemode=adventure] weakness 10000 200 true
+execute if score $buildMode currentGame matches 1 run bossbar set minecraft:buildmode visible true
+execute if score $buoldMode currentGame matches 0 run bossbar set minecraft:buildmode visible false
 
 # tagging player system
 tag @a[team=Red] add player
