@@ -113,5 +113,9 @@ aliases:
   - tag @s add noNV
   nvon:
   - tag @s remove noNV
+  buildmodeon:
+  - scoreboard players set $buildMode currentGame 1
+  buildmodeoff:
+  - scoreboard players set $buildMode currentGame 0
   megaSpleefTroll:
   - execute at $$1 run fill ~5 ~-1 ~5 ~-5 ~-1 ~-5 air replace minecraft:snow_block
