@@ -109,3 +109,6 @@ item replace entity @a[team=Red] armor.feet with leather_boots{display:{color:16
 item replace entity @a[team=Blue] armor.feet with leather_boots{display:{color:2635263},Unbreakable:1b,Enchantments:[{id:"depth_strider",lvl:3s}]}
 item replace entity @a[team=Green] armor.feet with leather_boots{display:{color:1208897},Unbreakable:1b,Enchantments:[{id:"depth_strider",lvl:3s}]}
 item replace entity @a[team=Yellow] armor.feet with leather_boots{display:{color:16777000},Unbreakable:1b,Enchantments:[{id:"depth_strider",lvl:3s}]}
+
+# bossbar visibility
+bossbar set minecraft:racetime visible true
