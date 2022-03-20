@@ -13,6 +13,7 @@ scoreboard players set !gateShut race 0
 scoreboard players set !raceTime raceMilli 0
 scoreboard players set !raceTime raceSec 0
 scoreboard players set !raceTime raceMin 0
+title @a times 0 25 5
 
 # clear inventory pre-game
 clear @a[team=!Admin]

@@ -3,7 +3,6 @@
 # no need to type it in every single time
 
 scoreboard players remove !countDown race 1
-title @a times 0 25 0
 effect give @a water_breathing 100000 0 true
 effect give @a speed 10000 0 true
 gamemode spectator @a[tag=!player,team=!Admin]
