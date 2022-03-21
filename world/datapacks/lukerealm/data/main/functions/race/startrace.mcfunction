@@ -13,6 +13,7 @@ scoreboard players set !gateShut race 0
 scoreboard players set !raceTime raceMilli 0
 scoreboard players set !raceTime raceSec 0
 scoreboard players set !raceTime raceMin 0
+scoreboard players reset * racePos
 title @a times 0 25 5
 
 # clear inventory pre-game

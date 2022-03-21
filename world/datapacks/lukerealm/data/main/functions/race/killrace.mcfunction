@@ -12,6 +12,7 @@ scoreboard players set @a raceSec 0
 scoreboard players set @a raceMin 0
 scoreboard players set @a raceCP 0
 scoreboard players set @a raceLap 0
+scoreboard players reset * racePos
 effect clear @a
 clear @a[team=!Admin]
 title @a actionbar ""
