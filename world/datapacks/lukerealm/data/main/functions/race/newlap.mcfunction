@@ -32,6 +32,6 @@ execute if score @s raceLap matches 3 if score @s raceMilli matches 10.. if scor
 scoreboard players set @s raceMilli 0
 scoreboard players set @s raceSec 0
 scoreboard players set @s raceMin 0
+execute unless score @s raceLap matches 3.. run scoreboard players set @s racePos 0
 scoreboard players add @s raceLap 1
 scoreboard players set @s raceCP 0
-execute unless score @s raceLap matches 4 run scoreboard players set @s racePos 0
