@@ -16,6 +16,12 @@ scoreboard players set !raceTime raceMin 0
 scoreboard players reset * racePos
 title @a times 0 25 5
 
+# racePos count reset
+#  not totally necessary but I like it
+scoreboard players set !posCounter1 racePos 0
+scoreboard players set !posCounter2 racePos 0
+scoreboard players set !posCounter3 racePos 0
+
 # clear inventory pre-game
 clear @a[team=!Admin]
 effect clear @a
