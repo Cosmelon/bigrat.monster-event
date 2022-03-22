@@ -77,7 +77,7 @@ execute as @a[gamemode=adventure,scores={raceMilli=10..99,raceSec=10..,raceMin=1
 
 
 #finish
-title @a[tag=player,gamemode=spectator] actionbar [{"text":"Finished in place ","color":"gold"},{"score":{"name":"@s","objective":"racePos"},"color":"gold"}]
+title @a[tag=player,gamemode=spectator] actionbar [{"text":"Finished in place ","color":"gold"},{"score":{"name":"@s","objective":"racePos"}}]
 
 #  intended be open for five seconds, then closed for two
 scoreboard players remove !gateOpen race 1
