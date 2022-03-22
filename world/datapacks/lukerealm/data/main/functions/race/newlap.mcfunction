@@ -1,8 +1,17 @@
 # this file is executed as a player who finishes a lap
 # I didn't add support for laps less than a minute, it's just not possible with the current course
 
-scoreboard players add !posCounter racePos 1
-scoreboard players operation @s racePos = !posCounter racePos
+# first iteration wasn't a bug, it acted like I thought it would
+#  the problem with the first one wasn't that it was a bug. Rather it was that it would build off of each other as a singular player does more laps
+execute if score @s raceLap matches 1 run scoreboard players add !posCounter1 racePos 1
+execute if score @s raceLap matches 1 run scoreboard players operation @s racePos = !posCounter1 racePos
+
+execute if score @s raceLap matches 2 run scoreboard players add !posCounter2 racePos 1
+execute if score @s raceLap matches 2 run scoreboard players operation @s racePos = !posCounter2 racePos
+
+execute if score @s raceLap matches 3 run scoreboard players add !posCounter3 racePos 1
+execute if score @s raceLap matches 3 run scoreboard players operation @s racePos = !posCounter3 racePos
+
 
 execute if score @s raceLap matches ..3 if score @s raceMilli matches ..9 if score @s raceSec matches ..9 run tellraw @a [{"selector":"@s"},{"text":" finished lap ","color":"gold"},{"score":{"name":"@s","objective":"raceLap"},"color":"green"},{"text":"/3 in ","color":"gold"},{"score":{"name":"@s","objective":"raceMin"},"color":"green"},{"text":":0","color":"green"},{"score":{"name":"@s","objective":"raceSec"},"color":"green"},{"text":".0","color":"green"},{"score":{"name":"@s","objective":"raceMilli"},"color":"green"}]
 execute if score @s raceLap matches ..3 if score @s raceMilli matches 10.. if score @s raceSec matches ..9 run tellraw @a [{"selector":"@s"},{"text":" finished lap ","color":"gold"},{"score":{"name":"@s","objective":"raceLap"},"color":"green"},{"text":"/3 in ","color":"gold"},{"score":{"name":"@s","objective":"raceMin"},"color":"green"},{"text":":0","color":"green"},{"score":{"name":"@s","objective":"raceSec"},"color":"green"},{"text":".","color":"green"},{"score":{"name":"@s","objective":"raceMilli"},"color":"green"}]
