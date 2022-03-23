@@ -56,6 +56,7 @@ execute if score @s racePos matches 4.. if score @s raceLap matches 3 if score @
 execute if score @s racePos matches 4.. if score @s raceLap matches 3 if score @s raceMilli matches ..9 if score @s raceSec matches 10.. run tellraw @a [{"selector":"@s"},{"text":" completed the course in: ","color":"gold"},{"score":{"name":"!raceTime","objective":"raceMin"},"color":"green"},{"text":":","color":"green"},{"score":{"name":"!raceTime","objective":"raceSec"},"color":"green"},{"text":".0","color":"green"},{"score":{"name":"!raceTime","objective":"raceMilli"},"color":"green"},{"text":" (","color":"gold"},{"text":"#","color":"#FFFFFF"},{"score":{"name":"@s","objective":"racePos"},"color":"#FFFFFF"},{"text":")","color":"gold"}]
 execute if score @s racePos matches 4.. if score @s raceLap matches 3 if score @s raceMilli matches 10.. if score @s raceSec matches 10.. run tellraw @a [{"selector":"@s"},{"text":" completed the course in: ","color":"gold"},{"score":{"name":"!raceTime","objective":"raceMin"},"color":"green"},{"text":":","color":"green"},{"score":{"name":"!raceTime","objective":"raceSec"},"color":"green"},{"text":".","color":"green"},{"score":{"name":"!raceTime","objective":"raceMilli"},"color":"green"},{"text":" (","color":"gold"},{"text":"#","color":"#FFFFFF"},{"score":{"name":"@s","objective":"racePos"},"color":"#FFFFFF"},{"text":")","color":"gold"}]
 
+execute if score @s raceLap matches 3 run title @s title {"text":"Finished!","color":"gold"}
 
 scoreboard players set @s raceMilli 0
 scoreboard players set @s raceSec 0
