@@ -77,7 +77,11 @@ execute as @a[gamemode=adventure,scores={raceMilli=10..99,raceSec=10..,raceMin=1
 
 
 #finish
-execute as @a[tag=player,gamemode=spectator] run title @s actionbar [{"text":"Overall position: ","color":"gold"},{"score":{"name":"@s","objective":"racePos"}}]
+# added ending to the numbers
+execute as @a[tag=player,gamemode=spectator,scores={racePos=1}] run title @s actionbar [{"text":"You finished in ","color":"gold"},{"score":{"name":"@s","objective":"racePos"}},{"text":"st place!"}]
+execute as @a[tag=player,gamemode=spectator,scores={racePos=2}] run title @s actionbar [{"text":"You finished in ","color":"gold"},{"score":{"name":"@s","objective":"racePos"}},{"text":"nd place!"}]
+execute as @a[tag=player,gamemode=spectator,scores={racePos=3}] run title @s actionbar [{"text":"You finished in ","color":"gold"},{"score":{"name":"@s","objective":"racePos"}},{"text":"rd place!"}]
+execute as @a[tag=player,gamemode=spectator,scores={racePos=4..}] run title @s actionbar [{"text":"You finished in ","color":"gold"},{"score":{"name":"@s","objective":"racePos"}},{"text":"th place!"}]
 
 #  intended be open for five seconds, then closed for two
 scoreboard players remove !gateOpen race 1
