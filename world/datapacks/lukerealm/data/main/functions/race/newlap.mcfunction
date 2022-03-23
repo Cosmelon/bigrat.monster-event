@@ -3,6 +3,7 @@
 
 # first iteration wasn't a bug, it acted like I thought it would
 #  the problem with the first one wasn't that it was a bug. Rather it was that it would build off of each other as a singular player does more laps
+#  now thinking about it, this probably wouldn't be a problem, that being that this must be tested with a full group
 execute if score @s raceLap matches 1 run scoreboard players add !posCounter1 racePos 1
 execute if score @s raceLap matches 1 run scoreboard players operation @s racePos = !posCounter1 racePos
 
