@@ -67,47 +67,44 @@ aliases:
   - team join Admin Solawr
   - team join Admin PokeyFinn
   testeradd:
-  - whitelist add marvelfamily
-  - whitelist add LerdKanu
-  - whitelist add kittycatelite
+  - whitelist add MarvelFamily
+  - whitelist add TheGloryThief
+  - whitelist add Visuumii
+  - whitelist add Snake_Crumble
+  - whitelist add LenuKard
+  - whitelist add Dobby728
   - whitelist add AK1089
-  - whitelist add emmuse
   - whitelist add emmdrews
-  - whitelist add felidae_
-  - whitelist add theglorythief
-  - whitelist add visuumii
-  - whitelist add Spicv
+  - whitelist add Felidae_
   - whitelist add gemuse
-  - whitelist add dobby728
-  - whitelist add 0l_
+  - whitelist add KittyCatElite
+  - whitelist add MSaadM
   - tellraw @a {"text":"Testers Added!","color":"green"}
   testercut:
-  - team leave marvelfamily
-  - team leave LerdKanu
-  - team leave kittycatelite
+  - team leave MarvelFamily
+  - team leave TheGloryThief
+  - team leave Visuumii
+  - team leave Snake_Crumble
+  - team leave LenuKard
+  - team leave Dobby728
   - team leave AK1089
-  - team leave dobby728
-  - team leave emmuse
   - team leave emmdrews
-  - team leave felidae_
-  - team leave theglorythief
-  - team leave visuumii
-  - team leave Spicv
+  - team leave Felidae_
   - team leave gemuse
-  - team leave 0l_
-  - whitelist remove marvelfamily
-  - whitelist remove LerdKanu
-  - whitelist remove kittycatelite
+  - team leave KittyCatElite
+  - team leave MSaadM
+  - whitelist remove MarvelFamily
+  - whitelist remove TheGloryThief
+  - whitelist remove Visuumii
+  - whitelist remove Snake_Crumble
+  - whitelist remove LenuKard
+  - whitelist remove Dobby728
   - whitelist remove AK1089
-  - whitelist remove dobby728
-  - whitelist remove emmuse
   - whitelist remove emmdrews
-  - whitelist remove felidae_
-  - whitelist remove theglorythief
-  - whitelist remove visuumii
-  - whitelist remove Spicv
+  - whitelist remove Felidae_
   - whitelist remove gemuse
-  - whitelist remove 0l_
+  - whitelist remove KittyCatElite
+  - whitelist remove MSaadM
   - tellraw @a {"text":"Testers Removed!","color":"red"}
   nvoff:
   - tag @s add noNV
