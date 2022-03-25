@@ -4,9 +4,8 @@
 scoreboard players set ~gameActive sg 1
 
 # set gamemodes
-gamemode adventure @a[team=!Admin]
-gamemode spectator @a[team=Admin]
-gamemode spectator @a[team=Spectator]
+gamemode adventure @a[tag=player]
+gamemode spectator @a[tag=!player]
 
 # reset notifs
 scoreboard players set ~notifRedDead sg 0
@@ -71,26 +70,11 @@ execute positioned -1983 133 -1983 run tp @a[team=Yellow,limit=1,sort=random,dis
 execute positioned -1983 133 -1983 run tp @a[team=Yellow,limit=1,sort=random,distance=..5] -2008.5 76 -1992.5 0 10
 
 # barriers
-execute at @a[team=Red] run setblock ~1 ~1 ~ barrier
-execute at @a[team=Red] run setblock ~ ~2 ~ barrier
-execute at @a[team=Red] run setblock ~ ~1 ~1 barrier
-execute at @a[team=Red] run setblock ~ ~1 ~-1 barrier
-execute at @a[team=Red] run setblock ~-1 ~1 ~ barrier
-execute at @a[team=Blue] run setblock ~1 ~1 ~ barrier
-execute at @a[team=Blue] run setblock ~ ~2 ~ barrier
-execute at @a[team=Blue] run setblock ~ ~1 ~1 barrier
-execute at @a[team=Blue] run setblock ~ ~1 ~-1 barrier
-execute at @a[team=Blue] run setblock ~-1 ~1 ~ barrier
-execute at @a[team=Green] run setblock ~1 ~1 ~ barrier
-execute at @a[team=Green] run setblock ~ ~2 ~ barrier
-execute at @a[team=Green] run setblock ~ ~1 ~1 barrier
-execute at @a[team=Green] run setblock ~ ~1 ~-1 barrier
-execute at @a[team=Green] run setblock ~-1 ~1 ~ barrier
-execute at @a[team=Yellow] run setblock ~1 ~1 ~ barrier
-execute at @a[team=Yellow] run setblock ~ ~2 ~ barrier
-execute at @a[team=Yellow] run setblock ~ ~1 ~1 barrier
-execute at @a[team=Yellow] run setblock ~ ~1 ~-1 barrier
-execute at @a[team=Yellow] run setblock ~-1 ~1 ~ barrier
+execute at @a[tag=player] run setblock ~1 ~1 ~ barrier
+execute at @a[tag=player] run setblock ~ ~2 ~ barrier
+execute at @a[tag=player] run setblock ~ ~1 ~1 barrier
+execute at @a[tag=player] run setblock ~ ~1 ~-1 barrier
+execute at @a[tag=player] run setblock ~-1 ~1 ~ barrier
 
 # worldborder
 worldborder center -1983.5 -1983.5
