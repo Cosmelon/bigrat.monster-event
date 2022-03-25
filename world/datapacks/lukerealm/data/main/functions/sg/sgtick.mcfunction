@@ -6,8 +6,6 @@
 #  sg - main sg scoreboard, main stuff here
 #  sgDeaths - tracks dead players during sg
 
-title @a times 0 25 10
-
 # countdown
 scoreboard players remove ~countDown sg 1
 execute if score ~countDown sg matches 200 run title @a title {"text":"10","color":"#40E0D0"}

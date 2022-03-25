@@ -1,6 +1,6 @@
 # blue wins sg
 scoreboard players set ~gameActive sg 0
-title @a times 0 50 0
+title @a times 0 50 10
 clear @a[team=!Admin]
 # this is where we figure out how many points to give the winning team for winning
 #  scoreboard players add ~blue Score <amount to winning team>

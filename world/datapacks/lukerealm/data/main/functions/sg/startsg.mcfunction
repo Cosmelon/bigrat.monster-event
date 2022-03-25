@@ -17,6 +17,9 @@ scoreboard players set ~notifYellowDead sg 0
 spawnpoint @a -1983 90 -1983
 setworldspawn -1983 90 -1983
 
+# times
+title @a times 0 25 10
+
 # teleporting
 # player spreader goes clockwise
 tp @a -1983 133 -1983 0 -90
