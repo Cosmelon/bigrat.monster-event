@@ -13,3 +13,7 @@ scoreboard players reset * sgDeaths
 # playsound minecraft:block.note_block.chime ambient @a ~ ~ ~ 100000 1
 scoreboard players add ~round sg 1
 playsound minecraft:entity.wither.death master @a
+
+
+# solution to infinite game repeat problem
+execute if score $red spleefPlayers matches 0 if score $blue spleefPlayers matches 1.. if score $green spleefPlayers matches 0 if score $yellow spleefPlayers matches 0 run function main:spleef/killspleef
