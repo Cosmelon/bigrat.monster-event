@@ -28,6 +28,7 @@ scoreboard players set !posCounter3 racePos 0
 # clear inventory pre-game
 clear @a[team=!Admin]
 effect clear @a
+effect give @a saturation 10000 100 true
 
 # gamemodes
 gamemode adventure @a[tag=player]
