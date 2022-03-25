@@ -16,4 +16,4 @@ execute as @a run playsound minecraft:entity.wither.death master @s ~ ~ ~ 10
 
 
 # solution to infinite game repeat problem
-execute if score ~aliveRed sg matches 1.. if score !aliveBlue sg matches 0 if score ~aliveGreen sg matches 0 if score ~aliveYellow sg matches 0 run function main:sg/killsg
+execute if score ~red sgPlayers matches 1.. if score ~blue sgPlayers matches 0 if score ~green sgPlayers matches 0 if score ~yellow sgPlayers matches 0 run function main:sg/killsg

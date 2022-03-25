@@ -27,6 +27,10 @@ execute store result score ~aliveRed sg if entity @a[team=Red,gamemode=!spectato
 execute store result score ~aliveBlue sg if entity @a[team=Blue,gamemode=!spectator]
 execute store result score ~aliveGreen sg if entity @a[team=Green,gamemode=!spectator]
 execute store result score ~aliveYellow sg if entity @a[team=Yellow,gamemode=!spectator]
+execute store result score ~red sgPlayers if entity @a[team=Red]
+execute store result score ~blue sgPlayers if entity @a[team=Blue]
+execute store result score ~green sgPlayers if entity @a[team=Green]
+execute store result score ~yellow sgPlayers if entity @a[team=Yellow]
 
 # puts dead into spectator
 gamemode spectator @a[scores={sgDeaths=1..}]

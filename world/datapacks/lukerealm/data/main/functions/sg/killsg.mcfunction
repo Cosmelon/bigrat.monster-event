@@ -14,3 +14,7 @@ worldborder center 0 0
 
 clear @a[team=!Admin]
 playsound minecraft:block.beacon.deactivate master @a
+
+tellraw @a[tag=admin] ""
+tellraw @a[tag=admin] {"text":"Killed spleef! Return to lobby?","color":"dark_red","bold":true,"clickEvent":{"action":"run_command","value":"/function main:lobby"}}
+tellraw @a[tag=admin] ""
