@@ -1,15 +1,17 @@
 # returns players to lobby
+#  3/25 note: Hi it's me. Going to have to go through this and make it look better in the future.
+#  For instance, a lot of these commands should be included in their respective games and not in this more central function
 time set 12750
+scoreboard players set $lobby currentGame 1
 scoreboard players set $spleef currentGame 0
 scoreboard players set $race currentGame 0
 scoreboard players set $sg currentGame 0
 scoreboard players set $fossilDig currentGame 0
 scoreboard players set $tntWar currentGame 0
+scoreboard players set $gameSix currentGame 0
 tp @a -181.5 5 137.5 0 10
 gamemode adventure @a
 effect clear @a
-
-bossbar set minecraft:spleefroundcount visible false
 
 # reset stuff for spleef
 title @a title ""
@@ -28,6 +30,8 @@ worldborder set 6000000 1
 worldborder center 0 0
 
 # reset stuff for race
+title @a title ""
+title @a subtitle ""
 scoreboard players set !gameActive race 0
 scoreboard players set !countDown race 160
 scoreboard players set !gateOpen race 100
