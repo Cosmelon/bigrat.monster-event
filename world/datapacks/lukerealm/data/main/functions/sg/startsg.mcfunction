@@ -87,3 +87,10 @@ execute at @a[tag=player] run setblock ~-1 ~1 ~ barrier
 # worldborder
 worldborder center -1983.5 -1983.5
 worldborder set 280 0
+scoreboard players set ~shrink1Timer sgBorder 0
+scoreboard players set ~shrink2Timer sgBorder 0
+scoreboard players set ~shrink3Timer sgBorder 0
+scoreboard players set ~shrink4Timer sgBorder 0
+scoreboard players set ~shrink5Timer sgBorder 0
+scoreboard players set ~shrinkActual sgBorder 0
+# need to tune these times later
