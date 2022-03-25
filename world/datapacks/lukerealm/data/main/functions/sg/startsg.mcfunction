@@ -1,5 +1,8 @@
 # starts sg
 
+# lobby dependency
+scoreboard players set $lobby currentGame 0
+
 # gameActive
 scoreboard players set ~gameActive sg 1
 

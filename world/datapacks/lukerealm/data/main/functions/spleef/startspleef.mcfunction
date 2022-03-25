@@ -1,5 +1,8 @@
 # all these commands start spleef
 
+# lobby dependency
+scoreboard players set $lobby currentGame 0
+
 # reset arena floor
 function main:spleef/reloadfloor
 

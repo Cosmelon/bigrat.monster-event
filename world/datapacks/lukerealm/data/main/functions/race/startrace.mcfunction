@@ -1,5 +1,8 @@
 # starts race
 
+# lobby dependency
+scoreboard players set $lobby currentGame 0
+
 # sets time of day
 #  need to figure out what time works best, sunset or sunrise, ask solar
 #  time set 13000
