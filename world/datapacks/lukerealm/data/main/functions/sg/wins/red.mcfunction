@@ -12,7 +12,7 @@ execute if score ~round sg matches 2 run schedule function main:lobby 10s replac
 scoreboard players reset * sgDeaths
 # playsound minecraft:block.note_block.chime ambient @a ~ ~ ~ 100000 1
 scoreboard players add ~round sg 1
-playsound minecraft:entity.wither.death master @a
+execute as @a run playsound minecraft:entity.wither.death master @s ~ ~ ~ 10
 
 
 # solution to infinite game repeat problem
