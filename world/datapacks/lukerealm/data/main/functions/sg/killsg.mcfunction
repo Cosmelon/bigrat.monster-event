@@ -11,6 +11,10 @@ scoreboard players set ~notifYellowDead sg 0
 scoreboard players reset * sgDeaths
 worldborder set 6000000 1
 worldborder center 0 0
+schedule clear main:sg/startsg
+schedule clear main:sg/wins/returnlobby
+schedule clear main:lobby
+
 
 clear @a[team=!Admin]
 playsound minecraft:block.beacon.deactivate master @a
