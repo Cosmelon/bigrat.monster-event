@@ -6,6 +6,7 @@ scoreboard players set ~gameActive sg 1
 # set gamemodes
 gamemode adventure @a[tag=player]
 gamemode spectator @a[tag=!player]
+effect clear @a
 
 # reset notifs
 scoreboard players set ~notifRedDead sg 0
@@ -19,6 +20,7 @@ setworldspawn -1983 90 -1983
 
 # times
 title @a times 0 25 10
+time set day
 
 # teleporting
 # player spreader goes clockwise
