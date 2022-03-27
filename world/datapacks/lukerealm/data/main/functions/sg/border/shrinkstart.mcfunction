@@ -1,4 +1,4 @@
-scoreboard players set ~shrink1Timer sgBorder 1
+scoreboard players set ~shrink1Timer sgBorder 600
 scoreboard players set ~shrink2Timer sgBorder 1800
 scoreboard players set ~shrink3Timer sgBorder 3000
 scoreboard players set ~shrink4Timer sgBorder 4200
