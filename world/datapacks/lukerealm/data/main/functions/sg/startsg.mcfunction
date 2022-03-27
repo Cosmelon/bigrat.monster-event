@@ -94,6 +94,12 @@ scoreboard players set ~shrink4Timer sgBorder 0
 scoreboard players set ~shrink5Timer sgBorder 0
 scoreboard players set ~shrinkActual sgBorder 0
 scoreboard players set ~shrinkTimer sgBorder 0
+
+scoreboard players set ~s1Active sgBorder 0
+scoreboard players set ~s2Active sgBorder 0
+scoreboard players set ~s3Active sgBorder 0
+scoreboard players set ~s4Active sgBorder 0
+scoreboard players set ~s5Active sgBorder 0
 # need to tune these times later
 
 schedule function main:sg/border/shrinkstart 30s replace
