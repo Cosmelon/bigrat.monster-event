@@ -1,6 +1,6 @@
 # activates shrink1
 title @a title {"text":"Border shrinking!","color":"dark_red"}
-worldborder set 80 30
+worldborder set 30 30
 scoreboard players set ~shrinkNum sgBorder 5
 scoreboard players set ~shrinkActual sgBorder 600
 playsound minecraft:block.note_block.banjo master @a ^0 ^ ^ 1 2.000000 1
