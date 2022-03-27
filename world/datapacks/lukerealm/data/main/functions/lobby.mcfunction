@@ -26,6 +26,7 @@ scoreboard players set $shrink1Timer spleefBorder 2400
 scoreboard players set $countDown spleef 160
 scoreboard players set $round spleef 1
 scoreboard players set $shrinkActual spleefBorder 400
+bossbar set minecraft:spleefroundcount visible false
 worldborder set 6000000 1
 worldborder center 0 0
 
