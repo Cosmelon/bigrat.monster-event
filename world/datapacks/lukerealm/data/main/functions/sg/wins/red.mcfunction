@@ -14,6 +14,16 @@ scoreboard players reset * sgDeaths
 scoreboard players add ~round sg 1
 execute as @a run playsound minecraft:entity.wither.death master @s ~ ~ ~ 10
 
+# bossbar visibility
+bossbar set minecraft:sgshrinkactual visible false
+
+# worldborder kill
+schedule clear main:sg/border/shrinkstart
+schedule clear main:sg/border/shrink1
+schedule clear main:sg/border/shrink2
+schedule clear main:sg/border/shrink3
+schedule clear main:sg/border/shrink4
+schedule clear main:sg/border/shrink5
 
 # solution to infinite game repeat problem
 execute if score ~red sgPlayers matches 1.. if score ~blue sgPlayers matches 0 if score ~green sgPlayers matches 0 if score ~yellow sgPlayers matches 0 run function main:sg/killsg
