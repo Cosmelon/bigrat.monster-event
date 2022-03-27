@@ -21,6 +21,15 @@ worldborder center 0 0
 schedule clear main:sg/startsg
 schedule clear main:sg/wins/returnlobby
 schedule clear main:lobby
+# bossbar visibility
+bossbar set minecraft:sgshrinkactual visible false
+# worldborder kill
+schedule clear main:sg/border/shrinkstart
+schedule clear main:sg/border/shrink1
+schedule clear main:sg/border/shrink2
+schedule clear main:sg/border/shrink3
+schedule clear main:sg/border/shrink4
+schedule clear main:sg/border/shrink5
 
 
 clear @a[team=!Admin]
