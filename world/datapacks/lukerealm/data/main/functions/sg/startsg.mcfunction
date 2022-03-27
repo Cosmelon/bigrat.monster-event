@@ -96,3 +96,4 @@ scoreboard players set ~shrinkActual sgBorder 0
 # need to tune these times later
 
 schedule function main:sg/border/shrinkstart 30s replace
+scoreboard players set ~shrinkNum sgBorder 0
