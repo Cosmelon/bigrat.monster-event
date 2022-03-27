@@ -52,7 +52,7 @@ scoreboard players remove ~shrink4Timer sgBorder 1
 scoreboard players remove ~shrink5Timer sgBorder 1
 scoreboard players remove ~shrinkActual sgBorder 1
 scoreboard players remove ~shrinkTimer sgBorder 1
-
+execute if score ~shrinkActual sgBorder matches ..0 run bossbar set minecraft:sgshrinkactual visible false
 
 # puts dead into spectator
 gamemode spectator @a[scores={sgDeaths=1..}]
