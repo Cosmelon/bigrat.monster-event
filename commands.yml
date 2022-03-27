@@ -114,3 +114,5 @@ aliases:
   - effect clear @s
   megaSpleefTroll:
   - execute at $$1 run fill ~5 ~-1 ~5 ~-5 ~-1 ~-5 air replace minecraft:snow_block
+  pearls:
+  - give @s ender_pearl 16
