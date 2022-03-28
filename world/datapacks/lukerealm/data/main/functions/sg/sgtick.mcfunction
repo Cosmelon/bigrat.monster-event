@@ -33,18 +33,22 @@ execute store result score ~blue sgPlayers if entity @a[team=Blue]
 execute store result score ~green sgPlayers if entity @a[team=Green]
 execute store result score ~yellow sgPlayers if entity @a[team=Yellow]
 
-# shrink bossbar
+# shrink bossbar, ref 44
 #execute if score ~shrink1Timer sgBorder matches 1 run scoreboard players set ~s1Active sgBorder 1
 #execute if score ~shrink2Timer sgBorder matches 1 run scoreboard players set ~s2Active sgBorder 1
 #execute if score ~shrink3Timer sgBorder matches 1 run scoreboard players set ~s3Active sgBorder 1
 #execute if score ~shrink4Timer sgBorder matches 1 run scoreboard players set ~s4Active sgBorder 1
 #execute if score ~shrink5Timer sgBorder matches 1 run scoreboard players set ~s5Active sgBorder 1
+
+
+# This is kept here for archival purposes, I'll probably end up deleting it soon
+#execute if score ~shrink1Timer sgBorder matches 1..600 run execute store result bossbar minecraft:sgshrink value run scoreboard players get ~shrink1Timer sgBorder
+#execute if score ~shrink2Timer sgBorder matches 1..600 run execute store result bossbar minecraft:sgshrink value run scoreboard players get ~shrink2Timer sgBorder
+#execute if score ~shrink3Timer sgBorder matches 1..600 run execute store result bossbar minecraft:sgshrink value run scoreboard players get ~shrink3Timer sgBorder
+#execute if score ~shrink4Timer sgBorder matches 1..600 run execute store result bossbar minecraft:sgshrink value run scoreboard players get ~shrink4Timer sgBorder
+#execute if score ~shrink5Timer sgBorder matches 1..600 run execute store result bossbar minecraft:sgshrink value run scoreboard players get ~shrink5Timer sgBorder
+execute store result bossbar minecraft:sgshrink value run scoreboard players get ~shrinkSec sgBorder
 execute store result bossbar minecraft:sgshrinkactual value run scoreboard players get ~shrinkActual sgBorder
-execute if score ~shrink1Timer sgBorder matches 1..600 run execute store result bossbar minecraft:sgshrink value run scoreboard players get ~shrink1Timer sgBorder
-execute if score ~shrink2Timer sgBorder matches 1..600 run execute store result bossbar minecraft:sgshrink value run scoreboard players get ~shrink2Timer sgBorder
-execute if score ~shrink3Timer sgBorder matches 1..600 run execute store result bossbar minecraft:sgshrink value run scoreboard players get ~shrink3Timer sgBorder
-execute if score ~shrink4Timer sgBorder matches 1..600 run execute store result bossbar minecraft:sgshrink value run scoreboard players get ~shrink4Timer sgBorder
-execute if score ~shrink5Timer sgBorder matches 1..600 run execute store result bossbar minecraft:sgshrink value run scoreboard players get ~shrink5Timer sgBorder
 scoreboard players remove ~shrink1Timer sgBorder 1
 scoreboard players remove ~shrink2Timer sgBorder 1
 scoreboard players remove ~shrink3Timer sgBorder 1
