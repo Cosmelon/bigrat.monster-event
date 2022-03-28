@@ -15,11 +15,8 @@ scoreboard players set ~shrink3Timer sgBorder 0
 scoreboard players set ~shrink4Timer sgBorder 0
 scoreboard players set ~shrink5Timer sgBorder 0
 scoreboard players set ~shrinkActual sgBorder 0
-scoreboard players set ~s1Active sgBorder 0
-scoreboard players set ~s2Active sgBorder 0
-scoreboard players set ~s3Active sgBorder 0
-scoreboard players set ~s4Active sgBorder 0
-scoreboard players set ~s5Active sgBorder 0
+scoreboard players set ~shrinkTick sgBorder 0
+scoreboard players set ~shrinkSec sgBorder 0
 # need to tune these times later
 scoreboard players reset * sgDeaths
 worldborder set 6000000 1

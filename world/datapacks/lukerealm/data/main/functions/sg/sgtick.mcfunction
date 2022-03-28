@@ -51,7 +51,9 @@ scoreboard players remove ~shrink3Timer sgBorder 1
 scoreboard players remove ~shrink4Timer sgBorder 1
 scoreboard players remove ~shrink5Timer sgBorder 1
 scoreboard players remove ~shrinkActual sgBorder 1
-scoreboard players remove ~shrinkTimer sgBorder 1
+scoreboard players add ~shrinkTick sgBorder 1
+execute if score ~shrinkTick sgBorder matches 20.. run scoreboard players add ~shrinkSec sgBorder 1
+execute if score ~shrinkTick sgBorder matches 20.. run scoreboard players set ~shrinkTick sgBorder 0
 execute if score ~shrinkActual sgBorder matches ..0 run bossbar set minecraft:sgshrinkactual visible false
 
 # puts dead into spectator
