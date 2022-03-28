@@ -1,0 +1,12 @@
+This folder is for the TNTBlast game
+
+That name is subject to change btw I came up with this while I was in class.
+
+I comissioned a plugin for this game on Fiverr, and I've tested it out in the sgDevServer, it works great.
+    I have to use the config file for that plugin, where I list all the blocks I want to be destroyed
+    </tntblock on> turns it on
+    </tntblock off> turns it off
+    <tntblock.command> is the permission required to use it
+
+Basically, the concept of this game is based on that the players are all in an arena and are trying to kill each other with tnt blocks.
+I still need to find a way to make tnt auto ignite, but I'm confident that I can do it.
