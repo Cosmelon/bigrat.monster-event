@@ -1,0 +1,4 @@
+This for the most part is an antiquated game from luke's original minigame world
+
+I haven't worked on anything in here in a long time, I just imported what were
+    in the command blocks into the other files in this folder
