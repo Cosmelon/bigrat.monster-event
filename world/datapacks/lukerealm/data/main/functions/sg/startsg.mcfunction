@@ -87,6 +87,8 @@ execute at @a[tag=player] run setblock ~-1 ~1 ~ barrier
 # worldborder
 worldborder center -1983.5 -1983.5
 worldborder set 280 0
+
+# timers and other stuff
 scoreboard players set ~shrink1Timer sgBorder 0
 scoreboard players set ~shrink2Timer sgBorder 0
 scoreboard players set ~shrink3Timer sgBorder 0
@@ -94,7 +96,7 @@ scoreboard players set ~shrink4Timer sgBorder 0
 scoreboard players set ~shrink5Timer sgBorder 0
 scoreboard players set ~shrinkActual sgBorder 0
 scoreboard players set ~shrinkTick sgBorder 0
-scoreboard players set ~shrinkSec sgBorder 0
+scoreboard players set ~shrinkSec sgBorder 0 
 # need to tune these times later
 
 schedule function main:sg/border/shrinkstart 30s replace
