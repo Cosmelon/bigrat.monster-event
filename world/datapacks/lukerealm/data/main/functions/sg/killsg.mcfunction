@@ -9,11 +9,6 @@ scoreboard players set ~notifBlueDead sg 0
 scoreboard players set ~notifGreenDead sg 0
 scoreboard players set ~notifYellowDead sg 0
 scoreboard players set ~shrinkNum sgBorder 0
-scoreboard players set ~shrink1Timer sgBorder 0
-scoreboard players set ~shrink2Timer sgBorder 0
-scoreboard players set ~shrink3Timer sgBorder 0
-scoreboard players set ~shrink4Timer sgBorder 0
-scoreboard players set ~shrink5Timer sgBorder 0
 scoreboard players set ~shrinkActual sgBorder 0
 scoreboard players set ~shrinkTick sgBorder 0
 scoreboard players set ~shrinkSec sgBorder 0
