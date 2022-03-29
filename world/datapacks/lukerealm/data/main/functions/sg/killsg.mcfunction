@@ -33,6 +33,11 @@ schedule clear main:sg/border/shrink2
 schedule clear main:sg/border/shrink3
 schedule clear main:sg/border/shrink4
 schedule clear main:sg/border/shrink5
+schedule clear main:sg/border/s1warn
+schedule clear main:sg/border/s2warn
+schedule clear main:sg/border/s3warn
+schedule clear main:sg/border/s4warn
+schedule clear main:sg/border/s5warn
 
 
 clear @a[team=!Admin]
