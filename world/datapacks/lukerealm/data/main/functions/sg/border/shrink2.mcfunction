@@ -1,4 +1,5 @@
 # activates shrink2
+bossbar set minecraft:sgshrink visible false
 title @a title {"text":"Border shrinking!","color":"dark_red"}
 worldborder set 180 30
 scoreboard players set ~shrinkNum sgBorder 2
