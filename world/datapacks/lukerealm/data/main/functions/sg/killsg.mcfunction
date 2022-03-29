@@ -25,6 +25,7 @@ schedule clear main:sg/startsg
 schedule clear main:sg/wins/returnlobby
 schedule clear main:lobby
 # bossbar visibility
+bossbar set minecraft:sgshrink visible false
 bossbar set minecraft:sgshrinkactual visible false
 # worldborder kill
 schedule clear main:sg/border/shrinkstart
