@@ -39,6 +39,8 @@ execute store result bossbar minecraft:sgshrinkactual value run scoreboard playe
 scoreboard players add ~shrinkTick sgBorder 1
 execute if score ~shrinkTick sgBorder matches 20.. run scoreboard players remove ~shrinkSec sgBorder 1
 execute if score ~shrinkTick sgBorder matches 20.. run scoreboard players set ~shrinkTick sgBorder 0
+execute if score ~shrinkSec sgBorder matches ..9 run bossbar set minecraft:sgshrink name [{"text":"Next Shrink Starts In: 0:0","color":"dark_red","bold":true},{"score":{"name":"~shrinkSec","objective":"sgBorder"},"color":"white"}]
+execute if score ~shrinkSec sgBorder matches 10.. run bossbar set minecraft:sgshrink name [{"text":"Next Shrink Starts In: 0:","color":"dark_red","bold":true},{"score":{"name":"~shrinkSec","objective":"sgBorder"},"color":"white"}]
 execute if score ~shrinkActual sgBorder matches ..0 run bossbar set minecraft:sgshrinkactual visible false
 
 # puts dead into spectator
