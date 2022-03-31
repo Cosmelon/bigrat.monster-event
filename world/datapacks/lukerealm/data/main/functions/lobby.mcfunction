@@ -2,6 +2,17 @@
 #  3/25 note: Hi it's me. Going to have to go through this and make it look better in the future.
 #  For instance, a lot of these commands should be included in their respective games and not in this more central function
 time set 12750
+tp @a -181.5 5 137.5 0 10
+effect clear @a
+clear @a[team=!Admin]
+title @a title ""
+title @a subtitle ""
+title @a actionbar ""
+gamemode adventure @a
+worldborder set 6000000 1
+worldborder center 0 0
+
+# currentGame scoreboard lobby pos set
 scoreboard players set $lobby currentGame 1
 scoreboard players set $spleef currentGame 0
 scoreboard players set $race currentGame 0
@@ -9,13 +20,8 @@ scoreboard players set $sg currentGame 0
 scoreboard players set $fossilDig currentGame 0
 scoreboard players set $tntWar currentGame 0
 scoreboard players set $gameSix currentGame 0
-tp @a -181.5 5 137.5 0 10
-gamemode adventure @a
-effect clear @a
 
 # reset stuff for spleef
-title @a title ""
-title @a subtitle ""
 scoreboard players set $notifRedDead spleef 0
 scoreboard players set $notifBlueDead spleef 0
 scoreboard players set $notifGreenDead spleef 0
@@ -27,12 +33,8 @@ scoreboard players set $countDown spleef 160
 scoreboard players set $round spleef 1
 scoreboard players set $shrinkActual spleefBorder 400
 bossbar set minecraft:spleefroundcount visible false
-worldborder set 6000000 1
-worldborder center 0 0
 
 # reset stuff for race
-title @a title ""
-title @a subtitle ""
 scoreboard players set !gameActive race 0
 scoreboard players set !countDown race 160
 scoreboard players set !gateOpen race 100
@@ -46,30 +48,13 @@ scoreboard players set @a raceSec 0
 scoreboard players set @a raceMin 0
 scoreboard players set @a raceCP 0
 scoreboard players set @a raceLap 0
-effect clear @a
-clear @a[team=!Admin]
-title @a actionbar ""
-title @a title ""
 bossbar set minecraft:racetime visible false
 
 # reset stuff for sg
-title @a title ""
-title @a subtitle ""
 scoreboard players set ~notifRedDead sg 0
 scoreboard players set ~notifBlueDead sg 0
 scoreboard players set ~notifGreenDead sg 0
 scoreboard players set ~notifYellowDead sg 0
-scoreboard players set ~shrink1Timer sgBorder 0
-scoreboard players set ~shrink2Timer sgBorder 0
-scoreboard players set ~shrink3Timer sgBorder 0
-scoreboard players set ~shrink4Timer sgBorder 0
-scoreboard players set ~shrink5Timer sgBorder 0
 scoreboard players set ~shrinkActual sgBorder 0
-# need to tune these times later
 scoreboard players set ~countDown sg 300
 scoreboard players set ~round sg 1
-worldborder set 6000000 1
-worldborder center 0 0
-
-clear @a[team=!Admin]
-effect give @a[team=!Admin] weakness 10000 255 true
