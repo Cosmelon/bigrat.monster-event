@@ -36,12 +36,13 @@ execute store result score ~yellow sgPlayers if entity @a[team=Yellow]
 # shrink bossbar
 execute store result bossbar minecraft:sgshrink value run scoreboard players get ~shrinkSec sgBorder
 execute store result bossbar minecraft:sgshrinkactual value run scoreboard players get ~shrinkActual sgBorder
+scoreboard players remove ~shrinkActual sgBorder 1
+execute if score ~shrinkActual sgBorder matches ..0 run bossbar set minecraft:sgshrinkactual visible false
 scoreboard players add ~shrinkTick sgBorder 1
 execute if score ~shrinkTick sgBorder matches 20.. run scoreboard players remove ~shrinkSec sgBorder 1
 execute if score ~shrinkTick sgBorder matches 20.. run scoreboard players set ~shrinkTick sgBorder 0
-execute if score ~shrinkSec sgBorder matches ..9 run bossbar set minecraft:sgshrink name [{"text":"Next Shrink Starts In: 0:0","color":"dark_red","bold":true},{"score":{"name":"~shrinkSec","objective":"sgBorder"},"color":"white"}]
-execute if score ~shrinkSec sgBorder matches 10.. run bossbar set minecraft:sgshrink name [{"text":"Next Shrink Starts In: 0:","color":"dark_red","bold":true},{"score":{"name":"~shrinkSec","objective":"sgBorder"},"color":"white"}]
-execute if score ~shrinkActual sgBorder matches ..0 run bossbar set minecraft:sgshrinkactual visible false
+execute if score ~shrinkSec sgBorder matches ..9 run bossbar set minecraft:sgshrink name [{"text":"Next Shrink Starts In: ","color":"dark_red","bold":true},{"text":"0:0","color":"white"},{"score":{"name":"~shrinkSec","objective":"sgBorder"},"color":"white"}]
+execute if score ~shrinkSec sgBorder matches 10.. run bossbar set minecraft:sgshrink name [{"text":"Next Shrink Starts In: ","color":"dark_red","bold":true},{"text":"0:","color":"white"},{"score":{"name":"~shrinkSec","objective":"sgBorder"},"color":"white"}]
 
 # puts dead into spectator
 gamemode spectator @a[scores={sgDeaths=1..}]
