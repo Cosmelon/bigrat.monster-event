@@ -18,5 +18,5 @@ tellraw @s {"text":"Legacy Builds","color":"gray","clickEvent":{"action":"run_co
 tellraw @s {"text":"Water rising parkour","color":"brown","clickEvent":{"action":"run_command","value":"/tp @s -1000 50 1000"}}
 tellraw @s {"text":"Luke Placeholder","color":"green","clickEvent":{"action":"run_command","value":"/tp @s -2000 50 2000"}}
 tellraw @s {"text":""}
-tellraw @s [{"text":"<","color":"gray","bold":true},{"text":"Prev","color":"red","bold":true,"clickEvent":{"action":"run_command","value":"/function main:telemenu2"}},{"text":" | ","color":"gray","bold":true},{"text":"Next","color":"red","bold":true,"clickEvent":{"action":"run_command","value":"/tellraw @s \"You're already on the last page!\""}},{"text":">","color":"gray","bold":true}]
+tellraw @s [{"text":"<","color":"gray","bold":true},{"text":"Prev","color":"red","bold":true,"clickEvent":{"action":"run_command","value":"/function main:telemenu"}},{"text":" | ","color":"gray","bold":true},{"text":"Next","color":"red","bold":true,"clickEvent":{"action":"run_command","value":"/tellraw @s \"You're already on the last page!\""}},{"text":">","color":"gray","bold":true}]
 tellraw @s {"text":"________________________________________","bold":true}
