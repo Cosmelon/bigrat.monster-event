@@ -9,6 +9,7 @@ scoreboard players set #10000 sgConstant 10000
 scoreboard players set #lcg sgConstant 1103515245
 function math:rng/zprivate/init
 
+
 # scoreboard remake
 scoreboard objectives add spleef dummy
 scoreboard objectives add spleefDeaths deathCount
