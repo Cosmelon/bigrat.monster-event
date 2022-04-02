@@ -94,3 +94,15 @@ scoreboard players set ~shrinkNum sgBorder 0
 scoreboard players set ~shrinkActual sgBorder 0
 scoreboard players set ~shrinkTick sgBorder 0
 scoreboard players set ~shrinkSec sgBorder 0
+
+# superpowers
+execute if score ~round sg matches 2 if score ~powersActive sg matches 1 run function main:sg/superpowers
+tag @a[tag=player] add noPowers
+# power remove
+tag @a remove power1
+tag @a remove power2
+tag @a remove power3
+tag @a remove power4
+tag @a remove power5
+tag @a remove power6
+effect clear @a[team=!Admin]

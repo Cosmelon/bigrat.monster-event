@@ -1,6 +1,15 @@
 # kills sg
 title @a title ""
 title @a subtitle ""
+# power remove
+tag @a remove power1
+tag @a remove power2
+tag @a remove power3
+tag @a remove power4
+tag @a remove power5
+tag @a remove power6
+effect clear @a[team=!Admin]
+# scoreboard resets
 scoreboard players set ~gameActive sg 0
 scoreboard players set ~round sg 1
 scoreboard players set ~countDown sg 300
