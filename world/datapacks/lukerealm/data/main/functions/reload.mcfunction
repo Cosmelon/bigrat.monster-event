@@ -1,5 +1,14 @@
 # load
 
+#sgRng
+scoreboard objectives add sgMath dummy
+scoreboard objectives add sgConstant dummy
+scoreboard players set #2 sgConstant 2
+scoreboard players set #1000 sgConstant 1000
+scoreboard players set #10000 sgConstant 10000
+scoreboard players set #lcg sgConstant 1103515245
+function math:rng/zprivate/init
+
 # scoreboard remake
 scoreboard objectives add spleef dummy
 scoreboard objectives add spleefDeaths deathCount
