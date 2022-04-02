@@ -1,5 +1,6 @@
 {
     "values":[
-        "main:reload"
+        "main:reload",
+        "main:sg/rng/init"
     ]
 }
