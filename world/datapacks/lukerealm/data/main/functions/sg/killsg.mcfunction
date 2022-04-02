@@ -2,6 +2,7 @@
 title @a title ""
 title @a subtitle ""
 # power remove
+tag @a add noPowers
 tag @a remove power1
 tag @a remove power2
 tag @a remove power3
@@ -12,6 +13,7 @@ effect clear @a[team=!Admin]
 # scoreboard resets
 scoreboard players set ~gameActive sg 0
 scoreboard players set ~round sg 1
+scoreboard players set ~powerRun sg 0
 scoreboard players set ~countDown sg 300
 scoreboard players set ~notifRedDead sg 0
 scoreboard players set ~notifBlueDead sg 0
