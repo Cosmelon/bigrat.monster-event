@@ -12,7 +12,7 @@ scoreboard players operation #range sgMath -= in sgMath
 
 scoreboard players operation #m1 sgMath = #range sgMath
 scoreboard players remove #m1 sgMath 1
-function main:sg/rng/zprivate/next_int
+function main:sg/rng/next_int
 scoreboard players operation out sgMath += in sgMath
 
 scoreboard players reset #m1 sgMath

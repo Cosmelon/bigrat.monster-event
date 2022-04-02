@@ -1,1 +1,0 @@
-execute unless score #lcg sgMath matches ..0 unless score #lcg sgMath matches 1.. run function main:sg/rng/zprivate/uuid_reset
