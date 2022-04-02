@@ -58,6 +58,10 @@ execute if score ~notifRedDead sg matches 1 run execute if score ~notifBlueDead 
 # yellow win
 execute if score ~notifRedDead sg matches 1 run execute if score ~notifBlueDead sg matches 1 run execute if score ~notifGreenDead sg matches 1 run function main:sg/wins/yellow
 
+# superpowers
+function main:sg/rng/range
+
+
 # effects
 #levitation
 #  - block: dried kelp, for 5 seconds, amp 5
