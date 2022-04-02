@@ -1,4 +1,4 @@
-function main:sg/rng/zprivate/next_int
+function main:sg/rng/lcg
 
 scoreboard players operation #temp sgMath = out sgMath
 scoreboard players operation out sgMath %= #range sgMath
