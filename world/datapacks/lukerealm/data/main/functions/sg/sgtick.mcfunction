@@ -6,6 +6,8 @@
 #  sg - main sg scoreboard, main stuff here
 #  sgDeaths - tracks dead players during sg
 #  sgBorder - tracks numbers and vars for the sg border
+#  sgConstant - Const value for randomizer
+#  sgMath - base randomizer scoreboard
 
 # countdown
 scoreboard players remove ~countDown sg 1
