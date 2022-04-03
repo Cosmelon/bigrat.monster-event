@@ -1,6 +1,10 @@
 # load
 
 #sgRng
+scoreboard objectives add sg dummy
+scoreboard objectives add sgBorder dummy
+scoreboard objectives add sgDeaths deathCount
+scoreboard objectives add sgPlayers dummy
 scoreboard objectives add sgMath dummy
 scoreboard objectives add sgConstant dummy
 scoreboard players set #2 sgConstant 2
