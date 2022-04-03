@@ -31,4 +31,4 @@ schedule clear main:sg/border/s4warn
 schedule clear main:sg/border/s5warn
 
 # solution to infinite game repeat problem
-execute if score ~aliveRed sgPlayers matches 0 if score ~aliveBlue sgPlayers matches 0 if score ~aliveGreen 1.. matches 0 if score ~aliveYellow sg matches 0 run function main:sg/killsg
+execute if score ~red sgPlayers matches 0 if score ~blue sgPlayers matches 0 if score ~green 1.. matches 0 if score ~yellow sg matches 0 run function main:sg/killsg
