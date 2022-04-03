@@ -98,7 +98,7 @@ scoreboard players set ~powerRun sg 0
 
 # superpowers
 #execute if score ~round sg matches 2 if score ~powersActive sg matches 1 run function main:sg/superpowers
-execute if score ~powersActive sg matches 1 run function main:sg/superpowers
+execute if score ~powersActive sg matches 1 run function main:sg/superpowers/main
 # reset powers
 tag @a[tag=player] add noPowers
 # power remove
