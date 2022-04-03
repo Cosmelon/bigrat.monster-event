@@ -62,7 +62,7 @@ execute if score ~notifRedDead sg matches 1 run execute if score ~notifBlueDead 
 
 # superpowers
 function main:sg/rng/range
-execute if score ~powersActive sg matches 1 if score ~powerRun sg matches ..7 run scoreboard players remove ~powerRun sg 1
+execute if score ~powersActive sg matches 1 if score ~powerRun sg matches ..8 run function main:sg/superpowers
 
 
 # effects

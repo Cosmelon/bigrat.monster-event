@@ -14,3 +14,11 @@ execute if score out sgMath matches 5 run tag @a[tag=player,tag=noPowers,sort=ra
 execute if score out sgMath matches 6 run tag @a[tag=player,tag=noPowers,sort=random,limit=1] add power6
 execute if score out sgMath matches 7 run tag @a[tag=player,tag=noPowers,sort=random,limit=1] add power7
 execute if score out sgMath matches 8 run tag @a[tag=player,tag=noPowers,sort=random,limit=1] add power8
+tag @a[tag=power1] remove noPowers
+tag @a[tag=power2] remove noPowers
+tag @a[tag=power3] remove noPowers
+tag @a[tag=power4] remove noPowers
+tag @a[tag=power5] remove noPowers
+tag @a[tag=power6] remove noPowers
+tag @a[tag=power7] remove noPowers
+tag @a[tag=power8] remove noPowers
