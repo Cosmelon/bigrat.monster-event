@@ -87,7 +87,9 @@ execute at @a[tag=player] run setblock ~-1 ~1 ~ barrier
 # worldborder
 worldborder center -1983.5 -1983.5
 worldborder set 280 0
-schedule function main:sg/border/shrinkstart 30s replace
+execute if score ~powersActive sg matches 0 run schedule function main:sg/border/shrinkstart 30s replace
+execute if score ~powersActive sg matches 1 run schedule function main:sg/border/shrinkstart 40s 
+execute if score ~powersActive sg matches 1 run tellraw @a[tag=admin] "superpowers mode is on btw"
 scoreboard players set ~shrinkNum sgBorder 0
 
 # timers and other stuff
