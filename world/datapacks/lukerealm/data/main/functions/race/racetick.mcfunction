@@ -49,7 +49,7 @@ execute as @a[gamemode=adventure,tag=player,x=368,dx=1,y=81,dy=2,z=-18.5,dz=3] r
 execute positioned 292.5 39 -49.5 run scoreboard players set @a[gamemode=adventure,tag=player,distance=..5] raceCP 3
 execute positioned 253.5 40 -73.5 run scoreboard players set @a[gamemode=adventure,tag=player,distance=..5] raceCP 4
 execute positioned 258.5 78 -32.5 run scoreboard players set @a[gamemode=adventure,tag=player,distance=..3] raceCP 5
-execute as @a[gamemode=adventure,tag=player,x=247.5,dx=5,y=88,dy=8,z=8.5,dz=2.5] run scoreboard players set @s raceCP 6
+execute as @a[gamemode=adventure,tag=player,x=247.5,dx=5,y=88,dy=8,z=8.5,dz=3] run scoreboard players set @s raceCP 6
 execute as @a[gamemode=adventure,tag=player,x=294,dx=1,y=75,dy=10,z=37,dz=10] run execute if score @s raceCP matches 6 run function main:race/newlap
 gamemode spectator @a[tag=player,scores={raceLap=4..}]
 
@@ -107,6 +107,7 @@ bossbar set minecraft:racegateshut players @a[tag=gate]
 execute as @a[tag=player,gamemode=adventure] run execute positioned as @s if block ~ ~-1 ~ minecraft:magenta_glazed_terracotta run effect give @s speed 2 3 true
 # jump boost (lime_glazed_terracotta)
 execute as @a[tag=player,gamemode=adventure] run execute positioned as @s if block ~ ~-1 ~ lime_glazed_terracotta run effect give @s minecraft:jump_boost 1 7 true
+execute as @a[tag=player,gamemode=adventure] run execute positioned as @s if block ~ ~-0.25 ~ air run effect clear @s minecraft:jump_boost
 # give elytra (light_blue_glazed_terracotta)
 # again credit to /u/PunchTunnel! They're carrying this ong
 execute as @a[tag=player,gamemode=adventure] at @s unless block ~ ~-0.25 ~ air run item replace entity @s armor.chest with air
