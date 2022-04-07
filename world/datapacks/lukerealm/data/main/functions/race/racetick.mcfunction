@@ -45,7 +45,7 @@ execute if score !countDown race matches -20 run title @a title ""
 
 # checkpoints
 execute as @a[gamemode=adventure,tag=player,x=310.5,dx=3,y=81,dy=3,z=57.5,dz=1] run scoreboard players set @s raceCP 1
-execute as @a[gamemode=adventure,tag=player,x=368,dx=1,y=81,dy=2,z=-18.5,dz=3] run scoreboard players set @s raceCP 2
+execute as @a[gamemode=adventure,tag=player,x=368,dx=2,y=81,dy=2,z=-18.5,dz=3] run scoreboard players set @s raceCP 2
 execute positioned 292.5 39 -49.5 run scoreboard players set @a[gamemode=adventure,tag=player,distance=..5] raceCP 3
 execute positioned 253.5 40 -73.5 run scoreboard players set @a[gamemode=adventure,tag=player,distance=..5] raceCP 4
 execute positioned 258.5 78 -32.5 run scoreboard players set @a[gamemode=adventure,tag=player,distance=..3] raceCP 5
