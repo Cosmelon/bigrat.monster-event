@@ -113,6 +113,10 @@ execute as @a[tag=player,gamemode=adventure] run execute positioned as @s if blo
 execute as @a[tag=player,gamemode=adventure] at @s unless block ~ ~-0.25 ~ air run item replace entity @s armor.chest with air
 execute as @a[tag=player,gamemode=adventure] at @s if block ~ ~-0.25 ~ light_blue_glazed_terracotta run item replace entity @s armor.chest with elytra{Enchantments:[{id:"binding_curse",lvl:1},{id:"unbreaking",lvl:255}],HideFlags:1}
 execute as @a[tag=player,gamemode=adventure] at @s if block ~ ~-0.25 ~ light_blue_glazed_terracotta run title @s title {"text":"Elytra Given!","color":"gold"}
+execute as @a[tag=player,gamemode=adventure] at @s unless block ~-0.4 ~-0.25 ~ air run item replace entity @s armor.chest with air
+execute as @a[tag=player,gamemode=adventure] at @s if block ~-0.4 ~-0.25 ~ light_blue_glazed_terracotta run item replace entity @s armor.chest with elytra{Enchantments:[{id:"binding_curse",lvl:1},{id:"unbreaking",lvl:255}],HideFlags:1}
+execute as @a[tag=player,gamemode=adventure] at @s if block ~-0.4 ~-0.25 ~ light_blue_glazed_terracotta run title @s title {"text":"Elytra Given!","color":"gold"}
+
 
 kill @a[tag=player,gamemode=adventure,scores={yCos=..6}]
 
