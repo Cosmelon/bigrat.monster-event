@@ -49,7 +49,7 @@ execute as @a[gamemode=adventure,tag=player,x=368,dx=1,y=81,dy=2,z=-18.5,dz=3] r
 execute positioned 292.5 39 -49.5 run scoreboard players set @a[gamemode=adventure,tag=player,distance=..5] raceCP 3
 execute positioned 253.5 40 -73.5 run scoreboard players set @a[gamemode=adventure,tag=player,distance=..5] raceCP 4
 execute positioned 258.5 78 -32.5 run scoreboard players set @a[gamemode=adventure,tag=player,distance=..3] raceCP 5
-execute as @a[gamemode=adventure,tag=player,x=247.5,dx=5,y=88,dy=8,z=8.5,dz=1] run scoreboard players set @s raceCP 6
+execute as @a[gamemode=adventure,tag=player,x=247.5,dx=5,y=88,dy=8,z=8.5,dz=2.5] run scoreboard players set @s raceCP 6
 execute as @a[gamemode=adventure,tag=player,x=294,dx=1,y=75,dy=10,z=37,dz=10] run execute if score @s raceCP matches 6 run function main:race/newlap
 gamemode spectator @a[tag=player,scores={raceLap=4..}]
 
