@@ -1,0 +1,42 @@
+[
+    {
+      "condition": "minecraft:inverted",
+      "term": {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "type": "minecraft:player",
+          "location": {
+            "light": {
+              "light": {
+                "min": 0,
+                "max": 7
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "condition": "minecraft:inverted",
+      "term": {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "type": "minecraft:player",
+          "equipment": {
+            "offhand": {
+              "items": [
+                "minecraft:carrot_on_a_stick"
+              ],
+              "durability": {
+                "min": 0,
+                "max": 1
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+  
