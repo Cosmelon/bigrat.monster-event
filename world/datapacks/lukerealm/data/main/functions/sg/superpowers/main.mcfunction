@@ -6,22 +6,22 @@ scoreboard players set ~countDown sg 600
 scoreboard players add ~powerRun sg 1
 
 # giving superpowers
-execute if score out sgMath matches 1 run tag @a[tag=player,tag=noPowers,sort=random,limit=1] add power1
-execute if score out sgMath matches 2 run tag @a[tag=player,tag=noPowers,sort=random,limit=1] add power2
-execute if score out sgMath matches 3 run tag @a[tag=player,tag=noPowers,sort=random,limit=1] add power3
-execute if score out sgMath matches 4 run tag @a[tag=player,tag=noPowers,sort=random,limit=1] add power4
-execute if score out sgMath matches 5 run tag @a[tag=player,tag=noPowers,sort=random,limit=1] add power5
-execute if score out sgMath matches 6 run tag @a[tag=player,tag=noPowers,sort=random,limit=1] add power6
-execute if score out sgMath matches 7 run tag @a[tag=player,tag=noPowers,sort=random,limit=1] add power7
-execute if score out sgMath matches 8 run tag @a[tag=player,tag=noPowers,sort=random,limit=1] add power8
-tag @a[tag=power1] remove noPowers
-tag @a[tag=power2] remove noPowers
-tag @a[tag=power3] remove noPowers
-tag @a[tag=power4] remove noPowers
-tag @a[tag=power5] remove noPowers
-tag @a[tag=power6] remove noPowers
-tag @a[tag=power7] remove noPowers
-tag @a[tag=power8] remove noPowers
+execute if score out sgMath matches 1 run tag @a[tag=player,tag=noPowers,sort=random,limit=1] add sgVampire
+execute if score out sgMath matches 2 run tag @a[tag=player,tag=noPowers,sort=random,limit=1] add sgTrainer
+execute if score out sgMath matches 3 run tag @a[tag=player,tag=noPowers,sort=random,limit=1] add sgReddit
+execute if score out sgMath matches 4 run tag @a[tag=player,tag=noPowers,sort=random,limit=1] add sgCreeper
+execute if score out sgMath matches 5 run tag @a[tag=player,tag=noPowers,sort=random,limit=1] add sgWitch
+execute if score out sgMath matches 6 run tag @a[tag=player,tag=noPowers,sort=random,limit=1] add sgLeprechaun
+execute if score out sgMath matches 7 run tag @a[tag=player,tag=noPowers,sort=random,limit=1] add sgMedic
+execute if score out sgMath matches 8 run tag @a[tag=player,tag=noPowers,sort=random,limit=1] add sgPyro
+tag @a[tag=sgVampire] remove noPowers
+tag @a[tag=sgTrainer] remove noPowers
+tag @a[tag=sgRedditor] remove noPowers
+tag @a[tag=sgCreeper] remove noPowers
+tag @a[tag=sgWitch] remove noPowers
+tag @a[tag=sgLeprechaun] remove noPowers
+tag @a[tag=sgMedic] remove noPowers
+tag @a[tag=sgPyro] remove noPowers
 
 # explaining powers in chat
 execute if score ~powerRun sg matches 7 run function main:sg/superpowers/infochat
