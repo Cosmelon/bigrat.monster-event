@@ -8,7 +8,7 @@ scoreboard players add ~powerRun sg 1
 # giving superpowers
 execute if score out sgMath matches 1 run tag @a[tag=player,tag=noPowers,sort=random,limit=1] add sgVampire
 execute if score out sgMath matches 2 run tag @a[tag=player,tag=noPowers,sort=random,limit=1] add sgTrainer
-execute if score out sgMath matches 3 run tag @a[tag=player,tag=noPowers,sort=random,limit=1] add sgReddit
+execute if score out sgMath matches 3 run tag @a[tag=player,tag=noPowers,sort=random,limit=1] add sgRedditor
 execute if score out sgMath matches 4 run tag @a[tag=player,tag=noPowers,sort=random,limit=1] add sgCreeper
 execute if score out sgMath matches 5 run tag @a[tag=player,tag=noPowers,sort=random,limit=1] add sgWitch
 execute if score out sgMath matches 6 run tag @a[tag=player,tag=noPowers,sort=random,limit=1] add sgLeprechaun
@@ -25,3 +25,26 @@ tag @a[tag=sgPyro] remove noPowers
 
 # explaining powers in chat
 execute if score ~powerRun sg matches 7 run function main:sg/superpowers/infochat
+
+# sgVampire
+
+
+# sgTrainer
+
+
+# sgRedditor
+
+
+# sgCreeper
+
+
+# sgWitch
+
+
+# sgLeprechaun
+
+
+# sgMedic
+
+
+# sgPyro
