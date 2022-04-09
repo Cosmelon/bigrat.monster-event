@@ -45,7 +45,30 @@ clear @a[tag=sgTrainer] cooked_salmon
 clear @a[tag=sgTrainer] cooked_cod
 
 # sgRedditor
-
+effect give @a[tag=sgRedditor] slowness 10000 2 true
+execute as @a[tag=sgRedditor,nbt={Inventory:[{id:"minecraft:baked_potato"}]}] run tellraw @s {"text":"Only meat allowed!"}
+execute as @a[tag=sgRedditor,nbt={Inventory:[{id:"minecraft:bread"}]}] run tellraw @s {"text":"Only meat allowed!"}
+execute as @a[tag=sgRedditor,nbt={Inventory:[{id:"minecraft:carrot"}]}] run tellraw @s {"text":"Only meat allowed!"}
+execute as @a[tag=sgRedditor,nbt={Inventory:[{id:"minecraft:apple"}]}] run tellraw @s {"text":"Only meat allowed!"}
+execute as @a[tag=sgRedditor,nbt={Inventory:[{id:"minecraft:melon"}]}] run tellraw @s {"text":"Only meat allowed!"}
+execute as @a[tag=sgRedditor,nbt={Inventory:[{id:"minecraft:potato"}]}] run tellraw @s {"text":"Only meat allowed!"}
+execute as @a[tag=sgRedditor,nbt={Inventory:[{id:"minecraft:sweet_berries"}]}] run tellraw @s {"text":"Only meat allowed!"}
+execute as @a[tag=sgRedditor,nbt={Inventory:[{id:"minecraft:golden_carrot"}]}] run tellraw @s {"text":"Only meat allowed!"}
+execute as @a[tag=sgRedditor,nbt={Inventory:[{id:"minecraft:golden_apple"}]}] run tellraw @s {"text":"Only meat allowed!"}
+execute as @a[tag=sgRedditor,nbt={Inventory:[{id:"minecraft:cookie"}]}] run tellraw @s {"text":"Only meat allowed!"}
+execute as @a[tag=sgRedditor,nbt={Inventory:[{id:"minecraft:beetroot"}]}] run tellraw @s {"text":"Only meat allowed!"}
+execute as @a[tag=sgRedditor,nbt={Inventory:[{id:"minecraft:beetroot_soup"}]}] run tellraw @s {"text":"Only meat allowed!"}
+clear @a[tag=sgRedditor] baked_potato
+clear @a[tag=sgRedditor] bread
+clear @a[tag=sgRedditor] carrot
+clear @a[tag=sgRedditor] melon
+clear @a[tag=sgRedditor] potato
+clear @a[tag=sgRedditor] sweet_berries
+clear @a[tag=sgRedditor] golden_carrot
+clear @a[tag=sgRedditor] golden_apple
+clear @a[tag=sgRedditor] cookie
+clear @a[tag=sgRedditor] beetroot
+clear @a[tag=sgRedditor] beetroot_soup
 
 # sgCreeper
 
