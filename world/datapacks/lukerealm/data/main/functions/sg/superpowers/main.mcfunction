@@ -30,7 +30,19 @@ execute if score ~powerRun sg matches 7 run function main:sg/superpowers/infocha
 
 
 # sgTrainer
-
+effect give @a[tag=sgTrainer] resistance 10000 2 true
+execute as @a[tag=sgTrainer,nbt={Inventory:[{id:"minecraft:cooked_beef"}]}] run tellraw @s {"text":"Animals are sentient you fucker!"}
+execute as @a[tag=sgTrainer,nbt={Inventory:[{id:"minecraft:cooked_mutton"}]}] run tellraw @s {"text":"Animals are sentient you fucker!"}
+execute as @a[tag=sgTrainer,nbt={Inventory:[{id:"minecraft:cooked_porkchop"}]}] run tellraw @s {"text":"Animals are sentient you fucker!"}
+execute as @a[tag=sgTrainer,nbt={Inventory:[{id:"minecraft:cooked_rabbit"}]}] run tellraw @s {"text":"Animals are sentient you fucker!"}
+execute as @a[tag=sgTrainer,nbt={Inventory:[{id:"minecraft:cooked_salmon"}]}] run tellraw @s {"text":"Animals are sentient you fucker!"}
+execute as @a[tag=sgTrainer,nbt={Inventory:[{id:"minecraft:cooked_cod"}]}] run tellraw @s {"text":"Animals are sentient you fucker!"}
+clear @a[tag=sgTrainer] cooked_beef
+clear @a[tag=sgTrainer] cooked_mutton
+clear @a[tag=sgTrainer] cooked_porkchop
+clear @a[tag=sgTrainer] cooked_rabbit
+clear @a[tag=sgTrainer] cooked_salmon
+clear @a[tag=sgTrainer] cooked_cod
 
 # sgRedditor
 
