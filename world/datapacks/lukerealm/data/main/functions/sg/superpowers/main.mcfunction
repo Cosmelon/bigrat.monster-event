@@ -31,6 +31,7 @@ execute if score ~powerRun sg matches 7 run function main:sg/superpowers/infocha
 
 # sgTrainer
 effect give @a[tag=sgTrainer] resistance 10000 2 true
+effect give @a[tag=sgTrainer] strength 10000 0 true
 execute as @a[tag=sgTrainer,nbt={Inventory:[{id:"minecraft:cooked_beef"}]}] run tellraw @s {"text":"Animals are sentient you fucker!"}
 execute as @a[tag=sgTrainer,nbt={Inventory:[{id:"minecraft:cooked_mutton"}]}] run tellraw @s {"text":"Animals are sentient you fucker!"}
 execute as @a[tag=sgTrainer,nbt={Inventory:[{id:"minecraft:cooked_porkchop"}]}] run tellraw @s {"text":"Animals are sentient you fucker!"}
@@ -45,7 +46,7 @@ clear @a[tag=sgTrainer] cooked_salmon
 clear @a[tag=sgTrainer] cooked_cod
 
 # sgRedditor
-execute as @a[tag=sgRedditor,scores={sgRedditorGrassUsed=0}] if predicate main:sneak_state run function main:sg/superpowers/redditgrass
+execute as @a[tag=sgRedditor,predicate=main:sneak_state,scores={sgRedditorGrass=0}] run function main:sg/superpowers/redditgrass
 effect give @a[tag=sgRedditor] slowness 10000 2 true
 execute as @a[tag=sgRedditor,nbt={Inventory:[{id:"minecraft:baked_potato"}]}] run tellraw @s {"text":"Only meat allowed!"}
 execute as @a[tag=sgRedditor,nbt={Inventory:[{id:"minecraft:bread"}]}] run tellraw @s {"text":"Only meat allowed!"}
@@ -72,7 +73,7 @@ clear @a[tag=sgRedditor] beetroot
 clear @a[tag=sgRedditor] beetroot_soup
 
 # sgCreeper
-
+execute as @a[tag=sgCreeper,predicate=main:sneak_state,scores={sgCreeperTNT=0}] run function main:sg/superpowers/creeper
 
 # sgWitch
 
