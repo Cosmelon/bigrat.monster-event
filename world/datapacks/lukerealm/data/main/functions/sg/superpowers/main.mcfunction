@@ -76,7 +76,10 @@ clear @a[tag=sgRedditor] beetroot_soup
 execute as @a[tag=sgCreeper,predicate=main:sneak_state,scores={sgCreeperTNT=0}] run function main:sg/superpowers/creeper
 
 # sgWitch
-
+scoreboard players add ~tick sgWitch 1
+execute if score ~tick sgWitch matches 20.. run scoreboard players add ~sec sgWitch 1
+execute if score ~tick sgWitch matches 20.. run scoreboard players set ~tick sgWitch 0
+execute if score ~sec sgWitch matches 20.. run execute as @a[tag=sgWitch] run function main:sg/superpowers/witchpot
 
 # sgLeprechaun
 
