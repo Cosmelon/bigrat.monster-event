@@ -45,6 +45,7 @@ clear @a[tag=sgTrainer] cooked_salmon
 clear @a[tag=sgTrainer] cooked_cod
 
 # sgRedditor
+execute as @a[tag=sgRedditor,scores={sgRedditorGrassUsed=0}] if predicate main:redditor_sneak run function main:sg/superpowers/redditgrass
 effect give @a[tag=sgRedditor] slowness 10000 2 true
 execute as @a[tag=sgRedditor,nbt={Inventory:[{id:"minecraft:baked_potato"}]}] run tellraw @s {"text":"Only meat allowed!"}
 execute as @a[tag=sgRedditor,nbt={Inventory:[{id:"minecraft:bread"}]}] run tellraw @s {"text":"Only meat allowed!"}

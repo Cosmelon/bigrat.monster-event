@@ -23,6 +23,7 @@ scoreboard players set ~shrinkNum sgBorder 0
 scoreboard players set ~shrinkActual sgBorder 0
 scoreboard players set ~shrinkTick sgBorder 0
 scoreboard players set ~shrinkSec sgBorder 0
+scoreboard players reset * sgRedditorGrassUsed 
 # need to tune these times later
 scoreboard players reset * sgDeaths
 worldborder set 6000000 1
