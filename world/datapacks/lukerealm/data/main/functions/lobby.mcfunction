@@ -58,3 +58,6 @@ scoreboard players set ~notifYellowDead sg 0
 scoreboard players set ~shrinkActual sgBorder 0
 scoreboard players set ~countDown sg 300
 scoreboard players set ~round sg 1
+scoreboard objectives remove sgRedditorGrass
+scoreboard objectives remove sgCreeperTNT
+scoreboard objectives remove sgWitch

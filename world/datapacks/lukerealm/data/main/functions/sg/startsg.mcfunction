@@ -19,6 +19,7 @@ scoreboard players set ~notifYellowDead sg 0
 
 scoreboard objectives add sgRedditorGrass dummy
 scoreboard objectives add sgCreeperTNT dummy
+scoreboard objectives add sgWitch dummy
 
 # spawnpoints
 spawnpoint @a -1983 90 -1983

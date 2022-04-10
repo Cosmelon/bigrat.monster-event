@@ -26,6 +26,7 @@ scoreboard players set ~shrinkSec sgBorder 0
 scoreboard players reset * sgRedditorGrassUsed
 scoreboard objectives remove sgRedditorGrass
 scoreboard objectives remove sgCreeperTNT
+scoreboard objectives remove sgWtich
 # need to tune these times later
 scoreboard players reset * sgDeaths
 worldborder set 6000000 1
