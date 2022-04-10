@@ -67,7 +67,7 @@ aliases:
   - team join Admin Solawr
   - team join Admin PokeyFinn
   testeradd:
-  - whitelist add MarvelFamily
+  - whitelist add Anrein
   - whitelist add TheGloryThief
   - whitelist add Visuumii
   - whitelist add Snake_Crumble
@@ -81,7 +81,7 @@ aliases:
   - whitelist add MSaadM
   - tellraw @a {"text":"Testers Added!","color":"green"}
   testercut:
-  - team leave MarvelFamily
+  - team leave Anrein
   - team leave TheGloryThief
   - team leave Visuumii
   - team leave Snake_Crumble
@@ -93,7 +93,7 @@ aliases:
   - team leave gemuse
   - team leave KittyCatElite
   - team leave MSaadM
-  - whitelist remove MarvelFamily
+  - whitelist remove Anrein
   - whitelist remove TheGloryThief
   - whitelist remove Visuumii
   - whitelist remove Snake_Crumble
