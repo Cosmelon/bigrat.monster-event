@@ -63,3 +63,4 @@ scoreboard objectives remove sgCreeperTNT
 scoreboard objectives remove sgWitch
 scoreboard objectives remove sgKills
 scoreboard objectives remove sgMedic
+scoreboard objectives remove sgPyro

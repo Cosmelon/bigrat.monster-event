@@ -29,6 +29,7 @@ scoreboard objectives remove sgCreeperTNT
 scoreboard objectives remove sgWtich
 scoreboard objectives remove sgKills
 scoreboard objectives remove sgMedic
+scoreboard objectives remove sgPyro
 # need to tune these times later
 scoreboard players reset * sgDeaths
 worldborder set 6000000 1

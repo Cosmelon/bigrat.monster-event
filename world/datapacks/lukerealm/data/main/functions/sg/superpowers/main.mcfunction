@@ -122,3 +122,10 @@ effect give @a[tag=sgMedic] weakness 100000 1 true
 effect give @a[tag=sgMedic] resistance 100000 1 true
 
 # sgPyro
+#look into making new loot tables for superpowers mode that buffs fire aspect enchantments
+scoreboard players add ~tick sgPyro 1
+execute if score ~tick sgPyro matches 20.. run scoreboard players set ~tick sgPyro 0
+execute if score ~tick sgPyro matches 20.. run scoreboard players add ~sec sgPyro 1
+execute if score ~sec sgPyro matches 15.. run scoreboard players set ~sec sgPyro 0
+execute if score ~sec sgPyro matches 15.. run item replace entity @a[tag=sgPyro] weapon.offhand with fire_charge{display:{Name:'[{"text":"Fire Ball!","italic":false}]',Lore:['[{"text":"Right click to throw!","italic":true}]']}}
+effect give @a[tag=sgPyro] fire_resistance 100000 0 true
