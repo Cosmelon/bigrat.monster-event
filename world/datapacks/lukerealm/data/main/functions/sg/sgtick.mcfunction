@@ -8,6 +8,9 @@
 #  sgBorder - tracks numbers and vars for the sg border
 #  sgConstant - Const value for randomizer
 #  sgMath - base randomizer scoreboard
+#  sgKills - tracks how many kills each player gets
+#  sgCreeperTNT - crepper powers
+#  sgWitch - witch powers
 
 # countdown
 scoreboard players remove ~countDown sg 1
@@ -62,7 +65,7 @@ execute if score ~notifRedDead sg matches 1 run execute if score ~notifBlueDead 
 
 # superpowers
 function main:sg/rng/range
-execute if score ~powersActive sg matches 1 if score ~powerRun sg matches ..7 run function main:sg/superpowers/main
+execute if score ~powersActive sg matches 1 if score ~powerRun sg matches ..9 run function main:sg/superpowers/main
 
 
 # effects
