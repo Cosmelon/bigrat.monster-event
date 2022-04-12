@@ -24,7 +24,7 @@ tag @a[tag=sgMedic] remove noPowers
 tag @a[tag=sgPyro] remove noPowers
 
 # explaining powers in chat
-execute if score ~powerRun sg matches 7 run function main:sg/superpowers/infochat
+execute if score ~powerRun sg matches 9 run function main:sg/superpowers/infochat
 
 # sgVampire
 
@@ -110,7 +110,6 @@ execute as @a[tag=sgLeprechaun,scores={sgKills=12}] run effect give @s speed 100
 execute as @a[tag=sgLeprechaun,scores={sgKills=13}] run effect give @s speed 100000 14 true
 execute as @a[tag=sgLeprechaun,scores={sgKills=14}] run effect give @s speed 100000 15 true
 execute as @a[tag=sgLeprechaun,scores={sgKills=15}] run effect give @s speed 100000 16 true
-
 
 # sgMedic
 
