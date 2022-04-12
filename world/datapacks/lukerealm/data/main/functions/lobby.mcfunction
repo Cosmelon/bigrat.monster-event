@@ -61,3 +61,4 @@ scoreboard players set ~round sg 1
 scoreboard objectives remove sgRedditorGrass
 scoreboard objectives remove sgCreeperTNT
 scoreboard objectives remove sgWitch
+scoreboard objectives remove sgKills
