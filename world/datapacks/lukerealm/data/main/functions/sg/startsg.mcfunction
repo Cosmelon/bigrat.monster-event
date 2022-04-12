@@ -20,6 +20,7 @@ scoreboard players set ~notifYellowDead sg 0
 scoreboard objectives add sgRedditorGrass dummy
 scoreboard objectives add sgCreeperTNT dummy
 scoreboard objectives add sgWitch dummy
+scoreboard objectives add sgMedic dummy
 scoreboard objectives add sgKills playerKillCount
 
 # spawnpoints
