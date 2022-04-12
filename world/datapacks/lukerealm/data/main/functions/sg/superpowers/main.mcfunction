@@ -112,6 +112,13 @@ execute as @a[tag=sgLeprechaun,scores={sgKills=14}] run effect give @s speed 100
 execute as @a[tag=sgLeprechaun,scores={sgKills=15}] run effect give @s speed 100000 16 true
 
 # sgMedic
-
+#look into adding randomizer for potions
+scoreboard players add ~tick sgMedic 1
+execute if score ~tick sgMedic matches 20.. run scoreboard players set ~tick sgMedic 0
+execute if score ~tick sgMedic matches 20.. run scoreboard players add ~sec sgMedic 1
+execute if score ~sec sgMedic matches 60.. run scoreboard players set ~sec sgMedic 0
+execute if score ~sec sgMedic matches 60 run item replace entity @a weapon.offhand with splash_potion{Potion:"minecraft:healing"}
+effect give @a[tag=sgMedic] weakness 100000 1 true
+effect give @a[tag=sgMedic] resistance 100000 1 true
 
 # sgPyro
