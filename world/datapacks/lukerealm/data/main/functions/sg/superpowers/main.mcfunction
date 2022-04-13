@@ -2,6 +2,17 @@
 #  center of effects for the powers
 
 # sgVampire
+execute as @a[tag=sgVampire,scores={sgVampire=238}] run effect give @s minecraft:blindness 2 0 true
+execute as @a[tag=sgVampire,scores={sgVampire=238}] run title @s title "Alert!"
+execute as @a[tag=sgVampire,scores={sgVampire=238}] run title @s subtitle "Too much light!"
+execute as @a[tag=sgVampire,scores={sgVampire=238}] run effect give @s wither 10000 0 true
+execute as @a[tag=sgVampire,scores={sgVampire=..237}] run effect clear @s wither
+scoreboard players add ~tick sgVampire 1
+execute if score ~tick sgVampire matches 20.. run scoreboard players set ~tick vamp 0
+#just going to live with the model jumping, at least for now
+execute if score ~tick sgVampire matches 0 as @a[tag=sgVampire,predicate=pred:thats_lit] run item modify entity @s weapon.offhand pred:umbrella_sub
+execute if score ~tick sgVampire matches 0 as @a[tag=sgVampire,predicate=pred:thats_dark] run item modify entity @s weapon.offhand pred:umbrella_add
+execute as @a[tag=sgVampire] store result score @s sgVampire run data get entity @s Inventory[{Slot:-106b}].tag.Damage
 
 
 # sgTrainer
