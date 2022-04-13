@@ -17,6 +17,7 @@ scoreboard players set ~notifBlueDead sg 0
 scoreboard players set ~notifGreenDead sg 0
 scoreboard players set ~notifYellowDead sg 0
 
+scoreboard objectives add sgVampire dummy
 scoreboard objectives add sgRedditorGrass dummy
 scoreboard objectives add sgCreeperTNT dummy
 scoreboard objectives add sgWitch dummy
