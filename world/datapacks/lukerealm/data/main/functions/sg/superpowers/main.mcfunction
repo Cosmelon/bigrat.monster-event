@@ -3,8 +3,8 @@
 
 # sgVampire
 execute as @a[tag=sgVampire,scores={sgVampire=238}] run effect give @s minecraft:blindness 2 0 true
-execute as @a[tag=sgVampire,scores={sgVampire=238}] run title @s title "Alert!"
-execute as @a[tag=sgVampire,scores={sgVampire=238}] run title @s subtitle "Too much light!"
+execute as @a[tag=sgVampire,scores={sgVampire=238}] run title @s title "THE LIGHT BURNS!"
+execute as @a[tag=sgVampire,scores={sgVampire=238}] run title @s subtitle "Go seek shelter!"
 execute as @a[tag=sgVampire,scores={sgVampire=238}] run effect give @s wither 10000 0 true
 execute as @a[tag=sgVampire,scores={sgVampire=..237}] run effect clear @s wither
 scoreboard players add ~tick sgVampire 1
