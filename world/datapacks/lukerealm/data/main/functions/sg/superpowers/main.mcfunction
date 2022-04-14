@@ -10,10 +10,10 @@ execute as @a[tag=sgVampire,scores={sgVampire=..237}] run effect clear @s wither
 scoreboard players add ~tick sgVampire 1
 execute if score ~tick sgVampire matches 20.. run scoreboard players set ~tick vamp 0
 #just going to live with the model jumping, at least for now
-execute if score ~tick sgVampire matches 0 as @a[tag=sgVampire,predicate=pred:thats_lit] run item modify entity @s weapon.offhand pred:umbrella_sub
-execute if score ~tick sgVampire matches 0 as @a[tag=sgVampire,predicate=pred:thats_dark] run item modify entity @s weapon.offhand pred:umbrella_add
-execute as @a[tag=sgVampire] store result score @s sgVampire run data get entity @s Inventory[{Slot:-106b}].tag.Damage
-
+execute if score ~tick sgVampire matches 0 as @a[tag=sgVampire,predicate=pred:thats_lit,nbt={Inventory:[{Slot:-106b},{id:"minecraft:shears"}]}] run item modify entity @s weapon.offhand pred:umbrella_sub
+execute if score ~tick sgVampire matches 0 as @a[tag=sgVampire,predicate=pred:thats_dark,nbt={Inventory:[{Slot:-106b},{id:"minecraft:shears"}]}] run item modify entity @s weapon.offhand pred:umbrella_add
+execute as @a[tag=sgVampire,nbt={Inventory:[{Slot:-106b},{id:"minecraft:shears"}]}] store result score @s sgVampire run data get entity @s Inventory[{Slot:-106b}].tag.Damage
+execute as @a[tag=sgVampire,nbt=!{Inventory:[{Slot:-106b},{id:"minecraft:shears"}]}] run item replace entity @s weapon.offhand with shears
 
 # sgTrainer
 effect give @a[tag=sgTrainer] resistance 10000 2 true
