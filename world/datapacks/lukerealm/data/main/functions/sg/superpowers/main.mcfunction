@@ -103,7 +103,7 @@ scoreboard players add ~tick sgMedic 1
 execute if score ~tick sgMedic matches 20.. run scoreboard players set ~tick sgMedic 0
 execute if score ~tick sgMedic matches 20.. run scoreboard players add ~sec sgMedic 1
 execute if score ~sec sgMedic matches 60.. run scoreboard players set ~sec sgMedic 0
-execute if score ~sec sgMedic matches 60 run item replace entity @a weapon.offhand with splash_potion{Potion:"minecraft:healing"}
+execute if score ~sec sgMedic matches 60 run item replace entity @a[tag=sgMedic] weapon.offhand with splash_potion{Potion:"minecraft:healing"}
 effect give @a[tag=sgMedic] weakness 100000 1 true
 effect give @a[tag=sgMedic] resistance 100000 1 true
 
