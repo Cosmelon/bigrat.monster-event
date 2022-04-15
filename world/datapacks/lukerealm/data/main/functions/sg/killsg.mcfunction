@@ -2,7 +2,7 @@
 title @a title ""
 title @a subtitle ""
 # power remove
-tag @a add noPowers
+tag @a[tag=player] add noPowers
 tag @a remove sgVampire
 tag @a remove sgTrainer
 tag @a remove sgRedditor

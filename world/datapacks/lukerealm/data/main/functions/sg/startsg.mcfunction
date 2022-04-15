@@ -112,12 +112,12 @@ execute if score ~powersActive sg matches 1 run function main:sg/superpowers/mai
 # reset powers
 tag @a[tag=player] add noPowers
 # power remove
-tag @a remove power1
-tag @a remove power2
-tag @a remove power3
-tag @a remove power4
-tag @a remove power5
-tag @a remove power6
-tag @a remove power7
-tag @a remove power8
+tag @a remove sgVampire
+tag @a remove sgTrainer
+tag @a remove sgRedditor
+tag @a remove sgCreeper
+tag @a remove sgWitch
+tag @a remove sgLeprechaun
+tag @a remove sgMedic
+tag @a remove sgPyro
 effect clear @a[team=!Admin]
