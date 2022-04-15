@@ -29,6 +29,18 @@ schedule clear main:sg/border/s2warn
 schedule clear main:sg/border/s3warn
 schedule clear main:sg/border/s4warn
 schedule clear main:sg/border/s5warn
+# reset powers
+tag @a[tag=player] add noPowers
+# power remove
+tag @a remove sgVampire
+tag @a remove sgTrainer
+tag @a remove sgRedditor
+tag @a remove sgCreeper
+tag @a remove sgWitch
+tag @a remove sgLeprechaun
+tag @a remove sgMedic
+tag @a remove sgPyro
+effect clear @a[team=!Admin]
 
 # solution to infinite game repeat problem
 execute if score ~red sgPlayers matches 0 if score ~blue sgPlayers matches 1.. if score ~green sgPlayers matches 0 if score ~yellow sgPlayers matches 0 run function main:sg/killsg
