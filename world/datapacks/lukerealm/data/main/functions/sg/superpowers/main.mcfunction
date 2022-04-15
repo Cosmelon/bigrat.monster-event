@@ -94,10 +94,10 @@ execute as @a[tag=sgLeprechaun,nbt={Inventory:[{id:"minecraft:iron_chestplate"}]
 execute as @a[tag=sgLeprechaun,nbt={Inventory:[{id:"minecraft:iron_leggings"}]}] run give @s golden_leggings
 execute as @a[tag=sgLeprechaun,nbt={Inventory:[{id:"minecraft:iron_boots"}]}] run give @s golden_boots
 execute as @a[tag=sgLeprechaun,nbt={Inventory:[{id:"minecraft:apple"}]}] run give @s golden_apple
-clear @a[tag=sgLeprechaun] golden_helmet
-clear @a[tag=sgLeprechaun] golden_chestplate
-clear @a[tag=sgLeprechaun] golden_leggings
-clear @a[tag=sgLeprechaun] golden_boots
+clear @a[tag=sgLeprechaun] iron_helmet
+clear @a[tag=sgLeprechaun] iron_chestplate
+clear @a[tag=sgLeprechaun] iron_leggings
+clear @a[tag=sgLeprechaun] iron_boots
 clear @a[tag=sgLeprechaun] apple
 execute as @a[tag=sgLeprechaun,scores={sgKills=0}] run effect give @s speed 100000 1 true
 execute as @a[tag=sgLeprechaun,scores={sgKills=1}] run effect give @s speed 100000 2 true
