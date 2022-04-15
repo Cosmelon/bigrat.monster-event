@@ -123,8 +123,8 @@ execute if score ~tick sgMedic matches 20.. run scoreboard players set ~tick sgM
 execute if score ~tick sgMedic matches 20.. run scoreboard players add ~sec sgMedic 1
 execute if score ~sec sgMedic matches 20.. run scoreboard players set ~sec sgMedic 0
 execute if score ~sec sgMedic matches 20 run item replace entity @a[tag=sgMedic] weapon.offhand with potion{Potion:"minecraft:healing"}
-effect give @a[tag=sgMedic] weakness 100000 1 true
-effect give @a[tag=sgMedic] speed 100000 1 true
+effect give @a[tag=sgMedic] weakness 100000 0 true
+effect give @a[tag=sgMedic] speed 100000 0 true
 
 # sgPyro
 #look into making new loot tables for superpowers mode that buffs fire aspect enchantments
