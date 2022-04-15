@@ -58,9 +58,12 @@ scoreboard players set ~notifYellowDead sg 0
 scoreboard players set ~shrinkActual sgBorder 0
 scoreboard players set ~countDown sg 300
 scoreboard players set ~round sg 1
+scoreboard objectives remove sgVampire
 scoreboard objectives remove sgRedditorGrass
 scoreboard objectives remove sgCreeperTNT
 scoreboard objectives remove sgWitch
 scoreboard objectives remove sgKills
 scoreboard objectives remove sgMedic
 scoreboard objectives remove sgPyro
+bossbar set minecraft:sgshrink visible false
+bossbar set minecraft:sgshrinkactual visible false
