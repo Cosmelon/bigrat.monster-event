@@ -11,6 +11,9 @@
 #  sgKills - tracks how many kills each player gets
 #  sgCreeperTNT - crepper powers
 #  sgWitch - witch powers
+#  sgLeprechaun - leprechaun powers
+#  sgMedic - medic thing
+#  sgPyro - pyro powers
 
 # countdown
 scoreboard players remove ~countDown sg 1
@@ -27,6 +30,7 @@ execute if score ~countDown sg matches 20 run title @a title {"text":"1","color"
 execute if score ~countDown sg matches 0 run title @a title {"text":"GO!","color":"green"}
 execute if score ~countDown sg matches 0 run execute at @a[tag=player] run fill ~1 ~1 ~1 ~-1 ~2 ~-1 air replace barrier
 execute if score ~countDown sg matches -20 run function main:cleartitle
+execute if score ~countDown sg matches -20 run function main:sg/superpowers/powersetup
 
 # tracks # of players on a team
 execute store result score ~aliveRed sg if entity @a[team=Red,gamemode=!spectator]

@@ -75,6 +75,7 @@ clear @a[tag=sgRedditor] beetroot_soup
 
 # sgCreeper
 scoreboard players add ~tick sgCreeperTNT 1
+execute if score ~tick sgCreeperTNT matches 20.. run scoreboard players set ~tick sgCreeperTNT 0
 execute if score ~tick sgCreeperTNT matches 20.. run scoreboard players add @a[tag=sgCreeper,scores={sgCreeperTNT=1..}] sgCreeperTNT 1
 execute as @a[tag=sgCreeper,scores={sgCreeperTNT=20..}] run scoreboard players set @s sgCreeperTNT 0
 execute as @a[tag=sgCreeper,scores={sgCreeperTNT=0}] run title @s actionbar {"text":"Press sneak to blow!","color":"#94C973"}
