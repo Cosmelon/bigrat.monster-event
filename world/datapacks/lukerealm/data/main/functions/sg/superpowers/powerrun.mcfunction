@@ -25,7 +25,7 @@ tag @a[tag=sgPyro] remove noPowers
 # zeroing the boards
 scoreboard players set @a[tag=sgVampire] sgVampire 0
 #scoreboard players set @a[tag=sgTrainer] sgTrainer 0  -- refrence
-scoreboard players set @a[tag=sgRedditor] sgRedditor 0
+scoreboard players set @a[tag=sgRedditor] sgRedditorGrass 0
 scoreboard players set @a[tag=sgCreeper] sgCreeper 0
 scoreboard players set @a[tag=sgWitch] sgWitch 0
 scoreboard players set @a[tag=sgLeprechaun] sgLeprechaun 0
