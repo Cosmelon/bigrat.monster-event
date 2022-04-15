@@ -13,7 +13,7 @@ execute if score ~tick sgVampire matches 20.. run scoreboard players set ~tick s
 execute if score ~tick sgVampire matches 0 as @a[tag=sgVampire,predicate=main:thats_lit,nbt={Inventory:[{Slot:-106b},{id:"minecraft:shears"}]}] run item modify entity @s weapon.offhand main:umbrella_sub
 execute if score ~tick sgVampire matches 0 as @a[tag=sgVampire,predicate=main:thats_dark,nbt={Inventory:[{Slot:-106b},{id:"minecraft:shears"}]}] run item modify entity @s weapon.offhand main:umbrella_add
 execute as @a[tag=sgVampire,nbt={Inventory:[{Slot:-106b},{id:"minecraft:shears"}]}] store result score @s sgVampire run data get entity @s Inventory[{Slot:-106b}].tag.Damage
-#execute as @a[tag=sgVampire,nbt=!{Inventory:[{Slot:-106b},{id:"minecraft:shears"}]}] run item replace entity @s weapon.offhand with shears
+execute as @a[tag=sgVampire,nbt=!{Inventory:[{Slot:-106b},{id:"minecraft:shears"}]}] run item replace entity @s weapon.offhand with shears
 
 # sgTrainer
 effect give @a[tag=sgTrainer] resistance 10000 2 true

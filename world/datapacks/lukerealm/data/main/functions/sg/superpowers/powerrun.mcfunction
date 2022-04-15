@@ -22,5 +22,15 @@ tag @a[tag=sgLeprechaun] remove noPowers
 tag @a[tag=sgMedic] remove noPowers
 tag @a[tag=sgPyro] remove noPowers
 
+# zeroing the boards
+scoreboard players set @a[tag=sgVampire] sgVamprie 0
+#scoreboard players set @a[tag=sgTrainer] sgTrainer 0  -- refrence
+scoreboard players set @a[tag=sgRedditor] sgRedditor 0
+scoreboard players set @a[tag=sgCreeper] sgCreeper 0
+scoreboard players set @a[tag=sgWitch] sgWitch 0
+scoreboard players set @a[tag=sgLeprechaun] sgLeprechaun 0
+scoreboard players set @a[tag=sgMedic] sgMedic 0
+scoreboard players set @a[tag=sgPyro] sgPyro 0
+
 # explaining powers in chat
 execute if score ~powerRun sg matches 9 run function main:sg/superpowers/infochat
