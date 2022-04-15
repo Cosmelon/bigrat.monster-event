@@ -3,12 +3,14 @@ title @a title ""
 title @a subtitle ""
 # power remove
 tag @a add noPowers
-tag @a remove power1
-tag @a remove power2
-tag @a remove power3
-tag @a remove power4
-tag @a remove power5
-tag @a remove power6
+tag @a remove sgVampire
+tag @a remove sgTrainer
+tag @a remove sgRedditor
+tag @a remove sgCreeper
+tag @a remove sgWitch
+tag @a remove sgLeprechaun
+tag @a remove sgMedic
+tag @a remove sgPyro
 effect clear @a[team=!Admin]
 # scoreboard resets
 scoreboard players set ~gameActive sg 0
