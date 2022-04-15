@@ -1,6 +1,7 @@
 # kills sg
 title @a title ""
 title @a subtitle ""
+kill @e[type=zombie]
 # power remove
 tag @a[tag=player] add noPowers
 tag @a remove sgVampire
