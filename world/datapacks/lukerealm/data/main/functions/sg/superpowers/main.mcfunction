@@ -106,8 +106,8 @@ execute as @a[tag=sgLeprechaun,scores={sgKills=15}] run effect give @s speed 100
 scoreboard players add ~tick sgMedic 1
 execute if score ~tick sgMedic matches 20.. run scoreboard players set ~tick sgMedic 0
 execute if score ~tick sgMedic matches 20.. run scoreboard players add ~sec sgMedic 1
-execute if score ~sec sgMedic matches 60.. run scoreboard players set ~sec sgMedic 0
-execute if score ~sec sgMedic matches 60 run item replace entity @a[tag=sgMedic] weapon.offhand with splash_potion{Potion:"minecraft:healing"}
+execute if score ~sec sgMedic matches 20.. run scoreboard players set ~sec sgMedic 0
+execute if score ~sec sgMedic matches 20 run item replace entity @a[tag=sgMedic] weapon.offhand with potion{Potion:"minecraft:healing"}
 effect give @a[tag=sgMedic] weakness 100000 1 true
 effect give @a[tag=sgMedic] resistance 100000 1 true
 
@@ -116,6 +116,7 @@ effect give @a[tag=sgMedic] resistance 100000 1 true
 scoreboard players add ~tick sgPyro 1
 execute if score ~tick sgPyro matches 20.. run scoreboard players set ~tick sgPyro 0
 execute if score ~tick sgPyro matches 20.. run scoreboard players add ~sec sgPyro 1
-execute if score ~sec sgPyro matches 15.. run scoreboard players set ~sec sgPyro 0
-execute if score ~sec sgPyro matches 15.. run item replace entity @a[tag=sgPyro] weapon.offhand with fire_charge{display:{Name:'[{"text":"Fire Ball!","italic":false}]',Lore:['[{"text":"Right click to throw!","italic":true}]']}}
+execute if score ~sec sgPyro matches 30.. run scoreboard players set ~sec sgPyro 0
+execute if score ~sec sgPyro matches 30.. run item replace entity @a[tag=sgPyro] weapon.offhand with fire_charge{display:{Name:'[{"text":"Fire Ball!","italic":false}]',Lore:['[{"text":"Right click to throw!","italic":true}]']}}
 effect give @a[tag=sgPyro] fire_resistance 100000 0 true
+effect give @a[tag=sgPyro] strength 100000 1 true 
