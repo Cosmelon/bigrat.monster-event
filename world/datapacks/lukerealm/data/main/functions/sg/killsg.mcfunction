@@ -23,7 +23,7 @@ scoreboard players set ~shrinkNum sgBorder 0
 scoreboard players set ~shrinkActual sgBorder 0
 scoreboard players set ~shrinkTick sgBorder 0
 scoreboard players set ~shrinkSec sgBorder 0
-scoreboard players reset @a sgRedditorGrassUsed
+scoreboard players reset * sgRedditorGrass
 scoreboard objectives remove sgVampire
 scoreboard objectives remove sgRedditorGrass
 scoreboard objectives remove sgCreeperTNT

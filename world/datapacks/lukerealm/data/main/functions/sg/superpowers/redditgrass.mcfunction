@@ -10,4 +10,4 @@ execute at @s run summon zombie ~-2 ~ ~2 {CustomName:'{"text":"Mob Mentality"}',
 
 execute at @s run title @a[distance=..13] title {"text":"Braindead Circle!","color":"red","bold":true}
 
-scoreboard players set @s sgRedditorGrassUsed 1
+scoreboard players set @s sgRedditorGrass 1
