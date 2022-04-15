@@ -1,6 +1,16 @@
 # superpowers mode tick file
 #  center of effects for the powers
 
+# takes away powers on death
+execute as @a[scores={sgDeaths=1..}] run tag @s remove sgVampire
+execute as @a[scores={sgDeaths=1..}] run tag @s remove sgTrainer
+execute as @a[scores={sgDeaths=1..}] run tag @s remove sgRedditor
+execute as @a[scores={sgDeaths=1..}] run tag @s remove sgCreeper
+execute as @a[scores={sgDeaths=1..}] run tag @s remove sgWitch
+execute as @a[scores={sgDeaths=1..}] run tag @s remove sgLeprechaun
+execute as @a[scores={sgDeaths=1..}] run tag @s remove sgMedic
+execute as @a[scores={sgDeaths=1..}] run tag @s remove sgPyro
+
 # sgVampire
 execute as @a[tag=sgVampire,scores={sgVampire=238}] run effect give @s minecraft:blindness 2 0 true
 execute as @a[tag=sgVampire,scores={sgVampire=238}] run title @s title "THE LIGHT BURNS!"
@@ -13,7 +23,12 @@ execute if score ~tick sgVampire matches 20.. run scoreboard players set ~tick s
 execute if score ~tick sgVampire matches 0 as @a[tag=sgVampire,predicate=main:thats_lit,nbt={Inventory:[{Slot:-106b},{id:"minecraft:shears"}]}] run item modify entity @s weapon.offhand main:umbrella_sub
 execute if score ~tick sgVampire matches 0 as @a[tag=sgVampire,predicate=main:thats_dark,nbt={Inventory:[{Slot:-106b},{id:"minecraft:shears"}]}] run item modify entity @s weapon.offhand main:umbrella_add
 execute as @a[tag=sgVampire,nbt={Inventory:[{Slot:-106b},{id:"minecraft:shears"}]}] store result score @s sgVampire run data get entity @s Inventory[{Slot:-106b}].tag.Damage
-execute as @a[tag=sgVampire,nbt=!{Inventory:[{Slot:-106b},{id:"minecraft:shears"}]}] run item replace entity @s weapon.offhand with shears
+#execute as @a[tag=sgVampire,nbt=!{Inventory:[{id:"minecraft:shears"}]}] run item replace entity @s weapon.offhand with shears
+#execute as @a[tag=sgVampire] if predicate main:sneak_state run title @s title "Hood up!"
+#execute as @a[tag=sgVampire] if predicate main:sneak_state run title @s actionbar "Umbrella recharging"
+#execute as @a[tag=sgVampire] if predicate main:sneak_state run effect give @s blindness 2 0 true
+#execute as @a[tag=sgVampire] if predicate main:sneak_state run effect give @s slowness 4 0 true
+#execute as @a[tag=sgVampire] if predicate main:sneak_state if data entity @s Inventory[{Slot:-106b}] run item modify entity @s weapon.offhand main:umbrella_add
 
 # sgTrainer
 effect give @a[tag=sgTrainer] resistance 10000 2 true
