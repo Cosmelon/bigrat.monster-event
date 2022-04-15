@@ -66,7 +66,7 @@ execute if score ~notifRedDead sg matches 1 run execute if score ~notifBlueDead 
 # superpowers
 function main:sg/rng/range
 execute if score ~powersActive sg matches 1 if score ~powerRun sg matches ..9 run function main:sg/superpowers/powerrun
-execute if score ~powersActive sg matches 1 run function main:sg/superpowers/main
+execute if score ~powersActive sg matches 1 if score ~countDown sg matches ..600 run function main:sg/superpowers/main
 
 
 # effects
