@@ -1,15 +1,3 @@
-# This is the commands configuration file for Bukkit.
-# For documentation on how to make use of this file, check out the Bukkit Wiki at
-# https://www.spigotmc.org/go/commands-yml
-# 
-# If you need help on this file, feel free to join us on irc or leave a message
-# on the forums asking for advice.
-# 
-# IRC: #spigot @ irc.spi.gt
-#    (If this means nothing to you, just go to https://www.spigotmc.org/go/irc )
-# Forums: https://www.spigotmc.org/
-# Bug tracker: https://www.spigotmc.org/go/bugs
-
 command-block-overrides: []
 ignore-vanilla-permissions: false
 aliases:
@@ -69,7 +57,6 @@ aliases:
   testeradd:
   - whitelist add AK1089
   - whitelist add Spicv
-  - whitelist add Dumbmutt
   - whitelist add wrait
   - whitelist add 0l_
   - whitelist add Bowilla
@@ -93,7 +80,6 @@ aliases:
   testercut:
   - team leave AK1089
   - team leave Spicv
-  - team leave Dumbmutt
   - team leave wrait
   - team leave 0l_
   - team leave Bowilla
@@ -115,7 +101,6 @@ aliases:
   - team leave zhar
   - whitelist remove AK1089
   - whitelist remove Spicv
-  - whitelist remove Dumbmutt
   - whitelist remove wrait
   - whitelist remove 0l_
   - whitelist remove Bowilla
@@ -135,7 +120,7 @@ aliases:
   - whitelist remove TheGloryThief
   - whitelist remove Visuumii
   - whitelist remove zhar
-  - tellraw @a {"text":"Testers Removed!","color":"red"}
+  - tellraw @a[tag=admin] {"text":"Testers Removed!","color":"red"}
   nvoff:
   - tag @s add noNV
   nvon:
