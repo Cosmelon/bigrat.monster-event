@@ -15,22 +15,20 @@ execute as @a[scores={sgDeaths=1..}] run tag @s remove sgPyro
 execute as @a[tag=sgVampire,scores={sgVampire=238}] run effect give @s blindness 2 0 true
 execute as @a[tag=sgVampire,scores={sgVampire=238}] run title @s title "THE LIGHT BURNS!"
 execute as @a[tag=sgVampire,scores={sgVampire=238}] run title @s subtitle "Go seek shelter!"
-execute as @a[tag=sgVampire,scores={sgVampire=238}] run effect give @s wither 10000 0 true
-execute as @a[tag=sgVampire,scores={sgVampire=..237},predicate=main:offhand_shears] run effect clear @s wither
-execute as @a[tag=sgVampire,scores={sgVampire=..237},predicate=main:offhand_shears] run effect clear @s blindness
+execute as @a[tag=sgVampire,scores={sgVampire=238}] run effect give @s wither 2 0 true
 scoreboard players add ~tick sgVampire 1
 execute if score ~tick sgVampire matches 30.. run scoreboard players set ~tick sgVampire 0
 #   just going to live with the model jumping, at least for now
 execute if score ~tick sgVampire matches 0 as @a[tag=sgVampire,predicate=main:thats_lit,predicate=!main:sneak_state,nbt={Inventory:[{Slot:-106b},{id:"minecraft:shears"}]}] run item modify entity @s weapon.offhand main:umbrella_sub
 execute if score ~tick sgVampire matches 0 as @a[tag=sgVampire,predicate=main:thats_dark,predicate=!main:sneak_state,nbt={Inventory:[{Slot:-106b},{id:"minecraft:shears"}]}] run item modify entity @s weapon.offhand main:umbrella_add
-execute as @a[tag=sgVampire,nbt={Inventory:[{Slot:-106b},{id:"minecraft:shears"}]}] store result score @s sgVampire run data get entity @s Inventory[{Slot:-106b}].tag.Damag
+execute as @a[tag=sgVampire,nbt={Inventory:[{Slot:-106b},{id:"minecraft:shears"}]}] store result score @s sgVampire run data get entity @s Inventory[{Slot:-106b}].tag.Damage
 #   main:offhand_shears detects if you have shears in your offhand
 execute as @a[tag=sgVampire,predicate=!main:offhand_shears] run function main:sg/superpowers/novamp_shears
 #   hood function
 execute as @a[tag=sgVampire,predicate=main:sneak_state] run title @s title "Hood up!"
 execute as @a[tag=sgVampire,predicate=main:sneak_state] run title @s subtitle "Umbrella recharging"
-execute as @a[tag=sgVampire,predicate=main:sneak_state,predicate=!main:offhand_shears] run effect give @s blindness 2 0 true
-execute as @a[tag=sgVampire,predicate=main:sneak_state] run effect give @s slowness 2 0 true
+execute as @a[tag=sgVampire,predicate=main:sneak_state] run effect give @s blindness 2 0 true
+execute as @a[tag=sgVampire,predicate=main:sneak_state] run effect give @s slowness 4 0 true
 execute as @a[tag=sgVampire,predicate=main:sneak_state] if data entity @s Inventory[{Slot:-106b}] run item modify entity @s weapon.offhand main:hood_add
 
 
