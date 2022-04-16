@@ -84,6 +84,7 @@ execute if score ~tick sgRedditorGrass matches 20.. run scoreboard players set ~
 scoreboard players add ~tick sgCreeperTNT 1
 execute if score ~tick sgCreeperTNT matches 20.. run scoreboard players add @a[tag=sgCreeper,scores={sgCreeperTNT=1..}] sgCreeperTNT 1
 execute if score ~tick sgCreeperTNT matches 20.. run scoreboard players set ~tick sgCreeperTNT 0
+attribute @a[tag=sgCreeper,limit=1,sort=random] generic.max_health get 10
 execute at @a[tag=sgCreeper] run playsound minecraft:entity.experience_orb.pickup master @a[tag=sgCreeper,scores={sgCreeperTNT=20..}] ~ ~ ~ 0.32 0.62
 execute as @a[tag=sgCreeper,scores={sgCreeperTNT=20..}] run scoreboard players set @s sgCreeperTNT 0
 execute as @a[tag=sgCreeper,scores={sgCreeperTNT=0}] run title @s actionbar {"text":"Press sneak to blow!","color":"dark_red","bold":true}
