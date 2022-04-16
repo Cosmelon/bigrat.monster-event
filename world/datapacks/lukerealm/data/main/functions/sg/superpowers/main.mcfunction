@@ -31,6 +31,7 @@ execute as @a[tag=sgVampire,nbt={Inventory:[{Slot:-106b},{id:"minecraft:shears"}
 #execute as @a[tag=sgVampire] if predicate main:sneak_state if data entity @s Inventory[{Slot:-106b}] run item modify entity @s weapon.offhand main:umbrella_add
 
 # sgTrainer
+effect give @a[tag=sgTrainer] hunger 10000 0 true
 effect give @a[tag=sgTrainer] resistance 10000 2 true
 effect give @a[tag=sgTrainer] strength 10000 0 true
 execute as @a[tag=sgTrainer,nbt={Inventory:[{id:"minecraft:cooked_beef"}]}] run tellraw @s {"text":"Animals are sentient you fucker!"}
@@ -83,6 +84,7 @@ execute as @a[tag=sgCreeper,scores={sgCreeperTNT=0}] run title @s actionbar {"te
 execute as @a[tag=sgCreeper,predicate=main:sneak_state,scores={sgCreeperTNT=0}] run function main:sg/superpowers/creeper
 
 # sgWitch
+effect give @a[tag=sgWitch] weakness 10000 1 true
 scoreboard players add ~tick sgWitch 1
 execute if score ~tick sgWitch matches 20.. run scoreboard players add ~sec sgWitch 1
 execute if score ~tick sgWitch matches 20.. run scoreboard players set ~tick sgWitch 0
@@ -91,11 +93,15 @@ execute if score ~sec sgWitch matches 20.. run execute as @a[tag=sgWitch] run fu
 # sgLeprechaun
 #execute as @a[tag=sgLeprechaun] if data entity @s Inventory[{Slot:100b,id:"minecraft:iron_boots"}] run item replace entity @s armor.feet with iron_boots
 # IMRPOVE THIS FOR FUCKS SAKE
+execute as @a[tag=sgLeprechaun,nbt={Inventory:[{id:"minecraft:iron_sword"}]}] run give @s golden_sword
+execute as @a[tag=sgLeprechaun,nbt={Inventory:[{id:"minecraft:iron_axe"}]}] run give @s golden_axe
 execute as @a[tag=sgLeprechaun,nbt={Inventory:[{id:"minecraft:iron_helmet"}]}] run give @s golden_helmet
 execute as @a[tag=sgLeprechaun,nbt={Inventory:[{id:"minecraft:iron_chestplate"}]}] run give @s golden_chestplate
 execute as @a[tag=sgLeprechaun,nbt={Inventory:[{id:"minecraft:iron_leggings"}]}] run give @s golden_leggings
 execute as @a[tag=sgLeprechaun,nbt={Inventory:[{id:"minecraft:iron_boots"}]}] run give @s golden_boots
 execute as @a[tag=sgLeprechaun,nbt={Inventory:[{id:"minecraft:apple"}]}] run give @s golden_apple
+clear @a[tag=sgLeprechaun] iron_sword
+clear @a[tag=sgLeprechaun] iron_axe
 clear @a[tag=sgLeprechaun] iron_helmet
 clear @a[tag=sgLeprechaun] iron_chestplate
 clear @a[tag=sgLeprechaun] iron_leggings
