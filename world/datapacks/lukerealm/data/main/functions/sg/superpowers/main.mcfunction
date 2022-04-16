@@ -133,7 +133,7 @@ execute as @a[tag=sgLeprechaun,scores={sgKills=15}] run effect give @s speed 100
 # sgMedic
 scoreboard players add ~tick sgMedic 1
 execute if score ~tick sgMedic matches 20.. run scoreboard players add @a[tag=sgMedic,scores={sgMedic=1..}] sgMedic 1
-execute as @a[tag=sgMedic,scores={sgMedic=20..}] run scoreboard players set @s sgMedic 0
+execute as @a[tag=sgMedic,scores={sgMedic=30..}] run scoreboard players set @s sgMedic 0
 #  piggybacking off the already existing randomizer for what potion to give
 execute as @a[tag=sgMedic,scores={sgMedic=0}] if score out sgMath matches ..4 run item replace entity @s weapon.offhand with potion{Potion:"minecraft:healing"}
 execute as @a[tag=sgMedic,scores={sgMedic=0}] if score out sgMath matches 5.. run item replace entity @s weapon.offhand with potion{Potion:"minecraft:regeneration"}
