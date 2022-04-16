@@ -56,7 +56,7 @@ tellraw @a[tag=sgCreeper] {"text":"Creeper_4/8","color":"#94C973","bold":true}
 tellraw @a[tag=sgCreeper] {"text":""}
 tellraw @a[tag=sgCreeper] {"text":"hisssssss.... BOOM!","color":"#94C973"}
 tellraw @a[tag=sgCreeper] {"text":""}
-tellraw @a[tag=sgCreeper] {"text":"In exchange for your health, you were given the ability to summon tnt whenever you press sneak!","color":"#94C973"}
+tellraw @a[tag=sgCreeper] {"text":"In exchange for your health, you were given the ability to summon tnt by pressing sneak!","color":"#94C973"}
 tellraw @a[tag=sgCreeper] {"text":"______________________________","bold":true}
 
 # Witch (blue)
@@ -65,8 +65,8 @@ tellraw @a[tag=sgWitch] {"text":"Witch_5/8","color":"#85C1E9","bold":true}
 tellraw @a[tag=sgWitch] {"text":""}
 tellraw @a[tag=sgWitch] {"text":"Witchy bitchy","color":"#85C1E9"}
 tellraw @a[tag=sgWitch] {"text":""}
-tellraw @a[tag=sgWitch] {"text":"In mastering the occult, your powers grant you a throwable potion every thirty seconds. But in doing so, your muscles have aged poorly and no longer work like they used to.","color":"#85C1E9"}
-tellraw @a[tag=sgWitch] {"text":"description2:line1","color":"#85C1E9"}
+tellraw @a[tag=sgWitch] {"text":"In mastering the occult, your powers grant you a throwable potion every thirty seconds","color":"#85C1E9"}
+tellraw @a[tag=sgWitch] {"text":"But in doing so, your muscles have aged poorly and no longer work as well as they used to.","color":"#85C1E9"}
 tellraw @a[tag=sgWitch] {"text":"______________________________","bold":true}
 
 # Leprechaun (indigo)

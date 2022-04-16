@@ -90,11 +90,10 @@ execute as @a[tag=sgCreeper,scores={sgCreeperTNT=0}] run title @s actionbar {"te
 execute as @a[tag=sgCreeper,predicate=main:sneak_state,scores={sgCreeperTNT=0}] run function main:sg/superpowers/creeper
 
 # sgWitch
-effect give @a[tag=sgWitch] weakness 10000 1 true
 scoreboard players add ~tick sgWitch 1
-execute if score ~tick sgWitch matches 20.. run scoreboard players add ~sec sgWitch 1
-execute if score ~tick sgWitch matches 20.. run scoreboard players set ~tick sgWitch 0
-execute if score ~sec sgWitch matches 20.. run execute as @a[tag=sgWitch] run function main:sg/superpowers/witchpot
+execute if score ~tick sgWitch matches 20.. run scoreboard players add @a[tag=sgWitch] sgWitch 1
+execute as @a[tag=sgWitch,scores={sgWitch=30..}] run function main:sg/superpowers/witchpot
+effect give @a[tag=sgWitch] weakness 10000 1 true
 
 # sgLeprechaun
 #execute as @a[tag=sgLeprechaun] if data entity @s Inventory[{Slot:100b,id:"minecraft:iron_boots"}] run item replace entity @s armor.feet with iron_boots
