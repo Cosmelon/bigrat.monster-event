@@ -2,6 +2,7 @@
 title @a title ""
 title @a subtitle ""
 kill @e[type=zombie]
+kill @e[type=item]
 # power remove
 tag @a[tag=player] add noPowers
 tag @a remove sgVampire

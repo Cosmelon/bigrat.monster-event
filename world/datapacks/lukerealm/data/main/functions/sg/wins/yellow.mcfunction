@@ -41,6 +41,7 @@ tag @a remove sgLeprechaun
 tag @a remove sgMedic
 tag @a remove sgPyro
 kill @e[type=zombie]
+kill @e[type=item]
 effect clear @a[team=!Admin]
 
 # solution to infinite game repeat problem

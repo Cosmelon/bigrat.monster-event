@@ -11,6 +11,7 @@ gamemode adventure @a[tag=player]
 gamemode spectator @a[tag=!player]
 effect clear @a
 kill @e[type=zombie]
+kill @e[type=item]
 
 # reset notifs
 scoreboard players set ~notifRedDead sg 0
