@@ -17,6 +17,7 @@ execute as @a[tag=sgVampire,scores={sgVampire=238}] run title @s title "THE LIGH
 execute as @a[tag=sgVampire,scores={sgVampire=238}] run title @s subtitle "Go seek shelter!"
 execute as @a[tag=sgVampire,scores={sgVampire=238}] run effect give @s wither 10000 0 true
 execute as @a[tag=sgVampire,scores={sgVampire=..237},predicate=main:offhand_shears] run effect clear @s wither
+execute as @a[tag=sgVampire,scores={sgVampire=..237},predicate=main:offhand_shears] run effect clear @s blindness
 scoreboard players add ~tick sgVampire 1
 execute if score ~tick sgVampire matches 30.. run scoreboard players set ~tick sgVampire 0
 #   just going to live with the model jumping, at least for now
@@ -28,8 +29,8 @@ execute as @a[tag=sgVampire,predicate=!main:offhand_shears] run function main:sg
 #   hood function
 execute as @a[tag=sgVampire,predicate=main:sneak_state] run title @s title "Hood up!"
 execute as @a[tag=sgVampire,predicate=main:sneak_state] run title @s subtitle "Umbrella recharging"
-execute as @a[tag=sgVampire,predicate=main:sneak_state] run effect give @s blindness 2 0 true
-execute as @a[tag=sgVampire,predicate=main:sneak_state] run effect give @s slowness 4 0 true
+execute as @a[tag=sgVampire,predicate=main:sneak_state,predicate=!main:offhand_shears] run effect give @s blindness 2 0 true
+execute as @a[tag=sgVampire,predicate=main:sneak_state] run effect give @s slowness 2 0 true
 execute as @a[tag=sgVampire,predicate=main:sneak_state] if data entity @s Inventory[{Slot:-106b}] run item modify entity @s weapon.offhand main:hood_add
 
 
