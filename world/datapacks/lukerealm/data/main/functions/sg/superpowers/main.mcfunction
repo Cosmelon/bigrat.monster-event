@@ -52,7 +52,7 @@ scoreboard players add ~tick sgRedditorGrass 1
 execute if score ~tick sgRedditorGrass matches 20.. run scoreboard players add @a[tag=sgRedditor,scores={sgRedditorGrass=1..}] sgRedditorGrass 1
 execute as @a[tag=sgRedditor,scores={sgRedditorGrass=45..}] run scoreboard players set @s sgRedditorGrass 0
 execute as @a[tag=sgRedditor,scores={sgRedditorGrass=0}] run title @s actionbar {"text":"Press sneak to unleash the hoard! (45s cooldown)","color":"dark_red"}
-execute as @a[tag=sgRedditor,predicate=main:sneak_state,scores={sgRedditorGrass=0}] run function main:redditgrasstwo
+execute as @a[tag=sgRedditor,predicate=main:sneak_state,scores={sgRedditorGrass=0}] run function main:redditgrass
 execute if score ~tick sgRedditorGrass matches 20.. run scoreboard players set ~tick sgRedditorGrass 0
 effect give @a[tag=sgRedditor] slowness 10000 2 true
 execute as @a[tag=sgRedditor,nbt={Inventory:[{id:"minecraft:baked_potato"}]}] run tellraw @s {"text":"Only meat allowed!"}
