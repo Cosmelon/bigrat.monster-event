@@ -131,14 +131,15 @@ execute as @a[tag=sgLeprechaun,scores={sgKills=14}] run effect give @s speed 100
 execute as @a[tag=sgLeprechaun,scores={sgKills=15}] run effect give @s speed 100000 16 true
 
 # sgMedic
-#look into adding randomizer for potions
 scoreboard players add ~tick sgMedic 1
-execute if score ~tick sgMedic matches 20.. run scoreboard players set ~tick sgMedic 0
-execute if score ~tick sgMedic matches 20.. run scoreboard players add ~sec sgMedic 1
-execute if score ~sec sgMedic matches 20.. run scoreboard players set ~sec sgMedic 0
-execute if score ~sec sgMedic matches 20 run item replace entity @a[tag=sgMedic] weapon.offhand with potion{Potion:"minecraft:healing"}
+execute if score ~tick sgMedic matches 20.. run scoreboard players add @a[tag=sgMedic,scores={sgMedic=1..}] sgMedic 1
+execute as @a[tag=sgMedic,scores={sgMedic=20..}] run scoreboard players set @s sgMedic 0
+#  piggybacking off the already existing randomizer for what potion to give
+execute as @a[tag=sgMedic,scores={sgMedic=0}] if score out sgMath matches ..4 run item replace entity @s weapon.offhand with potion{Potion:"minecraft:healing"}
+execute as @a[tag=sgMedic,scores={sgMedic=0}] if score out sgMath matches 5.. run item replace entity @s weapon.offhand with potion{Potion:"minecraft:regeneration"}
+execute as @a[tag=sgMedic,scores={sgMedic=0}] run scoreboard players add @s sgMedic 1
 effect give @a[tag=sgMedic] weakness 100000 0 true
-effect give @a[tag=sgMedic] speed 100000 0 true
+effect give @a[tag=sgMedic] resistance 100000 0 true
 
 # sgPyro
 #look into making new loot tables for superpowers mode that buffs fire aspect enchantments
