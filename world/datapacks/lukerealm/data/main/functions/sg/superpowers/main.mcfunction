@@ -80,7 +80,7 @@ execute if score ~tick sgCreeperTNT matches 20.. run scoreboard players set ~tic
 execute at @a[tag=sgCreeper] run playsound minecraft:entity.experience_orb.pickup master @a[tag=sgCreeper,scores={sgCreeperTNT=20..}] ~ ~ ~ 0.32 0.62
 execute as @a[tag=sgCreeper,scores={sgCreeperTNT=20..}] run scoreboard players set @s sgCreeperTNT 0
 execute as @a[tag=sgCreeper,scores={sgCreeperTNT=0}] run title @s actionbar {"text":"Press sneak to blow!","color":"dark_red","bold":true}
-execute as @a[tag=sgCreeper,predicate=pred:sneak_state,scores={sgCreeperTNT=0}] run function main:sg/superpowers/creeper
+execute as @a[tag=sgCreeper,predicate=main:sneak_state,scores={sgCreeperTNT=0}] run function main:sg/superpowers/creeper
 
 # sgWitch
 scoreboard players add ~tick sgWitch 1
