@@ -138,6 +138,7 @@ execute as @a[tag=sgMedic,scores={sgMedic=20..}] run scoreboard players set @s s
 execute as @a[tag=sgMedic,scores={sgMedic=0}] if score out sgMath matches ..4 run item replace entity @s weapon.offhand with potion{Potion:"minecraft:healing"}
 execute as @a[tag=sgMedic,scores={sgMedic=0}] if score out sgMath matches 5.. run item replace entity @s weapon.offhand with potion{Potion:"minecraft:regeneration"}
 execute as @a[tag=sgMedic,scores={sgMedic=0}] run scoreboard players add @s sgMedic 1
+execute if score ~tick sgMedic matches 20.. run scoreboard players set ~tick sgMedic 0
 effect give @a[tag=sgMedic] weakness 100000 0 true
 effect give @a[tag=sgMedic] resistance 100000 0 true
 
