@@ -53,7 +53,7 @@ execute if score ~tick sgRedditorGrass matches 20.. run scoreboard players add @
 execute as @a[tag=sgRedditor,scores={sgRedditorGrass=45..}] run scoreboard players set @s sgRedditorGrass 0
 execute as @a[tag=sgRedditor,scores={sgRedditorGrass=0}] run title @s actionbar {"text":"Press sneak to unleash the hoard! (45s cooldown)","color":"dark_red"}
 
-execute as @a[tag=sgRedditor,predicate=main:sneak_state,scores={sgRedditorGrass=0}] run function main:redditgrass
+execute as @a[tag=sgRedditor,predicate=main:sneak_state,scores={sgRedditorGrass=0}] run function main:sg/superpowers/redditgrass
 
 effect give @a[tag=sgRedditor] slowness 10000 2 true
 
