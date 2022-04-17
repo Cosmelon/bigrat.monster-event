@@ -99,6 +99,7 @@ execute as @a[tag=sgWitch,scores={sgWitch=30..}] run function main:sg/superpower
 effect give @a[tag=sgWitch] weakness 10000 1 true
 execute if score ~tick sgWitch matches 20.. run scoreboard players set ~tick sgWitch 0
 
+
 # sgLeprechaun
 #execute as @a[tag=sgLeprechaun] if data entity @s Inventory[{Slot:100b,id:"minecraft:iron_boots"}] run item replace entity @s armor.feet with iron_boots
 # IMRPOVE THIS FOR FUCKS SAKE
@@ -138,11 +139,9 @@ scoreboard players add ~tick sgMedic 1
 execute if score ~tick sgMedic matches 20.. run scoreboard players add @a[tag=sgMedic,scores={sgMedic=1..}] sgMedic 1
 execute as @a[tag=sgMedic,scores={sgMedic=30..}] run scoreboard players set @s sgMedic 0
 #  piggybacking off the already existing randomizer for what potion to give
-execute as @a[tag=sgMedic,scores={sgMedic=0},nbt=!{Inventory:[{Slot:-106b},{id:"minecraft:glass_bottle"}]}] run title @s actionbar {"text":"Put a glass bottle in your offhand to fill up!"}
-execute as @a[tag=sgMedic,scores={sgMedic=0},nbt={Inventory:[{Slot:-106b},{id:"minecraft:glass_bottle"}]}] if score out sgMath matches ..4 run item replace entity @s weapon.offhand with potion{Potion:"minecraft:healing"}
-execute as @a[tag=sgMedic,scores={sgMedic=0},nbt={Inventory:[{Slot:-106b},{id:"minecraft:glass_bottle"}]}] if score out sgMath matches 5.. run item replace entity @s weapon.offhand with potion{Potion:"minecraft:regeneration"}
-execute as @a[tag=sgmedic,scores={sgMedic=0}] run playsound minecraft:block.brewing_stand.brew voice @s
-execute as @a[tag=sgMedic,scores={sgMedic=0},nbt=!{Inventory:[{Slot:-106b},{id:"minecraft:glass_bottle"}]}] run scoreboard players add @s sgMedic 1
+execute as @a[tag=sgMedic,scores={sgMedic=0}] if score out sgMath matches ..4 run item replace entity @s weapon.offhand with potion{Potion:"minecraft:healing"}
+execute as @a[tag=sgMedic,scores={sgMedic=0}] if score out sgMath matches 5.. run item replace entity @s weapon.offhand with potion{Potion:"minecraft:regeneration"}
+execute as @a[tag=sgMedic,scores={sgMedic=0}] run scoreboard players add @s sgMedic 1
 execute if score ~tick sgMedic matches 20.. run scoreboard players set ~tick sgMedic 0
 effect give @a[tag=sgMedic] weakness 100000 0 true
 effect give @a[tag=sgMedic] resistance 100000 0 true
