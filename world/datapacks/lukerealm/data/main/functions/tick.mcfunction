@@ -37,8 +37,8 @@ team join Spectator @a[team=]
 execute as @a store result score @s yCos run data get entity @s Pos[1]
 
 # lobbytick
-execute if score $lobby currentGame matches 1 run effect give @a weakness 10000 100 true
-execute if score $lobby currentGame matches 1 run effect give @a saturation 10000 100 true
+execute if score $lobby currentGame matches 1 if score $lobbyEff currentGame matches 1 run effect give @a weakness 10000 100 true
+execute if score $lobby currentGame matches 1 if score $lobbyEff currentGame matches 1 run effect give @a saturation 10000 100 true
 
 # spleeftick
 execute if score $gameActive spleef matches 1 run function main:spleef/sptick

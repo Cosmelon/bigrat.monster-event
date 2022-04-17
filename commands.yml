@@ -131,3 +131,7 @@ aliases:
   - execute at $$1 run fill ~5 ~-1 ~5 ~-5 ~-1 ~-5 air replace minecraft:snow_block
   pearls:
   - give @s ender_pearl 16
+  lobbyeffon:
+  - scoreboard players set $lobbyEff currentGame 1
+  lobbyeffoff:
+  - scoreboard players set $lobbyEff currentGame 0
