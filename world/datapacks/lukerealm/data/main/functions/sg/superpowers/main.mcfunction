@@ -97,6 +97,7 @@ scoreboard players add ~tick sgWitch 1
 execute if score ~tick sgWitch matches 20.. run scoreboard players add @a[tag=sgWitch] sgWitch 1
 execute as @a[tag=sgWitch,scores={sgWitch=30..}] run function main:sg/superpowers/witchpot
 effect give @a[tag=sgWitch] weakness 10000 1 true
+execute if score ~tick sgWitch matches 20.. run scoreboard players set ~tick sgWitch 0
 
 # sgLeprechaun
 #execute as @a[tag=sgLeprechaun] if data entity @s Inventory[{Slot:100b,id:"minecraft:iron_boots"}] run item replace entity @s armor.feet with iron_boots
