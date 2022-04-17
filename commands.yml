@@ -132,7 +132,7 @@ aliases:
   pearls:
   - give @s ender_pearl 16
   lobbyEon:
-  - scoreboard players set $lobbyEff currentGame 1
+  - scoreboard players set !lobbyEff currentGame 1
   lobbyEoff:
-  - scoreboard players set $lobbyEff currentGame 0
+  - scoreboard players set !lobbyEff currentGame 0
   - effect clear @s
