@@ -20,6 +20,8 @@ bossbar set minecraft:spleefshrinkactual visible false
 execute as @a run playsound minecraft:entity.wither.death master @s ~ ~ ~ 10
 gamemode spectator @a[team=!Admin]
 
+schedule clear main:spleef/border/removetop
+
 
 
 # solution to infinite game repeat problem
