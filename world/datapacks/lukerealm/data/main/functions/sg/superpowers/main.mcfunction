@@ -148,10 +148,9 @@ effect give @a[tag=sgMedic] resistance 100000 0 true
 
 # sgPyro
 #look into making new loot tables for superpowers mode that buffs fire aspect enchantments
-scoreboard players add ~tick sgPyro 1
-execute if score ~tick sgPyro matches 20.. run scoreboard players set ~tick sgPyro 0
-execute if score ~tick sgPyro matches 20.. run scoreboard players add ~sec sgPyro 1
-execute if score ~sec sgPyro matches 30.. run scoreboard players set ~sec sgPyro 0
-execute if score ~sec sgPyro matches 30.. run item replace entity @a[tag=sgPyro] weapon.offhand with fire_charge{display:{Name:'[{"text":"Fire Ball!","italic":false}]',Lore:['[{"text":"Right click to throw!","italic":true}]']}}
+execute as @a[tag=sgPyro,nbt={Inventory:[{id:"minecraft:fire_charge"},{Slot:8b}]}] run item replace entity @s hotbar.8 with fire_charge
+kill @e[type=item,nbt={Item:{id:"minecraft:fire_charge"}}]
+# find a way to allow admins to have fireballs
+execute as @a[tag=!sgPyro] run clear @s fire_charge
 effect give @a[tag=sgPyro] fire_resistance 100000 0 true
 effect give @a[tag=sgPyro] strength 100000 1 true 
