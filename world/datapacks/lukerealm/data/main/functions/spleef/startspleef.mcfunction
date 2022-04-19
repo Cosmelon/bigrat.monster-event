@@ -41,6 +41,9 @@ scoreboard players set $shrinkActual spleefBorder 0
 scoreboard players set $shrink1Break spleefBorder 0
 scoreboard players set $shrink2Break spleefBorder 0
 scoreboard players set $shrink3Break spleefBorder 0
+schedule function main:spleef/border/shrink1 95s replace
+schedule function main:spleef/border/shrink2 170s replace
+schedule function main:spleef/border/shrink3 250s replace
 
 # give shovels and kb
 schedule function main:spleef/shovelsandkb 22s replace
