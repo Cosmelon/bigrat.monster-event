@@ -3,8 +3,9 @@
 # no need to type it in every single time
 
 scoreboard players remove !countDown race 1
-effect give @a water_breathing 100000 0 true
-effect give @a speed 10000 0 true
+effect give @a[team=!Admin] water_breathing 100000 0 true
+effect give @a[team=!Admin] speed 100000 0 true
+effect give @a[team=!Admin] weakness 100000 0 true
 gamemode spectator @a[tag=!player,team=!Admin]
 
 # stuff for the stopwatch
