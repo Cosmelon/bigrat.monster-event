@@ -46,7 +46,7 @@ aliases:
   killsg:
   - function main:sg/killsg
   lobby:
-  - tp @s -181.5 5 137.5 0 10
+  - tp @s 1000.5 28 -6000.5
   allspec:
   - team join Spectator @a
   addadmins:
