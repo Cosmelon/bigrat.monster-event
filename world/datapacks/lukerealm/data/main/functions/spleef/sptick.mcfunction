@@ -130,10 +130,7 @@ execute if score $shrinkActual spleefBorder matches 0 run bossbar set minecraft:
 execute if score $shrink1Timer spleefBorder matches 0 run bossbar set minecraft:spleefshrink1timer visible false
 execute if score $shrink2Timer spleefBorder matches 0 run bossbar set minecraft:spleefshrink2timer visible false
 execute if score $shrink3Timer spleefBorder matches 0 run bossbar set minecraft:spleefshrink3timer visible false
-# starts shrink
-execute if score $shrink1Timer spleefBorder matches 0 run function main:spleef/border/shrink1
-execute if score $shrink2Timer spleefBorder matches 0 run function main:spleef/border/shrink2
-execute if score $shrink3Timer spleefBorder matches 0 run function main:spleef/border/shrink3
+# starts shrink - moved as schedule to startspleef.mcfunction
 #remove blocks
 function main:spleef/border/conc/shrink1conc
 function main:spleef/border/conc/shrink2conc
