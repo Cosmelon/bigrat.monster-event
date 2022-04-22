@@ -135,4 +135,4 @@ aliases:
   - scoreboard players set !lobbyEff currentGame 1
   lobbyEoff:
   - scoreboard players set !lobbyEff currentGame 0
-  - effect clear @s
+  - effect clear @a
