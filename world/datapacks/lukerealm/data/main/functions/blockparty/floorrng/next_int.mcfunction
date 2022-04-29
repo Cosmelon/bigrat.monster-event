@@ -13,10 +13,10 @@
 #        return r;
 #    }
 
-function bp:floorrng/lcg
+function main:blockparty/floorrng/lcg
 
-scoreboard players operation ?temp blockPartyFloor = out blockPartyFloor
-scoreboard players operation #out blockPartyFloor %= ?range blockPartyFloor
-scoreboard players operation ?temp blockPartyFloor -= out blockPartyFloor
-scoreboard players operation ?temp blockPartyFloor += ?m1 blockPartyFloor
-execute if score #temp blockParty matches ..-1 run function bp:floorrng/next_int
+scoreboard players operation ?temp bpFloor = #out bpFloor
+scoreboard players operation #out bpFloor %= ?range bpFloor
+scoreboard players operation ?temp bpFloor -= #out bpFloor
+scoreboard players operation ?temp bpFloor += ?m1 bpFloor
+execute if score ?temp blockParty matches ..-1 run function main:blockparty/floorrng/next_int
