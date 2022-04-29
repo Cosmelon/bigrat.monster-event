@@ -1,0 +1,1 @@
+execute unless score #lcg blockPartyTimer matches ..0 unless score #lcg blockPartyTimer matches 1.. run function bp:timerrng/uuid_reset
