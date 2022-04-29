@@ -1,5 +1,3 @@
-# Newton-Raphson, 4 iterations approach
-#
 # in = lower range
 # in1 = upper range
 # out = random number between range
