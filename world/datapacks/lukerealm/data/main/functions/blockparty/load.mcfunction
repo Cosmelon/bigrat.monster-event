@@ -3,14 +3,20 @@ scoreboard players reset $tick blockParty
 scoreboard players reset $sec blockParty
 
 scoreboard objectives add blockMath dummy
-scoreboard objectives add blockConstant dummy
+scoreboard objectives add bpConstant dummy
+
+scoreboard objectives add bpColor dummy
+scoreboard objectives add bpFloor dummy
+scoreboard objectives add bpSound dummy
+scoreboard objectives add bpStop dummy
+scoreboard objectives add bpTimer dummy 
+scoreboard objectives add bpDead dummy
 
 
-
-scoreboard players set #2 blockConstant 2
-scoreboard players set #1000 blockConstant 1000
-scoreboard players set #10000 blockConstant 10000
-scoreboard players set #lcg blockConstant 1103515245
+scoreboard players set #2 bpConstant 2
+scoreboard players set #1000 bpConstant 1000
+scoreboard players set #10000 bpConstant 10000
+scoreboard players set #lcg bpConstant 1103515245
 function bp:colorrng/init
 function bp:floorrng/init
 function bp:timerrng/init
