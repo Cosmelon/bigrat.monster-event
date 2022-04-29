@@ -1,0 +1,1 @@
+The rng math uses the ? differenciator unlike the regular scoreboards for blockParty which use #

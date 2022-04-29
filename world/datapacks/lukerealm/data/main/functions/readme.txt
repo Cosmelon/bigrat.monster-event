@@ -5,4 +5,4 @@ Right here, I'm just detailing the prefixes that I use for the different game sc
 !race
 ~sg
 $spleef
-+blockParty
+#blockParty
