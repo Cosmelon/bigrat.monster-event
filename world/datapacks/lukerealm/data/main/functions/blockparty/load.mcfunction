@@ -10,13 +10,13 @@ scoreboard objectives add bpFloor dummy
 scoreboard objectives add bpSound dummy
 scoreboard objectives add bpStop dummy
 scoreboard objectives add bpTimer dummy 
-scoreboard objectives add bpDead dummy
+scoreboard objectives add bpDead deathCount
 
 
 scoreboard players set #2 bpConstant 2
 scoreboard players set #1000 bpConstant 1000
 scoreboard players set #10000 bpConstant 10000
 scoreboard players set #lcg bpConstant 1103515245
-function bp:colorrng/init
-function bp:floorrng/init
-function bp:timerrng/init
+function main:blockparty/colorrng/init
+function main:blockparty/floorrng/init
+function main:blockparty/timerrng/init
