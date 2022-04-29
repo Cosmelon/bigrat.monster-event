@@ -6,17 +6,17 @@
 # out = random number between range
 
 
-scoreboard players add in1 blockPartyColor 1
-scoreboard players operation #range blockPartyColor = in1 blockPartyColor
-scoreboard players operation #range blockPartyColor -= in blockPartyColor
+scoreboard players add in1 bpColor 1
+scoreboard players operation #range bpColor = in1 bpColor
+scoreboard players operation #range bpColor -= in bpColor
 
-scoreboard players operation #m1 blockPartyColor = #range blockPartyColor
-scoreboard players remove #m1 blockPartyColor 1
-function bp:colorrng/next_int
-scoreboard players operation out blockPartyColor += in blockPartyColor
+scoreboard players operation #m1 bpColor = #range bpColor
+scoreboard players remove #m1 bpColor 1
+function main:blockparty/colorrng/next_int
+scoreboard players operation out bpColor += in bpColor
 
-scoreboard players reset #m1 blockPartyColor
-scoreboard players remove in1 blockPartyColor 1
+scoreboard players reset #m1 bpColor
+scoreboard players remove in1 bpColor 1
 
 
 # find a way to make sure that the floor doesn't change in between floor changes

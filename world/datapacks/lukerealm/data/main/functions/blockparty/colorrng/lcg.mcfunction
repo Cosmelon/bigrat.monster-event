@@ -4,6 +4,6 @@
 #
 # a = 1103515245, c = 12345
 
-scoreboard players operation #lcg blockPartyColor *= #lcg blockConstant
-scoreboard players add #lcg blockPartyColor 12345
-scoreboard players operation out blockPartyColor = #lcg blockPartyColor
+scoreboard players operation #lcg bpColor *= #lcg bpConstant
+scoreboard players add #lcg bpColor 12345
+scoreboard players operation out bpColor = #lcg bpColor

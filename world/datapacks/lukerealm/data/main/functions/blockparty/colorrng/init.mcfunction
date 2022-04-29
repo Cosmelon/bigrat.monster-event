@@ -1,1 +1,1 @@
-execute unless score #lcg blockPartyColor matches ..0 unless score #lcg blockPartyColor matches 1.. run function bp:colorrng/uuid_reset
+execute unless score #lcg bpColor matches ..0 unless score #lcg bpColor matches 1.. run function main:blockparty/colorrng/uuid_reset

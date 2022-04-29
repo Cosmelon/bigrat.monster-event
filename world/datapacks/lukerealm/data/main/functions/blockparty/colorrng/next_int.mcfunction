@@ -13,10 +13,10 @@
 #        return r;
 #    }
 
-function bp:colorrng/lcg
+function main:blockparty/colorrng/lcg
 
-scoreboard players operation #temp blockPartyColor = out blockPartyColor
-scoreboard players operation out blockPartyColor %= #range blockPartyColor
-scoreboard players operation #temp blockPartyColor -= out blockPartyColor
-scoreboard players operation #temp blockPartyColor += #m1 blockPartyColor
-execute if score #temp blockPartyColor matches ..-1 run function bp:colorrng/next_int
+scoreboard players operation #temp bpColor = out bpColor
+scoreboard players operation out bpColor %= #range bpColor
+scoreboard players operation #temp bpColor -= out bpColor
+scoreboard players operation #temp bpColor += #m1 bpColor
+execute if score #temp bpColor matches ..-1 run function main:blockparty/colorrng/uuid_reset
