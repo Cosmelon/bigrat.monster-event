@@ -4,6 +4,6 @@
 #
 # a = 1103515245, c = 12345
 
-scoreboard players operation #lcg blockPartyFloor *= #lcg blockConstant
-scoreboard players add #lcg blockPartyFloor 12345
-scoreboard players operation out blockPartyFloor = #lcg blockPartyFloor
+scoreboard players operation ?lcg bpFloor *= ?lcg bpConstant
+scoreboard players add ?lcg bpFloor 12345
+scoreboard players operation #out bpFloor = ?lcg bpFloor

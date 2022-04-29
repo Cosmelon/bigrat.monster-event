@@ -15,8 +15,8 @@
 
 function bp:floorrng/lcg
 
-scoreboard players operation #temp blockPartyFloor = out blockPartyFloor
-scoreboard players operation out blockPartyFloor %= #range blockPartyFloor
-scoreboard players operation #temp blockPartyFloor -= out blockPartyFloor
-scoreboard players operation #temp blockPartyFloor += #m1 blockPartyFloor
+scoreboard players operation ?temp blockPartyFloor = out blockPartyFloor
+scoreboard players operation #out blockPartyFloor %= ?range blockPartyFloor
+scoreboard players operation ?temp blockPartyFloor -= out blockPartyFloor
+scoreboard players operation ?temp blockPartyFloor += ?m1 blockPartyFloor
 execute if score #temp blockParty matches ..-1 run function bp:floorrng/next_int
