@@ -136,3 +136,5 @@ aliases:
   lobbyEoff:
   - scoreboard players set !lobbyEff currentGame 0
   - effect clear @a
+  snowboots:
+  - item replace entity $$1 armor.feet with leather_boots
