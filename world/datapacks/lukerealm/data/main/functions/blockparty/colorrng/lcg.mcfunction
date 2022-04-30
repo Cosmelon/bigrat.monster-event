@@ -6,4 +6,4 @@
 
 scoreboard players operation #lcg bpColor *= #lcg bpConstant
 scoreboard players add #lcg bpColor 12345
-scoreboard players operation ?out bpColor = #lcg bpColor
+scoreboard players operation out bpColor = #lcg bpColor
