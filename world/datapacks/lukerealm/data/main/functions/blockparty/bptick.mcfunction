@@ -39,7 +39,7 @@ execute if score ?stopSec bpStop matches 1.. run function main:blockparty/remove
 
 
 # player death method
-kill @a[x=932.5,dx=20,y=-26,dy=2,z=863.5,dz=20]
+kill @a[x=-2000.5,dx=20,y=43,dy=2,z=3000.5,dz=20]
 # death messaage
 function main:blockparty/checkdead
 # red win
