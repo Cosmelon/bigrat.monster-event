@@ -22,7 +22,7 @@ execute positioned -2000.5 57 -6000.5 run tp @a[tag=player,limit=1,sort=random,d
 execute positioned -2000.5 57 -6000.5 run tp @a[tag=player,limit=1,sort=random,distance=..3] -1996.5 57 3009.5 facing entity @e[limit=1,sort=nearest,name="?midL"]
 execute positioned -2000.5 57 -6000.5 run tp @a[tag=player,limit=1,sort=random,distance=..3] -2004.5 57 2991.5 facing entity @e[limit=1,sort=nearest,name="?midL"]
 kill @e[limit=1,name="?midL"]
-
+tp @a[tag=!player] -2000.5 61 3023.5
 
 
 scoreboard players set ?gameActive blockParty 1
