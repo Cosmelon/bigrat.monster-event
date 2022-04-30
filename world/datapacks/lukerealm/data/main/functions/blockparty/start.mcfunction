@@ -6,6 +6,7 @@ scoreboard players set ?floorSwitch blockParty 0
 scoreboard players set ?microTick blockParty 0
 scoreboard players set ?countDown blockParty 400
 scoreboard players set ?stopSec bpStop -100
+scoreboard players set ?tick bpStop 0
 scoreboard players set @a bpSound 0
 
 scoreboard players set ?notifRedDead bpDead 0
