@@ -2,6 +2,10 @@
 
 # Floor randomizer function when floor switcher is active
 execute if score ?floorSwitch blockParty matches 1 run function main:blockparty/floorrng/floors
+# removes the blocks
+execute if score ?stopSec bpStop matches -3 run function main:blockparty/floorrng/removefloor
+# get rid of blocks in player inventory when inactive randomizer
+execute if score ?stopSec bpStop matches 1.. run function main:blockparty/removeblockitems
 
 # main countdown system
 scoreboard players remove ?countDown blockParty 1
@@ -30,12 +34,6 @@ execute if score ?countDown blockParty matches ..0 run scoreboard players add ?t
 execute if score ?stopSec bpStop matches -15 run function main:blockparty/timerrng/range
 execute if score ?stopSec bpStop matches -15..0 run scoreboard players set ?floorSwitch blockParty 0
 execute if score ?stopSec bpStop matches 1.. run scoreboard players set ?floorSwitch blockParty 1
-
-# removes the blocks
-execute if score ?stopSec bpStop matches -3 run function main:blockparty/floorrng/removefloor
-
-# get rid of blocks in player inventory when inactive randomizer
-execute if score ?stopSec bpStop matches 1.. run function main:blockparty/removeblockitems
 
 
 # player death method
