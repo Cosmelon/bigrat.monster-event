@@ -1,5 +1,10 @@
 # main tick file for block party, don't fuck up
 
+# effects
+effect give @a weakness 100000 0 true
+effect give @a saturation 100000 0 true
+execute if score ?countDown blockParty matches ..0 run effect give @a[tag=player,tag=bpAlive] invisibility 100000 0 true
+
 # Floor randomizer function when floor switcher is active
 execute if score ?floorSwitch blockParty matches 1 run function main:blockparty/floorrng/floors
 # removes the blocks

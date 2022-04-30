@@ -6,7 +6,6 @@ title @a subtitle ""
 title @a actionbar ""
 gamemode adventure @a
 clear @a[team=!Admin]
-effect give @a[tag=player] invisibility 100000 0 true
 item replace entity @a[team=Red] armor.feet with leather_boots{display:{color:16066343},Unbreakable:1b}
 item replace entity @a[team=Blue] armor.feet with leather_boots{display:{color:2635263},Unbreakable:1b}
 item replace entity @a[team=Green] armor.feet with leather_boots{display:{color:1208897},Unbreakable:1b}
