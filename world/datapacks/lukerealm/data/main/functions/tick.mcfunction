@@ -74,4 +74,4 @@ execute as @a[tag=admin] if score ~gameActive sg matches 0 if score @s sgPowerCh
 scoreboard players reset @a[scores={sgPowerCheck=1..}] sgPowerCheck
 
 # blockparty tick
-execute if score #gameActive blockParty matches 1 run function bp:bptick
+execute if score ?gameActive blockParty matches 1 run function bp:bptick
