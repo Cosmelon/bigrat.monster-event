@@ -1,6 +1,6 @@
 # Insert your loading commands here! (These commands run when you reload the datapack.) 
-scoreboard players reset $tick blockParty
-scoreboard players reset $sec blockParty
+scoreboard players reset ?tick blockParty
+scoreboard players reset ?sec blockParty
 
 scoreboard objectives add blockMath dummy
 scoreboard objectives add bpConstant dummy

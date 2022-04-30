@@ -4,6 +4,6 @@
 #
 # a = 1103515245, c = 12345
 
-scoreboard players operation ?lcg bpTimer *= ?lcg bpConstant
-scoreboard players add ?lcg bpTimer 12345
-scoreboard players operation #out bpTimer = ?lcg bpTimer
+scoreboard players operation #lcg bpTimer *= #lcg bpConstant
+scoreboard players add #lcg bpTimer 12345
+scoreboard players operation ?out bpTimer = #lcg bpTimer
