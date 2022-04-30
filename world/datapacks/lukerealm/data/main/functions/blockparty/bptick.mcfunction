@@ -1,7 +1,7 @@
 # main tick file for block party, don't fuck up
 
 # Floor randomizer function when floor switcher is active
-execute if score ?floorSwitch blockParty matches 1 run function bp:floorrng/floors
+execute if score ?floorSwitch blockParty matches 1 run function main:blockparty/floorrng/floors
 
 # main countdown system
 scoreboard players remove ?countDown blockParty 1
