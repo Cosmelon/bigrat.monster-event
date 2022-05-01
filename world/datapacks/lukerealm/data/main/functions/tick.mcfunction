@@ -80,3 +80,5 @@ execute store result score ?red blockParty if entity @a[team=Red,tag=bpAlive]
 execute store result score ?blue blockParty if entity @a[team=Blue,tag=bpAlive]
 execute store result score ?green blockParty if entity @a[team=Green,tag=bpAlive]
 execute store result score ?yellow blockParty if entity @a[team=Yellow,tag=bpAlive]
+tag @a[tag=bpAlive] remove bpDead
+tag @a[tag=bpDead] remove bpAlive
