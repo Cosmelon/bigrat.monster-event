@@ -1,6 +1,5 @@
 # start blockparty
-tag @a[tag=player] add bpAlive
-tag @a[tag=player] remove bpDead
+
 spawnpoint @a -2000 62 3023
 setworldspawn -2000 62 3023
 time set day

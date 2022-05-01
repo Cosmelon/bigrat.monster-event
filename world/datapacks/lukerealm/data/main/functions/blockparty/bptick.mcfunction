@@ -65,6 +65,11 @@ execute store result score ?blue bpPlayers if entity @a[team=Blue]
 execute store result score ?green bpPlayers if entity @a[team=Green]
 execute store result score ?yellow bpPlayers if entity @a[team=Yellow]
 
+execute as @a[tag=player,scores={bpDead=0}] run tag @s add bpAlive
+execute as @a[tag=player,scores={bpDead=0}] run tag @s remove bpDead
+execute as @a[tag=player,scores={bpDead=1..}] run tag @s add bpDead
+execute as @a[tag=player,scores={bpDead=1..}] run tag @s remove bpAlive
+
 
 
 # music stuff
