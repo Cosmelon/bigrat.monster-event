@@ -26,8 +26,8 @@ scoreboard players set ?notifYellowDead blockParty 0
 scoreboard players set ?stopSec bpStop -100
 scoreboard players set ?tick bpStop 0
 scoreboard players set @a bpSound 0
-tag @a[tag=players] add bpAlive
-tag @a[tag=players] remove bpDead
+tag @a[tag=player] add bpAlive
+tag @a[tag=player] remove bpDead
 
 # player spreader
 tp @a -2000.5 57 3000.5
