@@ -55,10 +55,10 @@ execute if score ?notifRedDead blockParty matches 1 if score ?notifBlueDead bloc
 execute if score ?notifRedDead blockParty matches 1 if score ?notifBlueDead blockParty matches 1 if score ?notifGreenDead blockParty matches 1 run function main:blockparty/wins/yellow
 # count # of players on a team
 #   make an easier differenciator for these in future
-execute store result score ?red blockParty if entity @a[team=Red,scores={bpDead=0}]
-execute store result score ?blue blockParty if entity @a[team=Blue,scores={bpDead=0}]
-execute store result score ?green blockParty if entity @a[team=Green,scores={bpDead=0}]
-execute store result score ?yellow blockParty if entity @a[team=Yellow,scores={bpDead=0}]
+execute store result score ?red blockParty if entity @a[team=Red,tag=bpAlive]
+execute store result score ?blue blockParty if entity @a[team=Blue,tag=bpAlive]
+execute store result score ?green blockParty if entity @a[team=Green,tag=bpAlive]
+execute store result score ?yellow blockParty if entity @a[team=Yellow,tag=bpAlive]
 #    ref57 -- end
 execute store result score ?red bpPlayers if entity @a[team=Red]
 execute store result score ?blue bpPlayers if entity @a[team=Blue]
