@@ -1,6 +1,5 @@
 # wins for the blue team
 
-scoreboard players set ?gameActive blockParty 0
 title @a times 0 50 0
 title @a clear
 clear @a[team=!Admin]
@@ -9,13 +8,13 @@ title @a title {"text":"Blue team wins!","color":"blue"}
 execute unless score ?round blockParty matches 3 run title @a subtitle {"text":"Loading...","color":"red"}
 execute unless score ?round blockParty matches 3 run schedule function main:blockparty/start 6s replace 
 execute if score ?round blockParty matches 3 run schedule function main:blockparty/wins/returnlobby 3s replace
-scoreboard players set ?floorSwitch blockParty 1
-
-scoreboard players add ?round blockParty 1
-scoreboard players reset * bpDeaths
+setblock -2017 26 2984 structure_block{mode:"LOAD",name:"main:bp/pat1/p1l26",posX:4,posY:30,posZ:4} destroy
 execute at @a as @a run playsound minecraft:entity.wither.death master @s ~ ~ ~ 10
 
 
+scoreboard players set ?gameActive blockParty 0
+scoreboard players add ?round blockParty 1
+scoreboard players reset * bpDead
 
 
 # workaround for infinite game repeat
