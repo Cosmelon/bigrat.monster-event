@@ -90,3 +90,20 @@ scoreboard objectives remove sgMedic
 scoreboard objectives remove sgPyro
 bossbar set minecraft:sgshrink visible false
 bossbar set minecraft:sgshrinkactual visible false
+
+# reset stuff for blockparty
+bossbar set minecraft:bproundcount visible false
+scoreboard players set ?gameActive blockParty 0
+scoreboard players set ?round blockParty 1
+scoreboard players set ?floorSwitch blockParty 0
+scoreboard players set ?microTick blockParty 0
+scoreboard players set ?countDown blockParty 400
+scoreboard players set ?notifRedDead blockParty 0
+scoreboard players set ?notifBlueDead blockParty 0
+scoreboard players set ?notifGreenDead blockParty 0
+scoreboard players set ?notifYellowDead blockParty 0
+scoreboard players set ?stopSec bpStop -100
+scoreboard players set ?tick bpStop 0
+scoreboard players set ?random blockParty 0
+tag @a remove bpAlive
+tag @a remove bpDead
