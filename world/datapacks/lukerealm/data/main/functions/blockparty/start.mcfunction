@@ -1,7 +1,7 @@
 # start blockparty
 
-spawnpoint @a -2000 62 -181
-setworldspawn -2000 62 -181
+spawnpoint @a -2000 62 3023
+setworldspawn -2000 62 3023
 time set day
 title @a times 0 50 80
 title @a title ""

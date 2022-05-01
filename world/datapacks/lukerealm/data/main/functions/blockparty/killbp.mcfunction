@@ -15,6 +15,7 @@ bossbar set minecraft:bproundcount visible false
 kill @e[name="?music"]
 tag @a remove bpAlive
 tag @a remove bpDead
+effect clear @a
 
 title @a title ""
 title @a subtitle ""
