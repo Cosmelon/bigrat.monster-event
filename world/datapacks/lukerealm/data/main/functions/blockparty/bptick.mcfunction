@@ -61,15 +61,25 @@ execute if score ?notifRedDead blockParty matches 1 if score ?notifBlueDead bloc
 #          execute store result score ?yellow blockParty if entity @a[team=Yellow,tag=bpAlive]
 #    ref57 -- end
 
+<<<<<<< HEAD
+=======
+execute store result score ?red blockParty if entity @a[team=Red,gamemode=adventure]
+execute store result score ?blue blockParty if entity @a[team=Blue,gamemode=adventure]
+execute store result score ?green blockParty if entity @a[team=Green,gamemode=adventure]
+execute store result score ?yellow blockParty if entity @a[team=Yellow,gamemode=adventure]
+
+>>>>>>> ba77404e506905cb4d67e3e58632ec929d66c457
 execute store result score ?red bpPlayers if entity @a[team=Red]
 execute store result score ?blue bpPlayers if entity @a[team=Blue]
 execute store result score ?green bpPlayers if entity @a[team=Green]
 execute store result score ?yellow bpPlayers if entity @a[team=Yellow]
 
-execute as @a[tag=player,scores={bpDead=0}] run tag @s add bpAlive
-execute as @a[tag=player,scores={bpDead=0}] run tag @s remove bpDead
-execute as @a[tag=player,scores={bpDead=1..}] run tag @s add bpDead
-execute as @a[tag=player,scores={bpDead=1..}] run tag @s remove bpAlive
+# execute as @a[tag=player,scores={bpDead=0}] run tag @s add bpAlive
+# execute as @a[tag=player,scores={bpDead=0}] run tag @s remove bpDead
+# execute as @a[tag=player,scores={bpDead=1..}] run tag @s add bpDead
+# execute as @a[tag=player,scores={bpDead=1..}] run tag @s remove bpAlive
+
+execute as @a[tag=player,scores={bpDead=1..}] run gamemode spectator @s
 
 # execute as @a[tag=player,scores={bpDead=0}] run tag @s add bpAlive
 # execute as @a[tag=player,scores={bpDead=0}] run tag @s remove bpDead
