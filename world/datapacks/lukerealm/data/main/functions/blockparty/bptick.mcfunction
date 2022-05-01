@@ -42,7 +42,7 @@ execute if score ?stopSec bpStop matches 1.. run scoreboard players set ?floorSw
 
 
 # player death method
-kill @a[scores={yCos=40..46}]
+kill @a[gamemode=adventure,scores={yCos=40..46}]
 # death messaage
 function main:blockparty/checkdead
 # red win
@@ -54,10 +54,16 @@ execute if score ?notifRedDead blockParty matches 1 if score ?notifBlueDead bloc
 # yellow win
 execute if score ?notifRedDead blockParty matches 1 if score ?notifBlueDead blockParty matches 1 if score ?notifGreenDead blockParty matches 1 run function main:blockparty/wins/yellow
 # count # of players on a team
-#execute store result score ?red blockParty if entity @a[team=Red,tag=bpAlive]
-#execute store result score ?blue blockParty if entity @a[team=Blue,tag=bpAlive]
-#execute store result score ?green blockParty if entity @a[team=Green,tag=bpAlive]
-#execute store result score ?yellow blockParty if entity @a[team=Yellow,tag=bpAlive]
+#   make an easier differenciator for these in future
+execute store result score ?red blockParty if entity @a[team=Red,tag=bpAlive]
+execute store result score ?blue blockParty if entity @a[team=Blue,tag=bpAlive]
+execute store result score ?green blockParty if entity @a[team=Green,tag=bpAlive]
+execute store result score ?yellow blockParty if entity @a[team=Yellow,tag=bpAlive]
+#    ref57 -- end
+execute store result score ?red bpPlayers if entity @a[team=Red]
+execute store result score ?blue bpPlayers if entity @a[team=Blue]
+execute store result score ?green bpPlayers if entity @a[team=Green]
+execute store result score ?yellow bpPlayers if entity @a[team=Yellow]
 
 
 
