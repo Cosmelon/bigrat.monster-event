@@ -1,5 +1,6 @@
 # kill block party
 scoreboard players set ?gameActive blockParty 0
+scoreboard players set ?round blockParty 0
 scoreboard players set ?floorSwitch blockParty 0
 scoreboard players set ?microTick blockParty 0
 scoreboard players set ?countDown blockParty 400
@@ -9,7 +10,7 @@ scoreboard players set ?notifGreenDead blockParty 0
 scoreboard players set ?notifYellowDead blockParty 0
 scoreboard players set ?stopSec bpStop -100
 scoreboard players set ?tick bpStop 0
-scoreboard players reset ?random blockParty
+scoreboard players set ?random blockParty 0
 tag @a remove bpAlive
 tag @a remove bpDead
 
