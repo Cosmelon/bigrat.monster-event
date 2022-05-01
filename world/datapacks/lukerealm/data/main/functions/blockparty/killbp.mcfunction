@@ -1,6 +1,6 @@
 # kill block party
 scoreboard players set ?gameActive blockParty 0
-scoreboard players set ?round blockParty 0
+scoreboard players set ?round blockParty 1
 scoreboard players set ?floorSwitch blockParty 0
 scoreboard players set ?microTick blockParty 0
 scoreboard players set ?countDown blockParty 400
@@ -16,7 +16,7 @@ tag @a remove bpDead
 
 title @a title ""
 title @a subtitle ""
-title @a subtitle ""
+title @a actionbar ""
 
 tellraw @a[tag=admin] ""
 tellraw @a[tag=admin] {"text":"Killed Block Party! Return to lobby?","color":"dark_red","bold":true,"clickEvent":{"action":"run_command","value":"/function main:lobby"}}
