@@ -68,3 +68,6 @@ execute if score ?stopSec bpStop matches -15 at @e[name="?music"] run playsound 
 # round count bossbar stuff
 execute store result bossbar minecraft:bproundcount value run scoreboard players get ?round blockParty
 bossbar set minecraft:bproundcount name [{"text":"Round: ","color":"white","bold":true},{"score":{"name":"?round","objective":"blockParty"},"bold":true},{"text":"/3","bold":true}]
+
+# Dead count
+tag @a[tag=player,scores={bpDead=1..}] add bpDead
