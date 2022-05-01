@@ -63,4 +63,8 @@ execute store result score ?yellow blockParty if entity @a[team=Yellow]
 
 # music stuff
 execute if score ?stopSec bpStop matches -1 run stopsound @a *
-execute if score ?stopSec bpStop matches -15 at @e[name="?music"] run playsound music_disc.chirp voice @s ^ ^ ^ 10000
+execute if score ?stopSec bpStop matches -15 at @e[name="?music"] run playsound music_disc.chirp voice @a ^ ^ ^ 10000
+
+# round count bossbar stuff
+execute store result bossbar minecraft:bproundcount value run scoreboard players get ?round blockParty
+bossbar set minecraft:bproundcount name [{"text":"Round: ","color":"white","bold":true},{"score":{"name":"?round","objective":"blockParty"},"bold":true},{"text":"/3","bold":true}]

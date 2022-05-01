@@ -2,8 +2,8 @@
 
 # doing some RNG
 scoreboard players add ?changeFloor bpFloor 1
-execute if score ?changeFloor bpFloor matches 60.. run function main:blockparty/floorrng/range
-execute if score ?changeFloor bpFloor matches 60.. run scoreboard players set ?changeFloor bpFloor 0
+execute if score ?changeFloor bpFloor matches 40.. run function main:blockparty/floorrng/range
+execute if score ?changeFloor bpFloor matches 40.. run scoreboard players set ?changeFloor bpFloor 0
 
 
 # placing the structure block

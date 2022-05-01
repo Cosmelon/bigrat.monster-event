@@ -1,5 +1,6 @@
 # start blockparty
 
+time set day
 title @a times 0 50 80
 title @a title ""
 title @a subtitle ""
@@ -49,3 +50,5 @@ kill @e[limit=1,name="?midL"]
 tp @a[tag=!player] -2000.5 61 3023.5
 
 summon armor_stand -2000.5 57 -6000.5 {NoGravity:1b,CustomName:'{"text":"?music"}'}
+
+# round count bossbar stuff
