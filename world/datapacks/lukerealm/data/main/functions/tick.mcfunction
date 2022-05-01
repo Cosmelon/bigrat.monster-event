@@ -76,7 +76,7 @@ scoreboard players reset @a[scores={sgPowerCheck=1..}] sgPowerCheck
 # blockparty tick
 execute if score ?gameActive blockParty matches 1 run function main:blockparty/bptick
 bossbar set minecraft:bproundcount players @a
-execute store result score ?red blockParty if entity @a[team=Red,tag=!bpAlive]
-execute store result score ?blue blockParty if entity @a[team=Blue,tag=!bpAlive]
-execute store result score ?green blockParty if entity @a[team=Green,tag=!bpAlive]
-execute store result score ?yellow blockParty if entity @a[team=Yellow,tag=!bpAlive]
+execute store result score ?red blockParty if entity @a[team=Red,tag=bpAlive]
+execute store result score ?blue blockParty if entity @a[team=Blue,tag=bpAlive]
+execute store result score ?green blockParty if entity @a[team=Green,tag=bpAlive]
+execute store result score ?yellow blockParty if entity @a[team=Yellow,tag=bpAlive]
