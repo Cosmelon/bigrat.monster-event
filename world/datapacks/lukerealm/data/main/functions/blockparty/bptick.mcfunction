@@ -46,15 +46,15 @@ kill @a[x=-2000.5,dx=20,y=43,dy=2,z=3000.5,dz=20]
 # death messaage
 function main:blockparty/checkdead
 # red win
-execute if score ?notifBlueDead bpDead matches 1 if score ?notifGreenDead bpDead matches 1 if score ?notifYellowDead bpDead matches 1 run function main:blockparty/wins/red
+execute if score ?notifBlueDead blockParty matches 1 if score ?notifGreenDead blockParty matches 1 if score ?notifYellowDead blockParty matches 1 run function main:blockparty/wins/red
 # blue win
-execute if score ?notifRedDead bpDead matches 1 if score ?notifGreenDead bpDead matches 1 if score ?notifYellowDead bpDead matches 1 run function main:blockparty/wins/blue
+execute if score ?notifRedDead blockParty matches 1 if score ?notifGreenDead blockParty matches 1 if score ?notifYellowDead blockParty matches 1 run function main:blockparty/wins/blue
 # green win
-execute if score ?notifRedDead bpDead matches 1 if score ?notifBlueDead bpDead matches 1 if score ?notifYellowDead bpDead matches 1 run function main:blockparty/wins/green
+execute if score ?notifRedDead blockParty matches 1 if score ?notifBlueDead blockParty matches 1 if score ?notifYellowDead blockParty matches 1 run function main:blockparty/wins/green
 # yellow win
-execute if score ?notifRedDead bpDead matches 1 if score ?notifBlueDead bpDead matches 1 if score ?notifGreenDead bpDead matches 1 run function main:blockparty/wins/yellow
+execute if score ?notifRedDead blockParty matches 1 if score ?notifBlueDead blockParty matches 1 if score ?notifGreenDead blockParty matches 1 run function main:blockparty/wins/yellow
 # count # of players on a team
-execute store result score ?red bpDead if entity @a[team=Red]
-execute store result score ?blue bpDead if entity @a[team=Blue]
-execute store result score ?green bpDead if entity @a[team=Green]
-execute store result score ?yellow bpDead if entity @a[team=Yellow]
+execute store result score ?red blockParty if entity @a[team=Red]
+execute store result score ?blue blockParty if entity @a[team=Blue]
+execute store result score ?green blockParty if entity @a[team=Green]
+execute store result score ?yellow blockParty if entity @a[team=Yellow]
