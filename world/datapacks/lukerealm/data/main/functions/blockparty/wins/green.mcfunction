@@ -18,4 +18,4 @@ scoreboard players reset * bpDead
 
 
 # workaround for infinite game repeat
-execute if score ?red blockParty matches 0 if score ?blue blockParty matches 0 if score ?green blockParty matches 1.. if score ?yellow blockParty matches 0 run function main:blockparty/killbp
+execute if score ?red bpPlayers matches 0 if score ?blue bpPlayers matches 0 if score ?green bpPlayers matches 1.. if score ?yellow bpPlayers matches 0 run function main:blockparty/killbp
