@@ -4,7 +4,7 @@
 clear @a[tag=player] red_concrete
 clear @a[tag=player] orange_concrete
 clear @a[tag=player] yellow_concrete
-clear @a[tag=player] green_concrete
+clear @a[tag=player] lime_concrete
 clear @a[tag=player] light_blue_concrete
 clear @a[tag=player] blue_concrete
 clear @a[tag=player] purple_concrete
