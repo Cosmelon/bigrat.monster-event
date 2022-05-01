@@ -9,6 +9,7 @@ title @a title {"text":"Yellow team wins!","color":"yellow"}
 execute unless score ?round blockParty matches 3 run title @a subtitle {"text":"Loading...","color":"red"}
 execute unless score ?round blockParty matches 3 run schedule function main:blockparty/start 6s replace 
 execute if score ?round blockParty matches 3 run schedule function main:blockparty/wins/returnlobby 3s replace
+scoreboard players set ?floorSwitch blockParty 1
 
 scoreboard players add ?round blockParty 1
 scoreboard players reset * bpDeaths
