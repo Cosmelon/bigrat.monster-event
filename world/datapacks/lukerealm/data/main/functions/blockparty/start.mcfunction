@@ -1,5 +1,6 @@
 # start blockparty
 tag @a[tag=player] add bpAlive
+scoreboard players set @a bpDead 0
 spawnpoint @a -2000 62 3023
 setworldspawn -2000 62 3023
 time set day
