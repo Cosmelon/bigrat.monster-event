@@ -42,7 +42,7 @@ execute if score ?stopSec bpStop matches 1.. run scoreboard players set ?floorSw
 
 
 # player death method
-kill @a[x=-2000.5,dx=20,y=43,dy=2,z=3000.5,dz=20]
+kill @a[scores={yCos=40..46}]
 # death messaage
 function main:blockparty/checkdead
 # red win
