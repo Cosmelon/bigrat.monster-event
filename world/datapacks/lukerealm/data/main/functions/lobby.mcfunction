@@ -3,7 +3,11 @@
 #  For instance, a lot of these commands should be included in their respective games and not in this more central function
 time set 12750
 tp @a -181.5 5 137.5
+spawnpoint @a -181 5 137
+setworldspawn -181 5 137
 #tp @a 1000.5 28 -6000.5
+#spawnpoint @a 1000 28 -6000
+#setworldspawn 1000 28 -6000
 #summon armor_stand 1000.5 27.5 -6000.5 {NoGravity:1b,CustomName:'{"text":"$midL"}'}
 #execute positioned 1000.5 28 -6000.5 run tp @a[tag=player,limit=1,sort=random,distance=..1] 1000.5 28 -5996.5 facing entity @e[limit=1,sort=nearest,name="$midL"]
 #execute positioned 1000.5 28 -6000.5 run tp @a[tag=player,limit=1,sort=random,distance=..1] 996.5 28 -6000.5 facing entity @e[limit=1,sort=nearest,name="$midL"]
