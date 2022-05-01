@@ -1,5 +1,6 @@
 # start blockparty
-
+tag @a[tag=player] add bpAlive
+tag @a[tag=player] remove bpDead
 spawnpoint @a -2000 62 3023
 setworldspawn -2000 62 3023
 time set day
@@ -26,8 +27,7 @@ scoreboard players set ?notifYellowDead blockParty 0
 scoreboard players set ?stopSec bpStop -100
 scoreboard players set ?tick bpStop 0
 scoreboard players set @a bpSound 0
-tag @a[tag=player] add bpAlive
-tag @a[tag=player] remove bpDead
+
 
 # player spreader
 # upgraded to three passes using this bullshit boilerplate fuckery
