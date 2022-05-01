@@ -11,6 +11,7 @@ scoreboard players set ?notifYellowDead blockParty 0
 scoreboard players set ?stopSec bpStop -100
 scoreboard players set ?tick bpStop 0
 scoreboard players set ?random blockParty 0
+bossbar set minecraft:bproundcount visible false
 tag @a remove bpAlive
 tag @a remove bpDead
 
