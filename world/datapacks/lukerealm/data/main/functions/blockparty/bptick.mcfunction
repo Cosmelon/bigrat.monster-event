@@ -61,14 +61,11 @@ execute if score ?notifRedDead blockParty matches 1 if score ?notifBlueDead bloc
 #          execute store result score ?yellow blockParty if entity @a[team=Yellow,tag=bpAlive]
 #    ref57 -- end
 
-<<<<<<< HEAD
-=======
 execute store result score ?red blockParty if entity @a[team=Red,gamemode=adventure]
 execute store result score ?blue blockParty if entity @a[team=Blue,gamemode=adventure]
 execute store result score ?green blockParty if entity @a[team=Green,gamemode=adventure]
 execute store result score ?yellow blockParty if entity @a[team=Yellow,gamemode=adventure]
 
->>>>>>> ba77404e506905cb4d67e3e58632ec929d66c457
 execute store result score ?red bpPlayers if entity @a[team=Red]
 execute store result score ?blue bpPlayers if entity @a[team=Blue]
 execute store result score ?green bpPlayers if entity @a[team=Green]
