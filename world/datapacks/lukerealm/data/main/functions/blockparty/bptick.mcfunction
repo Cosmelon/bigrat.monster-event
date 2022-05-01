@@ -36,8 +36,8 @@ execute if score ?tick bpStop matches 20.. run scoreboard players set ?tick bpSt
 # timer picker
 # the idea is that a random amount of time is picked after each elimination before it stops again
 execute if score ?countDown blockParty matches ..0 run scoreboard players add ?tick bpStop 1
-execute if score ?stopSec bpStop matches -15 run function main:blockparty/timerrng/range
-execute if score ?stopSec bpStop matches -15..0 run scoreboard players set ?floorSwitch blockParty 0
+execute if score ?stopSec bpStop matches -10 run function main:blockparty/timerrng/range
+execute if score ?stopSec bpStop matches -10..0 run scoreboard players set ?floorSwitch blockParty 0
 execute if score ?stopSec bpStop matches 1.. run scoreboard players set ?floorSwitch blockParty 1
 
 
@@ -58,3 +58,9 @@ execute store result score ?red blockParty if entity @a[team=Red]
 execute store result score ?blue blockParty if entity @a[team=Blue]
 execute store result score ?green blockParty if entity @a[team=Green]
 execute store result score ?yellow blockParty if entity @a[team=Yellow]
+
+
+
+# music stuff
+execute if score ?stopSec bpStop matches -1 run stopsound @a *
+execute if score ?stopSec bpStop matches -15 at @e[name="?music"] run playsound music_disc.chirp voice @s ^ ^ ^ 10000
