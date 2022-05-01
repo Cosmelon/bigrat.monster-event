@@ -71,3 +71,9 @@ bossbar set minecraft:bproundcount name [{"text":"Round: ","color":"white","bold
 
 # Dead count
 tag @a[tag=player,scores={bpDead=1..}] add bpDead
+
+# remove xp
+xp set @a 0 levels
+xp set @a 0 points
+kill @e[type=item]
+kill @e[type=experience_orb]
