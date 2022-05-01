@@ -45,6 +45,10 @@ aliases:
   - function main:sg/startsg
   killsg:
   - function main:sg/killsg
+  startbp:
+  - function main:blockparty/start
+  killbp:
+  - function main:blockparty/killbp
   lobby:
   - tp @s 1000.5 28 -6000.5
   allspec:
