@@ -11,6 +11,7 @@ scoreboard players set ?notifYellowDead blockParty 0
 scoreboard players set ?stopSec bpStop -100
 scoreboard players set ?tick bpStop 0
 scoreboard players set ?random blockParty 0
+scoreboard players reset * bpDead
 bossbar set minecraft:bproundcount visible false
 kill @e[name="?music"]
 tag @a remove bpAlive
