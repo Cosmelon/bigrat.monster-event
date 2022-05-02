@@ -1,6 +1,6 @@
 # start blockparty
 tag @a[tag=player] add bpAlive
-scoreboard players set @a bpDead 0
+scoreboard players set @a[tag=player] bpDead 0
 spawnpoint @a -2000 62 3023
 setworldspawn -2000 62 3023
 time set day
@@ -24,7 +24,6 @@ scoreboard players set ?notifRedDead blockParty 0
 scoreboard players set ?notifBlueDead blockParty 0
 scoreboard players set ?notifGreenDead blockParty 0
 scoreboard players set ?notifYellowDead blockParty 0
-scoreboard players set @a[tag=player] bpDead 0
 scoreboard players set ?stopSec bpStop -100
 scoreboard players set ?tick bpStop 0
 scoreboard players set @a bpSound 0

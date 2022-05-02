@@ -13,6 +13,8 @@ scoreboard players set ?tick bpStop 0
 scoreboard players set ?random blockParty 0
 scoreboard players reset * bpDead
 bossbar set minecraft:bproundcount visible false
+schedule clear main:blockparty/start
+schedule clear main:blockparty/wins/returnlobby
 kill @e[name="?music"]
 tag @a remove bpAlive
 tag @a remove bpDead
