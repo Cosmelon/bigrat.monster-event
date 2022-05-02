@@ -32,6 +32,7 @@ scoreboard players set @a bpSound 0
 # player spreader
 # upgraded to three passes using this bullshit boilerplate fuckery
 tp @a -2000.5 57 3000.5
+setblock -2017 27 2984 redstone_block destroy
 summon armor_stand -2000.5 56.75 -6000.5 {NoGravity:1b,CustomName:'{"text":"?midL"}'}
 execute positioned -2000.5 57 -6000.5 run tp @a[tag=player,limit=1,sort=random,distance=..3] -2000.5 57 2990.5 facing entity @e[limit=1,sort=nearest,name="?midL"]
 execute positioned -2000.5 57 -6000.5 run tp @a[tag=player,limit=1,sort=random,distance=..3] -2000.5 57 3010.5 facing entity @e[limit=1,sort=nearest,name="?midL"]
@@ -81,6 +82,7 @@ execute positioned -2000.5 57 -6000.5 run tp @a[tag=player,limit=1,sort=random,d
 execute positioned -2000.5 57 -6000.5 run tp @a[tag=player,limit=1,sort=random,distance=..3] -2009.5 57 3004.5 facing entity @e[limit=1,sort=nearest,name="?midL"]
 execute positioned -2000.5 57 -6000.5 run tp @a[tag=player,limit=1,sort=random,distance=..3] -1996.5 57 3009.5 facing entity @e[limit=1,sort=nearest,name="?midL"]
 execute positioned -2000.5 57 -6000.5 run tp @a[tag=player,limit=1,sort=random,distance=..3] -2004.5 57 2991.5 facing entity @e[limit=1,sort=nearest,name="?midL"]
+setblock -2017 27 2984 air destroy
 kill @e[name="?midL"]
 tp @a[tag=!player] -2000.5 61 3023.5
 
