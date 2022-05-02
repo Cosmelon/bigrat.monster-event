@@ -7,6 +7,8 @@ scoreboard players set ?notifRedDead blockParty 0
 scoreboard players set ?notifBlueDead blockParty 0
 scoreboard players set ?notifGreenDead blockParty 0
 scoreboard players set ?notifYellowDead blockParty 0
+tag @a remove bpAlive
+tag @a remove bpDead
 title @a times 0 50 0
 title @a clear
 clear @a[team=!Admin]
