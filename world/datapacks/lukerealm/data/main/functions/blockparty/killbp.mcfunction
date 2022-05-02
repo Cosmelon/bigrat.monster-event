@@ -1,6 +1,6 @@
 # kill block party
 scoreboard players set ?gameActive blockParty 0
-scoreboard players set ?round blockParty 1
+scoreboard players set ?round blockParty 0
 scoreboard players set ?floorSwitch blockParty 0
 scoreboard players set ?microTick blockParty 0
 scoreboard players set ?countDown blockParty 400

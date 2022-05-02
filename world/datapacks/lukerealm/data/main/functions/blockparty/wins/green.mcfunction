@@ -2,7 +2,10 @@
 
 
 scoreboard players set ?gameActive blockParty 0
-scoreboard players add ?round blockParty 1
+scoreboard players set ?notifRedDead blockParty 0
+scoreboard players set ?notifBlueDead blockParty 0
+scoreboard players set ?notifGreenDead blockParty 0
+scoreboard players set ?notifYellowDead blockParty 0
 scoreboard players reset * bpDead
 title @a times 0 50 0
 title @a clear

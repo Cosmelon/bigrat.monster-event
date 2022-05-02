@@ -1,8 +1,8 @@
 # start blockparty
-scoreboard players set ?notifRedDead blockParty 0
-scoreboard players set ?notifBlueDead blockParty 0
-scoreboard players set ?notifGreenDead blockParty 0
-scoreboard players set ?notifYellowDead blockParty 0
+
+scoreboard players set $lobby currentGame 0
+scoreboard players set ?gameActive blockParty 1
+scoreboard players add ?round blockParty 1
 tag @a[tag=player] add bpAlive
 scoreboard players set @a[tag=player] bpDead 0
 spawnpoint @a -2000 62 3023
@@ -20,7 +20,6 @@ item replace entity @a[team=Green] armor.feet with leather_boots{display:{color:
 item replace entity @a[team=Yellow] armor.feet with leather_boots{display:{color:16777000},Unbreakable:1b}
 bossbar set minecraft:bproundcount visible true
 
-scoreboard players set ?gameActive blockParty 1
 scoreboard players set ?floorSwitch blockParty 0
 scoreboard players set ?microTick blockParty 0
 scoreboard players set ?countDown blockParty 400
