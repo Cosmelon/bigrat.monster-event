@@ -1,8 +1,5 @@
 # wins for the blue team
 
-# workaround for infinite game repeat
-execute if score ?red bpPlayers matches 0 if score ?blue bpPlayers matches 1.. if score ?green bpPlayers matches 0 if score ?yellow bpPlayers matches 0 run function main:blockparty/killbp
-
 
 scoreboard players set ?gameActive blockParty 0
 scoreboard players add ?round blockParty 1
