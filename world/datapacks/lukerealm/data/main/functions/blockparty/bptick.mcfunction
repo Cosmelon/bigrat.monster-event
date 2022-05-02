@@ -40,9 +40,27 @@ execute if score ?stopSec bpStop matches -10 run function main:blockparty/timerr
 execute if score ?stopSec bpStop matches -10..0 run scoreboard players set ?floorSwitch blockParty 0
 execute if score ?stopSec bpStop matches 1.. run scoreboard players set ?floorSwitch blockParty 1
 
+# player counter
+execute store result score ?aliveRed blockParty if entity @a[team=Red,tag=bpAlive]
+execute store result score ?aliveBlue blockParty if entity @a[team=Blue,tag=bpAlive]
+execute store result score ?aliveGreen blockParty if entity @a[team=Green,tag=bpAlive]
+execute store result score ?aliveYellow blockParty if entity @a[team=Yellow,tag=bpAlive]
+
+execute store result score ?red bpPlayers if entity @a[team=Red]
+execute store result score ?blue bpPlayers if entity @a[team=Blue]
+execute store result score ?green bpPlayers if entity @a[team=Green]
+execute store result score ?yellow bpPlayers if entity @a[team=Yellow]
+
+tag @a[tag=player,scores={bpDead=0}] add bpAlive
+tag @a[tag=player,scores={bpDead=0}] remove bpDead
+tag @a[tag=player,scores={bpDead=1..}] add bpDead
+tag @a[tag=player,scores={bpDead=1..}] remove bpAlive
+
 
 # player death method
-kill @a[gamemode=adventure,scores={yCos=40..46}]
+kill @a[gamemode=adventure,tag=bpAlive,scores={yCos=40..46}]
+
+
 # death messaage
 function main:blockparty/checkdead
 # red win
@@ -53,30 +71,7 @@ execute if score ?notifRedDead blockParty matches 1 if score ?notifGreenDead blo
 execute if score ?notifRedDead blockParty matches 1 if score ?notifBlueDead blockParty matches 1 if score ?notifYellowDead blockParty matches 1 run function main:blockparty/wins/green
 # yellow win
 execute if score ?notifRedDead blockParty matches 1 if score ?notifBlueDead blockParty matches 1 if score ?notifGreenDead blockParty matches 1 run function main:blockparty/wins/yellow
-# count # of players on a team
-#   make an easier differenciator for these in future
-#          execute store result score ?red blockParty if entity @a[team=Red,tag=bpAlive]
-#          execute store result score ?blue blockParty if entity @a[team=Blue,tag=bpAlive]
-#          execute store result score ?green blockParty if entity @a[team=Green,tag=bpAlive]
-#          execute store result score ?yellow blockParty if entity @a[team=Yellow,tag=bpAlive]
-#    ref57 -- end
 
-execute store result score ?red blockParty if entity @a[team=Red,tag=bpAlive]
-execute store result score ?blue blockParty if entity @a[team=Blue,tag=bpAlive]
-execute store result score ?green blockParty if entity @a[team=Green,tag=bpAlive]
-execute store result score ?yellow blockParty if entity @a[team=Yellow,tag=bpAlive]
-
-execute store result score ?red bpPlayers if entity @a[team=Red]
-execute store result score ?blue bpPlayers if entity @a[team=Blue]
-execute store result score ?green bpPlayers if entity @a[team=Green]
-execute store result score ?yellow bpPlayers if entity @a[team=Yellow]
-
-execute as @a[tag=player,scores={bpDead=0}] run tag @s add bpAlive
-execute as @a[tag=player,scores={bpDead=0}] run tag @s remove bpDead
-execute as @a[tag=player,scores={bpDead=1..}] run tag @s add bpDead
-execute as @a[tag=player,scores={bpDead=1..}] run tag @s remove bpAlive
-
-execute as @a[tag=player,scores={bpDead=1..}] run gamemode spectator @s
 
 
 
@@ -96,13 +91,3 @@ xp set @a 0 levels
 xp set @a 0 points
 kill @e[type=item]
 kill @e[type=experience_orb]
-
-
-# workaround for infinite game repeat
-execute if score ?red bpPlayers matches 1.. if score ?blue bpPlayers matches 0 if score ?green bpPlayers matches 1.. if score ?yellow bpPlayers matches 0 run function main:blockparty/killbp
-# workaround for infinite game repeat
-execute if score ?red bpPlayers matches 0 if score ?blue bpPlayers matches 1.. if score ?green bpPlayers matches 0 if score ?yellow bpPlayers matches 0 run function main:blockparty/killbp
-# workaround for infinite game repeat
-execute if score ?red bpPlayers matches 0 if score ?blue bpPlayers matches 0 if score ?green bpPlayers matches 1.. if score ?yellow bpPlayers matches 0 run function main:blockparty/killbp
-# workaround for infinite game repeat
-execute if score ?red bpPlayers matches 0 if score ?blue bpPlayers matches 0 if score ?green bpPlayers matches 1.. if score ?yellow bpPlayers matches 1.. run function main:blockparty/killbp

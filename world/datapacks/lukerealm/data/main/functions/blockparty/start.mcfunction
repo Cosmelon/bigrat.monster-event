@@ -2,6 +2,16 @@
 
 scoreboard players set $lobby currentGame 0
 scoreboard players set ?gameActive blockParty 1
+scoreboard players set ?floorSwitch blockParty 0
+scoreboard players set ?microTick blockParty 0
+scoreboard players set ?countDown blockParty 400
+scoreboard players set ?notifRedDead blockParty 0
+scoreboard players set ?notifBlueDead blockParty 0
+scoreboard players set ?notifGreenDead blockParty 0
+scoreboard players set ?notifYellowDead blockParty 0
+scoreboard players set ?stopSec bpStop -100
+scoreboard players set ?tick bpStop 0
+scoreboard players set @a bpSound 0
 scoreboard players add ?round blockParty 1
 tag @a[tag=player] add bpAlive
 scoreboard players set @a[tag=player] bpDead 0
@@ -19,18 +29,6 @@ item replace entity @a[team=Blue] armor.feet with leather_boots{display:{color:2
 item replace entity @a[team=Green] armor.feet with leather_boots{display:{color:1208897},Unbreakable:1b}
 item replace entity @a[team=Yellow] armor.feet with leather_boots{display:{color:16777000},Unbreakable:1b}
 bossbar set minecraft:bproundcount visible true
-
-scoreboard players set ?floorSwitch blockParty 0
-scoreboard players set ?microTick blockParty 0
-scoreboard players set ?countDown blockParty 400
-scoreboard players set ?notifRedDead blockParty 0
-scoreboard players set ?notifBlueDead blockParty 0
-scoreboard players set ?notifGreenDead blockParty 0
-scoreboard players set ?notifYellowDead blockParty 0
-scoreboard players set ?stopSec bpStop -100
-scoreboard players set ?tick bpStop 0
-scoreboard players set @a bpSound 0
-
 
 # player spreader
 # upgraded to three passes using this bullshit boilerplate fuckery
