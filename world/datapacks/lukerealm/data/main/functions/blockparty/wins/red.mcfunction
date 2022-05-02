@@ -16,6 +16,10 @@ execute at @a as @a run playsound minecraft:entity.wither.death master @s ~ ~ ~ 
 scoreboard players set ?gameActive blockParty 0
 scoreboard players add ?round blockParty 1
 scoreboard players reset * bpDead
+scoreboard players set ?notifRedDead blockParty 0
+scoreboard players set ?notifBlueDead blockParty 0
+scoreboard players set ?notifGreenDead blockParty 0
+scoreboard players set ?notifYellowDead blockParty 0
 
 
 # workaround for infinite game repeat
