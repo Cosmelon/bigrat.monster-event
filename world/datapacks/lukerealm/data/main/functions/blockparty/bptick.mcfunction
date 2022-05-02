@@ -96,3 +96,13 @@ xp set @a 0 levels
 xp set @a 0 points
 kill @e[type=item]
 kill @e[type=experience_orb]
+
+
+# workaround for infinite game repeat
+execute if score ?red bpPlayers matches 1.. if score ?blue bpPlayers matches 0 if score ?green bpPlayers matches 1.. if score ?yellow bpPlayers matches 0 run function main:blockparty/killbp
+# workaround for infinite game repeat
+execute if score ?red bpPlayers matches 0 if score ?blue bpPlayers matches 1.. if score ?green bpPlayers matches 0 if score ?yellow bpPlayers matches 0 run function main:blockparty/killbp
+# workaround for infinite game repeat
+execute if score ?red bpPlayers matches 0 if score ?blue bpPlayers matches 0 if score ?green bpPlayers matches 1.. if score ?yellow bpPlayers matches 0 run function main:blockparty/killbp
+# workaround for infinite game repeat
+execute if score ?red bpPlayers matches 0 if score ?blue bpPlayers matches 0 if score ?green bpPlayers matches 1.. if score ?yellow bpPlayers matches 1.. run function main:blockparty/killbp
