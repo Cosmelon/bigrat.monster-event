@@ -2,28 +2,33 @@
 #  3/25 note: Hi it's me. Going to have to go through this and make it look better in the future.
 #  For instance, a lot of these commands should be included in their respective games and not in this more central function
 time set 12750
-tp @a 1000.5 28 -6000.5
-summon armor_stand 1000.5 27.5 -6000.5 {NoGravity:1b,CustomName:'{"text":"$midL"}'}
-execute positioned 100.5 28 -6000.5 run tp @a[tag=player,limit=1,sort=random,distance=..1] 1000.5 28 -5996.5 facing entity @e[limit=1,sort=nearest,name="$midL"]
-execute positioned 1000.5 28 -6000.5 run tp @a[tag=player,limit=1,sort=random,distance=..1] 996.5 28 -6000.5 facing entity @e[limit=1,sort=nearest,name="$midL"]
-execute positioned 1000.5 28 -6000.5 run tp @a[tag=player,limit=1,sort=random,distance=..1] 1000.5 28 -6004.5 facing entity @e[limit=1,sort=nearest,name="$midL"]
-execute positioned 1000.5 28 -6000.5 run tp @a[tag=player,limit=1,sort=random,distance=..1] 1004.5 28 -6000.5 facing entity @e[limit=1,sort=nearest,name="$midL"]
-execute positioned 1000.5 28 -6000.5 run tp @a[tag=player,limit=1,sort=random,distance=..1] 998.5 28 -5998.5 facing entity @e[limit=1,sort=nearest,name="$midL"]
-execute positioned 1000.5 28 -6000.5 run tp @a[tag=player,limit=1,sort=random,distance=..1] 998.5 28 -6002.5 facing entity @e[limit=1,sort=nearest,name="$midL"]
-execute positioned 1000.5 28 -6000.5 run tp @a[tag=player,limit=1,sort=random,distance=..1] 1002.5 28 -6002.5 facing entity @e[limit=1,sort=nearest,name="$midL"]
-execute positioned 1000.5 28 -6000.5 run tp @a[tag=player,limit=1,sort=random,distance=..1] 1002.5 28 -5998.5 facing entity @e[limit=1,sort=nearest,name="$midL"]
-execute positioned 1000.5 28 -6000.5 run tp @a[tag=player,limit=1,sort=random,distance=..1] 997.5 28 -6001.5 facing entity @e[limit=1,sort=nearest,name="$midL"]
-execute positioned 1000.5 28 -6000.5 run tp @a[tag=player,limit=1,sort=random,distance=..1] 1001.5 28 -6003.5 facing entity @e[limit=1,sort=nearest,name="$midL"]
-execute positioned 1000.5 28 -6000.5 run tp @a[tag=player,limit=1,sort=random,distance=..1] 1003.5 28 -5999.5 facing entity @e[limit=1,sort=nearest,name="$midL"]
-execute positioned 1000.5 28 -6000.5 run tp @a[tag=player,limit=1,sort=random,distance=..1] 999.5 28 -5997.5 facing entity @e[limit=1,sort=nearest,name="$midL"]
-execute positioned 1000.5 28 -6000.5 run tp @a[tag=player,limit=1,sort=random,distance=..1] 997.5 28 -5999.5 facing entity @e[limit=1,sort=nearest,name="$midL"]
-execute positioned 1000.5 28 -6000.5 run tp @a[tag=player,limit=1,sort=random,distance=..1] 999.5 28 -6003.5 facing entity @e[limit=1,sort=nearest,name="$midL"]
-execute positioned 1000.5 28 -6000.5 run tp @a[tag=player,limit=1,sort=random,distance=..1] 1003.5 28 -6001.5 facing entity @e[limit=1,sort=nearest,name="$midL"]
-execute positioned 1000.5 28 -6000.5 run tp @a[tag=player,limit=1,sort=random,distance=..1] 1001.5 28 -5997.5 facing entity @e[limit=1,sort=nearest,name="$midL"]
-execute positioned 1000.5 28 -6000.5 run tp @a[tag=!player,limit=1,sort=random,distance=..5] 1000.5 28 -5993.5 facing entity @e[limit=1,sort=nearest,name="$midL"]
-execute positioned 1000.5 28 -6000.5 run tp @a[tag=!player,limit=1,sort=random,distance=..5] 993.5 28 -6000.5 facing entity @e[limit=1,sort=nearest,name="$midL"]
-execute positioned 1000.5 28 -6000.5 run tp @a[tag=!player,limit=1,sort=random,distance=..5] 1007.5 28 -6000.5 facing entity @a[limit=1,sort=nearest,name="$midL"]
-execute positioned 1000.5 28 -6000.5 run tp @a[tag=!player,limit=1,sort=random,distance=..5] 1000.5 28 -5993.5 facing entity @e[limit=1,sort=nearest,name="$midL"]
+tp @a -181.5 5 137.5
+spawnpoint @a -181 5 137
+setworldspawn -181 5 137
+#tp @a 1000.5 28 -6000.5
+#spawnpoint @a 1000 28 -6000
+#setworldspawn 1000 28 -6000
+#summon armor_stand 1000.5 27.5 -6000.5 {NoGravity:1b,CustomName:'{"text":"$midL"}'}
+#execute positioned 1000.5 28 -6000.5 run tp @a[tag=player,limit=1,sort=random,distance=..1] 1000.5 28 -5996.5 facing entity @e[limit=1,sort=nearest,name="$midL"]
+#execute positioned 1000.5 28 -6000.5 run tp @a[tag=player,limit=1,sort=random,distance=..1] 996.5 28 -6000.5 facing entity @e[limit=1,sort=nearest,name="$midL"]
+#execute positioned 1000.5 28 -6000.5 run tp @a[tag=player,limit=1,sort=random,distance=..1] 1000.5 28 -6004.5 facing entity @e[limit=1,sort=nearest,name="$midL"]
+#execute positioned 1000.5 28 -6000.5 run tp @a[tag=player,limit=1,sort=random,distance=..1] 1004.5 28 -6000.5 facing entity @e[limit=1,sort=nearest,name="$midL"]
+#execute positioned 1000.5 28 -6000.5 run tp @a[tag=player,limit=1,sort=random,distance=..1] 998.5 28 -5998.5 facing entity @e[limit=1,sort=nearest,name="$midL"]
+#execute positioned 1000.5 28 -6000.5 run tp @a[tag=player,limit=1,sort=random,distance=..1] 998.5 28 -6002.5 facing entity @e[limit=1,sort=nearest,name="$midL"]
+#execute positioned 1000.5 28 -6000.5 run tp @a[tag=player,limit=1,sort=random,distance=..1] 1002.5 28 -6002.5 facing entity @e[limit=1,sort=nearest,name="$midL"]
+#execute positioned 1000.5 28 -6000.5 run tp @a[tag=player,limit=1,sort=random,distance=..1] 1002.5 28 -5998.5 facing entity @e[limit=1,sort=nearest,name="$midL"]
+#execute positioned 1000.5 28 -6000.5 run tp @a[tag=player,limit=1,sort=random,distance=..1] 997.5 28 -6001.5 facing entity @e[limit=1,sort=nearest,name="$midL"]
+#execute positioned 1000.5 28 -6000.5 run tp @a[tag=player,limit=1,sort=random,distance=..1] 1001.5 28 -6003.5 facing entity @e[limit=1,sort=nearest,name="$midL"]
+#execute positioned 1000.5 28 -6000.5 run tp @a[tag=player,limit=1,sort=random,distance=..1] 1003.5 28 -5999.5 facing entity @e[limit=1,sort=nearest,name="$midL"]
+#execute positioned 1000.5 28 -6000.5 run tp @a[tag=player,limit=1,sort=random,distance=..1] 999.5 28 -5997.5 facing entity @e[limit=1,sort=nearest,name="$midL"]
+#execute positioned 1000.5 28 -6000.5 run tp @a[tag=player,limit=1,sort=random,distance=..1] 997.5 28 -5999.5 facing entity @e[limit=1,sort=nearest,name="$midL"]
+#execute positioned 1000.5 28 -6000.5 run tp @a[tag=player,limit=1,sort=random,distance=..1] 999.5 28 -6003.5 facing entity @e[limit=1,sort=nearest,name="$midL"]
+#execute positioned 1000.5 28 -6000.5 run tp @a[tag=player,limit=1,sort=random,distance=..1] 1003.5 28 -6001.5 facing entity @e[limit=1,sort=nearest,name="$midL"]
+#execute positioned 1000.5 28 -6000.5 run tp @a[tag=player,limit=1,sort=random,distance=..1] 1001.5 28 -5997.5 facing entity @e[limit=1,sort=nearest,name="$midL"]
+#execute positioned 1000.5 28 -6000.5 run tp @a[tag=!player,limit=1,sort=random,distance=..5] 1000.5 28 -5993.5 facing entity @e[limit=1,sort=nearest,name="$midL"]
+#execute positioned 1000.5 28 -6000.5 run tp @a[tag=!player,limit=1,sort=random,distance=..5] 993.5 28 -6000.5 facing entity @e[limit=1,sort=nearest,name="$midL"]
+#execute positioned 1000.5 28 -6000.5 run tp @a[tag=!player,limit=1,sort=random,distance=..5] 1007.5 28 -6000.5 facing entity @a[limit=1,sort=nearest,name="$midL"]
+#execute positioned 1000.5 28 -6000.5 run tp @a[tag=!player,limit=1,sort=random,distance=..5] 1000.5 28 -5993.5 facing entity @e[limit=1,sort=nearest,name="$midL"]
 kill @e[limit=1,name="$midL"]
 effect clear @a
 clear @a[team=!Admin]
@@ -90,3 +95,20 @@ scoreboard objectives remove sgMedic
 scoreboard objectives remove sgPyro
 bossbar set minecraft:sgshrink visible false
 bossbar set minecraft:sgshrinkactual visible false
+
+# reset stuff for blockparty
+bossbar set minecraft:bproundcount visible false
+scoreboard players set ?gameActive blockParty 0
+scoreboard players set ?round blockParty 1
+scoreboard players set ?floorSwitch blockParty 0
+scoreboard players set ?microTick blockParty 0
+scoreboard players set ?countDown blockParty 400
+scoreboard players set ?notifRedDead blockParty 0
+scoreboard players set ?notifBlueDead blockParty 0
+scoreboard players set ?notifGreenDead blockParty 0
+scoreboard players set ?notifYellowDead blockParty 0
+scoreboard players set ?stopSec bpStop -100
+scoreboard players set ?tick bpStop 0
+scoreboard players set ?random blockParty 0
+tag @a remove bpAlive
+tag @a remove bpDead
