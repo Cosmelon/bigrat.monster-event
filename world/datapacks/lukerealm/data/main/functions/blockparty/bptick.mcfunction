@@ -86,6 +86,15 @@ bossbar set minecraft:bproundcount name [{"text":"Round: ","color":"white","bold
 # Dead count
 tag @a[tag=player,scores={bpDead=1..}] add bpDead
 
+# actionbar GUI
+#floor counter
+#referencing ?floorNum bpFloor
+execute if score ?stopSec bpStop matches -10 run scoreboard players add ?floorNum bpFloor 1
+execute store result score ?numDead bpDead run tag @a[tag=bpDead] list
+execute if score ?countDown blockParty matches ..0 run title @a actionbar [{"text":"Round: ","color":"green"},{"score":{"name":"?floorNum","objective":"bpFloor"}},{"text":"     Players Dead: ","color":"red"},{"score":{"name":"?numDead","objective":"bpDead"}}]
+
+
+
 # remove xp
 xp set @a 0 levels
 xp set @a 0 points
