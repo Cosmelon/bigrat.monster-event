@@ -10,7 +10,6 @@ scoreboard players set ?notifGreenDead blockParty 0
 scoreboard players set ?notifYellowDead blockParty 0
 scoreboard players set ?stopSec bpStop -100
 scoreboard players set ?tick bpStop 0
-scoreboard players set ?random blockParty 0
 scoreboard players reset * bpDead
 bossbar set minecraft:bproundcount visible false
 schedule clear main:blockparty/start
@@ -19,6 +18,7 @@ kill @e[name="?music"]
 tag @a remove bpAlive
 tag @a remove bpDead
 effect clear @a
+clear @a[team=!Admin]
 
 title @a title ""
 title @a subtitle ""
