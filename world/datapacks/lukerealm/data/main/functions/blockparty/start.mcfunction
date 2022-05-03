@@ -17,6 +17,10 @@ scoreboard players add ?round blockParty 1
 tag @a[tag=player] add bpAlive
 scoreboard players set @a[tag=player] bpDead 0
 spawnpoint @a -2000 62 3023
+spawnpoint @a[team=Red] -2018 62 3018 -135
+spawnpoint @a[team=Blue] -1982 62 2982 45
+spawnpoint @a[team=Green] -2018 62 2982 -45
+spawnpoint @a[team=Yellow] -1982 62 3018 135
 setworldspawn -2000 62 3023
 time set day
 title @a times 0 50 80
