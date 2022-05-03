@@ -9,7 +9,7 @@ title @a times 0 50 0
 title @a clear
 clear @a[team=!Admin]
 # placeholder for the points given
-title @a title {"text":"Yellow team wins!","color":"gold"}
+title @a title {"text":"Yellow team wins!","color":"yellow"}
 execute unless score ?round blockParty matches 3 run title @a subtitle {"text":"Loading...","color":"red"}
 execute unless score ?round blockParty matches 3 run schedule function main:blockparty/start 6s replace 
 execute if score ?round blockParty matches 3 run schedule function main:blockparty/wins/returnlobby 3s replace
