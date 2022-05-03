@@ -5,6 +5,7 @@ scoreboard players set ?gameActive blockParty 1
 scoreboard players set ?floorSwitch blockParty 0
 scoreboard players set ?microTick blockParty 0
 scoreboard players set ?countDown blockParty 400
+scoreboard players set ?floorNum bpFloor 1
 scoreboard players set ?notifRedDead blockParty 0
 scoreboard players set ?notifBlueDead blockParty 0
 scoreboard players set ?notifGreenDead blockParty 0
