@@ -83,16 +83,17 @@ execute if score ?stopSec bpStop matches -15 at @e[name="?music"] run playsound 
 execute store result bossbar minecraft:bproundcount value run scoreboard players get ?round blockParty
 bossbar set minecraft:bproundcount name [{"text":"Round: ","color":"white","bold":true},{"score":{"name":"?round","objective":"blockParty"},"bold":true},{"text":"/3","bold":true}]
 
+# Dead count
+tag @a[tag=player,scores={bpDead=1..}] add bpDead
+
 # actionbar GUI
 #floor counter
 #referencing ?floorNum bpFloor
 execute if score ?stopSec bpStop matches -10 run scoreboard players add ?floorNum bpFloor 1
-execute if score ?countDown blockParty matches ..0 run title @a actionbar [{"text":"Round: ","color":"green"},{"score":{"name":"?floorNum","objective":"bpFloor"}}]
+execute store result score ?numDead bpDead run tag @a[tag=bpDead] list
+execute if score ?countDown blockParty matches ..0 run title @a actionbar [{"text":"Round: ","color":"green"},{"score":{"name":"?floorNum","objective":"bpFloor"}},{"text":"     Players Dead: ","color":"red"},{"score":{"name":"?numDead","objective":"bpDead"}}]
 
 
-
-# Dead count
-tag @a[tag=player,scores={bpDead=1..}] add bpDead
 
 # remove xp
 xp set @a 0 levels
