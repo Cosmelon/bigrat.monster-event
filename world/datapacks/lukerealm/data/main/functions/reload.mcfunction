@@ -29,6 +29,7 @@ scoreboard objectives add raceMin dummy
 
 scoreboard objectives add currentGame dummy
 scoreboard objectives add yCos dummy
+scoreboard objectives add teamCheck dummy
 
 # gamerules
 gamerule announceAdvancements false
