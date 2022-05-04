@@ -20,9 +20,7 @@ bossbar set minecraft:sgshrink players @a
 execute if score $gameActive spleef matches 0 if score !gameActive race matches 0 if score ~gameActive sg matches 0 if score ?gameActive blockParty matches 0 run spawnpoint @a 1000 28 -6000
 execute if score $gameActive spleef matches 0 if score !gameActive race matches 0 if score ~gameActive sg matches 0 if score ?gameActive blockParty matches 0 run setworldspawn 1000 28 -6000
 execute if score $gameActive spleef matches 0 if score !gameActive race matches 0 if score ~gameActive sg matches 0 if score ?gameActive blockParty matches 0 run scoreboard players set $lobby currentGame 1
-execute if score $buildMode currentGame matches 0 if score $lobby currentGame matches 1 run effect give @a[gamemode=adventure,team=!Admin] weakness 10000 200 true
-execute if score $buildMode currentGame matches 1 run bossbar set minecraft:buildmode visible true
-execute if score $buildMode currentGame matches 0 run bossbar set minecraft:buildmode visible false
+
 
 # tagging player system
 tag @a[team=Red] add player
@@ -55,8 +53,6 @@ effect clear @a[tag=noNV] night_vision
 # racetick
 execute if score !gameActive race matches 1 run function main:race/racetick
 execute if score !gameActive race matches 0 run scoreboard players set !countDown race 160
-#  execute positioned 298 111 -22 run tp @a[tag=tester,distance=..100] -181.5 5 137.5
-#  tag @a[tag=!admin] add tester
 
 # sgtick
 execute if score ~gameActive sg matches 1 run function main:sg/sgtick
