@@ -46,11 +46,6 @@ execute store result score ?aliveBlue blockParty if entity @a[team=Blue,tag=bpAl
 execute store result score ?aliveGreen blockParty if entity @a[team=Green,tag=bpAlive]
 execute store result score ?aliveYellow blockParty if entity @a[team=Yellow,tag=bpAlive]
 
-execute store result score ?red bpPlayers if entity @a[team=Red]
-execute store result score ?blue bpPlayers if entity @a[team=Blue]
-execute store result score ?green bpPlayers if entity @a[team=Green]
-execute store result score ?yellow bpPlayers if entity @a[team=Yellow]
-
 tag @a[tag=player,scores={bpDead=0}] add bpAlive
 tag @a[tag=player,scores={bpDead=0}] remove bpDead
 tag @a[tag=player,scores={bpDead=1..}] add bpDead

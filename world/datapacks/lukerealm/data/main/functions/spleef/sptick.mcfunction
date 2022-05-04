@@ -75,10 +75,6 @@ execute store result score $aliveRed spleef if entity @a[team=Red,gamemode=!spec
 execute store result score $aliveBlue spleef if entity @a[team=Blue,gamemode=!spectator]
 execute store result score $aliveGreen spleef if entity @a[team=Green,gamemode=!spectator]
 execute store result score $aliveYellow spleef if entity @a[team=Yellow,gamemode=!spectator]
-execute store result score $red spleefPlayers if entity @a[team=Red]
-execute store result score $blue spleefPlayers if entity @a[team=Blue]
-execute store result score $green spleefPlayers if entity @a[team=Green]
-execute store result score $yellow spleefPlayers if entity @a[team=Yellow]
 
 # kills people who fell off L
 kill @a[gamemode=adventure,scores={yCos=27..30}]
