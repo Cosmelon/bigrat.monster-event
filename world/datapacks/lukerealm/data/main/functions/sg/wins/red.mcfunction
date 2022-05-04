@@ -7,8 +7,7 @@ clear @a[team=!Admin]
 title @a title {"text":"Red team wins!","color":"red"}
 execute unless score ~round sg matches 2 run title @a subtitle {"text":"Loading...","color":"red"}
 execute unless score ~round sg matches 2 run schedule function main:sg/startsg 6s replace
-execute if score ~round sg matches 2 run schedule function main:sg/wins/returnlobby 3s replace
-execute if score ~round sg matches 2 run schedule function main:lobby 10s replace
+execute if score ~round sg matches 2 run schedule function main:returnlobby 3s replace
 scoreboard players reset * sgDeaths
 # playsound minecraft:block.note_block.chime ambient @a ~ ~ ~ 100000 1
 scoreboard players add ~round sg 1

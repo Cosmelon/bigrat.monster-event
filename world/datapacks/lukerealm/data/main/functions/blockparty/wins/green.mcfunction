@@ -11,7 +11,7 @@ clear @a[team=!Admin]
 title @a title {"text":"Green team wins!","color":"green"}
 execute unless score ?round blockParty matches 3 run title @a subtitle {"text":"Loading...","color":"red"}
 execute unless score ?round blockParty matches 3 run schedule function main:blockparty/start 6s replace 
-execute if score ?round blockParty matches 3 run schedule function main:blockparty/wins/returnlobby 3s replace
+execute if score ?round blockParty matches 3 run schedule function main:returnlobby 3s replace
 function main:blockparty/floorrng/floors
 execute at @a as @a run playsound minecraft:entity.wither.death master @s ~ ~ ~ 10
 

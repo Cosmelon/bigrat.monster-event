@@ -7,7 +7,7 @@ clear @a[team=!Admin]
 title @a title {"text":"Yellow team wins!","color":"yellow"}
 execute unless score $round spleef matches 3 run title @a subtitle {"text":"Loading...","color":"red"}
 execute unless score $round spleef matches 3 run schedule function main:spleef/startspleef 6s replace
-execute if score $round spleef matches 3 run schedule function main:spleef/wins/returnlobby 3s replace
+execute if score $round spleef matches 3 run schedule function main:returnlobby 3s replace
 # execute unless score $round spleef matches 3 run title @a title {"text":"Round Over!","bold":true,"color":"red"}
 scoreboard players reset * spleefDeaths
 # playsound minecraft:block.note_block.chime ambient @a ~ ~ ~ 100000 1
