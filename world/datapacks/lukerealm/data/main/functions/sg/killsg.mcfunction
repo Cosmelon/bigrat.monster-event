@@ -40,7 +40,7 @@ scoreboard players reset * sgDeaths
 worldborder set 6000000 1
 worldborder center 0 0
 schedule clear main:sg/startsg
-schedule clear main:sg/wins/returnlobby
+schedule clear main:returnlobby
 schedule clear main:lobby
 # bossbar visibility
 bossbar set minecraft:sgshrink visible false

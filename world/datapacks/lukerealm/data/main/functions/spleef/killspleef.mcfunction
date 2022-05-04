@@ -26,6 +26,7 @@ bossbar set minecraft:spleefroundcount visible false
 worldborder set 6000000 1
 worldborder center 0 0
 schedule clear main:returnlobby
+schedule clear main:lobby
 schedule clear main:spleef/startspleef
 schedule clear main:spleef/wins/returnlobby
 schedule clear main:spleef/shovelsandkb
