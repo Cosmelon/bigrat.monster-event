@@ -34,10 +34,10 @@ tag @a[team=Spectator] remove player
 team join Spectator @a[team=]
 
 # teamCheck
-execute store result score .redTeam teamCheck if entity @a[team=Red]
-execute store result score .blueTeam teamCheck if entity @a[team=Blue]
-execute store result score .greenTeam teamCheck if entity @a[team=Green]
-execute store result score .yellowTeam teamCheck if entity @a[team=Yellow]
+execute store result score .red teamCheck if entity @a[team=Red]
+execute store result score .blue teamCheck if entity @a[team=Blue]
+execute store result score .green teamCheck if entity @a[team=Green]
+execute store result score .yellow teamCheck if entity @a[team=Yellow]
 
 # constant yCos (yPosition) tracker, can be used for multiple games
 execute as @a store result score @s yCos run data get entity @s Pos[1]
