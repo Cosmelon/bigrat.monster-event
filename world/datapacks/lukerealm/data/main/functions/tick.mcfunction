@@ -6,6 +6,8 @@ execute if score !gameActive race matches 0 run scoreboard players set $race cur
 execute if score !gameActive race matches 1 run scoreboard players set $race currentGame 1
 execute if score ~gameActive sg matches 0 run scoreboard players set $sg currentGame 0
 execute if score ~gameActive sg matches 1 run scoreboard players set $sg currentGame 1
+execute if score ?gameActive blockParty matches 0 run scoreboard players set $blockParty currentGame 0
+execute if score ?gameActive blockParty matches 1 run scoreboard players set $blockParty currentGame 1
 
 bossbar set minecraft:spleefroundcount players @a
 bossbar set minecraft:spleefshrink1timer players @a

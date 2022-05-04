@@ -11,7 +11,6 @@ scoreboard players set #2 sgConstant 2
 scoreboard players set #1000 sgConstant 1000
 scoreboard players set #10000 sgConstant 10000
 scoreboard players set #lcg sgConstant 1103515245
-function math:rng/zprivate/init
 
 
 # scoreboard remake
@@ -37,7 +36,6 @@ gamerule commandBlockOutput false
 gamerule disableRaids true
 gamerule doDaylightCycle false
 gamerule spectatorsGenerateChunks true
-gamerule doImmediateRespawn true
 gamerule doFireTick true
 gamerule doMobSpawning false
 gamerule doTraderSpawning false
