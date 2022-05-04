@@ -18,4 +18,4 @@ execute at @a as @a run playsound minecraft:entity.wither.death master @s ~ ~ ~ 
 
 
 # workaround for infinite game repeat
-execute if score ?red bpPlayers matches 0 if score ?blue bpPlayers matches 0 if score ?green bpPlayers matches 1.. if score ?yellow bpPlayers matches 1.. run function main:blockparty/killbp
+execute if score .red teamCheck matches 0 if score .blue teamCheck matches 0 if score .green teamCheck matches 1.. if score .yellow teamCheck matches 1.. run function main:blockparty/killbp
