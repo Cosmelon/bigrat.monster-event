@@ -72,7 +72,7 @@ execute if score ?notifRedDead blockParty matches 1 if score ?notifBlueDead bloc
 
 # music stuff
 execute if score ?stopSec bpStop matches -1 run stopsound @a *
-execute if score ?stopSec bpStop matches -15 at @e[name="?music"] run playsound music_disc.chirp voice @a ^ ^ ^ 10000
+execute if score ?stopSec bpStop matches -15 at @e[name="?music"] run playsound music_disc.chirp voice @a ^ ^ ^ 10000 1 1
 
 # round count bossbar stuff
 execute store result bossbar minecraft:bproundcount value run scoreboard players get ?round blockParty
