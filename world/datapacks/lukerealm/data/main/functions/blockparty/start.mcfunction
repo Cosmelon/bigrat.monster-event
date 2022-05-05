@@ -39,7 +39,7 @@ bossbar set minecraft:bproundcount visible true
 # upgraded to three passes using this bullshit boilerplate fuckery
 tp @a -2000.5 57 3000.5
 setblock -2017 27 2984 redstone_block destroy
-summon armor_stand -2000.5 56.75 3000.5 {NoGravity:1b,CustomName:'{"text":"?midL"}'}
+summon armor_stand -2000.5 56.75 3000.5 {NoGravity:1b,Invisible:1b,CustomName:'{"text":"?midL"}'}
 execute positioned -2000.5 57 3000.5 run tp @a[tag=player,limit=1,sort=random,distance=..3] -2000.5 57 2990.5 facing entity @e[limit=1,sort=nearest,name="?midL"]
 execute positioned -2000.5 57 3000.5 run tp @a[tag=player,limit=1,sort=random,distance=..3] -2000.5 57 3010.5 facing entity @e[limit=1,sort=nearest,name="?midL"]
 execute positioned -2000.5 56 3000.5 run tp @a[tag=player,limit=1,sort=random,distance=..3] -1990.5 57 3000.5 facing entity @e[limit=1,sort=nearest,name="?midL"]
@@ -92,4 +92,4 @@ setblock -2017 27 2984 air destroy
 execute positioned -2000.5 57 3000.5 run kill @e[limit=1,sort=nearest,name="?midL"]
 tp @a[tag=!player] -2000.5 61 3023.5
 
-summon armor_stand -2000.5 57 3000.5 {NoGravity:1b,CustomName:'{"text":"?music"}'}
+summon armor_stand -2000.5 57 3000.5 {NoGravity:1b,Invisible:1b,CustomName:'{"text":"?music"}'}
