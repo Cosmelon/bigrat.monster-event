@@ -40,3 +40,6 @@
 
 # ignores logs folder
 **bigrat.monster/logs/
+
+# ignores resourcepack
+**bigrat.monster/bigratResources
