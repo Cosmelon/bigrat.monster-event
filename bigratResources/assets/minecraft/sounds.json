@@ -1,10 +1,12 @@
 {
     "custom.bpmusic": {
+        "category": "voice",
         "sounds": [
-            "custom/blockparty/placemusic"
+            "custom/bpmusic"
         ]
     },
     "custom.meme": {
+        "category": "voice",
         "sounds": [
             "custom/shotgun"
         ]
