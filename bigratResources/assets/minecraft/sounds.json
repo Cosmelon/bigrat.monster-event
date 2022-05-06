@@ -1,0 +1,12 @@
+{
+    "custom.bpmusic": {
+        "sounds": [
+            "custom/blockparty/placemusic"
+        ]
+    },
+    "custom.meme": {
+        "sounds": [
+            "custom/shotgun"
+        ]
+    }
+}
