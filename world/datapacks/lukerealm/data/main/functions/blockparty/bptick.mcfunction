@@ -85,7 +85,7 @@ tag @a[tag=player,scores={bpDead=1..}] add bpDead
 # actionbar GUI
 #floor counter
 #referencing ?floorNum bpFloor
-execute if score ?stopSec bpStop matches -10 run scoreboard players add ?floorNum bpFloor 1
+execute if score ?stopSec bpStop matches -9 if score ?tick bpStop matches 19 run scoreboard players add ?floorNum bpFloor 1
 scoreboard players operation ?aliveRed blockparty += ?aliveAll blockparty
 scoreboard players operation ?aliveBlue blockparty += ?aliveAll blockparty
 scoreboard players operation ?aliveGreen blockparty += ?aliveAll blockparty
