@@ -80,6 +80,9 @@ aliases:
   - whitelist add TheGloryThief
   - whitelist add Visuumii
   - whitelist add zhar
+  - whitelist add SpawnedThisWay
+  - whitelist add BurgerSlayin
+  - whitelist add gemaze
   - tellraw @a[tag=admin] {"text":"Testers Added!","color":"green"}
   testercut:
   - team leave AK1089
@@ -103,6 +106,9 @@ aliases:
   - team leave TheGloryThief
   - team leave Visuumii
   - team leave zhar
+  - team leave SpawnedThisWay
+  - team leave BurgerSlayin
+  - team leave gemaze
   - whitelist remove AK1089
   - whitelist remove Spicv
   - whitelist remove wrait
@@ -124,6 +130,9 @@ aliases:
   - whitelist remove TheGloryThief
   - whitelist remove Visuumii
   - whitelist remove zhar
+  - whitelist remove SpawnedThisWay
+  - whitelist remove BurgerSlayin
+  - whitelist remove gemaze
   - tellraw @a[tag=admin] {"text":"Testers Removed!","color":"red"}
   nvoff:
   - tag @s add noNV
