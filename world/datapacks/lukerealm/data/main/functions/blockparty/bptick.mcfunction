@@ -71,7 +71,7 @@ execute if score ?notifRedDead blockParty matches 1 if score ?notifBlueDead bloc
 
 
 # music stuff
-execute if score ?countDown blockparty matches 0 run playsound minecraft:music_disc.chirp voice @a -2000.5 130 3000.5 10000
+execute if score ?countDown blockParty matches 0 run playsound minecraft:music_disc.chirp voice @a -2000.5 130 3000.5 10000
 execute if score ?stopSec bpStop matches -1 run stopsound @a
 execute if score ?stopSec bpStop matches -10 run playsound minecraft:music_disc.chirp voice @a -2000.5 130 3000.5 10000
 
@@ -86,11 +86,11 @@ tag @a[tag=player,scores={bpDead=1..}] add bpDead
 #floor counter
 #referencing ?floorNum bpFloor
 execute if score ?stopSec bpStop matches -9 if score ?tick bpStop matches 19 run scoreboard players add ?floorNum bpFloor 1
-scoreboard players operation ?aliveRed blockparty += ?aliveAll blockparty
-scoreboard players operation ?aliveBlue blockparty += ?aliveAll blockparty
-scoreboard players operation ?aliveGreen blockparty += ?aliveAll blockparty
-scoreboard players operation ?aliveYellow blockparty += ?aliveAll blockParty
-execute if score ?countDown blockParty matches ..0 run title @a actionbar [{"text":"Round: ","color":"green"},{"score":{"name":"?floorNum","objective":"bpFloor"}},{"text":"     Players Dead: ","color":"red"},{"score":{"name":"?aliveAll","objective":"blockparty"}}]
+scoreboard players operation ?aliveRed blockParty += ?aliveAll blockParty
+scoreboard players operation ?aliveBlue blockParty += ?aliveAll blockParty
+scoreboard players operation ?aliveGreen blockParty += ?aliveAll blockParty
+scoreboard players operation ?aliveYellow blockParty += ?aliveAll blockParty
+execute if score ?countDown blockParty matches ..0 run title @a actionbar [{"text":"Round: ","color":"green"},{"score":{"name":"?floorNum","objective":"bpFloor"}},{"text":"     Players Dead: ","color":"red"},{"score":{"name":"?aliveAll","objective":"blockParty"}}]
 
 
 
