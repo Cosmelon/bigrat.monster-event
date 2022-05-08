@@ -13,7 +13,6 @@ scoreboard players set ?notifYellowDead blockParty 0
 scoreboard players set ?stopSec bpStop -100
 scoreboard players set ?tick bpStop 0
 scoreboard players set @a bpSound 0
-scoreboard players add ?round blockParty 1
 tag @a[tag=player] add bpAlive
 scoreboard players set @a[tag=player] bpDead 0
 spawnpoint @a -2000 62 3023
