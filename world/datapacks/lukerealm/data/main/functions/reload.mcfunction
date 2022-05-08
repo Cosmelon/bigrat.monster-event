@@ -18,7 +18,6 @@ scoreboard objectives add spleef dummy
 scoreboard objectives add spleefDeaths deathCount
 scoreboard objectives add spleef_sb dummy
 scoreboard objectives add spleefSnowBall minecraft.mined:minecraft.snow_block
-scoreboard objectives add spleefQuit minecraft.custom:minecraft.leave_game
 scoreboard objectives add spleefBorder dummy
 scoreboard objectives add sg dummy
 scoreboard objectives add sgBorder dummy
@@ -30,6 +29,7 @@ scoreboard objectives add raceMin dummy
 scoreboard objectives add currentGame dummy
 scoreboard objectives add yCos dummy
 scoreboard objectives add teamCheck dummy
+scoreboard objectives add playersOnline minecraft.custom:leave_game
 
 # gamerules
 gamerule announceAdvancements false
