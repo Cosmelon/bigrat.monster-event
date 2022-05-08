@@ -16,7 +16,7 @@ execute unless score ?round blockParty matches 3 run schedule function main:bloc
 execute if score ?round blockParty matches 3 run schedule function main:returnlobby 3s replace
 function main:blockparty/floorrng/floors
 execute at @a as @a run playsound minecraft:entity.wither.death master @s ~ ~ ~ 10
-
+bossbar set minecraft:bproundcount visible false
 
 # workaround for infinite game repeat
 execute if score .red teamCheck matches 0 if score .blue teamCheck matches 0 if score .green teamCheck matches 1.. if score .yellow teamCheck matches 1.. run function main:blockparty/killbp
