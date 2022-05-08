@@ -73,3 +73,9 @@ execute if score ~powersActive sg matches 1 if score ~countDown sg matches ..0 r
 #levitation
 #  - block: dried kelp, for 5 seconds, amp 5
 execute as @a[gamemode=adventure] run execute positioned as @s if block ~ ~-1 ~ minecraft:dried_kelp_block run effect give @s minecraft:levitation 5 5 true
+
+# killing players when they disconnect mid-game
+execute as @a[scores={playersOnline=1..},team=!Admin] run gamemode spectator @s
+execute as @a[scores={playersOnline=1..},tag=player] run scoreboard players set @s sgDeaths 1
+execute as @a[scores={playersOnline=1..},tag=player] run tellraw @s {"text":"You were killed because of a disconnect!","color":"dark_gray"}
+execute as @a[scores={playersOnline=1..},team=!Admin] run clear @s
