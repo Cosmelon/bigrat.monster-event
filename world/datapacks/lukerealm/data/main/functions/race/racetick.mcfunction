@@ -3,9 +3,9 @@
 # no need to type it in every single time
 
 scoreboard players remove !countDown race 1
-effect give @a[team=!Admin] water_breathing 100000 0 true
-effect give @a[team=!Admin] speed 100000 0 true
-effect give @a[team=!Admin] weakness 100000 0 true
+effect give @a[tag=player] water_breathing 100000 0 true
+effect give @a[tag=player] speed 100000 0 true
+effect give @a[tag=player] weakness 100000 0 true
 gamemode spectator @a[tag=!player,team=!Admin]
 
 # stuff for the stopwatch
@@ -79,10 +79,10 @@ execute as @a[gamemode=adventure,scores={raceMilli=10..99,raceSec=10..,raceMin=1
 
 #finish
 # added ending to the numbers
-execute as @a[tag=player,gamemode=spectator,scores={racePos=1}] run title @s actionbar [{"text":"You finished in ","color":"gold"},{"score":{"name":"@s","objective":"racePos"}},{"text":"st place!"}]
-execute as @a[tag=player,gamemode=spectator,scores={racePos=2}] run title @s actionbar [{"text":"You finished in ","color":"gold"},{"score":{"name":"@s","objective":"racePos"}},{"text":"nd place!"}]
-execute as @a[tag=player,gamemode=spectator,scores={racePos=3}] run title @s actionbar [{"text":"You finished in ","color":"gold"},{"score":{"name":"@s","objective":"racePos"}},{"text":"rd place!"}]
-execute as @a[tag=player,gamemode=spectator,scores={racePos=4..}] run title @s actionbar [{"text":"You finished in ","color":"gold"},{"score":{"name":"@s","objective":"racePos"}},{"text":"th place!"}]
+execute as @a[tag=player,scores={racePos=1,raceLap=4..}] run title @s actionbar [{"text":"You finished in ","color":"gold"},{"score":{"name":"@s","objective":"racePos"}},{"text":"st place!"}]
+execute as @a[tag=player,scores={racePos=2,raceLap=4..}] run title @s actionbar [{"text":"You finished in ","color":"gold"},{"score":{"name":"@s","objective":"racePos"}},{"text":"nd place!"}]
+execute as @a[tag=player,scores={racePos=3,raceLap=4..}] run title @s actionbar [{"text":"You finished in ","color":"gold"},{"score":{"name":"@s","objective":"racePos"}},{"text":"rd place!"}]
+execute as @a[tag=player,scores={racePos=4..,raceLap=4..}] run title @s actionbar [{"text":"You finished in ","color":"gold"},{"score":{"name":"@s","objective":"racePos"}},{"text":"th place!"}]
 
 #  intended be open for five seconds, then closed for two
 scoreboard players remove !gateOpen race 1
@@ -104,6 +104,7 @@ bossbar set minecraft:racegateshut players @a[tag=gate]
 
 # spectator anti-spoil
 execute positioned 310 100 0 run tp @a[team=!Admin,gamemode=spectator,distance=175..] 310 100 0
+tellraw @a[team=!Admin,gamemode=spectator,distance=175..] {"text":"No peaking!","color":"dark_gray"}
 
 # speedpads (magenta_glazed_terracotta)
 execute as @a[tag=player,gamemode=adventure] run execute positioned as @s if block ~ ~-1 ~ minecraft:magenta_glazed_terracotta run effect give @s speed 2 3 true
