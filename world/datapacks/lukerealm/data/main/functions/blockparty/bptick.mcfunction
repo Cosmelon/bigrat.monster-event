@@ -104,3 +104,8 @@ xp set @a 0 levels
 xp set @a 0 points
 kill @e[type=item]
 kill @e[type=experience_orb]
+
+# killing players when they disconnect mid-game
+execute as @a[scores={playersOnline=1..},tag=player] run scoreboard players set @s bpDeaths 1
+execute as @a[scores={playersOnline=1..},tag=player] run tellraw @s {"text":"You were killed because of a disconnect!","color":"dark_gray"}
+execute as @a[scores={playersOnline=1..},team=!Admin] run clear @s
