@@ -143,8 +143,8 @@ time set midnight
 # spawnpoint during game
 spawnpoint @a -496 66 -459
 
-# Making players leave their teams when they leave the game
-execute as @a[scores={spleefQuit=1..},team=!Admin] run gamemode spectator @s
-execute as @a[scores={spleefQuit=1..}] run tellraw @s {"text":"You were killed because of a disconnect","color":"dark_gray"}
-execute as @a[scores={spleefQuit=1..}] run scoreboard players set @s spleefQuit 0
-execute as @a[scores={spleefQuit=1..}] run clear @a
+# killing players when they disconnect mid-game
+execute as @a[scores={playersOnline=1..},team=!Admin] run gamemode spectator @s
+execute as @a[scores={playersOnline=1..},tag=player] run scoreboard players set @s spleefDeaths 1
+execute as @a[scores={playersOnline=1..},tag=player] run tellraw @s {"text":"You were killed because of a disconnect!","color":"dark_gray"}
+execute as @a[scores={playersOnline=1..},team=!Admin] run clear @s
