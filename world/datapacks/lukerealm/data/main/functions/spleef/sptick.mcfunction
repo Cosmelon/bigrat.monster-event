@@ -147,4 +147,3 @@ spawnpoint @a -496 66 -459
 execute as @a[scores={playersOnline=1..},team=!Admin] run gamemode spectator @s
 execute as @a[scores={playersOnline=1..},tag=player] run scoreboard players set @s spleefDeaths 1
 execute as @a[scores={playersOnline=1..},tag=player] run tellraw @s {"text":"You were killed because of a disconnect!","color":"dark_gray"}
-execute as @a[scores={playersOnline=1..},team=!Admin] run clear @s

@@ -40,10 +40,12 @@ execute store result score .green teamCheck if entity @a[team=Green]
 execute store result score .yellow teamCheck if entity @a[team=Yellow]
 
 # playersOnline (players will have a score of 1 when offline, 0 when online)
-execute as @a[scores={playersOnline=1..}] run tp @s 1000.5 28 -6000.5 0 5
-execute as @a[scores={playersOnline=1..}] run gamemode adventure @s
+execute as @a[scores={playersOnline=1..},team=!Admin] run tp @s 1000.5 28 -6000.5 0 5
+execute as @a[scores={playersOnline=1..},team=!Admin] run gamemode adventure @s
+execute as @a[scores={playersOnline=1..},team=!Admin] run clear @s
 execute as @a[scores={playersOnline=1..}] if score $spleef currentGame matches 1 run tp @s -496.5 66 -459.5 0 5
 execute as @a[scores={playersOnline=1..}] if score $sg currentGame matches 1 run tp @s -1983.5 133 -1983.5 0 5
+execute as @a[tag=!player,scores={playersOnline=1..}] if score $blockParty currentGame matches 1 run tp @s -2000.5 61 3023.5 facing entity @e[limit=1,sort=nearest,name="?midL"]
 execute as @a[team=Red,scores={playersOnline=1..}] if score $blockParty currentGame matches 1 run tp @s -2018.5 62 3018.5 facing entity @e[limit=1,sort=nearest,name="?midL"]
 execute as @a[team=Blue,scores={playersOnline=1..}] if score $blockParty currentGame matches 1 run tp @s -1982.5 62 2982.5 facing entity @e[limit=1,sort=nearest,name="?midL"]
 execute as @a[team=Green,scores={playersOnline=1..}] if score $blockParty currentGame matches 1 run tp @s -2018.5 62 2982.5 facing entity @e[limit=1,sort=nearest,name="?midL"]
