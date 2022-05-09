@@ -93,5 +93,5 @@ scoreboard players reset @a[scores={sgPowerCheck=1..}] sgPowerCheck
 # blockparty tick
 execute if score ?gameActive blockParty matches 1 run function main:blockparty/bptick
 bossbar set minecraft:bproundcount players @a
-tag @a[tag=bpAlive] remove bpDead
 tag @a[tag=bpDead] remove bpAlive
+tag @a[tag=bpAlive] remove bpDead
