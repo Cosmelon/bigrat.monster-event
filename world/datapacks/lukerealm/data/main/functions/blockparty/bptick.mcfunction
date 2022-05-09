@@ -46,10 +46,10 @@ execute store result score ?aliveBlue blockParty if entity @a[team=Blue,tag=bpAl
 execute store result score ?aliveGreen blockParty if entity @a[team=Green,tag=bpAlive]
 execute store result score ?aliveYellow blockParty if entity @a[team=Yellow,tag=bpAlive]
 
-tag @a[tag=player,scores={bpDead=0}] add bpAlive
-tag @a[tag=player,scores={bpDead=0}] remove bpDead
-tag @a[tag=player,scores={bpDead=1..}] add bpDead
-tag @a[tag=player,scores={bpDead=1..}] remove bpAlive
+tag @a[tag=player,scores={bpDeaths=0}] add bpAlive
+tag @a[tag=player,scores={bpDeaths=0}] remove bpDeaths
+tag @a[tag=player,scores={bpDeaths=1..}] add bpDeaths
+tag @a[tag=player,scores={bpDeaths=1..}] remove bpAlive
 
 
 # player death method
@@ -80,7 +80,7 @@ execute store result bossbar minecraft:bproundcount value run scoreboard players
 bossbar set minecraft:bproundcount name [{"text":"Round: ","color":"white","bold":true},{"score":{"name":"?round","objective":"blockParty"},"bold":true},{"text":"/3","bold":true}]
 
 # Dead count
-tag @a[tag=player,scores={bpDead=1..}] add bpDead
+tag @a[tag=player,scores={bpDeaths=1..}] add bpDead
 
 # actionbar GUI
 #floor counter

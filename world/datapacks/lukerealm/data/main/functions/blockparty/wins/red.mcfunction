@@ -3,7 +3,7 @@
 
 scoreboard players set ?gameActive blockParty 0
 scoreboard players add ?round blockParty 1
-scoreboard players reset * bpDead
+scoreboard players reset * bpDeaths
 tag @a remove bpAlive
 tag @a remove bpDead
 title @a times 0 50 0

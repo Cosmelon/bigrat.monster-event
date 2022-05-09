@@ -14,7 +14,7 @@ scoreboard players set ?stopSec bpStop -100
 scoreboard players set ?tick bpStop 0
 scoreboard players set @a bpSound 0
 tag @a[tag=player] add bpAlive
-scoreboard players set @a[tag=player] bpDead 0
+scoreboard players set @a[tag=player] bpDeaths 0
 spawnpoint @a -2000 62 3023
 spawnpoint @a[team=Red] -2018 62 3018 -135
 spawnpoint @a[team=Blue] -1982 62 2982 45

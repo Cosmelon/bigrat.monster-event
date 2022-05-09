@@ -10,7 +10,7 @@ scoreboard objectives add bpFloor dummy
 scoreboard objectives add bpSound dummy
 scoreboard objectives add bpStop dummy
 scoreboard objectives add bpTimer dummy 
-scoreboard objectives add bpDead deathCount
+scoreboard objectives add bpDeaths deathCount
 
 
 scoreboard players set #2 bpConstant 2
