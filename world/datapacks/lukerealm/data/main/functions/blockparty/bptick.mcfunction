@@ -86,11 +86,8 @@ tag @a[tag=player,scores={bpDead=1..}] add bpDead
 #floor counter
 #referencing ?floorNum bpFloor
 execute if score ?stopSec bpStop matches -9 if score ?tick bpStop matches 19 run scoreboard players add ?floorNum bpFloor 1
-scoreboard players operation ?aliveRed blockParty += ?aliveAll blockParty
-scoreboard players operation ?aliveBlue blockParty += ?aliveAll blockParty
-scoreboard players operation ?aliveGreen blockParty += ?aliveAll blockParty
-scoreboard players operation ?aliveYellow blockParty += ?aliveAll blockParty
-execute if score ?countDown blockParty matches ..0 run title @a actionbar [{"text":"Round: ","color":"green"},{"score":{"name":"?floorNum","objective":"bpFloor"}},{"text":"     Players Dead: ","color":"red"},{"score":{"name":"?aliveAll","objective":"blockParty"}}]
+execute store result score ?aliveAll blockParty if entity @a[tag=bpAlive]
+execute if score ?countDown blockParty matches ..0 run title @a actionbar [{"text":"Round: ","color":"green"},{"score":{"name":"?floorNum","objective":"bpFloor"}},{"text":"     Players Alive: ","color":"red"},{"score":{"name":"?aliveAll","objective":"blockParty"}}]
 
 # indiv player boots
 item replace entity @a[team=Red] armor.feet with leather_boots{display:{color:16066343},Unbreakable:1b,Enchantments:[{id:"binding_curse",lvl:1}],HideFlags:123}
