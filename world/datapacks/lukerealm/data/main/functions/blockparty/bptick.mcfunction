@@ -26,6 +26,9 @@ execute if score ?countDown blockParty matches 0 run scoreboard players set ?flo
 execute if score ?countDown blockParty matches 0 run scoreboard players set ?stopSec bpStop 30
 execute if score ?countDown blockParty matches -40 run title @a title ""
 execute if score ?countDown blockParty matches -40 run title @a subtitle ""
+execute if score ?countDown blockParty matches 350 run function main:blockparty/startinfo/text1.mcfunction
+execute if score ?countDown blockParty matches 250 run function main:blockparty/startinfo/text2.mcfunction
+execute if score ?countDown blockParty matches 150 run function main:blockparty/startinfo/text3.mcfunction
 
 # color picker
 #execute if score $floorSwitch blockParty matches 1 run scoreboard players add $tick blockPartyStop 1
