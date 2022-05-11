@@ -10,7 +10,7 @@ tellraw @s {"text":""}
 tellraw @s {"text":""}
 tellraw @s {"text":""}
 tellraw @s {"text":""}
-tellraw @s {"text":"________________________________________","bold":true}
+tellraw @s [{"text":"\uE003"},{"translate":"space.-76"},{"text":"\uE003"},{"translate":"space.-76"},{"text":"\uE003"}]
 tellraw @s {"text":"Teleport Menu 2/2","bold":true,"color":"red"}
 tellraw @s {"text":""}
 tellraw @s {"text":"Battle","color":"blue","clickEvent":{"action":"run_command","value":"/tp @s -708 21 683 180 0"}}
@@ -21,4 +21,4 @@ tellraw @s {"text":"TF2 Arena","color":"#FFA500","clickEvent":{"action":"run_com
 tellraw @s {"text":"Old Lobby","color":"red","clickEvent":{"action":"run_command","value":"/tp @s -181.5 5 137.5 0 10"}}
 tellraw @s {"text":""}
 tellraw @s [{"text":"<","color":"gray","bold":true},{"text":"Prev","color":"red","bold":true,"clickEvent":{"action":"run_command","value":"/function main:telemenu"}},{"text":" | ","color":"gray","bold":true},{"text":"Next","color":"red","bold":true,"clickEvent":{"action":"run_command","value":"/tellraw @s \"You're already on the last page!\""}},{"text":">","color":"gray","bold":true}]
-tellraw @s {"text":"________________________________________","bold":true}
+tellraw @s [{"text":"\uE003"},{"translate":"space.-76"},{"text":"\uE003"},{"translate":"space.-76"},{"text":"\uE006"}]
