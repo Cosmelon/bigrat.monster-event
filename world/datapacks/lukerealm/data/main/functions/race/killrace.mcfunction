@@ -26,6 +26,7 @@ fill 294 79 37 294 75 47 light_gray_stained_glass replace air
 # sound
 playsound minecraft:block.beacon.deactivate master @a
 
-tellraw @a[tag=admin] ""
-tellraw @a[tag=admin] {"text":"Killed race! Return to lobby?","color":"dark_red","bold":true,"clickEvent":{"action":"run_command","value":"/function main:lobby"}}
-tellraw @a[tag=admin] ""
+tellraw @a ""
+tellraw @a {"text":"Killed Race!","color":"dark_red"}
+tellraw @a[tag=admin] {"text":"Return to lobby?","color":"dark_red","bold":true,"clickEvent":{"action":"run_command","value":"/function main:lobby"}}
+tellraw @a ""

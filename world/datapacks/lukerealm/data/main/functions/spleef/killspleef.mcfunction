@@ -40,6 +40,7 @@ schedule clear main:spleef/border/removetop
 clear @a[team=!Admin]
 playsound minecraft:block.beacon.deactivate master @a
 
-tellraw @a[tag=admin] ""
-tellraw @a[tag=admin] {"text":"Killed spleef! Return to lobby?","color":"dark_red","bold":true,"clickEvent":{"action":"run_command","value":"/function main:lobby"}}
-tellraw @a[tag=admin] ""
+tellraw @a ""
+tellraw @a {"text":"Killed Spleef!","color":"dark_red"}
+tellraw @a[tag=admin] {"text":"Return to lobby?","color":"dark_red","bold":true,"clickEvent":{"action":"run_command","value":"/function main:lobby"}}
+tellraw @a ""

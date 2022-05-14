@@ -62,6 +62,7 @@ schedule clear main:sg/border/s5warn
 clear @a[team=!Admin]
 playsound minecraft:block.beacon.deactivate master @a
 
-tellraw @a[tag=admin] ""
-tellraw @a[tag=admin] {"text":"Killed sg! Return to lobby?","color":"dark_red","bold":true,"clickEvent":{"action":"run_command","value":"/function main:lobby"}}
-tellraw @a[tag=admin] ""
+tellraw @a ""
+tellraw @a {"text":"Killed SG!","color":"dark_red"}
+tellraw @a[tag=admin] {"text":"Return to lobby?","color":"dark_red","bold":true,"clickEvent":{"action":"run_command","value":"/function main:lobby"}}
+tellraw @a ""
