@@ -91,7 +91,7 @@ execute store result bossbar minecraft:bproundcount value run scoreboard players
 bossbar set minecraft:bproundcount name [{"text":"Round: ","color":"white","bold":true},{"score":{"name":"?round","objective":"blockParty"},"bold":true},{"text":"/3","bold":true}]
 
 # Dead count
-tag @a[tag=player,scores={bpDeaths=1..}] add bpDead
+tag @a[tag=player,scores={bpDeaths=1..}] add bpDeaths
 
 # indiv player boots
 item replace entity @a[team=Red,nbt=!{Inventory:[{id:"minecraft:leather_boots"}]}] armor.feet with leather_boots{display:{color:16066343},Unbreakable:1b,Enchantments:[{id:"binding_curse",lvl:1}],HideFlags:123}
