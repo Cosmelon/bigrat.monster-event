@@ -23,7 +23,7 @@ execute if score ?countDown blockParty matches 20 run playsound minecraft:block.
 execute if score ?countDown blockParty matches 0 run title @a title {"text":"Start Schmoovin!","color":"red"}
 execute if score ?countDown blockParty matches 0 run playsound minecraft:block.note_block.chime master @a ^0 ^ ^ 1 1.414214 1
 execute if score ?countDown blockParty matches 0 run scoreboard players set ?floorSwitch blockParty 1
-execute if score ?countDown blockParty matches 0 run scoreboard players set ?stopSec bpStop 30
+execute if score ?countDown blockParty matches 0 run scoreboard players set ?stopSec bpStop 20
 execute if score ?countDown blockParty matches -40 run title @a title ""
 execute if score ?countDown blockParty matches -40 run title @a subtitle ""
 
@@ -37,6 +37,19 @@ execute if score ?countDown blockParty matches 150 run function main:blockparty/
 execute if score ?tick bpStop matches 20.. run scoreboard players remove ?stopSec bpStop 1
 execute if score ?stopSec bpStop matches 0 run function main:blockparty/colorrng/pickcolor
 execute if score ?tick bpStop matches 20.. run scoreboard players set ?tick bpStop 0
+
+# music stuff
+execute if score ?countDown blockParty matches 0 run playsound minecraft:music_disc.chirp voice @a -2000.5 130 3000.5 10000
+execute if score ?stopSec bpStop matches -1 run stopsound @a
+execute if score ?stopSec bpStop matches -10 run playsound minecraft:music_disc.chirp voice @a -2000.5 130 3000.5 10000
+
+# actionbar GUI
+#floor counter
+execute if score ?stopSec bpStop matches -10 run scoreboard players add ?floorNum bpFloor 1
+execute store result score ?aliveAll blockParty if entity @a[tag=bpAlive]
+execute if score ?countDown blockParty matches ..0 run title @a actionbar [{"text":"Round: ","color":"green"},{"score":{"name":"?floorNum","objective":"bpFloor"}},{"text":"     Players Alive: ","color":"red"},{"score":{"name":"?aliveAll","objective":"blockParty"}}]
+
+execute if score ?stopSec bpStop matches -10 run scoreboard players remove ?in1 bpFloor 1
 
 # timer picker
 # the idea is that a random amount of time is picked after each elimination before it stops again
@@ -73,26 +86,12 @@ execute if score ?notifRedDead blockParty matches 1 if score ?notifBlueDead bloc
 execute if score ?notifRedDead blockParty matches 1 if score ?notifBlueDead blockParty matches 1 if score ?notifGreenDead blockParty matches 1 run function main:blockparty/wins/yellow
 
 
-
-
-# music stuff
-execute if score ?countDown blockParty matches 0 run playsound minecraft:music_disc.chirp voice @a -2000.5 130 3000.5 10000
-execute if score ?stopSec bpStop matches -1 run stopsound @a
-execute if score ?stopSec bpStop matches -10 run playsound minecraft:music_disc.chirp voice @a -2000.5 130 3000.5 10000
-
 # round count bossbar stuff
 execute store result bossbar minecraft:bproundcount value run scoreboard players get ?round blockParty
 bossbar set minecraft:bproundcount name [{"text":"Round: ","color":"white","bold":true},{"score":{"name":"?round","objective":"blockParty"},"bold":true},{"text":"/3","bold":true}]
 
 # Dead count
 tag @a[tag=player,scores={bpDeaths=1..}] add bpDead
-
-# actionbar GUI
-#floor counter
-#referencing ?floorNum bpFloor
-execute if score ?stopSec bpStop matches -9 if score ?tick bpStop matches 19 run scoreboard players add ?floorNum bpFloor 1
-execute store result score ?aliveAll blockParty if entity @a[tag=bpAlive]
-execute if score ?countDown blockParty matches ..0 run title @a actionbar [{"text":"Round: ","color":"green"},{"score":{"name":"?floorNum","objective":"bpFloor"}},{"text":"     Players Alive: ","color":"red"},{"score":{"name":"?aliveAll","objective":"blockParty"}}]
 
 # indiv player boots
 item replace entity @a[team=Red,nbt=!{Inventory:[{id:"minecraft:leather_boots"}]}] armor.feet with leather_boots{display:{color:16066343},Unbreakable:1b,Enchantments:[{id:"binding_curse",lvl:1}],HideFlags:123}
