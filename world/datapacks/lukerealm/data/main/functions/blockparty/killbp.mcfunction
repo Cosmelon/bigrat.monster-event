@@ -30,6 +30,6 @@ title @a actionbar ""
 playsound minecraft:block.beacon.deactivate master @a
 
 tellraw @a ""
-tellraw @a {"text":"Killed Block Party!","color":"dark_red"}
-tellraw @a[tag=admin] {"text":"Return to lobby?","color":"dark_red","bold":true,"clickEvent":{"action":"run_command","value":"/function main:lobby"}}
+tellraw @a[tag=!admin] {"text":"Killed Block Party!","color":"dark_red","bold":true}
+tellraw @a[tag=admin] {"text":"Killed Block Party! Return to lobby?","color":"dark_red","bold":true,"clickEvent":{"action":"run_command","value":"/function main:lobby"}}
 tellraw @a ""
