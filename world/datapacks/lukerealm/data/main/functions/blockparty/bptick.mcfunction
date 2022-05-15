@@ -49,7 +49,7 @@ execute if score ?stopSec bpStop matches -10 run scoreboard players add ?floorNu
 execute store result score ?aliveAll blockParty if entity @a[tag=bpAlive]
 execute if score ?countDown blockParty matches ..0 run title @a actionbar [{"text":"Round: ","color":"green"},{"score":{"name":"?floorNum","objective":"bpFloor"}},{"text":"     Players Alive: ","color":"red"},{"score":{"name":"?aliveAll","objective":"blockParty"}}]
 
-execute if score ?stopSec bpStop matches -10 run scoreboard players remove ?in1 bpFloor 1
+execute if score ?stopSec bpStop matches -10 if score ?in1 bpTimer matches 4.. run scoreboard players remove ?in1 bpTimer 1
 
 # timer picker
 # the idea is that a random amount of time is picked after each elimination before it stops again
