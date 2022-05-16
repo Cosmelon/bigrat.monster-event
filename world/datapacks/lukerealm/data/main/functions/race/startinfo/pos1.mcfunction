@@ -1,26 +1,6 @@
 # this is the first position of the cinematics and info
 # I'm thinking of making this explain the jump pads
 
-tellraw @a ""
-tellraw @a ""
-tellraw @a ""
-tellraw @a ""
-tellraw @a ""
-tellraw @a ""
-tellraw @a ""
-tellraw @a ""
-tellraw @a ""
-tellraw @a ""
-tellraw @a ""
-tellraw @a ""
-tellraw @a ""
-tellraw @a ""
-tellraw @a ""
-tellraw @a ""
-tellraw @a ""
-tellraw @a ""
-tellraw @a ""
-tellraw @a ""
 tellraw @a [{"text":"\uE003"},{"translate":"space.-76"},{"text":"\uE003"},{"translate":"space.-76"},{"text":"\uE003"}]
 tellraw @a ""
 tellraw @a ""

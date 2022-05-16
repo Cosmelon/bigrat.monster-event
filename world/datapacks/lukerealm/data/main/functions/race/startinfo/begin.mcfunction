@@ -1,26 +1,6 @@
 # beginning of race infotext
 # I think this will just be a thing at the start of the game, then do the cinematics
 
-tellraw @a ""
-tellraw @a ""
-tellraw @a ""
-tellraw @a ""
-tellraw @a ""
-tellraw @a ""
-tellraw @a ""
-tellraw @a ""
-tellraw @a ""
-tellraw @a ""
-tellraw @a ""
-tellraw @a ""
-tellraw @a ""
-tellraw @a ""
-tellraw @a ""
-tellraw @a ""
-tellraw @a ""
-tellraw @a ""
-tellraw @a ""
-tellraw @a ""
 tellraw @a [{"text":"\uE003"},{"translate":"space.-76"},{"text":"\uE003"},{"translate":"space.-76"},{"text":"\uE003"}]
 tellraw @a ""
 tellraw @a ""
