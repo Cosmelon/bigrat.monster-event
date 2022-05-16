@@ -26,6 +26,18 @@ execute if score !raceTime raceSec matches 10.. run execute if score !raceTime r
 execute if score !raceTime raceSec matches 0..9 run execute if score !raceTime raceMilli matches 10.. run bossbar set minecraft:racetime name [{"text":"Overall Time: ","color":"gold"},{"score":{"name": "!raceTime","objective":"raceMin"},"color":"green"},{"text":":0","color":"green"},{"score":{"name":"!raceTime","objective":"raceSec"},"color":"green"},{"text":".","color":"green"},{"score":{"name":"!raceTime","objective":"raceMilli"},"color":"green"}]
 execute if score !raceTime raceSec matches 10.. run execute if score !raceTime raceMilli matches 10.. run bossbar set minecraft:racetime name [{"text":"Overall Time: ","color":"gold"},{"score":{"name": "!raceTime","objective":"raceMin"},"color":"green"},{"text":":","color":"green"},{"score":{"name":"!raceTime","objective":"raceSec"},"color":"green"},{"text":".","color":"green"},{"score":{"name":"!raceTime","objective":"raceMilli"},"color":"green"}]
 
+# startinfo
+execute if score !countDown race matches 550 run function main:race/startinfo/begin
+execute if score !countDown race matches 470 run function main:race/startinfo/pos1
+execute if score !countDown race matches 350..470 run tp @a 347.5 81 64.5 135 30
+execute if score !countDown race matches 350 run function main:race/startinfo/pos2
+execute if score !countDown race matches 290..350 run tp @a 391.5 85 1.5 45 30
+execute if score !countDown race matches 230 run function main:race/startinfo/pos3
+execute if score !countDown race matches 170..230 run tp @a 363.5 87 11.5 135 30
+#execute if score !countDown race matches 170 run function main:race/startinfo/pos4
+execute if score !countDown race matches 110 run title @a title ""
+execute if score !countDown race matches 110 run title @a subtitle {"text":"Starting soon!","color":"dark_red"}
+execute if score !countDown race matches 169 run function main:race/spreadp
 
 # countdown
 execute if score !countDown race matches 80 run fill 285 77 47 291 76 37 air replace barrier
