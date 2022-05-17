@@ -6,8 +6,6 @@
 #  spleefSnowBall - tracks spleef giving snowball stuff
 #  spleef_sb - tracks snowballs
 #  spleefBorder - worldborder stuff
-#  spleefQuit - tracks logouts during spleef
-#  spleefPlayers - tracks players to fix that one repeat game bug
 
 # prevents players from going out of the arena
 execute positioned -496 45 -461 run tp @a[gamemode=spectator,team=!Admin,distance=40..70] -497 69 -461
