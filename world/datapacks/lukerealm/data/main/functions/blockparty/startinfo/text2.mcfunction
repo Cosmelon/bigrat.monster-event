@@ -1,25 +1,5 @@
 # second block of text at start
 
-tellraw @a ""
-tellraw @a ""
-tellraw @a ""
-tellraw @a ""
-tellraw @a ""
-tellraw @a ""
-tellraw @a ""
-tellraw @a ""
-tellraw @a ""
-tellraw @a ""
-tellraw @a ""
-tellraw @a ""
-tellraw @a ""
-tellraw @a ""
-tellraw @a ""
-tellraw @a ""
-tellraw @a ""
-tellraw @a ""
-tellraw @a ""
-tellraw @a ""
 tellraw @a [{"text":"\uE003"},{"translate":"space.-76"},{"text":"\uE003"},{"translate":"space.-76"},{"text":"\uE003"}]
 tellraw @a ""
 tellraw @a {"text":"When the music starts, start shmoovin!"}
