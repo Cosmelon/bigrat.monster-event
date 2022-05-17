@@ -1,0 +1,18 @@
+Now that more people are going to work on this, I should probably standardize some formats
+
+Adding a new feature:
+    - create a branch with a relevant name
+    - push it and it will be uploaded to the main server via GitHub Action
+
+function template:
+    # <function name and author>
+    # <description>
+    # <who the function effects>
+    # <where the function runs from>
+
+Global functions are located in main:
+Game-specific functions go in their own folder (ex: blockparty goes in main:blockparty/)
+
+scoreboard objectives and tags should be in the format <game>UpperCamelCase
+dummy scores are in the format <prefix>lowerCamelCase
+"boolean" scores follow the value: 1 = on, 0 = off
