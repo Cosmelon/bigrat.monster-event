@@ -1,6 +1,6 @@
 # this one shows off the elytra pads
 
-tellraw @a [{"text":"\uE003"},{"translate":"space.-76"},{"text":"\uE003"},{"translate":"space.-76"},{"text":"\uE003"}]
+tellraw @a [{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-6"},{"text":"\uE004"}]
 tellraw @a ""
 tellraw @a ""
 tellraw @a {"text":"Elytra liftoff!"}
@@ -9,4 +9,4 @@ tellraw @a ""
 tellraw @a ""
 tellraw @a ""
 tellraw @a ""
-tellraw @a [{"text":"\uE003"},{"translate":"space.-76"},{"text":"\uE003"},{"translate":"space.-76"},{"text":"\uE003"}]
+tellraw @a [{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-6"},{"text":"\uE004"}]
