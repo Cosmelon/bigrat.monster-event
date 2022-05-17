@@ -10,4 +10,4 @@ tellraw @a {"text":"A color will be randomly picked and you must stand on that c
 tellraw @a ""
 tellraw @a ""
 tellraw @a [{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-6"},{"text":"\uE004"}]
-playsound minecraft:ui.button.click neutral @a -2000.5 130 3000.5 10000
+execute at @a as @a run playsound minecraft:block.stone_button.click_on neutral @s
