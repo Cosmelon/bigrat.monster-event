@@ -1,3 +1,8 @@
+# Description: shuts off race
+# Author: Cosmelon
+# Type: kill
+# run from <manual>
+
 # kills race
 scoreboard players set !gameActive race 0
 scoreboard players set !countDown race 160

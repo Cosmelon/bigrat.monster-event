@@ -1,5 +1,7 @@
-# this is the first position of the cinematics and info
-# I'm thinking of making this explain the jump pads
+# Description: race infotext 2, position 1
+# Author: Cosmelon
+# Type: single
+# run from main:race/racetick
 
 tellraw @a [{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-6"},{"text":"\uE004"}]
 tellraw @a ""

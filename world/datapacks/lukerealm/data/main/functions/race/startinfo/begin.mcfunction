@@ -1,5 +1,7 @@
-# beginning of race infotext
-# I think this will just be a thing at the start of the game, then do the cinematics
+# Description: race infotext 1, position 0
+# Author: Cosmelon
+# Type: single
+# run from main:race/racetick
 
 tellraw @a [{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-6"},{"text":"\uE004"}]
 tellraw @a ""

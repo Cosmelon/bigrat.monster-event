@@ -1,9 +1,12 @@
-# this file is executed as a player who finishes a lap
-# I didn't add support for laps less than a minute, it's just not possible with the current course
+# Description: player finished a lap
+# Author: Cosmelon
+# Type: single, objective
+# @s = player who just did a lap
+# run from main:race/racetick
+# known bugs:
+    # the overall timer can bug out and show an extra or too few digits when a player finishes the course
 
-# first iteration wasn't a bug, it acted like I thought it would
-#  the problem with the first one wasn't that it was a bug. Rather it was that it would build off of each other as a singular player does more laps
-#  now thinking about it, this probably wouldn't be a problem, that being that this must be tested with a full group
+# position counter
 execute if score @s raceLap matches 1 run scoreboard players add !posCounter1 racePos 1
 execute if score @s raceLap matches 1 run scoreboard players operation @s racePos = !posCounter1 racePos
 
@@ -13,7 +16,7 @@ execute if score @s raceLap matches 2 run scoreboard players operation @s racePo
 execute if score @s raceLap matches 3 run scoreboard players add !posCounter3 racePos 1
 execute if score @s raceLap matches 3 run scoreboard players operation @s racePos = !posCounter3 racePos
 
-# this solution is fucking terrible, need to find a better one soon or I'm gonna shoot myself; this is hell
+# This looks fucking horrible but it works and I hate it
 execute if score @s racePos matches 1 if score @s raceMilli matches ..9 if score @s raceSec matches ..9 run tellraw @a [{"selector":"@s"},{"text":" finished lap ","color":"gold"},{"score":{"name":"@s","objective":"raceLap"},"color":"green"},{"text":"/3 in ","color":"gold"},{"score":{"name":"@s","objective":"raceMin"},"color":"green"},{"text":":0","color":"green"},{"score":{"name":"@s","objective":"raceSec"},"color":"green"},{"text":".0","color":"green"},{"score":{"name":"@s","objective":"raceMilli"},"color":"green"},{"text":" (","color":"gold"},{"text":"#","color":"#e8ce5e"},{"score":{"name":"@s","objective":"racePos"},"color":"#e8ce5e"},{"text":")","color":"gold"}]
 execute if score @s racePos matches 1 if score @s raceMilli matches 10.. if score @s raceSec matches ..9 run tellraw @a [{"selector":"@s"},{"text":" finished lap ","color":"gold"},{"score":{"name":"@s","objective":"raceLap"},"color":"green"},{"text":"/3 in ","color":"gold"},{"score":{"name":"@s","objective":"raceMin"},"color":"green"},{"text":":0","color":"green"},{"score":{"name":"@s","objective":"raceSec"},"color":"green"},{"text":".","color":"green"},{"score":{"name":"@s","objective":"raceMilli"},"color":"green"},{"text":" (","color":"gold"},{"text":"#","color":"#e8ce5e"},{"score":{"name":"@s","objective":"racePos"},"color":"#e8ce5e"},{"text":")","color":"gold"}]
 execute if score @s racePos matches 1 if score @s raceMilli matches ..9 if score @s raceSec matches 10.. run tellraw @a [{"selector":"@s"},{"text":" finished lap ","color":"gold"},{"score":{"name":"@s","objective":"raceLap"},"color":"green"},{"text":"/3 in ","color":"gold"},{"score":{"name":"@s","objective":"raceMin"},"color":"green"},{"text":":","color":"green"},{"score":{"name":"@s","objective":"raceSec"},"color":"green"},{"text":".0","color":"green"},{"score":{"name":"@s","objective":"raceMilli"},"color":"green"},{"text":" (","color":"gold"},{"text":"#","color":"#e8ce5e"},{"score":{"name":"@s","objective":"racePos"},"color":"#e8ce5e"},{"text":")","color":"gold"}]

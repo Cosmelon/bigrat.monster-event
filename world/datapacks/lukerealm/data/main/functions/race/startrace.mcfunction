@@ -1,12 +1,9 @@
-# starts race
+# Description: starts race
+# Author: Cosmelon
+# Type: start
 
 # lobby dependency
 scoreboard players set $lobby currentGame 0
-
-# sets time of day
-#  need to figure out what time works best, sunset or sunrise, ask solar
-#  time set 13000
-#  time set 23000
 
 # start
 scoreboard players set !gameActive race 1

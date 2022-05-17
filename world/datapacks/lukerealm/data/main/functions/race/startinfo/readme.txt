@@ -1,1 +1,0 @@
-This folder is for the files that have the starting cinematics and starting infotext

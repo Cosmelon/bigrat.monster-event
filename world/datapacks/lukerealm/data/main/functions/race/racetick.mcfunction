@@ -1,6 +1,7 @@
-# tick files for race
-# everything in this file is preceeded by execute if score !gameActive race matches 1 run ...
-# no need to type it in every single time
+# Description: race tick
+# Author: Cosmelon
+# Type: main_tick
+# run from main:tick
 
 scoreboard players remove !countDown race 1
 effect give @a[tag=player] water_breathing 100000 0 true
