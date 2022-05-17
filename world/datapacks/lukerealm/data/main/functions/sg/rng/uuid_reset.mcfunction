@@ -1,3 +1,5 @@
+# superpower pick math
+
 summon minecraft:area_effect_cloud ~ ~ ~ {Tags:["uuid"]}
 execute store result score #lcg sgMath run data get entity @e[tag=uuid,limit=1] UUID[0]
 execute store result score #temp sgMath run data get entity @e[tag=uuid,limit=1] UUID[1]

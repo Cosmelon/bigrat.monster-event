@@ -1,6 +1,5 @@
-### Cloud Notes ###
-# Newton-Raphson, 4 iterations approach
-#
+# starts the math to pick random powers
+
 # in = lower range
 # in1 = upper range
 # out = random number between range

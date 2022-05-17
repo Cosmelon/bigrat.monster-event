@@ -1,4 +1,4 @@
-# thjis is the main function that controls the color picking
+# pick random color
 
 # color rng
 function main:blockparty/colorrng/range

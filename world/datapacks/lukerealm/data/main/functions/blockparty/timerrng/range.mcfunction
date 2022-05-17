@@ -1,3 +1,5 @@
+# starts the math to pick a new time after floor clear
+
 # in = lower range
 # in1 = upper range
 # out = random number between range

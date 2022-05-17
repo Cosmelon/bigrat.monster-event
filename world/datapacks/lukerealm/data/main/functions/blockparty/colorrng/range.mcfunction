@@ -1,6 +1,8 @@
-# in = lower range
-# in1 = upper range
-# out = random number between range
+# this starts the math to pick a color
+
+# ?in = lower range
+# ?in1 = upper range
+# ?out = returned output
 
 
 scoreboard players add ?in1 bpColor 1

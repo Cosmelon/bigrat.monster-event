@@ -1,3 +1,5 @@
+# superpower pick math
+
 function main:sg/rng/lcg
 
 scoreboard players operation #temp sgMath = out sgMath
