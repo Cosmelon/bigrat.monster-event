@@ -55,6 +55,9 @@ execute as @a[scores={playersOnline=1..}] run scoreboard players set @s playersO
 # constant yCos (yPosition) tracker, can be used for multiple games
 execute as @a store result score @s yCos run data get entity @s Pos[1]
 
+# night vision clear
+effect clear @a[tag=noNV] night_vision
+
 # lobbytick
 execute if score $lobby currentGame matches 1 if score !lobbyEff currentGame matches 1 run effect give @a weakness 10000 100 true
 execute if score $lobby currentGame matches 1 if score !lobbyEff currentGame matches 1 run effect give @a saturation 10000 100 true
@@ -64,14 +67,6 @@ data modify block 1033 28 -6007 Text2 set value '{"text":"Manager"}'
 # spleeftick
 execute if score $gameActive spleef matches 1 run function main:spleef/sptick
 execute if score $gameActive spleef matches 0 run scoreboard players set $countDown spleef 160
-execute if score $gameActive spleef matches 0 run scoreboard players set $tick spleefBorder 0
-execute if score $gameActive spleef matches 0 run scoreboard players set $sec spleefBorder 30
-execute if score $gameActive spleef matches 0 run scoreboard players set $shrink1Timer spleefBorder 1900
-execute if score $gameActive spleef matches 0 run scoreboard players set $shrink2Timer spleefBorder 3400
-execute if score $gameActive spleef matches 0 run scoreboard players set $shrink3Timer spleefBorder 5000
-execute if score $gameActive spleef matches 0 run scoreboard players set $shrinkActual spleefBorder 400
-execute if score $gameActive spleef matches 0 run scoreboard players reset * spleefQuit
-effect clear @a[tag=noNV] night_vision
 
 # racetick
 execute if score !gameActive race matches 1 run function main:race/racetick
