@@ -1,4 +1,7 @@
-# wins for the blue team
+# Description: blue team win
+# Author: Cosemlon
+# Type: win
+# run from main:blockparty/bptick
 
 scoreboard players set ?gameActive blockParty 0
 scoreboard players add ?round blockParty 1

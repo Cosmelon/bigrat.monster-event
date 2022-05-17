@@ -1,4 +1,7 @@
-# checks for dead players, runs every tick
+# Description: Checks for dead players, sets ?notif<team>Dead == 1 when players on <team> == 0
+# Author: Cosmelon
+# Type: tick
+# run from main:blockparty/bptick
 
 execute if score ?notifRedDead blockParty matches 0 if score ?aliveRed blockParty matches 0 run tellraw @a {"text":"Red team has been eliminated!","color":"red","bold":true}
 execute if score ?notifRedDead blockParty matches 0 if score ?aliveRed blockParty matches 0 run scoreboard players set ?notifRedDead blockParty 1

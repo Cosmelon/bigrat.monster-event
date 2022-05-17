@@ -1,12 +1,15 @@
-# this function is run whenever $stopSec blockPartyStop is >= 1
-# the purpose is to get rid of the blocks given to the players in their inventory when the floor randomizer is active
+# Description: clear selected block from alive players without removing their boots
+# Author: Cosmelon
+# Type: objective
+# @s = @a[tag=bpAlive]
+# run from main:blockparty/killbp when ?stopSec bpStop == -10
 
-clear @a[tag=player] red_concrete
-clear @a[tag=player] orange_concrete
-clear @a[tag=player] yellow_concrete
-clear @a[tag=player] lime_concrete
-clear @a[tag=player] light_blue_concrete
-clear @a[tag=player] blue_concrete
-clear @a[tag=player] purple_concrete
-clear @a[tag=player] pink_concrete
-clear @a[tag=player] light_gray_concrete
+clear @s red_concrete
+clear @s orange_concrete
+clear @s yellow_concrete
+clear @s lime_concrete
+clear @s light_blue_concrete
+clear @s blue_concrete
+clear @s purple_concrete
+clear @s pink_concrete
+clear @s light_gray_concrete

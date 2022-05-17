@@ -1,4 +1,4 @@
-# color pick math
+# timer pick math
 
 function main:blockparty/timerrng/lcg
 

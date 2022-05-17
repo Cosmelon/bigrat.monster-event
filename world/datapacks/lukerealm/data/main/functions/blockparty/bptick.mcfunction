@@ -1,4 +1,7 @@
-# main tick file for block party, don't fuck up
+# Description: Block party tick
+# Author: Cosmelon
+# Type: main_tick
+# run from main:tick when ?gameActive blockParty == 1
 
 # effects
 effect give @a weakness 100000 0 true
@@ -10,7 +13,7 @@ execute if score ?floorSwitch blockParty matches 1 run function main:blockparty/
 # removes the blocks
 execute if score ?stopSec bpStop matches -3 run function main:blockparty/floorrng/removefloor
 # get rid of blocks in player inventory when inactive randomizer
-execute if score ?stopSec bpStop matches 1.. run function main:blockparty/removeblockitems
+execute if score ?stopSec bpStop matches 1.. as @a[tag=bpAlive] run function main:blockparty/removeblockitems
 
 # main countdown system
 scoreboard players remove ?countDown blockParty 1

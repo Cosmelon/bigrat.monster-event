@@ -1,4 +1,9 @@
-# this function places the different floors
+# Description: actually placing the different floors
+# Author: Cosmelon
+# Type: tick
+# @s = <executor> (can be omitted when not used)
+# run from main:blockparty/bptick when ?floorSwitch blockParty == 1
+
 
 # doing some RNG
 scoreboard players add ?changeFloor bpFloor 1

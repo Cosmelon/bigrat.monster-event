@@ -1,5 +1,7 @@
-# wins for the red team
-
+# Description: red team wins
+# Author: Cosmelon
+# Type: win
+# run from main:blockparty/bptick
 
 scoreboard players set ?gameActive blockParty 0
 scoreboard players add ?round blockParty 1

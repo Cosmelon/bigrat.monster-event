@@ -1,4 +1,8 @@
-# kill block party
+# Description: Shuts off block party 
+# Author: Cosmelon
+# Type: kill
+# run from <manual>
+
 scoreboard players set ?gameActive blockParty 0
 scoreboard players set ?round blockParty 1
 scoreboard players set ?floorSwitch blockParty 0

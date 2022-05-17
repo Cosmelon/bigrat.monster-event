@@ -1,4 +1,8 @@
-# second block of text at start
+# Description: Second textblock of blockparty startinfo
+# Author: Cosmelon
+# Type: single
+# @s = @a
+# run from main:blockparty/bptick when ?countDown blockParty == 250
 
 tellraw @a [{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-6"},{"text":"\uE004"}]
 tellraw @a ""

@@ -1,4 +1,7 @@
-# start blockparty
+# Description: Starts blockparty
+# Author: Cosmelon
+# Type: start
+# run from main:blockparty/wins/
 
 scoreboard players set $lobby currentGame 0
 scoreboard players set ?gameActive blockParty 1
