@@ -5,10 +5,14 @@ Adding a new feature:
     - push it and it will be uploaded to the main server via GitHub Action
 
 function template:
-    # <function name and author>
-    # <description>
-    # <who the function effects>
-    # <where the function runs from>
+# Description:
+# Author:
+# Type: <tick><win><math><kill><start><single>
+# @s = <executor> (can be omitted when not used)
+# run from 
+
+tick type is for a function that runs every tick at anytime regardless if it's always active
+single type is for a function that only runs once
 
 Global functions are located in main:
 Game-specific functions go in their own folder (ex: blockparty goes in main:blockparty/)
