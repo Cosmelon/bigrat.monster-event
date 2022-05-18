@@ -6,7 +6,7 @@
 
 # forcing splayers to spectate armor stand called !racePos3
 kill @e[type=armor_stand,name="!racePos3"]
-summon armor_stand 391.5 85 1.5 {NoGravity:1b,CustomName:'{"text":"!racePos3"}'}
+summon armor_stand 391.5 85 1.5 {Invisible:1b,NoGravity:1b,CustomName:'{"text":"!racePos3"}'}
 gamemode spectator @a
 execute as @a run spectate @e[type=armor_stand,limit=1,name="!racePos3"] @s
 

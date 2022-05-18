@@ -1,0 +1,5 @@
+Cosmelon
+
+Not sure of the best way to orient the armorstands itself
+I've already thrown together some basic properties for them
+used format !racePos<position> for naming
