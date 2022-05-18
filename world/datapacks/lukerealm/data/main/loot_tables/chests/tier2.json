@@ -1,0 +1,97 @@
+{
+    "pools": [
+        {
+            "rolls": {
+                "min": 2,
+                "max": 4
+            },
+            "entries": [
+                {
+                    "type": "item",
+                    "weight": 22,
+                    "name": "porkchop"
+                },
+                {
+                    "type": "item",
+                    "weight": 33,
+                    "name": "bread"
+                },
+                {
+                    "type": "item",
+                    "weight": 22,
+                    "name": "beef"
+                },
+                {
+                    "type": "item",
+                    "weight": 22,
+                    "name": "pumpkin_pie"
+                },
+                {
+                    "type": "item",
+                    "weight": 33,
+                    "name": "salmon"
+                },
+                {
+                    "type": "item",
+                    "weight": 33,
+                    "name": "cod"
+                },
+                {
+                    "type": "item",
+                    "weight": 15,
+                    "name": "cooked_chicken"
+                },
+                {
+                    "type": "item",
+                    "weight": 15,
+                    "name": "cooked_rabbit"
+                }
+            ]
+        },
+        {
+            "rolls": {
+                "min": 0,
+                "max": 2
+            },
+            "entries": [
+                {
+                    "type": "item",
+                    "weight": 20,
+                    "name": "golden_chestplate"
+                },
+                {
+                    "type": "item",
+                    "weight": 20,
+                    "name": "leather_chestplate"
+                },
+                {
+                    "type": "item",
+                    "weight": 7,
+                    "name": "chainmail_leggings"
+                },
+                {
+                    "type": "item",
+                    "weight": 20,
+                    "name": "chainmail_helmet"
+                },
+                {
+                    "type": "item",
+                    "weight": 20,
+                    "name": "chainmail_boots"
+                }
+            ]
+        },
+        {
+            "rolls": {
+                "min": 0,
+                "max": 2
+            },
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "experience_bottle"
+                }
+            ]
+        }
+    ]
+}

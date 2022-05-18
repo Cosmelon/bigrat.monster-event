@@ -1,0 +1,1126 @@
+{
+    "pools": [
+        {
+            "rolls": {
+                "min": 3,
+                "max": 6
+            },
+            "entries": [
+                {
+                    "type": "item",
+                    "weight": 512,
+                    "name": "minecraft:wooden_sword",
+                    "functions": [
+                        {
+                            "function": "enchant_with_levels",
+                            "levels": {
+                                "min": 5,
+                                "max": 20
+                            },
+                            "treasure": true,
+                            "conditions": [
+                                {
+                                    "condition": "random_chance",
+                                    "chance": 0.05
+                                }
+                            ]
+                        },
+                        {
+                            "function": "set_nbt",
+                            "tag": "{display:{Name:\"§4§lLegendary §r§cSword of Fire\"},ench:[{id: 16,lvl:3},{id:19,lvl:2},{id:20,lvl:1}]}",
+                            "conditions": [
+                                {
+                                    "condition": "random_chance",
+                                    "chance": 0.01
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "weight": 256,
+                    "name": "minecraft:stone_sword",
+                    "functions": [
+                        {
+                            "function": "enchant_with_levels",
+                            "levels": {
+                                "min": 8,
+                                "max": 20
+                            },
+                            "treasure": true,
+                            "conditions": [
+                                {
+                                    "condition": "random_chance",
+                                    "chance": 0.05
+                                }
+                            ]
+                        },
+                        {
+                            "function": "set_nbt",
+                            "tag": "{display:{Name:\"§4§lLegendary §r§cEarthen Sword\"},AttributeModifiers:[{AttributeName:\"generic.maxHealth\",Name:\"generic.maxHealth \",Amount:8,Operation:1,UUIDMost:84221,UUIDLeast:490728},{AttributeName: \"generic.knockbackResistance\",Name:\"generic.knockbackResistance\",Amount: 0.5,Operation:0,UUIDMost:4447,UUIDLeast:118353}],ench:[{id:19,lvl:2}]}",
+                            "conditions": [
+                                {
+                                    "condition": "random_chance",
+                                    "chance": 0.04
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "weight": 256,
+                    "name": "minecraft:golden_sword",
+                    "functions": [
+                        {
+                            "function": "enchant_with_levels",
+                            "levels": {
+                                "min": 10,
+                                "max": 30
+                            },
+                            "treasure": true,
+                            "conditions": [
+                                {
+                                    "condition": "random_chance",
+                                    "chance": 0.05
+                                }
+                            ]
+                        },
+                        {
+                            "function": "set_nbt",
+                            "tag": "{display:{Name:\"LEGENDARY-meltin' heap of metal \"},AttributeModifiers:[{AttributeName:\"generic.movementSpeed\",Name: \"generic.movementSpeed\",Amount:1.2,Operation:1,UUIDMost:27685,UUIDLeast: 636711}],ench:[{id:16,lvl:1},{id:20,lvl:2},{id:21,lvl:1}]}",
+                            "conditions": [
+                                {
+                                    "condition": "random_chance",
+                                    "chance": 0.04
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "weight": 96,
+                    "name": "minecraft:iron_sword",
+                    "functions": [
+                        {
+                            "function": "enchant_with_levels",
+                            "levels": {
+                                "min": 12,
+                                "max": 20
+                            },
+                            "treasure": true,
+                            "conditions": [
+                                {
+                                    "condition": "random_chance",
+                                    "chance": 0.05
+                                }
+                            ]
+                        },
+                        {
+                            "function": "set_nbt",
+                            "tag": "{display:{Name:\"§4§lLegendary §r§cHealing Sword of Death\"},AttributeModifiers:[{AttributeName:\"generic.maxHealth\",Name:\"generic.maxHealth \",Amount:10,Operation:0,UUIDMost:63559,UUIDLeast:125371}],ench:[{id:19,lvl:2},{id: 21,lvl:2},{id:34,lvl:2}]}",
+                            "conditions": [
+                                {
+                                    "condition": "random_chance",
+                                    "chance": 0.04
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "weight": 32,
+                    "name": "minecraft:diamond_sword",
+                    "functions": [
+                        {
+                            "function": "enchant_with_levels",
+                            "levels": {
+                                "min": 15,
+                                "max": 50
+                            },
+                            "treasure": true,
+                            "conditions": [
+                                {
+                                    "condition": "random_chance",
+                                    "chance": 0.05
+                                }
+                            ]
+                        },
+                        {
+                            "function": "set_nbt",
+                            "tag": "{display:{Name:\"§4§lLegendary §r§cDooms Day Sword\"},AttributeModifiers:[{AttributeName:\"generic.knockbackResistance\",Name: \"generic.knockbackResistance\",Amount:0.75,Operation:0,UUIDMost: 60337,UUIDLeast:633864},{AttributeName:\"generic.attackDamage\",Name: \"generic.attackDamage\",Amount:10,Operation:0,UUIDMost:83747,UUIDLeast: 599943}],ench:[{id:19,lvl:2},{id:20,lvl:2}]}",
+                            "conditions": [
+                                {
+                                    "condition": "random_chance",
+                                    "chance": 0.04
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "weight": 128,
+                    "name": "minecraft:leather_helmet"
+                },
+                {
+                    "type": "item",
+                    "weight": 128,
+                    "name": "minecraft:leather_chestplate",
+                    "functions": [
+                        {
+                            "function": "enchant_with_levels",
+                            "levels": {
+                                "min": 0,
+                                "max": 20
+                            },
+                            "treasure": true,
+                            "conditions": [
+                                {
+                                    "condition": "random_chance",
+                                    "chance": 0.099
+                                }
+                            ]
+                        },
+                        {
+                            "function": "set_nbt",
+                            "tag": "{display:{Name:\"§4§lLegendary §r§cBloody Chestplate\",color: 16711680},ench:[{id:0,lvl:2},{id:1,lvl:3},{id:7,lvl:2}]}",
+                            "conditions": [
+                                {
+                                    "condition": "random_chance",
+                                    "chance": 0.05
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "weight": 128,
+                    "name": "minecraft:leather_leggings"
+                },
+                {
+                    "type": "item",
+                    "weight": 128,
+                    "name": "minecraft:leather_boots"
+                },
+                {
+                    "type": "item",
+                    "weight": 128,
+                    "name": "minecraft:golden_helmet"
+                },
+                {
+                    "type": "item",
+                    "weight": 128,
+                    "name": "minecraft:golden_chestplate",
+                    "functions": [
+                        {
+                            "function": "enchant_with_levels",
+                            "levels": {
+                                "min": 5,
+                                "max": 30
+                            },
+                            "treasure": true,
+                            "conditions": [
+                                {
+                                    "condition": "random_chance",
+                                    "chance": 0.099
+                                }
+                            ]
+                        },
+                        {
+                            "function": "set_nbt",
+                            "tag": "{display:{Name:\"§4§lLegendary §r§Protector Chestplate\"},AttributeModifiers:[{AttributeName:\"generic.movementSpeed\",Name: \"generic.movementSpeed\",Amount:1.13,Operation:1,Slot:\"chest\",UUIDMost:64980,UUIDLeast: 611095}],ench:[{id:0,lvl:2},{id:1,lvl:1},{id:2,lvl:1},{id:3,lvl:1},{id:4,lvl:1}]}",
+                            "conditions": [
+                                {
+                                    "condition": "random_chance",
+                                    "chance": 0.05
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "weight": 128,
+                    "name": "minecraft:golden_leggings"
+                },
+                {
+                    "type": "item",
+                    "weight": 128,
+                    "name": "minecraft:golden_boots"
+                },
+                {
+                    "type": "item",
+                    "weight": 96,
+                    "name": "minecraft:chainmail_helmet"
+                },
+                {
+                    "type": "item",
+                    "weight": 96,
+                    "name": "minecraft:chainmail_chestplate",
+                    "functions": [
+                        {
+                            "function": "enchant_with_levels",
+                            "levels": {
+                                "min": 8,
+                                "max": 39
+                            },
+                            "treasure": true,
+                            "conditions": [
+                                {
+                                    "condition": "random_chance",
+                                    "chance": 0.099
+                                }
+                            ]
+                        },
+                        {
+                            "function": "set_nbt",
+                            "tag": "{display:{Name:\"§4§lLegendary §r§Arrow Repeller\"},AttributeModifiers:[{AttributeName:\"generic.knockbackResistance\",Name: \"generic.knockbackResistance\",Amount:0.25,Operation:0,UUIDMost: 96281,UUIDLeast:462201}],ench:[{id:4,lvl:6}]}"
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "weight": 96,
+                    "name": "minecraft:chainmail_leggings"
+                },
+                {
+                    "type": "item",
+                    "weight": 96,
+                    "name": "minecraft:chainmail_boots"
+                },
+                {
+                    "type": "item",
+                    "weight": 64,
+                    "name": "minecraft:iron_helmet"
+                },
+                {
+                    "type": "item",
+                    "weight": 64,
+                    "name": "minecraft:iron_chestplate",
+                    "functions": [
+                        {
+                            "function": "enchant_with_levels",
+                            "levels": {
+                                "min": 12,
+                                "max": 40
+                            },
+                            "treasure": true,
+                            "conditions": [
+                                {
+                                    "condition": "random_chance",
+                                    "chance": 0.099
+                                }
+                            ]
+                        },
+                        {
+                            "function": "set_nbt",
+                            "tag": "{display:{Name:\"§4§lLegendary §r§Chestplate Of Fighting\"},AttributeModifiers:[{AttributeName:\"generic.maxHealth\",Name:\"generic.maxHealth \",Amount:10,Operation:0,UUIDMost:34952,UUIDLeast:975687,Slot:\"chest\"},{AttributeName: \"generic.attackDamage\",Name:\"generic.attackDamage\",Amount:2,Operation: 0,UUIDMost:71544,UUIDLeast:711755,Slot:\"chest\"}],ench:[{id:7,lvl:2}]}",
+                            "conditions": [
+                                {
+                                    "condition": "random_chance",
+                                    "chance": 0.05
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "weight": 64,
+                    "name": "minecraft:iron_leggings"
+                },
+                {
+                    "type": "item",
+                    "weight": 64,
+                    "name": "minecraft:chainmail_boots"
+                },
+                {
+                    "type": "item",
+                    "weight": 32,
+                    "name": "minecraft:diamond_helmet"
+                },
+                {
+                    "type": "item",
+                    "weight": 32,
+                    "name": "minecraft:diamond_chestplate",
+                    "functions": [
+                        {
+                            "function": "enchant_with_levels",
+                            "levels": {
+                                "min": 20,
+                                "max": 50
+                            },
+                            "treasure": true,
+                            "conditions": [
+                                {
+                                    "condition": "random_chance",
+                                    "chance": 0.099
+                                }
+                            ]
+                        },
+                        {
+                            "function": "set_nbt",
+                            "tag": "{display:{Name:\"§4§lLegendary §r§Spartan Chestplate\"},AttributeModifiers:[{AttributeName:\"generic.maxHealth\",Name:\"generic.maxHealth \",Amount:15,Operation:0,UUIDMost:55251,UUIDLeast:624092,Slot:\"chest\"},{AttributeName: \"generic.knockbackResistance\",Name:\"generic.knockbackResistance\",Amount: 0.5,Operation:0,UUIDMost:64931,UUIDLeast:842331,Slot:\"chest\"},{AttributeName: \"generic.movementSpeed\",Name:\"generic.movementSpeed\",Amount:0.7,Operation: 1,UUIDMost:72574,UUIDLeast:701439,Slot:\"chest\"},{AttributeName:\"generic.attackDamage \",Name:\"generic.attackDamage\",Amount:4,Operation:0,UUIDMost:59317,UUIDLeast: 659207,Slot:\"chest\"}],ench:[{id:2,lvl:4},{id:7,lvl:3}]}"
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "weight": 32,
+                    "name": "minecraft:diamond_leggings"
+                },
+                {
+                    "type": "item",
+                    "weight": 32,
+                    "name": "minecraft:diamond_boots"
+                },
+                {
+                    "type": "item",
+                    "weight": 256,
+                    "name": "minecraft:wooden_axe"
+                },
+                {
+                    "type": "item",
+                    "weight": 256,
+                    "name": "minecraft:wooden_pickaxe"
+                },
+                {
+                    "type": "item",
+                    "weight": 256,
+                    "name": "minecraft:wooden_shovel"
+                },
+                {
+                    "type": "item",
+                    "weight": 128,
+                    "name": "minecraft:stone_axe"
+                },
+                {
+                    "type": "item",
+                    "weight": 128,
+                    "name": "minecraft:golden_axe"
+                },
+                {
+                    "type": "item",
+                    "weight": 96,
+                    "name": "minecraft:iron_axe"
+                },
+                {
+                    "type": "item",
+                    "weight": 48,
+                    "name": "minecraft:diamond_axe"
+                },
+                {
+                    "type": "item",
+                    "weight": 48,
+                    "name": "minecraft:golden_apple"
+                },
+                {
+                    "type": "item",
+                    "weight": 128,
+                    "name": "minecraft:carrot",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 1,
+                                "max": 5
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "weight": 128,
+                    "name": "minecraft:potato",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 1,
+                                "max": 5
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "weight": 96,
+                    "name": "minecraft:cod",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 1,
+                                "max": 3
+                            }
+                        },
+                        {
+                            "function": "furnace_smelt",
+                            "conditions": [
+                                {
+                                    "condition": "random_chance",
+                                    "chance": 0.497
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "weight": 256,
+                    "name": "minecraft:chicken",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 2,
+                                "max": 4
+                            }
+                        },
+                        {
+                            "function": "furnace_smelt",
+                            "conditions": [
+                                {
+                                    "condition": "random_chance",
+                                    "chance": 0.512
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "weight": 128,
+                    "name": "minecraft:porkchop",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 2,
+                                "max": 4
+                            }
+                        },
+                        {
+                            "function": "furnace_smelt",
+                            "conditions": [
+                                {
+                                    "condition": "random_chance",
+                                    "chance": 0.509
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "weight": 256,
+                    "name": "minecraft:beef",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 1,
+                                "max": 3
+                            }
+                        },
+                        {
+                            "function": "furnace_smelt",
+                            "conditions": [
+                                {
+                                    "condition": "random_chance",
+                                    "chance": 0.491
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "weight": 128,
+                    "name": "minecraft:rabbit",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 1,
+                                "max": 3
+                            }
+                        },
+                        {
+                            "function": "furnace_smelt",
+                            "conditions": [
+                                {
+                                    "condition": "random_chance",
+                                    "chance": 0.506
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "weight": 196,
+                    "name": "minecraft:mutton",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 2,
+                                "max": 4
+                            }
+                        },
+                        {
+                            "function": "furnace_smelt",
+                            "conditions": [
+                                {
+                                    "condition": "random_chance",
+                                    "chance": 0.491
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "weight": 96,
+                    "name": "minecraft:bread",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 2,
+                                "max": 5
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "weight": 140,
+                    "name": "minecraft:bow"
+                },
+                {
+                    "type": "item",
+                    "weight": 96,
+                    "name": "minecraft:fishing_rod"
+                },
+                {
+                    "type": "item",
+                    "weight": 128,
+                    "name": "minecraft:stick",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 1,
+                                "max": 4
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "weight": 128,
+                    "name": "minecraft:string",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 1,
+                                "max": 3
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "weight": 96,
+                    "name": "minecraft:arrow",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 3,
+                                "max": 8
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "weight": 128,
+                    "name": "minecraft:gold_ingot",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 2,
+                                "max": 5
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "weight": 64,
+                    "name": "minecraft:iron_ingot",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 2,
+                                "max": 6
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "weight": 32,
+                    "name": "minecraft:diamond",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 2,
+                                "max": 4
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "weight": 128,
+                    "name": "minecraft:apple",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 1,
+                                "max": 3
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "weight": 64,
+                    "name": "minecraft:clock"
+                },
+                {
+                    "type": "item",
+                    "weight": 128,
+                    "name": "minecraft:experience_bottle",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 4,
+                                "max": 16
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "weight": 64,
+                    "name": "minecraft:book",
+                    "functions": [
+                        {
+                            "function": "enchant_with_levels",
+                            "levels": {
+                                "min": 0,
+                                "max": 50
+                            },
+                            "treasure": true
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "weight": 128,
+                    "name": "minecraft:bone",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 2,
+                                "max": 6
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "weight": 128,
+                    "name": "minecraft:rotten_flesh",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 2,
+                                "max": 5
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "weight": 128,
+                    "name": "minecraft:flint",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "weight": 16,
+                    "name": "minecraft:bow",
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{display:{Name:\"§1§lRare §r§9Sniping Bow\"},AttributeModifiers: [{AttributeName:\"generic.knockbackResistance\",Name:\"generic.knockbackResistance \",Amount:0.5,Operation:0,UUIDMost:76466,UUIDLeast:604385},{AttributeName: \"generic.movementSpeed\",Name:\"generic.movementSpeed\",Amount:-0.2,Operation: 0,UUIDMost:6984,UUIDLeast:971849}],ench:[{id:19,lvl:2},{id:48,lvl:2},{id:49,lvl:1}]}"
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "weight": 32,
+                    "name": "minecraft:wooden_sword",
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{display:{Name:\"§1§lRare §r§9Sword Of Fleeing\"},AttributeModifiers:[{AttributeName:\"generic.movementSpeed\",Name: \"generic.movementSpeed\",Amount:1.2,Operation:1,UUIDMost:54313,UUIDLeast: 797944}],ench:[{id:19,lvl:2}]}"
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "weight": 32,
+                    "name": "minecraft:stone_sword",
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{display:{Name:\"§1§lRare §r§9Demonblade\"},AttributeModifiers:[{AttributeName:\"generic.attackDamage\",Name: \"generic.attackDamage\",Amount:7,Operation:0,UUIDMost:13083,UUIDLeast: 501575}],ench:[{id:22,lvl:2}]}"
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "weight": 16,
+                    "name": "minecraft:iron_sword",
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{display:{Name:\"§1§lRare §r§9Moonbane\"},AttributeModifiers:[{AttributeName:\"generic.maxHealth\",Name:\"generic.maxHealth \",Amount:5,Operation:0,UUIDMost:23846,UUIDLeast:848246},{AttributeName: \"generic.movementSpeed\",Name:\"generic.movementSpeed\",Amount:1.05,Operation: 1,UUIDMost:4053,UUIDLeast:335129}],ench:[{id:20,lvl:1}]}"
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "weight": 16,
+                    "name": "minecraft:golden_sword",
+                    "functions": [
+                        {
+                            "function": "set_damage",
+                            "damage": {
+                                "min": 0.95,
+                                "max": 0.97
+                            }
+                        },
+                        {
+                            "function": "set_nbt",
+                            "tag": "{display:{Name:\"§1§lRare §r§9Final Stand Sword\"},AttributeModifiers:[{AttributeName:\"generic.attackDamage\",Name: \"generic.attackDamage\",Amount:19,Operation:0,UUIDMost:23274,UUIDLeast: 666152}],ench:[{id:21,lvl:1}]}"
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "weight": 16,
+                    "name": "minecraft:diamond_sword",
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{display:{Name:\"§1§lRare §r§9Assassin's Sword\"},ench:[{id:16,lvl: 3},{id:20,lvl:2}]}"
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "weight": 16,
+                    "name": "minecraft:diamond_axe",
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{display:{Name:\"§1§lRare §r§9Fiery Battle Axe\"},ench:[{id:16,lvl:2},{id:20,lvl:2},{id:34,lvl:3}]}"
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "weight": 16,
+                    "name": "minecraft:iron_axe",
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{display:{Name:\"§1§lRare §r§9Skeleton Axe\"},AttributeModifiers: [{AttributeName:\"generic.attackDamage\",Name:\"generic.attackDamage\",Amount: 11,Operation:0,UUIDMost:35980,UUIDLeast:315750}],ench:[{id:16,lvl:2},{id:19,lvl: 2}]}"
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "weight": 16,
+                    "name": "minecraft:golden_axe",
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{display:{Name:\"§1§lRare §r§9Combat Axe\"},AttributeModifiers: [{AttributeName:\"generic.maxHealth\",Name:\"generic.maxHealth\",Amount: 7,Operation:0,UUIDMost:88903,UUIDLeast:465575}]}"
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "weight": 32,
+                    "name": "minecraft:stone_axe",
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{display:{Name:\"§1§lRare §r§9Stoned Axe\"},AttributeModifiers:[{AttributeName:\"generic.knockbackResistance\",Name: \"generic.knockbackResistance\",Amount:0.25,Operation:0,UUIDMost: 37027,UUIDLeast:228045},{AttributeName:\"generic.movementSpeed\",Name: \"generic.movementSpeed\",Amount:0.67,Operation:1,UUIDMost:71072,UUIDLeast: 399272}],ench:[{id:19,lvl:1}]}"
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "weight": 1,
+                    "name": "minecraft:wooden_axe",
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{display:{Name:\"§1§lRare §r§9bladed stick \"},AttributeModifiers:[{AttributeName:\"generic.maxHealth\",Name:\"generic.maxHealth \",Amount:10,Operation:1,UUIDMost:15542,UUIDLeast:132320}],ench:[{id:16,lvl:2},{id: 21,lvl:1}]}"
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "weight": 16,
+                    "name": "minecraft:diamond_chestplate",
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{display:{Name:\"§1§lRare §r§9stat booster \"},AttributeModifiers:[{AttributeName:\"generic.maxHealth\",Name:\"generic.maxHealth \",Amount:20,Operation:1,UUIDMost:71214,UUIDLeast:849059,Slot:\"chest\"},{AttributeName: \"generic.knockbackResistance\",Name:\"generic.knockbackResistance\",Amount: 20,Operation:1,UUIDMost:48689,UUIDLeast:82639,Slot:\"chest\"},{AttributeName: \"generic.movementSpeed\",Name:\"generic.movementSpeed\",Amount:20,Operation: 1,UUIDMost:88393,UUIDLeast:163074,Slot:\"chest\"},{AttributeName:\"generic.attackDamage \",Name:\"generic.attackDamage\",Amount:20,Operation:0,UUIDMost: 32211,UUIDLeast:114006,Slot:\"chest\"}],ench:[{id:0,lvl:1}]}"
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "weight": 16,
+                    "name": "minecraft:diamond_leggings",
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{display:{Name:\"§1§lRare §r§9Thorny Leggings\"},ench:[{id:0,lvl:2}, {id:7,lvl:3}]}"
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "weight": 32,
+                    "name": "minecraft:diamond_boots",
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{display:{Name:\"§1§lRare §r§9Skydiving Boots\"},ench:[{id:2,lvl: 4}]}"
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "weight": 16,
+                    "name": "minecraft:diamond_helmet",
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{display:{Name:\"§1§lRare §r§9Elemental Helmet\"},ench:[{id:1,lvl:2}, {id:3,lvl:2},{id:5,lvl:2},{id:6,lvl:2},{id:8,lvl:2}]}"
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "weight": 16,
+                    "name": "minecraft:iron_chestplate",
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{display:{Name:\"§1§lRare §r§9Fiery Chestplate\"},ench:[{id:1,lvl:4}, {id:6,lvl:2}]}"
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "weight": 16,
+                    "name": "minecraft:iron_leggings",
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{display:{Name:\"§1§lRare §r§9Arrow Smashin' Pants\"},ench:[{id: 4,lvl:4}]}"
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "weight": 32,
+                    "name": "minecraft:iron_helmet",
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{display:{Name:\"§1§lRare §r§9Bomb Squad Helm\"},ench:[{id: 3,lvl:5}]}"
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "weight": 32,
+                    "name": "minecraft:iron_boots",
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{display:{Name:\"§1§lRare §r§9Balanced Boots of Butt Kicking\"},AttributeModifiers:[{AttributeName:\"generic.movementSpeed\",Name: \"generic.movementSpeed\",Amount:0.1,Operation:0,UUIDMost:67389,UUIDLeast: 564039,Slot:\"legs\"}],ench:[{id:0,lvl:3}]}"
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "weight": 16,
+                    "name": "minecraft:golden_chestplate",
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{display:{Name:\"§1§lRare §r§9Tank Plate \"},AttributeModifiers:[{AttributeName:\"generic.maxHealth\",Name:\"generic.maxHealth \",Amount:15,Operation:0,UUIDMost:44297,UUIDLeast:381553,Slot:\"chest\"}]}"
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "weight": 32,
+                    "name": "minecraft:chainmail_chestplate",
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{display:{Name:\"§1§lRare §r§9Chestplate of Melee \"},AttributeModifiers:[{AttributeName:\"generic.attackDamage\",Name: \"generic.attackDamage\",Amount:5,Operation:0,UUIDMost:19282,UUIDLeast: 395527,Slot:\"chest\"}]}"
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "weight": 32,
+                    "name": "minecraft:leather_chestplate",
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{display:{Name:\"§1§lRare §r§9Enchanted Fragment of leather\",color:852223},ench:[{id:0,lvl:2},{id:1,lvl:2},{id:3,lvl:2},{id:4,lvl:2}]}"
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "weight": 96,
+                    "name": "minecraft:gunpowder",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 2,
+                                "max": 4
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "weight": 128,
+                    "name": "minecraft:wheat",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 2,
+                                "max": 5
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "weight": 64,
+                    "name": "minecraft:book"
+                },
+                {
+                    "type": "item",
+                    "weight": 128,
+                    "name": "minecraft:glass_bottle",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 2,
+                                "max": 3
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "weight": 128,
+                    "name": "minecraft:beetroot",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 1,
+                                "max": 4
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "weight": 64,
+                    "name": "minecraft:beetroot_soup",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": 0
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "weight": 96,
+                    "name": "minecraft:bowl"
+                },
+                {
+                    "type": "item",
+                    "weight": 32,
+                    "name": "minecraft:ender_pearl",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 1,
+                                "max": 3
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

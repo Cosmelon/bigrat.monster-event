@@ -1,0 +1,19 @@
+{
+    "pools": [
+        {
+            "rolls": {
+                "min": 2,
+                "max": 4
+            },
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "cooked_cod"
+                },
+                {
+                    "type": "item"
+                }
+            ]
+        }
+    ]
+}
