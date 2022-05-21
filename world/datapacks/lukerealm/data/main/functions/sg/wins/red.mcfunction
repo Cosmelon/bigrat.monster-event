@@ -1,4 +1,8 @@
-# red wins sg
+# Description: red team wins
+# Author: Cosmelon
+# Type: win
+# run from main:sg/tick
+
 scoreboard players set ~gameActive sg 0
 title @a times 0 50 10
 clear @a[team=!Admin]

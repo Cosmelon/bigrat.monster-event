@@ -1,6 +1,7 @@
-# sg tick file
-# everything in here is triggered if ~gameActive sg matches 1,
-# so no need to worry about doing that all manually
+# Description: SG tick stuff
+# Author: Cosmelon
+# Type: main_tick
+# run from main:tick
 
 # scoreboards associated with sg
 #  sg - main sg scoreboard, main stuff here

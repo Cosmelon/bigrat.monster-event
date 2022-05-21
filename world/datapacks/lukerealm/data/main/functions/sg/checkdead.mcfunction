@@ -1,4 +1,7 @@
-# continually runs and checks if players are dead
+# Description: continually runs and checks # of dead players
+# Author: Cosmelon
+# Type: tick
+# run from main:sg/sgtick
 
 execute if score ~notifRedDead sg matches 0 run execute if score ~aliveRed sg matches 0 run tellraw @a {"text":"Red team has been eliminated!","color":"red","bold":true}
 execute if score ~notifRedDead sg matches 0 run execute if score ~aliveRed sg matches 0 run scoreboard players set ~notifRedDead sg 1

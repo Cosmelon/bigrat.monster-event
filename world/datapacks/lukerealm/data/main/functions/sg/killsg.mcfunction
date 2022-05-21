@@ -1,3 +1,8 @@
+# Description: shuts off sg
+# Author: Cosmelon
+# Type: kill
+# run from <manual>
+
 # kills sg
 title @a title ""
 title @a subtitle ""

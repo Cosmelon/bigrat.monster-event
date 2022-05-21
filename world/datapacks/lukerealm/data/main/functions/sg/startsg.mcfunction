@@ -1,4 +1,7 @@
-# starts sg
+# Description: Starts SG
+# Author: Cosmelon
+# Type: start
+# run from <manual>, main:sg/wins/
 
 # lobby dependency
 scoreboard players set $lobby currentGame 0
@@ -35,7 +38,7 @@ setworldspawn -1983 90 -1983
 title @a times 0 25 10
 time set day
 
-# teleportingw
+# teleporting
 # player spreader goes clockwise
 tp @a -1983 133 -1983 0 -90
 execute positioned -1983 133 -1983 run tp @a[team=Red,limit=1,sort=random,distance=..5] -1992.5 76 -2008.5 0 10
