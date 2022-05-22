@@ -10,7 +10,7 @@ tellraw @s {"text":""}
 tellraw @s {"text":""}
 tellraw @s {"text":""}
 tellraw @s {"text":""}
-tellraw @s [{"text":"\uE003"},{"translate":"space.-76"},{"text":"\uE003"},{"translate":"space.-76"},{"text":"\uE003"}]
+tellraw @s [{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-6"},{"text":"\uE004"}]
 tellraw @s {"text":"Battle","color":"blue","clickEvent":{"action":"run_command","value":"/tp @s -708 21 683 180 0"}}
 tellraw @s {"text":"Legacy Builds","color":"gray","clickEvent":{"action":"run_command","value":"/tp @s 1984 133 1984"}}
 tellraw @s {"text":"Water rising parkour","color":"brown","clickEvent":{"action":"run_command","value":"/tp @s -1000 50 1000"}}
@@ -19,4 +19,4 @@ tellraw @s {"text":"TF2 Arena","color":"#FFA500","clickEvent":{"action":"run_com
 tellraw @s {"text":"Old Lobby","color":"red","clickEvent":{"action":"run_command","value":"/tp @s -181.5 5 137.5 0 10"}}
 tellraw @s [{"text":"<","color":"gray","bold":true},{"text":"Prev","color":"red","bold":true,"clickEvent":{"action":"run_command","value":"/function main:telemenu"}},{"text":" | ","color":"gray","bold":true},{"text":"Next","color":"red","bold":true,"clickEvent":{"action":"run_command","value":"/tellraw @s \"You're already on the last page!\""}},{"text":">","color":"gray","bold":true}]
 tellraw @s [{"text":"[Gamemode Creative]","color":"red","clickEvent":{"action":"run_command","value":"/gamemode creative"}},{"text":"     [Gamemode Spectator]","color":"red","clickEvent":{"action":"run_command","value":"/gamemode spectator"}},{"text":"     [Gamemode Adventure]","color":"red","clickEvent":{"action":"run_command","value":"/gamemode adventure"}}]
-tellraw @s [{"text":"\uE003"},{"translate":"space.-76"},{"text":"\uE003"},{"translate":"space.-76"},{"text":"\uE006"}]
+tellraw @s [{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-6"},{"text":"\uE004"}]
