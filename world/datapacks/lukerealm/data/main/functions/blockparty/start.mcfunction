@@ -16,6 +16,8 @@ scoreboard players set ?notifYellowDead blockParty 0
 scoreboard players set ?stop bpTimer -2000
 scoreboard players set @a bpSound 0
 scoreboard players set ?in1 bpTimer 200
+scoreboard players set ?colorTT bpTimer 25
+scoreboard players reset * bpDeaths
 tag @a[tag=player] add bpAlive
 scoreboard players set @a[tag=player] bpDeaths 0
 spawnpoint @a -2000 62 3023
