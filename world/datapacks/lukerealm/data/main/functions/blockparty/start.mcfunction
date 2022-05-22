@@ -13,10 +13,9 @@ scoreboard players set ?notifRedDead blockParty 0
 scoreboard players set ?notifBlueDead blockParty 0
 scoreboard players set ?notifGreenDead blockParty 0
 scoreboard players set ?notifYellowDead blockParty 0
-scoreboard players set ?stopSec bpStop -100
-scoreboard players set ?tick bpStop 0
+scoreboard players set ?stop bpTimer -2000
 scoreboard players set @a bpSound 0
-scoreboard players set ?in1 bpTimer 10
+scoreboard players set ?in1 bpTimer 200
 tag @a[tag=player] add bpAlive
 scoreboard players set @a[tag=player] bpDeaths 0
 spawnpoint @a -2000 62 3023
@@ -92,7 +91,7 @@ execute positioned -2000.5 57 3000.5 run tp @a[tag=player,limit=1,sort=random,di
 execute positioned -2000.5 57 3000.5 run tp @a[tag=player,limit=1,sort=random,distance=..3] -1996.5 57 3009.5 facing entity @e[limit=1,sort=nearest,name="?midL"]
 execute positioned -2000.5 57 3000.5 run tp @a[tag=player,limit=1,sort=random,distance=..3] -2004.5 57 2991.5 facing entity @e[limit=1,sort=nearest,name="?midL"]
 setblock -2017 27 2984 air destroy
-execute positioned -2000.5 57 3000.5 run kill @e[limit=1,sort=nearest,name="?midL"]
+execute positioned -2000.5 57 3000.5 run kill @e[limit=1,distance=..10,name="?midL"]
 tp @a[tag=!player] -2000.5 61 3023.5
 
 summon armor_stand -2000.5 57 3000.5 {NoGravity:1b,Invisible:1b,CustomName:'{"text":"?music"}'}

@@ -1,7 +1,7 @@
 # Description: pick random color
 # Author: Cosmelon
 # Type: tick
-# run from main:blockparty/bptick when ?stopSec bpStop == 0
+# run from main:blockparty/bptick when ?stop bpStop == 0
 
 # color rng
 function main:blockparty/colorrng/range

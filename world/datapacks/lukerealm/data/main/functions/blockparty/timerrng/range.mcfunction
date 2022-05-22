@@ -17,4 +17,4 @@ scoreboard players operation ?out bpTimer += ?in bpTimer
 scoreboard players reset #m1 bpTimer
 scoreboard players remove ?in1 bpTimer 1
 
-scoreboard players operation ?stopSec bpStop = ?out bpTimer
+scoreboard players operation ?stop bpStop = ?out bpTimer
