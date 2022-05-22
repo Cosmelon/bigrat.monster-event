@@ -43,6 +43,10 @@ execute if score ?out bpFloor matches 27 run setblock -2017 26 2984 structure_bl
 execute if score ?out bpFloor matches 28 run setblock -2017 26 2984 structure_block{mode:"LOAD",name:"main:bp/pat1/p1l28",posX:4,posY:30,posZ:4} destroy
 execute if score ?out bpFloor matches 29 run setblock -2017 26 2984 structure_block{mode:"LOAD",name:"main:bp/pat1/p1l29",posX:4,posY:30,posZ:4} destroy
 execute if score ?out bpFloor matches 30 run setblock -2017 26 2984 structure_block{mode:"LOAD",name:"main:bp/pat1/p1l30",posX:4,posY:30,posZ:4} destroy
+execute if score ?out bpFloor matches 31 run setblock -2017 26 2984 structure_block{mode:"LOAD",name:"main:bp/pat1/p1l31",posX:4,posY:30,posZ:4} destroy
+execute if score ?out bpFloor matches 32 run setblock -2017 26 2984 structure_block{mode:"LOAD",name:"main:bp/pat1/p1l32",posX:4,posY:30,posZ:4} destroy
+execute if score ?out bpFloor matches 33 run setblock -2017 26 2984 structure_block{mode:"LOAD",name:"main:np/pat1/p1l33",posX:4,posY:30,posZ:4} destroy
+execute if score ?out bpFloor matches 34 run setblock -2017 26 2984 structure_block{mode:"LOAD",name:"main:np/pat1/p1l34",posX:4,posY:30,posZ:4} destroy
 
 # placing the redstone block
 scoreboard players add ?microTick bpFloor 1
