@@ -13,7 +13,7 @@ scoreboard players set ?notifRedDead blockParty 0
 scoreboard players set ?notifBlueDead blockParty 0
 scoreboard players set ?notifGreenDead blockParty 0
 scoreboard players set ?notifYellowDead blockParty 0
-scoreboard players set ?stop bpStop -2000
+scoreboard players set ?stop bpTimer -2000
 scoreboard players set @a bpSound 0
 scoreboard players set ?in1 bpTimer 200
 tag @a[tag=player] add bpAlive

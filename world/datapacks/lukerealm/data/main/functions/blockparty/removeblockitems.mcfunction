@@ -2,7 +2,7 @@
 # Author: Cosmelon
 # Type: objective
 # @s = @a[tag=bpAlive]
-# run from main:blockparty/killbp when ?stopSec bpStop == -200
+# run from main:blockparty/killbp when ?stop bpTimer == -200
 
 clear @s red_concrete
 clear @s orange_concrete

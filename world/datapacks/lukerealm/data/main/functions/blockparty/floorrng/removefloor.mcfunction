@@ -1,7 +1,7 @@
 # Description: removes the floor colors dependent on what color it is
 # Author: Cosmelon
 # Type: objective
-# run from main:blockparty/bptick when ?stopSec bpStop == -60
+# run from main:blockparty/bptick when ?stop bpTimer == -60
 
 # MOJANG WHY DO I HAVE TO DO IT LIKE THIS INSTEAD OF JUST DOING <location> keep <block>
 # THIS IS SO FUCKING STUPID

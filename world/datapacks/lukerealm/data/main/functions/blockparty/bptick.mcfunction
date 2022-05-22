@@ -11,9 +11,9 @@ execute if score ?countDown blockParty matches ..0 run effect give @a[tag=player
 # Floor randomizer function when floor switcher is active
 execute if score ?floorSwitch blockParty matches 1 run function main:blockparty/floorrng/floors
 # removes the blocks
-execute if score ?stop bpStop matches -60 run function main:blockparty/floorrng/removefloor
+execute if score ?stop bpTimer matches -60 run function main:blockparty/floorrng/removefloor
 # get rid of blocks in player inventory when inactive randomizer
-execute if score ?stop bpStop matches 20.. as @a[tag=bpAlive] run function main:blockparty/removeblockitems
+execute if score ?stop bpTimer matches 20.. as @a[tag=bpAlive] run function main:blockparty/removeblockitems
 
 # main countdown system
 scoreboard players remove ?countDown blockParty 1
@@ -26,7 +26,7 @@ execute if score ?countDown blockParty matches 20 run playsound minecraft:block.
 execute if score ?countDown blockParty matches 0 run title @a title {"text":"Start Schmoovin!","color":"red"}
 execute if score ?countDown blockParty matches 0 run playsound minecraft:block.note_block.chime master @a ^0 ^ ^ 1 1.414214 1
 execute if score ?countDown blockParty matches 0 run scoreboard players set ?floorSwitch blockParty 1
-execute if score ?countDown blockParty matches 0 run scoreboard players set ?stop bpStop 400
+execute if score ?countDown blockParty matches 0 run scoreboard players set ?stop bpTimer 400
 execute if score ?countDown blockParty matches -40 run title @a title ""
 execute if score ?countDown blockParty matches -40 run title @a subtitle ""
 
@@ -37,27 +37,27 @@ execute if score ?countDown blockParty matches 150 run function main:blockparty/
 
 # color picker
 #execute if score $floorSwitch blockParty matches 1 run scoreboard players add $tick blockPartyStop 1
-execute if score ?stop bpStop matches 0..20 run function main:blockparty/colorrng/pickcolor
+execute if score ?stop bpTimer matches 0..20 run function main:blockparty/colorrng/pickcolor
 
 # music stuff
 execute if score ?countDown blockParty matches 0 run playsound minecraft:music_disc.chirp voice @a -2000.5 130 3000.5 10000
-execute if score ?stop bpStop matches -20 run stopsound @a
-execute if score ?stop bpStop matches -200 run playsound minecraft:music_disc.chirp voice @a -2000.5 130 3000.5 10000
+execute if score ?stop bpTimer matches -20 run stopsound @a
+execute if score ?stop bpTimer matches -200 run playsound minecraft:music_disc.chirp voice @a -2000.5 130 3000.5 10000
 
 # actionbar GUI
 #floor counter
-execute if score ?stop bpStop matches -199 run scoreboard players add ?floorNum bpFloor 1
+execute if score ?stop bpTimer matches -199 run scoreboard players add ?floorNum bpFloor 1
 execute store result score ?aliveAll blockParty if entity @a[tag=bpAlive]
 execute if score ?countDown blockParty matches ..0 run title @a actionbar [{"text":"Round: ","color":"green"},{"score":{"name":"?floorNum","objective":"bpFloor"}},{"text":"     Players Alive: ","color":"red"},{"score":{"name":"?aliveAll","objective":"blockParty"}}]
 
-execute if score ?stop bpStop matches -200 unless score ?in1 bpTimer matches ..65 run scoreboard players remove ?in1 bpTimer 5
+execute if score ?stop bpTimer matches -200 unless score ?in1 bpTimer matches ..65 run scoreboard players remove ?in1 bpTimer 5
 
 # timer picker
 # the idea is that a random amount of time is picked after each elimination before it stops again
-execute if score ?countDown blockParty matches ..0 run scoreboard players remove ?stop bpStop 1
-execute if score ?stop bpStop matches -200 run function main:blockparty/timerrng/range
-execute if score ?stop bpStop matches -200..0 run scoreboard players set ?floorSwitch blockParty 0
-execute unless score ?stop bpStop matches ..0 run scoreboard players set ?floorSwitch blockParty 1
+execute if score ?countDown blockParty matches ..0 run scoreboard players remove ?stop bpTimer 1
+execute if score ?stop bpTimer matches -200 run function main:blockparty/timerrng/range
+execute if score ?stop bpTimer matches -200..0 run scoreboard players set ?floorSwitch blockParty 0
+execute unless score ?stop bpTimer matches ..0 run scoreboard players set ?floorSwitch blockParty 1
 
 # player counter
 execute store result score ?aliveRed blockParty if entity @a[team=Red,tag=bpAlive]
