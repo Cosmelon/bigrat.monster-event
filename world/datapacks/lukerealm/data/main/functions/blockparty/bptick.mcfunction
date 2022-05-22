@@ -32,7 +32,7 @@ execute if score ?round blockParty matches 1 if score ?countDown blockParty matc
 execute if score ?floorSwitch blockParty matches 1 run function main:blockparty/floorrng/floors
 # removes the blocks
 execute if score ?stop bpTimer = ?removeFloor bpFloor run function main:blockparty/floorrng/removefloor
-execute if score ?stop bpTimer matches -149 if score ?removeFloor bpFloor matches 10.. run scoreboard players add ?removeFloor bpFloor 5
+execute if score ?stop bpTimer matches -149 if score ?removeFloor bpFloor matches ..-10 run scoreboard players add ?removeFloor bpFloor 5
 # get rid of blocks in player inventory when inactive randomizer
 execute if score ?stop bpTimer matches 20.. as @a[tag=bpAlive] run function main:blockparty/removeblockitems
 
