@@ -46,18 +46,18 @@ execute if score ?stop bpStop matches -200 run playsound minecraft:music_disc.ch
 
 # actionbar GUI
 #floor counter
-execute if score ?stop bpStop matches -200 run scoreboard players add ?floorNum bpFloor 1
+execute if score ?stop bpStop matches -199 run scoreboard players add ?floorNum bpFloor 1
 execute store result score ?aliveAll blockParty if entity @a[tag=bpAlive]
 execute if score ?countDown blockParty matches ..0 run title @a actionbar [{"text":"Round: ","color":"green"},{"score":{"name":"?floorNum","objective":"bpFloor"}},{"text":"     Players Alive: ","color":"red"},{"score":{"name":"?aliveAll","objective":"blockParty"}}]
 
-execute if score ?stop bpStop matches -10 if score ?in1 bpTimer matches 4.. run scoreboard players remove ?in1 bpTimer 1
+execute if score ?stop bpStop matches -200 unless score ?in1 bpTimer matches ..65 run scoreboard players remove ?in1 bpTimer 5
 
 # timer picker
 # the idea is that a random amount of time is picked after each elimination before it stops again
 execute if score ?countDown blockParty matches ..0 run scoreboard players remove ?stop bpStop 1
 execute if score ?stop bpStop matches -200 run function main:blockparty/timerrng/range
-execute if score ?stop bpStop matches -10..0 run scoreboard players set ?floorSwitch blockParty 0
-execute if score ?stop bpStop matches 1.. run scoreboard players set ?floorSwitch blockParty 1
+execute if score ?stop bpStop matches -200..0 run scoreboard players set ?floorSwitch blockParty 0
+execute unless score ?stop bpStop matches ..0 run scoreboard players set ?floorSwitch blockParty 1
 
 # player counter
 execute store result score ?aliveRed blockParty if entity @a[team=Red,tag=bpAlive]

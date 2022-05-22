@@ -13,7 +13,6 @@ scoreboard players set ?notifBlueDead blockParty 0
 scoreboard players set ?notifGreenDead blockParty 0
 scoreboard players set ?notifYellowDead blockParty 0
 scoreboard players set ?stop bpStop -2000
-scoreboard players set ?tick bpStop 0
 scoreboard players reset * bpDeaths
 stopsound @a
 bossbar set minecraft:bproundcount visible false
