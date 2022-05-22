@@ -24,9 +24,9 @@ execute if score ?countDown blockParty matches -40 run title @a title ""
 execute if score ?countDown blockParty matches -40 run title @a subtitle ""
 
 # startinfo things
-execute if score ?countDown blockParty matches 350 run function main:blockparty/startinfo/text1
-execute if score ?countDown blockParty matches 250 run function main:blockparty/startinfo/text2
-execute if score ?countDown blockParty matches 150 run function main:blockparty/startinfo/text3
+execute if score ?round blockParty matches 1 if score ?countDown blockParty matches 350 run function main:blockparty/startinfo/text1
+execute if score ?round blockParty matches 1 if score ?countDown blockParty matches 250 run function main:blockparty/startinfo/text2
+execute if score ?round blockParty matches 1 if score ?countDown blockParty matches 150 run function main:blockparty/startinfo/text3
 
 # Floor randomizer function when floor switcher is active
 execute if score ?floorSwitch blockParty matches 1 run function main:blockparty/floorrng/floors
