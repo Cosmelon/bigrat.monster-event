@@ -24,6 +24,11 @@ title @a actionbar ""
 title @a title ""
 bossbar set minecraft:racetime visible false
 
+# get rid of armorstands
+kill @e[type=armor_stand,name="!racePos1"]
+kill @e[type=armor_stand,name="!racePos2"]
+kill @e[type=armor_stand,name="!racePos3"]
+
 # regenerate start
 fill 285 77 47 291 76 37 air replace barrier
 fill 294 79 37 294 75 47 light_gray_stained_glass replace air

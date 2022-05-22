@@ -32,6 +32,7 @@ execute if score !countDown race matches 550 run function main:race/startinfo/be
 execute if score !countDown race matches 470 run function main:race/startinfo/pos1
 execute if score !countDown race matches 350 run function main:race/startinfo/pos2
 execute if score !countDown race matches 290 run function main:race/startinfo/pos3
+execute if score !countDown race matches 230 run function main:race/startinfo/pos4
 execute if score !countDown race matches 169 run function main:race/spreadp
 execute if score !countDown race matches 110 run title @a title ""
 execute if score !countDown race matches 110 run title @a subtitle {"text":"Starting soon!","color":"dark_red"}
