@@ -1,4 +1,8 @@
-# activates shrink2
+# Description: activates shrink2
+# Author: Cosmelon
+# Type: single
+# run from main:sg/border/s2warn
+
 bossbar set minecraft:sgshrink visible false
 title @a title {"text":"Border shrinking!","color":"dark_red"}
 worldborder set 180 30

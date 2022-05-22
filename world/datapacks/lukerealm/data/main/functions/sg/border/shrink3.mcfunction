@@ -1,4 +1,8 @@
-# activates shrink3
+# Description: activates shrink3
+# Author: Cosmelon
+# Type: single
+# run from main:sg/border/s3warn
+
 bossbar set minecraft:sgshrink visible false
 title @a title {"text":"Border shrinking!","color":"dark_red"}
 worldborder set 130 30

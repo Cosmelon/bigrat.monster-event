@@ -1,4 +1,8 @@
-# initiate the countdown for shrink1
+# Description: warn about shrink1
+# Author: Cosmelon
+# Type: single, scheduled
+# run from main:sg/border/shrinkstart
+
 # issue report: https://github.com/Cosmelon/bigrat.monster-event/issues/42
 
 bossbar set minecraft:sgshrink visible true

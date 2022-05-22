@@ -1,7 +1,7 @@
 # Description: SG tick stuff
 # Author: Cosmelon
 # Type: main_tick
-# run from main:tick
+# run from main:tick when ~gameActive sg == 1
 
 # scoreboards associated with sg
 #  sg - main sg scoreboard, main stuff here

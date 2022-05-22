@@ -1,4 +1,7 @@
-#  This function is run nine times at the start of sg
+# Description: This sets the powers to the players
+# Author: Cosmelon
+# Type: tick x9
+# run from main:sg/sgtick when ~powersActive sg == 1 and ~powerRun sg <= 9
 
 # init
 scoreboard players set ~countDown sg 600 

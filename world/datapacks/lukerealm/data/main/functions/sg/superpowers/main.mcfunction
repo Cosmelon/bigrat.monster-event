@@ -1,5 +1,8 @@
-# superpowers mode tick file
-#  center of effects for the powers
+# Description: superpowers mode main tick file
+# Author: Cosmelon
+# Type: tick
+# run from main:sg/sgtick when ~powersActive sg == 1 and ~countDown sg <= 0
+
 
 # takes away powers on death
 execute as @a[scores={sgDeaths=1..}] run tag @s remove sgVampire

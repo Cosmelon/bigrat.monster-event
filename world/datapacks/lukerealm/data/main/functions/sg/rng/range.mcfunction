@@ -1,4 +1,7 @@
-# starts the math to pick random powers
+# Description: pick random powers
+# Author: Cosmelon
+# Type: math, tick
+# run from main:sg/sgtick
 
 # in = lower range
 # in1 = upper range

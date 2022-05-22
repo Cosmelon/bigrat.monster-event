@@ -1,3 +1,9 @@
+# Description: superpower pick math
+# Author: Cosmelon
+# Type: math
+# @s = <executor> (can be omitted when not used)
+# run from main:sg/rng/next_int
+
 # LCG Seed implementation
 #
 # x_(n+1) = x_(n)*a + c

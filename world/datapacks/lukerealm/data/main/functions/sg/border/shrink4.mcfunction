@@ -1,4 +1,8 @@
-# activates shrink1
+# Description: activates shrink4 
+# Author: Cosmelon
+# Type: single
+# run from main:sg/border/shrink4
+
 bossbar set minecraft:sgshrink visible false
 title @a title {"text":"Border shrinking!","color":"dark_red"}
 worldborder set 80 30

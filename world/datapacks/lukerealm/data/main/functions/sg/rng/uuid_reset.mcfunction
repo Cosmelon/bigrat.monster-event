@@ -1,4 +1,7 @@
-# superpower pick math
+# Description: superpower
+# Author: Cosmelon
+# Type: math
+# run from main:sg/rng/init
 
 summon minecraft:area_effect_cloud ~ ~ ~ {Tags:["uuid"]}
 execute store result score #lcg sgMath run data get entity @e[tag=uuid,limit=1] UUID[0]

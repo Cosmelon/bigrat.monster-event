@@ -1,4 +1,8 @@
-# initiate the countdown for shrink3
+# Description: warns about shrink3
+# Author: Cosmelon
+# Type: single, scheduled
+# run from main:sg/border/shrinkstart
+
 # refrence notes on s1warn.mcfunction
 
 bossbar set minecraft:sgshrink visible true

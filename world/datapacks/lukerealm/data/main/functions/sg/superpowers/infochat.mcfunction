@@ -1,4 +1,7 @@
-# this is the info screens for all the powers
+# Description: info screens for all the powers
+# Author: Cosmelon
+# Type: single
+# run from main:sg/superpowers/powerrun when !powerRun == 9
 
 # all players see this first bit
 tellraw @a[tag=player] ""
