@@ -43,3 +43,16 @@
 
 # ignores resourcepack
 **bigrat.monster/bigratResources
+
+# ignore other stuff
+**bigrat.monster/permissions.yml
+**bigrat.monster/help.yml
+**bigrat.monster/paper.yml
+**bigrat.monster/server-icon.png
+**bigrat.monster/spigot.yml
+**bigrat.monster/wepif.yml
+**bigrat.monster/ops.json
+**bigrat.monster/whitelist.json
+**bigrat.monster/bukkit.yml
+**bigrat.monster/eula.txt
+**bigrat.monster/server.properties
