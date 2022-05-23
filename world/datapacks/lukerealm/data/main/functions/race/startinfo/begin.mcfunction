@@ -3,6 +3,9 @@
 # Type: single
 # run from main:race/racetick
 
+tp @e[name="!raceCine"] 284.5 75 42.5 -90 5
+gamemode spectator @a
+
 # sound
 function main:infosound
 

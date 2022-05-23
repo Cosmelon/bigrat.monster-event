@@ -28,11 +28,13 @@ execute if score !raceTime raceSec matches 0..9 run execute if score !raceTime r
 execute if score !raceTime raceSec matches 10.. run execute if score !raceTime raceMilli matches 10.. run bossbar set minecraft:racetime name [{"text":"Overall Time: ","color":"gold"},{"score":{"name": "!raceTime","objective":"raceMin"},"color":"green"},{"text":":","color":"green"},{"score":{"name":"!raceTime","objective":"raceSec"},"color":"green"},{"text":".","color":"green"},{"score":{"name":"!raceTime","objective":"raceMilli"},"color":"green"}]
 
 # startinfo
-execute if score !countDown race matches 471..550 run function main:race/startinfo/begin
-execute if score !countDown race matches 351..470 run function main:race/startinfo/pos1
-execute if score !countDown race matches 291..350 run function main:race/startinfo/pos2
-execute if score !countDown race matches 231..290 run function main:race/startinfo/pos3
-execute if score !countDown race matches 171..230 run function main:race/startinfo/pos4
+execute if score !countDown race matches 171.. run effect give @a invisibility 100000 0 true
+execute if score !countDown race matches 171.. at @a as @a[gamemode=spectator] run spectate @e[name="!raceCine",limit=1,sort=nearest] @s
+execute if score !countDown race matches 1700 run function main:race/startinfo/begin
+execute if score !countDown race matches 1400 run function main:race/startinfo/pos1
+execute if score !countDown race matches 1100 run function main:race/startinfo/pos2
+execute if score !countDown race matches 800 run function main:race/startinfo/pos3
+execute if score !countDown race matches 500 run function main:race/startinfo/pos4
 execute if score !countDown race matches 170 run function main:race/spreadp
 execute if score !countDown race matches 110 run title @a title ""
 execute if score !countDown race matches 110 run title @a subtitle {"text":"Starting!","color":"dark_red"}

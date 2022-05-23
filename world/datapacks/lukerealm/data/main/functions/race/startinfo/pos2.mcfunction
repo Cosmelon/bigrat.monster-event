@@ -3,9 +3,9 @@
 # Type: single
 # run from main:race/racetick
 
-# forcing splayers to spectate armor stand called !racePos2
-gamemode spectator @a
-execute as @a run spectate @e[type=armor_stand,limit=1,name="!racePos2"] @s
+# get out of spectate
+#tp @e[name="!raceCine"] @e[name="!racePos2",limit=1]
+tp @e[name="!raceCine"] 246.5 72.6 -43.5 -180 15.5
 
 # sound
 function main:infosound
