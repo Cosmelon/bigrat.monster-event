@@ -5,7 +5,7 @@
 
 # kills race
 scoreboard players set !gameActive race 0
-scoreboard players set !countDown race 160
+scoreboard players set !countDown race 1800
 scoreboard players set !gateOpen race 100
 scoreboard players set !gateShut race 0
 scoreboard players set !milli race 0
@@ -24,10 +24,8 @@ title @a actionbar ""
 title @a title ""
 bossbar set minecraft:racetime visible false
 
-# get rid of armorstands
-kill @e[type=armor_stand,name="!racePos1"]
-kill @e[type=armor_stand,name="!racePos2"]
-kill @e[type=armor_stand,name="!racePos3"]
+# get rid of the cinematic armor stand
+kill @e[type=armor_stand,name="!raceCine"]
 
 # regenerate start
 fill 285 77 47 291 76 37 air replace barrier

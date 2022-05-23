@@ -3,6 +3,7 @@
 # Type: single
 # run from main:race/startrace, main:race/racetick
 
+effect clear @a
 gamemode adventure @a[tag=player]
 tp @a 284.5 75 42.5 -90 5
 execute positioned 284 75 42 run tp @a[team=Red,limit=1,sort=random,distance=..50] 290.5 75 38.5 -90 5

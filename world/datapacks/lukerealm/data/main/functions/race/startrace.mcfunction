@@ -2,12 +2,12 @@
 # Author: Cosmelon
 # Type: start
 
-# lobby dependency
+# turn off lobby
 scoreboard players set $lobby currentGame 0
 
 # start
 scoreboard players set !gameActive race 1
-scoreboard players set !countDown race 600
+scoreboard players set !countDown race 1800
 scoreboard players set !gateOpen race 100
 scoreboard players set !gateShut race 0
 scoreboard players set !raceTime raceMilli 0
@@ -40,14 +40,8 @@ scoreboard players set @a raceMin 0
 function main:race/spreadp
 
 # summon armor stands
-kill @e[type=armor_stand,name="!racePos1"]
-kill @e[type=armor_stand,name="!racePos2"]
-kill @e[type=armor_stand,name="!racePos3"]
-kill @e[type=armor_stand,name="!racePos4"]
-summon armor_stand 346.5 80.15 65.5 {Invisible:1b,NoGravity:1b,Rotation:[180f],CustomName:'{"text":"!racePos1"}'}
-summon armor_stand 246.5 72.5 -50.5 {Invisible:1b,NoGravity:1b,Rotation:[0f],CustomName:'{"text":"!racePos2"}'}
-summon armor_stand 371.5 80.1 -18.5 {Invisible:1b,NoGravity:1b,Rotation:[90f],CustomName:'{"text":"!racePos3"}'}
-summon armor_stand 234.5 77.5 -27.5 {Invisible:1b,NoGravity:1b,Rotation:[330f],CustomName:'{"text":"!racePos4"}'}
+kill @e[type=armor_stand,name="!raceCine"]
+summon armor_stand 284.5 75 42.5 {Invisible:1b,NoGravity:1b,Rotation:[270f],CustomName:'{"text":"!raceCine"}'}
 
 #barriers (face-top-back-left-right)
 # red
