@@ -1,7 +1,6 @@
 # Description: race infotext 5, position 4
 # Author: Cosmelon
 # Type: single
-# @s = @a
 # run from main:race/racetick
 
 # forcing splayers to spectate armor stand called !racePos3
