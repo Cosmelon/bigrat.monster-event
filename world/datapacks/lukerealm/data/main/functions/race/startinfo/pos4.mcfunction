@@ -5,7 +5,8 @@
 
 # get out of spectate
 #tp @e[name="!raceCine"] @e[name="!racePos4",limit=1]
-tp @e[name="!raceCine"] @e[name="!racePos4",limit=1]
+tp @e[name="!raceCine"] 234.50 77.50 -27.5 -403.16 6.42
+execute as @a run spectate
 
 # sound
 function main:infosound
