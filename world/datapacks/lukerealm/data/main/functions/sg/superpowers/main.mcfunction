@@ -22,8 +22,8 @@ execute as @a[tag=sgVampire,scores={sgVampire=238}] run effect give @s wither 2 
 scoreboard players add ~tick sgVampire 1
 execute if score ~tick sgVampire matches 30.. run scoreboard players set ~tick sgVampire 0
 #   just going to live with the model jumping, at least for now
-execute if score ~tick sgVampire matches 0 as @a[tag=sgVampire,predicate=main:thats_lit,predicate=!main:sneak_state,nbt={Inventory:[{Slot:-106b},{id:"minecraft:shears"}]}] run item modify entity @s weapon.offhand main:umbrella_sub
-execute if score ~tick sgVampire matches 0 as @a[tag=sgVampire,predicate=main:thats_dark,predicate=!main:sneak_state,nbt={Inventory:[{Slot:-106b},{id:"minecraft:shears"}]}] run item modify entity @s weapon.offhand main:umbrella_add
+execute if score ~tick sgVampire matches 0 as @a[tag=sgVampire,predicate=main:ssky,predicate=!main:sneak_state,nbt={Inventory:[{Slot:-106b},{id:"minecraft:shears"}]}] run item modify entity @s weapon.offhand main:umbrella_sub
+execute if score ~tick sgVampire matches 0 as @a[tag=sgVampire,predicate=!main:ssky,predicate=!main:sneak_state,nbt={Inventory:[{Slot:-106b},{id:"minecraft:shears"}]}] run item modify entity @s weapon.offhand main:umbrella_add
 execute as @a[tag=sgVampire,nbt={Inventory:[{Slot:-106b},{id:"minecraft:shears"}]}] store result score @s sgVampire run data get entity @s Inventory[{Slot:-106b}].tag.Damage
 #   main:offhand_shears detects if you have shears in your offhand
 execute as @a[tag=sgVampire,predicate=!main:offhand_shears] run function main:sg/superpowers/novamp_shears
