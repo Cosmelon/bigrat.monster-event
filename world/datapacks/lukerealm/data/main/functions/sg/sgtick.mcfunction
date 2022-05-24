@@ -40,8 +40,9 @@ execute store result score ~aliveGreen sg if entity @a[team=Green,gamemode=!spec
 execute store result score ~aliveYellow sg if entity @a[team=Yellow,gamemode=!spectator]
 
 # shrink bossbar
-execute store result bossbar minecraft:sgshrink value run scoreboard players get ~shrinkSec sgBorder
+execute store result bossbar minecraft:sgshrink value run scoreboard players get ~shrinkWarn sgBorder
 execute store result bossbar minecraft:sgshrinkactual value run scoreboard players get ~shrinkActual sgBorder
+scoreboard players remove ~shrinkWarn sgBorder 1
 scoreboard players remove ~shrinkActual sgBorder 1
 execute if score ~shrinkActual sgBorder matches ..0 run bossbar set minecraft:sgshrinkactual visible false
 scoreboard players add ~shrinkTick sgBorder 1

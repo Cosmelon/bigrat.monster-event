@@ -6,7 +6,8 @@
 # refrence notes on s1warn.mcfunction
 
 bossbar set minecraft:sgshrink visible true
-bossbar set minecraft:sgshrink max 30
+bossbar set minecraft:sgshrink max 600
 scoreboard players set ~shrinkTick sgBorder 0
 scoreboard players set ~shrinkSec sgBorder 30
+scoreboard players set ~shrinkWarn sgBorder 600
 schedule function main:sg/border/shrink4 30s replace

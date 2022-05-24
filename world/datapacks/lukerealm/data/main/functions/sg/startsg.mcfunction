@@ -13,6 +13,7 @@ scoreboard players set ~gameActive sg 1
 gamemode adventure @a[tag=player]
 gamemode spectator @a[tag=!player]
 effect clear @a
+clear @a
 kill @e[type=zombie]
 kill @e[type=item]
 
@@ -21,6 +22,10 @@ scoreboard players set ~notifRedDead sg 0
 scoreboard players set ~notifBlueDead sg 0
 scoreboard players set ~notifGreenDead sg 0
 scoreboard players set ~notifYellowDead sg 0
+scoreboard players set ~aliveRed sg 1
+scoreboard players set ~aliveBlue sg 1
+scoreboard players set ~aliveGreen sg 1
+scoreboard players set ~aliveYellow sg 1
 
 scoreboard objectives add sgVampire dummy
 scoreboard objectives add sgRedditorGrass dummy
@@ -29,6 +34,13 @@ scoreboard objectives add sgWitch dummy
 scoreboard objectives add sgMedic dummy
 scoreboard objectives add sgPyro dummy
 scoreboard objectives add sgKills playerKillCount
+
+# timers and other stuff reset
+scoreboard players set ~shrinkActual sgBorder 0
+scoreboard players set ~shrinkTick sgBorder 0
+scoreboard players set ~shrinkSec sgBorder 0
+scoreboard players set ~shrinkWarn sgBorder -100
+scoreboard players set ~powerRun sg 0
 
 # spawnpoints
 spawnpoint @a -1983 90 -1983
@@ -104,12 +116,6 @@ execute if score ~powersActive sg matches 0 run schedule function main:sg/border
 execute if score ~powersActive sg matches 1 run schedule function main:sg/border/shrinkstart 70s 
 execute if score ~powersActive sg matches 1 run tellraw @a[tag=admin] "superpowers mode is on btw"
 scoreboard players set ~shrinkNum sgBorder 0
-
-# timers and other stuff
-scoreboard players set ~shrinkActual sgBorder 0
-scoreboard players set ~shrinkTick sgBorder 0
-scoreboard players set ~shrinkSec sgBorder 0
-scoreboard players set ~powerRun sg 0
 
 # superpowers
 #execute if score ~round sg matches 2 if score ~powersActive sg matches 1 run function main:sg/superpowers
