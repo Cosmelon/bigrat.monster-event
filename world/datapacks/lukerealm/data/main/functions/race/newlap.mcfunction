@@ -62,6 +62,13 @@ execute if score @s raceLap matches 3 if score @s racePos matches 4.. if score !
 
 execute if score @s raceLap matches 3 run title @s title {"text":"Finished!","color":"gold"}
 
+# fireworks
+execute if entity @s[team=Red] run summon firework_rocket ^ ^1 ^ {LifeTime:0,FireworksItem:{id:"firework_rocket",Count:1,tag:{Fireworks:{Flight:1,Explosions:[{Type:1,Flicker:0,Trail:0,Colors:[I;16471124],FadeColors:[I;16492544]}]}}}}
+execute if entity @s[team=Blue] run summon firework_rocket ^ ^1 ^ {LifeTime:0,FireworksItem:{id:"firework_rocket",Count:1,tag:{Fireworks:{Flight:1,Explosions:[{Type:1,Flicker:0,Trail:0,Colors:[I;5526779],FadeColors:[I;16492544]}]}}}}
+execute if entity @s[team=Green] run summon firework_rocket ^ ^1 ^ {LifeTime:0,FireworksItem:{id:"firework_rocket",Count:1,tag:{Fireworks:{Flight:1,Explosions:[{Type:1,Flicker:0,Trail:0,Colors:[I;5569364],FadeColors:[I;16492544]}]}}}}
+execute if entity @s[team=Yellow] run summon firework_rocket ^ ^1 ^ {LifeTime:0,FireworksItem:{id:"firework_rocket",Count:1,tag:{Fireworks:{Flight:1,Explosions:[{Type:1,Flicker:0,Trail:0,Colors:[I;16513876],FadeColors:[I;16492544]}]}}}}
+
+# resetting timer scores
 scoreboard players set @s raceMilli 0
 scoreboard players set @s raceSec 0
 scoreboard players set @s raceMin 0
