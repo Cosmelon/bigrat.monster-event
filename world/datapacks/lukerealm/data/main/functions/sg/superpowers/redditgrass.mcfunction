@@ -7,7 +7,7 @@
 # I compiled a list of irritating redditor shit and named the zombies to em
 # the zombies spawn with leather hats but don't drop them on death
 execute at @s run summon zombie ~2 ~ ~ {CustomName:'{"text":"Edit: thanks for the silver kind stranger!"}',ArmorItems:[{},{},{},{id:"minecraft:leather_helmet",Count:1b}],ArmorDropChances:[0.085F,0.085F,0.085F,0.000F],PersistenceRequired:1b,DeathLootTable:"main:entity_empty"}
-execute at @s run summon zombie ~-2 ~ ~ {CustomName:'{"text":"Omega Chonk Doggo Goob Hooman Snek"}',ArmorItems:[{},{},{},{id:"minecraft:leather_helmet",Count:1b}],ArmorDropChances:[0.085F,0.085F,0.085F,0.000F],PersistenceRequired:1b,DeathLootTable:"main:entity_empty"}
+execute at @s run summon zombie ~-2 ~ ~ {CustomName:'{"text":"I am *insert small amount of time* sober!"}',ArmorItems:[{},{},{},{id:"minecraft:leather_helmet",Count:1b}],ArmorDropChances:[0.085F,0.085F,0.085F,0.000F],PersistenceRequired:1b,DeathLootTable:"main:entity_empty"}
 execute at @s run summon zombie ~ ~ ~2 {CustomName:'{"text":"Sorry english isnt my first language"}',ArmorItems:[{},{},{},{id:"minecraft:leather_helmet",Count:1b}],ArmorDropChances:[0.085F,0.085F,0.085F,0.000F],PersistenceRequired:1b,DeathLootTable:"main:entity_empty"}
 execute at @s run summon zombie ~ ~ ~-2 {CustomName:'{"text":"Nice."}',ArmorItems:[{},{},{},{id:"minecraft:leather_helmet",Count:1b}],ArmorDropChances:[0.085F,0.085F,0.085F,0.000F],PersistenceRequired:1b,DeathLootTable:"main:entity_empty"}
 execute at @s run summon zombie ~2 ~ ~2 {CustomName:'{"text":"im probably gonna get downvoted for this but..."}',ArmorItems:[{},{},{},{id:"minecraft:leather_helmet",Count:1b}],ArmorDropChances:[0.085F,0.085F,0.085F,0.000F],PersistenceRequired:1b,DeathLootTable:"main:entity_empty"}
