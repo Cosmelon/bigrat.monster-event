@@ -70,6 +70,9 @@ function main:sg/rng/range
 execute if score ~powersActive sg matches 1 if score ~powerRun sg matches ..9 run function main:sg/superpowers/powerrun
 execute if score ~powersActive sg matches 1 if score ~countDown sg matches ..0 run function main:sg/superpowers/main
 
+# spectator border
+execute positioned -1983.5 133 -1983.5 run tellraw @a[distance=150..,team=!Admin,gamemode=spectator] {"text":"No peeking!","color":"gray"}
+execute positioned -1983.5 133 -1983.5 run tp @a[distance=150..,team=!Admin,gamemode=spectator] -1983.5 133 -1983.5
 
 # effects
 #levitation
