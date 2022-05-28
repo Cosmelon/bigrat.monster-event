@@ -3,7 +3,7 @@
 # Type: start
 # run from main:blockparty/wins/
 
-scoreboard players set $lobby currentGame 0
+scoreboard players set .lobby currentGame 0
 scoreboard players set ?gameActive blockParty 1
 scoreboard players set ?floorSwitch blockParty 0
 scoreboard players set ?microTick blockParty 0

@@ -3,8 +3,8 @@
 # Type: start
 # run from <manual>, main:sg/wins/
 
-# lobby dependency
-scoreboard players set $lobby currentGame 0
+# lobby turn off
+scoreboard players set .lobby currentGame 0
 
 # gameActive
 scoreboard players set ~gameActive sg 1

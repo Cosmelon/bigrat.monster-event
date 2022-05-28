@@ -2,8 +2,8 @@
 # Author: Cosmelon
 # Type: start
 
-# turn off lobby
-scoreboard players set $lobby currentGame 0
+# lobby turn off 
+scoreboard players set .lobby currentGame 0
 
 # start
 scoreboard players set !gameActive race 1
