@@ -6,12 +6,10 @@
 # get out of spectate
 #tp @e[name="!raceCine"] @e[name="!racePos1",limit=1]
 tp @e[name="!raceCine"] 346.5 80.6 65.3 -180 25.3
-gamemode adventure @a
-gamemode spectator @a
 execute as @a run spectate
 
 # sound
-function main:infosound
+schedule function main:infosound 10t replace
 
 # infotext
 tellraw @a [{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-6"},{"text":"\uE004"}]

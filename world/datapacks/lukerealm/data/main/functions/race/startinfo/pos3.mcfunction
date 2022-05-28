@@ -9,7 +9,7 @@ tp @e[name="!raceCine"] 370.25 80.4 -18.5 90 8.4
 execute as @a run spectate
 
 # sound
-function main:infosound
+schedule function main:infosound 10t replace
 
 # infotext
 tellraw @a [{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-6"},{"text":"\uE004"}]
