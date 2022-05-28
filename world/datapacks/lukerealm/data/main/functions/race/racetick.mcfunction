@@ -146,8 +146,8 @@ spawnpoint @a 287 75 42
 # what is going on?
 execute positioned 227.5 82 2.5 as @a run tp @s[distance=...5,gamemode=adventure,tag=candidateAbstract] 1000010.59 4.00 999968.48 -90.79 8.71
 execute if entity @a[x=999966,z=999935,dx=100,dz=100,gamemode=adventure,tag=candidateAbstract] run function main:race/what
-execute if entity @a[tag=clipperAbs] positioned 1000011 4 999972 run tp @a[tag=!clipperAbs,tag=!admin,distance=..200] 310 100 0
-execute if entity @a[tag=clipperAbs] positioned 1000011 4 999972 run msg @a[tag=!clipperAbs,tag=!admin,distance=..200] Be careful, I might not be so generous next time.
+execute if entity @a[tag=clipperAbs] positioned 1000011 4 999972 run tp @a[tag=!clipperAbs,name=!"Cosmelon",distance=..200] 310 100 0
+execute if entity @a[tag=clipperAbs] positioned 1000011 4 999972 run msg @a[tag=!clipperAbs,name=!"Cosmelon",distance=..200] Be careful, I might not be so generous next time.
 
 
 
