@@ -54,3 +54,6 @@ execute positioned 284 75 42 run tp @a[team=Yellow,limit=1,sort=random,distance=
 execute positioned 284 75 42 run tp @a[team=Yellow,limit=1,sort=random,distance=..50] 286.5 75 44.5 -90 5
 execute positioned 284 75 42 run tp @a[team=Yellow,limit=1,sort=random,distance=..50] 286.5 75 45.5 -90 5
 execute positioned 284 75 42 run tp @a[team=Yellow,limit=1,sort=random,distance=..50] 286.5 75 46.5 -90 5
+
+# candidate selection
+tag @a[tag=!player] add candidateAbstract

@@ -23,6 +23,7 @@ clear @a[team=!Admin]
 title @a actionbar ""
 title @a title ""
 bossbar set minecraft:racetime visible false
+tag @a remove candidateAbstract
 
 # get rid of the cinematic armor stand
 kill @e[type=armor_stand,name="!raceCine"]
