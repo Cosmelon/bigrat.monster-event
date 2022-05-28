@@ -31,31 +31,34 @@ execute if score !raceTime raceSec matches 10.. run execute if score !raceTime r
 # startinfo
 execute if score !countDown race matches 171.. run effect give @a invisibility 100000 0 true
 execute if score !countDown race matches 171.. at @a as @a[gamemode=spectator] run spectate @e[name="!raceCine",limit=1,sort=nearest] @s
-execute if score !countDown race matches 1700 run function main:race/startinfo/begin
-execute if score !countDown race matches 1400 run function main:race/startinfo/pos1
-execute if score !countDown race matches 1100 run function main:race/startinfo/pos2
+execute if score !countDown race matches 1400 run function main:race/startinfo/begin
+execute if score !countDown race matches 1200 run function main:race/startinfo/pos1
+execute if score !countDown race matches 1000 run function main:race/startinfo/pos2
 execute if score !countDown race matches 800 run function main:race/startinfo/pos3
-execute if score !countDown race matches 500 run function main:race/startinfo/pos4
+execute if score !countDown race matches 600 run function main:race/startinfo/pos4
+execute if score !countDown race matches 400 run function main:race/startinfo/pos5
 execute if score !countDown race matches 170 run function main:race/spreadp
 execute if score !countDown race matches 110 run title @a title ""
 execute if score !countDown race matches 110 run title @a subtitle {"text":"Starting!","color":"dark_red"}
 
 # countdown
 execute if score !countDown race matches 80 run fill 285 77 47 291 76 37 air replace barrier
+execute if score !countDown race matches 0..60 run title @a title {"text":"Starting in","color":"gold"}
 execute if score !countDown race matches 60 run fill 294 79 37 294 75 47 red_stained_glass replace light_gray_stained_glass
-execute if score !countDown race matches 60 run title @a title {"text":"3","color":"red"}
+execute if score !countDown race matches 60 run title @a subtitle {"text":"3","color":"red"}
 execute if score !countDown race matches 60 run playsound minecraft:block.note_block.chime master @a ~ ~ ~ 10 1
 execute if score !countDown race matches 40 run fill 294 79 37 294 75 47 yellow_stained_glass replace red_stained_glass
-execute if score !countDown race matches 40 run title @a title {"text":"2","color":"gold"}
+execute if score !countDown race matches 40 run title @a subtitle {"text":"2","color":"gold"}
 execute if score !countDown race matches 40 run playsound minecraft:block.note_block.chime master @a ~ ~ ~ 10 1
 execute if score !countDown race matches 20 run fill 294 79 37 294 75 47 lime_stained_glass replace yellow_stained_glass
-execute if score !countDown race matches 20 run title @a title {"text":"1","color":"green"}
+execute if score !countDown race matches 20 run title @a subtitle {"text":"1","color":"green"}
 execute if score !countDown race matches 20 run playsound minecraft:block.note_block.chime master @a ~ ~ ~ 10 1
 execute if score !countDown race matches 0 run fill 294 79 37 294 75 47 air replace lime_stained_glass
-execute if score !countDown race matches 0 run title @a title {"text":"Go!","color":"green"}
+execute if score !countDown race matches 0 run title @a subtitle {"text":"Go!","color":"green"}
 execute if score !countDown race matches 0 run playsound minecraft:block.note_block.chime master @a ~ ~ ~ 10 2
 execute if score !countDown race matches 0 run scoreboard players set @a[tag=player] raceLap 1
 execute if score !countDown race matches -20 run title @a title ""
+execute if score !countDown race matches -20 run title @a subtitle ""
 
 # checkpoints
 execute as @a[gamemode=adventure,tag=player,x=310.5,dx=3,y=81,dy=3,z=57.5,dz=1] run scoreboard players set @s raceCP 1

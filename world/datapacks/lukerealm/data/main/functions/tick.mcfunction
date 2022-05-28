@@ -70,7 +70,7 @@ execute if score $gameActive spleef matches 0 run scoreboard players set $countD
 
 # racetick
 execute if score !gameActive race matches 1 run function main:race/racetick
-execute if score !gameActive race matches 0 run scoreboard players set !countDown race 160
+execute if score !gameActive race matches 0 run scoreboard players set !countDown race 1400
 
 # sgtick
 execute if score ~gameActive sg matches 1 run function main:sg/sgtick

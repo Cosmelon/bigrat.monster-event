@@ -7,7 +7,7 @@ scoreboard players set $lobby currentGame 0
 
 # start
 scoreboard players set !gameActive race 1
-scoreboard players set !countDown race 1800
+scoreboard players set !countDown race 1400
 scoreboard players set !gateOpen race 100
 scoreboard players set !gateShut race 0
 scoreboard players set !raceTime raceMilli 0
@@ -28,8 +28,7 @@ effect clear @a
 effect give @a saturation 10000 100 true
 
 # gamemodes
-gamemode adventure @a[tag=player]
-gamemode spectator @a[tag=!player]
+gamemode spectator @a
 scoreboard players set @a raceLap 0
 scoreboard players set @a raceCP 0
 scoreboard players set @a raceMilli 0
