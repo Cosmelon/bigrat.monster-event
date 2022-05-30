@@ -43,6 +43,12 @@ execute store result score .red teamCheck if entity @a[team=Red]
 execute store result score .blue teamCheck if entity @a[team=Blue]
 execute store result score .green teamCheck if entity @a[team=Green]
 execute store result score .yellow teamCheck if entity @a[team=Yellow]
+#all user track
+execute store result score .users teamCheck if entity @a
+#all player track
+execute store result score .playrs teamCheck if entity @a[tag=player]
+#ready player track
+execute store result score .ready teamCheck if entity @a[tag=readyCheck]
 
 # playersOnline (players will have a score of 1 when offline, 0 when online)
 execute as @a[scores={playersOnline=1..},team=!Admin] run tp @s 1000.5 28 -6000.5 0 5
