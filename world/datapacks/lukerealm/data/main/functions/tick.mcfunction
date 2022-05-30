@@ -1,5 +1,9 @@
-# main tick file, be careful!
+# Description: main tick file
+# Author: Cosmelon
+# Type: tick
+# run from source
 
+# manage currentGame objective
 execute if score $gameActive spleef matches 0 run scoreboard players set .spleef currentGame 0
 execute if score $gameActive spleef matches 1 run scoreboard players set .spleef currentGame 1
 execute if score !gameActive race matches 0 run scoreboard players set .race currentGame 0
@@ -9,6 +13,12 @@ execute if score ~gameActive sg matches 1 run scoreboard players set .sg current
 execute if score ?gameActive blockParty matches 0 run scoreboard players set .blockParty currentGame 0
 execute if score ?gameActive blockParty matches 1 run scoreboard players set .blockParty currentGame 1
 
+# manage lobby when games are inactive
+execute if score $gameActive spleef matches 0 if score !gameActive race matches 0 if score ~gameActive sg matches 0 if score ?gameActive blockParty matches 0 run spawnpoint @a 1000 28 -6000
+execute if score $gameActive spleef matches 0 if score !gameActive race matches 0 if score ~gameActive sg matches 0 if score ?gameActive blockParty matches 0 run setworldspawn 1000 28 -6000
+execute if score $gameActive spleef matches 0 if score !gameActive race matches 0 if score ~gameActive sg matches 0 if score ?gameActive blockParty matches 0 run scoreboard players set .lobby currentGame 1
+
+# permanant bossbar type beat
 bossbar set minecraft:spleefroundcount players @a
 bossbar set minecraft:spleefshrink1timer players @a
 bossbar set minecraft:spleefshirnk2timer players @a
@@ -18,11 +28,6 @@ bossbar set minecraft:racetimer players @a
 bossbar set minecraft:buildmode players @a
 bossbar set minecraft:sgshrinkactual players @a
 bossbar set minecraft:sgshrink players @a
-
-execute if score $gameActive spleef matches 0 if score !gameActive race matches 0 if score ~gameActive sg matches 0 if score ?gameActive blockParty matches 0 run spawnpoint @a 1000 28 -6000
-execute if score $gameActive spleef matches 0 if score !gameActive race matches 0 if score ~gameActive sg matches 0 if score ?gameActive blockParty matches 0 run setworldspawn 1000 28 -6000
-execute if score $gameActive spleef matches 0 if score !gameActive race matches 0 if score ~gameActive sg matches 0 if score ?gameActive blockParty matches 0 run scoreboard players set .lobby currentGame 1
-
 
 # tagging player system
 tag @a[team=Red] add player
