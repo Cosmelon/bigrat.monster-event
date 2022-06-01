@@ -23,6 +23,9 @@ tellraw @a[tag=player] [{"text":"   [YES]","color":"dark_green","clickEvent":{"a
 tellraw @a[tag=player] ""
 tellraw @a[tag=player] ""
 tellraw @a[tag=player] [{"text":"\uE005"},{"translate":"space.-1"},{"text":"\uE005"},{"translate":"space.-1"},{"text":"\uE005"},{"translate":"space.-1"},{"text":"\uE005"},{"translate":"space.-1"},{"text":"\uE005"},{"translate":"space.-1"},{"text":"\uE005"},{"translate":"space.-1"},{"text":"\uE005"},{"translate":"space.-1"},{"text":"\uE005"},{"translate":"space.-1"},{"text":"\uE005"},{"translate":"space.-1"},{"text":"\uE005"},{"translate":"space.-1"},{"text":"\uE005"},{"translate":"space.-2"},{"text":"\uE005"}]
+tellraw @a[tag=!player] ""
+tellraw @a[tag=!player] {"text":"Doing a ready check...","color":"dark_green"}
+tellraw @a[tag=!player] ""
 function main:infosound
 
 # schedule conditions
