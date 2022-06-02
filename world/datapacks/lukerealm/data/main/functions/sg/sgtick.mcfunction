@@ -18,20 +18,25 @@
 
 # countdown
 scoreboard players remove ~countDown sg 1
-execute if score ~countDown sg matches 200 run title @a title {"text":"10","color":"#40E0D0"}
-execute if score ~countDown sg matches 180 run title @a title {"text":"9","color":"#40E0D0"}
-execute if score ~countDown sg matches 160 run title @a title {"text":"8","color":"#40E0D0"}
-execute if score ~countDown sg matches 140 run title @a title {"text":"7","color":"#40E0D0"}
-execute if score ~countDown sg matches 120 run title @a title {"text":"6","color":"#40E0D0"}
-execute if score ~countDown sg matches 100 run title @a title {"text":"5","color":"#40E0D0"}
-execute if score ~countDown sg matches 80 run title @a title {"text":"4","color":"#40E0D0"}
-execute if score ~countDown sg matches 60 run title @a title {"text":"3","color":"#6a0dad"}
-execute if score ~countDown sg matches 40 run title @a title {"text":"2","color":"red"}
-execute if score ~countDown sg matches 20 run title @a title {"text":"1","color":"gold"}
+execute if score ~countDown sg matches 1..200 run title @a title {"text":"Starting in:","color":"gold"}
+execute if score ~countDown sg matches 200 run title @a subtitle {"text":"10","color":"#40E0D0"}
+execute if score ~countDown sg matches 180 run title @a subtitle {"text":"9","color":"#40E0D0"}
+execute if score ~countDown sg matches 160 run title @a subtitle {"text":"8","color":"#40E0D0"}
+execute if score ~countDown sg matches 140 run title @a subtitle {"text":"7","color":"#40E0D0"}
+execute if score ~countDown sg matches 120 run title @a subtitle {"text":"6","color":"#40E0D0"}
+execute if score ~countDown sg matches 100 run title @a subtitle {"text":"5","color":"#40E0D0"}
+execute if score ~countDown sg matches 80 run title @a subtitle {"text":"4","color":"#40E0D0"}
+execute if score ~countDown sg matches 60 run title @a subtitle {"text":"3","color":"#6a0dad"}
+execute if score ~countDown sg matches 60 run playsound minecraft:block.note_block.chime master @a ^ ^ ^ 
+execute if score ~countDown sg matches 40 run title @a subtitle {"text":"2","color":"red"}
+execute if score ~countDown sg matches 40 run playsound minecraft:block.note_block.chime master @a ^ ^ ^ 
+execute if score ~countDown sg matches 20 run title @a subtitle {"text":"1","color":"gold"}
+execute if score ~countDown sg matches 20 run playsound minecraft:block.note_block.chime master @a ^ ^ ^ 
 execute if score ~countDown sg matches 0 run title @a title {"text":"GO!","color":"green"}
+execute if score ~countDown sg matches 0 run playsound minecraft:block.note_block.chime master @a ^ ^ ^ 
 execute if score ~countDown sg matches 0 run execute at @a[tag=player] run fill ~1 ~1 ~1 ~-1 ~2 ~-1 air replace barrier
-execute if score ~countDown sg matches -20 run function main:cleartitle
-execute if score ~countDown sg matches -20 run function main:sg/superpowers/powersetup
+execute if score ~countDown sg matches -10 run function main:cleartitle
+execute if score ~countDown sg matches -10 run function main:sg/superpowers/powersetup
 
 # tracks # of players on a team
 execute store result score ~aliveRed sg if entity @a[team=Red,gamemode=!spectator]

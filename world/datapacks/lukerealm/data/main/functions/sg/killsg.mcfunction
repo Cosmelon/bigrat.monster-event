@@ -19,6 +19,8 @@ tag @a remove sgLeprechaun
 tag @a remove sgMedic
 tag @a remove sgPyro
 effect clear @a[team=!Admin]
+# get rid of the barriers
+execute if score ~countDown sg matches 1.. at @a[tag=player] run fill ~1 ~1 ~1 ~-1 ~2 ~-1 air replace barrier
 # scoreboard resets
 scoreboard players set ~gameActive sg 0
 scoreboard players set ~round sg 1
@@ -67,7 +69,6 @@ schedule clear main:sg/border/s2warn
 schedule clear main:sg/border/s3warn
 schedule clear main:sg/border/s4warn
 schedule clear main:sg/border/s5warn
-
 
 clear @a[team=!Admin]
 playsound minecraft:block.beacon.deactivate master @a
