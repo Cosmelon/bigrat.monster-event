@@ -6,8 +6,10 @@
 # remove ready tags
 tag @a remove br_ready
 tag @a remove br_nready
+tag @a remove br_noanswer
 
 # add objective and enable it
+scoreboard objectives add br_rcdata dummy
 scoreboard objectives add br_rcyes trigger
 scoreboard objectives add br_rcno trigger
 scoreboard players enable @a[tag=player] br_rcyes

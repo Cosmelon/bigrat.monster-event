@@ -48,11 +48,12 @@ execute store result score .users teamCheck if entity @a
 #all player track
 execute store result score .players teamCheck if entity @a[tag=player]
 #ready player track
-execute store result score .ready teamCheck if entity @a[tag=br_ready,tag=player]
+execute store result score .ready br_rcvars if entity @a[tag=br_rcyes]
+execute store result score .nready br_rcvars if entity @a[tag=br_rcno]
 
 # readyCheck
-execute as @a[tag=player] if score @s br_rcyes matches 1 run tag @s add br_ready
-execute as @a[tag=player] if score @s br_rcno matches 1 run tag @s add br_nready
+execute as @a[tag=player] if score @s br_rcyes matches 1 run tag @s add br_rcyes
+execute as @a[tag=player] if score @s br_rcno matches 1 run tag @s add br_rcno
 
 # playersOnline (players will have a score of 1 when offline, 0 when online)
 execute as @a[scores={playersOnline=1..},team=!Admin] run tp @s 1000.5 28 -6000.5 0 5
