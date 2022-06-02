@@ -57,6 +57,7 @@ execute if score !countDown race matches 0 run fill 294 79 37 294 75 47 air repl
 execute if score !countDown race matches 0 run title @a subtitle {"text":"Go!","color":"green"}
 execute if score !countDown race matches 0 run playsound minecraft:block.note_block.chime master @a ~ ~ ~ 10 2
 execute if score !countDown race matches 0 run scoreboard players set @a[tag=player] raceLap 1
+execute if score !countDown race matches 0 run bossbar set minecraft:racetime visible true
 execute if score !countDown race matches -20 run title @a title ""
 execute if score !countDown race matches -20 run title @a subtitle ""
 
