@@ -35,4 +35,5 @@ tellraw @a[tag=!player] ""
 function main:infosound
 
 # schedule conditions
-schedule function main:ready/readyresult 10s replace
+execute unless score .NA br_rcdata matches 0 run schedule function main:ready/readyresult 10s replace
+execute if score .NA br_rcdata matches 0 run tellraw @a[tag=admin] [{"text":"[Info]","color":"aqua"},{"text":" Teams have not been set. Aborting ready check!","color":"gold"}]
