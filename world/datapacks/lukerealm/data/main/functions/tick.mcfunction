@@ -48,9 +48,9 @@ execute store result score .users teamCheck if entity @a
 #all player track
 execute store result score .players teamCheck if entity @a[tag=player]
 #ready player track
-execute store result score .ready br_rcvars if entity @a[tag=br_rcyes]
-execute store result score .nready br_rcvars if entity @a[tag=br_rcno]
-execute store result score .NA br_rcvars if entity @a[tag=br_rcNA]
+execute store result score .ready br_rcdata if entity @a[tag=br_rcyes]
+execute store result score .nready br_rcdata if entity @a[tag=br_rcno]
+execute store result score .NA br_rcdata if entity @a[tag=br_rcNA]
 
 # readyCheck
 #yes
