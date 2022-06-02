@@ -12,15 +12,13 @@ scoreboard players set $notifGreenDead spleef 0
 scoreboard players set $notifYellowDead spleef 0
 scoreboard players set $tick spleefBorder 0
 scoreboard players set $sec spleefBorder 30
-scoreboard players set $shrink1Timer spleefBorder 2400
-scoreboard players set $shrink2Timer spleefBorder 3400
-scoreboard players set $shrink3Timer spleefBorder 5000
+scoreboard players set $shrinkNum spleefBorder 0
+scoreboard players set $shrinkTimer spleefBorder 0
+scoreboard players set $shrinkActual spleefBorder 0
 scoreboard players set $shrink1Break spleefBorder 0
 scoreboard players set $shrink2Break spleefBorder 0
 scoreboard players set $shrink3Break spleefBorder 0
-bossbar set minecraft:spleefshrink1timer visible false
-bossbar set minecraft:spleefshrink2timer visible false
-bossbar set minecraft:spleefshrink3timer visible false
+bossbar set minecraft:spleefshrinkwarn visible false
 bossbar set minecraft:spleefshrinkactual visible false
 bossbar set minecraft:spleefroundcount visible false
 worldborder set 6000000 1

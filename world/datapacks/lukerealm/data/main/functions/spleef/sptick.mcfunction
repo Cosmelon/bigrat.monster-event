@@ -92,48 +92,34 @@ execute if score $notifRedDead spleef matches 1 run execute if score $notifBlueD
 execute if score $notifRedDead spleef matches 1 run execute if score $notifBlueDead spleef matches 1 run execute if score $notifGreenDead spleef matches 1 run function main:spleef/wins/yellow
 
 
+# start shrink
+execute if score $countDown spleef matches 0 run schedule function main:spleef/border/s1warn 90s replace
+execute if score $countDown spleef matches 0 run schedule function main:spleef/border/s2warn 170s replace
+execute if score $countDown spleef matches 0 run schedule function main:spleef/border/s3warn 250s replace
 # shrink timers
 scoreboard players remove $shrinkActual spleefBorder 1
-scoreboard players remove $shrink1Timer spleefBorder 1
-scoreboard players remove $shrink2Timer spleefBorder 1
-scoreboard players remove $shrink3Timer spleefBorder 1
+scoreboard players remove $shrinkTimer spleefBorder 1
 # shrink bossbar timer reading
-execute if score $shrink1Timer spleefBorder matches 0..600 run scoreboard players add $tick spleefBorder 1
-execute if score $shrink2Timer spleefBorder matches 0..600 run scoreboard players add $tick spleefBorder 1
-execute if score $shrink3Timer spleefBorder matches 0..600 run scoreboard players add $tick spleefBorder 1
+execute if score $shrinkTimer spleefBorder matches 0..600 run scoreboard players add $tick spleefBorder 1
 execute if score $tick spleefBorder matches 20.. run scoreboard players remove $sec spleefBorder 1
 execute if score $tick spleefBorder matches 20.. run scoreboard players set $tick spleefBorder 0
-execute if score $sec spleefBorder matches 10.. run bossbar set minecraft:spleefshrink1timer name [{"text":"First Shrink: ","color":"red","bold":true},{"text":"0:","color":"white","bold":true},{"score":{"name":"$sec","objective":"spleefBorder"},"color":"white","bold":true}]
-execute if score $sec spleefBorder matches 0..9 run bossbar set minecraft:spleefshrink1timer name [{"text":"First Shrink: ","color":"red","bold":true},{"text":"0:0","color":"white","bold":true},{"score":{"name":"$sec","objective":"spleefBorder"},"color":"white","bold":true}]
-execute if score $sec spleefBorder matches 10.. run bossbar set minecraft:spleefshrink2timer name [{"text":"Second Shrink: ","color":"red","bold":true},{"text":"0:","color":"white","bold":true},{"score":{"name":"$sec","objective":"spleefBorder"},"color":"white","bold":true}]
-execute if score $sec spleefBorder matches 0..9 run bossbar set minecraft:spleefshrink2timer name [{"text":"Second Shrink: ","color":"red","bold":true},{"text":"0:0","color":"white","bold":true},{"score":{"name":"$sec","objective":"spleefBorder"},"color":"white","bold":true}]
-execute if score $sec spleefBorder matches 10.. run bossbar set minecraft:spleefshrink3timer name [{"text":"Deathmatch starts in: ","color":"red","bold":true},{"text":"0:","color":"white","bold":true},{"score":{"name":"$sec","objective":"spleefBorder"},"color":"white","bold":true}]
-execute if score $sec spleefBorder matches 0..9 run bossbar set minecraft:spleefshrink3timer name [{"text":"Deathmatch starts in: ","color":"red","bold":true},{"text":"0:0","color":"white","bold":true},{"score":{"name":"$sec","objective":"spleefBorder"},"color":"white","bold":true}]
-
+execute if score $sec spleefBorder matches 10.. if score $shrinkNum spleefBorder matches 1 run bossbar set minecraft:speefshrinkwarn name [{"text":"First Shrink: ","color":"red","bold":true},{"text":"0:","color":"white","bold":true},{"score":{"name":"$sec","objective":"spleefBorder"},"color":"white","bold":true}]
+execute if score $sec spleefBorder matches 0..9 if score $shrinkNum spleefBorder matches 1 run bossbar set minecraft:speefshrinkwarn name [{"text":"First Shrink: ","color":"red","bold":true},{"text":"0:0","color":"white","bold":true},{"score":{"name":"$sec","objective":"spleefBorder"},"color":"white","bold":true}]
+execute if score $sec spleefBorder matches 10.. if score $shrinkNum spleefBorder matches 2 run bossbar set minecraft:speefshrinkwarn name [{"text":"Second Shrink: ","color":"red","bold":true},{"text":"0:","color":"white","bold":true},{"score":{"name":"$sec","objective":"spleefBorder"},"color":"white","bold":true}]
+execute if score $sec spleefBorder matches 0..9 if score $shrinkNum spleefBorder matches 2 run bossbar set minecraft:speefshrinkwarn name [{"text":"Second Shrink: ","color":"red","bold":true},{"text":"0:0","color":"white","bold":true},{"score":{"name":"$sec","objective":"spleefBorder"},"color":"white","bold":true}]
+execute if score $sec spleefBorder matches 10.. if score $shrinkNum spleefBorder matches 3 run bossbar set minecraft:speefshrinkwarn name [{"text":"Deathmatch starts in: ","color":"red","bold":true},{"text":"0:","color":"white","bold":true},{"score":{"name":"$sec","objective":"spleefBorder"},"color":"white","bold":true}]
+execute if score $sec spleefBorder matches 0..9 if score $shrinkNum spleefBorder matches 3 run bossbar set minecraft:speefshrinkwarn name [{"text":"Deathmatch starts in: ","color":"red","bold":true},{"text":"0:0","color":"white","bold":true},{"score":{"name":"$sec","objective":"spleefBorder"},"color":"white","bold":true}]
 execute if score $sec spleefBorder matches ..-1 run scoreboard players set $sec spleefBorder 30
 # shrink timer bossbars sync
 execute store result bossbar minecraft:spleefshrinkactual value run scoreboard players get $shrinkActual spleefBorder
-execute store result bossbar minecraft:spleefshrink1timer value run scoreboard players get $shrink1Timer spleefBorder
-execute store result bossbar minecraft:spleefshrink2timer value run scoreboard players get $shrink2Timer spleefBorder
-execute store result bossbar minecraft:spleefshrink3timer value run scoreboard players get $shrink3Timer spleefBorder
+execute store result bossbar minecraft:spleefshrinkwarn value run scoreboard players get $shrinkWarn spleefBorder
 # shrink bossbar visibility
-execute if score $shrink1Timer spleefBorder matches 600 run bossbar set minecraft:spleefshrink1timer visible true
-execute if score $shrink2Timer spleefBorder matches 600 run bossbar set minecraft:spleefshrink2timer visible true
-execute if score $shrink3Timer spleefBorder matches 600 run bossbar set minecraft:spleefshrink3timer visible true
+execute if score $shrinkTimer spleefBorder matches 0 run bossbar set minecraft:spleefshrinkwarn visible false
 execute if score $shrinkActual spleefBorder matches 0 run bossbar set minecraft:spleefshrinkactual visible false
-execute if score $shrink1Timer spleefBorder matches 0 run bossbar set minecraft:spleefshrink1timer visible false
-execute if score $shrink2Timer spleefBorder matches 0 run bossbar set minecraft:spleefshrink2timer visible false
-execute if score $shrink3Timer spleefBorder matches 0 run bossbar set minecraft:spleefshrink3timer visible false
-# starts shrink - moved as schedule to startspleef.mcfunction
 #remove blocks
 function main:spleef/border/conc/shrink1conc
 function main:spleef/border/conc/shrink2conc
 function main:spleef/border/conc/shrink3conc
-
-
-
-
-
 
 # sets time of day
 time set midnight

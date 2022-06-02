@@ -26,24 +26,21 @@ function main:spleef/reloadfloor
 clear @a[team=!Admin]
 kill @e[type=item]
 effect clear @a
-effect give @a[tag=player] glowing 10000 1 true
-effect give @a saturation 10000 100 true
 
 # reset scoreboards
 scoreboard players set $countDown spleef 160
 scoreboard players set $gameActive spleef 1
 scoreboard players set $tick spleefBorder 0
 scoreboard players set $sec spleefBorder 30
-scoreboard players set $shrink1Timer spleefBorder 1900
-scoreboard players set $shrink2Timer spleefBorder 3400
-scoreboard players set $shrink3Timer spleefBorder 5000
+scoreboard players set $shrinkNum spleefBorder 0
+scoreboard players set $shrinkTimer spleefBorder -1
 scoreboard players set $shrinkActual spleefBorder 0
 scoreboard players set $shrink1Break spleefBorder 0
 scoreboard players set $shrink2Break spleefBorder 0
 scoreboard players set $shrink3Break spleefBorder 0
-schedule function main:spleef/border/shrink1 95s replace
-schedule function main:spleef/border/shrink2 170s replace
-schedule function main:spleef/border/shrink3 250s replace
+schedule function main:spleef/border/s1warn 95s replace
+schedule function main:spleef/border/s2warn 170s replace
+schedule function main:spleef/border/s3warn 250s replace
 
 # give shovels and kb
 schedule function main:spleef/shovelsandkb 22s replace
@@ -54,9 +51,7 @@ scoreboard players reset * spleefDeaths
 
 # bossbar visible
 bossbar set minecraft:spleefroundcount visible true
-bossbar set minecraft:spleefshrink1timer visible false
-bossbar set minecraft:spleefshrink2timer visible false
-bossbar set minecraft:spleefshrink3timer visible false
+bossbar set minecraft:spleefshrinkwarn visible false
 bossbar set minecraft:spleefshrinkactual visible false
 
 # reset notifs
