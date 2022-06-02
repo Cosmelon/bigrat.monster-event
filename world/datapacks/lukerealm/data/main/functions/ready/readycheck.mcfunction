@@ -5,6 +5,7 @@
 
 # remove ready tags
 tag @a remove br_ready
+tag @a remove br_nready
 
 # add objective and enable it
 scoreboard objectives add br_rcyes trigger
