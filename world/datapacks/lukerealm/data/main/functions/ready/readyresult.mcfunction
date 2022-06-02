@@ -9,8 +9,9 @@ tellraw @a ""
 # text space
 execute if score .ready br_rcvars = .players teamCheck run tellraw @a {"text":"All players are ready to go!","color":"dark_green"}
 execute if score .ready br_rcvars < .players teamCheck run tellraw @a {"text":"Not all players are ready to go!","color":"dark_red"}
-execute if score .ready br_rcvars < .players teamCheck run tellraw @a [{"selector":"@a[tag=player,tag=br_rcyes]"},{"text":" was ready to start, but","color":"gold"}]
-execute if score .ready br_rcvars < .players teamCheck run tellraw @a [{"selector":"@a[tag=player,tag=br_rcno]"},{"text":" wasn't ready","color":"gold"}]
+execute if score .ready br_rcvars < .players teamCheck if score .NA br_rcvars matches 0 run tellraw @a [{"selector":"@a[tag=br_rcno]"},{"text":" isn't ready.","color":"gold"}]
+execute if score .ready br_rcvars < .players teamCheck if score .NA br_rcvars matches 1.. run tellraw @a [{"selector":"@a[tag=br_rcno]"},{"text":" isn't ready, but","color":"gold"}]
+execute if score .ready br_rcvars < .players teamCheck if score .NA br_rcvars matches 1.. run tellraw @a [{"selector":"@a[tag=br_rcNA]"},{"text":" didn't even answer!","color":"gold"}]
 
 # accounting for edge case
 #  the possibility that this could happen is basically zero, but I did it anyway
@@ -29,3 +30,4 @@ scoreboard objectives remove br_rcno
 # get rid of tags
 tag @a remove br_rcyes
 tag @a remove br_rcno
+tag @a remove br_rcNA
