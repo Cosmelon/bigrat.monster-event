@@ -14,6 +14,16 @@ execute as @a[scores={sgDeaths=1..}] run tag @s remove sgLeprechaun
 execute as @a[scores={sgDeaths=1..}] run tag @s remove sgMedic
 execute as @a[scores={sgDeaths=1..}] run tag @s remove sgPyro
 
+# tracks # of players with powers
+execute store result score ~vampire sg_pwrcount if entity @a[tag=sgVampire]
+execute store result score ~trainer sg_pwrcount if entity @a[tag=sgTrainer]
+execute store result score ~redditor sg_pwrcount if entity @a[tag=sgRedditor]
+execute store result score ~creeper sg_pwrcount if entity @a[tag=sgCreeper]
+execute store result score ~witch sg_pwrcount if entity @a[tag=sgWitch]
+execute store result score ~leprechaun sg_pwrcount if entity @a[tag=sgLeprechaun]
+execute store result score ~medic sg_pwrcount if entity @a[tag=sgMedic]
+execute store result score ~pyro sg_pwrcount if entity @a[tag=sgPyro]
+
 # sgVampire
 execute as @a[tag=sgVampire,scores={sgVampire=238}] run effect give @s blindness 2 0 true
 execute as @a[tag=sgVampire,scores={sgVampire=238}] run title @s title "THE LIGHT BURNS!"
@@ -101,7 +111,6 @@ execute if score ~tick sgWitch matches 20.. run scoreboard players add @a[tag=sg
 execute as @a[tag=sgWitch,scores={sgWitch=30..}] run function main:sg/superpowers/witchpot
 effect give @a[tag=sgWitch] weakness 10000 1 true
 execute if score ~tick sgWitch matches 20.. run scoreboard players set ~tick sgWitch 0
-
 
 # sgLeprechaun
 #execute as @a[tag=sgLeprechaun] if data entity @s Inventory[{Slot:100b,id:"minecraft:iron_boots"}] run item replace entity @s armor.feet with iron_boots
