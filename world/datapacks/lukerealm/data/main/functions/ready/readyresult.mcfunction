@@ -10,7 +10,7 @@ tellraw @a ""
 execute if score .ready br_rcdata = .players teamCheck run tellraw @a {"text":"All players are ready to go!","color":"dark_green"}
 execute if score .ready br_rcdata < .players teamCheck run tellraw @a {"text":"Not all players are ready to go!","color":"dark_red"}
 execute if score .ready br_rcdata < .players teamCheck if score .NA br_rcdata matches 0 run tellraw @a [{"selector":"@a[tag=br_rcno]"},{"text":" isn't ready.","color":"gold"}]
-execute if score .ready br_rcdata < .players teamCheck if score .NA br_rcdata matches 1.. run tellraw @a [{"selector":"@a[tag=br_rcno]"},{"text":" isn't ready, but","color":"gold"}]
+execute if score .ready br_rcdata < .players teamCheck if score .NA br_rcdata matches 1.. if score .nready br_rcdata matches 1.. run tellraw @a [{"selector":"@a[tag=br_rcno]"},{"text":" isn't ready, but","color":"gold"}]
 execute if score .ready br_rcdata < .players teamCheck if score .NA br_rcdata matches 1.. run tellraw @a [{"selector":"@a[tag=br_rcNA]"},{"text":" didn't even answer!","color":"gold"}]
 
 # accounting for edge case
