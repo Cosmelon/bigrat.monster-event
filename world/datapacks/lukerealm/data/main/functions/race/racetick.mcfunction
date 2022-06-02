@@ -30,7 +30,7 @@ execute if score !raceTime raceSec matches 10.. run execute if score !raceTime r
 
 # startinfo
 execute if score !countDown race matches 171.. run effect give @a invisibility 100000 0 true
-execute if score !countDown race matches 171.. at @a as @a[gamemode=spectator] run spectate @e[name="!raceCine",limit=1,sort=nearest] @s
+execute if score !countDown race matches 171.. positioned 227.5 82 2.5 run tp @a @e[name="!raceCine",limit=1,sort=nearest]
 execute if score !countDown race matches 1400 run function main:race/startinfo/begin
 execute if score !countDown race matches 1200 run function main:race/startinfo/pos1
 execute if score !countDown race matches 1000 run function main:race/startinfo/pos2
