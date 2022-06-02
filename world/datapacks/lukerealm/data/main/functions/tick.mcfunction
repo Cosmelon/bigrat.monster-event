@@ -55,9 +55,11 @@ execute store result score .NA br_rcvars if entity @a[tag=br_rcNA]
 # readyCheck
 #yes
 execute as @a[tag=br_rcNA] if score @s br_rcyes matches 1 run tag @s add br_rcyes
+execute as @a[tag=br_rcNA] if score @s br_rcyes matches 1 run trigger br_rcno add 0
 execute as @a[tag=br_rcNA] if score @s br_rcyes matches 1 run tag @s remove br_rcNA
 #no
 execute as @a[tag=br_rcNA] if score @s br_rcno matches 1 run tag @s add br_rcno
+execute as @a[tag=br_rcNA] if score @s br_rcno matches 1 run trigger br_rcyes add 0
 execute as @a[tag=br_rcNA] if score @s br_rcno matches 1 run tag @s remove br_rcNA
 
 # playersOnline (players will have a score of 1 when offline, 0 when online)
