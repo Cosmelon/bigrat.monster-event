@@ -101,6 +101,8 @@ scoreboard players remove $shrinkActual spleefBorder 1
 scoreboard players remove $shrinkTimer spleefBorder 1
 # shrink bossbar timer reading
 execute if score $shrinkTimer spleefBorder matches 0..600 run scoreboard players add $tick spleefBorder 1
+execute if score $shrinkTimer spleefBorder matches 0..600 run bossbar set minecraft:spleefshrinkwarn visible true
+execute if score $shrinkTimer spleefBorder matches 0..600 run bossbar set minecraft:spleefshrinkwarn max 400
 execute if score $tick spleefBorder matches 20.. run scoreboard players remove $sec spleefBorder 1
 execute if score $tick spleefBorder matches 20.. run scoreboard players set $tick spleefBorder 0
 execute if score $sec spleefBorder matches 10.. if score $shrinkNum spleefBorder matches 1 run bossbar set minecraft:spleefshrinkwarn name [{"text":"First Shrink: ","color":"red","bold":true},{"text":"0:","color":"white","bold":true},{"score":{"name":"$sec","objective":"spleefBorder"},"color":"white","bold":true}]
@@ -112,9 +114,9 @@ execute if score $sec spleefBorder matches 0..9 if score $shrinkNum spleefBorder
 execute if score $sec spleefBorder matches ..-1 run scoreboard players set $sec spleefBorder 30
 # shrink timer bossbars sync
 execute store result bossbar minecraft:spleefshrinkactual value run scoreboard players get $shrinkActual spleefBorder
-execute store result bossbar minecraft:spleefshrinkwarn value run scoreboard players get $shrinkWarn spleefBorder
+execute store result bossbar minecraft:spleefshrinkwarn value run scoreboard players get $shrinkTimer spleefBorder
 # shrink bossbar visibility
-execute if score $shrinkTimer spleefBorder matches 0 run bossbar set minecraft:spleefshrinkwarn visible false
+execute if score $shrinkTimer spleefBorder matches -1 run bossbar set minecraft:spleefshrinkwarn visible false
 execute if score $shrinkActual spleefBorder matches 0 run bossbar set minecraft:spleefshrinkactual visible false
 #remove blocks
 function main:spleef/border/conc/shrink1conc
