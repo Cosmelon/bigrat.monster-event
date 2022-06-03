@@ -20,7 +20,7 @@ execute if score $gameActive spleef matches 0 if score !gameActive race matches 
 
 # permanant bossbar type beat
 bossbar set minecraft:spleefroundcount players @a
-bossbar set minecraft:spleefshirinkwarn players @a
+bossbar set minecraft:spleefshrinkwarn players @a
 bossbar set minecraft:spleefshrinkactual players @a
 bossbar set minecraft:racetimer players @a
 bossbar set minecraft:sgshrinkactual players @a
