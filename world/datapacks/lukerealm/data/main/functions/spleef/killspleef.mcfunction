@@ -28,12 +28,12 @@ schedule clear main:lobby
 schedule clear main:spleef/startspleef
 schedule clear main:spleef/wins/returnlobby
 schedule clear main:spleef/shovelsandkb
+schedule clear main:spleef/border/s1warn
+schedule clear main:spleef/border/s2warn
+schedule clear main:spleef/border/s3warn
 schedule clear main:spleef/border/shrink1
 schedule clear main:spleef/border/shrink2
 schedule clear main:spleef/border/shrink3
-schedule clear main:spleef/border/shrink1bar
-schedule clear main:spleef/border/shrink2bar
-schedule clear main:spleef/border/shrink3bar
 schedule clear main:spleef/border/removetop
 clear @a[team=!Admin]
 playsound minecraft:block.beacon.deactivate master @a
