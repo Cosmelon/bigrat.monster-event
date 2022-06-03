@@ -13,9 +13,9 @@ scoreboard players reset * spleefDeaths
 # playsound minecraft:block.note_block.chime ambient @a ~ ~ ~ 100000 1
 scoreboard players add $round spleef 1
 scoreboard players set $toolsGiven spleef 0
-bossbar set minecraft:spleefshrink1timer visible false
-bossbar set minecraft:spleefshrink2timer visible false
-bossbar set minecraft:spleefshrink3timer visible false
+schedule clear main:spleef/border/s1warn
+schedule clear main:spleef/border/s2warn
+schedule clear main:spleef/border/s3warn
 bossbar set minecraft:spleefshrinkactual visible false
 execute as @a run playsound minecraft:entity.wither.death master @s ~ ~ ~ 10
 gamemode spectator @a[team=!Admin]

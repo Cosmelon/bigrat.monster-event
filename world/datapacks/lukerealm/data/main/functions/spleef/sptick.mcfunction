@@ -93,9 +93,9 @@ execute if score $notifRedDead spleef matches 1 run execute if score $notifBlueD
 
 
 # start shrink
-execute if score $countDown spleef matches 0 run schedule function main:spleef/border/s1warn 90s replace
-execute if score $countDown spleef matches 0 run schedule function main:spleef/border/s2warn 170s replace
-execute if score $countDown spleef matches 0 run schedule function main:spleef/border/s3warn 250s replace
+execute if score $countDown spleef matches 0 run schedule function main:spleef/border/s1warn 40s replace
+execute if score $countDown spleef matches 0 run schedule function main:spleef/border/s2warn 120s replace
+execute if score $countDown spleef matches 0 run schedule function main:spleef/border/s3warn 240s replace
 # shrink timers
 scoreboard players remove $shrinkActual spleefBorder 1
 scoreboard players remove $shrinkTimer spleefBorder 1
