@@ -16,12 +16,11 @@ scoreboard players set $toolsGiven spleef 0
 schedule clear main:spleef/border/s1warn
 schedule clear main:spleef/border/s2warn
 schedule clear main:spleef/border/s3warn
+schedule clear main:spleef/border/removetop
+bossbar set minecraft:spleefshirinkwarn visible false
 bossbar set minecraft:spleefshrinkactual visible false
 execute as @a run playsound minecraft:entity.wither.death master @s ~ ~ ~ 10
 gamemode spectator @a[team=!Admin]
-
-schedule clear main:spleef/border/removetop
-
 
 
 # solution to infinite game repeat problem
