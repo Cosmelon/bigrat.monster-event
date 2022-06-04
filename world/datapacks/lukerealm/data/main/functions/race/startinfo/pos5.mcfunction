@@ -20,5 +20,6 @@ tellraw @a {"text":"Uh... I think that might be it... not much else to say..."}
 tellraw @a {"text":"It's kind of a race game... first to the end wins?"}
 tellraw @a ""
 tellraw @a ""
-tellraw @a {"text":"DO NOT GO IN THE COPPER JUNGLE DOOR","color":"dark_gray"}
+execute if score !doDoor race matches 1 run tellraw @a {"text":"DO NOT GO IN THE COPPER JUNGLE DOOR","color":"dark_gray"}
+execute unless score !doDoor race matches 1 run tellraw @a ""
 tellraw @a [{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-6"},{"text":"\uE004"}]
