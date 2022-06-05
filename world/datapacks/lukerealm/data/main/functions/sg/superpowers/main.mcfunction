@@ -63,10 +63,10 @@ execute as @a[tag=sgGoat,nbt={Inventory:[{id:"minecraft:cooked_cod"}]}] run effe
 execute as @a[tag=sgGoat,nbt={Inventory:[{id:"minecraft:cooked_cod"}]}] run title @s title {"text":"Plants only!","color":"dark_red"}
 #there is a possibility that the wallrunning won't work with multiple goats, need to check
 tp @e[tag=wallrun] ~ -1000 ~
-execute as @a[tag=sgGoat] at @s if block ~ ~ ~-0.8 andesite if block ~ ~-0.35 ~ air positioned ~ ~ ~-1 align z positioned ~ ~-1.1 ~0.8 run function main:sg/superpowers/goatatwall
-execute as @a[tag=sgGoat] at @s if block ~ ~ ~0.8 andesite if block ~ ~-0.35 ~ air positioned ~ ~ ~1 align z positioned ~ ~-1.1 ~0.2 run function main:sg/superpowers/goatatwall
-execute as @a[tag=sgGoat] at @s if block ~-0.8 ~ ~ andesite if block ~ ~-0.35 ~ air positioned ~-1 ~ ~ align x positioned ~0.8 ~-1.1 ~ run function main:sg/superpowers/goatatwall
-execute as @a[tag=sgGoat] at @s if block ~0.8 ~ ~ andesite if block ~ ~-0.35 ~ air positioned ~1 ~ ~ align x positioned ~0.2 ~-1.1 ~ run function main:sg/superpowers/goatatwall
+execute as @a[tag=sgGoat] at @s if block ~ ~ ~-0.8 #minecraft:goat_climb if block ~ ~-0.35 ~ air positioned ~ ~ ~-1 align z positioned ~ ~-1.1 ~0.8 run function main:sg/superpowers/goatatwall
+execute as @a[tag=sgGoat] at @s if block ~ ~ ~0.8 #minecraft:goat_climb if block ~ ~-0.35 ~ air positioned ~ ~ ~1 align z positioned ~ ~-1.1 ~0.2 run function main:sg/superpowers/goatatwall
+execute as @a[tag=sgGoat] at @s if block ~-0.8 ~ ~ #minecraft:goat_climb if block ~ ~-0.35 ~ air positioned ~-1 ~ ~ align x positioned ~0.8 ~-1.1 ~ run function main:sg/superpowers/goatatwall
+execute as @a[tag=sgGoat] at @s if block ~0.8 ~ ~ #minecraft:goat_climb if block ~ ~-0.35 ~ air positioned ~1 ~ ~ align x positioned ~0.2 ~-1.1 ~ run function main:sg/superpowers/goatatwall
 
 # sgRedditor
 scoreboard players add ~tick sgRedditorGrass 1
