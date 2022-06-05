@@ -9,7 +9,7 @@ scoreboard players add ~powerRun sg 1
 
 # giving superpowers
 execute if score out sgMath matches 1 run tag @a[tag=player,tag=noPowers,sort=random,limit=1] add sgVampire
-execute if score out sgMath matches 2 run tag @a[tag=player,tag=noPowers,sort=random,limit=1] add sgTrainer
+execute if score out sgMath matches 2 run tag @a[tag=player,tag=noPowers,sort=random,limit=1] add sgGoat
 execute if score out sgMath matches 3 run tag @a[tag=player,tag=noPowers,sort=random,limit=1] add sgRedditor
 execute if score out sgMath matches 4 run tag @a[tag=player,tag=noPowers,sort=random,limit=1] add sgCreeper
 execute if score out sgMath matches 5 run tag @a[tag=player,tag=noPowers,sort=random,limit=1] add sgWitch
@@ -27,7 +27,7 @@ tag @a[tag=sgPyro] remove noPowers
 
 # zeroing the boards
 scoreboard players set @a[tag=sgVampire] sgVampire 0
-#scoreboard players set @a[tag=sgTrainer] sgTrainer 0  -- refrence
+scoreboard players set @a[tag=sgGoat] sgGoat 0
 scoreboard players set @a[tag=sgRedditor] sgRedditorGrass 0
 scoreboard players set @a[tag=sgCreeper] sgCreeper 0
 scoreboard players set @a[tag=sgWitch] sgWitch 0
