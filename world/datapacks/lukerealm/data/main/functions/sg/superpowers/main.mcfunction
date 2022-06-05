@@ -129,22 +129,22 @@ clear @a[tag=sgLeprechaun] iron_chestplate
 clear @a[tag=sgLeprechaun] iron_leggings
 clear @a[tag=sgLeprechaun] iron_boots
 clear @a[tag=sgLeprechaun] apple
-execute as @a[tag=sgLeprechaun,scores={sgKills=0}] run effect give @s speed 100000 1 true
-execute as @a[tag=sgLeprechaun,scores={sgKills=1}] run effect give @s speed 100000 2 true
-execute as @a[tag=sgLeprechaun,scores={sgKills=2}] run effect give @s speed 100000 3 true
-execute as @a[tag=sgLeprechaun,scores={sgKills=3}] run effect give @s speed 100000 4 true
-execute as @a[tag=sgLeprechaun,scores={sgKills=4}] run effect give @s speed 100000 5 true
-execute as @a[tag=sgLeprechaun,scores={sgKills=5}] run effect give @s speed 100000 6 true
-execute as @a[tag=sgLeprechaun,scores={sgKills=6}] run effect give @s speed 100000 7 true
-execute as @a[tag=sgLeprechaun,scores={sgKills=7}] run effect give @s speed 100000 8 true
-execute as @a[tag=sgLeprechaun,scores={sgKills=8}] run effect give @s speed 100000 9 true
-execute as @a[tag=sgLeprechaun,scores={sgKills=9}] run effect give @s speed 100000 10 true
-execute as @a[tag=sgLeprechaun,scores={sgKills=10}] run effect give @s speed 100000 11 true
-execute as @a[tag=sgLeprechaun,scores={sgKills=11}] run effect give @s speed 100000 12 true
-execute as @a[tag=sgLeprechaun,scores={sgKills=12}] run effect give @s speed 100000 13 true
-execute as @a[tag=sgLeprechaun,scores={sgKills=13}] run effect give @s speed 100000 14 true
-execute as @a[tag=sgLeprechaun,scores={sgKills=14}] run effect give @s speed 100000 15 true
-execute as @a[tag=sgLeprechaun,scores={sgKills=15}] run effect give @s speed 100000 16 true
+execute as @a[tag=sgLeprechaun,scores={sgKills=0}] run effect give @s speed 100000 0 true
+execute as @a[tag=sgLeprechaun,scores={sgKills=1}] run effect give @s speed 100000 1 true
+execute as @a[tag=sgLeprechaun,scores={sgKills=2}] run effect give @s speed 100000 2 true
+execute as @a[tag=sgLeprechaun,scores={sgKills=3}] run effect give @s speed 100000 3 true
+execute as @a[tag=sgLeprechaun,scores={sgKills=4}] run effect give @s speed 100000 4 true
+execute as @a[tag=sgLeprechaun,scores={sgKills=5}] run effect give @s speed 100000 5 true
+execute as @a[tag=sgLeprechaun,scores={sgKills=6}] run effect give @s speed 100000 6 true
+execute as @a[tag=sgLeprechaun,scores={sgKills=7}] run effect give @s speed 100000 7 true
+execute as @a[tag=sgLeprechaun,scores={sgKills=8}] run effect give @s speed 100000 8 true
+execute as @a[tag=sgLeprechaun,scores={sgKills=9}] run effect give @s speed 100000 9 true
+execute as @a[tag=sgLeprechaun,scores={sgKills=10}] run effect give @s speed 100000 10 true
+execute as @a[tag=sgLeprechaun,scores={sgKills=11}] run effect give @s speed 100000 11 true
+execute as @a[tag=sgLeprechaun,scores={sgKills=12}] run effect give @s speed 100000 12 true
+execute as @a[tag=sgLeprechaun,scores={sgKills=13}] run effect give @s speed 100000 13 true
+execute as @a[tag=sgLeprechaun,scores={sgKills=14}] run effect give @s speed 100000 14 true
+execute as @a[tag=sgLeprechaun,scores={sgKills=15}] run effect give @s speed 100000 15 true
 
 # sgMedic
 scoreboard players add ~tick sgMedic 1
