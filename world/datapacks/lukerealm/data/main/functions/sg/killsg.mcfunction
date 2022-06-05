@@ -11,7 +11,7 @@ kill @e[type=item]
 # power remove
 tag @a[tag=player] add noPowers
 tag @a remove sgVampire
-tag @a remove sgTrainer
+tag @a remove sgGoat
 tag @a remove sgRedditor
 tag @a remove sgCreeper
 tag @a remove sgWitch

@@ -6,7 +6,7 @@
 
 # takes away powers on death
 execute as @a[scores={sgDeaths=1..}] run tag @s remove sgVampire
-execute as @a[scores={sgDeaths=1..}] run tag @s remove sgTrainer
+execute as @a[scores={sgDeaths=1..}] run tag @s remove sgGoat
 execute as @a[scores={sgDeaths=1..}] run tag @s remove sgRedditor
 execute as @a[scores={sgDeaths=1..}] run tag @s remove sgCreeper
 execute as @a[scores={sgDeaths=1..}] run tag @s remove sgWitch
@@ -16,7 +16,7 @@ execute as @a[scores={sgDeaths=1..}] run tag @s remove sgPyro
 
 # tracks # of players with powers
 execute store result score ~vampire sg_pwrcount if entity @a[tag=sgVampire]
-execute store result score ~trainer sg_pwrcount if entity @a[tag=sgTrainer]
+execute store result score ~goat sg_pwrcount if entity @a[tag=sgGoat]
 execute store result score ~redditor sg_pwrcount if entity @a[tag=sgRedditor]
 execute store result score ~creeper sg_pwrcount if entity @a[tag=sgCreeper]
 execute store result score ~witch sg_pwrcount if entity @a[tag=sgWitch]
@@ -45,22 +45,22 @@ execute as @a[tag=sgVampire,predicate=main:sneak_state] run effect give @s slown
 execute as @a[tag=sgVampire,predicate=main:sneak_state] if data entity @s Inventory[{Slot:-106b}] run item modify entity @s weapon.offhand main:hood_add
 
 
-# sgTrainer
-effect give @a[tag=sgTrainer] hunger 10000 0 true
-effect give @a[tag=sgTrainer] resistance 10000 2 true
-effect give @a[tag=sgTrainer] strength 10000 0 true
-execute as @a[tag=sgTrainer,nbt={Inventory:[{id:"minecraft:cooked_beef"}]}] run tellraw @s {"text":"Animals are sentient you fucker!"}
-execute as @a[tag=sgTrainer,nbt={Inventory:[{id:"minecraft:cooked_mutton"}]}] run tellraw @s {"text":"Animals are sentient you fucker!"}
-execute as @a[tag=sgTrainer,nbt={Inventory:[{id:"minecraft:cooked_porkchop"}]}] run tellraw @s {"text":"Animals are sentient you fucker!"}
-execute as @a[tag=sgTrainer,nbt={Inventory:[{id:"minecraft:cooked_rabbit"}]}] run tellraw @s {"text":"Animals are sentient you fucker!"}
-execute as @a[tag=sgTrainer,nbt={Inventory:[{id:"minecraft:cooked_salmon"}]}] run tellraw @s {"text":"Animals are sentient you fucker!"}
-execute as @a[tag=sgTrainer,nbt={Inventory:[{id:"minecraft:cooked_cod"}]}] run tellraw @s {"text":"Animals are sentient you fucker!"}
-clear @a[tag=sgTrainer] cooked_beef
-clear @a[tag=sgTrainer] cooked_mutton
-clear @a[tag=sgTrainer] cooked_porkchop
-clear @a[tag=sgTrainer] cooked_rabbit
-clear @a[tag=sgTrainer] cooked_salmon
-clear @a[tag=sgTrainer] cooked_cod
+# sgGoat
+effect give @a[tag=sgGoat] hunger 10000 0 true
+effect give @a[tag=sgGoat] resistance 10000 2 true
+effect give @a[tag=sgGoat] strength 10000 0 true
+execute as @a[tag=sgGoat,nbt={Inventory:[{id:"minecraft:cooked_beef"}]}] run effect give @s nausea 1 0 true
+execute as @a[tag=sgGoat,nbt={Inventory:[{id:"minecraft:cooked_beef"}]}] run title @s title {"text":"Plants only!","color":"dark_red"}
+execute as @a[tag=sgGoat,nbt={Inventory:[{id:"minecraft:cooked_mutton"}]}] run effect give @s nausea 1 0 true
+execute as @a[tag=sgGoat,nbt={Inventory:[{id:"minecraft:cooked_mutton"}]}] run title @s title {"text":"Plants only!","color":"dark_red"}
+execute as @a[tag=sgGoat,nbt={Inventory:[{id:"minecraft:cooked_porkchop"}]}] run effect give @s nausea 1 0 true
+execute as @a[tag=sgGoat,nbt={Inventory:[{id:"minecraft:cooked_porkchop"}]}] run title @s title {"text":"Plants only!","color":"dark_red"}
+execute as @a[tag=sgGoat,nbt={Inventory:[{id:"minecraft:cooked_rabbit"}]}] run effect give @s nausea 1 0 true
+execute as @a[tag=sgGoat,nbt={Inventory:[{id:"minecraft:cooked_rabbit"}]}] run title @s title {"text":"Plants only!","color":"dark_red"}
+execute as @a[tag=sgGoat,nbt={Inventory:[{id:"minecraft:cooked_salmon"}]}] run effect give @s nausea 1 0 true
+execute as @a[tag=sgGoat,nbt={Inventory:[{id:"minecraft:cooked_salmon"}]}] run title @s title {"text":"Plants only!","color":"dark_red"}
+execute as @a[tag=sgGoat,nbt={Inventory:[{id:"minecraft:cooked_cod"}]}] run effect give @s nausea 1 0 true
+execute as @a[tag=sgGoat,nbt={Inventory:[{id:"minecraft:cooked_cod"}]}] run title @s title {"text":"Plants only!","color":"dark_red"}
 
 # sgRedditor
 scoreboard players add ~tick sgRedditorGrass 1

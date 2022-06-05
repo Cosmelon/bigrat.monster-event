@@ -18,13 +18,15 @@ tellraw @a[tag=sgVampire] ""
 tellraw @a[tag=sgVampire] [{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-6"},{"text":"\uE004"}]
 
 # Trainer (orange)
-tellraw @a[tag=sgTrainer] [{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-6"},{"text":"\uE004"}]
-tellraw @a[tag=sgTrainer] {"text":"Trainer_2/8","color":"#FFA500","bold":true}
-tellraw @a[tag=sgTrainer] ""
-tellraw @a[tag=sgTrainer] {"text":"You have given up eating animals as it's murder!","color":"#FFA500"}
-tellraw @a[tag=sgTrainer] ""
-tellraw @a[tag=sgTrainer] {"text":"In the face of this, have been given a swift step and resistance against low-blows","color":"#FFA500"}
-tellraw @a[tag=sgTrainer] [{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-6"},{"text":"\uE004"}]
+tellraw @a[tag=sgGoat] [{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-6"},{"text":"\uE004"}]
+tellraw @a[tag=sgGoat] {"text":"Goat!_2/8","color":"#FFA500","bold":true}
+tellraw @a[tag=sgGoat] ""
+tellraw @a[tag=sgGoat] {"text":"As a goat, you've adopted a completely plant based diet!","color":"#FFA500"}
+tellraw @a[tag=sgGoat] {"text":" You hate meat so much, that any contact will make you sick.","color":"#FFA500"}
+tellraw @a[tag=sgGoat] ""
+tellraw @a[tag=sgGoat] {"text":"In the face of this, have been given a swift step and resistance against low-blows","color":"#FFA500"}
+tellraw @a[tag=sgGoat] {"text":"I think some goats can even climb walls of stone?? I guess it's worth a try!","color":"#FFA500"}
+tellraw @a[tag=sgGoat] [{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-6"},{"text":"\uE004"}]
 
 # Redditor (yellow)
 tellraw @a[tag=sgRedditor] [{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-6"},{"text":"\uE004"}]
@@ -85,7 +87,7 @@ tellraw @a[tag=sgPyro] [{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE0
 # tell non-players who has what powers
 tellraw @a[tag=!player] [{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-6"},{"text":"\uE004"}]
 execute if score ~vampire sg_pwrcount matches 1.. run tellraw @a[tag=!player] [{"score":{"name":"~vampire","objective":"sg_pwrcount"},"color":"aqua"},{"text":" vampires this round: ","color":"gold"},{"selector":"@a[tag=sgVampire]"}]
-execute if score ~trainer sg_pwrcount matches 1.. run tellraw @a[tag=!player] [{"score":{"name":"~trainer","objective":"sg_pwrcount"},"color":"aqua"},{"text":"  this round: ","color":"gold"},{"selector":"@a[tag=sgTrainer]"}]
+execute if score ~goat sg_pwrcount matches 1.. run tellraw @a[tag=!player] [{"score":{"name":"~goat","objective":"sg_pwrcount"},"color":"aqua"},{"text":"  this round: ","color":"gold"},{"selector":"@a[tag=sgGoat]"}]
 execute if score ~redditor sg_pwrcount matches 1.. run tellraw @a[tag=!player] [{"score":{"name":"~redditor","objective":"sg_pwrcount"},"color":"aqua"},{"text":"  this round: ","color":"gold"},{"selector":"@a[tag=sgRedditor]"}]
 execute if score ~creeper sg_pwrcount matches 1.. run tellraw @a[tag=!player] [{"score":{"name":"~creeper","objective":"sg_pwrcount"},"color":"aqua"},{"text":"  this round: ","color":"gold"},{"selector":"@a[tag=sgCreeper]"}]
 execute if score ~witch sg_pwrcount matches 1.. run tellraw @a[tag=!player] [{"score":{"name":"~witch","objective":"sg_pwrcount"},"color":"aqua"},{"text":"  this round: ","color":"gold"},{"selector":"@a[tag=sgWitch]"}]

@@ -35,6 +35,18 @@ scoreboard objectives add sgMedic dummy
 scoreboard objectives add sgPyro dummy
 scoreboard objectives add sgKills playerKillCount
 
+# power remove
+tag @a[tag=player] add noPowers
+tag @a remove sgVampire
+tag @a remove sgGoat
+tag @a remove sgRedditor
+tag @a remove sgCreeper
+tag @a remove sgWitch
+tag @a remove sgLeprechaun
+tag @a remove sgMedic
+tag @a remove sgPyro
+effect clear @a[team=!Admin]
+
 # timers and other stuff reset
 scoreboard players set ~shrinkActual sgBorder 0
 scoreboard players set ~shrinkTick sgBorder 0
