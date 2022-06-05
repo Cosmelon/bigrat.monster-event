@@ -78,6 +78,18 @@ execute as @a store result score @s yCos run data get entity @s Pos[1]
 # night vision clear
 effect clear @a[tag=noNV] night_vision
 
+# kills games when nobody is offline
+execute unless score .users teamCheck matches 1.. if score $gameActive spleef matches 1 run scoreboard objectives add killGames dummy
+execute unless score .users teamCheck matches 1.. if score !gameActive race matches 1 run scoreboard objectives add killGames dummy
+execute unless score .users teamCheck matches 1.. if score ~gameActive sg matches 1 run scoreboard objectives add killGames dummy
+execute unless score .users teamCheck matches 1.. if score ?gameActive blockParty matches 1 run scoreboard objectives add killGames dummy
+execute unless score .users teamCheck matches 1.. run scoreboard players set .main killGames 1
+execute if score .main killGames matches 1.. run function main:spleef/killspleef
+execute if score .main killGames matches 1.. run function main:race/killrace
+execute if score .main killGames matches 1.. run function main:sg/killsg
+execute if score .main killGames matches 1.. run function main:blockparty/killbp
+execute if score .main killGames matches 1.. run scoreboard objectives remove killGames
+
 # lobbytick
 execute if score .lobby currentGame matches 1 if score !lobbyEff currentGame matches 1 run effect give @a weakness 10000 100 true
 execute if score .lobby currentGame matches 1 if score !lobbyEff currentGame matches 1 run effect give @a saturation 10000 100 true
