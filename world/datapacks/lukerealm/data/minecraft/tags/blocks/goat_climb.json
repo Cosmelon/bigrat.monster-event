@@ -1,0 +1,14 @@
+{
+    "values": [
+        "minecraft:stone",
+        "minecraft:stone_bricks",
+        "minecraft:cobblestone",
+        "minecraft:sandstone",
+        "minecraft:blackstone",
+        "minecraft:mossy_cobblestone",
+        "minecraft:polished_andesite",
+        "minecraft:andesite",
+        "minecraft:granite",
+        "minecraft:polished_granite"
+    ]
+}
