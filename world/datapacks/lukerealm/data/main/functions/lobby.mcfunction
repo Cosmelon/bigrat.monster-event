@@ -37,13 +37,13 @@ worldborder set 6000000 1
 worldborder center 0 0
 
 # currentGame scoreboard lobby pos set
-scoreboard players set $lobby currentGame 1
-scoreboard players set $spleef currentGame 0
-scoreboard players set $race currentGame 0
-scoreboard players set $sg currentGame 0
-scoreboard players set $fossilDig currentGame 0
-scoreboard players set $tntWar currentGame 0
-scoreboard players set $gameSix currentGame 0
+scoreboard players set .lobby currentGame 1
+scoreboard players set .spleef currentGame 0
+scoreboard players set .race currentGame 0
+scoreboard players set .sg currentGame 0
+scoreboard players set .blockParty currentGame 0
+scoreboard players set .bingo currentGame 0
+scoreboard players set .diggy currentGame 0 
 
 # reset stuff for spleef
 scoreboard players set $notifRedDead spleef 0
