@@ -98,15 +98,12 @@ data modify block 1033 28 -6007 Text2 set value '{"text":"Manager"}'
 
 # spleeftick
 execute if score $gameActive spleef matches 1 run function main:spleef/sptick
-execute if score $gameActive spleef matches 0 run scoreboard players set $countDown spleef 160
 
 # racetick
 execute if score !gameActive race matches 1 run function main:race/racetick
-execute if score !gameActive race matches 0 run scoreboard players set !countDown race 1400
 
 # sgtick
 execute if score ~gameActive sg matches 1 run function main:sg/sgtick
-execute if score ~gameActive sg matches 0 run scoreboard players set ~countDown sg 300
 scoreboard players enable @a[tag=admin] sgPowerCheck
 execute as @a[tag=admin] if score ~gameActive sg matches 1 if score @s sgPowerCheck matches 1.. run tellraw @s [{"text":"Vampire Users: ","color":"green"},{"selector":"@a[tag=sgVampire]","color":"white"}]
 execute as @a[tag=admin] if score ~gameActive sg matches 1 if score @s sgPowerCheck matches 1.. run tellraw @s [{"text":"Trainer Users: ","color":"green"},{"selector":"@a[tag=sgMedic]","color":"white"}]
@@ -124,3 +121,6 @@ execute if score ?gameActive blockParty matches 1 run function main:blockparty/b
 bossbar set minecraft:bproundcount players @a
 tag @a[tag=bpDead] remove bpAlive
 tag @a[tag=bpAlive] remove bpDead
+
+# brawl tick
+execute if score ?gameActive brawl matches 1 run function main:brawl/main
