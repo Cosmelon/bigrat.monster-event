@@ -46,16 +46,11 @@ scoreboard players set .bingo currentGame 0
 scoreboard players set .diggy currentGame 0 
 
 # reset stuff for spleef
-scoreboard players set $notifRedDead spleef 0
-scoreboard players set $notifBlueDead spleef 0
-scoreboard players set $notifGreenDead spleef 0
-scoreboard players set $notifYellowDead spleef 0
-scoreboard players set $shrink3Timer spleefBorder 5000
-scoreboard players set $shrink2Timer spleefBorder 3400
-scoreboard players set $shrink1Timer spleefBorder 2400
-scoreboard players set $countDown spleef 160
-scoreboard players set $round spleef 1
-scoreboard players set $shrinkActual spleefBorder 400
+scoreboard objectives remove spleef
+scoreboard objectives remove spleefDeaths
+scoreboard objectives remove spleef_sb
+scoreboard objectives remove spleefSnowBall
+scoreboard objectives remove spleefBorder
 bossbar set minecraft:spleefroundcount visible false
 schedule clear main:spleef/border/removetop
 

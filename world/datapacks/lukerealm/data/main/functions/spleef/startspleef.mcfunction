@@ -27,6 +27,13 @@ clear @a[team=!Admin]
 kill @e[type=item]
 effect clear @a
 
+# add scoreboards
+scoreboard objectives add spleef dummy
+scoreboard objectives add spleefDeaths deathCount
+scoreboard objectives add spleef_sb dummy
+scoreboard objectives add spleefSnowBall minecraft.mined:minecraft.snow_block
+scoreboard objectives add spleefBorder dummy
+
 # reset scoreboards
 scoreboard players set $countDown spleef 160
 scoreboard players set $gameActive spleef 1
@@ -38,6 +45,7 @@ scoreboard players set $shrinkActual spleefBorder 0
 scoreboard players set $shrink1Break spleefBorder 0
 scoreboard players set $shrink2Break spleefBorder 0
 scoreboard players set $shrink3Break spleefBorder 0
+execute unless score $round spleef matches 1.. run scoreboard players set $round spleef 1
 schedule function main:spleef/border/s1warn 95s replace
 schedule function main:spleef/border/s2warn 170s replace
 schedule function main:spleef/border/s3warn 250s replace
