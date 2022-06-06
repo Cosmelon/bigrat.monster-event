@@ -1,4 +1,7 @@
-# regenerates all the floors for speef
+# Description: regenerates main spleef floors and starting cabinet
+# Author: Cosmelon
+# Type: single
+# run from main:spleef/startspleef, <manual> 
 
 # make the new box thing
 fill -497 65 -467 -497 60 -455 gray_stained_glass

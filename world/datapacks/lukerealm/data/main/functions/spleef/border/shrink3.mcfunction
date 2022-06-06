@@ -12,9 +12,9 @@ scoreboard players set $sec spleefBorder 30
 playsound minecraft:block.note_block.banjo master @a ^0 ^ ^ 1 2.000000 1
 bossbar set minecraft:spleefshrinkactual visible true
 schedule function main:cleartitle 3s replace
-schedule function main:spleef/border/removetop 20s replace
+schedule function main:spleef/border/removetop 30s replace
 schedule function main:spleef/border/turnoffactual 20s replace
 
 # floor removal
 title @a times 0 100 0
-title @a actionbar {"text":"Top floor disappearing in 20 seconds!","color":"red"}
+title @a actionbar {"text":"Top floor disappearing in 30 seconds!","color":"red"}

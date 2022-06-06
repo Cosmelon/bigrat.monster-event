@@ -1,4 +1,7 @@
-# spleef tick stuff, be careful!
+# Description: spleef main tick file
+# Author: Cosmelon
+# Type: main tick
+# run from main:tick when $gameActive spleef matches 1
 
 # scoreboards associated with spleef:
 #  spleef - main scoreboard for spleef

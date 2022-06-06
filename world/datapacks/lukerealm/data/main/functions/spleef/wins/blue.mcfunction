@@ -1,3 +1,8 @@
+# Description: blue team wins spleef
+# Author: Cosmelon
+# Type: win, single
+# run from main:spleef/sptick when all players on other teams besides blue == 0
+
 scoreboard players set $gameActive spleef 0
 title @a times 0 50 0
 title @a clear

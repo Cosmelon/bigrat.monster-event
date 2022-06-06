@@ -1,6 +1,7 @@
-# this file is called from main:sptick
-# this is still a tick file, be careful!
-#   this file is also only called while a round is active
+# Description: shrinking the physical size of the snow as the border closes in (for shrink1)
+# Author: Cosmelon
+# Type: tick
+# run from main:spleef/sptick
 
 #controls the scoreboard running the below code
 scoreboard players remove $shrink1Break spleefBorder 1

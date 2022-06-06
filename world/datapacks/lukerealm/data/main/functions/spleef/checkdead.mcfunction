@@ -1,4 +1,7 @@
-# checks dead players in spleef
+# Description: checks dead players in spleef
+# Author: Cosmelon
+# Type: tick
+# run from main:spleef/sptick
 
 execute if score $notifRedDead spleef matches 0 run execute if score $aliveRed spleef matches 0 run tellraw @a {"text":"Red team has been eliminated!","color":"red","bold":true}
 execute if score $notifRedDead spleef matches 0 run execute if score $aliveRed spleef matches 0 run scoreboard players set $notifRedDead spleef 1
