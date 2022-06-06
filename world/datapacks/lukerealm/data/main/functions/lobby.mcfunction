@@ -43,7 +43,7 @@ scoreboard players set .race currentGame 0
 scoreboard players set .sg currentGame 0
 scoreboard players set .blockParty currentGame 0
 scoreboard players set .bingo currentGame 0
-scoreboard players set .diggy currentGame 0 
+scoreboard players set .diggy currentGame 0
 
 # reset stuff for spleef
 scoreboard objectives remove spleef
@@ -55,13 +55,13 @@ bossbar set minecraft:spleefroundcount visible false
 schedule clear main:spleef/border/removetop
 
 # reset stuff for race
-scoreboard objectives add race dummy
-scoreboard objectives add raceMilli dummy
-scoreboard objectives add raceSec dummy
-scoreboard objectives add raceMin dummy
-scoreboard objectives add raceLap dummy
-scoreboard objectives add racePos dummy
-scoreboard objectives add raceCP dummy
+scoreboard objectives remove race
+scoreboard objectives remove raceMilli
+scoreboard objectives remove raceSec
+scoreboard objectives remove raceMin
+scoreboard objectives remove raceLap
+scoreboard objectives remove racePos
+scoreboard objectives remove raceCP
 scoreboard players set @a raceMilli 0
 scoreboard players set @a raceSec 0
 scoreboard players set @a raceMin 0
@@ -89,6 +89,12 @@ bossbar set minecraft:sgshrinkactual visible false
 
 # reset stuff for blockparty
 bossbar set minecraft:bproundcount visible false
+scoreboard objectives remove blockParty
+scoreboard objectives remove bpTimer
+scoreboard objectives remove bpMath
+scoreboard objectives remove bpColor
+scoreboard objectives remove bpFloor
+scoreboard objectives remove bpDeaths
 scoreboard players set ?gameActive blockParty 0
 scoreboard players set ?round blockParty 1
 scoreboard players set ?floorSwitch blockParty 0

@@ -3,18 +3,29 @@
 # Type: start
 # run from main:blockparty/wins/
 
+# create scorebaords
+scoreboard objectives add blockParty dummy
+scoreboard objectives add bpTimer dummy
+scoreboard objectives add bpMath dummy
+scoreboard objectives add bpColor dummy
+scoreboard objectives add bpFloor dummy
+scoreboard objectives add bpDeaths deathCount
+
+# set values for scoreboards
 scoreboard players set .lobby currentGame 0
-scoreboard players set ?gameActive blockParty 1
+scoreboard players set ?gameActive blockParty 0
+scoreboard players set ?round blockParty 1
 scoreboard players set ?floorSwitch blockParty 0
 scoreboard players set ?microTick blockParty 0
 scoreboard players set ?countDown blockParty 400
-scoreboard players set ?floorNum bpFloor 1
 scoreboard players set ?notifRedDead blockParty 0
 scoreboard players set ?notifBlueDead blockParty 0
 scoreboard players set ?notifGreenDead blockParty 0
 scoreboard players set ?notifYellowDead blockParty 0
+scoreboard players set ?stopSec bpStop -100
+scoreboard players set ?tick bpStop 0
+scoreboard players set ?random blockParty 0
 scoreboard players set ?stop bpTimer -2000
-scoreboard players set @a bpSound 0
 scoreboard players set ?in1 bpTimer 200
 scoreboard players set ?colorTT bpTimer 25
 scoreboard players set ?removeFloor bpFloor -60
