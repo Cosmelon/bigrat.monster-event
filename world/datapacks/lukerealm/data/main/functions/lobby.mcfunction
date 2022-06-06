@@ -55,14 +55,13 @@ bossbar set minecraft:spleefroundcount visible false
 schedule clear main:spleef/border/removetop
 
 # reset stuff for race
-scoreboard players set !gameActive race 0
-scoreboard players set !countDown race 160
-scoreboard players set !gateOpen race 100
-scoreboard players set !gateShut race 0
-scoreboard players set !milli race 0
-scoreboard players set !raceTime raceMilli 0
-scoreboard players set !raceTime raceSec 0
-scoreboard players set !raceTime raceMin 0
+scoreboard objectives add race dummy
+scoreboard objectives add raceMilli dummy
+scoreboard objectives add raceSec dummy
+scoreboard objectives add raceMin dummy
+scoreboard objectives add raceLap dummy
+scoreboard objectives add racePos dummy
+scoreboard objectives add raceCP dummy
 scoreboard players set @a raceMilli 0
 scoreboard players set @a raceSec 0
 scoreboard players set @a raceMin 0

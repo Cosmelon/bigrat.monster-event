@@ -5,6 +5,15 @@
 # lobby turn off 
 scoreboard players set .lobby currentGame 0
 
+# create scoreboards
+scoreboard objectives add race dummy
+scoreboard objectives add raceMilli dummy
+scoreboard objectives add raceSec dummy
+scoreboard objectives add raceMin dummy
+scoreboard objectives add raceLap dummy
+scoreboard objectives add racePos dummy
+scoreboard objectives add raceCP dummy
+
 # start
 scoreboard players set !gameActive race 1
 scoreboard players set !countDown race 1400
@@ -13,11 +22,15 @@ scoreboard players set !gateShut race 0
 scoreboard players set !raceTime raceMilli 0
 scoreboard players set !raceTime raceSec 0
 scoreboard players set !raceTime raceMin 0
+scoreboard players set @a raceMilli 0
+scoreboard players set @a raceSec 0
+scoreboard players set @a raceMin 0
+scoreboard players set @a raceCP 0
+scoreboard players set @a raceLap 0
 scoreboard players reset * racePos
 title @a times 0 25 5
 
 # racePos count reset
-#  not totally necessary but I like it
 scoreboard players set !posCounter1 racePos 0
 scoreboard players set !posCounter2 racePos 0
 scoreboard players set !posCounter3 racePos 0

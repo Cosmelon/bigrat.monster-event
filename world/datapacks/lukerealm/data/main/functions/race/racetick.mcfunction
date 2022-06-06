@@ -1,7 +1,7 @@
 # Description: race tick
 # Author: Cosmelon
 # Type: main_tick
-# run from main:tick
+# run from main:tick when !gameActive race == 1
 
 scoreboard players remove !countDown race 1
 effect give @a[tag=player] water_breathing 100000 0 true
