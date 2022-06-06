@@ -15,14 +15,14 @@ execute as @a[scores={sgDeaths=1..}] run tag @s remove sgMedic
 execute as @a[scores={sgDeaths=1..}] run tag @s remove sgPyro
 
 # tracks # of players with powers
-execute store result score ~vampire sg_pwrcount if entity @a[tag=sgVampire]
-execute store result score ~goat sg_pwrcount if entity @a[tag=sgGoat]
-execute store result score ~redditor sg_pwrcount if entity @a[tag=sgRedditor]
-execute store result score ~creeper sg_pwrcount if entity @a[tag=sgCreeper]
-execute store result score ~witch sg_pwrcount if entity @a[tag=sgWitch]
-execute store result score ~leprechaun sg_pwrcount if entity @a[tag=sgLeprechaun]
-execute store result score ~medic sg_pwrcount if entity @a[tag=sgMedic]
-execute store result score ~pyro sg_pwrcount if entity @a[tag=sgPyro]
+execute store result score ~vampire sgPwrCount if entity @a[tag=sgVampire]
+execute store result score ~goat sgPwrCount if entity @a[tag=sgGoat]
+execute store result score ~redditor sgPwrCount if entity @a[tag=sgRedditor]
+execute store result score ~creeper sgPwrCount if entity @a[tag=sgCreeper]
+execute store result score ~witch sgPwrCount if entity @a[tag=sgWitch]
+execute store result score ~leprechaun sgPwrCount if entity @a[tag=sgLeprechaun]
+execute store result score ~medic sgPwrCount if entity @a[tag=sgMedic]
+execute store result score ~pyro sgPwrCount if entity @a[tag=sgPyro]
 
 # sgVampire
 execute as @a[tag=sgVampire,scores={sgVampire=238}] run effect give @s blindness 2 0 true

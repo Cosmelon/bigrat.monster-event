@@ -18,6 +18,23 @@ kill @e[type=zombie]
 kill @e[type=item]
 
 # reset notifs
+scoreboard objectives add sg dummy
+scoreboard objectives add sgBorder dummy
+scoreboard objectives add sgPlayers dummy
+scoreboard objectives add sgDeaths deathCount
+
+# power scoreboards
+scoreboard objectives add sgPowerCheck dummy
+scoreboard objectives add sgPwrCount dummy
+scoreboard objectives add sgConstant dummy
+scoreboard objectives add sgMath dummy
+scoreboard objectives add sgVampire dummy
+scoreboard objectives add sgRedditorGrass dummy
+scoreboard objectives add sgCreeperTNT dummy
+scoreboard objectives add sgWitch dummy
+scoreboard objectives add sgMedic dummy
+scoreboard objectives add sgPyro dummy
+scoreboard objectives add sgKills playerKillCount
 scoreboard players set ~notifRedDead sg 0
 scoreboard players set ~notifBlueDead sg 0
 scoreboard players set ~notifGreenDead sg 0
@@ -26,14 +43,6 @@ scoreboard players set ~aliveRed sg 1
 scoreboard players set ~aliveBlue sg 1
 scoreboard players set ~aliveGreen sg 1
 scoreboard players set ~aliveYellow sg 1
-
-scoreboard objectives add sgVampire dummy
-scoreboard objectives add sgRedditorGrass dummy
-scoreboard objectives add sgCreeperTNT dummy
-scoreboard objectives add sgWitch dummy
-scoreboard objectives add sgMedic dummy
-scoreboard objectives add sgPyro dummy
-scoreboard objectives add sgKills playerKillCount
 
 # power remove
 tag @a[tag=player] add noPowers

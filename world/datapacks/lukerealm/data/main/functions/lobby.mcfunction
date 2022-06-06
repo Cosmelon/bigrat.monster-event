@@ -70,20 +70,21 @@ scoreboard players set @a raceLap 0
 bossbar set minecraft:racetime visible false
 
 # reset stuff for sg
-scoreboard players set ~notifRedDead sg 0
-scoreboard players set ~notifBlueDead sg 0
-scoreboard players set ~notifGreenDead sg 0
-scoreboard players set ~notifYellowDead sg 0
-scoreboard players set ~shrinkActual sgBorder 0
-scoreboard players set ~countDown sg 300
-scoreboard players set ~round sg 1
+scoreboard objectives remove sg
+scoreboard objectives remove sgBorder
+scoreboard objectives remove sgPlayers
+scoreboard objectives remove sgDeaths
+scoreboard objectives remove sgPowerCheck
+scoreboard objectives remove sgPwrCount
+scoreboard objectives remove sgConstant
+scoreboard objectives remove sgMath
 scoreboard objectives remove sgVampire
 scoreboard objectives remove sgRedditorGrass
 scoreboard objectives remove sgCreeperTNT
 scoreboard objectives remove sgWitch
-scoreboard objectives remove sgKills
 scoreboard objectives remove sgMedic
 scoreboard objectives remove sgPyro
+scoreboard objectives remove sgKills
 bossbar set minecraft:sgshrink visible false
 bossbar set minecraft:sgshrinkactual visible false
 
@@ -95,17 +96,5 @@ scoreboard objectives remove bpMath
 scoreboard objectives remove bpColor
 scoreboard objectives remove bpFloor
 scoreboard objectives remove bpDeaths
-scoreboard players set ?gameActive blockParty 0
-scoreboard players set ?round blockParty 1
-scoreboard players set ?floorSwitch blockParty 0
-scoreboard players set ?microTick blockParty 0
-scoreboard players set ?countDown blockParty 400
-scoreboard players set ?notifRedDead blockParty 0
-scoreboard players set ?notifBlueDead blockParty 0
-scoreboard players set ?notifGreenDead blockParty 0
-scoreboard players set ?notifYellowDead blockParty 0
-scoreboard players set ?stopSec bpStop -100
-scoreboard players set ?tick bpStop 0
-scoreboard players set ?random blockParty 0
 tag @a remove bpAlive
 tag @a remove bpDead
