@@ -36,6 +36,16 @@ gamemode adventure @a
 worldborder set 6000000 1
 worldborder center 0 0
 
+# npc insurance
+data modify entity @e[type=armor_stand,tag=tScoreNPC,limit=1] Invisible set value 1b
+data modify entity @e[type=armor_stand,tag=tScoreNPC,limit=1] Invisible set value 1b
+data modify entity @e[type=armor_stand,tag=tScoreNPC,limit=1] Invisible set value 1b
+data modify entity @e[type=armor_stand,tag=tScoreNPC,limit=1] Invisible set value 1b
+data modify entity @e[type=armor_stand,tag=tScoreNPC,limit=1] CustomNameVisible set value 1b
+data modify entity @e[type=armor_stand,tag=tScoreNPC,limit=1] CustomNameVisible set value 1b
+data modify entity @e[type=armor_stand,tag=tScoreNPC,limit=1] CustomNameVisible set value 1b
+data modify entity @e[type=armor_stand,tag=tScoreNPC,limit=1] CustomNameVisible set value 1b
+
 # currentGame scoreboard lobby pos set
 scoreboard players set .lobby currentGame 1
 scoreboard players set .spleef currentGame 0
