@@ -111,11 +111,13 @@ execute if score .yellowPos teamScores matches 2 run data modify entity @e[type=
 execute if score .yellowPos teamScores matches 3 run data modify entity @e[type=armor_stand,limit=1,tag=place3] CustomName set value '[{"text":"Yellow: ","color":"yellow"},{"score":{"name": .yellowPos","objective":"teamScores"},"color":"gold"}]'
 execute if score .yellowPos teamScores matches 4 run data modify entity @e[type=armor_stand,limit=1,tag=place4] CustomName set value '[{"text":"Yellow: ","color":"yellow"},{"score":{"name": .yellowPos","objective":"teamScores"},"color":"gold"}]'
 
+# funny fall thing
+execute if score !bones currentGames matches 1 as @a if score @s fall matches 900.. run function main:fallen
+scoreboard players reset * fall
+
 # lobbytick
 execute if score .lobby currentGame matches 1 if score !lobbyEff currentGame matches 1 run effect give @a weakness 10000 100 true
 execute if score .lobby currentGame matches 1 if score !lobbyEff currentGame matches 1 run effect give @a saturation 10000 100 true
-data modify block 1033 28 -6007 Text1 set value '{"text":"PokeyFinn"}'
-data modify block 1033 28 -6007 Text2 set value '{"text":"Manager"}'
 
 # spleeftick
 execute if score $gameActive spleef matches 1 run function main:spleef/sptick
