@@ -92,20 +92,7 @@ execute if score .main killGames matches 1.. run scoreboard objectives remove ki
 
 # teamScore (this looks like crap lmao -Cos)
 #  This is on hold for right now, this shit is breaking my mind
-#execute if score .red teamScores > .blue teamScores if score .red teamScores > .green teamScores if score .red teamScores > .yellow teamScores run scoreboard players set .redPos teamScores 1
-#execute if score .blue teamScores > .red teamScores if score .blue teamScores > .green teamScores if score .blue teamScores > .yellow teamScores run scoreboard players set .bluePos teamScores 1
-#execute if score .green teamScores > .red teamScores if score .green teamScores > .blue teamScores if score .green teamScores > .yellow teamScores run scoreboard players set .greenPos teamScores 1
-#execute if score .yellow teamScores > .red teamScores if score .yellow teamScores > .blue teamScores if score .yellow teamScores > .green teamScores run scoreboard players set .yellowPos teamScores 1
-
-#execute if score .red teamScores < .blue teamScores if score .red teamScores > .green teamScores if score .red teamScores > .yellow teamScores run scoreboard players set .redPos teamScores 2
-#execute if score .red teamScores > .blue teamScores if score .red teamScores < .green teamScores if score .red teamScores > .yellow teamScores run scoreboard players set .redPos teamScores 2
-#execute if score .red teamScores < .blue teamScores if score .red teamScores > .green teamScores if score .red teamScores > .yellow teamScores run scoreboard players set .redPos teamScores 2
-#execute if score .red teamScores > .blue teamScores if score .red teamScores < .green 
-
-#execute if score .red teamScores < .blue teamScores if score .red teamScores < .green teamScores if score .red teamScores < .yellow teamScores run scoreboard players set .redPos teamScores 4
-#execute if score .blue teamScores < .red teamScores if score .blue teamScores < .green teamScores if score .blue teamScores < .yellow teamScores run scoreboard players set .bluePos teamScores 4
-#execute if score .green teamScores < .red teamScores if score .green teamScores < .blue teamScores if score .green teamScores < .yellow teamScores run scoreboard players set .greenPos teamScores 4
-#execute if score .yellow teamScores < .red teamScores if score .yellow teamScores < .blue teamScores if score .yellow teamScores < .green teamScores run scoreboard players set .yellowPos teamScores 4
+function main:teamscore
 
 # statue score npc display
 execute if score .redPos teamScores matches 1 run data modify entity @e[type=armor_stand,limit=1,tag=place1] CustomName set value '[{"text":"Red: ","color":"red"},{"score":{"name":".redPos","objective":"teamScores"},"color":"gold"}]'
