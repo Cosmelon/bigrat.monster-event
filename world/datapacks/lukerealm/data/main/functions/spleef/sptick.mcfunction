@@ -82,6 +82,7 @@ kill @a[gamemode=adventure,scores={yCos=27..30}]
 tp @a[team=!Admin,gamemode=spectator,scores={yCos=20}] -496 66 -459 -180 5
 # transfers dead players to spectator
 gamemode spectator @a[scores={spleefDeaths=1..}]
+execute as @a[scores={spleefDeaths=1},tag=player] run function main:spleef/death
 
 # does team death messaage
 function main:spleef/checkdead
