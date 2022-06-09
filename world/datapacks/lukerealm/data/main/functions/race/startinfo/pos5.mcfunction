@@ -5,14 +5,14 @@
 
 # get out of spectate
 #tp @e[name="!raceCine"] @e[name="!racePos4",limit=1]
-tp @e[name="!raceCine"] 234.50 77.50 -27.5 -403.16 6.42
+tp @e[name="!raceCine"] 234.50 78 -27.5 -403.16 6.42
 execute as @a run spectate
 
 # sound
 schedule function main:infosound 10t replace
 
 # infotext
-tellraw @a [{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-6"},{"text":"\uE004"}]
+tellraw @a [{"text":"\n\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-6"},{"text":"\uE004"}]
 tellraw @a ""
 tellraw @a ""
 tellraw @a ""
