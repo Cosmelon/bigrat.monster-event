@@ -27,11 +27,23 @@ team empty Blue
 team empty Green
 team empty Yellow
 
-# assign to teams
-team join Red @a[team=Spectator,limit=4,sort=random]
-team join Blue @a[team=Spectator,limit=4,sort=random]
-team join Green @a[team=Spectator,limit=4,sort=random]
-team join Yellow @a[team=Spectator,limit=4,sort=random]
+# assign to teams; trying to ensure "even enough" distribution
+team join Red @a[team=Spectator,limit=1,sort=random]
+team join Blue @a[team=Spectator,limit=1,sort=random]
+team join Green @a[team=Spectator,limit=1,sort=random]
+team join Yellow @a[team=Spectator,limit=1,sort=random]
+team join Red @a[team=Spectator,limit=1,sort=random]
+team join Blue @a[team=Spectator,limit=1,sort=random]
+team join Green @a[team=Spectator,limit=1,sort=random]
+team join Yellow @a[team=Spectator,limit=1,sort=random]
+team join Red @a[team=Spectator,limit=1,sort=random]
+team join Blue @a[team=Spectator,limit=1,sort=random]
+team join Green @a[team=Spectator,limit=1,sort=random]
+team join Yellow @a[team=Spectator,limit=1,sort=random]
+team join Red @a[team=Spectator,limit=1,sort=random]
+team join Blue @a[team=Spectator,limit=1,sort=random]
+team join Green @a[team=Spectator,limit=1,sort=random]
+team join Yellow @a[team=Spectator,limit=1,sort=random]
 
 # get tags
 tag @a[team=Red,limit=1,sort=random] add red-1
