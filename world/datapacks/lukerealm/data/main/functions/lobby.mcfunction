@@ -46,6 +46,16 @@ data modify entity @e[type=armor_stand,tag=tScoreNPC,limit=1] CustomNameVisible 
 data modify entity @e[type=armor_stand,tag=tScoreNPC,limit=1] CustomNameVisible set value 1b
 data modify entity @e[type=armor_stand,tag=tScoreNPC,limit=1] CustomNameVisible set value 1b
 
+# team score combination
+scoreboard players reset .red teamScores
+scoreboard players reset .blue teamScores
+scoreboard players reset .green teamScores
+scoreboard players reset .yellow teamScores
+scoreboard players operation .red teamScores += @a[team=Red] indivScore
+scoreboard players operation .blue teamScores += @a[team=Blue] indivScore
+scoreboard players operation .green teamScores += @a[team=Green] indivScore
+scoreboard players operation .yellow teamScores += @a[team=Yellow] indivScore
+
 # currentGame scoreboard lobby pos set
 scoreboard players set .lobby currentGame 1
 scoreboard players set .spleef currentGame 0
