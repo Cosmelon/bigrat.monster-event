@@ -115,6 +115,12 @@ execute if score .yellowPos teamScores matches 2 run data modify entity @e[type=
 execute if score .yellowPos teamScores matches 3 run data modify entity @e[type=armor_stand,limit=1,tag=place3] CustomName set value '[{"text":"Yellow: ","color":"yellow"},{"score":{"name": .yellow","objective":"teamScores"},"color":"gold"}]'
 execute if score .yellowPos teamScores matches 4 run data modify entity @e[type=armor_stand,limit=1,tag=place4] CustomName set value '[{"text":"Yellow: ","color":"yellow"},{"score":{"name": .yellow","objective":"teamScores"},"color":"gold"}]'
 
+# villager wrangler
+execute positioned 996.5 29 -6034.5 run tp @e[type=minecraft:villager,sort=nearest,limit=1,distance=..1] 996.5 29 -6034.5 0 0
+execute positioned 1000.5 30 -6035.5 run tp @e[type=minecraft:villager,sort=nearest,limit=1,distance=..1] 1000.5 30 -6035.5 0 0
+execute positioned 1004.5 31 -6034.5 run tp @e[type=minecraft:villager,sort=nearest,limit=1,distance=..1] 1004.5 31 -6034.5 0 0
+execute positioned 1008.5 32 -6033.5 run tp @e[type=minecraft:villager,sort=nearest,limit=1,distance=..1] 1008.5 32 -6033.5 0 0
+
 # funny fall thing
 execute if score !bones currentGame matches 1 as @a if score @s fall matches 900.. run function main:fallen
 scoreboard players reset * fall
