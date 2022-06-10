@@ -92,7 +92,7 @@ execute if score .main killGames matches 1.. run scoreboard objectives remove ki
 
 # teamScore (this looks like crap lmao -Cos)
 #  This is on hold for right now, this shit is breaking my mind
-function main:teamscore
+function main:score/teamscore
 
 # statue score npc display
 execute if score .redPos teamScores matches 1 run data modify entity @e[type=armor_stand,limit=1,tag=place1] CustomName set value '[{"text":"Red: ","color":"red"},{"score":{"name":".redPos","objective":"teamScores"},"color":"gold"}]'

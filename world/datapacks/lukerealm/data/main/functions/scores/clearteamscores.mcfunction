@@ -1,7 +1,6 @@
 # Description: permanantly removes all team scores
 # Author: Cosmelon
-# Type: 
-# @s = <executor> (can be omitted when not used)
+# Type: single, manual
 # run from <manual>
 
 scoreboard players set .red teamScores 0
