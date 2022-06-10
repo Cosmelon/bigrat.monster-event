@@ -34,7 +34,6 @@ tag @a[team=Yellow] add player
 tag @a[team=Admin] remove player
 tag @a[team=Spectator] remove player
 team join Spectator @a[team=]
-tag @a[team=Spectator,team=Admin] remove red-1
 
 # teamCheck
 execute store result score .red teamCheck if entity @a[team=Red]
@@ -127,8 +126,8 @@ execute if score !bones currentGame matches 1 as @a if score @s fall matches 900
 scoreboard players reset * fall
 
 # lobbytick
-execute if score .lobby currentGame matches 1 if score !lobbyEff currentGame matches 1 run effect give @a weakness 100000 100 true
-execute if score .lobby currentGame matches 1 if score !lobbyEff currentGame matches 1 run effect give @a saturation 100000 100 true
+execute if score .lobby currentGame matches 1 if score !lobbyEff currentGame matches 1 run effect give @a weakness 10000 100 true
+execute if score .lobby currentGame matches 1 if score !lobbyEff currentGame matches 1 run effect give @a saturation 10000 100 true
 
 # spleeftick
 execute if score $gameActive spleef matches 1 run function main:spleef/sptick
