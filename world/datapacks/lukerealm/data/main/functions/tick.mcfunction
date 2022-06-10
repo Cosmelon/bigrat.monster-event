@@ -34,6 +34,7 @@ tag @a[team=Yellow] add player
 tag @a[team=Admin] remove player
 tag @a[team=Spectator] remove player
 team join Spectator @a[team=]
+tag @a[team=Spectator,team=Admin] remove red-1
 
 # teamCheck
 execute store result score .red teamCheck if entity @a[team=Red]
@@ -110,10 +111,10 @@ execute if score .greenPos teamScores matches 2 run data modify entity @e[type=a
 execute if score .greenPos teamScores matches 3 run data modify entity @e[type=armor_stand,limit=1,tag=place3] CustomName set value '[{"text":"Green: ","color":"green"},{"score":{"name":".green","objective":"teamScores"},"color":"gold"}]'
 execute if score .greenPos teamScores matches 4 run data modify entity @e[type=armor_stand,limit=1,tag=place4] CustomName set value '[{"text":"Green: ","color":"green"},{"score":{"name":".green","objective":"teamScores"},"color":"gold"}]'
 
-execute if score .yellowPos teamScores matches 1 run data modify entity @e[type=armor_stand,limit=1,tag=place1] CustomName set value '[{"text":"Yellow: ","color":"yellow"},{"score":{"name": .yellow","objective":"teamScores"},"color":"gold"}]'
-execute if score .yellowPos teamScores matches 2 run data modify entity @e[type=armor_stand,limit=1,tag=place2] CustomName set value '[{"text":"Yellow: ","color":"yellow"},{"score":{"name": .yellow","objective":"teamScores"},"color":"gold"}]'
-execute if score .yellowPos teamScores matches 3 run data modify entity @e[type=armor_stand,limit=1,tag=place3] CustomName set value '[{"text":"Yellow: ","color":"yellow"},{"score":{"name": .yellow","objective":"teamScores"},"color":"gold"}]'
-execute if score .yellowPos teamScores matches 4 run data modify entity @e[type=armor_stand,limit=1,tag=place4] CustomName set value '[{"text":"Yellow: ","color":"yellow"},{"score":{"name": .yellow","objective":"teamScores"},"color":"gold"}]'
+execute if score .yellowPos teamScores matches 1 run data modify entity @e[type=armor_stand,limit=1,tag=place1] CustomName set value '[{"text":"Yellow: ","color":"yellow"},{"score":{"name":".yellow","objective":"teamScores"},"color":"gold"}]'
+execute if score .yellowPos teamScores matches 2 run data modify entity @e[type=armor_stand,limit=1,tag=place2] CustomName set value '[{"text":"Yellow: ","color":"yellow"},{"score":{"name":".yellow","objective":"teamScores"},"color":"gold"}]'
+execute if score .yellowPos teamScores matches 3 run data modify entity @e[type=armor_stand,limit=1,tag=place3] CustomName set value '[{"text":"Yellow: ","color":"yellow"},{"score":{"name":".yellow","objective":"teamScores"},"color":"gold"}]'
+execute if score .yellowPos teamScores matches 4 run data modify entity @e[type=armor_stand,limit=1,tag=place4] CustomName set value '[{"text":"Yellow: ","color":"yellow"},{"score":{"name":".yellow","objective":"teamScores"},"color":"gold"}]'
 
 # villager wrangler
 execute positioned 996.5 29 -6034.5 run tp @e[type=minecraft:villager,sort=nearest,limit=1,distance=..1] 996.5 29 -6034.5 0 0
@@ -126,8 +127,8 @@ execute if score !bones currentGame matches 1 as @a if score @s fall matches 900
 scoreboard players reset * fall
 
 # lobbytick
-execute if score .lobby currentGame matches 1 if score !lobbyEff currentGame matches 1 run effect give @a weakness 10000 100 true
-execute if score .lobby currentGame matches 1 if score !lobbyEff currentGame matches 1 run effect give @a saturation 10000 100 true
+execute if score .lobby currentGame matches 1 if score !lobbyEff currentGame matches 1 run effect give @a weakness 100000 100 true
+execute if score .lobby currentGame matches 1 if score !lobbyEff currentGame matches 1 run effect give @a saturation 100000 100 true
 
 # spleeftick
 execute if score $gameActive spleef matches 1 run function main:spleef/sptick
