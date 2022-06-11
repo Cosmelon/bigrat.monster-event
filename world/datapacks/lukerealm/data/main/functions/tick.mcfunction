@@ -110,10 +110,10 @@ execute if score .greenPos teamScores matches 2 run data modify entity @e[type=a
 execute if score .greenPos teamScores matches 3 run data modify entity @e[type=armor_stand,limit=1,tag=place3] CustomName set value '[{"text":"Green: ","color":"green"},{"score":{"name":".greenScore","objective":"teamScores"},"color":"gold"}]'
 execute if score .greenPos teamScores matches 4 run data modify entity @e[type=armor_stand,limit=1,tag=place4] CustomName set value '[{"text":"Green: ","color":"green"},{"score":{"name":".greenScore","objective":"teamScores"},"color":"gold"}]'
 
-execute if score .yellowPos teamScores matches 1 run data modify entity @e[type=armor_stand,limit=1,tag=place1] CustomName set value '[{"text":"Yellow: ","color":"yellow"},{"score":{"name": .yellowPos","objective":"teamScores"},"color":"gold"}]'
-execute if score .yellowPos teamScores matches 2 run data modify entity @e[type=armor_stand,limit=1,tag=place2] CustomName set value '[{"text":"Yellow: ","color":"yellow"},{"score":{"name": .yellowPos","objective":"teamScores"},"color":"gold"}]'
-execute if score .yellowPos teamScores matches 3 run data modify entity @e[type=armor_stand,limit=1,tag=place3] CustomName set value '[{"text":"Yellow: ","color":"yellow"},{"score":{"name": .yellowPos","objective":"teamScores"},"color":"gold"}]'
-execute if score .yellowPos teamScores matches 4 run data modify entity @e[type=armor_stand,limit=1,tag=place4] CustomName set value '[{"text":"Yellow: ","color":"yellow"},{"score":{"name": .yellowPos","objective":"teamScores"},"color":"gold"}]'
+execute if score .yellowPos teamScores matches 1 run data modify entity @e[type=armor_stand,limit=1,tag=place1] CustomName set value '[{"text":"Yellow: ","color":"yellow"},{"score":{"name":".yellowPos","objective":"teamScores"},"color":"gold"}]'
+execute if score .yellowPos teamScores matches 2 run data modify entity @e[type=armor_stand,limit=1,tag=place2] CustomName set value '[{"text":"Yellow: ","color":"yellow"},{"score":{"name":".yellowPos","objective":"teamScores"},"color":"gold"}]'
+execute if score .yellowPos teamScores matches 3 run data modify entity @e[type=armor_stand,limit=1,tag=place3] CustomName set value '[{"text":"Yellow: ","color":"yellow"},{"score":{"name":".yellowPos","objective":"teamScores"},"color":"gold"}]'
+execute if score .yellowPos teamScores matches 4 run data modify entity @e[type=armor_stand,limit=1,tag=place4] CustomName set value '[{"text":"Yellow: ","color":"yellow"},{"score":{"name":".yellowPos","objective":"teamScores"},"color":"gold"}]'
 
 # funny fall thing
 execute if score !bones currentGame matches 1 as @a if score @s fall matches 900.. run function main:fallen
