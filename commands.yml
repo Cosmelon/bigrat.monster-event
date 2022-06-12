@@ -35,8 +35,6 @@ aliases:
   - function main:spleef/startspleef
   killspleef:
   - function main:spleef/killspleef
-  reloadspleef:
-  - function main:spleef/reloadfloor
   startrace:
   - function main:race/startrace
   killrace:
