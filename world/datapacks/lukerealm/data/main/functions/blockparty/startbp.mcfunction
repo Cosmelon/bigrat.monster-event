@@ -24,6 +24,7 @@ scoreboard players set ?notifYellowDead blockParty 0
 scoreboard players set ?stop bpTimer -2000
 scoreboard players set ?colorTT bpTimer 64
 scoreboard players set ?removeFloor bpFloor -60
+scoreboard players set ?floorNum bpFloor 0
 scoreboard players reset * bpDeaths
 tag @a[tag=player] add bpAlive
 scoreboard players set @a[tag=player] bpDeaths 0
@@ -49,7 +50,7 @@ bossbar set minecraft:bproundcount visible true
 # randomizers set
 scoreboard players set ?in bpFloor 1
 scoreboard players set ?in1 bpFloor 34
-function main:blockparty/floorrng/range
+function main:blockparty/floorrng/floors
 
 scoreboard players set ?in bpTimer 40
 scoreboard players set ?in1 bpTimer 200
