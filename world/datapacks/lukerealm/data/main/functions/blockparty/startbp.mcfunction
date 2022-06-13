@@ -16,18 +16,13 @@ scoreboard players set .lobby currentGame 0
 scoreboard players set ?gameActive blockParty 1
 scoreboard players set ?round blockParty 1
 scoreboard players set ?floorSwitch blockParty 0
-scoreboard players set ?microTick blockParty 0
 scoreboard players set ?countDown blockParty 400
 scoreboard players set ?notifRedDead blockParty 0
 scoreboard players set ?notifBlueDead blockParty 0
 scoreboard players set ?notifGreenDead blockParty 0
 scoreboard players set ?notifYellowDead blockParty 0
-scoreboard players set ?stopSec bpStop -100
-scoreboard players set ?tick bpStop 0
-scoreboard players set ?random blockParty 0
 scoreboard players set ?stop bpTimer -2000
-scoreboard players set ?in1 bpTimer 200
-scoreboard players set ?colorTT bpTimer 25
+scoreboard players set ?colorTT bpTimer 64
 scoreboard players set ?removeFloor bpFloor -60
 scoreboard players reset * bpDeaths
 tag @a[tag=player] add bpAlive
@@ -50,6 +45,17 @@ item replace entity @a[team=Blue] armor.feet with leather_boots{display:{color:2
 item replace entity @a[team=Green] armor.feet with leather_boots{display:{color:1208897},Unbreakable:1b,Enchantments:[{id:"binding_curse",lvl:1}],HideFlags:123}
 item replace entity @a[team=Yellow] armor.feet with leather_boots{display:{color:16777000},Unbreakable:1b,Enchantments:[{id:"binding_curse",lvl:1}],HideFlags:123}
 bossbar set minecraft:bproundcount visible true
+
+# randomizers set
+scoreboard players set ?in bpFloor 1
+scoreboard players set ?in1 bpFloor 34
+function main:blockparty/floorrng/range
+
+scoreboard players set ?in bpTimer 40
+scoreboard players set ?in1 bpTimer 200
+
+scoreboard players set ?in bpColor 1
+scoreboard players set ?in1 bpColor 9
 
 # player spreader
 # upgraded to three passes using this bullshit boilerplate fuckery
