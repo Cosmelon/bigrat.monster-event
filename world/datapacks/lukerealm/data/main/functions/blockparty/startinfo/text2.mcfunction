@@ -9,8 +9,8 @@ tellraw @a ""
 tellraw @a {"text":"When the music starts, start shmoovin!"}
 tellraw @a ""
 tellraw @a ""
-tellraw @a {"text":"When the music stops... watch out!"}
-tellraw @a {"text":"A color will be randomly picked and you must stand on that color or risk falling!"}
+tellraw @a {"text":"When the music stops... watch out! A color will be randomly picked,"}
+tellraw @a {"text":"  but everything else will vanish!"}
 tellraw @a ""
 tellraw @a ""
 tellraw @a [{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-6"},{"text":"\uE004"}]
