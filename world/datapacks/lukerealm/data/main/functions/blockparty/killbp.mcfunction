@@ -19,7 +19,7 @@ scoreboard players set ?floorNum bpFloor 0
 scoreboard players reset * bpDeaths
 stopsound @a
 bossbar set minecraft:bproundcount visible false
-schedule clear main:blockparty/start
+schedule clear main:blockparty/startbp
 schedule clear main:returnlobby
 schedule clear main:lobby
 kill @e[name="?music"]

@@ -10,6 +10,9 @@
 #  spleef_sb - tracks snowballs
 #  spleefBorder - worldborder stuff
 
+# game repeat fix
+execute if score .red teamCheck matches 0 if score .blue teamCheck matches 0 if score .green teamCheck matches 0 if score .yellow teamCheck matches 0 run function main:spleef/killspleef
+
 # prevents players from going out of the arena
 execute positioned -496 45 -461 run tp @a[gamemode=spectator,team=!Admin,distance=40..70] -497 69 -461
 effect give @a[gamemode=spectator,tag=!noNV] night_vision 10000 1 true
