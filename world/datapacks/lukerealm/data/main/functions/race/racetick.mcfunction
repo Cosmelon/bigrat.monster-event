@@ -120,6 +120,9 @@ execute if score !gateShut race matches 0 run bossbar set minecraft:racegateshut
 bossbar set minecraft:racegateopen players @a[tag=gate]
 bossbar set minecraft:racegateshut players @a[tag=gate]
 
+# game end condition when all players have finished
+execute if entity @a[tag=player,scores={raceLap=4..}] run function main:race/finish
+
 # spectator anti-spoil
 execute positioned 310 100 0 run tp @a[team=!Admin,gamemode=spectator,distance=175..] 310 100 0
 tellraw @a[team=!Admin,gamemode=spectator,distance=175..] {"text":"No peaking!","color":"dark_gray"}

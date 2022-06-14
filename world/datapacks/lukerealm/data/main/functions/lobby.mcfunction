@@ -3,10 +3,25 @@
 # Type: single
 # run from all win functions
 
+# fadeout
+title @a times 20 20 20
+title @a title "\uE000"
+
 time set 12750
 tp @a 1000.5 28 -6000.5
 spawnpoint @a 1000 28 -6000
 setworldspawn 1000 28 -6000
+effect clear @a
+clear @a[team=!Admin]
+title @a title ""
+title @a subtitle ""
+title @a actionbar ""
+gamemode adventure @a
+worldborder set 6000000 1
+worldborder center 0 0
+tag @a remove lobbyPVP
+
+# player spreader @ spawn
 summon armor_stand 1000.5 27.5 -6000.5 {NoGravity:1b,CustomName:'{"text":".midL"}'}
 execute positioned 1000.5 28 -6000.5 run tp @a[tag=player,limit=1,sort=random,distance=..1] 1000.5 28 -5996.5 facing entity @e[limit=1,sort=nearest,name=".midL"]
 execute positioned 1000.5 28 -6000.5 run tp @a[tag=player,limit=1,sort=random,distance=..1] 996.5 28 -6000.5 facing entity @e[limit=1,sort=nearest,name=".midL"]
@@ -29,15 +44,6 @@ execute positioned 1000.5 28 -6000.5 run tp @a[tag=!player,limit=1,sort=random,d
 execute positioned 1000.5 28 -6000.5 run tp @a[tag=!player,limit=1,sort=random,distance=..5] 1007.5 28 -6000.5 facing entity @a[limit=1,sort=nearest,name=".midL"]
 execute positioned 1000.5 28 -6000.5 run tp @a[tag=!player,limit=1,sort=random,distance=..5] 1000.5 28 -5993.5 facing entity @e[limit=1,sort=nearest,name=".midL"]
 kill @e[limit=1,name=".midL"]
-effect clear @a
-clear @a[team=!Admin]
-title @a title ""
-title @a subtitle ""
-title @a actionbar ""
-gamemode adventure @a
-worldborder set 6000000 1
-worldborder center 0 0
-tag @a remove lobbyPVP
 
 # npc insurance
 data modify entity @e[type=armor_stand,tag=tScoreNPC,limit=1] Invisible set value 1b

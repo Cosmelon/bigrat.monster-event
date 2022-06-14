@@ -90,3 +90,6 @@ scoreboard players set @s raceMin 0
 scoreboard players add @s raceLap 1
 scoreboard players set @s raceCP 0
 execute unless score @s raceLap matches 3.. run scoreboard players set @s racePos 0
+
+# custom sound
+execute as @a run playsound minecraft:custom.race/lap voice @s ~ ~ ~ 100000 1.2
