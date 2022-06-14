@@ -31,3 +31,4 @@ gamemode spectator @a[team=!Admin]
 
 # solution to infinite game repeat problem
 execute if score .red teamCheck matches 0 if score .blue teamCheck matches 0 if score .green teamCheck matches 1.. if score .yellow teamCheck matches 0 run function main:spleef/killspleef
+execute if score .red teamCheck matches 0 if score .blue teamCheck matches 0 if score .green teamCheck matches 0 if score .yellow teamCheck matches 0 run function main:spleef/killspleef
