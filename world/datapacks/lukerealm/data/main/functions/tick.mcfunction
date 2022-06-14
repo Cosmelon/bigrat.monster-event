@@ -14,7 +14,7 @@ execute if score ?gameActive blockParty matches 0 run scoreboard players set .bl
 execute if score ?gameActive blockParty matches 1 run scoreboard players set .blockParty currentGame 1
 
 # manage lobby when games are inactive
-execute if score $gameActive spleef matches 0 if score !gameActive race matches 0 if score ~gameActive sg matches 0 if score ?gameActive blockParty matches 0 run spawnpoint @a 1000 28 -6000
+execute if score $gameActive spleef matches 0 if score !gameActive race matches 0 if score ~gameActive sg matches 0 if score ?gameActive blockParty matches 0 run spawnpoint @a[tag=!lobbyPVP] 1000 28 -6000
 execute if score $gameActive spleef matches 0 if score !gameActive race matches 0 if score ~gameActive sg matches 0 if score ?gameActive blockParty matches 0 run setworldspawn 1000 28 -6000
 execute if score $gameActive spleef matches 0 if score !gameActive race matches 0 if score ~gameActive sg matches 0 if score ?gameActive blockParty matches 0 run scoreboard players set .lobby currentGame 1
 
@@ -102,8 +102,26 @@ execute if score !bones currentGame matches 1 as @a if score @s fall matches 900
 scoreboard players reset * fall
 
 # lobbytick
-execute if score .lobby currentGame matches 1 if score !lobbyEff currentGame matches 1 run effect give @a weakness 10000 100 true
-execute if score .lobby currentGame matches 1 if score !lobbyEff currentGame matches 1 run effect give @a saturation 10000 100 true
+execute if score .lobby currentGame matches 1 if score !lobbyEff currentGame matches 1 run effect give @a[tag=!lobbyPVP] weakness 10000 100 true
+execute if score .lobby currentGame matches 1 if score !lobbyEff currentGame matches 1 run effect give @a[tag=!lobbyPVP] saturation 10000 100 true
+
+
+# lobby slap box
+tag @a[x=993.5,dx=13,y=30,dy=4,z=-5969.5,dz=13] add lobbyPVP
+spawnpoint @a[tag=lobbyPVP] 1000 28 -5973 0
+title @a[tag=lobbyPVP] actionbar {"text":"You in the slap box, slap box","color":"dark_red"}
+effect clear @a[tag=lobbyPVP] saturation
+effect clear @a[tag=lobbyPVP] weakness
+item replace entity @a[tag=lobbyPVP,nbt=!{Inventory:[{id:"minecraft:stick"}]}] hotbar.1 with stick{display:{Name:'[{"text":"Kinda sticky...","italic":false}]'},Enchantments:[{id:"minecraft:knockback",lvl:2}],HideFlags:27}
+kill @e[x=993.5,dx=13,y=30,dy=4,z=-5969.5,dz=13,type=item,nbt={Item:{id:"minecraft:stick"}}]
+
+#   remove tag from users outside the slap box
+tag @a[x=993.5,dx=-100000] remove lobbyPVP
+tag @a[x=1007.5,dx=100000] remove lobbyPVP
+tag @a[z=-5955.5,dz=100000] remove lobbyPVP
+tag @a[z=-5969.5,dz=-100000] remove lobbyPVP
+execute as @a[tag=!lobbyPVP] run clear @s stick{display:{Name:'[{"text":"Kinda sticky...","italic":false}]'}}
+
 
 # spleeftick
 execute if score $gameActive spleef matches 1 run function main:spleef/sptick

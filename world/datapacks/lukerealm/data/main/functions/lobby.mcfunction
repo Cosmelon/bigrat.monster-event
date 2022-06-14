@@ -1,6 +1,8 @@
-# returns players to lobby
-#  3/25 note: Hi it's me. Going to have to go through this and make it look better in the future.
-#  For instance, a lot of these commands should be included in their respective games and not in this more central function
+# Description: returns all users to the lobby
+# Author: Cosmelon
+# Type: single
+# run from all win functions
+
 time set 12750
 tp @a 1000.5 28 -6000.5
 spawnpoint @a 1000 28 -6000
@@ -35,6 +37,7 @@ title @a actionbar ""
 gamemode adventure @a
 worldborder set 6000000 1
 worldborder center 0 0
+tag @a remove lobbyPVP
 
 # npc insurance
 data modify entity @e[type=armor_stand,tag=tScoreNPC,limit=1] Invisible set value 1b
