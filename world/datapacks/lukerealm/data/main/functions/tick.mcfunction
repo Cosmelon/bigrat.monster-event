@@ -109,10 +109,11 @@ execute if score .lobby currentGame matches 1 if score !lobbyEff currentGame mat
 # lobby slap box
 tag @a[x=993.5,dx=13,y=30,dy=4,z=-5969.5,dz=13] add lobbyPVP
 spawnpoint @a[tag=lobbyPVP] 1000 28 -5973 0
-title @a[tag=lobbyPVP] actionbar {"text":"You in the slap box, slap box","color":"dark_red"}
+title @a[tag=lobbyPVP] times 0 100 2
+title @a[tag=lobbyPVP] actionbar {"text":"You in the slap box, slap box","color":"gold"}
 effect clear @a[tag=lobbyPVP] saturation
 effect clear @a[tag=lobbyPVP] weakness
-item replace entity @a[tag=lobbyPVP,nbt=!{Inventory:[{id:"minecraft:stick"}]}] hotbar.1 with stick{display:{Name:'[{"text":"Kinda sticky...","italic":false}]'},Enchantments:[{id:"minecraft:knockback",lvl:2}],HideFlags:27}
+item replace entity @a[tag=lobbyPVP,nbt=!{Inventory:[{id:"minecraft:stick"}]}] hotbar.0 with stick{display:{Name:'[{"text":"Kinda sticky...","italic":false}]'},Enchantments:[{id:"minecraft:knockback",lvl:2}],HideFlags:27}
 kill @e[x=993.5,dx=13,y=30,dy=4,z=-5969.5,dz=13,type=item,nbt={Item:{id:"minecraft:stick"}}]
 
 #   remove tag from users outside the slap box
