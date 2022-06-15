@@ -18,3 +18,31 @@ tellraw @a [{"text":"4th","color":"#FFFFFF"},{"text":" - ","color":"white"},{"se
 tellraw @a [{"text":"5th","color":"#FFFFFF"},{"text":" - ","color":"white"},{"selector":"@a[scores={racePos=5}]"}]
 tellraw @a [{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-6"},{"text":"\uE004"}]
 execute as @a[tag=player] run tellraw @s [{"text":"You placed "},{"score":{"name":"@s","objective":"racePos"},"color":"green"},{"text":"/","color":"gold"},{"score":{"name":".players","objective":"teamCheck"}}]
+
+# kills race
+scoreboard players set !gameActive race 0
+scoreboard players set !countDown race 1800
+scoreboard players set !gateOpen race 100
+scoreboard players set !gateShut race 0
+scoreboard players set !milli race 0
+scoreboard players set !raceTime raceMilli 0
+scoreboard players set !raceTime raceSec 0
+scoreboard players set !raceTime raceMin 0
+scoreboard players set @a raceMilli 0
+scoreboard players set @a raceSec 0
+scoreboard players set @a raceMin 0
+scoreboard players set @a raceCP 0
+scoreboard players set @a raceLap 0
+scoreboard players reset * racePos
+effect clear @a
+clear @a[team=!Admin]
+title @a actionbar ""
+title @a title ""
+bossbar set minecraft:racetime visible false
+schedule clear main:race/finish
+schedule clear main:lobby
+schedule clear main:returnlobby
+tag @a remove candidateAbstract
+
+# get rid of the cinematic armor stand
+kill @e[type=armor_stand,name="!raceCine"]
