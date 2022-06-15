@@ -130,3 +130,20 @@ execute if score .yellow teamScores > .blue teamScores if score .blue teamScores
 execute if score .yellow teamScores > .blue teamScores if score .blue teamScores > .green teamScores if score .green teamScores > .red teamScorees run scoreboard players set .bluePos teamScores 2
 execute if score .yellow teamScores > .blue teamScores if score .blue teamScores > .green teamScores if score .green teamScores > .red teamScorees run scoreboard players set .greenPos teamScores 3
 execute if score .yellow teamScores > .blue teamScores if score .blue teamScores > .green teamScores if score .green teamScores > .red teamScorees run scoreboard players set .redPos teamScores 4
+
+tag @a[tag=!player] remove red-1
+tag @a[tag=!player] remove red-2
+tag @a[tag=!player] remove red-3
+tag @a[tag=!player] remove red-4
+tag @a[tag=!player] remove blue-1
+tag @a[tag=!player] remove blue-2
+tag @a[tag=!player] remove blue-3
+tag @a[tag=!player] remove blue-4
+tag @a[tag=!player] remove green-1
+tag @a[tag=!player] remove green-2
+tag @a[tag=!player] remove green-3
+tag @a[tag=!player] remove green-4
+tag @a[tag=!player] remove yellow-1
+tag @a[tag=!player] remove yellow-2
+tag @a[tag=!player] remove yellow-3
+tag @a[tag=!player] remove yellow-4
