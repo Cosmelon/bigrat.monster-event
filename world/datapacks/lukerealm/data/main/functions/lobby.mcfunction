@@ -3,15 +3,14 @@
 # Type: single
 # run from all win functions
 
-# fadeout
 title @a times 20 20 20
 title @a title "\uE000"
+effect give @a slowness 3 10 true
 
 time set 12750
 tp @a 1000.5 28 -6000.5
 spawnpoint @a 1000 28 -6000
 setworldspawn 1000 28 -6000
-effect clear @a
 clear @a[team=!Admin]
 title @a title ""
 title @a subtitle ""
