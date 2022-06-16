@@ -14,7 +14,7 @@ scoreboard objectives add bpDeaths deathCount
 # set values for scoreboards
 scoreboard players set .lobby currentGame 0
 scoreboard players set ?gameActive blockParty 1
-scoreboard players set ?round blockParty 1
+scoreboard players add ?round blockParty 1
 scoreboard players set ?floorSwitch blockParty 0
 scoreboard players set ?countDown blockParty 400
 scoreboard players set ?notifRedDead blockParty 0
@@ -24,7 +24,8 @@ scoreboard players set ?notifYellowDead blockParty 0
 scoreboard players set ?stop bpTimer -2000
 scoreboard players set ?colorTT bpTimer 64
 scoreboard players set ?removeFloor bpFloor -60
-scoreboard players set ?floorNum bpFloor 0
+scoreboard players set ?removeStage bpFloor 1
+scoreboard players set ?floorNum bpFloor 1
 scoreboard players reset * bpDeaths
 tag @a[tag=player] add bpAlive
 scoreboard players set @a[tag=player] bpDeaths 0
