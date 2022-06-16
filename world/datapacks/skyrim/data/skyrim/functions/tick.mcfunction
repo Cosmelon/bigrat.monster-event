@@ -1,1 +1,0 @@
-execute as @a[tag=play1182484095] at @s run function skyrim:playing
