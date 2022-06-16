@@ -33,9 +33,9 @@ execute if score ?floorSwitch blockParty matches 1 run function main:blockparty/
 # removes the blocks
 #  ?removeFloor starts out at -60, but over time it gradually increases until its hard stop at -10
 execute if score ?stop bpTimer = ?removeFloor bpFloor run function main:blockparty/floorrng/removefloor
-execute if score ?stop bpTimer matches -149 unless score ?removeFloor bpFloor matches -10.. if score ?removeStage bpFloor matches 3 run scoreboard players add ?removeFloor bpFloor 10
-execute if score ?stop bpTimer matches -149 run scoreboard players add ?removeStage bpFloor 1 
-execute if score ?stop bpTimer matches -149 if score ?removeStage bpFloor matches 3 run scoreboard players set ?removeStage bpFloor 1
+execute if score ?stop bpTimer matches -149 run scoreboard players add ?removeStage bpFloor 1
+execute if score ?removeStage bpFloor matches 3 unless score ?removeFloor bpFloor matches -10.. run scoreboard players add ?removeFloor bpFloor 10
+execute if score ?removeStage bpFloor matches 3 run scoreboard players set ?removeStage bpFloor 1
 # get rid of blocks in player inventory when inactive color randomizer
 execute if score ?stop bpTimer matches 25.. as @a[tag=bpAlive] run function main:blockparty/removeblockitems
 
