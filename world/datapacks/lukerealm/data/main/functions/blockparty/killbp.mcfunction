@@ -4,7 +4,7 @@
 # run from <manual>
 
 scoreboard players set ?gameActive blockParty 0
-scoreboard players set ?round blockParty 1
+scoreboard players set ?round blockParty 0
 scoreboard players set ?floorSwitch blockParty 0
 scoreboard players set ?microTick blockParty 0
 scoreboard players set ?countDown blockParty 400
@@ -19,6 +19,7 @@ scoreboard players set ?floorNum bpFloor 0
 scoreboard players reset * bpDeaths
 stopsound @a
 bossbar set minecraft:bproundcount visible false
+schedule clear main:blockparty/bpmusic
 schedule clear main:blockparty/startbp
 schedule clear main:returnlobby
 schedule clear main:lobby

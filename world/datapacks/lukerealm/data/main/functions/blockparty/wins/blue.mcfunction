@@ -4,7 +4,6 @@
 # run from main:blockparty/bptick when all players on other teams besides blue == 0
 
 scoreboard players set ?gameActive blockParty 0
-scoreboard players add ?round blockParty 1
 scoreboard players reset * bpDeaths
 tag @a remove bpAlive
 tag @a remove bpDead
@@ -19,6 +18,7 @@ execute if score ?round blockParty matches 3 run schedule function main:returnlo
 function main:blockparty/floorrng/floors
 execute at @a as @a run playsound minecraft:entity.wither.death master @s ~ ~ ~ 10
 bossbar set minecraft:bproundcount visible false
+schedule clear main:blockparty/bpmusic
 
 # workaround for infinite game repeat
 execute if score .red teamCheck matches 0 if score .blue teamCheck matches 1.. if score .green teamCheck matches 0 if score .yellow teamCheck matches 0 run function main:blockparty/killbp

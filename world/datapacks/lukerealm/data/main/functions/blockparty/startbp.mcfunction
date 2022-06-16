@@ -59,6 +59,9 @@ scoreboard players set ?in1 bpTimer 200
 scoreboard players set ?in bpColor 1
 scoreboard players set ?in1 bpColor 9
 
+# music schedule (needs to be replaced in future
+schedule function main:blockparty/bpmusic 400t
+
 # player spreader
 # upgraded to three passes using this bullshit boilerplate fuckery
 tp @a -2000.5 57 3000.5
