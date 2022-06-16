@@ -117,6 +117,7 @@ item replace entity @a[tag=lobbyPVP,nbt=!{Inventory:[{id:"minecraft:stick"}]}] h
 kill @e[x=993.5,dx=13,y=30,dy=4,z=-5969.5,dz=13,type=item,nbt={Item:{id:"minecraft:stick"}}]
 
 #   remove tag from users outside the slap box
+execute positioned 1000.5 31 -5962.5 run tag @a[distance=8..,tag=lobbyPVP] remove lobbyPVP
 tag @a[x=993.5,dx=-100000] remove lobbyPVP
 tag @a[x=1007.5,dx=100000] remove lobbyPVP
 tag @a[z=-5955.5,dz=100000] remove lobbyPVP
