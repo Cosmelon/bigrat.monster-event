@@ -24,3 +24,48 @@ data modify entity @e[type=villager,limit=1,tag=teamP1] CustomName set value ''
 data modify entity @e[type=villager,limit=1,tag=teamP2] CustomName set value ''
 data modify entity @e[type=villager,limit=1,tag=teamP3] CustomName set value ''
 data modify entity @e[type=villager,limit=1,tag=teamP4] CustomName set value ''
+
+
+
+# clear signs
+#dead
+data modify block 982 28 -6014 Text1 set value '[{"text":"\\uE006"}]'
+data modify block 982 28 -6014 Text2 set value '[{"text":"\\uE006"}]'
+data modify block 982 28 -6014 Text3 set value '[{"text":"\\uE006"}]'
+data modify block 982 28 -6014 Text4 set value '[{"text":"\\uE006"}]'
+
+data modify block 983 28 -6014 Text1 set value '[{"text":"\\uE006"}]'
+data modify block 983 28 -6014 Text2 set value '[{"text":"\\uE006"}]'
+data modify block 983 28 -6014 Text3 set value '[{"text":"\\uE006"}]'
+data modify block 983 28 -6014 Text4 set value '[{"text":"\\uE006"}]'
+
+data modify block 984 28 -6014 Text1 set value '[{"text":"\\uE006"}]'
+data modify block 984 28 -6014 Text2 set value '[{"text":"\\uE006"}]'
+data modify block 984 28 -6014 Text3 set value '[{"text":"\\uE006"}]'
+data modify block 984 28 -6014 Text4 set value '[{"text":"\\uE006"}]'
+
+data modify block 985 28 -6014 Text1 set value '[{"text":"\\uE006"}]'
+data modify block 985 28 -6014 Text2 set value '[{"text":"\\uE006"}]'
+data modify block 985 28 -6014 Text3 set value '[{"text":"\\uE006"}]'
+data modify block 985 28 -6014 Text4 set value '[{"text":"\\uE006"}]'
+
+#alive
+data modify block 982 28 -6013 Text1 set value '[{"text":"\\uE007"}]'
+data modify block 982 28 -6013 Text2 set value '[{"text":"\\uE007"}]'
+data modify block 982 28 -6013 Text3 set value '[{"text":"\\uE007"}]'
+data modify block 982 28 -6013 Text4 set value '[{"text":"\\uE007"}]'
+
+data modify block 983 28 -6013 Text1 set value '[{"text":"\\uE007"}]'
+data modify block 983 28 -6013 Text2 set value '[{"text":"\\uE007"}]'
+data modify block 983 28 -6013 Text3 set value '[{"text":"\\uE007"}]'
+data modify block 983 28 -6013 Text4 set value '[{"text":"\\uE007"}]'
+
+data modify block 984 28 -6013 Text1 set value '[{"text":"\\uE007"}]'
+data modify block 984 28 -6013 Text2 set value '[{"text":"\\uE007"}]'
+data modify block 984 28 -6013 Text3 set value '[{"text":"\\uE007"}]'
+data modify block 984 28 -6013 Text4 set value '[{"text":"\\uE007"}]'
+
+data modify block 985 28 -6013 Text1 set value '[{"text":"\\uE007"}]'
+data modify block 985 28 -6013 Text2 set value '[{"text":"\\uE007"}]'
+data modify block 985 28 -6013 Text3 set value '[{"text":"\\uE007"}]'
+data modify block 985 28 -6013 Text4 set value '[{"text":"\\uE007"}]'
