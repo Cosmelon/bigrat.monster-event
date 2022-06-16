@@ -46,9 +46,9 @@ execute if score ?stop bpTimer matches 0.. if score ?stop bpTimer <= ?colorTT bp
 execute if score ?stop bpTimer matches -149 if score ?colorTT bpTimer matches 4.. run scoreboard players remove ?colorTT bpTimer 4
 
 # music stuff
-execute if score ?countDown blockParty matches 0 run playsound minecraft:music_disc.chirp voice @a -2000.5 130 3000.5 10000
-execute if score ?stop bpTimer = ?removeFloor bpFloor run stopsound @a
-execute if score ?stop bpTimer matches -149 run playsound minecraft:music_disc.chirp voice @a -2000.5 130 3000.5 10000
+execute if score ?countDown blockParty matches 0 run playsound minecraft:custom.bpmusic voice @a -2000.5 130 3000.5 10000
+#execute if score ?stop bpTimer = ?removeFloor bpFloor run stopsound @a
+#execute if score ?stop bpTimer matches -149 run playsound minecraft:music_disc.chirp voice @a -2000.5 130 3000.5 10000
 
 # actionbar GUI
 #floor counter
