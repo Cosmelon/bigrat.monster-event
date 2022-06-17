@@ -20,6 +20,7 @@ execute if score ?countDown blockParty matches 0 run title @a title {"text":"Sta
 execute if score ?countDown blockParty matches 0 run playsound minecraft:block.note_block.chime master @a ^0 ^ ^ 1 1.414214 1
 execute if score ?countDown blockParty matches 0 run scoreboard players set ?floorSwitch blockParty 1
 execute if score ?countDown blockParty matches 0 run scoreboard players set ?stop bpTimer 400
+execute if score ?countDown blockParty matches 0 run fill -1988 61 2987 -2014 57 3013 air replace barrier
 execute if score ?countDown blockParty matches -40 run title @a title ""
 execute if score ?countDown blockParty matches -40 run title @a subtitle ""
 

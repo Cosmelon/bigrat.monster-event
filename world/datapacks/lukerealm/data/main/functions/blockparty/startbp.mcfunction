@@ -120,3 +120,38 @@ execute positioned -2000.5 57 3000.5 run kill @e[limit=1,distance=..10,name="?mi
 tp @a[tag=!player] -2000.5 61 3023.5
 
 summon armor_stand -2000.5 57 3000.5 {NoGravity:1b,Invisible:1b,CustomName:'{"text":"?music"}'}
+
+
+# create border wall
+fill -2004 61 2987 -1998 57 2987 barrier replace air
+fill -1997 61 2988 -1996 57 2988 barrier replace air
+fill -1995 61 2989 -1994 57 2989 barrier replace air
+fill -1993 61 2990 -1993 57 2990 barrier replace air
+fill -1992 61 2991 -1992 57 2991 barrier replace air
+fill -1991 61 2992 -1991 57 2992 barrier replace air
+fill -1990 61 2993 -1990 57 2994 barrier replace air
+fill -1989 61 2995 -1989 57 2996 barrier replace air
+fill -1988 61 2997 -1988 57 3003 barrier replace air
+fill -1989 61 3004 -1989 57 3005 barrier replace air
+fill -1990 61 3006 -1990 57 3007 barrier replace air
+fill -1991 61 3008 -1991 57 3008 barrier replace air
+fill -1992 61 3009 -1992 57 3009 barrier replace air
+fill -1993 61 3010 -1993 57 3010 barrier replace air
+fill -1994 61 3011 -1995 57 3011 barrier replace air
+fill -1996 61 3012 -1997 57 3012 barrier replace air
+fill -1998 61 3013 -2004 57 3013 barrier replace air
+fill -2005 61 3012 -2006 57 3012 barrier replace air
+fill -2007 61 3011 -2008 57 3011 barrier replace air
+fill -2009 61 3010 -2009 57 3010 barrier replace air
+fill -2010 61 3009 -2010 57 3009 barrier replace air
+fill -2011 61 3008 -2011 57 3008 barrier replace air
+fill -2012 61 3007 -2012 57 3006 barrier replace air
+fill -2013 61 3005 -2013 57 3004 barrier replace air
+fill -2014 61 3003 -2014 57 2997 barrier replace air
+fill -2013 61 2996 -2013 57 2995 barrier replace air
+fill -2012 61 2994 -2012 57 2993 barrier replace air
+fill -2011 61 2992 -2011 57 2992 barrier replace air
+fill -2010 61 2991 -2010 57 2991 barrier replace air
+fill -2009 61 2990 -2009 57 2990 barrier replace air
+fill -2008 61 2989 -2007 57 2989 barrier replace air
+fill -2006 61 2988 -2005 57 2988 barrier replace air

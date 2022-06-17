@@ -18,6 +18,7 @@ scoreboard players set ?removeFloor bpFloor -60
 scoreboard players set ?floorNum bpFloor 0
 scoreboard players reset * bpDeaths
 stopsound @a
+fill -1988 61 2987 -2014 57 3013 air replace barrier
 bossbar set minecraft:bproundcount visible false
 schedule clear main:blockparty/bpmusic
 schedule clear main:blockparty/startbp
