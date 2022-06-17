@@ -34,17 +34,24 @@ execute if score ?floorSwitch blockParty matches 1 run function main:blockparty/
 #  ?removeFloor starts out at -60, but over time it gradually increases until its hard stop at -10
 execute if score ?stop bpTimer = ?removeFloor bpFloor run function main:blockparty/floorrng/removefloor
 execute if score ?stop bpTimer matches -149 run scoreboard players add ?removeStage bpFloor 1
+
+#speed up moment
+execute if score ?removeStage bpFloor matches 4 run tellraw @a [{"text":"[","color":"dark_gray"},{"text":"BlockParty","color":"gold"},{"text":"] ","color":"dark_gray"},{"text":"» ","color":"gray"},{"text":"Speed Up!","color":"light_green"}]
+execute if score ?removeStage bpFloor matches 4 run playsound item.trident.return ambient @a -2000.5 130 3000.5 10000
+execute if score ?removeStage bpFloor matches 4 unless score ?changeFloorMax bpFloor matches ..10 run scoreboard players remove ?changeFloorMax bpFloor 2
+
 execute if score ?removeStage bpFloor matches 4 unless score ?removeFloor bpFloor matches -10.. run scoreboard players add ?removeFloor bpFloor 10
 execute if score ?removeStage bpFloor matches 4 run scoreboard players set ?removeStage bpFloor 1
 # get rid of blocks in player inventory when inactive color randomizer
 execute if score ?stop bpTimer matches 25.. as @a[tag=bpAlive] run function main:blockparty/removeblockitems
+
 
 # color picker
 #  picks what color the players must stand on to avoid falling and dying 
 #  ?colorTT bpTimer is the maximum time when the color is being decided
 #  After each round, this number is steadilly decreased, but there is a hard stop at 4
 execute if score ?stop bpTimer matches 0.. if score ?stop bpTimer <= ?colorTT bpTimer run function main:blockparty/colorrng/pickcolor
-execute if score ?stop bpTimer matches -149 if score ?colorTT bpTimer matches 4.. run scoreboard players remove ?colorTT bpTimer 4
+execute if score ?stop bpTimer matches -149 if score ?colorTT bpTimer matches 5.. run scoreboard players remove ?colorTT bpTimer 4
 
 # music stuff
 #6/16/22 -- moved to main:blockparty/bpmusic
