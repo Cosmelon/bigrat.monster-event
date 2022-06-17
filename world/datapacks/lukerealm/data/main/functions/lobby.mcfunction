@@ -3,7 +3,7 @@
 # Type: single
 # run from all win functions
 
-title @a times 20 20 20
+title @a times 0 20 20
 title @a title "\uE000"
 effect give @a slowness 3 10 true
 
@@ -12,9 +12,6 @@ tp @a 1000.5 28 -6000.5
 spawnpoint @a 1000 28 -6000
 setworldspawn 1000 28 -6000
 clear @a[team=!Admin]
-title @a title ""
-title @a subtitle ""
-title @a actionbar ""
 gamemode adventure @a
 worldborder set 6000000 1
 worldborder center 0 0
@@ -43,6 +40,7 @@ execute positioned 1000.5 28 -6000.5 run tp @a[tag=!player,limit=1,sort=random,d
 execute positioned 1000.5 28 -6000.5 run tp @a[tag=!player,limit=1,sort=random,distance=..5] 1007.5 28 -6000.5 facing entity @a[limit=1,sort=nearest,name=".midL"]
 execute positioned 1000.5 28 -6000.5 run tp @a[tag=!player,limit=1,sort=random,distance=..5] 1000.5 28 -5993.5 facing entity @e[limit=1,sort=nearest,name=".midL"]
 kill @e[limit=1,name=".midL"]
+stopsound @a * entity.armor_stand.break
 
 # npc insurance
 data modify entity @e[type=armor_stand,tag=tScoreNPC,limit=1] Invisible set value 1b

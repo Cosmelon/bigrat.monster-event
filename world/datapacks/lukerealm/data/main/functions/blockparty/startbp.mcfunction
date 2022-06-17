@@ -16,6 +16,7 @@ scoreboard players set .lobby currentGame 0
 scoreboard players set ?gameActive blockParty 1
 scoreboard players add ?round blockParty 1
 scoreboard players set ?floorSwitch blockParty 0
+scoreboard players set ?changeFloorMax bpFloor 30
 scoreboard players set ?countDown blockParty 400
 scoreboard players set ?notifRedDead blockParty 0
 scoreboard players set ?notifBlueDead blockParty 0
