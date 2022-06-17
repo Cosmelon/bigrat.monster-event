@@ -15,7 +15,7 @@ execute if score ~round sg matches 2 run schedule function main:returnlobby 3s r
 scoreboard players reset * sgDeaths
 # playsound minecraft:block.note_block.chime ambient @a ~ ~ ~ 100000 1
 scoreboard players add ~round sg 1
-execute as @a run playsound minecraft:entity.wither.death master @s ~ ~ ~ 10
+function main:sounds/gameend
 
 # bossbar visibility
 bossbar set minecraft:sgshrinkactual visible false

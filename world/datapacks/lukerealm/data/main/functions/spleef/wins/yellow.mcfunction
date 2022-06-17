@@ -25,7 +25,7 @@ schedule clear main:spleef/border/s3warn
 schedule clear main:spleef/border/removetop
 bossbar set minecraft:spleefshirinkwarn visible false
 bossbar set minecraft:spleefshrinkactual visible false
-execute as @a run playsound minecraft:entity.wither.death master @s ~ ~ ~ 10
+function main:sounds/gameend
 gamemode spectator @a[team=!Admin]
 
 

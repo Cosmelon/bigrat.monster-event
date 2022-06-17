@@ -16,7 +16,7 @@ execute unless score ?round blockParty matches 3 run title @a subtitle {"text":"
 execute unless score ?round blockParty matches 3 run schedule function main:blockparty/startbp 6s replace 
 execute if score ?round blockParty matches 3 run schedule function main:returnlobby 3s replace
 function main:blockparty/floorrng/floors
-execute at @a as @a run playsound minecraft:entity.wither.death master @s ~ ~ ~ 10
+function main:sounds/gameend
 bossbar set minecraft:bproundcount visible false
 schedule clear main:blockparty/bpmusic
 
