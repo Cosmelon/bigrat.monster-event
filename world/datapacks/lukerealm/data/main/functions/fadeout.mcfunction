@@ -3,5 +3,5 @@
 # Type: single
 # run from a LOT of places I cannot be bothered to list them all
 
-title @a times 20 100 20
+title @a times 20 120 20
 title @a title "\uE000"

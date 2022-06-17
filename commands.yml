@@ -28,7 +28,7 @@ aliases:
   buttons:
   - give @a[tag=child] spruce_button 64
   telemenu:
-  - function main:telemenu
+  - function main:tools/telemenu
   shrug:
   - execute as @s run say ¯\_(ツ)_/¯
   startspleef:
