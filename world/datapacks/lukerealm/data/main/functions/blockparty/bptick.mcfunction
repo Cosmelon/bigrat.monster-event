@@ -33,7 +33,7 @@ execute if score ?floorSwitch blockParty matches 1 run function main:blockparty/
 # removes the blocks
 #  ?removeFloor starts out at -60, but over time it gradually increases until its hard stop at -10
 execute if score ?stop bpTimer = ?removeFloor bpFloor run function main:blockparty/floorrng/removefloor
-execute if score ?stop bpTimer matches -149 run scoreboard players add ?removeStage bpFloor 1
+execute if score ?stop bpTimer matches -99 run scoreboard players add ?removeStage bpFloor 1
 
 #speed up moment
 execute if score ?removeStage bpFloor matches 4 run tellraw @a [{"text":"[","color":"dark_gray"},{"text":"BlockParty","color":"gold"},{"text":"] ","color":"dark_gray"},{"text":"» ","color":"gray"},{"text":"Speed Up!","color":"light_green"}]
@@ -51,23 +51,23 @@ execute if score ?stop bpTimer matches 25.. as @a[tag=bpAlive] run function main
 #  ?colorTT bpTimer is the maximum time when the color is being decided
 #  After each round, this number is steadilly decreased, but there is a hard stop at 4
 execute if score ?stop bpTimer matches 0.. if score ?stop bpTimer <= ?colorTT bpTimer run function main:blockparty/colorrng/pickcolor
-execute if score ?stop bpTimer matches -149 if score ?colorTT bpTimer matches 5.. run scoreboard players remove ?colorTT bpTimer 4
+execute if score ?stop bpTimer matches -99 if score ?colorTT bpTimer matches 5.. run scoreboard players remove ?colorTT bpTimer 4
 
 # music stuff
 #6/16/22 -- moved to main:blockparty/bpmusic
 
 # actionbar GUI
 #floor counter
-execute if score ?stop bpTimer matches -149 run scoreboard players add ?floorNum bpFloor 1
+execute if score ?stop bpTimer matches -99 run scoreboard players add ?floorNum bpFloor 1
 execute store result score ?aliveAll blockParty if entity @a[tag=bpAlive]
 execute if score ?countDown blockParty matches ..0 run title @a actionbar [{"text":"Round: ","color":"gold"},{"score":{"name":"?floorNum","objective":"bpFloor"},"color":"aqua"},{"text":"     Players Alive: ","color":"gold"},{"score":{"name":"?aliveAll","objective":"blockParty"},"color":"aqua"},{"text":"/","color":"green"},{"score":{"name":".players","objective":"teamCheck"}}]
 
 # timer picker
 # the idea is that a random amount of time is picked after each elimination before it stops again
-execute if score ?stop bpTimer matches -149 unless score ?in1 bpTimer matches ..65 run scoreboard players remove ?in1 bpTimer 5
+execute if score ?stop bpTimer matches -99 unless score ?in1 bpTimer matches ..65 run scoreboard players remove ?in1 bpTimer 5
 execute if score ?countDown blockParty matches ..0 run scoreboard players remove ?stop bpTimer 1
-execute if score ?stop bpTimer matches -150 run function main:blockparty/timerrng/range
-execute if score ?stop bpTimer matches -150..0 run scoreboard players set ?floorSwitch blockParty 0
+execute if score ?stop bpTimer matches -100 run function main:blockparty/timerrng/range
+execute if score ?stop bpTimer matches -100..0 run scoreboard players set ?floorSwitch blockParty 0
 execute unless score ?stop bpTimer matches ..0 run scoreboard players set ?floorSwitch blockParty 1
 
 # player counter
