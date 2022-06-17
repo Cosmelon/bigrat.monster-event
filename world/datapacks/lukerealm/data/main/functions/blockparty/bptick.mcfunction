@@ -36,7 +36,7 @@ execute if score ?stop bpTimer = ?removeFloor bpFloor run function main:blockpar
 execute if score ?stop bpTimer matches -99 run scoreboard players add ?removeStage bpFloor 1
 
 #speed up moment
-execute if score ?removeStage bpFloor matches 4 run tellraw @a [{"text":"[","color":"dark_gray"},{"text":"BlockParty","color":"gold"},{"text":"] ","color":"dark_gray"},{"text":"» ","color":"gray"},{"text":"Speed Up!","color":"light_green"}]
+execute if score ?removeStage bpFloor matches 4 run tellraw @a [{"text":"[","color":"dark_gray"},{"text":"BlockParty","color":"gold"},{"text":"] ","color":"dark_gray"},{"text":"» ","color":"gray"},{"text":"Speed Up!","color":"white"}]
 execute if score ?removeStage bpFloor matches 4 run playsound item.trident.return ambient @a -2000.5 130 3000.5 10000
 execute if score ?removeStage bpFloor matches 4 unless score ?changeFloorMax bpFloor matches ..10 run scoreboard players remove ?changeFloorMax bpFloor 2
 
