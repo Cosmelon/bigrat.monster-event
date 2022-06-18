@@ -6,8 +6,8 @@
 # color rng
 #?colorPC is short for ?colorPickCycle
 scoreboard players add ?colorPC bpColor 1
-execute if score ?colorPC bpColor matches 5.. run function main:blockparty/colorrng/range
-execute if score ?colorPC bpColor matches 5.. run scoreboard players set ?colorPC bpColor 0
+execute if score ?colorPC bpColor matches 3.. run function main:blockparty/colorrng/range
+execute if score ?colorPC bpColor matches 3.. run scoreboard players set ?colorPC bpColor 0
 
 # if <selected color> == red
 execute if score ?out bpColor matches 1 run item replace entity @a[tag=bpAlive] hotbar.0 with red_concrete{display:{Name:'[{"text":"Get on Red!","color":"red","italic":false}]'}}
