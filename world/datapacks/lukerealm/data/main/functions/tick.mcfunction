@@ -60,7 +60,7 @@ execute as @a[tag=br_rcNA] if score @s br_rcno matches 1 run trigger br_rcyes ad
 execute as @a[tag=br_rcNA] if score @s br_rcno matches 1 run tag @s remove br_rcNA
 
 # playersOnline (players will have a score of 1 when offline, 0 when online)
-execute as @a[scores={playersOnline=1..},team=!Admin] run tp @s 1000.5 28 -6000.5 0 5
+execute as @a[scores={playersOnline=1..},team=!Admin] if score .lobby currentGame matches 1 run tp @s 1000.5 28 -6000.5 0 5
 execute as @a[scores={playersOnline=1..},team=!Admin] run gamemode adventure @s
 execute as @a[scores={playersOnline=1..},team=!Admin] run clear @s
 execute as @a[scores={playersOnline=1..}] if score .spleef currentGame matches 1 run tp @s -496.5 66 -459.5 0 5

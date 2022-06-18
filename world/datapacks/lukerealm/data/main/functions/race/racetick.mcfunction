@@ -121,11 +121,12 @@ bossbar set minecraft:racegateopen players @a[tag=gate]
 bossbar set minecraft:racegateshut players @a[tag=gate]
 
 # game end condition when all players have finished
-execute if entity @a[tag=player,scores={raceLap=4}] run function main:race/finish
+execute store result score !finished racePos if entity @a[scores={raceLap=4..}]
+execute if score !finished racePos = .players teamCheck run function main:race/finish
 
 # spectator anti-spoil
 execute positioned 310 100 0 run tp @a[team=!Admin,gamemode=spectator,distance=175..] 310 100 0
-tellraw @a[team=!Admin,gamemode=spectator,distance=175..] {"text":"No peeking!","color":"dark_gray"}
+execute if score !countDown race matches ..110 run tellraw @a[team=!Admin,gamemode=spectator,distance=175..] {"text":"No peeking!","color":"dark_gray"}
 
 # speedpads (magenta_glazed_terracotta)
 execute as @a[tag=player,gamemode=adventure] run execute positioned as @s if block ~ ~-1 ~ minecraft:magenta_glazed_terracotta run effect give @s speed 2 3 true

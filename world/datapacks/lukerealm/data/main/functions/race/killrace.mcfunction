@@ -5,7 +5,7 @@
 
 # kills race
 scoreboard players set !gameActive race 0
-scoreboard players set !countDown race 1800
+scoreboard players set !countDown race 1410
 scoreboard players set !gateOpen race 100
 scoreboard players set !gateShut race 0
 scoreboard players set !milli race 0
