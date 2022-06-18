@@ -5,6 +5,6 @@
 # a = 1103515245, c = 12345
 # piggybacking off sg
 
-scoreboard players operation #lcg bpTimer *= #lcg sgConstant
+scoreboard players operation #lcg bpTimer *= #lcg bpConst
 scoreboard players add #lcg bpTimer 12345
 scoreboard players operation ?out bpTimer = #lcg bpTimer

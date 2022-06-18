@@ -9,7 +9,14 @@ scoreboard objectives add bpTimer dummy
 scoreboard objectives add bpMath dummy
 scoreboard objectives add bpColor dummy
 scoreboard objectives add bpFloor dummy
+scoreboard objectives add bpConst dummy
 scoreboard objectives add bpDeaths deathCount
+
+# set const values
+scoreboard players set #2 bpConst 2
+scoreboard players set #1000 bpConst 1000
+scoreboard players set #10000 bpConst 10000
+scoreboard players set #lcg bpConst 1103515245
 
 # set values for scoreboards
 scoreboard players set .lobby currentGame 0

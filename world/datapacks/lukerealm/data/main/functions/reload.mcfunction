@@ -1,26 +1,12 @@
 # load
 
-#sgRng
-scoreboard objectives add sg dummy
-scoreboard objectives add sgBorder dummy
-scoreboard objectives add sgDeaths deathCount
-scoreboard objectives add sgPlayers dummy
-scoreboard objectives add sgMath dummy
-scoreboard objectives add sgConstant dummy
-scoreboard players set #2 sgConstant 2
-scoreboard players set #1000 sgConstant 1000
-scoreboard players set #10000 sgConstant 10000
-scoreboard players set #lcg sgConstant 1103515245
-
-
 # scoreboard remake
-scoreboard objectives add sg dummy
-scoreboard objectives add sgBorder dummy
-
 scoreboard objectives add currentGame dummy
 scoreboard objectives add yCos dummy
 scoreboard objectives add teamCheck dummy
 scoreboard objectives add playersOnline minecraft.custom:leave_game
+scoreboard objectives add indivScore dummy
+scoreboard objectives add teamScores dummy
 
 # gamerules
 gamerule announceAdvancements false
