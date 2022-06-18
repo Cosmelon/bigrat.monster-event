@@ -4,4 +4,4 @@
 # @s = @a
 # run from 
 
-execute at @a as @a run playsound minecraft:block.stone_button.click_on neutral @s ^ ^ ^
+execute at @a as @a run playsound minecraft:block.stone_button.click_on ambient @s ^ ^ ^

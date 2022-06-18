@@ -37,13 +37,13 @@ execute if score ?stop bpTimer = ?removeFloor bpFloor run function main:blockpar
 execute if score ?stop bpTimer matches -99 run scoreboard players add ?removeStage bpFloor 1
 
 #speed up moment
-execute if score ?removeStage bpFloor matches 6 run tellraw @a [{"text":"[","color":"dark_gray"},{"text":"BlockParty","color":"gold"},{"text":"] ","color":"dark_gray"},{"text":"» ","color":"gray"},{"text":"Speed Up!","color":"white"}]
-execute if score ?removeStage bpFloor matches 6 run playsound item.trident.return ambient @a -2000.5 130 3000.5 10000
-execute if score ?removeStage bpFloor matches 6 unless score ?changeFloorMax bpFloor matches ..10 run scoreboard players remove ?changeFloorMax bpFloor 2
+execute if score ?removeStage bpFloor matches 5 run tellraw @a [{"text":"[","color":"dark_gray"},{"text":"BlockParty","color":"gold"},{"text":"] ","color":"dark_gray"},{"text":"» ","color":"gray"},{"text":"Speed Up!","color":"white"}]
+execute if score ?removeStage bpFloor matches 5 run playsound item.trident.return ambient @a -2000.5 130 3000.5 10000
+execute if score ?removeStage bpFloor matches 5 unless score ?changeFloorMax bpFloor matches ..10 run scoreboard players remove ?changeFloorMax bpFloor 2
 
-execute if score ?removeStage bpFloor matches 6 unless score ?removeFloor bpFloor matches -15.. run scoreboard players add ?removeFloor bpFloor 7
-#execute if score ?removeStage bpFloor matches 6 unless score ?removeFloor bpFloor matches 
-execute if score ?removeStage bpFloor matches 6 run scoreboard players set ?removeStage bpFloor 1
+execute if score ?removeStage bpFloor matches 5 unless score ?removeFloor bpFloor matches -15.. run scoreboard players add ?removeFloor bpFloor 8
+#execute if score ?removeStage bpFloor matches 5 unless score ?removeFloor bpFloor matches 
+execute if score ?removeStage bpFloor matches 5 run scoreboard players set ?removeStage bpFloor 1
 # get rid of blocks in player inventory when inactive color randomizer
 execute unless score ?stop bpTimer <= ?colorTT bpTimer as @a[tag=bpAlive] run function main:blockparty/colorrng/removeblockitems
 

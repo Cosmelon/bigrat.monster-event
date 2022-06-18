@@ -31,7 +31,7 @@ scoreboard players set ?notifGreenDead blockParty 0
 scoreboard players set ?notifYellowDead blockParty 0
 scoreboard players set ?stop bpTimer -2000
 scoreboard players set ?colorTT bpTimer 64
-scoreboard players set ?removeFloor bpFloor -63
+scoreboard players set ?removeFloor bpFloor -64
 scoreboard players set ?removeStage bpFloor 1
 scoreboard players set ?floorNum bpFloor 1
 scoreboard players reset * bpDeaths
