@@ -40,6 +40,6 @@ playsound minecraft:block.beacon.deactivate master @a
 
 tellraw @a ""
 tellraw @a[tag=!admin] {"text":"Killed Spleef!","color":"dark_red","bold":true}
-tellraw @a[tag=admin] {"text":"Killed Spleef! Return to lobby?","color":"dark_red","bold":true,"clickEvent":{"action":"run_command","value":"/function main:lobby"}}
+tellraw @a[tag=admin] {"text":"Killed Spleef! Return to lobby?","color":"dark_red","bold":true,"clickEvent":{"action":"run_command","value":"/function main:returnlobby"}}
 tellraw @a[tag=admin] {"text":"[Reset floor]","color":"gold","clickEvent":{"action":"run_command","value":"/function main:spleef/reloadfloor"}}
 tellraw @a ""

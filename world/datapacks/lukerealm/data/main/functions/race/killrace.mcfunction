@@ -40,5 +40,5 @@ playsound minecraft:block.beacon.deactivate master @a
 
 tellraw @a ""
 tellraw @a[tag=!admin] {"text":"Killed Race!","color":"dark_red","bold":true}
-tellraw @a[tag=admin] {"text":"Killed Race! Return to lobby?","color":"dark_red","bold":true,"clickEvent":{"action":"run_command","value":"/function main:lobby"}}
+tellraw @a[tag=admin] {"text":"Killed Race! Return to lobby?","color":"dark_red","bold":true,"clickEvent":{"action":"run_command","value":"/function main:returnlobby"}}
 tellraw @a ""
