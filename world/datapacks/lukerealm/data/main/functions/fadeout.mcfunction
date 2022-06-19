@@ -5,3 +5,4 @@
 
 title @a times 20 120 20
 title @a title "\uE000"
+effect give @a levitation 4 0 true
