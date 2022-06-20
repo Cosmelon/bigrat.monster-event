@@ -95,7 +95,10 @@ tag @a[tag=player,scores={bpDeaths=1..}] remove bpAlive
 
 # player death method
 kill @a[gamemode=adventure,tag=bpAlive,scores={yCos=40..46}]
-
+gamemode spectator @a[scores={bpDeaths=1..}]
+execute as @a if score @s bpDeaths matches 1 run scoreboard players add @a[gamemode=adventure,tag=player] indivScore 1
+execute as @a if score @s bpDeaths matches 1 run tellraw @a[gamemode=adventure,tag=player] {"text":"+1 Invividual point (Survival)","color":"green"}
+execute as @a if score @s bpDeaths matches 1 run scoreboard players add @s bpDeaths 1
 
 # death messaage
 function main:blockparty/checkdead
@@ -107,7 +110,6 @@ execute if score ?notifRedDead blockParty matches 1 if score ?notifGreenDead blo
 execute if score ?notifRedDead blockParty matches 1 if score ?notifBlueDead blockParty matches 1 if score ?notifYellowDead blockParty matches 1 run function main:blockparty/wins/green
 # yellow win
 execute if score ?notifRedDead blockParty matches 1 if score ?notifBlueDead blockParty matches 1 if score ?notifGreenDead blockParty matches 1 run function main:blockparty/wins/yellow
-
 
 # round count bossbar stuff
 execute store result bossbar minecraft:bproundcount value run scoreboard players get ?round blockParty
@@ -121,7 +123,6 @@ item replace entity @a[team=Red,nbt=!{Inventory:[{id:"minecraft:leather_boots"}]
 item replace entity @a[team=Blue,nbt=!{Inventory:[{id:"minecraft:leather_boots"}]}] armor.feet with leather_boots{display:{color:2635263},Unbreakable:1b,Enchantments:[{id:"binding_curse",lvl:1}],HideFlags:123}
 item replace entity @a[team=Green,nbt=!{Inventory:[{id:"minecraft:leather_boots"}]}] armor.feet with leather_boots{display:{color:1208897},Unbreakable:1b,Enchantments:[{id:"binding_curse",lvl:1}],HideFlags:123}
 item replace entity @a[team=Yellow,nbt=!{Inventory:[{id:"minecraft:leather_boots"}]}] armor.feet with leather_boots{display:{color:16777000},Unbreakable:1b,Enchantments:[{id:"binding_curse",lvl:1}],HideFlags:123}
-
 
 # remove xp
 xp set @a 0 levels
