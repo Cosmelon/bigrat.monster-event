@@ -4,4 +4,4 @@
 # @s = @a
 # run from 
 
-execute at @a as @a run playsound minecraft:entity.wither.death ambient @s ~ ~ ~ 10
+execute at @a as @a run playsound minecraft:entity.wither.death ambient @s ^ ^ ^ 10000
