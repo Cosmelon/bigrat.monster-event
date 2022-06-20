@@ -28,7 +28,7 @@ schedule clear main:spleef/border/shrink3
 schedule clear main:spleef/border/removetop
 bossbar set minecraft:spleefshirinkwarn visible false
 bossbar set minecraft:spleefshrinkactual visible false
-function main:sounds/gameend
+function main:sfx/gameend
 gamemode spectator @a[team=!Admin]
 
 

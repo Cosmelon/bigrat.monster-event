@@ -25,7 +25,7 @@ data modify entity @e[type=villager,limit=1,tag=teamP2] CustomName set value ''
 data modify entity @e[type=villager,limit=1,tag=teamP3] CustomName set value ''
 data modify entity @e[type=villager,limit=1,tag=teamP4] CustomName set value ''
 
-
+scoreboard players reset * indivScore
 
 # clear signs
 #dead

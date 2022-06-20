@@ -79,6 +79,7 @@ scoreboard objectives remove spleefSnowBall
 scoreboard objectives remove spleefBorder
 bossbar set minecraft:spleefroundcount visible false
 schedule clear main:spleef/border/removetop
+schedule clear main:spleef/shovelsandkb
 
 # reset stuff for race
 scoreboard objectives remove race

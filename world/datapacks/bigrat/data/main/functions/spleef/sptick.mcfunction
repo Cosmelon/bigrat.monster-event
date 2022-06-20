@@ -18,6 +18,7 @@ execute positioned -496 45 -461 run tp @a[gamemode=spectator,team=!Admin,distanc
 effect give @a[gamemode=spectator,tag=!noNV] night_vision 10000 1 true
 effect clear @a[tag=!player,gamemode=!spectator] night_vision
 effect clear @a[tag=noNV] night_vision
+effect give @a saturation 10000 0 true
 
 # roundCount bossbar sync
 execute store result bossbar minecraft:spleefroundcount value run scoreboard players get $round spleef
@@ -84,8 +85,12 @@ execute store result score $aliveYellow spleef if entity @a[team=Yellow,gamemode
 kill @a[gamemode=adventure,scores={yCos=27..30}]
 tp @a[team=!Admin,gamemode=spectator,scores={yCos=20}] -496 66 -459 -180 5
 # transfers dead players to spectator
+
 gamemode spectator @a[scores={spleefDeaths=1..}]
-execute as @a[scores={spleefDeaths=1},tag=player] run function main:spleef/death
+execute as @a if score @s spleefDeaths matches 1 run scoreboard players add @a[gamemode=adventure,tag=player] indivScore 1
+execute as @a if score @s spleefDeaths matches 1 run tellraw @a[gamemode=adventure,tag=player] {"text":"+1 Invividual point (Survival)","color":"green"}
+execute as @a if score @s spleefDeaths matches 1 run scoreboard players add @s spleefDeaths 1
+#execute as @a[scores={spleefDeaths=1},tag=player] run function main:spleef/death
 
 # does team death messaage
 function main:spleef/checkdead
