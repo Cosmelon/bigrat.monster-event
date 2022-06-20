@@ -59,7 +59,7 @@ bossbar set minecraft:bproundcount visible true
 
 # randomizers set
 scoreboard players set ?in bpFloor 1
-scoreboard players set ?in1 bpFloor 34
+scoreboard players set ?in1 bpFloor 38
 function main:blockparty/floorrng/floors
 
 scoreboard players set ?in bpTimer 40

@@ -31,20 +31,23 @@ execute if score ?round blockParty matches 1 if score ?countDown blockParty matc
 
 # Floor randomizer function when floor switcher is active
 execute if score ?floorSwitch blockParty matches 1 run function main:blockparty/floorrng/floors
+execute if score ?floorNum bpFloor matches ..10 run scoreboard players set ?in bpFloor 30
+execute if score ?floorNum bpFloor matches 11.. run scoreboard players set ?in bpFloor 1
+execute if score ?floorNum bpFloor matches 16.. run scoreboard players set ?in1 bpFloor 29
 # removes the blocks
-#  ?removeFloor starts out at -60, but over time it gradually increases until its hard stop at -10
+#  ?removeFloor starts out at -60, but over time it gradually increases until its hard stop
 execute if score ?stop bpTimer = ?removeFloor bpFloor run function main:blockparty/floorrng/removefloor
 execute if score ?stop bpTimer matches -99 run scoreboard players add ?removeStage bpFloor 1
 
 #speed up moment
-execute if score ?removeStage bpFloor matches 5 run tellraw @a [{"text":"[","color":"dark_gray"},{"text":"BlockParty","color":"gold"},{"text":"] ","color":"dark_gray"},{"text":"» ","color":"gray"},{"text":"Speed Up!","color":"white"}]
-execute if score ?removeStage bpFloor matches 5 run playsound item.trident.return ambient @a -2000.5 130 3000.5 10000
-execute if score ?removeStage bpFloor matches 5 unless score ?changeFloorMax bpFloor matches ..10 run scoreboard players remove ?changeFloorMax bpFloor 2
+execute if score ?removeStage bpFloor matches 4 run tellraw @a [{"text":"[","color":"dark_gray"},{"text":"BlockParty","color":"gold"},{"text":"] ","color":"dark_gray"},{"text":"» ","color":"gray"},{"text":"Speed Up!","color":"white"}]
+execute if score ?removeStage bpFloor matches 4 run playsound item.trident.return ambient @a -2000.5 130 3000.5 10000
+execute if score ?removeStage bpFloor matches 4 unless score ?changeFloorMax bpFloor matches ..10 run scoreboard players remove ?changeFloorMax bpFloor 2
 
-execute if score ?removeStage bpFloor matches 5 unless score ?removeFloor bpFloor matches -15.. if score ?removeFloor bpFloor matches -20.. run scoreboard players add ?removeFloor bpFloor 3 
-execute if score ?removeStage bpFloor matches 5 unless score ?removeFloor bpFloor matches -15.. if score ?removeFloor bpFloor matches -40..-21 run scoreboard players add ?removeFloor bpFloor 5
-execute if score ?removeStage bpFloor matches 5 unless score ?removeFloor bpFloor matches -15.. if score ?removeFloor bpFloor matches ..-41 run scoreboard players add ?removeFloor bpFloor 10
-execute if score ?removeStage bpFloor matches 5 run scoreboard players set ?removeStage bpFloor 1
+execute if score ?removeStage bpFloor matches 4 unless score ?removeFloor bpFloor matches -15.. if score ?removeFloor bpFloor matches -20.. run scoreboard players add ?removeFloor bpFloor 3 
+execute if score ?removeStage bpFloor matches 4 unless score ?removeFloor bpFloor matches -15.. if score ?removeFloor bpFloor matches -40..-21 run scoreboard players add ?removeFloor bpFloor 5
+execute if score ?removeStage bpFloor matches 4 unless score ?removeFloor bpFloor matches -15.. if score ?removeFloor bpFloor matches ..-41 run scoreboard players add ?removeFloor bpFloor 10
+execute if score ?removeStage bpFloor matches 4 run scoreboard players set ?removeStage bpFloor 1
 # get rid of blocks in player inventory when inactive color randomizer
 execute unless score ?stop bpTimer <= ?colorTT bpTimer as @a[tag=bpAlive] run function main:blockparty/colorrng/removeblockitems
 
@@ -55,6 +58,11 @@ execute unless score ?stop bpTimer <= ?colorTT bpTimer as @a[tag=bpAlive] run fu
 #  After each round, this number is steadilly decreased, but there is a hard stop at 4
 execute if score ?stop bpTimer matches 0.. if score ?stop bpTimer <= ?colorTT bpTimer run function main:blockparty/colorrng/pickcolor
 execute if score ?stop bpTimer matches -99 if score ?colorTT bpTimer matches 5.. run scoreboard players remove ?colorTT bpTimer 4
+
+# unused color pick code
+#execute if score ?stop bpTimer matches -99 if score ?round blockParty matches ..9 run scoreboard players add ?colorTT bpTimer 4
+#execute if score ?stop bpTimer matches -99 if score ?round blockParty matches 10..19 run scoreboard players remove ?colorTT bpTimer 4
+#execute if score ?stop bpTimer matches -99 if score ?round blockParty matches 20.. run scoreboard players add ?colorTT bpTimer 6
 
 # music stuff
 #6/16/22 -- moved to main:blockparty/bpmusic

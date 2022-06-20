@@ -47,3 +47,7 @@ execute if score ?out bpFloor matches 31 run place template main:bp/pat1/p1l31 -
 execute if score ?out bpFloor matches 32 run place template main:bp/pat1/p1l32 -2013 56 2988
 execute if score ?out bpFloor matches 33 run place template main:bp/pat1/p1l33 -2013 56 2988
 execute if score ?out bpFloor matches 34 run place template main:bp/pat1/p1l34 -2013 56 2988
+execute if score ?out bpFloor matches 35 run place template main:bp/pat1/p1l35 -2013 56 2988
+execute if score ?out bpFloor matches 36 run place template main:bp/pat1/p1l36 -2013 56 2988
+execute if score ?out bpFloor matches 37 run place template main:bp/pat1/p1l37 -2013 56 2988
+execute if score ?out bpFloor matches 38 run place template main:bp/pat1/p1l38 -2013 56 2988
