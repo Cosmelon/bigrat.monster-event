@@ -24,14 +24,15 @@ scoreboard players set ?gameActive blockParty 1
 scoreboard players add ?round blockParty 1
 scoreboard players set ?floorSwitch blockParty 0
 scoreboard players set ?changeFloorMax bpFloor 30
-scoreboard players set ?countDown blockParty 400
+execute if score ?round blockParty matches 1 run scoreboard players set ?countDown blockParty 400
+execute unless score ?round blockParty matches 1 run scoreboard players set ?countDown blockParty 100
 scoreboard players set ?notifRedDead blockParty 0
 scoreboard players set ?notifBlueDead blockParty 0
 scoreboard players set ?notifGreenDead blockParty 0
 scoreboard players set ?notifYellowDead blockParty 0
 scoreboard players set ?stop bpTimer -2000
 scoreboard players set ?colorTT bpTimer 64
-scoreboard players set ?removeFloor bpFloor -64
+scoreboard players set ?removeFloor bpFloor -60
 scoreboard players set ?removeStage bpFloor 1
 scoreboard players set ?floorNum bpFloor 1
 scoreboard players reset * bpDeaths

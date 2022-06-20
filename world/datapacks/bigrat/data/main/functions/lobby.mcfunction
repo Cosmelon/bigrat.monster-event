@@ -122,5 +122,6 @@ scoreboard objectives remove bpMath
 scoreboard objectives remove bpColor
 scoreboard objectives remove bpFloor
 scoreboard objectives remove bpDeaths
+scoreboard objectives remove bpConst
 tag @a remove bpAlive
 tag @a remove bpDead

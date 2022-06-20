@@ -19,6 +19,7 @@ function main:blockparty/floorrng/floors
 function main:sounds/gameend
 bossbar set minecraft:bproundcount visible false
 schedule clear main:blockparty/bpmusic
+stopsound @a voice
 
 # workaround for infinite game repeat
 execute if score .red teamCheck matches 1.. if score .blue teamCheck matches 0 if score .green teamCheck matches 1.. if score .yellow teamCheck matches 0 run function main:blockparty/killbp

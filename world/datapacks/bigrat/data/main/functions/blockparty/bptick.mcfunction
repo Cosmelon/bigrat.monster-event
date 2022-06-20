@@ -41,9 +41,9 @@ execute if score ?removeStage bpFloor matches 5 run tellraw @a [{"text":"[","col
 execute if score ?removeStage bpFloor matches 5 run playsound item.trident.return ambient @a -2000.5 130 3000.5 10000
 execute if score ?removeStage bpFloor matches 5 unless score ?changeFloorMax bpFloor matches ..10 run scoreboard players remove ?changeFloorMax bpFloor 2
 
-execute if score ?removeStage bpFloor matches 5 unless score ?removeFloor bpFloor matches -15.. if score ?round blockParty matches 12.. run scoreboard players add ?removeFloor bpFloor 2
-execute if score ?removeStage bpFloor matches 5 unless score ?removeFloor bpFloor matches -15.. run scoreboard players add ?removeFloor bpFloor 8
-#execute if score ?removeStage bpFloor matches 5 unless score ?removeFloor bpFloor matches 
+execute if score ?removeStage bpFloor matches 5 unless score ?removeFloor bpFloor matches -15.. if score ?removeFloor bpFloor matches -20.. run scoreboard players add ?removeFloor bpFloor 3 
+execute if score ?removeStage bpFloor matches 5 unless score ?removeFloor bpFloor matches -15.. if score ?removeFloor bpFloor matches -40..-21 run scoreboard players add ?removeFloor bpFloor 5
+execute if score ?removeStage bpFloor matches 5 unless score ?removeFloor bpFloor matches -15.. if score ?removeFloor bpFloor matches ..-41 run scoreboard players add ?removeFloor bpFloor 10
 execute if score ?removeStage bpFloor matches 5 run scoreboard players set ?removeStage bpFloor 1
 # get rid of blocks in player inventory when inactive color randomizer
 execute unless score ?stop bpTimer <= ?colorTT bpTimer as @a[tag=bpAlive] run function main:blockparty/colorrng/removeblockitems
