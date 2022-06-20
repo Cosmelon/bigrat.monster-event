@@ -31,3 +31,6 @@ scoreboard objectives remove br_rcno
 tag @a remove br_rcyes
 tag @a remove br_rcno
 tag @a remove br_rcNA
+
+# sound
+execute as @a run playsound entity.player.levelup ambient @s ^ ^ ^ 10000 

@@ -32,7 +32,7 @@ tellraw @a[tag=player] [{"text":"\uE005"},{"translate":"space.-1"},{"text":"\uE0
 tellraw @a[tag=!player] ""
 tellraw @a[tag=!player] {"text":"Doing a ready check...","color":"dark_green"}
 tellraw @a[tag=!player] ""
-function main:infosound
+function main:sfx/infosound
 
 # schedule conditions
 execute unless score .NA br_rcdata matches 0 run schedule function main:ready/readyresult 10s replace
