@@ -14,6 +14,11 @@ scoreboard objectives add raceLap dummy
 scoreboard objectives add racePos dummy
 scoreboard objectives add raceCP dummy
 
+# scoreboard objectives for indiv overall time
+scoreboard objectives add raceOMilli dummy
+scoreboard objectives add raceOSec dummy
+scoreboard objectives add raceOMin dummy
+
 # specific scores
 tp @a 284.5 75 42.5 -90 5
 scoreboard players set !gameActive race 1

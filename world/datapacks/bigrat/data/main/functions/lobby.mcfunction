@@ -89,11 +89,9 @@ scoreboard objectives remove raceMin
 scoreboard objectives remove raceLap
 scoreboard objectives remove racePos
 scoreboard objectives remove raceCP
-scoreboard players set @a raceMilli 0
-scoreboard players set @a raceSec 0
-scoreboard players set @a raceMin 0
-scoreboard players set @a raceCP 0
-scoreboard players set @a raceLap 0
+scoreboard objectives remove raceOMilli
+scoreboard objectives remove raceOSec
+scoreboard objectives remove raceOMin
 bossbar set minecraft:racetime visible false
 
 # reset stuff for sg

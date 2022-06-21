@@ -15,6 +15,9 @@ scoreboard players set !raceTime raceMin 0
 scoreboard players set @a raceMilli 0
 scoreboard players set @a raceSec 0
 scoreboard players set @a raceMin 0
+scoreboard players set @a raceOMilli 0
+scoreboard players set @a raceOSec 0
+scoreboard players set @a raceOMin 0
 scoreboard players set @a raceCP 0
 scoreboard players set @a raceLap 0
 scoreboard players reset * racePos

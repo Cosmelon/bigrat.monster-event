@@ -13,7 +13,7 @@ gamemode spectator @a[tag=!player,team=!Admin]
 
 # stuff for the stopwatch
 execute if score !countDown race matches ..0 run scoreboard players add !milli race 5
-execute if score !countDown race matches ..0 run execute if score !milli race matches 1.. run scoreboard players add @a[gamemode=adventure,tag=player] raceMilli 5
+execute if score !countDown race matches ..0 run execute if score !milli race matches 1.. run scoreboard players add @a[gamemode=adventure,scores={raceLap=..3},tag=player] raceMilli 5
 execute if score !countDown race matches ..0 run execute if score !milli race matches 1.. run scoreboard players add !raceTime raceMilli 5
 execute if score !milli race matches 100.. run scoreboard players set !milli race 0
 execute if score !raceTime raceMilli matches 100 run scoreboard players add !raceTime raceSec 1
@@ -28,6 +28,11 @@ execute if score !raceTime raceSec matches 0..9 run execute if score !raceTime r
 execute if score !raceTime raceSec matches 10.. run execute if score !raceTime raceMilli matches 0..9 run bossbar set minecraft:racetime name [{"text":"Overall Time: ","color":"gold"},{"score":{"name": "!raceTime","objective":"raceMin"},"color":"green"},{"text":":","color":"green"},{"score":{"name":"!raceTime","objective":"raceSec"},"color":"green"},{"text":".0","color":"green"},{"score":{"name":"!raceTime","objective":"raceMilli"},"color":"green"}]
 execute if score !raceTime raceSec matches 0..9 run execute if score !raceTime raceMilli matches 10.. run bossbar set minecraft:racetime name [{"text":"Overall Time: ","color":"gold"},{"score":{"name": "!raceTime","objective":"raceMin"},"color":"green"},{"text":":0","color":"green"},{"score":{"name":"!raceTime","objective":"raceSec"},"color":"green"},{"text":".","color":"green"},{"score":{"name":"!raceTime","objective":"raceMilli"},"color":"green"}]
 execute if score !raceTime raceSec matches 10.. run execute if score !raceTime raceMilli matches 10.. run bossbar set minecraft:racetime name [{"text":"Overall Time: ","color":"gold"},{"score":{"name": "!raceTime","objective":"raceMin"},"color":"green"},{"text":":","color":"green"},{"score":{"name":"!raceTime","objective":"raceSec"},"color":"green"},{"text":".","color":"green"},{"score":{"name":"!raceTime","objective":"raceMilli"},"color":"green"}]
+
+#indiv overall stopwatch conditions
+execute as @a[scores={raceLap=..3}] run scoreboard players operation @s raceOMilli = !raceTime raceMilli
+execute as @a[scores={raceLap=..3}] run scoreboard players operation @s raceOSec = !raceTime raceSec
+execute as @a[scores={raceLap=..3}] run scoreboard players operation @s raceOMin = !raceTime raceMin
 
 # startinfo
 execute if score !countDown race matches 171.. run effect give @a invisibility 100000 0 true
