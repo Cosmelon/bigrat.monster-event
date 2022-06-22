@@ -83,6 +83,7 @@ schedule clear main:spleef/shovelsandkb
 
 # reset stuff for race
 scoreboard objectives remove race
+scoreboard objectives remove raceScores
 scoreboard objectives remove raceMilli
 scoreboard objectives remove raceSec
 scoreboard objectives remove raceMin

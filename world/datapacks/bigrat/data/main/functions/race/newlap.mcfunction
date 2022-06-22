@@ -36,7 +36,7 @@ execute if score @s racePos matches 4.. if score @s raceMilli matches ..9 if sco
 execute if score @s racePos matches 4.. if score @s raceMilli matches 10.. if score @s raceSec matches ..9 run tellraw @a [{"selector":"@s"},{"text":" finished lap ","color":"gold"},{"score":{"name":"@s","objective":"raceLap"},"color":"green"},{"text":"/3 in ","color":"gold"},{"score":{"name":"@s","objective":"raceMin"},"color":"green"},{"text":":0","color":"green"},{"score":{"name":"@s","objective":"raceSec"},"color":"green"},{"text":".","color":"green"},{"score":{"name":"@s","objective":"raceMilli"},"color":"green"},{"text":" (","color":"gold"},{"text":"#","color":"#FFFFFF"},{"score":{"name":"@s","objective":"racePos"},"color":"#FFFFFF"},{"text":")","color":"gold"}]
 execute if score @s racePos matches 4.. if score @s raceMilli matches ..9 if score @s raceSec matches 10.. run tellraw @a [{"selector":"@s"},{"text":" finished lap ","color":"gold"},{"score":{"name":"@s","objective":"raceLap"},"color":"green"},{"text":"/3 in ","color":"gold"},{"score":{"name":"@s","objective":"raceMin"},"color":"green"},{"text":":","color":"green"},{"score":{"name":"@s","objective":"raceSec"},"color":"green"},{"text":".0","color":"green"},{"score":{"name":"@s","objective":"raceMilli"},"color":"green"},{"text":" (","color":"gold"},{"text":"#","color":"#FFFFFF"},{"score":{"name":"@s","objective":"racePos"},"color":"#FFFFFF"},{"text":")","color":"gold"}]
 execute if score @s racePos matches 4.. if score @s raceMilli matches 10.. if score @s raceSec matches 10.. run tellraw @a [{"selector":"@s"},{"text":" finished lap ","color":"gold"},{"score":{"name":"@s","objective":"raceLap"},"color":"green"},{"text":"/3 in ","color":"gold"},{"score":{"name":"@s","objective":"raceMin"},"color":"green"},{"text":":","color":"green"},{"score":{"name":"@s","objective":"raceSec"},"color":"green"},{"text":".","color":"green"},{"score":{"name":"@s","objective":"raceMilli"},"color":"green"},{"text":" (","color":"gold"},{"text":"#","color":"#FFFFFF"},{"score":{"name":"@s","objective":"racePos"},"color":"#FFFFFF"},{"text":")","color":"gold"}]
-# end horrific solution issue
+# end horrific solution
 
 # nope here it is again
 # overall time tellraw
@@ -83,13 +83,18 @@ execute if score @s racePos matches 4.. if entity @s[team=Blue] at @s run summon
 execute if score @s racePos matches 4.. if entity @s[team=Green] at @s run summon firework_rocket ~ ~1 ~ {LifeTime:0,FireworksItem:{id:"firework_rocket",Count:1,tag:{Fireworks:{Flight:0,Explosions:[{Colors:[I;5569364],FadeColors:[I;7320687]},{Colors:[I;16777215]}]}}}}
 execute if score @s racePos matches 4.. if entity @s[team=Yellow] at @s run summon firework_rocket ~ ~1 ~ {LifeTime:0,FireworksItem:{id:"firework_rocket",Count:1,tag:{Fireworks:{Flight:0,Explosions:[{Colors:[I;16513876],FadeColors:[I;13092723]},{Colors:[I;16777215]}]}}}}
 
+# scoring
+execute if score @s raceLap matches 3 run tellraw @s [{"text":"+","color":"green"},{"score":{"name":"!finishScore","objective":"race"},"color":"green"},{"text":" points (Finishing)","color":"green"}]
+execute if score @s raceLap matches 3 run scoreboard players operation !finishScore race += @s indivScore
+execute if score @s raceLap matches 3 run scoreboard players remove !finishScore race 1
+
+# custom sound
+execute as @a run playsound minecraft:custom.race/lap voice @s ~ ~ ~ 100000 1.2
+
 # resetting timer scores
 scoreboard players set @s raceMilli 0
 scoreboard players set @s raceSec 0
 scoreboard players set @s raceMin 0
-scoreboard players add @s raceLap 1
 scoreboard players set @s raceCP 0
+scoreboard players add @s raceLap 1
 execute unless score @s raceLap matches 3.. run scoreboard players set @s racePos 0
-
-# custom sound
-execute as @a run playsound minecraft:custom.race/lap voice @s ~ ~ ~ 100000 1.2

@@ -41,6 +41,15 @@ scoreboard players set !posCounter1 racePos 0
 scoreboard players set !posCounter2 racePos 0
 scoreboard players set !posCounter3 racePos 0
 
+# score setup
+scoreboard objectives add raceScores dummy
+scoreboard players operation !indivFinish raceScores = .players teamCheck
+scoreboard players set !teamScores raceScores 30
+scoreboard players set !redFinish raceScores 0
+scoreboard players set !blueFinish raceScores 0
+scoreboard players set !greenFinish raceScores 0
+scoreboard players set !yellowFinish raceScores 0
+
 # clear inventory pre-game
 clear @a[team=!Admin]
 effect clear @a
