@@ -53,6 +53,9 @@ scoreboard players set @a raceCP 0
 scoreboard players set @a raceMilli 0
 scoreboard players set @a raceSec 0
 scoreboard players set @a raceMin 0
+scoreboard players set @a raceOMilli 0
+scoreboard players set @a raceOSec 0
+scoreboard players set @a raceOMin 0
 
 # teleporting
 function main:race/spreadp

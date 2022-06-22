@@ -1,12 +1,7 @@
-# Description: race infotext 5, position 5
+# Description: startinfo text3 for spleef
 # Author: Cosmelon
 # Type: single
-# run from main:race/racetick
-
-# get out of spectate
-#tp @e[name="!raceCine"] @e[name="!racePos4",limit=1]
-tp @e[name="!raceCine"] 234.50 78 -27.5 -403.16 6.42
-execute as @a run spectate
+# run from main:spleef/sptick
 
 # sound
 schedule function main:sfx/infosound 5t
@@ -14,12 +9,11 @@ schedule function main:sfx/infosound 5t
 # infotext
 tellraw @a [{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"translate":"space.-1"},{"text":"\uE004"}]
 tellraw @a ""
+tellraw @a [{"translate":"space.3"},{"text":"get ogar'd","color":"gold","bold":true}]
 tellraw @a ""
+tellraw @a [{"translate":"space.3"},{"text":"Outliving other players will earn you ___ points","color":"gray"}]
+tellraw @a [{"translate":"space.5"},{"text":"Winning the round will get you ___ points"}]
+tellraw @a [{"translate":"space.3"},{"text":"There will be two shinks before a ","color":"gray"},{"text":"deathmatch","color":"dark_red"}]
+tellraw @a [{"translate":"space.5"},{"text":"Being alive at the end of a shink will earn you ___ points","color":"gray"}]
 tellraw @a ""
-tellraw @a {"text":"Uh... I think that might be it... not much else to say..."}
-tellraw @a {"text":"It's kind of a race game... first to the end wins?"}
-tellraw @a ""
-tellraw @a ""
-execute if score !doDoor race matches 1 run tellraw @a {"text":"DO NOT GO IN THE COPPER JUNGLE DOOR","color":"dark_gray"}
-execute unless score !doDoor race matches 1 run tellraw @a ""
 tellraw @a [{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"translate":"space.-1"},{"text":"\uE004"}]

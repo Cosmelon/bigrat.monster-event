@@ -1,12 +1,7 @@
-# Description: race infotext 5, position 5
+# Description: startinfo text2 for spleef -- this one should be about gameplay
 # Author: Cosmelon
 # Type: single
-# run from main:race/racetick
-
-# get out of spectate
-#tp @e[name="!raceCine"] @e[name="!racePos4",limit=1]
-tp @e[name="!raceCine"] 234.50 78 -27.5 -403.16 6.42
-execute as @a run spectate
+# run from main:spleef/sptick
 
 # sound
 schedule function main:sfx/infosound 5t
@@ -14,12 +9,11 @@ schedule function main:sfx/infosound 5t
 # infotext
 tellraw @a [{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"translate":"space.-1"},{"text":"\uE004"}]
 tellraw @a ""
+tellraw @a [{"translate":"space.3"},{"text":"big hole game","color":"gold","bold":true}]
 tellraw @a ""
+tellraw @a [{"translate":"space.3"},{"text":"Do a dig and smack combo with your weapons"}]
+tellraw @a [{"translate":"space.5"},{"text":"to send players flying across the map!"}]
 tellraw @a ""
-tellraw @a {"text":"Uh... I think that might be it... not much else to say..."}
-tellraw @a {"text":"It's kind of a race game... first to the end wins?"}
+tellraw @a [{"translate":"space.3"},{"text":"Breaking blocks will give you snowballs."}]
 tellraw @a ""
-tellraw @a ""
-execute if score !doDoor race matches 1 run tellraw @a {"text":"DO NOT GO IN THE COPPER JUNGLE DOOR","color":"dark_gray"}
-execute unless score !doDoor race matches 1 run tellraw @a ""
 tellraw @a [{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"translate":"space.-1"},{"text":"\uE004"}]
