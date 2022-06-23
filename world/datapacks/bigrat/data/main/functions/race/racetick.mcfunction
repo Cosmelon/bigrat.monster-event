@@ -43,10 +43,10 @@ execute if score !countDown race matches 1000 run function main:race/startinfo/p
 execute if score !countDown race matches 800 run function main:race/startinfo/pos3
 execute if score !countDown race matches 600 run function main:race/startinfo/pos4
 execute if score !countDown race matches 400 run function main:race/startinfo/pos5
+execute if score !countDown race matches 171 run gamerule sendCommandFeedback true
 execute if score !countDown race matches 170 run function main:race/spreadp
 execute if score !countDown race matches 110 run title @a title ""
 execute if score !countDown race matches 110 run title @a subtitle {"text":"Starting!","color":"dark_red"}
-execute if score !countDown race matches 110 run gamerule sendCommandFeedback true
 
 # countdown
 execute if score !countDown race matches 80 run fill 285 77 47 291 76 37 air replace barrier
