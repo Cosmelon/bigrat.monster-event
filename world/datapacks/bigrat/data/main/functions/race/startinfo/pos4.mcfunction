@@ -15,7 +15,6 @@ schedule function main:sfx/infosound 5t
 tellraw @a [{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"translate":"space.-1"},{"text":"\uE004"}]
 tellraw @a ""
 tellraw @a ""
-tellraw @a ""
 tellraw @a {"text":"There are some special elements scattered throughout the map."}
 tellraw @a {"text":"Make sure to check around. You never know what you may find!"}
 tellraw @a ""

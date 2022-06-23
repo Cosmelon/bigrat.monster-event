@@ -84,7 +84,7 @@ execute if score @s racePos matches 4.. if entity @s[team=Green] at @s run summo
 execute if score @s racePos matches 4.. if entity @s[team=Yellow] at @s run summon firework_rocket ~ ~1 ~ {LifeTime:0,FireworksItem:{id:"firework_rocket",Count:1,tag:{Fireworks:{Flight:0,Explosions:[{Colors:[I;16513876],FadeColors:[I;13092723]},{Colors:[I;16777215]}]}}}}
 
 # scoring
-execute if score @s raceLap matches 3 run tellraw @s [{"text":"+","color":"green"},{"score":{"name":"!indivFinish","objective":"race"},"color":"green"},{"text":" points (Finishing)","color":"green"}]
+execute if score @s raceLap matches 3 run tellraw @s [{"text":"+","color":"green"},{"score":{"name":"!indivFinish","objective":"raceScores"},"color":"green"},{"text":" points (Finishing)","color":"green"}]
 execute if score @s raceLap matches 3 run scoreboard players operation !indivFinish race += @s indivScore
 execute if score @s raceLap matches 3 run scoreboard players remove !indivFinish race 1
 
