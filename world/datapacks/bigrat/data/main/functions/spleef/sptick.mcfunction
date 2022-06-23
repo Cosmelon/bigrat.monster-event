@@ -26,18 +26,22 @@ bossbar set minecraft:spleefroundcount name [{"text":"Round: ","bold":true},{"sc
 
 # does the countdown timer
 scoreboard players remove $countDown spleef 1
+# startinfo
+execute if score $countDown spleef matches 300 run function main:spleef/startinfo/text1
+execute if score $countDown spleef matches 500 run function main:spleef/startinfo/text2
+execute if score $countDown spleef matches 700 run function main:spleef/startinfo/text3
+# countDown text
 execute if score $countDown spleef matches 60 run title @a times 0 25 10
-execute if score $countDown spleef matches 60 run title @a title {"text":"3","color":"red"}
+execute if score $countDown spleef matches 60 run title @a title {"text":">   3   <","color":"red"}
 execute if score $countDown spleef matches 60 run playsound minecraft:block.note_block.chime master @a ^0 ^ ^ 1 1.259921 1
-execute if score $countDown spleef matches 40 run title @a title {"text":"2","color":"yellow"}
+execute if score $countDown spleef matches 40 run title @a title {"text":">  2  <","color":"yellow"}
 execute if score $countDown spleef matches 40 run playsound minecraft:block.note_block.chime master @a ^0 ^ ^ 1 1.259921 1
-execute if score $countDown spleef matches 20 run title @a title {"text":"1","color":"green"}
+execute if score $countDown spleef matches 20 run title @a title {"text":"> 1 <","color":"green"}
 execute if score $countDown spleef matches 20 run playsound minecraft:block.note_block.chime master @a ^0 ^ ^ 1 1.259921 1
 execute if score $countDown spleef matches 0 run title @a title {"text":"Spread out!","color":"red"}
 execute if score $countDown spleef matches 0 run playsound minecraft:block.note_block.chime master @a ^0 ^ ^ 1 1.414214 1
 execute if score $countDown spleef matches 0 run fill -491 60 -467 -503 65 -455 minecraft:air
 execute if score $countDown spleef matches -40 run function main:cleartitle
-
 
 
 # ensures all players on a team have glowing

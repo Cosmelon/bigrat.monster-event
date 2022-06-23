@@ -36,7 +36,8 @@ scoreboard objectives add spleefSnowBall minecraft.mined:minecraft.snow_block
 scoreboard objectives add spleefBorder dummy
 
 # reset scoreboards
-scoreboard players set $countDown spleef 160
+execute if score $round spleef matches 2.. run scoreboard players set $countDown spleef 160
+execute unless score $round spleef matches 2.. run scoreboard players set $countDown spleef 320
 scoreboard players set $gameActive spleef 1
 scoreboard players set $tick spleefBorder 0
 scoreboard players set $sec spleefBorder 30

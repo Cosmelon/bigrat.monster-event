@@ -11,7 +11,7 @@ tellraw @a [{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"trans
 tellraw @a ""
 tellraw @a [{"translate":"space.3"},{"text":"Snowball Spleef!","color":"gold","bold":true}]
 tellraw @a ""
-tellraw @a [{"translate":"space.3"},{"text":"Remove blocks from under your players"}]
+tellraw @a [{"translate":"space.3"},{"text":"Remove blocks from under other players"}]
 tellraw @a [{"translate":"space.4"},{"text":"to be the last team standing!"}]
 tellraw @a ""
 tellraw @a ""
