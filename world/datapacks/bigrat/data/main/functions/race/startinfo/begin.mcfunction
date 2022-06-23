@@ -4,6 +4,7 @@
 # run from main:race/racetick
 
 tp @e[name="!raceCine"] 284.5 75 42.5 -90 5
+gamerule sendCommandFeedback false
 gamemode spectator @a
 
 # sound

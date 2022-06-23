@@ -46,6 +46,7 @@ execute if score !countDown race matches 400 run function main:race/startinfo/po
 execute if score !countDown race matches 170 run function main:race/spreadp
 execute if score !countDown race matches 110 run title @a title ""
 execute if score !countDown race matches 110 run title @a subtitle {"text":"Starting!","color":"dark_red"}
+execute if score !countDown race matches 110 run gamerule sendCommandFeedback true
 
 # countdown
 execute if score !countDown race matches 80 run fill 285 77 47 291 76 37 air replace barrier
@@ -118,6 +119,7 @@ execute unless score .green teamCheck matches 0 if score !doneGreen raceScores =
 execute unless score .yellow teamCheck matches 0 if score !doneYellow raceScores = .yellow teamCheck if score !yellowFinish raceScores matches 0 run scoreboard players add @a[team=Yellow] indivScore 10
 execute unless score .yellow teamCheck matches 0 if score !doneYellow raceScores = .yellow teamCheck if score !yellowFinish raceScores matches 0 run tellraw @a[team=Yellow] {"text":"+10 points (team finish)","color":"green"}
 execute unless score .yellow teamCheck matches 0 if score !doneYellow raceScores = .yellow teamCheck if score !yellowFinish raceScores matches 0 run scoreboard players set !yellowFinish raceScores 1
+execute if score @a[limit=1] raceLap matches 4.. run gamerule sendCommandFeedback false
 
 #finish
 # added ending to the numbers

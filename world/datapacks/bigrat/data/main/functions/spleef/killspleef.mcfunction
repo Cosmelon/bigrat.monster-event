@@ -37,6 +37,7 @@ schedule clear main:spleef/border/shrink3
 schedule clear main:spleef/border/removetop
 clear @a[team=!Admin]
 playsound minecraft:block.beacon.deactivate master @a
+gamerule sendCommandFeedback true
 
 tellraw @a ""
 tellraw @a[tag=!admin] {"text":"Killed Spleef!","color":"dark_red","bold":true}

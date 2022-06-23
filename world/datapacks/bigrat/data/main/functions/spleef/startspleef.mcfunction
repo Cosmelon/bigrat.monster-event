@@ -12,6 +12,7 @@ title @a actionbar ""
 title @a times 0 25 0
 
 # teleport players to box
+gamerule sendCommandFeedback false
 gamemode adventure @a[tag=player]
 gamemode spectator @a[tag=!player]
 # make this differential tp in future

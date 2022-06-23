@@ -5,6 +5,7 @@
 
 
 #execute as @a run playsound minecraft:entity.splash_potion.break ambient @s ~ ~ ~ 100000 .5
+gamerule sendCommandFeedback false
 scoreboard players set @r raceLap 5
 execute as @a run playsound minecraft:custom.race/finish voice @s ~ ~100 ~ 10000 .85
 title @a title {"text":"FINISHED!"}
@@ -37,7 +38,7 @@ execute as @a[scores={racePos=5}] if score @s raceOMilli matches 10.. if score @
 execute as @a[scores={racePos=5}] if score @s raceOMilli matches ..9 if score @s raceOSec matches 10.. run tellraw @a [{"text":"5th","color":"#FFFFFF"},{"text":" - ","color":"white"},{"selector":"@a[scores={racePos=5}]"},{"text":" - ","color":"white"},{"score":{"name":"@s","objective":"raceOMin"},"color":"green"},{"text":":","color":"green"},{"score":{"name":"@s","objective":"raceOSec"},"color":"green"},{"text":".0","color":"green"},{"score":{"name":"@s","objective":"raceOMilli"},"color":"green"}]
 execute as @a[scores={racePos=5}] if score @s raceOMilli matches 10.. if score @s raceOSec matches 10.. run tellraw @a [{"text":"5th","color":"#FFFFFF"},{"text":" - ","color":"white"},{"selector":"@a[scores={racePos=5}]"},{"text":" - ","color":"white"},{"score":{"name":"@s","objective":"raceOMin"},"color":"green"},{"text":":","color":"green"},{"score":{"name":"@s","objective":"raceOSec"},"color":"green"},{"text":".","color":"green"},{"score":{"name":"@s","objective":"raceOMilli"},"color":"green"}]
 
-tellraw @a [{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-6"},{"text":"\uE004"}]
+tellraw @a [{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"translate":"space.-1"},{"text":"\uE004"}]
 execute as @a[tag=player] run tellraw @s [{"text":"You placed "},{"score":{"name":"@s","objective":"racePos"},"color":"green"},{"text":"/","color":"gold"},{"score":{"name":".players","objective":"teamCheck"}}]
 
 # turns off race

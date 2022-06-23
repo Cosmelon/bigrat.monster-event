@@ -13,6 +13,7 @@ spawnpoint @a 1000 28 -6000
 setworldspawn 1000 28 -6000
 clear @a[team=!Admin]
 gamemode adventure @a
+gamerule sendCommandFeedback true
 worldborder set 6000000 1
 worldborder center 0 0
 tag @a remove lobbyPVP

@@ -30,6 +30,7 @@ schedule clear main:race/finish
 schedule clear main:lobby
 schedule clear main:returnlobby
 tag @a remove candidateAbstract
+gamerule sendCommandFeedback true
 
 # get rid of the cinematic armor stand
 kill @e[type=armor_stand,name="!raceCine"]
