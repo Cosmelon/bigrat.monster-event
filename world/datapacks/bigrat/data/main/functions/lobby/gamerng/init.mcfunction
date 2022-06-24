@@ -1,0 +1,1 @@
+execute unless score #lcg brGP matches ..0 unless score #lcg brGP matches 1.. run function main:lobby/gamerng/uuid_reset

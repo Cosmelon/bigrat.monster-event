@@ -1,14 +1,15 @@
 # Description: readycheck result
 # Author: Cosmelon
 # Type: single
-# run from main:ready/readycheck
+# run from main:lobby/ready/readycheck
 
 # opening space
 tellraw @a ""
 
 # text space
-execute if score .ready br_rcdata = .players teamCheck run tellraw @a {"text":"All players are ready to go!","color":"dark_green"}
-execute if score .ready br_rcdata < .players teamCheck run tellraw @a {"text":"Not all players are ready to go!","color":"dark_red"}
+#[{"text":"[","color":"dark_gray"},{"text":"bigrat","color":"gold"},{"text":"] ","color":"dark_gray"},{"text":"» ","color":"gray"}]
+execute if score .ready br_rcdata = .players teamCheck run tellraw @a [{"text":"» ","color":"gray"},{"text":"All online players are ready!","color":"green"}]
+execute if score .ready br_rcdata < .players teamCheck run tellraw @a [{"text":"» ","color":"gray"},{"text":"Not all online players are ready! Aborting start.","color":"dark_red"}]
 execute if score .ready br_rcdata < .players teamCheck if score .NA br_rcdata matches 0 run tellraw @a [{"selector":"@a[tag=br_rcno]"},{"text":" isn't ready.","color":"gold"}]
 execute if score .ready br_rcdata < .players teamCheck if score .NA br_rcdata matches 1.. if score .nready br_rcdata matches 1.. run tellraw @a [{"selector":"@a[tag=br_rcno]"},{"text":" isn't ready, but","color":"gold"}]
 execute if score .ready br_rcdata < .players teamCheck if score .NA br_rcdata matches 1.. run tellraw @a [{"selector":"@a[tag=br_rcNA]"},{"text":" didn't even answer!","color":"gold"}]
@@ -16,7 +17,7 @@ execute if score .ready br_rcdata < .players teamCheck if score .NA br_rcdata ma
 # accounting for edge case
 #  the possibility that this could happen is basically zero, but I did it anyway
 execute if score .ready br_rcdata > .players teamCheck run tellraw @a [{"text":"[Info] ","color":"aqua"},{"text":"Error. Re-running.","color":"white"}]
-execute if score .ready br_rcdata > .players teamCheck run schedule function main:ready/readycheck 5s replace
+execute if score .ready br_rcdata > .players teamCheck run schedule function main:lobby/ready/readycheck 5s replace
 execute if score .ready br_rcdata > .players teamCheck run tellraw @a[tag=admin] {"text":"[stop this]","color":"gold","clickEvent":{"action":"run_command","value":"/schedule clear main:ready/readycheck"}}
 
 # closing space
@@ -33,4 +34,7 @@ tag @a remove br_rcno
 tag @a remove br_rcNA
 
 # sound
-execute as @a run playsound entity.player.levelup ambient @s ^ ^ ^ 10000 
+execute as @a run playsound entity.player.levelup ambient @s ^ ^ ^ 10000
+
+# start event
+execute if score .ready br_rcdata = .players teamCheck run schedule function main:lobby/startbr 3s
