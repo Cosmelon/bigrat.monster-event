@@ -37,7 +37,7 @@ scoreboard objectives add spleefBorder dummy
 
 # reset scoreboards
 execute if score $round spleef matches 2.. run scoreboard players set $countDown spleef 160
-execute unless score $round spleef matches 2.. run scoreboard players set $countDown spleef 320
+execute unless score $round spleef matches 2.. run scoreboard players set $countDown spleef 900
 scoreboard players set $gameActive spleef 1
 scoreboard players set $tick spleefBorder 0
 scoreboard players set $sec spleefBorder 30
@@ -53,7 +53,7 @@ schedule function main:spleef/border/s2warn 170s replace
 schedule function main:spleef/border/s3warn 250s replace
 
 # give shovels and kb
-schedule function main:spleef/shovelsandkb 22s replace
+schedule function main:spleef/shovelsandkb 55s replace
 scoreboard players set $toolsGiven spleef 0
 
 # reset spleefDeaths for everyone

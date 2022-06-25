@@ -27,9 +27,9 @@ bossbar set minecraft:spleefroundcount name [{"text":"Round: ","bold":true},{"sc
 # does the countdown timer
 scoreboard players remove $countDown spleef 1
 # startinfo
-execute if score $countDown spleef matches 900 run function main:spleef/startinfo/text1
-execute if score $countDown spleef matches 700 run function main:spleef/startinfo/text2
-execute if score $countDown spleef matches 500 run function main:spleef/startinfo/text3
+execute if score $countDown spleef matches 800 run function main:spleef/startinfo/text1
+execute if score $countDown spleef matches 660 run function main:spleef/startinfo/text2
+execute if score $countDown spleef matches 480 run function main:spleef/startinfo/text3
 execute if score $countDown spleef matches 300 run function main:spleef/startinfo/text4
 # countDown text
 execute if score $countDown spleef matches 60 run title @a times 0 25 10

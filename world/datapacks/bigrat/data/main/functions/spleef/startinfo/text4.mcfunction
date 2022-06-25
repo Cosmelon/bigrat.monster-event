@@ -9,11 +9,11 @@ schedule function main:sfx/infosound 5t
 # infotext
 tellraw @a [{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"translate":"space.-1"},{"text":"\uE004"}]
 tellraw @a ""
-tellraw @a [{"translate":"space.3"},{"text":"play aggro or face public humiliation.","color":"gold","bold":true}]
+tellraw @a [{"translate":"space.3"},{"text":"How do you rocket jump?","color":"gold","bold":true}]
+tellraw @a [{"translate":"space.10"},{"text":" just kidding lmao","color":"dark_gray"}]
 tellraw @a ""
-tellraw @a [{"translate":"space.3"},{"text":"Also, you will be eliminated from the round if you disconnect.","color":"dark_red"}]
 tellraw @a ""
+tellraw @a [{"translate":"space.5"},{"text":"I think that should be it..."}]
 tellraw @a ""
-tellraw @a [{"translate":"space.150"},{"text":"¯\\_(ツ)_/¯ -Frank","color":"dark_gray"}]
 tellraw @a ""
 tellraw @a [{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"translate":"space.-1"},{"text":"\uE004"}]
