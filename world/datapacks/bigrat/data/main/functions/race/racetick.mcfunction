@@ -156,6 +156,7 @@ execute if score !countDown race matches ..110 run tellraw @a[team=!Admin,gamemo
 
 # speedpads (magenta_glazed_terracotta)
 execute as @a[tag=player,gamemode=adventure] run execute positioned as @s if block ~ ~-1 ~ minecraft:magenta_glazed_terracotta run effect give @s speed 2 3 true
+#execute as @a[tag=player,gamemode=adventure] run execute positioned as @s if block ~ ~-1 ~ magenta_glazed_terracotta run playsound minecraft:custom.race/speed ambient @s
 # jump boost (lime_glazed_terracotta)
 execute as @a[tag=player,gamemode=adventure] run execute positioned as @s if block ~ ~-1 ~ lime_glazed_terracotta run effect give @s minecraft:jump_boost 1 7 true
 execute as @a[tag=player,gamemode=adventure] run execute positioned as @s if block ~ ~-0.25 ~ air run effect clear @s minecraft:jump_boost
