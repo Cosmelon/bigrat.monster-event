@@ -126,3 +126,6 @@ scoreboard objectives remove bpDeaths
 scoreboard objectives remove bpConst
 tag @a remove bpAlive
 tag @a remove bpDead
+
+# reset stuff for tomb
+scoreboard objectives remove tomb
