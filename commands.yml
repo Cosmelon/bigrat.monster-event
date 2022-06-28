@@ -39,10 +39,6 @@ aliases:
   - function main:race/startrace
   killrace:
   - function main:race/killrace
-  startsg:
-  - function main:sg/startsg
-  killsg:
-  - function main:sg/killsg
   startbp:
   - function main:blockparty/startbp
   killbp:

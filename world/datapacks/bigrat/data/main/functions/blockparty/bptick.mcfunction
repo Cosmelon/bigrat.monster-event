@@ -10,16 +10,18 @@ execute if score ?countDown blockParty matches ..0 run effect give @a[tag=player
 
 # main countdown system
 scoreboard players remove ?countDown blockParty 1
-execute if score ?countDown blockParty matches 60 run title @a title {"text":"3","color":"red"}
+execute if score ?countDown blockParty matches 1..60 run title @a title {"text":"Starting:","color":"gold"}
+execute if score ?countDown blockParty matches 60 run title @a subtitle  {"text":"3","color":"red"}
 execute if score ?countDown blockParty matches 60 run playsound minecraft:block.note_block.chime master @a ^0 ^ ^ 1 1.259921 1
-execute if score ?countDown blockParty matches 40 run title @a title {"text":"2","color":"yellow"}
+execute if score ?countDown blockParty matches 40 run title @a subtitle  {"text":"2","color":"yellow"}
 execute if score ?countDown blockParty matches 40 run playsound minecraft:block.note_block.chime master @a ^0 ^ ^ 1 1.259921 1
-execute if score ?countDown blockParty matches 20 run title @a title {"text":"1","color":"green"}
+execute if score ?countDown blockParty matches 20 run title @a subtitle  {"text":"1","color":"green"}
 execute if score ?countDown blockParty matches 20 run playsound minecraft:block.note_block.chime master @a ^0 ^ ^ 1 1.259921 1
-execute if score ?countDown blockParty matches 0 run title @a title {"text":"Start Schmoovin!","color":"red"}
+execute if score ?countDown blockParty matches 0 run title @a subtitle  {"text":"Start Schmoovin!","color":"red"}
 execute if score ?countDown blockParty matches 0 run playsound minecraft:block.note_block.chime master @a ^0 ^ ^ 1 1.414214 1
 execute if score ?countDown blockParty matches 0 run scoreboard players set ?floorSwitch blockParty 1
 execute if score ?countDown blockParty matches 0 run scoreboard players set ?stop bpTimer 400
+execute if score ?countDown blockParty matches 0 run function main:blockparty/bpmusic
 execute if score ?countDown blockParty matches 0 run fill -1988 61 2987 -2014 57 3013 air replace barrier
 execute if score ?countDown blockParty matches -40 run title @a title ""
 execute if score ?countDown blockParty matches -40 run title @a subtitle ""
@@ -51,6 +53,15 @@ execute if score ?removeStage bpFloor matches 4 run scoreboard players set ?remo
 # get rid of blocks in player inventory when inactive color randomizer
 execute unless score ?stop bpTimer <= ?colorTT bpTimer as @a[tag=bpAlive] run function main:blockparty/colorrng/removeblockitems
 
+# 1-3 -- 60t
+# 4-6 -- 50t
+# 7-9 -- 40t
+# 10-12 -- 35t
+# 13-15 -- 30t
+# 16-18 -- 25t
+# 19-21 -- 20t
+# 22-24 -- 17t
+# 25-27 -- 14t
 
 # color picker
 #  picks what color the players must stand on to avoid falling and dying 

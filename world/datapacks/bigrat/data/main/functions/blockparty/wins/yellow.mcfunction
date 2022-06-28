@@ -11,7 +11,7 @@ title @a times 0 50 0
 title @a clear
 clear @a[team=!Admin]
 # placeholder for the points given
-scoreboard players add @a[team=Blue] indivScore 10
+scoreboard players add @a[team=Yellow] indivScore 10
 tellraw @a[team=Yellow] {"text":"+10 indivual points (team win)","color":"green"}
 title @a title {"text":"Yellow team wins!","color":"yellow"}
 execute unless score ?round blockParty matches 3 run title @a subtitle {"text":"Loading...","color":"red"}
