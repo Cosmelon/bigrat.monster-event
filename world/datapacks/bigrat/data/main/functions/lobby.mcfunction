@@ -129,3 +129,4 @@ tag @a remove bpDead
 
 # reset stuff for tomb
 scoreboard objectives remove tomb
+scoreboard objectives remove tombKIlls
