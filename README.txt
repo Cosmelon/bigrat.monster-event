@@ -22,7 +22,7 @@ currently used prefixes
     !race
     ~sg
     ?blockParty
-    +PVE
+    +tomb
 
 Globally tracked scoreboards (.global)
     - currentGame - what game is being currently played but is independent of each game's round system
