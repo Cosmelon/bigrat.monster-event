@@ -155,4 +155,4 @@ tag @a[tag=bpAlive] remove bpDead
 execute if score ?gameActive brawl matches 1 run function main:brawl/main
 
 # PVE tick
-execute if score +gameActive tomb matches 1 run function main:tomb/tombtick
+execute if score +gameActive tomb matches 1 run function main:tomb/tbtick

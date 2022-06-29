@@ -56,3 +56,7 @@ team modify Spectator collisionRule never
 team modify Spectator color gray
 team modify Spectator prefix {"text":"[Spectator] ","color":"gray"}
 team modify Spectator friendlyFire false
+
+# return to lobby option
+tellraw @a {"text":"Main BR Pack Loaded!","color":"gold"}
+tellraw @a[tag=admin] {"text":"[Return to Lobby]","color":"gold","clickEvent":{"action":"run_command","value":"/function main:returnlobby"}}

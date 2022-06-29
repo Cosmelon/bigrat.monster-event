@@ -44,9 +44,9 @@ aliases:
   killbp:
   - function main:blockparty/killbp
   starttb:
-  - function main:tomb/starttomb
+  - function main:tomb/starttb
   killtb:
-  - function main:tomb/killtomb
+  - function main:tomb/killtb
   lobby:
   - tp @s 1000.5 28 -6000.5
   allspec:
