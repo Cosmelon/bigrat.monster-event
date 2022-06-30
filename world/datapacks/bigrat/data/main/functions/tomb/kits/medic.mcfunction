@@ -8,7 +8,7 @@
 playsound entity.experience_orb.pickup ambient @s ~ ~ ~ 10000
 
 # kit info
-tellraw @s ""
+tellraw @s "medic kit"
 tellraw @s "placeholder text"
 tellraw @s ""
 tellraw @s "kit info:"

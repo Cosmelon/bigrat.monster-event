@@ -29,10 +29,10 @@ execute if score +r3Active tombCore matches 1 run function main:tomb/round3/main
 
 
 # kit detect & apply
-execute if score +rKActive tombCore matches 1 at @e[tag=tankNPC] as @a[distance=..1,tag=!tank] run function main:tomb/kits/tank
-execute if score +rKActive tombCore matches 1 at @e[tag=medicNPC] as @a[distance=..1,tag=!medic] run function main:tomb/kits/medic
-execute if score +rKActive tombCore matches 1 at @e[tag=hunterNPC] as @a[distance=..1,tag=!hunter] run function main:tomb/kits/hunter
-execute if score +rKActive tombCore matches 1 at @e[tag=warriorNPC] as @a[distance=..1,tag=!warrior] run function main:tomb/kits/warrior
+execute if score +rKActive tombCore matches 1 at @e[tag=tankNPC] as @a[distance=..1,tag=!tankKit] run function main:tomb/kits/tank
+execute if score +rKActive tombCore matches 1 at @e[tag=medicNPC] as @a[distance=..1,tag=!medicKit] run function main:tomb/kits/medic
+execute if score +rKActive tombCore matches 1 at @e[tag=hunterNPC] as @a[distance=..1,tag=!hunterKit] run function main:tomb/kits/hunter
+execute if score +rKActive tombCore matches 1 at @e[tag=gladiatorNPC] as @a[distance=..1,tag=!gladiatorKit] run function main:tomb/kits/gladiator
 #ඞඞඞඞඞ
 #kitConfirm
 execute if score +rKActive tombCore matches 1 as @a[x=5015,dx=4,y=16,dy=5,z=-3] run function main:tomb/kits/confirm
