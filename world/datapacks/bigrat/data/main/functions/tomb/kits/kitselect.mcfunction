@@ -9,4 +9,6 @@ tp @a[team=Blue] 5017 17 44.5 180 10
 tp @a[team=Green] 5017 17 89.5 180 10
 tp @a[team=Yellow] 5017 17 131.5 180 10
 
+scoreboard players set +rKActive tombCore 1
+
 execute as @e[tag=tombNPC] run data modify entity @s CustomNameVisible set value 1b
