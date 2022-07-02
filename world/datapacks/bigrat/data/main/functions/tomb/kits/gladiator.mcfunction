@@ -4,6 +4,8 @@
 # @s = @a (-NaN,1] blocks from a warrior kit NPC
 # run from main:tomb/tbtick
 
+# tag assign
+tag @s add gladiatorKit
 # sound
 playsound entity.experience_orb.pickup ambient @s ~ ~ ~ 10000
 

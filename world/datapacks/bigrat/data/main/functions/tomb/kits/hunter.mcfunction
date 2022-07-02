@@ -4,6 +4,9 @@
 # @s = @a (-NaN,1] blocks from a hunter kit NPC
 # run from main:tomb/tbtick
 
+# assign tag
+tag @s add hunterKit
+
 # sound
 playsound entity.experience_orb.pickup ambient @s ~ ~ ~ 10000
 

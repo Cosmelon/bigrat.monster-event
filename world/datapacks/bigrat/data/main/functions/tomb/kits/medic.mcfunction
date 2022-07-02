@@ -4,6 +4,8 @@
 # @s = @a (-NaN,1] blocks from a medic kit NPC
 # run from main:tomb/tbtick
 
+# assign tag
+tag @s add medicKit
 # sound
 playsound entity.experience_orb.pickup ambient @s ~ ~ ~ 10000
 
