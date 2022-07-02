@@ -6,7 +6,7 @@
 # global scoreboards for tomb
 scoreboard objectives add tombCore dummy
 scoreboard players set +gameActive tombCore 1
-scoreboard players set +countDown tombCore 1401
+scoreboard players set +countDown tombCore 161
 
 scoreboard objectives add tombConst dummy
 scoreboard players set #milliConst tombConst 50

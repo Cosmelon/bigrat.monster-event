@@ -4,8 +4,11 @@
 # @s = @a (-NaN,1] blocks from a tank kit NPC
 # run from main:tomb/tbtick
 
-# give tag
+# assign tag
 tag @s add tankKit
+tag @s remove gladiatorKit
+tag @s remove hunterKit
+tag @s remove medicKit
 
 # sound
 playsound entity.experience_orb.pickup ambient @s ~ ~ ~ 10000

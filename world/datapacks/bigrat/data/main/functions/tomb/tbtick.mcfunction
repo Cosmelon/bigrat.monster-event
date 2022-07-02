@@ -5,21 +5,21 @@
 
 # countDown
 scoreboard players remove +countDown tombCore 1
-execute if score +countDown tombCore matches 1..60 run title @a title {"text":"Starting:","color":"gold"}
-execute if score +countDown tombCore matches 60 run title @a subtitle {"text":">   3   <","color":"red"}
-execute if score +countDown tombCore matches 60 as @a run playsound minecraft:block.note_block.chime master @s ^0 ^ ^ 1 1.259921 1
-execute if score +countDown tombCore matches 40 run title @a subtitle {"text":">  2  <","color":"yellow"}
-execute if score +countDown tombCore matches 40 as @a run playsound minecraft:block.note_block.chime master @s ^0 ^ ^ 1 1.259921 1
-execute if score +countDown tombCore matches 20 run title @a subtitle {"text":"> 1 <","color":"green"}
-execute if score +countDown tombCore matches 20 as @a run playsound minecraft:block.note_block.chime master @s ^0 ^ ^ 1 1.259921 1
-execute if score +countDown tombCore matches 0 run title @a title ""
-execute if score +countDown tombCore matches 0 run title @a title {"text":"Start!","color":"dark_red"}
-execute if score +countDown tombCore matches 0 as @a run playsound minecraft:block.note_block.chime master @s ^0 ^ ^ 1 1.414214 1
+#execute if score +countDown tombCore matches 1..60 run title @a title {"text":"Starting:","color":"gold"}
+#execute if score +countDown tombCore matches 60 run title @a subtitle {"text":">   3   <","color":"red"}
+#execute if score +countDown tombCore matches 60 as @a run playsound minecraft:block.note_block.chime master @s ^0 ^ ^ 1 1.259921 1
+#execute if score +countDown tombCore matches 40 run title @a subtitle {"text":">  2  <","color":"yellow"}
+#execute if score +countDown tombCore matches 40 as @a run playsound minecraft:block.note_block.chime master @s ^0 ^ ^ 1 1.259921 1
+#execute if score +countDown tombCore matches 20 run title @a subtitle {"text":"> 1 <","color":"green"}
+#execute if score +countDown tombCore matches 20 as @a run playsound minecraft:block.note_block.chime master @s ^0 ^ ^ 1 1.259921 1
+#execute if score +countDown tombCore matches 0 run title @a title ""
+#execute if score +countDown tombCore matches 0 run title @a title {"text":"Start!","color":"dark_red"}
+#execute if score +countDown tombCore matches 0 as @a run playsound minecraft:block.note_block.chime master @s ^0 ^ ^ 1 1.414214 1
 
 # infotext (built in extra time for future infotext)
-execute if score +countDown tombCore matches 1400 run function main:tomb/startinfo/text1
-execute if score +countDown tombCore matches 1200 run function main:tomb/startinfo/text2
-execute if score +countDown tombCore matches 1000 run function main:tomb/startinfo/text3
+#execute if score +countDown tombCore matches 1400 run function main:tomb/startinfo/text1
+#execute if score +countDown tombCore matches 1200 run function main:tomb/startinfo/text2
+#execute if score +countDown tombCore matches 1000 run function main:tomb/startinfo/text3
 
 
 #make tick files active
@@ -33,6 +33,7 @@ execute if score +r2Active tombCore matches 0 run scoreboard players set +active
 execute if score +r3Active tombCore matches 0 run scoreboard players set +active tombR3 0
 
 # kit detect & apply
+execute if score +countDown tombCore matches 0 run function main:tomb/kits/kitselect
 execute if score +rKActive tombCore matches 1 at @e[tag=tankNPC] as @a[distance=..1,tag=!tankKit] run function main:tomb/kits/tank
 execute if score +rKActive tombCore matches 1 at @e[tag=medicNPC] as @a[distance=..1,tag=!medicKit] run function main:tomb/kits/medic
 execute if score +rKActive tombCore matches 1 at @e[tag=hunterNPC] as @a[distance=..1,tag=!hunterKit] run function main:tomb/kits/hunter

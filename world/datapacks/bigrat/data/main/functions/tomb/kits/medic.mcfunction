@@ -6,6 +6,10 @@
 
 # assign tag
 tag @s add medicKit
+tag @s remove gladiatorKit
+tag @s remove hunterKit
+tag @s remove tankKit
+
 # sound
 playsound entity.experience_orb.pickup ambient @s ~ ~ ~ 10000
 

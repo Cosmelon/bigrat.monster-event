@@ -128,5 +128,9 @@ tag @a remove bpAlive
 tag @a remove bpDead
 
 # reset stuff for tomb
-scoreboard objectives remove tomb
-scoreboard objectives remove tombKIlls
+scoreboard objectives remove tombCore
+scoreboard objectives remove tombConst
+scoreboard objectives remove tombKills
+scoreboard objectives remove tombR1
+scoreboard objectives remove tombR2
+scoreboard objectives remove tombR3
