@@ -3,7 +3,8 @@ Map built by: Solawr
 
 This is a PvE came that I don't understand how it works as I write this.
 
-round 1 - players are set into a medium sized map with the goal to kill as many mobs as possible, teams are rewarded based off of position on how many mobs killed
+round 1 - players are set into a medium sized map with the goal to kill as many mobs as possible
+    - teams are rewarded based off of position on how many mobs killed
     - first round has a time limit (2.5 mins)
     - team with most kills get the most points
 

@@ -1,0 +1,13 @@
+How Tomb is going to be structued:
+ - cortex strategy -- will allow more flexible debugging
+ - "just in time" method -- make objectives only when necessary and remove when unnecessary
+
+Start function:
+ - Acts as a *begin* type
+ - teleports players to pregame lobby to explain what the game is
+
+
+
+Issues:
+ - multiple rounds can be run at once, wire up a game kill condition
+ - make a function to skip the infotext intro
