@@ -27,6 +27,7 @@ schedule clear main:lobby
 kill @e[name="?music"]
 tag @a remove bpAlive
 tag @a remove bpDead
+tag @a remove bpDeaths
 effect clear @a
 clear @a[team=!Admin]
 

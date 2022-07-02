@@ -131,6 +131,7 @@ tag @a remove bpDead
 scoreboard objectives remove tombCore
 scoreboard objectives remove tombConst
 scoreboard objectives remove tombKills
+scoreboard objectives remove tombR1Timer
 scoreboard objectives remove tombR1
 scoreboard objectives remove tombR2
 scoreboard objectives remove tombR3

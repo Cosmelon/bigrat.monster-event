@@ -50,3 +50,5 @@ execute if score +rKActive tombCore matches 1 as @a[x=5015,dx=4,y=16,dy=5,z=126]
 execute if score +rKActive tombCore matches 1 as @a[x=5015,dx=4,y=16,dy=5,z=136] run function main:tomb/kits/confirm
 
 #execute at @e[limit=1,nbt={CustomNameVisible:1b},sort=nearest,type=minecraft:armor_stand] run data modify entity @e[nbt={CustomNameVisible:1b},limit=1,sort=nearest] CustomNameVisible set value 0b
+execute store result score +kitConfirm tombCore if entity @a[tag=kitConfirm]
+execute if score +kitConfirm tombCore = .players teamCheck run function main:tomb/round1/start

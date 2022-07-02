@@ -12,6 +12,7 @@ scoreboard players set +r2Active tombCore 0
 scoreboard players set +r3Active tombCore 0
 
 # remove tags
+tag @a remove kitConfirm
 tag @a remove tankKit
 tag @a remove medicKit
 tag @a remove hunterKit

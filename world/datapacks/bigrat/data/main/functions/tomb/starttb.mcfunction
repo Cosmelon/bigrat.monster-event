@@ -15,6 +15,13 @@ scoreboard players set #minConst tombConst 1200
 
 scoreboard objectives add tombKills minecraft.custom:minecraft.mob_kills
 
+# tag remove
+tag @a remove kitConfirm
+tag @a remove tankKit
+tag @a remove medicKit
+tag @a remove hunterKit
+tag @a remove gladiatorKit
+
 #roundActive scores
 scoreboard players set +rKActive tombCore 0
 scoreboard players set +r1Active tombCore 0
