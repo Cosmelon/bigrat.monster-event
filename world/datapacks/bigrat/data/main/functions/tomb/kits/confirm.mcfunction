@@ -4,10 +4,10 @@
 # @s = (yeah there's a lot, look for the amogus in main:tomb/tbtick to get full list)
 # run from main:tomb/tbtick
 
-#title @s times 0 100 20
-#title @s title "\uE000"
-#effect give @s jump_boost 4 250 true
-#effect give @s slowness 4 250 true
+title @s times 0 100 20
+title @s title "\uE000"
+effect give @s jump_boost 4 250 true
+effect give @s slowness 4 250 true
 
 tag @s add kitConfirm
 
