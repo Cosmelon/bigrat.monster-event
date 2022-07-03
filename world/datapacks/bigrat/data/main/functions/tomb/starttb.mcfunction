@@ -3,6 +3,16 @@
 # Type: Start
 # run from: <manual>
 
+# conditions set
+scoreboard players set .lobby currentGame 0
+scoreboard players set .tomb currentGame 1
+time set midnight
+clear @a
+effect clear @a
+gamerule sendCommandFeedback false
+gamemode adventure
+gamerule sendCommandFeedback true
+
 # global scoreboards for tomb
 scoreboard objectives add tombCore dummy
 scoreboard players set +gameActive tombCore 1

@@ -12,6 +12,7 @@ scoreboard players set +countDown tombR1 160
 scoreboard players set +timeLeft tombR1 3000
 scoreboard players set +active tombR1 0
 scoreboard players set +r1Active tombCore 1
+scoreboard players set +rKActive tombCore 0
 scoreboard objectives add tombR1Timer dummy
 # round1 bossbar
 bossbar add tomb:r1timeleft ""

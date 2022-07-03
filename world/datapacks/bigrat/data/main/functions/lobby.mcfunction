@@ -127,6 +127,7 @@ tag @a remove bpAlive
 tag @a remove bpDead
 
 # reset stuff for tomb
+bossbar remove tomb:r1timer
 scoreboard objectives remove tombCore
 scoreboard objectives remove tombConst
 scoreboard objectives remove tombKills
