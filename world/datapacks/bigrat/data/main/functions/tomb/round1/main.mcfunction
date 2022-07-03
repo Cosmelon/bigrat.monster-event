@@ -15,6 +15,11 @@ execute if score +countDown tombR1 matches 20 as @a run playsound minecraft:bloc
 execute if score +countDown tombR1 matches 0 run title @a title ""
 execute if score +countDown tombR1 matches 0 run title @a title {"text":"Start!","color":"dark_red"}
 execute if score +countDown tombR1 matches 0 as @a run playsound minecraft:block.note_block.chime master @s ^0 ^ ^ 1 1.414214 1
+#setup spawners
+execute if score +countDown tombR1 matches 0 run setblock 5016 34 2 minecraft:spawner{SpawnCount:5,MinSpawnDelay:1,MaxSpawnDelay:0,SpawnData:{entity:{id:"zombie"}},DeathLootTable:"main:entity_empty"} replace
+execute if score +countDown tombR1 matches 0 run setblock 5016 34 45 minecraft:spawner{SpawnCount:5,MinSpawnDelay:1,MaxSpawnDelay:0,SpawnData:{entity:{id:"zombie"}},DeathLootTable:"main:entity_empty"} replace
+execute if score +countDown tombR1 matches 0 run setblock 5016 34 89 minecraft:spawner{SpawnCount:5,MinSpawnDelay:1,MaxSpawnDelay:0,SpawnData:{entity:{id:"zombie"}},DeathLootTable:"main:entity_empty"} replace
+execute if score +countDown tombR1 matches 0 run setblock 5016 34 131 minecraft:spawner{SpawnCount:5,MinSpawnDelay:1,MaxSpawnDelay:0,SpawnData:{entity:{id:"zombie"}},DeathLootTable:"main:entity_empty"} replace
 
 # timeLeft
 execute if score +countDown tombR1 matches ..0 run scoreboard players remove +timeLeft tombR1 1
@@ -42,3 +47,6 @@ scoreboard players operation +Min tombR1Timer = #tickMin tombR1Timer
 scoreboard players operation +Sec tombR1Timer = #tickSec tombR1Timer
 scoreboard players operation +Milli tombR1Timer = #tickMilli tombR1Timer
 scoreboard players operation +remainder tombR1Timer = #rem tombR1Timer
+
+# roundend
+execute if score +timeLeft tombR1 matches -1 run function main:tomb/round1/finish
