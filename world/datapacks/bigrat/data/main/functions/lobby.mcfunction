@@ -67,10 +67,9 @@ scoreboard players operation .yellow teamScores += @a[team=Yellow] indivScore
 scoreboard players set .lobby currentGame 1
 scoreboard players set .spleef currentGame 0
 scoreboard players set .race currentGame 0
-scoreboard players set .sg currentGame 0
 scoreboard players set .blockParty currentGame 0
-scoreboard players set .bingo currentGame 0
-scoreboard players set .diggy currentGame 0
+scoreboard players set .tomb currentGame 0
+scoreboard players set .brawl currentGame 0
 
 # reset stuff for spleef
 scoreboard objectives remove spleef

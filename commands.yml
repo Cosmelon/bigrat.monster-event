@@ -83,3 +83,7 @@ aliases:
   - execute if score !gameActive race matches 1 run scoreboard players set !countDown race 171
   - execute if score $gameActive spleef matches 1 run scoreboard players set $countDown spleef 61
   - execute if score +gameActive tomb matches 1 run scoreboard players set +countDown tombCore  61
+  tbclean:
+  - kill @e[type=zombie]
+  - kill @e[type=chicken]
+  - kill @e[type=item]
