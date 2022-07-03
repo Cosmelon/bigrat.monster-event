@@ -17,6 +17,13 @@ tag @a remove tankKit
 tag @a remove medicKit
 tag @a remove hunterKit
 tag @a remove gladiatorKit
+tag @a remove hasKit
+# get rid of zombies
+kill @e[type=zombie]
+setblock 5016 34 2 air destroy
+setblock 5016 34 45 air destroy
+setblock 5016 34 89 air destroy
+setblock 5016 34 131 air destroy
 
 # sound
 playsound minecraft:block.beacon.deactivate master @a

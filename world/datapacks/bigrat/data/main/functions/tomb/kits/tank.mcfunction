@@ -10,6 +10,10 @@ tag @s remove gladiatorKit
 tag @s remove hunterKit
 tag @s remove medicKit
 
+# get kit presence tag
+#  --used to make sure that a player has **A** kit before confirmation
+tag @s add hasKit
+
 # sound
 playsound entity.experience_orb.pickup ambient @s ~ ~ ~ 10000
 
