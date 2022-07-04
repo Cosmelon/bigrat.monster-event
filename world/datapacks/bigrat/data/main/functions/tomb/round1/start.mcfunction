@@ -15,7 +15,13 @@ scoreboard players set +r1Active tombCore 1
 scoreboard players set +rKActive tombCore 0
 scoreboard objectives add tombR1Timer dummy
 # round1 bossbar
-bossbar add tomb:r1timeleft ""
+bossbar add tomb:r1timer ""
+
+# spawnpoints
+spawnpoint @a[team=Red] 5016 34 2
+spawnpoint @a[team=Blue] 5016 34 45
+spawnpoint @a[team=Green] 5016 34 89
+spawnpoint @a[team=Yellow] 5016 34 131
 
 # teleport players to arena
 tp @a[tag=red-1] 5016.5 34 -0.5 0 10

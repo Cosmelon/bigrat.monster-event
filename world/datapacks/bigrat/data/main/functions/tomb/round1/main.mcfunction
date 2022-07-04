@@ -27,7 +27,9 @@ execute store result bossbar tomb:r1timer value run scoreboard players get +time
 execute if score +countDown tombR1 matches 0 run bossbar set tomb:r1timer visible true
 bossbar set tomb:r1timer max 3000
 bossbar set tomb:r1timer players @a
-bossbar set tomb:r1timer name [{"text":"Time Left: ","color":"dark_red"},{"score":{"name":"+timeLeft","objective":"tombR1"}}]
+execute if score +Sec tombR1Timer matches 10.. if score +Min tombR1Timer matches 1.. run bossbar set tomb:r1timer name [{"text":"Time Left: ","color":"dark_red"},{"score":{"name":"+Min","objective":"tombR1Timer"}},{"text":":"},{"score":{"name":"+Sec","objective":"tombR1Timer"}}]
+execute if score +Sec tombR1Timer matches ..9 if score +Min tombR1Timer matches 1.. run bossbar set tomb:r1timer name [{"text":"Time Left: ","color":"dark_red"},{"score":{"name":"+Min","objective":"tombR1Timer"}},{"text":":0"},{"score":{"name":"+Sec","objective":"tombR1Timer"}}]
+execute if score +Sec tombR1Timer matches 10.. if score +Min tombR1Timer matches 0 run bossbar set tomb:r1timer name [{"text":"Time Left: ","color":"dark_red"},{"score":{"name":"+Sec","objective":"tombR1Timer"}},{"text":"."},{"score":{"name":"+Milli","objective":"tombR1Timer"}}]
 execute if score +countDown tombR1 matches 0 run bossbar set tomb:r1timer visible true
 #timer convert math
 scoreboard players operation +tickInput tombR1Timer = +timeLeft tombR1
@@ -49,6 +51,14 @@ scoreboard players operation +Min tombR1Timer = #tickMin tombR1Timer
 scoreboard players operation +Sec tombR1Timer = #tickSec tombR1Timer
 scoreboard players operation +Milli tombR1Timer = #tickMilli tombR1Timer
 scoreboard players operation +remainder tombR1Timer = #rem tombR1Timer
+
+# spectator pen
+execute positioned 5016.5 42 2.5 run tp @a[gamemode=spectator,team=!Admin,distance=18..20] 5016.5 36 2.5
+execute positioned 5016.5 42 45.5 run tp @a[gamemode=spectator,team=!Admin,distance=18..20] 5016.5 36 45.5
+execute positioned 5016.5 42 89.5 run tp @a[gamemode=spectator,team=!Admin,distance=18..20] 5016.5 36 89.5
+execute positioned 5016.5 42 131.5 run tp @a[gamemode=spectator,team=!Admin,distance=18..20] 5016.5 36 131.5
+execute as @a[gamemode=spectator,scores={yCos=..32},team=!Admin] run tp @s ~ ~-5 ~
+execute as @a[gamemode=spectator,scores={yCos=49..},team=!Admin] run tp @s ~ ~-5 ~
 
 # roundend
 execute if score +timeLeft tombR1 matches 0 run function main:tomb/round1/finish

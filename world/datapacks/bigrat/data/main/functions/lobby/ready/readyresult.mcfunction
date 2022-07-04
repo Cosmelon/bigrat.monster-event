@@ -34,7 +34,8 @@ tag @a remove br_rcno
 tag @a remove br_rcNA
 
 # sound
-execute as @a run playsound entity.player.levelup ambient @s ^ ^ ^ 10000
+execute if score .ready br_rcdata = .players teamCheck as @a run playsound entity.player.levelup ambient @s ~ ~100 ~ 10000
+execute if score .ready br_rcdata < .players teamCheck as @a run playsound entity.experience_orb.pickup ambient @s ~ ~100 ~ 10000 .5
 
 # start event
 execute if score .ready br_rcdata = .players teamCheck run schedule function main:lobby/startbr 3s

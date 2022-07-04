@@ -87,3 +87,5 @@ aliases:
   - kill @e[type=zombie]
   - kill @e[type=chicken]
   - kill @e[type=item]
+  reafycheck:
+  - function main:lobby/ready/readycheck
