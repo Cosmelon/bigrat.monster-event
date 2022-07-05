@@ -7,6 +7,7 @@
 scoreboard players set +r1Active tombCore 0
 schedule function main:tomb/round2/start 20s
 tellraw @a "next round starting in 20s"
+scoreboard objectives remove tombR1Deaths
 
 # get rid of zombies
 kill @e[type=zombie]

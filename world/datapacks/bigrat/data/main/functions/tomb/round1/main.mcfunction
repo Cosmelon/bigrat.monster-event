@@ -52,6 +52,12 @@ scoreboard players operation +Sec tombR1Timer = #tickSec tombR1Timer
 scoreboard players operation +Milli tombR1Timer = #tickMilli tombR1Timer
 scoreboard players operation +remainder tombR1Timer = #rem tombR1Timer
 
+# dead players
+execute as @a[scores={tombR1Deaths=1..},tag=player] run gamemode spectator
+execute as @a[scores={tombR1Deaths=1},tag=player] run scoreboard players remove @s indivScore 10
+execute as @a[scores={tombR1Deaths=1},tag=player] run tellraw @s "-10 pts (death)"
+execute as @a[scores={tombR1Deaths=1},tag=player] run scoreboard players add @s tombR1Deaths 1
+
 # spectator pen
 execute positioned 5016.5 42 2.5 run tp @a[gamemode=spectator,team=!Admin,distance=18..20] 5016.5 36 2.5
 execute positioned 5016.5 42 45.5 run tp @a[gamemode=spectator,team=!Admin,distance=18..20] 5016.5 36 45.5
