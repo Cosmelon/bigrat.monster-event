@@ -5,7 +5,7 @@
 # run from 
 
 # set kitPhase to active
-scoreboard players set +rKActive tombCore 1
+scoreboard players set +rKActive tbCore 1
 
 # title
 title @a title "kit selection"

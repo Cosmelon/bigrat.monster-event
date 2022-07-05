@@ -20,10 +20,14 @@ setblock 5016 34 89 air destroy
 setblock 5016 34 131 air destroy
 
 # leaderboard
-tellraw @a "Top Scoring Players:"
+tellraw @a "Top Scoring teams:"
 #todo: do leaderboard
 tellraw @a [{"translate":"space.3"},{"text":"1. "}]
 tellraw @a ""
+tellraw @a [{"text":"1. "},{"selector":"@e[tag=tb_kp1]"},{"text":" - "},{"score":{"name":"@e[tag=tb_kp1,limit=1]","objective":"tbR1_tKills"}}]
+tellraw @a [{"text":"2. "},{"selector":"@e[tag=tb_kp2]"},{"text":" - "},{"score":{"name":"@e[tag=tb_kp2,limit=1]","objective":"tbR1_tKills"}}]
+tellraw @a [{"text":"3. "},{"selector":"@e[tag=tb_kp3]"},{"text":" - "},{"score":{"name":"@e[tag=tb_kp3,limit=1]","objective":"tbR1_tKills"}}]
+tellraw @a [{"text":"4. "},{"selector":"@e[tag=tb_kp4]"},{"text":" - "},{"score":{"name":"@e[tag=tb_kp4,limit=1]","objective":"tbR1_tKills"}}]
 
 # sound
 function main:sfx/gameend
@@ -32,7 +36,7 @@ function main:sfx/gameend
 title @a title "Finish!"
 
 # clear placement tags
-tag @a remove tb_p1
-tag @a remove tb_p2
-tag @a remove tb_p3
-tag @a remove tb_p4
+tag @a remove tb_kp1
+tag @a remove tb_kp2
+tag @a remove tb_kp3
+tag @a remove tb_kp4

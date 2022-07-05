@@ -11,12 +11,35 @@ scoreboard objectives add tbR1 dummy
 scoreboard players set +countDown tbR1 160
 scoreboard players set +timeLeft tbR1 3000
 scoreboard players set +active tbR1 0
-scoreboard objectives add tbR1_Deaths deathCount
 scoreboard players set +r1Active tbCore 1
 scoreboard players set +rKActive tbCore 0
 scoreboard objectives remove tbR1_Timer
 scoreboard objectives add tbR1_Timer dummy
 scoreboard objectives add tbR1_Deaths deathCount
+
+# kill boards
+# tbR1_aKill tracks the actual kill event, tbR1_iKills & tbR1_tKills recieve the data
+scoreboard objectives add tbR1_aKill killed:minecraft.zombie
+scoreboard objectives add tbR1_iKills dummy
+scoreboard objectives add tbR1_tKills dummy
+scoreboard objectives add tbR1_tKillsM dummy
+scoreboard players set +p1 tbR1_tKillsM -2147483648
+scoreboard players set +p2 tbR1_tKillsM -2147483648
+scoreboard players set +p3 tbR1_tKillsM -2147483648
+scoreboard players set +p4 tbR1_tKillsM -2147483648
+scoreboard objectives add tbR1_tKillsPos dummy
+
+# scoring boards
+scoreboard objectives add tbR1_tPos dummy
+
+# place armorstand kill keepers
+forceload add 4987 -5 4987 -5
+execute positioned 4983.5 4 -8 run kill @e[type=armor_stand,distance=..3]
+summon armor_stand 4983.5 4 -6.5 {Invisible:1b,Invulnerable:1b,CustomName:'[{"text":"Red","color":"red"}]'}
+summon armor_stand 4983.5 4 -7.5 {Invisible:1b,Invulnerable:1b,CustomName:'[{"text":"Blue","color":"blue"}]'}
+summon armor_stand 4983.5 4 -8.5 {Invisible:1b,Invulnerable:1b,CustomName:'[{"text":"Green","color":"green"}]'}
+summon armor_stand 4983.5 4 -9.5 {Invisible:1b,Invulnerable:1b,CustomName:'[{"text":"Yellow","color":"yellow"}]'}
+execute positioned 4983.5 4 -8 run tag @e[type=armor_stand,distance=..3] add tb_kKeeper
 
 # round1 bossbar
 bossbar add tomb:r1timer ""
