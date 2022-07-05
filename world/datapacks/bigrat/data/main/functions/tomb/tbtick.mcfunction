@@ -4,7 +4,7 @@
 # run from: main:tick
 
 # countDown
-scoreboard players remove +countDown tombCore 1
+scoreboard players remove +countDown tbCore 1
 #execute if score +countDown tombCore matches 1..60 run title @a title {"text":"Starting:","color":"gold"}
 #execute if score +countDown tombCore matches 60 run title @a subtitle {"text":">   3   <","color":"red"}
 #execute if score +countDown tombCore matches 60 as @a run playsound minecraft:block.note_block.chime master @s ^0 ^ ^ 1 1.259921 1
@@ -24,31 +24,31 @@ scoreboard players remove +countDown tombCore 1
 
 #make tick files active
 #execute if score +r2Active tombCore matches 1 run 
-execute if score +r1Active tombCore matches 1 run function main:tomb/round1/main
-execute if score +r2Active tombCore matches 1 run function main:tomb/round2/main
-execute if score +r3Active tombCore matches 1 run function main:tomb/round3/main
+execute if score +r1Active tbCore matches 1 run function main:tomb/round1/main
+execute if score +r2Active tbCore matches 1 run function main:tomb/round2/main
+execute if score +r3Active tbCore matches 1 run function main:tomb/round3/main
 #debug stuff
-execute if score +r1Active tombCore matches 0 run scoreboard players set +active tombR1 0
-execute if score +r2Active tombCore matches 0 run scoreboard players set +active tombR2 0
-execute if score +r3Active tombCore matches 0 run scoreboard players set +active tombR3 0
+execute if score +r1Active tbCore matches 0 run scoreboard players set +active tbR1 0
+execute if score +r2Active tbCore matches 0 run scoreboard players set +active tbR2 0
+execute if score +r3Active tbCore matches 0 run scoreboard players set +active tbR3 0
 
 # kit detect & apply
-execute if score +countDown tombCore matches 0 run function main:tomb/kits/kitselect
-execute if score +rKActive tombCore matches 1 at @e[tag=tankNPC] as @a[distance=..1,tag=!tankKit] run function main:tomb/kits/tank
-execute if score +rKActive tombCore matches 1 at @e[tag=medicNPC] as @a[distance=..1,tag=!medicKit] run function main:tomb/kits/medic
-execute if score +rKActive tombCore matches 1 at @e[tag=hunterNPC] as @a[distance=..1,tag=!hunterKit] run function main:tomb/kits/hunter
-execute if score +rKActive tombCore matches 1 at @e[tag=gladiatorNPC] as @a[distance=..1,tag=!gladiatorKit] run function main:tomb/kits/gladiator
+execute if score +countDown tbCore matches 0 run function main:tomb/kits/kitselect
+execute if score +rKActive tbCore matches 1 at @e[tag=tankNPC] as @a[distance=..1,tag=!tankKit] run function main:tomb/kits/tank
+execute if score +rKActive tbCore matches 1 at @e[tag=medicNPC] as @a[distance=..1,tag=!medicKit] run function main:tomb/kits/medic
+execute if score +rKActive tbCore matches 1 at @e[tag=hunterNPC] as @a[distance=..1,tag=!hunterKit] run function main:tomb/kits/hunter
+execute if score +rKActive tbCore matches 1 at @e[tag=gladiatorNPC] as @a[distance=..1,tag=!gladiatorKit] run function main:tomb/kits/gladiator
 #ඞඞඞඞඞ
 #kitConfirm
-execute if score +rKActive tombCore matches 1 as @a[x=5015,dx=4,y=16,dy=5,z=-2.5,tag=hasKit] run function main:tomb/kits/confirm
-execute if score +rKActive tombCore matches 1 as @a[x=5015,dx=4,y=16,dy=5,z=7.5,tag=hasKit] run function main:tomb/kits/confirm
-execute if score +rKActive tombCore matches 1 as @a[x=5015,dx=4,y=16,dy=5,z=38.5,tag=hasKit] run function main:tomb/kits/confirm
-execute if score +rKActive tombCore matches 1 as @a[x=5015,dx=4,y=16,dy=5,z=49.5,tag=hasKit] run function main:tomb/kits/confirm
-execute if score +rKActive tombCore matches 1 as @a[x=5015,dx=4,y=16,dy=5,z=83.5,tag=hasKit] run function main:tomb/kits/confirm
-execute if score +rKActive tombCore matches 1 as @a[x=5015,dx=4,y=16,dy=5,z=94.5,tag=hasKit] run function main:tomb/kits/confirm
-execute if score +rKActive tombCore matches 1 as @a[x=5015,dx=4,y=16,dy=5,z=125.5,tag=hasKit] run function main:tomb/kits/confirm
-execute if score +rKActive tombCore matches 1 as @a[x=5015,dx=4,y=16,dy=5,z=136.5,tag=hasKit] run function main:tomb/kits/confirm
+execute if score +rKActive tbCore matches 1 as @a[x=5015,dx=4,y=16,dy=5,z=-2.5,tag=hasKit] run function main:tomb/kits/confirm
+execute if score +rKActive tbCore matches 1 as @a[x=5015,dx=4,y=16,dy=5,z=7.5,tag=hasKit] run function main:tomb/kits/confirm
+execute if score +rKActive tbCore matches 1 as @a[x=5015,dx=4,y=16,dy=5,z=38.5,tag=hasKit] run function main:tomb/kits/confirm
+execute if score +rKActive tbCore matches 1 as @a[x=5015,dx=4,y=16,dy=5,z=49.5,tag=hasKit] run function main:tomb/kits/confirm
+execute if score +rKActive tbCore matches 1 as @a[x=5015,dx=4,y=16,dy=5,z=83.5,tag=hasKit] run function main:tomb/kits/confirm
+execute if score +rKActive tbCore matches 1 as @a[x=5015,dx=4,y=16,dy=5,z=94.5,tag=hasKit] run function main:tomb/kits/confirm
+execute if score +rKActive tbCore matches 1 as @a[x=5015,dx=4,y=16,dy=5,z=125.5,tag=hasKit] run function main:tomb/kits/confirm
+execute if score +rKActive tbCore matches 1 as @a[x=5015,dx=4,y=16,dy=5,z=136.5,tag=hasKit] run function main:tomb/kits/confirm
 
 #execute at @e[limit=1,nbt={CustomNameVisible:1b},sort=nearest,type=minecraft:armor_stand] run data modify entity @e[nbt={CustomNameVisible:1b},limit=1,sort=nearest] CustomNameVisible set value 0b
-execute store result score +kitConfirm tombCore if entity @a[tag=kitConfirm]
-execute if score +rKActive tombCore matches 1 if score +kitConfirm tombCore = .players teamCheck run function main:tomb/round1/start
+execute store result score +kitConfirm tbCore if entity @a[tag=kitConfirm]
+execute if score +rKActive tbCore matches 1 if score +kitConfirm tbCore = .players teamCheck run function main:tomb/round1/start

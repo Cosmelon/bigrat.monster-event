@@ -5,12 +5,12 @@
 
 # kills tomb
 scoreboard players set .tomb currentGame 0
-scoreboard players set +gameActive tombCore 0
-scoreboard players set +countDown tombCore 161
-scoreboard players set +rKActive tombCore 0
-scoreboard players set +r1Active tombCore 0
-scoreboard players set +r2Active tombCore 0
-scoreboard players set +r3Active tombCore 0
+scoreboard players set +gameActive tbCore 0
+scoreboard players set +countDown tbCore 161
+scoreboard players set +rKActive tbCore 0
+scoreboard players set +r1Active tbCore 0
+scoreboard players set +r2Active tbCore 0
+scoreboard players set +r3Active tbCore 0
 bossbar remove tomb:r1timer
 
 # player stuff

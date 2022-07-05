@@ -1,20 +1,23 @@
 # Description: Round 1 start for tomb
 # Author: Cosmelon
 # Type: single
-# run from main:tomb/starttomb
+# run from main:tomb/starttb
 
 # disable armorstand names
 execute as @e[tag=tombNPC] run data modify entity @s CustomNameVisible set value 0b
 
 # round1 scoreboards
-scoreboard objectives add tombR1 dummy
-scoreboard players set +countDown tombR1 160
-scoreboard players set +timeLeft tombR1 3000
-scoreboard players set +active tombR1 0
-scoreboard objectives add tombR1Deaths deathCount
-scoreboard players set +r1Active tombCore 1
-scoreboard players set +rKActive tombCore 0
-scoreboard objectives add tombR1Timer dummy
+scoreboard objectives add tbR1 dummy
+scoreboard players set +countDown tbR1 160
+scoreboard players set +timeLeft tbR1 3000
+scoreboard players set +active tbR1 0
+scoreboard objectives add tbR1_Deaths deathCount
+scoreboard players set +r1Active tbCore 1
+scoreboard players set +rKActive tbCore 0
+scoreboard objectives remove tbR1_Timer
+scoreboard objectives add tbR1_Timer dummy
+scoreboard objectives add tbR1_Deaths deathCount
+
 # round1 bossbar
 bossbar add tomb:r1timer ""
 
