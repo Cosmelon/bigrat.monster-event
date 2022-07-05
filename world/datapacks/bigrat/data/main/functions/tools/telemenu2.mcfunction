@@ -12,7 +12,7 @@ tellraw @s {"text":""}
 tellraw @s {"text":""}
 tellraw @s [{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"translate":"space.-1"},{"text":"\uE004"}]
 tellraw @s {"text":"Battle","color":"blue","clickEvent":{"action":"run_command","value":"/tp @s -708 21 683 180 0"}}
-tellraw @s {"text":"Legacy Builds","color":"gray","clickEvent":{"action":"run_command","value":"/tp @s 1984 133 1984"}}
+tellraw @s [{"text":"Legacy Builds","color":"gray","clickEvent":{"action":"run_command","value":"/tp @s 1984 133 1984"}},{"translate":"space.10"},{"text":"Survival Games","color":"#9051DF","clickEvent":{"action":"run_command","value":"/tp @s -1984 133 -1984"}}]
 tellraw @s {"text":"Water rising parkour","color":"brown","clickEvent":{"action":"run_command","value":"/tp @s -1000 50 1000"}}
 tellraw @s {"text":"Luke Placeholder","color":"green","clickEvent":{"action":"run_command","value":"/tp @s -2000 50 2000"}}
 tellraw @s {"text":"TF2 Arena","color":"#FFA500","clickEvent":{"action":"run_command","value":"/tp @s 4059 36 -3220"}}

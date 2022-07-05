@@ -23,8 +23,6 @@ bossbar set minecraft:spleefroundcount players @a
 bossbar set minecraft:spleefshrinkwarn players @a
 bossbar set minecraft:spleefshrinkactual players @a
 bossbar set minecraft:racetimer players @a
-bossbar set minecraft:sgshrinkactual players @a
-bossbar set minecraft:sgshrink players @a
 
 # tagging player system
 tag @a[team=Red] add player
@@ -96,6 +94,9 @@ function main:scores/teamscore
 
 # statue score npc display
 function main:scores/teamnpcs
+
+# indivScore
+function main:scores/indivmath
 
 # funny fall thing
 execute if score !bones currentGame matches 1 as @a if score @s fall matches 900.. run function main:fallen

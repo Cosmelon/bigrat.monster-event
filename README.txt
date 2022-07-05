@@ -29,3 +29,7 @@ Globally tracked scoreboards (.global)
     - teamCheck - the number of players on each team; prevents gameloop
     - yCos - y level
     - playersOnline - offline = 1, online = 0
+    - indivScore - raw player individual scores
+    - indivMath - determines individual player position
+    - indivPos - individual player position output
+    - teamScores - raw team scores
