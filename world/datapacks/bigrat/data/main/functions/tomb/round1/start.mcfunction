@@ -27,6 +27,26 @@ scoreboard players set +p1 tbR1_tKillsM -2147483648
 scoreboard players set +p2 tbR1_tKillsM -2147483648
 scoreboard players set +p3 tbR1_tKillsM -2147483648
 scoreboard players set +p4 tbR1_tKillsM -2147483648
+scoreboard objectives add tbR1_tiKillsM_Red dummy
+scoreboard players set +p1 tbR1_tiKillsM_Red -2147483648
+scoreboard players set +p2 tbR1_tiKillsM_Red -2147483648
+scoreboard players set +p3 tbR1_tiKillsM_Red -2147483648
+scoreboard players set +p4 tbR1_tiKillsM_Red -2147483648
+scoreboard objectives add tbR1_tiKillsM_Blue dummy
+scoreboard players set +p1 tbR1_tiKillsM_Blue -2147483648
+scoreboard players set +p2 tbR1_tiKillsM_Blue -2147483648
+scoreboard players set +p3 tbR1_tiKillsM_Blue -2147483648
+scoreboard players set +p4 tbR1_tiKillsM_Blue -2147483648
+scoreboard objectives add tbR1_tiKillsM_Green dummy
+scoreboard players set +p1 tbR1_tiKillsM_Green -2147483648
+scoreboard players set +p2 tbR1_tiKillsM_Green -2147483648
+scoreboard players set +p3 tbR1_tiKillsM_Green -2147483648
+scoreboard players set +p4 tbR1_tiKillsM_Green -2147483648
+scoreboard objectives add tbR1_tiKillsM_Yellow dummy
+scoreboard players set +p1 tbR1_tiKillsM_Yellow -2147483648
+scoreboard players set +p2 tbR1_tiKillsM_Yellow -2147483648
+scoreboard players set +p3 tbR1_tiKillsM_Yellow -2147483648
+scoreboard players set +p4 tbR1_tiKillsM_Yellow -2147483648
 scoreboard objectives add tbR1_tKillsPos dummy
 
 # scoring boards
