@@ -7,12 +7,34 @@ scoreboard players set .lobby currentGame 0
 
 # create scoreboards
 scoreboard objectives add race dummy
-scoreboard objectives add raceMilli dummy
-scoreboard objectives add raceSec dummy
-scoreboard objectives add raceMin dummy
 scoreboard objectives add raceLap dummy
 scoreboard objectives add racePos dummy
 scoreboard objectives add raceCP dummy
+
+# main stopwatch scoreboards
+scoreboard objectives add raceMilli dummy
+scoreboard objectives add raceSec dummy
+scoreboard objectives add raceMin dummy
+
+# perLap stopwatch
+scoreboard objectives add raceMilli1 dummy
+scoreboard objectives add raceMilli2 dummy
+scoreboard objectives add raceMilli3 dummy
+scoreboard objectives add raceSec1 dummy
+scoreboard objectives add raceSec2 dummy
+scoreboard objectives add raceSec3 dummy
+scoreboard objectives add raceMin1 dummy
+scoreboard objectives add raceMin2 dummy
+scoreboard objectives add raceMin3 dummy
+scoreboard players set @a raceMilli1 0
+scoreboard players set @a raceMilli2 0
+scoreboard players set @a raceMilli3 0
+scoreboard players set @a raceSec1 0
+scoreboard players set @a raceSec2 0
+scoreboard players set @a raceSec3 0
+scoreboard players set @a raceMin1 0
+scoreboard players set @a raceMin2 0
+scoreboard players set @a raceMin3 0
 
 # scoreboard objectives for indiv overall time
 scoreboard objectives add raceOMilli dummy

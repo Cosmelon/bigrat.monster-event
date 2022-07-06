@@ -13,8 +13,8 @@ gamemode spectator @a[tag=!player,team=!Admin]
 
 # stuff for the stopwatch
 execute if score !countDown race matches ..0 run scoreboard players add !milli race 5
-execute if score !countDown race matches ..0 run execute if score !milli race matches 1.. run scoreboard players add @a[gamemode=adventure,scores={raceLap=..3},tag=player] raceMilli 5
-execute if score !countDown race matches ..0 run execute if score !milli race matches 1.. run scoreboard players add !raceTime raceMilli 5
+execute if score !countDown race matches ..0 if score !milli race matches 1.. run scoreboard players add @a[gamemode=adventure,scores={raceLap=..3},tag=player] raceMilli 5
+execute if score !countDown race matches ..0 if score !milli race matches 1.. run scoreboard players add !raceTime raceMilli 5
 execute if score !milli race matches 100.. run scoreboard players set !milli race 0
 execute if score !raceTime raceMilli matches 100 run scoreboard players add !raceTime raceSec 1
 execute if score !raceTime raceMilli matches 100 run scoreboard players set !raceTime raceMilli 0
@@ -23,11 +23,13 @@ execute if score !raceTime raceSec matches 60 run scoreboard players set !raceTi
 execute as @a[scores={raceMilli=100}] run scoreboard players add @s raceSec 1
 execute as @a[scores={raceMilli=100}] run scoreboard players set @s raceMilli 0
 execute as @a[scores={raceSec=60}] run scoreboard players add @s raceMin 1
-execute as @a[scores={raceSec=60}] run scoreboard players set @s raceSec 0
-execute if score !raceTime raceSec matches 0..9 run execute if score !raceTime raceMilli matches 0..9 run bossbar set minecraft:racetime name [{"text":"Overall Time: ","color":"gold"},{"score":{"name": "!raceTime","objective":"raceMin"},"color":"green"},{"text":":0","color":"green"},{"score":{"name":"!raceTime","objective":"raceSec"},"color":"green"},{"text":".0","color":"green"},{"score":{"name":"!raceTime","objective":"raceMilli"},"color":"green"}]
-execute if score !raceTime raceSec matches 10.. run execute if score !raceTime raceMilli matches 0..9 run bossbar set minecraft:racetime name [{"text":"Overall Time: ","color":"gold"},{"score":{"name": "!raceTime","objective":"raceMin"},"color":"green"},{"text":":","color":"green"},{"score":{"name":"!raceTime","objective":"raceSec"},"color":"green"},{"text":".0","color":"green"},{"score":{"name":"!raceTime","objective":"raceMilli"},"color":"green"}]
-execute if score !raceTime raceSec matches 0..9 run execute if score !raceTime raceMilli matches 10.. run bossbar set minecraft:racetime name [{"text":"Overall Time: ","color":"gold"},{"score":{"name": "!raceTime","objective":"raceMin"},"color":"green"},{"text":":0","color":"green"},{"score":{"name":"!raceTime","objective":"raceSec"},"color":"green"},{"text":".","color":"green"},{"score":{"name":"!raceTime","objective":"raceMilli"},"color":"green"}]
-execute if score !raceTime raceSec matches 10.. run execute if score !raceTime raceMilli matches 10.. run bossbar set minecraft:racetime name [{"text":"Overall Time: ","color":"gold"},{"score":{"name": "!raceTime","objective":"raceMin"},"color":"green"},{"text":":","color":"green"},{"score":{"name":"!raceTime","objective":"raceSec"},"color":"green"},{"text":".","color":"green"},{"score":{"name":"!raceTime","objective":"raceMilli"},"color":"green"}]
+execute as @a[scores={raceSec=60}] run scoreboard players set @s raceMin 0
+
+# overall time bossbar
+execute if score !raceTime raceSec matches 0..9 if score !raceTime raceMilli matches 0..9 run bossbar set minecraft:racetime name [{"text":"Overall Time: ","color":"gold"},{"score":{"name": "!raceTime","objective":"raceMin"},"color":"green"},{"text":":0","color":"green"},{"score":{"name":"!raceTime","objective":"raceSec"},"color":"green"},{"text":".0","color":"green"},{"score":{"name":"!raceTime","objective":"raceMilli"},"color":"green"}]
+execute if score !raceTime raceSec matches 10.. if score !raceTime raceMilli matches 0..9 run bossbar set minecraft:racetime name [{"text":"Overall Time: ","color":"gold"},{"score":{"name": "!raceTime","objective":"raceMin"},"color":"green"},{"text":":","color":"green"},{"score":{"name":"!raceTime","objective":"raceSec"},"color":"green"},{"text":".0","color":"green"},{"score":{"name":"!raceTime","objective":"raceMilli"},"color":"green"}]
+execute if score !raceTime raceSec matches 0..9 if score !raceTime raceMilli matches 10.. run bossbar set minecraft:racetime name [{"text":"Overall Time: ","color":"gold"},{"score":{"name": "!raceTime","objective":"raceMin"},"color":"green"},{"text":":0","color":"green"},{"score":{"name":"!raceTime","objective":"raceSec"},"color":"green"},{"text":".","color":"green"},{"score":{"name":"!raceTime","objective":"raceMilli"},"color":"green"}]
+execute if score !raceTime raceSec matches 10.. if score !raceTime raceMilli matches 10.. run bossbar set minecraft:racetime name [{"text":"Overall Time: ","color":"gold"},{"score":{"name": "!raceTime","objective":"raceMin"},"color":"green"},{"text":":","color":"green"},{"score":{"name":"!raceTime","objective":"raceSec"},"color":"green"},{"text":".","color":"green"},{"score":{"name":"!raceTime","objective":"raceMilli"},"color":"green"}]
 
 #indiv overall stopwatch conditions
 execute as @a[scores={raceLap=..3}] run scoreboard players operation @s raceOMilli = !raceTime raceMilli
@@ -155,11 +157,11 @@ execute positioned 310 100 0 run tp @a[team=!Admin,gamemode=spectator,distance=1
 execute if score !countDown race matches ..110 run tellraw @a[team=!Admin,gamemode=spectator,distance=175..] {"text":"No peeking!","color":"dark_gray"}
 
 # speedpads (magenta_glazed_terracotta)
-execute as @a[tag=player,gamemode=adventure] run execute positioned as @s if block ~ ~-1 ~ minecraft:magenta_glazed_terracotta run effect give @s speed 2 3 true
-#execute as @a[tag=player,gamemode=adventure] run execute positioned as @s if block ~ ~-1 ~ magenta_glazed_terracotta run playsound minecraft:custom.race/speed ambient @s
+execute as @a[tag=player,gamemode=adventure] positioned as @s if block ~ ~-1 ~ minecraft:magenta_glazed_terracotta run effect give @s speed 2 3 true
+#execute as @a[tag=player,gamemode=adventure] positioned as @s if block ~ ~-1 ~ magenta_glazed_terracotta run playsound minecraft:custom.race/speed ambient @s
 # jump boost (lime_glazed_terracotta)
-execute as @a[tag=player,gamemode=adventure] run execute positioned as @s if block ~ ~-1 ~ lime_glazed_terracotta run effect give @s minecraft:jump_boost 1 7 true
-execute as @a[tag=player,gamemode=adventure] run execute positioned as @s if block ~ ~-0.25 ~ air run effect clear @s minecraft:jump_boost
+execute as @a[tag=player,gamemode=adventure] positioned as @s if block ~ ~-1 ~ lime_glazed_terracotta run effect give @s minecraft:jump_boost 1 7 true
+execute as @a[tag=player,gamemode=adventure] positioned as @s if block ~ ~-0.25 ~ air run effect clear @s minecraft:jump_boost
 # give elytra (light_blue_glazed_terracotta)
 # again credit to /u/PunchTunnel! They're carrying this ong
 execute as @a[tag=player,gamemode=adventure] at @s unless block ~ ~-0.25 ~ air run item replace entity @s armor.chest with air

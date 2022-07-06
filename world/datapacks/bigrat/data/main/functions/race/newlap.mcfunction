@@ -89,7 +89,18 @@ execute if score @s raceLap matches 3 run scoreboard players operation !indivFin
 execute if score @s raceLap matches 3 run scoreboard players remove !indivFinish race 1
 
 # custom sound
-execute as @a run playsound minecraft:custom.race/lap voice @s ~ ~ ~ 100000 1.2
+playsound minecraft:custom.race/lap voice @s ~ ~ ~ 100000 1.2
+
+# save race lap times on each lap
+execute if score @s raceLap matches 1 run scoreboard players operation @s raceMilli1 = @s raceMilli
+execute if score @s raceLap matches 1 run scoreboard players operation @s raceSec1 = @s raceSec
+execute if score @s raceLap matches 1 run scoreboard players operation @s raceMin1 = @s raceMin
+execute if score @s raceLap matches 2 run scoreboard players operation @s raceMilli2 = @s raceMilli
+execute if score @s raceLap matches 2 run scoreboard players operation @s raceSec2 = @s raceSec
+execute if score @s raceLap matches 2 run scoreboard players operation @s raceMin2 = @s raceMin
+execute if score @s raceLap matches 3 run scoreboard players operation @s raceMilli3 = @s raceMilli
+execute if score @s raceLap matches 3 run scoreboard players operation @s raceSec3 = @s raceSec
+execute if score @s raceLap matches 3 run scoreboard players operation @s raceMin3 = @s raceMin
 
 # resetting timer scores
 scoreboard players set @s raceMilli 0
