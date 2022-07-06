@@ -15,13 +15,13 @@ tag @s remove tankKit
 tag @s add hasKit
 
 # sound
-playsound entity.experience_orb.pickup ambient @s ~ ~ ~ 10000
+execute if score +rKActive tbCore matches 1 run playsound entity.experience_orb.pickup ambient @s ~ ~ ~ 10000
 
 # kit info
-tellraw @s "hunter kit"
-tellraw @s "placeholder text"
-tellraw @s ""
-tellraw @s "kit info:"
+execute if score +rKActive tbCore matches 1 run tellraw @s "hunter kit"
+execute if score +rKActive tbCore matches 1 run tellraw @s "placeholder text"
+execute if score +rKActive tbCore matches 1 run tellraw @s ""
+execute if score +rKActive tbCore matches 1 run tellraw @s "kit info:"
 
 # give items
 clear @s
