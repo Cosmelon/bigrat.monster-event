@@ -44,10 +44,10 @@ tellraw @a[team=Green] [{"text":"1. "},{"selector":"@a[tag=tb_kGREENp1]"}]
 tellraw @a[team=Green] [{"text":"2. "},{"selector":"@a[tag=tb_kGREENp2]"}]
 tellraw @a[team=Green] [{"text":"3. "},{"selector":"@a[tag=tb_kGREENp3]"}]
 tellraw @a[team=Green] [{"text":"4. "},{"selector":"@a[tag=tb_kGREENp4]"}]
-tellraw @a[team=Yellow] [{"text":"1. "},{"selector":"@a[tag=tb_kGREENp1]"}]
-tellraw @a[team=Yellow] [{"text":"2. "},{"selector":"@a[tag=tb_kGREENp2]"}]
-tellraw @a[team=Yellow] [{"text":"3. "},{"selector":"@a[tag=tb_kGREENp3]"}]
-tellraw @a[team=Yellow] [{"text":"4. "},{"selector":"@a[tag=tb_kGREENp4]"}]
+tellraw @a[team=Yellow] [{"text":"1. "},{"selector":"@a[tag=tb_kYELLOWp1]"}]
+tellraw @a[team=Yellow] [{"text":"2. "},{"selector":"@a[tag=tb_kYELLOWp2]"}]
+tellraw @a[team=Yellow] [{"text":"3. "},{"selector":"@a[tag=tb_kYELLOWp3]"}]
+tellraw @a[team=Yellow] [{"text":"4. "},{"selector":"@a[tag=tb_kYELLOWp4]"}]
 
 # sound
 function main:sfx/gameend
@@ -60,3 +60,19 @@ tag @a remove tb_kp1
 tag @a remove tb_kp2
 tag @a remove tb_kp3
 tag @a remove tb_kp4
+tag @a remove tb_kREDp1
+tag @a remove tb_kREDp2
+tag @a remove tb_kREDp3
+tag @a remove tb_kREDp4
+tag @a remove tb_kBLUEp1
+tag @a remove tb_kBLUEp2
+tag @a remove tb_kBLUEp3
+tag @a remove tb_kBLUEp4
+tag @a remove tb_kGREENp1
+tag @a remove tb_kGREENp2
+tag @a remove tb_kGREENp3
+tag @a remove tb_kGREENp4
+tag @a remove tb_kYELLOWp1
+tag @a remove tb_kYELLOWp2
+tag @a remove tb_kYELLOWp3
+tag @a remove tb_kYELLOWp4

@@ -13,18 +13,18 @@ scoreboard players set +r2Active tbCore 0
 scoreboard players set +r3Active tbCore 0
 bossbar remove tomb:r1timer
 
-scoreboard objectives remove tbConst
-scoreboard objectives remove tbCore
-scoreboard objectives remove tbR1
-scoreboard objectives remove tbR1_aKill
-scoreboard objectives remove tbR1_iKills
-scoreboard objectives remove tbR1_Timer
-scoreboard objectives remove tbR1_tKills
-scoreboard objectives remove tbR1_tKillsM
-scoreboard objectives remove tbR1_tKillsPos
-scoreboard objectives remove tbR1_tPos
-scoreboard objectives remove tbR2
-scoreboard objectives remove tbR3
+#scoreboard objectives remove tbConst
+#scoreboard objectives remove tbCore
+#scoreboard objectives remove tbR1
+#scoreboard objectives remove tbR1_aKill
+#scoreboard objectives remove tbR1_iKills
+#scoreboard objectives remove tbR1_Timer
+#scoreboard objectives remove tbR1_tKills
+#scoreboard objectives remove tbR1_tKillsM
+#scoreboard objectives remove tbR1_tKillsPos
+#scoreboard objectives remove tbR1_tPos
+#scoreboard objectives remove tbR2
+#scoreboard objectives remove tbR3
 
 # player stuff
 clear @a
