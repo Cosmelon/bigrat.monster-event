@@ -16,7 +16,7 @@ scoreboard objectives add tbR2_RedR2 dummy
 scoreboard objectives add tbR2_RedR3 dummy
 
 # generate doors
-place template main:tomb/tbdoor 5069 37 -1
+place template main:tb/tbdoor 5069 37 -1
 
 # regenerate kits
 execute as @a[tag=gladiatorKit] run function main:tomb/kits/gladiator

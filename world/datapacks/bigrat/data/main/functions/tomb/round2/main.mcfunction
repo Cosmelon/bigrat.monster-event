@@ -17,7 +17,7 @@ execute if score +countDown tbR2 matches 0 run title @a title {"text":"Start!","
 execute if score +countDown tbR2 matches 0 as @a run playsound minecraft:block.note_block.chime master @s ^0 ^ ^ 1 1.414214 1
 
 # wave start
-execute if score +countDown tbR2 matches 0 run function main:tomb/round2/red/room1_s
+execute if score +countDown tbR2 matches 0 positioned 5059.5 42 2.5 run function main:tomb/round2/red/r1_s
 
 #execute positioned 5059.5 42 2.5 store result score +zombies tbR2_r1w1Red if entity @e[type=zombie,distance=..12]
 
@@ -25,4 +25,4 @@ execute if score +countDown tbR2 matches 0 run function main:tomb/round2/red/roo
 #execute positioned 5059.5 42 2.5 store result score +zombies tbR2_r1w1Red if entity @e[type=zombie,distance=..12]
 
 # manage OTHER tick files
-execute if score +active tbR2_RedR1 matches 1 run function main:tomb/round2/red/room1_t
+execute if score +active tbR2_RedR1 matches 1 positioned 5059.5 42 2.5 run function main:tomb/round2/red/r1_t
