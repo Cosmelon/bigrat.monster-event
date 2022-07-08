@@ -25,9 +25,9 @@ execute if score +rKActive tbCore matches 1 run tellraw @s "kit info:"
 
 # give items
 clear @s
-item replace entity @s armor.head with leather_helmet
-item replace entity @s armor.chest with chainmail_chestplate
-item replace entity @s armor.legs with golden_leggings
-item replace entity @s armor.feet with golden_boots
-item replace entity @s hotbar.0 with wooden_sword
+item replace entity @s armor.head with leather_helmet{Unbreakable:1b}
+item replace entity @s armor.chest with chainmail_chestplate{Unbreakable:1b}
+item replace entity @s armor.legs with golden_leggings{Unbreakable:1b}
+item replace entity @s armor.feet with golden_boots{Unbreakable:1b}
+item replace entity @s hotbar.0 with wooden_sword{Unbreakable:1b}
 item replace entity @s hotbar.1 with cooked_beef 64

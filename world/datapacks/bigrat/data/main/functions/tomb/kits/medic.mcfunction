@@ -25,11 +25,11 @@ execute if score +rKActive tbCore matches 1 run tellraw @s "kit info:"
 
 # give items
 clear @s
-item replace entity @s armor.head with leather_helmet
-item replace entity @s armor.chest with iron_chestplate
-item replace entity @s armor.legs with iron_leggings
-item replace entity @s armor.feet with golden_boots
-item replace entity @s hotbar.0 with stone_sword
+item replace entity @s armor.head with leather_helmet{Unbreakable:1b}
+item replace entity @s armor.chest with iron_chestplate{Unbreakable:1b}
+item replace entity @s armor.legs with iron_leggings{Unbreakable:1b}
+item replace entity @s armor.feet with golden_boots{Unbreakable:1b}
+item replace entity @s hotbar.0 with stone_sword{Unbreakable:1b}
 item replace entity @s hotbar.1 with cooked_beef
 item replace entity @s hotbar.2 with splash_potion{Potion:"minecraft:healing"}
 item replace entity @s hotbar.3 with splash_potion{Potion:"minecraft:healing"}
