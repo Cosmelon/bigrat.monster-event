@@ -19,7 +19,7 @@ scoreboard players set +gameActive tbCore 1
 scoreboard players set +countDown tbCore 161
 
 scoreboard objectives add tbConst dummy
-scoreboard players set #milliConst tbConst 50
+scoreboard players set #milliConst tbConst 5
 scoreboard players set #secConst tbConst 20
 scoreboard players set #minConst tbConst 1200
 

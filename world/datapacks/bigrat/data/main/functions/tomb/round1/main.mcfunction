@@ -27,9 +27,12 @@ execute store result bossbar tomb:r1timer value run scoreboard players get +time
 execute if score +countDown tbR1 matches 0 run bossbar set tomb:r1timer visible true
 bossbar set tomb:r1timer max 3000
 bossbar set tomb:r1timer players @a
-execute if score +Sec tbR1_Timer matches 10.. if score +Min tbR1_Timer matches 1.. run bossbar set tomb:r1timer name [{"text":"Time Left: ","color":"dark_red"},{"score":{"name":"+Min","objective":"tbR1_Timer"}},{"text":":"},{"score":{"name":"+Sec","objective":"tbR1_Timer"}}]
-execute if score +Sec tbR1_Timer matches ..9 if score +Min tbR1_Timer matches 1.. run bossbar set tomb:r1timer name [{"text":"Time Left: ","color":"dark_red"},{"score":{"name":"+Min","objective":"tbR1_Timer"}},{"text":":0"},{"score":{"name":"+Sec","objective":"tbR1_Timer"}}]
-execute if score +Sec tbR1_Timer matches 10.. if score +Min tbR1_Timer matches 0 run bossbar set tomb:r1timer name [{"text":"Time Left: ","color":"dark_red"},{"score":{"name":"+Sec","objective":"tbR1_Timer"}},{"text":"."},{"score":{"name":"+Milli","objective":"tbR1_Timer"}}]
+execute if score +Min tbR1_Timer matches 1.. if score +Sec tbR1_Timer matches 10.. run bossbar set tomb:r1timer name [{"text":"Time Left: ","color":"dark_red"},{"score":{"name":"+Min","objective":"tbR1_Timer"}},{"text":":"},{"score":{"name":"+Sec","objective":"tbR1_Timer"}}]
+execute if score +Min tbR1_Timer matches 1.. if score +Sec tbR1_Timer matches ..9 run bossbar set tomb:r1timer name [{"text":"Time Left: ","color":"dark_red"},{"score":{"name":"+Min","objective":"tbR1_Timer"}},{"text":":0"},{"score":{"name":"+Sec","objective":"tbR1_Timer"}}]
+execute if score +Min tbR1_Timer matches 0 if score +Sec tbR1_Timer matches 10.. if score +Milli tbR1_Timer matches 10.. run bossbar set tomb:r1timer name [{"text":"Time Left: ","color":"dark_red"},{"score":{"name":"+Sec","objective":"tbR1_Timer"}},{"text":"."},{"score":{"name":"+Milli","objective":"tbR1_Timer"}}]
+execute if score +Min tbR1_Timer matches 0 if score +Sec tbR1_Timer matches 10.. if score +Milli tbR1_Timer matches ..9 run bossbar set tomb:r1timer name [{"text":"Time Left: ","color":"dark_red"},{"score":{"name":"+Sec","objective":"tbR1_Timer"}},{"text":".0"},{"score":{"name":"+Milli","objective":"tbR1_Timer"}}]
+execute if score +Min tbR1_Timer matches 0 if score +Sec tbR1_Timer matches ..9 if score +Milli tbR1_Timer matches 10.. run bossbar set tomb:r1timer name [{"text":"Time Left: ","color":"dark_red"},{"score":{"name":"+Sec","objective":"tbR1_Timer"}},{"text":"."},{"score":{"name":"+Milli","objective":"tbR1_Timer"}}]
+execute if score +Min tbR1_Timer matches 0 if score +Sec tbR1_Timer matches ..9 if score +Milli tbR1_Timer matches ..9 run bossbar set tomb:r1timer name [{"text":"Time Left: ","color":"dark_red"},{"score":{"name":"+Sec","objective":"tbR1_Timer"}},{"text":".0"},{"score":{"name":"+Milli","objective":"tbR1_Timer"}}]
 execute if score +countDown tbR1 matches 0 run bossbar set tomb:r1timer visible true
 #timer convert math
 scoreboard players operation +tickInput tbR1_Timer = +timeLeft tbR1

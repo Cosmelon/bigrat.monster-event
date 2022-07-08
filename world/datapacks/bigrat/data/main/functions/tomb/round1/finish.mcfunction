@@ -11,6 +11,7 @@ scoreboard players set +r1Active tbCore 0
 schedule function main:tomb/round2/start 20s
 tellraw @a "next round starting in 20s"
 scoreboard objectives remove tbR1_Deaths
+bossbar remove tomb:r1timer
 
 # get rid of zombies
 kill @e[type=zombie]
