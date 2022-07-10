@@ -36,6 +36,8 @@ tag @a remove medicKit
 tag @a remove hunterKit
 tag @a remove gladiatorKit
 tag @a remove hasKit
+tag @a remove holdingKey
+tag @a remove keyHolder
 
 # get rid of zombies
 kill @e[type=zombie]

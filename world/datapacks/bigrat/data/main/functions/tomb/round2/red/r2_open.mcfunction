@@ -9,3 +9,11 @@ fill 5069 37 5 5070 42 -1 air replace #main:tb/door
 
 # playsound
 execute as @a[team=Red] run playsound block.chest.open ambient @s ~ ~100 ~ 10000 0.6
+
+# remove key
+clear @a[team=Red] tripwire_hook{display:{Name:'[{"text":"Key 1","italic":false,"color":"red"}]'}}
+
+# title
+title @a[team=Red] title ""
+title @a[team=Red] subtitle ""
+title @a[team=Red] actionbar ""
