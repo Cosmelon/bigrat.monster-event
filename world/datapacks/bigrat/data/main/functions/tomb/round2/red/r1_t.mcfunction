@@ -1,7 +1,7 @@
 # Description: Red room1 tick
 # Author: Cosmelon
-# Type: finish
-# run from 
+# Type: tick
+# run from main:tomb/round2/main ; positioned @ 5059.5 42 2.5 ; when +active tbR2_RedR1 == 1
 
 # count remaining zombies
 execute if score +wave tbR2_RedR1 matches 1 store result score +r1w1Zcount tbR2_RedR1 if entity @e[tag=tbR2_r1w1Red]

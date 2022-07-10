@@ -4,15 +4,17 @@
 # @s = @a[tag=keyHolder,scores={tbR2_click=1..}]
 # run from main:tomb/round2/red/r1_t
 
+# debug
+tellraw @a "ok yeah this is where the script stops"
+
 # open the door
-fill 5069 37 5 5070 42 -1 air replace #main:tb/door
-fill 5076 42 -2 5076 36 6 air replace barrier
+fill 5114 37 -1 5113 42 5 air replace #main:tb/door
 
 # playsound
 execute as @a[team=Red] run playsound block.chest.open ambient @s ~ ~100 ~ 10000 0.6
 
 # remove key
-clear @a[team=Red] tripwire_hook{display:{Name:'[{"text":"Key 1","italic":false,"color":"red"}]'}}
+clear @a[team=Red] tripwire_hook{display:{Name:'[{"text":"Key 2","italic":false,"color":"red"}]'}}
 
 # title
 title @a[team=Red] title ""

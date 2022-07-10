@@ -3,13 +3,16 @@
 # Type: single
 # run from 
 
+# player settings
+gamemode adventure @a[tag=player]
+gamemode spectator @a[tag=!player]
+
 # turn the tick on
 scoreboard players set +r2Active tbCore 1
 
 # make scoreboards
 scoreboard objectives add tbR2 dummy
 scoreboard players set +countDown tbR2 300
-scoreboard players set +wave tbR2 0
 scoreboard objectives add tbR2_RedR1 dummy
 scoreboard players set +wave tbR2_RedR1 0
 scoreboard objectives add tbR2_RedR2 dummy

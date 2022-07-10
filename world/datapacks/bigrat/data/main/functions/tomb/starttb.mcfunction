@@ -10,7 +10,7 @@ time set midnight
 clear @a
 effect clear @a
 gamerule sendCommandFeedback false
-gamemode adventure
+gamemode adventure @a
 gamerule sendCommandFeedback true
 
 # global scoreboards for tomb
