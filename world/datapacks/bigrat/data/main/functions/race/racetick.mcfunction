@@ -23,7 +23,7 @@ execute if score !raceTime raceSec matches 60 run scoreboard players set !raceTi
 execute as @a[scores={raceMilli=100}] run scoreboard players add @s raceSec 1
 execute as @a[scores={raceMilli=100}] run scoreboard players set @s raceMilli 0
 execute as @a[scores={raceSec=60}] run scoreboard players add @s raceMin 1
-execute as @a[scores={raceSec=60}] run scoreboard players set @s raceMin 0
+execute as @a[scores={raceSec=60}] run scoreboard players set @s raceSec 0
 
 # overall time bossbar
 execute if score !raceTime raceSec matches 0..9 if score !raceTime raceMilli matches 0..9 run bossbar set minecraft:racetime name [{"text":"Overall Time: ","color":"gold"},{"score":{"name": "!raceTime","objective":"raceMin"},"color":"green"},{"text":":0","color":"green"},{"score":{"name":"!raceTime","objective":"raceSec"},"color":"green"},{"text":".0","color":"green"},{"score":{"name":"!raceTime","objective":"raceMilli"},"color":"green"}]
