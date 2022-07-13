@@ -3,13 +3,22 @@
 # Type: start
 # run from <manual>
 
-# gamerules
-gamerule reducedDebugInfo true
+# general settings
+title @a times 0 40 5
+gamemode adventure @a[tag=player]
+tag @a[tag=player] add hallsAlive
 
 # declare objectives
-scoreboard objectives add hallCore dummy
-scoreboard players set ~gameActive hallCore 1
-scoreboard players set ~countDown hallCore 160
+scoreboard objectives add hallsCore dummy
+scoreboard players set ~gameActive hallsCore 1
+scoreboard players set ~countDown hallsCore 160
+scoreboard players set ~wRelease hallsCore 100
+scoreboard objectives add halls_death deathCount
+
+# bossbars
+bossbar add halls:wrelease "time until warden release"
+bossbar set halls:wrelease style notched_12
+bossbar set halls:wrelease max 100
 
 # teleport players
 tp @a[team=Red] -976.001 22 1044.001
