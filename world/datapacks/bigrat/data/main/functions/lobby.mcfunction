@@ -144,3 +144,10 @@ scoreboard objectives remove tombR1Timer
 scoreboard objectives remove tombR1
 scoreboard objectives remove tombR2
 scoreboard objectives remove tombR3
+
+# reset stuff for backrooms
+bossbar remove halls:wrelease
+scoreboard objectives remove hallsCore
+scoreboard objectives remove halls_death
+scoreboard objectives remove halls_sneak
+scoreboard objectives remove halls_remote

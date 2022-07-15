@@ -16,6 +16,9 @@ kill @e[type=warden]
 tag @a remove hallsAlive
 tag @a remove hallsDead
 
+# spawnpoint reset
+spawnpoint @a[team=Red] -976 22 1044
+
 # put the startbox back
 place template main:halls/startbox -979 22 1041
 fill -976 26 1037 -973 22 1037 tinted_glass
