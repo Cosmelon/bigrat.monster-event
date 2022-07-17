@@ -28,7 +28,7 @@ execute if score ~countDown hallsCore matches ..-10 run scoreboard players remov
 execute if score ~wRelease hallsCore matches 0 run function main:halls/wrelease
 
 # sneak prevention
-scoreboard players add @a[tag=player,tag=hallsAlive,predicate=main:sneak_state] halls_sneak 1
+execute as @a[tag=player,tag=hallsAlive,predicate=main:sneak_state] unless score @s halls_shitter matches 1 run scoreboard players add @s halls_sneak 1
 tellraw @a[tag=player,scores={halls_sneak=100..}] {"text":"\n-5 points (sneaking like a lil bitch)\n","color":"dark_red"}
 scoreboard players remove @a[tag=player,scores={halls_sneak=100..}] indivScore 5
 scoreboard players reset @a[tag=player,scores={halls_sneak=100..}] halls_sneak
@@ -52,14 +52,15 @@ execute as @a[scores={halls_death=40}] run title @s actionbar {"text":"Until res
 execute as @a[scores={halls_death=20}] run title @s actionbar {"text":"Until respawn: 1","color":"gold"}
 execute as @a[scores={halls_death=2}] run title @s actionbar {"text":"Until respawn: 0","color":"gold"}
 
-# shower room
 #execute positioned -1000 22 993 run particle minecraft:falling_water ~ ~2.35 ~0.08
 
 # find the remote
+#acquiring the remote
 execute as @a[x=-933,y=21,z=1028,dx=6,dy=6,dz=6] run scoreboard players reset @s halls_remote
 item replace entity @a[scores={halls_remote=6}] inventory.13 with lever{display:{Name:'[{"text":"Dad\'s remote","italic":false,"color":"red"}]'}}
 item replace entity @a[scores={halls_remote=1..5}] inventory.13 with air
 scoreboard players set @a[scores={halls_remote=6}] halls_remote 0
+#remote function
 execute as @a[nbt={Inventory:[{id:"minecraft:lever",tag:{display:{Name:'[{"text":"Dad\'s remote","italic":false,"color":"red"}]'}}}]}] run tag @s add remoteHolder
 execute as @a[tag=remoteHolder,nbt={SelectedItem:{id:"minecraft:lever",tag:{display:{Name:'[{"text":"Dad\'s remote","italic":false,"color":"red"}]'}}}}] run tag @s add holdingRemote
 execute as @a[tag=remoteHolder,nbt={SelectedItem:{id:"minecraft:lever",tag:{display:{Name:'[{"text":"Dad\'s remote","italic":false,"color":"red"}]'}}}}] run item replace entity @s weapon.offhand with carrot_on_a_stick{Unbreakable:1b}
@@ -67,9 +68,13 @@ execute as @a[tag=remoteHolder,nbt=!{SelectedItem:{id:"minecraft:lever",tag:{dis
 execute as @a[tag=remoteHolder,nbt=!{SelectedItem:{id:"minecraft:lever",tag:{display:{Name:'[{"text":"Dad\'s remote","italic":false,"color":"red"}]'}}}}] if entity @s[nbt=!{Inventory:[{Slot:-106b,id:"minecraft:air"}]}] run tag @s remove holdingRemote
 execute as @a[nbt=!{Inventory:[{id:"minecraft:lever",tag:{display:{Name:'[{"text":"Dad\'s remote","italic":false,"color":"red"}]'}}}]}] run tag @s remove remoteHolder
 kill @e[type=item,nbt={Item:{id:"minecraft:carrot_on_a_stick"}}]
+#remote effect
+execute as @a[scores={halls_click=1..},nbt={SelectedItem:{id:"minecraft:lever",tag:{display:{Name:'[{"text":"Dad\'s remote","italic":false,"color":"red"}]'}}}}] run function main:halls/tvon
 
-
+# take the shit
+execute positioned -1023.5 22.00 1053.5 run scoreboard players set @a[tag=player,distance=..3] halls_shitter 1
+execute positioned -1023.5 22.00 1053.5 run scoreboard players set @a[tag=player,distance=3.1..] halls_shitter 0
 
 
 # halls_remote
-scoreboard players reset @a halls_remote
+scoreboard players reset @a halls_click
