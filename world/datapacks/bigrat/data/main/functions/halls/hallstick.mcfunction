@@ -72,8 +72,15 @@ kill @e[type=item,nbt={Item:{id:"minecraft:carrot_on_a_stick"}}]
 execute as @a[scores={halls_click=1..},nbt={SelectedItem:{id:"minecraft:lever",tag:{display:{Name:'[{"text":"Dad\'s remote","italic":false,"color":"red"}]'}}}}] run function main:halls/tvon
 
 # take the shit
+#tag players in the place
+tag @a[tag=hallsAlive,x=-1028,y=22,z=1046,dx=13,dy=6,dz=15] add shitRoom
+tag @a[x=-1028,dx=-10000] remove shitRoom
+tag @a[x=-1015,dx=10000] remove shitRoom
+tag @a[z=1046,dz=-10000] remove shitRoom
+tag @a[z=1061,dz=10000] remove shitRoom
 execute positioned -1023.5 22.00 1053.5 run scoreboard players set @a[tag=player,distance=..3] halls_shitter 1
 execute positioned -1023.5 22.00 1053.5 run scoreboard players set @a[tag=player,distance=3.1..] halls_shitter 0
+execute positioned -1023.5 22.00 1053.5 as @a[predicate=main:sneak_state,distance=..3] run scoreboard players add @s halls_shitterClock 1
 
 
 # halls_remote
