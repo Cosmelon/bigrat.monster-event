@@ -15,6 +15,7 @@ bossbar set halls:wrelease visible false
 kill @e[type=warden]
 tag @a remove hallsAlive
 tag @a remove hallsDead
+tag @a remove wifiPass
 
 # spawnpoint reset
 spawnpoint @a[team=Red] -976 22 1044

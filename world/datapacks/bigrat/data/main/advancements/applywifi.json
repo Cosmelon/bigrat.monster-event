@@ -1,0 +1,19 @@
+{
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:player_interacted_with_entity",
+        "conditions": {
+          "player": {
+            "nbt": "{Tags:[\"wifiPass\"]}"
+          },
+          "entity": {
+            "nbt": "{Tags:[\"hallsMouse\"]}"
+          }
+        }
+      }
+    },
+    "rewards": {
+      "function": "main:halls/wifi/applypass"
+    }
+  }
+  

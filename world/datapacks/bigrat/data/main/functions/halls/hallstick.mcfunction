@@ -54,6 +54,9 @@ execute as @a[scores={halls_death=2}] run title @s actionbar {"text":"Until resp
 
 #execute positioned -1000 22 993 run particle minecraft:falling_water ~ ~2.35 ~0.08
 
+# wifi password
+effect give @e[tag=hallsMouse] invisibility 10 0 true
+
 # find the remote
 #acquiring the remote
 execute as @a[x=-933,y=21,z=1028,dx=6,dy=6,dz=6] run scoreboard players reset @s halls_remote
@@ -80,8 +83,8 @@ tag @a[z=1046,dz=-10000] remove shitRoom
 tag @a[z=1061,dz=10000] remove shitRoom
 execute positioned -1023.5 22.00 1053.5 run scoreboard players set @a[tag=player,distance=..3] halls_shitter 1
 execute positioned -1023.5 22.00 1053.5 run scoreboard players set @a[tag=player,distance=3.1..] halls_shitter 0
-execute positioned -1023.5 22.00 1053.5 as @a[predicate=main:sneak_state,distance=..3] run scoreboard players add @s halls_shitterClock 1
-
+execute positioned -1023.5 22.00 1053.5 as @a[predicate=main:sneak_state,distance=..3,scores={halls_shitterClock=..100}] run scoreboard players add @s halls_shitterClock 1
+execute as @a[tag=shitRoom] run title @s actionbar [{"text":"Shitted: ","color":"gold"},{"score":{"name":"@s","objective":"halls_shitterClock"}},{"text":"%"}]
 
 # halls_remote
 scoreboard players reset @a halls_click
