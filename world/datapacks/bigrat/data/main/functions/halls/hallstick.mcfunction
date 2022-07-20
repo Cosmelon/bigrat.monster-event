@@ -75,7 +75,7 @@ kill @e[type=item,nbt={Item:{id:"minecraft:carrot_on_a_stick"}}]
 execute as @a[scores={halls_click=1..},nbt={SelectedItem:{id:"minecraft:lever",tag:{display:{Name:'[{"text":"Dad\'s remote","italic":false,"color":"red"}]'}}}}] run function main:halls/tvon
 
 # dropped the soap
-execute if score ~red1 halls_soapStat matches 1 at @e[tag=halls_redSoap1] run particle minecraft:dripping_water ~-.1 ~0.63 ~
+execute if score ~red1 halls_soapStat matches 1 at @e[tag=halls_redSoap1] run particle falling_water ~-.1 ~0.63 ~
 
 # take the shit
 #tag players in the place
