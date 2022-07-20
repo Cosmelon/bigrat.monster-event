@@ -77,6 +77,7 @@ execute as @a[scores={halls_click=1..},nbt={SelectedItem:{id:"minecraft:lever",t
 # dropped the soap
 execute if score ~red1 halls_soapStat matches 1 at @e[tag=halls_redSoap1] run particle falling_water ~-.1 ~0.63 ~
 execute if score ~red2 halls_soapStat matches 1 at @e[tag=halls_redSoap2] run particle falling_water ~ ~0.63 ~-.1
+execute if score ~red3 halls_soapStat matches 1 at @e[tag=halls_redSoap3] run particle falling_water ~ ~0.63 ~-.1
 execute if score ~red4 halls_soapStat matches 1 at @e[tag=halls_redSoap4] run particle falling_water ~.1 ~0.63 ~
 execute if score ~red5 halls_soapStat matches 1 at @e[tag=halls_redSoap5] run particle falling_water ~.1 ~0.63 ~
 execute if score ~red6 halls_soapStat matches 1 at @e[tag=halls_redSoap6] run particle falling_water ~.1 ~0.63 ~
@@ -86,15 +87,15 @@ execute if score ~red9 halls_soapStat matches 1 at @e[tag=halls_redSoap9] run pa
 
 # take the shit
 #tag players in the place
-tag @a[tag=hallsAlive,x=-1028,y=22,z=1046,dx=13,dy=6,dz=15] add shitRoom
-tag @a[x=-1028,dx=-10000] remove shitRoom
-tag @a[x=-1015,dx=10000] remove shitRoom
-tag @a[z=1046,dz=-10000] remove shitRoom
-tag @a[z=1061,dz=10000] remove shitRoom
-execute positioned -1023.5 22.00 1053.5 run scoreboard players set @a[tag=player,distance=..3] halls_shitter 1
-execute positioned -1023.5 22.00 1053.5 run scoreboard players set @a[tag=player,distance=3.1..] halls_shitter 0
-execute positioned -1023.5 22.00 1053.5 as @a[predicate=main:sneak_state,distance=..3,scores={halls_shitterClock=..100}] run scoreboard players add @s halls_shitterClock 1
-execute as @a[tag=shitRoom] run title @s actionbar [{"text":"Shitted: ","color":"gold"},{"score":{"name":"@s","objective":"halls_shitterClock"}},{"text":"%"}]
+#execute positioned -1023.5 22.00 1053.5 run tag @a[distance=..3] add shitRoom
+#execute positioned -1023.5 22.00 1053.5 run tag @a[distance=3.1..] remove shitRoom
+#execute positioned -1023.5 22.00 1053.5 run scoreboard players set @a[tag=player,distance=..3] halls_shitter 1
+#execute positioned -1023.5 22.00 1053.5 run scoreboard players set @a[tag=player,distance=3.1..] halls_shitter 0
+execute as @a[tag=hallsAlive] at @s if block ~ ~-1 ~ smooth_quartz_stairs run tag @s add hallsShitting
+execute as @a[tag=hallsShitting] at @s if block ~ ~-1 ~ hay_block run tag @s remove hallsShitting
+execute as @a[tag=hallsDead] at @s run tag @s remove hallsShitting
+execute as @a[tag=hallsShitting,predicate=main:sneak_state,scores={halls_shitterClock=..99}] run scoreboard players add @s halls_shitterClock 1
+execute as @a[tag=hallsShitting] run title @s actionbar [{"text":"Shitted: ","color":"gold"},{"score":{"name":"@s","objective":"halls_shitterClock"}},{"text":"%"}]
 
 # halls_remote
 scoreboard players reset @a halls_click

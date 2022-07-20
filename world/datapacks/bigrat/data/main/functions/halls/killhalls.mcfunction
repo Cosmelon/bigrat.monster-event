@@ -16,6 +16,8 @@ kill @e[type=warden]
 tag @a remove hallsAlive
 tag @a remove hallsDead
 tag @a remove wifiPass
+tag @a remove hallsShitting
+tag @a remove shitRoom
 
 # spawnpoint reset
 spawnpoint @a[team=Red] -976 22 1044
