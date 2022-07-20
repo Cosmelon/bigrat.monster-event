@@ -1,0 +1,3 @@
+I realize that this method of right click detection is verbose and really sucks
+
+but it's what I can come up with during crunch time

@@ -4,12 +4,12 @@
             "trigger": "minecraft:player_interacted_with_entity",
             "conditions": {
                 "entity": {
-                    "nbt": "{Tags:[\"halls_redSoap1\",\"redHead1off\"]}"
+                    "nbt": "{Tags:[\"halls_redSoap4\",\"redHead4on\"]}"
                 }
             }
         }
     },
     "rewards": {
-        "function": "main:halls/soap/red1on"
+        "function": "main:halls/soap/red4off"
     }
 }
