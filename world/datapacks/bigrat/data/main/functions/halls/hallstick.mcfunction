@@ -76,6 +76,12 @@ execute as @a[scores={halls_click=1..},nbt={SelectedItem:{id:"minecraft:lever",t
 
 # dropped the soap
 execute if score ~red1 halls_soapStat matches 1 at @e[tag=halls_redSoap1] run particle falling_water ~-.1 ~0.63 ~
+execute if score ~red2 halls_soapStat matches 1 at @e[tag=halls_redSoap2] run particle falling_water ~ ~0.63 ~-.1
+execute if score ~red4 halls_soapStat matches 1 at @e[tag=halls_redSoap4] run particle falling_water ~.1 ~0.63 ~
+execute if score ~red5 halls_soapStat matches 1 at @e[tag=halls_redSoap5] run particle falling_water ~.1 ~0.63 ~
+execute if score ~red6 halls_soapStat matches 1 at @e[tag=halls_redSoap6] run particle falling_water ~.1 ~0.63 ~
+execute if score ~red7 halls_soapStat matches 1 at @e[tag=halls_redSoap7] run particle falling_water ~ ~0.63 ~.1
+execute if score ~red8 halls_soapStat matches 1 at @e[tag=halls_redSoap8] run particle falling_water ~ ~0.63 ~.1
 execute if score ~red9 halls_soapStat matches 1 at @e[tag=halls_redSoap9] run particle falling_water ~-.1 ~0.63 ~
 
 # take the shit
