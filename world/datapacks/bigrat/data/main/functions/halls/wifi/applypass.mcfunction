@@ -3,7 +3,7 @@
 # Type: single
 # run from when player get advancement main:applywifi
 
-advancement revoke @s only main:applywifi
+advancement revoke @s only main:halls/applywifi
 tag @s remove wifiPass
 
 # todo: make this like an early 2000s computer boot animation
