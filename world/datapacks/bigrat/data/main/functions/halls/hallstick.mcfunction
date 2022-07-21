@@ -52,7 +52,12 @@ execute as @a[scores={halls_death=40}] run title @s actionbar {"text":"Until res
 execute as @a[scores={halls_death=20}] run title @s actionbar {"text":"Until respawn: 1","color":"gold"}
 execute as @a[scores={halls_death=2}] run title @s actionbar {"text":"Until respawn: 0","color":"gold"}
 
-#execute positioned -1000 22 993 run particle minecraft:falling_water ~ ~2.35 ~0.08
+# take key to center
+execute as @a[nbt={Inventory:[{id:"minecraft:tripwire_hook"}]}] run tag @s add halls_key
+execute as @a[nbt=!{Inventory:[{id:"minecraft:tripwire_hook"}]}] run tag @s remove halls_key
+execute as @a[tag=halls_key] at @s if block ~ ~-1 ~ yellow_terracotta run function main:halls/usekey
+execute as @a[tag=halls_key,nbt={Inventory:[{id:"minecraft:tripwire_hook",tag:{display:{Name:'[{"text":"Soap Key","italic":false}]',Lore:['[{"text":"Take this to the center to","italic":false}]','[{"text":"activate!","italic":false}]']}}}]}] run tag @s add halls_keySoap
+execute as @a[nbt=!{Inventory:[{id:"minecraft:tripwire_hook",tag:{Name:'[{"text":"Soap Key","italic":false}]',Lore:['[{"text":"Take this to the center to","italic":false}]','[{"text":"activate!","italic":false}]']}}]}] run tag @s remove halls_keySoap
 
 # wifi password
 effect give @e[tag=hallsMouse] invisibility 10 0 true
@@ -84,6 +89,8 @@ execute if score ~red6 halls_soapStat matches 1 at @e[tag=halls_redSoap6] run pa
 execute if score ~red7 halls_soapStat matches 1 at @e[tag=halls_redSoap7] run particle falling_water ~ ~0.63 ~.1
 execute if score ~red8 halls_soapStat matches 1 at @e[tag=halls_redSoap8] run particle falling_water ~ ~0.63 ~.1
 execute if score ~red9 halls_soapStat matches 1 at @e[tag=halls_redSoap9] run particle falling_water ~-.1 ~0.63 ~
+#7835 solution
+execute if score ~red7 halls_soapStat matches 1 if score ~red8 halls_soapStat matches 1 if score ~red3 halls_soapStat matches 1 if score ~red5 halls_soapStat matches 1 if score ~finishRed halls_soapStat matches 0 run function main:halls/soap/redcorrect
 
 # take the shit
 #tag players in the place

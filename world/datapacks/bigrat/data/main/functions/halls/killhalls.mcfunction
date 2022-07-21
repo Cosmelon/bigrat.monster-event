@@ -10,6 +10,18 @@ scoreboard players set ~wRelease hallsCore 100
 scoreboard players reset * halls_sneak
 scoreboard players reset * halls_death
 
+# reset soap
+scoreboard players set ~red1 halls_soapStat 0
+scoreboard players set ~red2 halls_soapStat 0
+scoreboard players set ~red3 halls_soapStat 0
+scoreboard players set ~red4 halls_soapStat 0
+scoreboard players set ~red5 halls_soapStat 0
+scoreboard players set ~red6 halls_soapStat 0
+scoreboard players set ~red7 halls_soapStat 0
+scoreboard players set ~red8 halls_soapStat 0
+scoreboard players set ~red9 halls_soapStat 0
+scoreboard players set ~finishRed halls_soapStat 0
+
 # remove stuff
 bossbar set halls:wrelease visible false
 kill @e[type=warden]
