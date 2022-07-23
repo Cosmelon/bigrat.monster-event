@@ -21,3 +21,7 @@ clear @a[team=Red] tripwire_hook{display:{Name:'[{"text":"Key 1","italic":false,
 title @a[team=Red] title ""
 title @a[team=Red] subtitle ""
 title @a[team=Red] actionbar ""
+
+# respawn dead
+gamemode spectator @a[scores={tbR2_Deaths=1..},team=Red]
+tp @a[scores={tbR2_Deaths=1..},team=Red] 5059.5 40 2.5

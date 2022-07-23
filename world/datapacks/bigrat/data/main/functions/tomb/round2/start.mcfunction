@@ -17,6 +17,7 @@ scoreboard objectives add tbR2_RedR1 dummy
 scoreboard players set +wave tbR2_RedR1 0
 scoreboard objectives add tbR2_RedR2 dummy
 scoreboard objectives add tbR2_RedR3 dummy
+scoreboard objectives add tbR2_Deaths deathCount
 
 # generate doors
 place template main:tb/tbdoor 5069 37 -1

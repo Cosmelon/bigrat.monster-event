@@ -27,3 +27,15 @@ execute if score +countDown tbR2 matches 0 positioned 5059.5 42 2.5 run function
 # manage OTHER tick files
 execute if score +active tbR2_RedR1 matches 1 positioned 5059.5 42 2.5 run function main:tomb/round2/red/r1_t
 execute if score +active tbR2_RedR2 matches 1 positioned 5095.5 41 2.5 run function main:tomb/round2/red/r2_t
+
+# deaths
+gamemode spectator @a[scores={tbR2_Deaths=1}]
+scoreboard players remove @a[scores={tbR2_Deaths=1}] indivScore 10
+tellraw @a[scores={tbR2_Deaths=1}] "-10 pts (death)"
+scoreboard players set @a[scores={tbR2_Deaths=1}] tbR2_Deaths 100
+scoreboard players remove @a[scores={tbR2_Deaths=3..}] tbR2_Deaths 1
+gamemode adventure @a[scores={tbR2_Deaths=2}]
+execute if score +active tbR2_RedR1 matches 1 as @a[scores={tbR2_Deaths=2}] run tp @s 5059.5 40 2.5
+execute if score +active tbR2_RedR2 matches 1 as @a[scores={tbR2_Deaths=2}] run tp @s 5095.5 40 2.5
+
+scoreboard players reset @a[scores={tbR2_Deaths=2}] tbR2_Deaths 
