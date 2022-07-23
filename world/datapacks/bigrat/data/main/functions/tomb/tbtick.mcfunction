@@ -54,4 +54,4 @@ execute store result score +kitConfirm tbCore if entity @a[tag=kitConfirm]
 execute if score +rKActive tbCore matches 1 if score +kitConfirm tbCore = .players teamCheck run function main:tomb/round1/start
 
 # spawnpoints
-execute as @a[tag=player] run spawnpoint @s ~ ~2 ~
+execute as @a[tag=player] at @s run spawnpoint @s ~ ~2 ~

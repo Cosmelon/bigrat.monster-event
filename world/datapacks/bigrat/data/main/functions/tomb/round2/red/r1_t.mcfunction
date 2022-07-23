@@ -31,3 +31,8 @@ kill @e[type=item,nbt={Item:{id:"minecraft:carrot_on_a_stick"}}]
 execute as @a[tag=holdingKey,x=5067,dx=4,z=-3,dz=13,y=36,dy=6] run title @s actionbar {"text":"Right click to open the next room!","color":"gold"}
 execute as @a[tag=holdingKey,scores={tbR2_click=1..},x=5067,dx=4,z=-3,dz=13,y=36,dy=6] run function main:tomb/round2/red/r2_open
 scoreboard players reset @a tbR2_click
+
+# spectator
+execute positioned 5059.5 42 2.5 run tp @a[gamemode=spectator,team=!Admin,distance=12..15] 5059.5 42 2.5
+execute as @a[gamemode=spectator,scores={yCos=..32},team=!Admin] at @s run tp @s ~ ~5 ~
+execute as @a[gamemode=spectator,scores={yCos=49..},team=!Admin] at @s run tp @s ~ ~-5 ~

@@ -8,15 +8,17 @@ execute if score $gameActive spleef matches 0 run scoreboard players set .spleef
 execute if score $gameActive spleef matches 1 run scoreboard players set .spleef currentGame 1
 execute if score !gameActive race matches 0 run scoreboard players set .race currentGame 0
 execute if score !gameActive race matches 1 run scoreboard players set .race currentGame 1
-execute if score ~gameActive sg matches 0 run scoreboard players set .sg currentGame 0
-execute if score ~gameActive sg matches 1 run scoreboard players set .sg currentGame 1
 execute if score ?gameActive blockParty matches 0 run scoreboard players set .blockParty currentGame 0
 execute if score ?gameActive blockParty matches 1 run scoreboard players set .blockParty currentGame 1
+execute if score +gameActive tbCore matches 0 run scoreboard players set .tomb currentGame 0
+execute if score +gameActive tbCore matches 1 run scoreboard players set .tomb currentGame 1
+execute if score ~gameActive hallsCore matches 0 run scoreboard players set .halls currentGame 0
+execute if score ~gameActive hallsCore matches 1 run scoreboard players set .halls currentGame 1
 
 # manage lobby when games are inactive
-execute if score $gameActive spleef matches 0 if score !gameActive race matches 0 if score ~gameActive sg matches 0 if score ?gameActive blockParty matches 0 run spawnpoint @a[tag=!lobbyPVP] 1000 28 -6000
-execute if score $gameActive spleef matches 0 if score !gameActive race matches 0 if score ~gameActive sg matches 0 if score ?gameActive blockParty matches 0 run setworldspawn 1000 28 -6000
-execute if score $gameActive spleef matches 0 if score !gameActive race matches 0 if score ~gameActive sg matches 0 if score ?gameActive blockParty matches 0 run scoreboard players set .lobby currentGame 1
+execute if score $gameActive spleef matches 0 if score !gameActive race matches 0 if score ~gameActive hallsCore matches 0 if score ?gameActive blockParty matches 0 if score +gameActive tbCore matches 0 run spawnpoint @a[tag=!lobbyPVP] 1000 28 -6000
+execute if score $gameActive spleef matches 0 if score !gameActive race matches 0 if score ~gameActive hallsCore matches 0 if score ?gameActive blockParty matches 0 if score +gameActive tbCore matches 0 run setworldspawn 1000 28 -6000
+execute if score $gameActive spleef matches 0 if score !gameActive race matches 0 if score ~gameActive hallsCore matches 0 if score ?gameActive blockParty matches 0 if score +gameActive tbCore matches 0 run scoreboard players set .lobby currentGame 1
 
 # permanant bossbar type beat
 bossbar set minecraft:spleefroundcount players @a
