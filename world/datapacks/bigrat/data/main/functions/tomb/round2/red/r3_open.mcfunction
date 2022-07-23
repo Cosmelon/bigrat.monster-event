@@ -6,6 +6,7 @@
 
 # debug
 tellraw @a "ok yeah this is where the script stops"
+tellraw @a "SOLAR BUILD THE NEXT ROOM"
 
 # open the door
 fill 5114 37 -1 5113 42 5 air replace #main:tb/door

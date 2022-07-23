@@ -13,6 +13,9 @@ scoreboard players set +r2Active tbCore 0
 scoreboard players set +r3Active tbCore 0
 bossbar remove tomb:r1timer
 
+# conditions
+gamerule keepInventory false
+
 #scoreboard objectives remove tbConst
 #scoreboard objectives remove tbCore
 #scoreboard objectives remove tbR1

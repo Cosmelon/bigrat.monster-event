@@ -9,9 +9,8 @@ scoreboard players set .tomb currentGame 1
 time set midnight
 clear @a
 effect clear @a
-gamerule sendCommandFeedback false
 gamemode adventure @a
-gamerule sendCommandFeedback true
+gamerule keepInventory true
 
 # global scoreboards for tomb
 scoreboard objectives add tbCore dummy

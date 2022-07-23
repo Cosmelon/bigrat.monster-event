@@ -52,3 +52,6 @@ execute if score +rKActive tbCore matches 1 as @a[x=5015,dx=4,y=16,dy=5,z=136.5,
 #execute at @e[limit=1,nbt={CustomNameVisible:1b},sort=nearest,type=minecraft:armor_stand] run data modify entity @e[nbt={CustomNameVisible:1b},limit=1,sort=nearest] CustomNameVisible set value 0b
 execute store result score +kitConfirm tbCore if entity @a[tag=kitConfirm]
 execute if score +rKActive tbCore matches 1 if score +kitConfirm tbCore = .players teamCheck run function main:tomb/round1/start
+
+# spawnpoints
+execute as @a[tag=player] run spawnpoint @s ~ ~2 ~

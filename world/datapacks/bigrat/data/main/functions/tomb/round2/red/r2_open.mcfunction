@@ -4,6 +4,9 @@
 # @s = @a[tag=keyHolder,scores={tbR2_click=1..}]
 # run from main:tomb/round2/red/r1_t
 
+# replace next door
+place template main:tb/tbdoor 5113 37 -1
+
 # open the door
 fill 5069 37 5 5070 42 -1 air replace #main:tb/door
 fill 5076 42 -2 5076 36 6 air replace barrier
