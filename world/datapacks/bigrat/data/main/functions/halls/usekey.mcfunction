@@ -5,5 +5,7 @@
 # run from main:halls/hallstick 
 
 execute if entity @s[tag=halls_keySoap] run tellraw @a {"selector":"@s","text":" captured the soap key!"}
+execute if entity @s[tag=halls_keyShitter] run tellraw @a {"selector":"@s","text":" captured the soap key!"}
+execute if entity @s[tag=halls_keySoap] run tellraw @a {"selector":"@s","text":" captured the soap key!"}
 
 clear @s tripwire_hook
