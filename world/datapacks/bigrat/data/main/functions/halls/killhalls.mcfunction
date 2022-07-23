@@ -30,7 +30,6 @@ tag @a remove hallsDead
 tag @a remove wifiPass
 tag @a remove hallsShitting
 tag @a remove shitRoom
-tag @a remove horny--oGarMadeThisNamePlsInotLikeThis
 
 # spawnpoint reset
 spawnpoint @a[team=Red] -976 22 1044

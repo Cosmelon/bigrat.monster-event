@@ -30,7 +30,7 @@ execute if score ~wRelease hallsCore matches 0 run function main:halls/wrelease
 # sneak prevention
 execute as @a[tag=player,tag=hallsAlive,predicate=main:sneak_state] unless score @s halls_shitter matches 1 run scoreboard players add @s halls_sneak 1
 tellraw @a[tag=player,scores={halls_sneak=100..}] {"text":"\n-5 points (sneaking like a lil bitch)\n","color":"dark_red"}
-scoreboard players remove @a[tag=player,scores={halls_sneak=100..}] indivScore 5
+scoreboard players remove @a[tag=player,scores={halls_sneak=100..},tag=hallsShitting] indivScore 5
 scoreboard players reset @a[tag=player,scores={halls_sneak=100..}] halls_sneak
 
 # spawnpoint
@@ -103,6 +103,7 @@ execute as @a[tag=hallsShitting] at @s if block ~ ~-1 ~ hay_block run tag @s rem
 execute as @a[tag=hallsDead] at @s run tag @s remove hallsShitting
 execute as @a[tag=hallsShitting,predicate=main:sneak_state,scores={halls_shitterClock=..99}] run scoreboard players add @s halls_shitterClock 1
 execute as @a[tag=hallsShitting] run title @s actionbar [{"text":"Shitted: ","color":"gold"},{"score":{"name":"@s","objective":"halls_shitterClock"}},{"text":"%"}]
+execute as @a[scores={halls_shitterClock=100}] unless score @s halls_shitter matches 1.. run function main:halls/shitterkey
 
 # halls_remote
 scoreboard players reset @a halls_click

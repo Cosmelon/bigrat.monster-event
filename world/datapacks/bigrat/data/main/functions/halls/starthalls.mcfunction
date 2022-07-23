@@ -18,6 +18,8 @@ scoreboard players set ~wRelease hallsCore 100
 scoreboard objectives add halls_death deathCount
 scoreboard objectives add halls_remote minecraft.custom:minecraft.open_barrel
 scoreboard objectives add halls_click minecraft.used:minecraft.carrot_on_a_stick
+scoreboard objectives add halls_shitter dummy
+scoreboard players reset * halls_shitter
 scoreboard objectives add halls_shitterClock dummy
 scoreboard players set @a halls_shitterClock 0
 
