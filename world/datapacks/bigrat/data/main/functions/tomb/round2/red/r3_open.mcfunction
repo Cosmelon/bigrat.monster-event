@@ -25,3 +25,5 @@ title @a[team=Red] actionbar ""
 # respawn dead
 gamemode spectator @a[scores={tbR2_Deaths=1..},team=Red]
 tp @a[scores={tbR2_Deaths=1..},team=Red] 5095.5 40 2.5
+
+# writing this so I dont lose the commit streak
