@@ -47,5 +47,5 @@ schedule clear main:returnlobby
 
 # text
 tellraw @a[tag=!admin] {"text":"\nKilled Backrooms!\n","color":"dark_red","bold":true}
-tellraw @a[tag=admin] {"text":"\nKilled Backrooms! Return to lobby?\n","color":"dark_red","bold":true,"clickEvent":{"action":"run_command","value":"/function main:returnlobby"}}
+tellraw @a[tag=admin] {"text":"\nKilled SG! fix @ https://paypal.me/CosmelonSoftware\n","color":"dark_red","bold":true,"clickEvent":{"action":"run_command","value":"/function main:returnlobby"}}
 execute as @a run playsound minecraft:block.beacon.deactivate master @s ~ ~100 ~ 10000
