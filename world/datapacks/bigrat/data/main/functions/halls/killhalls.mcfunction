@@ -21,6 +21,7 @@ scoreboard players set ~red7 halls_soapStat 0
 scoreboard players set ~red8 halls_soapStat 0
 scoreboard players set ~red9 halls_soapStat 0
 scoreboard players set ~finishRed halls_soapStat 0
+function main:halls/soap/reset
 
 # remove stuff
 bossbar set halls:wrelease visible false
