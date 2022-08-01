@@ -16,8 +16,15 @@ execute if score +countDown tbR2 matches 0 run title @a title ""
 execute if score +countDown tbR2 matches 0 run title @a title {"text":"Start!","color":"dark_red"}
 execute if score +countDown tbR2 matches 0 as @a run playsound minecraft:block.note_block.chime master @s ^0 ^ ^ 1 1.414214 1
 
+# tbR2_PC (playerCount)
+#  using this to determine player positions and start rounds automatically
+##  will need to tune these distances later  ##
+execute positioned 5059.5 42 2.5 store result score +redR1 tbR2_PC if entity @a[team=Red,distance=..13]
+execute positioned 5095.5 41 2.5 store result score +redR2 tbR2_PC if entity @a[team=Red,distance=..20]
+
 # wave start
 execute if score +countDown tbR2 matches 0 positioned 5059.5 42 2.5 run function main:tomb/round2/red/r1_s
+execute if score +redR2 tbR2_PC = .red teamCheck if score +wave tbR2_RedR2 matches 0 run function main:tomb/red/r2_s
 
 #execute positioned 5059.5 42 2.5 store result score +zombies tbR2_r1w1Red if entity @e[type=zombie,distance=..12]
 
