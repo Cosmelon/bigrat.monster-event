@@ -9,11 +9,11 @@ schedule function main:sfx/infosound 3t
 # infotext
 tellraw @a [{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"translate":"space.-1"},{"text":"\uE004"}]
 tellraw @a ""
-tellraw @a "<infotext2>"
+tellraw @a {"text":"First round: you will have 2.5 minutes to kill as many zombies as you can"}
 tellraw @a ""
+tellraw @a {"text":"Second round: your team must travel and complete three more rooms of zombies before another team can"}
 tellraw @a ""
-tellraw @a ""
-tellraw @a ""
+tellraw @a {"text":"Third round: <placeholder fill later>"}
 tellraw @a ""
 tellraw @a ""
 tellraw @a [{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"translate":"space.-1"},{"text":"\uE004"}]
