@@ -6,10 +6,10 @@
 tellraw @a [{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"translate":"space.-1"},{"text":"\uE004"}]
 tellraw @a ""
 tellraw @a ""
-tellraw @a "This is designed to be a team-focused event"
+tellraw @a [{"translate":"space.3"},{"text":"This is designed to be a team-focused event!"}]
 tellraw @a ""
-tellraw @a "because of this, individual player scores"
-tellraw @a "will be kept secret until the event concludes!"
+tellraw @a [{"translate":"space.3"},{"text":"Team scores can be viewed between games at the podium"}]
+tellraw @a [{"translate":"space.3"},{"text":"Individual player scores will not be shown until the end!"}]
 tellraw @a ""
 tellraw @a ""
 tellraw @a [{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"translate":"space.-1"},{"text":"\uE004"}]

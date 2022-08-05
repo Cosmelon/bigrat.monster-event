@@ -6,10 +6,10 @@
 tellraw @a [{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"translate":"space.-1"},{"text":"\uE004"}]
 tellraw @a ""
 tellraw @a ""
-tellraw @a {"text":"Minigame order will be randomized before each game."}
+tellraw @a [{"translate":"space.3"},{"text":"Minigame order will be randomized before each game."}]
 tellraw @a ""
 tellraw @a ""
-tellraw @a {"text":"cause voting is for LOSERS"}
+tellraw @a [{"translate":"space.3"},{"text":"cause voting is for LOSERS","color":"dark_gray"}]
 tellraw @a ""
 tellraw @a ""
 tellraw @a [{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"translate":"space.-1"},{"text":"\uE004"}]
