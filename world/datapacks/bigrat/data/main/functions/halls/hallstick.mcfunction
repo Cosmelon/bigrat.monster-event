@@ -65,6 +65,7 @@ tag @a[nbt=!{Inventory:[{id:"minecraft:tripwire_hook",Count:1b,tag:{display:{Nam
 # find the remote
 #acquiring the remote
 execute as @a[x=-933,y=21,z=1028,dx=6,dy=6,dz=6] run scoreboard players reset @s halls_remote
+execute positioned -928.5 23 1019.5 run scoreboard players reset @a[distance=10..] halls_remote
 item replace entity @a[scores={halls_remote=6}] inventory.13 with lever{display:{Name:'[{"text":"Dad\'s remote","italic":false,"color":"red"}]'}}
 item replace entity @a[scores={halls_remote=1..5}] inventory.13 with air
 scoreboard players set @a[scores={halls_remote=6}] halls_remote 0

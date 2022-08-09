@@ -1,6 +1,9 @@
 command-block-overrides: []
+
 ignore-vanilla-permissions: false
+
 aliases:
+  
   icanhasbukkit:
   - version $1-
   cmb:
@@ -30,7 +33,7 @@ aliases:
   telemenu:
   - function main:tools/telemenu
   shrug:
-  - execute as @s run say ¯\_(ツ)_/¯
+  - execute as @s run say Â¯\_(ãƒ„)_/Â¯
   startspleef:
   - function main:spleef/startspleef
   killspleef:
@@ -47,6 +50,10 @@ aliases:
   - function main:tomb/starttb
   killtb:
   - function main:tomb/killtb
+  starttb:
+  - function main:halls/starthalls
+  killhalls:
+  - function main:halls/killhalls
   lobby:
   - tp @s 1000.5 28 -6000.5
   allspec:
@@ -82,10 +89,37 @@ aliases:
   - execute if score ?gameActive blockParty matches 1 run scoreboard players set ?countDown blockParty 61
   - execute if score !gameActive race matches 1 run scoreboard players set !countDown race 171
   - execute if score $gameActive spleef matches 1 run scoreboard players set $countDown spleef 61
-  - execute if score +gameActive tomb matches 1 run scoreboard players set +countDown tombCore  61
+  - execute if score +gameActive tombCore matches 1 run scoreboard players set +countDown tombCore  61
+  - execute if score ~gameActive hallsCore matches 1 run scoreboard players set ~countDown hallsCore 61
   tbclean:
   - kill @e[type=zombie]
   - kill @e[type=chicken]
   - kill @e[type=item]
   reafycheck:
   - function main:lobby/ready/readycheck
+  quitbr:
+  - datapack disable "file/bigrat"
+  objclear:
+  - scoreboard objectives remove tbConst
+  - scoreboard objectives remove tbCore
+  - scoreboard objectives remove tbR1
+  - scoreboard objectives remove tbR1_aKill
+  - scoreboard objectives remove tbR1_iKills
+  - scoreboard objectives remove tbR1_tiKillsM_Blue
+  - scoreboard objectives remove tbR1_tiKillsM_Green
+  - scoreboard objectives remove tbR1_tiKillsM_Red
+  - scoreboard objectives remove tbR1_tiKillsM_Yellow
+  - scoreboard objectives remove tbR1_Timer
+  - scoreboard objectives remove tbR1_tKills
+  - scoreboard objectives remove tbR1_tKillsM
+  - scoreboard objectives remove tbR1_tKillsPos
+  - scoreboard objectives remove tbR1_tPos
+  - scoreboard objectives remove tbR1_Deaths
+  - scoreboard objectives remove tbR2
+  - scoreboard objectives remove tbR2_R1
+  - scoreboard objectives remove tbR2_RedR1
+  - scoreboard objectives remove tbR2_RedR2
+  - scoreboard objectives remove tbR2_RedR3
+  - scoreboard objectives remove tbR2_click
+  - scoreboard objectives remove tbR2_Deaths
+  - scoreboard objectives remove tbR3
