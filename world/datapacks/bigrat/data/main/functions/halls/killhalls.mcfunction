@@ -31,6 +31,14 @@ tag @a remove hallsDead
 tag @a remove wifiPass
 tag @a remove hallsShitting
 tag @a remove shitRoom
+#entertags
+tag @a remove halls_enter1
+tag @a remove halls_enter2
+tag @a remove halls_enter3
+tag @a remove halls_enter4
+tag @a remove halls_enter5
+tag @a remove halls_enter6
+tag @a remove halls_enter7
 
 # spawnpoint reset
 spawnpoint @a[team=Red] -976 22 1044
