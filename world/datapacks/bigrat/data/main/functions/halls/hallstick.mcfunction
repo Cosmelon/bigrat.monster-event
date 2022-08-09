@@ -53,13 +53,13 @@ execute as @a[scores={halls_death=20}] run title @s actionbar {"text":"Until res
 execute as @a[scores={halls_death=2}] run title @s actionbar {"text":"Until respawn: 0","color":"gold"}
 
 # enter info
-execute positioned -964.5 24 1090.5 as @a[tag=player,tag=!halls_enter1,distance=..2] run function main:halls/enters/wifi
-execute positioned -929.99 24 1030.03 as @a[tag=player,tag=!halls_enter2,distance=..3] run function main:halls/enters/remote
-execute positioned -994.5 24 984.5 as @a[tag=player,tag=!halls_enter3,distance=..2] run function main:halls/enters/soap
-execute positioned -1013.5 24 1053.5 as @a[tag=player,tag=!halls_enter4,distance=..2] run function main:halls/enters/shit
-execute positioned -1026.5 24 1031.5 as @a[tag=player,tag=!halls_enter5,distance=..2] run function main:halls/enters/emerald
-execute positioned -921.5 24 1080.5 as @a[tag=player,tag=!halls_enter6,distance=..2] run function main:halls/enters/car
-execute positioned -1029.5 24 1008.5 as @a[tag=player,tag=!halls_enter7,distance=..2] run function main:halls/enters/craft
+execute positioned -964.5 22 1090.5 as @a[tag=player,tag=!halls_enter1,distance=..2] run function main:halls/enters/wifi
+execute positioned -929.99 22 1030.03 as @a[tag=player,tag=!halls_enter2,distance=..3] run function main:halls/enters/remote
+execute positioned -994.5 22 984.5 as @a[tag=player,tag=!halls_enter3,distance=..2] run function main:halls/enters/soap
+execute positioned -1013.5 22 1053.5 as @a[tag=player,tag=!halls_enter4,distance=..2] run function main:halls/enters/shit
+execute positioned -1026.5 22 1031.5 as @a[tag=player,tag=!halls_enter5,distance=..2] run function main:halls/enters/emerald
+execute positioned -921.5 22 1080.5 as @a[tag=player,tag=!halls_enter6,distance=..2] run function main:halls/enters/car
+execute positioned -1029.5 22 1008.5 as @a[tag=player,tag=!halls_enter7,distance=..2] run function main:halls/enters/craft
 
 # take key to center
 execute as @a[nbt={Inventory:[{id:"minecraft:tripwire_hook"}]}] run tag @s add halls_key

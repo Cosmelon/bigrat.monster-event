@@ -4,6 +4,9 @@
 # @s = @a in range of the emerald room entrance
 # run from main:halls/hallstick
 
+# tag
+tag @s add halls_enter5
+
 # title
 title @s times 5 60 10
 title @s title ""

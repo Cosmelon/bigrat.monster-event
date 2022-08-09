@@ -4,6 +4,9 @@
 # @s = @a in range of the soap room entrance
 # run from main:halls/hallstick
 
+# tag
+tag @s add halls_enter3
+
 # title
 title @s times 5 60 10
 title @s title ""
