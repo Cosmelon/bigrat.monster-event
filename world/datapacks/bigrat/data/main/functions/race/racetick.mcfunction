@@ -69,6 +69,7 @@ execute if score !countDown race matches 0 run scoreboard players set @a[tag=pla
 execute if score !countDown race matches 0 run bossbar set minecraft:racetime visible true
 execute if score !countDown race matches -20 run title @a title ""
 execute if score !countDown race matches -20 run title @a subtitle ""
+execute if score !countDown race matches 60 run function main:race/music
 
 # checkpoints
 execute as @a[gamemode=adventure,tag=player,x=310.5,dx=3,y=81,dy=3,z=57.5,dz=1] run scoreboard players set @s raceCP 1
