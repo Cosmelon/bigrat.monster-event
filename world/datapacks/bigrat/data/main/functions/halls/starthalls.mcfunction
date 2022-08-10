@@ -33,6 +33,7 @@ tp @a[tag=!player] -976.001 25 1044.001
 tp @a[team=Red] -976.001 22 1044.001
 
 # setup box
+place template main:halls/emerald -1033 16 1031
 place template main:halls/startbox -979 22 1041
 fill -976 26 1037 -973 22 1037 tinted_glass
 fill -970 26 1041 -970 22 1043 tinted_glass

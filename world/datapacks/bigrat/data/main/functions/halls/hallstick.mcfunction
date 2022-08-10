@@ -33,24 +33,39 @@ tellraw @a[tag=player,scores={halls_sneak=100..}] {"text":"\n-5 points (sneaking
 scoreboard players remove @a[tag=player,scores={halls_sneak=100..},tag=hallsShitting] indivScore 5
 scoreboard players reset @a[tag=player,scores={halls_sneak=100..}] halls_sneak
 
-# spawnpoint
-execute as @a at @s run spawnpoint @s ~ ~2 ~
-
 # death tag management
 tag @a[tag=player,scores={halls_death=0}] add hallsAlive
 tag @a[tag=player,scores={halls_death=0}] remove hallsDead
 tag @a[tag=player,scores={halls_death=1..}] add hallsDead
 tag @a[tag=player,scores={halls_death=1..}] remove hallsAlive
+
 # respawn
-gamemode spectator @a[tag=player,tag=hallsDead]
-scoreboard players set @a[tag=player,scores={halls_death=1}] halls_death 200
-scoreboard players remove @a[tag=player,scores={halls_death=2..}] halls_death 1
-execute as @a[scores={halls_death=2}] run function main:halls/respawn
+execute as @a[scores={halls_death=1}] run function main:halls/death
+execute as @a[tag=hallsDead] at @s if block ~ ~2 ~ barrier run function main:halls/respawn
+
+# respawn locations
+#spawn locations
+execute if score ~spawnLoc hallsCore matches 1 run spawnpoint @a[team=Red] -1004 2 1018 0
+execute if score ~spawnLoc hallsCore matches 7 run spawnpoint @a[team=Red] -956 2 1019 0
+execute if score ~spawnLoc hallsCore matches 13 run spawnpoint @a[team=Red] -945 2 1089 0
+#spawn clock
+scoreboard players add ~spawnLoc hallsCore 1
+execute if score ~spawnLoc hallsCore matches 18 run scoreboard players set ~spawnLoc hallsCore 1
+
+
+##### OLD RESPAWN SYSTEM #####
+# respawn
+#gamemode spectator @a[tag=player,tag=hallsDead]
+#scoreboard players set @a[tag=player,scores={halls_death=1}] halls_death 200
+#scoreboard players remove @a[tag=player,scores={halls_death=2..}] halls_death 1
+#execute as @a[scores={halls_death=2}] run function main:halls/respawn
 # until respawn
-execute as @a[scores={halls_death=60}] run title @s actionbar {"text":"Until respawn: 3","color":"gold"}
-execute as @a[scores={halls_death=40}] run title @s actionbar {"text":"Until respawn: 2","color":"gold"}
-execute as @a[scores={halls_death=20}] run title @s actionbar {"text":"Until respawn: 1","color":"gold"}
-execute as @a[scores={halls_death=2}] run title @s actionbar {"text":"Until respawn: 0","color":"gold"}
+#execute as @a[scores={halls_death=60}] run title @s actionbar {"text":"Until respawn: 3","color":"gold"}
+#execute as @a[scores={halls_death=40}] run title @s actionbar {"text":"Until respawn: 2","color":"gold"}
+#execute as @a[scores={halls_death=20}] run title @s actionbar {"text":"Until respawn: 1","color":"gold"}
+#execute as @a[scores={halls_death=2}] run title @s actionbar {"text":"Until respawn: 0","color":"gold"}
+##### OLD RESPAWN SYSTEM #####
+
 
 # enter info
 execute positioned -964.5 22 1090.5 as @a[tag=player,tag=!halls_enter1,distance=..2] run function main:halls/enters/wifi
