@@ -151,3 +151,8 @@ scoreboard objectives remove hallsCore
 scoreboard objectives remove halls_death
 scoreboard objectives remove halls_sneak
 scoreboard objectives remove halls_remote
+scoreboard objectives remove halls_click
+scoreboard objectives remove halls_shitter
+scoreboard objectives remove halls_shitterClock
+scoreboard objectives remove halls_emerald
+scoreboard objectives remove halls_soapStat
