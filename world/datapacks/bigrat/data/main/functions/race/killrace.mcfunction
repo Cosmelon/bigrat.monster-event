@@ -29,6 +29,7 @@ bossbar set minecraft:racetime visible false
 schedule clear main:race/finish
 schedule clear main:lobby
 schedule clear main:returnlobby
+schedule clear main:race/music
 tag @a remove candidateAbstract
 gamerule sendCommandFeedback true
 
@@ -41,6 +42,7 @@ fill 294 79 37 294 75 47 light_gray_stained_glass replace air
 
 # sound
 playsound minecraft:block.beacon.deactivate master @a
+stopsound @a voice minecraft:custom.race/music
 
 tellraw @a ""
 tellraw @a[tag=!admin] {"text":"Killed Race!","color":"dark_red","bold":true}

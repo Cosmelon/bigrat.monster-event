@@ -3,7 +3,7 @@
 # Type: loop
 # run from main:race/music
 
-playsound minecraft:custom.race/music voice Cosmelon 310 100 0 10000
+playsound minecraft:custom.race/music voice @a 310 500 0 10000
 schedule function main:race/music 374s replace
 
 #debug
