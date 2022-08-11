@@ -166,5 +166,45 @@ item replace entity @a[scores={halls_carKeys=16}] inventory.13 with tripwire_hoo
 item replace entity @a[scores={halls_carKeys=1..15}] inventory.13 with air
 scoreboard players set @a[scores={halls_carKeys=16}] halls_carKeys 0
 
+# craft activator rail
+#clear conditions out of room
+clear @a[tag=hallsAlive,x=-1027,dx=-5,y=21,dy=8,z=1008.5,dz=3] #main:halls/craft_mats
+clear @a[tag=hallsAlive,x=-1027,dx=-5,y=21,dy=8,z=1008.5,dz=3] #main:halls/craft_tools
+execute as @a[x=-1027,dx=-5,y=21,dy=8,z=1008.5,dz=3] run trigger halls_craftReset set 0
+#perpetual conditions while in room
+give @a[tag=hallsAlive,x=-1020,dx=-12,y=21,dy=8,z=996,dz=10.5,nbt=!{Inventory:[{id:"minecraft:iron_pickaxe"}]}] iron_pickaxe{HideFlags:127,CanDestroy:[iron_ore,cobblestone,redstone_ore,gold_ore,stone,diamond_ore]}
+give @a[tag=hallsAlive,x=-1020,dx=-12,y=21,dy=8,z=996,dz=10.5,nbt=!{Inventory:[{id:"minecraft:iron_axe"}]}] iron_axe{HideFlags:127,CanDestroy:[oak_log]}
+effect give @a[tag=hallsAlive,x=-1020,dx=-12,y=21,dy=8,z=996,dz=10.5] haste 9 4 true
+kill @e[x=-1020,dx=-12,y=21,dy=8,z=996,dz=10.5,type=item,nbt={Item:{id:"minecraft:iron_pickaxe"}}]
+kill @e[x=-1020,dx=-12,y=21,dy=8,z=996,dz=10.5,type=item,nbt={Item:{id:"minecraft:iron_axe"}}]
+#give blocks to player
+give @a[scores={halls_craftIron=1..}] iron_ingot
+give @a[scores={halls_craftGold=1..}] gold_ingot
+give @a[scores={halls_craftRedstone=1..}] redstone
+give @a[scores={halls_craftCobble=1..}] cobblestone
+give @a[scores={halls_craftStone=1..}] stone
+give @a[scores={halls_craftWood=1..}] oak_log
+scoreboard players reset @a[scores={halls_craftIron=1..}] halls_craftIron
+scoreboard players reset @a[scores={halls_craftGold=1..}] halls_craftGold
+scoreboard players reset @a[scores={halls_craftRedstone=1..}] halls_craftRedstone
+scoreboard players reset @a[scores={halls_craftCobble=1..}] halls_craftCobble
+scoreboard players reset @a[scores={halls_craftStone=1..}] halls_craftStone
+scoreboard players reset @a[scores={halls_craftWood=1..}] halls_craftWood
+#talking to villager
+execute as @a[scores={halls_craftTalk=1..},x=-1020,dx=-12,y=21,dy=8,z=996,dz=10.5,nbt=!{SelectedItem:{id:"minecraft:activator_rail"}}] at @s run data modify entity @e[tag=halls_craftVillager,type=villager,limit=1,sort=nearest] CustomName set value '[{"text":"\\uE006 Incorrect! \\uE006","color":"red"}]'
+execute as @a[scores={halls_craftTalk=1..},x=-1020,dx=-12,y=21,dy=8,z=996,dz=10.5,nbt=!{SelectedItem:{id:"minecraft:activator_rail"}}] run schedule function main:halls/craftnamefix 4s replace
+execute as @a[scores={halls_craftTalk=1..},x=-1020,dx=-12,y=21,dy=8,z=996,dz=10.5,nbt={SelectedItem:{id:"minecraft:activator_rail"}}] at @e[tag=halls_craftVillager,type=villager,limit=1,sort=nearest] run function main:halls/craftkey
+execute as @a[scores={halls_craftTalk=1..},x=-1020,dx=-12,y=21,dy=8,z=996,dz=10.5,nbt={SelectedItem:{id:"minecraft:activator_rail"}}] run clear @s activator_rail
+scoreboard players set @a[scores={halls_craftTalk=1..}] halls_craftTalk 0
+#reset room
+scoreboard players enable @a[tag=hallsAlive,x=-1020,dx=-12,y=21,dy=8,z=996,dz=10.5] halls_craftReset
+execute as @a[tag=hallsAlive,scores={halls_craftReset=1..},x=-1020,dx=-12,y=21,dy=8,z=996,dz=10.5] run tp @a[x=-1020,dx=-12,y=21,dy=8,z=996,dz=10.5] -1029.5 22 1009.5 180 10
+execute as @a[tag=hallsAlive,scores={halls_craftReset=1..},x=-1020,dx=-12,y=21,dy=8,z=996,dz=10.5] run kill @e[tag=halls_craftVillager,type=villager,limit=1,sort=nearest]
+execute as @a[tag=hallsAlive,scores={halls_craftReset=1..},x=-1020,dx=-12,y=21,dy=8,z=996,dz=10.5] run place template main:halls/craftroom -1032 20 995
+
+scoreboard players set @a[scores={halls_craftReset=1..}] halls_craftReset 0
+
+
 # halls_remote
 scoreboard players reset * halls_click
+

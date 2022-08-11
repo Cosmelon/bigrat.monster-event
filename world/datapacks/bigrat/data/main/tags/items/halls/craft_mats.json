@@ -1,0 +1,12 @@
+{
+    "values": [
+        "minecraft:iron_ingot",
+        "minecraft:gold_ingot",
+        "minecraft:redstone",
+        "minecraft:cobblestone",
+        "minecraft:stone",
+        "minecraft:oak_log",
+        "minecraft:stick",
+        "minecraft:oak_planks"
+    ]
+}

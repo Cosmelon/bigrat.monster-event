@@ -158,3 +158,11 @@ scoreboard objectives remove halls_emerald
 scoreboard objectives remove halls_soapStat
 scoreboard objectives remove halls_emReset
 scoreboard objectives remove halls_carKeys
+scoreboard objectives remove halls_craftTalk
+scoreboard objectives remove halls_craftIron
+scoreboard objectives remove halls_craftGold
+scoreboard objectives remove halls_craftRedstone
+scoreboard objectives remove halls_craftCobble
+scoreboard objectives remove halls_craftStone
+scoreboard objectives remove halls_craftWood
+scoreboard objectives remove halls_craftReset

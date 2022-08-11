@@ -25,6 +25,14 @@ scoreboard players set @a halls_shitterClock 0
 scoreboard objectives add halls_emerald minecraft.mined:minecraft.emerald_ore
 scoreboard objectives add halls_emReset trigger
 scoreboard objectives add halls_carKeys minecraft.custom:minecraft.open_chest
+scoreboard objectives add halls_craftTalk minecraft.custom:minecraft.talked_to_villager
+scoreboard objectives add halls_craftIron minecraft.mined:minecraft.iron_ore
+scoreboard objectives add halls_craftGold minecraft.mined:minecraft.gold_ore
+scoreboard objectives add halls_craftRedstone minecraft.mined:minecraft.redstone_ore
+scoreboard objectives add halls_craftCobble minecraft.mined:minecraft.cobblestone
+scoreboard objectives add halls_craftStone minecraft.mined:minecraft.stone
+scoreboard objectives add halls_craftWood minecraft.mined:minecraft.oak_log
+scoreboard objectives add halls_craftReset trigger
 
 # bossbars
 bossbar add halls:wrelease "time until warden release"
@@ -33,10 +41,17 @@ bossbar set halls:wrelease max 100
 
 # teleport players
 tp @a[tag=!player] -976.001 25 1044.001
-tp @a[team=Red] -976.001 22 1044.001
+execute unless score ~tpOff hallsCore matches 1 run tp @a[team=Red] -976.001 22 1044.001
+execute if score ~tpOff hallsCore matches 1 run msg @a[tag=admin] Players should have been teleported to the maze, but weren't because ~tpOff hallsCore == 1
+
+# setup emerald mine
+place template main:halls/emerald -1033 16 1031
+
+# setup craftroom
+kill @e[tag=halls_craftVillager]
+place template main:halls/craftroom -1032 20 995
 
 # setup box
-place template main:halls/emerald -1033 16 1031
 place template main:halls/startbox -979 22 1041
 fill -976 26 1037 -973 22 1037 tinted_glass
 fill -970 26 1041 -970 22 1043 tinted_glass
