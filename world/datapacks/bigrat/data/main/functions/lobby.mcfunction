@@ -157,3 +157,4 @@ scoreboard objectives remove halls_shitterClock
 scoreboard objectives remove halls_emerald
 scoreboard objectives remove halls_soapStat
 scoreboard objectives remove halls_emReset
+scoreboard objectives remove halls_carKeys

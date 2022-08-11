@@ -24,6 +24,7 @@ scoreboard objectives add halls_shitterClock dummy
 scoreboard players set @a halls_shitterClock 0
 scoreboard objectives add halls_emerald minecraft.mined:minecraft.emerald_ore
 scoreboard objectives add halls_emReset trigger
+scoreboard objectives add halls_carKeys minecraft.custom:minecraft.open_chest
 
 # bossbars
 bossbar add halls:wrelease "time until warden release"

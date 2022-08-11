@@ -144,9 +144,6 @@ execute as @a[scores={halls_shitterClock=100}] unless score @s halls_shitter mat
 tag @a[nbt={Inventory:[{id:"minecraft:tripwire_hook",Count:1b,tag:{display:{Name:'[{"text":"Shitter Key","italic":false}]',Lore:['[{"text":"Take this to the center to","italic":false}]','[{"text":"activate!","italic":false}]']}}}]}] add halls_keyShitter
 tag @a[nbt=!{Inventory:[{id:"minecraft:tripwire_hook",Count:1b,tag:{display:{Name:'[{"text":"Shitter Key","italic":false}]',Lore:['[{"text":"Take this to the center to","italic":false}]','[{"text":"activate!","italic":false}]']}}}]}] remove halls_keyShitter
 
-# halls_remote
-scoreboard players reset * halls_click
-
 # emerald challenge
 #get rid of tool
 execute positioned -1026.5 22 1026.5 run clear @a[tag=player,distance=..2] iron_pickaxe
@@ -163,3 +160,11 @@ execute as @a[team=Red,tag=hallsAlive,scores={halls_emReset=1..}] run place temp
 execute as @a[team=Red,tag=hallsAlive,scores={halls_emReset=1..}] run tp @a[tag=hallsAlive,x=-1025,dx=-10,y=18,dy=10,z=1031,dz=10] -1030 24 1036
 execute as @a[team=Red,tag=hallsAlive,scores={halls_emReset=1..}] run tellraw @a[tag=hallsAlive,x=-1025,dx=-10,y=18,dy=10,z=1031,dz=10] [{"text":"» ","color":"dark_red"},{"text":"Emerald Mine was reset by: ","color":"gold"},{"selector":"@s"}]
 scoreboard players set @a halls_emReset 0
+
+# find the key
+item replace entity @a[scores={halls_carKeys=16}] inventory.13 with tripwire_hook
+item replace entity @a[scores={halls_carKeys=1..15}] inventory.13 with air
+scoreboard players set @a[scores={halls_carKeys=16}] halls_carKeys 0
+
+# halls_remote
+scoreboard players reset * halls_click
