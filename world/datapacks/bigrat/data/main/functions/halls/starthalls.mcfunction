@@ -23,6 +23,7 @@ scoreboard players reset * halls_shitter
 scoreboard objectives add halls_shitterClock dummy
 scoreboard players set @a halls_shitterClock 0
 scoreboard objectives add halls_emerald minecraft.mined:minecraft.emerald_ore
+scoreboard objectives add halls_emReset trigger
 
 # bossbars
 bossbar add halls:wrelease "time until warden release"

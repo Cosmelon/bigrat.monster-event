@@ -7,6 +7,8 @@
 #execute as @a run playsound minecraft:entity.splash_potion.break ambient @s ~ ~ ~ 100000 .5
 gamerule sendCommandFeedback false
 scoreboard players set @r raceLap 5
+stopsound @a voice minecraft:custom.race/music
+schedule clear main:race/music
 execute as @a run playsound minecraft:custom.race/finish voice @s ~ ~100 ~ 10000 .85
 title @a title {"text":"FINISHED!"}
 schedule function main:returnlobby 15s replace

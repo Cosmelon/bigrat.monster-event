@@ -156,3 +156,4 @@ scoreboard objectives remove halls_shitter
 scoreboard objectives remove halls_shitterClock
 scoreboard objectives remove halls_emerald
 scoreboard objectives remove halls_soapStat
+scoreboard objectives remove halls_emReset

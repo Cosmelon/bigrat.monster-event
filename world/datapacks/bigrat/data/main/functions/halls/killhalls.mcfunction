@@ -55,6 +55,9 @@ fill -983 26 1041 -983 22 1038 tinted_glass
 schedule clear main:lobby
 schedule clear main:returnlobby
 
+# clear trigger
+execute as @a run trigger halls_emReset set 0
+
 # text
 tellraw @a[tag=!admin] {"text":"\nKilled Backrooms!\n","color":"dark_red","bold":true}
 tellraw @a[tag=admin] {"text":"\nKilled SG! fix @ https://paypal.me/CosmelonSoftware\n","color":"dark_red","bold":true,"clickEvent":{"action":"run_command","value":"/function main:returnlobby"}}

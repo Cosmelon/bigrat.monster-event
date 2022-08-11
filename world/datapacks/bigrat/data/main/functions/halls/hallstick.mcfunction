@@ -149,8 +149,17 @@ scoreboard players reset * halls_click
 
 # emerald challenge
 #get rid of tool
-execute positioned -1026.5 22 1026.5 run clear @a[distance=..2] golden_pickaxe
+execute positioned -1026.5 22 1026.5 run clear @a[tag=player,distance=..2] iron_pickaxe
+kill @e[type=item,nbt={Item:{id:"minecraft:iron_pickaxe"}}]
 #give tool
-give @a[x=-1025,dx=-10,y=18,dy=10,z=1031,dz=10,nbt=!{Inventory:[{id:"minecraft:golden_pickaxe",Count:1b,tag:{display:{Name:'[{"text":"Emerald Finder","italic":false,"color":"green"}]',Lore:['[{"text":"Use this to dig up the emerald!"}]']}}}]}] golden_pickaxe{Unbreakable:1,display:{Name:'[{"text":"Emerald Finder","italic":false,"color":"green"}]',Lore:['[{"text":"Use this to dig up the emerald!"}]']},Enchantments:[{id:"efficiency",lvl:1}],HideFlags:127,CanDestroy:[stone,andesite]} 1
-execute as @a[scores={halls_emerald=1..}] run give @s tripwire_hook{display:{Name:'[{"text":"Emerald Mine Key","italic":false}]',Lore:['[{"text":"Take this to the center to","italic":false}]','[{"text":"activate!","italic":false}]']}}
+give @a[tag=hallsAlive,x=-1025,dx=-10,y=18,dy=10,z=1031,dz=10,nbt=!{Inventory:[{id:"minecraft:iron_pickaxe",Count:1b,tag:{display:{Name:'[{"text":"Emerald Finder","italic":false,"color":"green"}]',Lore:['[{"text":"Use this to dig up the emerald!"}]']}}}]}] iron_pickaxe{Unbreakable:1,display:{Name:'[{"text":"Emerald Finder","italic":false,"color":"green"}]',Lore:['[{"text":"Use this to dig up the emerald!"}]']},Enchantments:[{id:"efficiency",lvl:1}],HideFlags:127,CanDestroy:[stone,andesite,emerald_ore]} 1
+execute as @a[tag=hallsAlive,scores={halls_emerald=1..}] run give @s tripwire_hook{display:{Name:'[{"text":"Emerald Mine Key","italic":false}]',Lore:['[{"text":"Take this to the center to","italic":false}]','[{"text":"activate!","italic":false}]']}}
+execute as @a[tag=hallsAlive,scores={halls_emerald=1..}] run tellraw @s "You got the Emerald Mine Key!"
 scoreboard players set @a halls_emerald 0
+# reset pit
+execute positioned -1030 24 1036 run scoreboard players enable @a[distance=..7] halls_emReset
+execute positioned -1030 24 1036 as @a[team=Red,distance=7.1..] run trigger halls_emReset set 0
+execute as @a[team=Red,tag=hallsAlive,scores={halls_emReset=1..}] run place template main:halls/emerald -1033 16 1031
+execute as @a[team=Red,tag=hallsAlive,scores={halls_emReset=1..}] run tp @a[tag=hallsAlive,x=-1025,dx=-10,y=18,dy=10,z=1031,dz=10] -1030 24 1036
+execute as @a[team=Red,tag=hallsAlive,scores={halls_emReset=1..}] run tellraw @a[tag=hallsAlive,x=-1025,dx=-10,y=18,dy=10,z=1031,dz=10] [{"text":"» ","color":"dark_red"},{"text":"Emerald Mine was reset by: ","color":"gold"},{"selector":"@s"}]
+scoreboard players set @a halls_emReset 0
