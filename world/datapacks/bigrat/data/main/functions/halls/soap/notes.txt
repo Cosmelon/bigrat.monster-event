@@ -1,3 +1,3 @@
-I realize that this method of right click detection is verbose and really sucks
+Using raycasting for right click detection.
 
-but it's what I can come up with during crunch time
+I've never used raycasting before now, it's weird but now it totally doesn't suck which is awesome.

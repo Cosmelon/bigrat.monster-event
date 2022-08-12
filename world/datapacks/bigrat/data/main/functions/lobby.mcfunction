@@ -149,6 +149,7 @@ scoreboard objectives remove tombR3
 bossbar remove halls:wrelease
 scoreboard objectives remove hallsCore
 scoreboard objectives remove halls_death
+scoreboard objectives remove halls_soapDist
 scoreboard objectives remove halls_sneak
 scoreboard objectives remove halls_remote
 scoreboard objectives remove halls_click

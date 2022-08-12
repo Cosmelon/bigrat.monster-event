@@ -113,15 +113,23 @@ tag @a[tag=hallsAlive,nbt={Inventory:[{id:"minecraft:tripwire_hook",Count:1b,tag
 tag @a[tag=hallsAlive,nbt=!{Inventory:[{id:"minecraft:tripwire_hook",Count:1b,tag:{display:{Name:'[{"text":"TV Key","italic":false}]',Lore:['[{"text":"Take this to the center to","italic":false}]','[{"text":"activate!","italic":false}]']}}}]}] remove halls_keyRemote
 
 # dropped the soap
-execute if score ~red1 halls_soapStat matches 1 at @e[tag=halls_redSoap1] run particle falling_water ~-.1 ~0.63 ~
-execute if score ~red2 halls_soapStat matches 1 at @e[tag=halls_redSoap2] run particle falling_water ~ ~0.63 ~-.1
-execute if score ~red3 halls_soapStat matches 1 at @e[tag=halls_redSoap3] run particle falling_water ~ ~0.63 ~-.1
-execute if score ~red4 halls_soapStat matches 1 at @e[tag=halls_redSoap4] run particle falling_water ~.1 ~0.63 ~
-execute if score ~red5 halls_soapStat matches 1 at @e[tag=halls_redSoap5] run particle falling_water ~.1 ~0.63 ~
-execute if score ~red6 halls_soapStat matches 1 at @e[tag=halls_redSoap6] run particle falling_water ~.1 ~0.63 ~
-execute if score ~red7 halls_soapStat matches 1 at @e[tag=halls_redSoap7] run particle falling_water ~ ~0.63 ~.1
-execute if score ~red8 halls_soapStat matches 1 at @e[tag=halls_redSoap8] run particle falling_water ~ ~0.63 ~.1
-execute if score ~red9 halls_soapStat matches 1 at @e[tag=halls_redSoap9] run particle falling_water ~-.1 ~0.63 ~
+#execute if score ~red1 halls_soapStat matches 1 at @e[tag=halls_redSoap1] run particle falling_water ~-.1 ~0.63 ~
+#execute if score ~red2 halls_soapStat matches 1 at @e[tag=halls_redSoap2] run particle falling_water ~ ~0.63 ~-.1
+#execute if score ~red3 halls_soapStat matches 1 at @e[tag=halls_redSoap3] run particle falling_water ~ ~0.63 ~-.1
+#execute if score ~red4 halls_soapStat matches 1 at @e[tag=halls_redSoap4] run particle falling_water ~.1 ~0.63 ~
+#execute if score ~red5 halls_soapStat matches 1 at @e[tag=halls_redSoap5] run particle falling_water ~.1 ~0.63 ~
+#execute if score ~red6 halls_soapStat matches 1 at @e[tag=halls_redSoap6] run particle falling_water ~.1 ~0.63 ~
+#execute if score ~red7 halls_soapStat matches 1 at @e[tag=halls_redSoap7] run particle falling_water ~ ~0.63 ~.1
+#execute if score ~red8 halls_soapStat matches 1 at @e[tag=halls_redSoap8] run particle falling_water ~ ~0.63 ~.1
+#execute if score ~red9 halls_soapStat matches 1 at @e[tag=halls_redSoap9] run particle falling_water ~-.1 ~0.63 ~
+#clear conditions out of room
+item replace entity @a[tag=hallsAlive,x=-997,dx=4,y=21,dy=8,z=978,dz=6] weapon.offhand with air
+tag @a[tag=hallsAlive,x=-997,dx=4,y=21,dy=8,z=978,dz=6] remove hallsSoap
+#perpetual conditions in room
+item replace entity @a[tag=hallsAlive,x=-1007,dx=10,y=19,dy=8,z=978,dz=16] weapon.offhand with carrot_on_a_stick{Unbreakable:true}
+tag @a[tag=hallsAlive,x=-1007,dx=10,y=19,dy=8,z=978,dz=16] add hallsSoap
+execute as @a[tag=hallsSoap,scores={halls_click=1..}] at @s run function main:halls/soap/start_raycast
+
 #7835 solution
 execute if score ~red7 halls_soapStat matches 1 if score ~red8 halls_soapStat matches 1 if score ~red3 halls_soapStat matches 1 if score ~red5 halls_soapStat matches 1 if score ~finishRed halls_soapStat matches 0 run function main:halls/soap/redcorrect
 #keytag
@@ -206,5 +214,5 @@ scoreboard players set @a[scores={halls_craftReset=1..}] halls_craftReset 0
 
 
 # halls_remote
-scoreboard players reset * halls_click
+scoreboard players set @a[scores={halls_click=1..}] halls_click 0
 
