@@ -1,7 +1,7 @@
 # Description: Puts the medic kit on players without medic tag who contact the NPC
 # Author: Cosmelon
 # Type: single
-# @s = @a (-NaN,1] blocks from a medic kit NPC
+# @s = @a (-null,1] blocks from a medic kit NPC
 # run from main:tomb/tbtick
 
 # assign tag
@@ -18,10 +18,7 @@ tag @s add hasKit
 execute if score +rKActive tbCore matches 1 run playsound entity.experience_orb.pickup ambient @s ~ ~ ~ 10000
 
 # kit info
-execute if score +rKActive tbCore matches 1 run tellraw @s "medic kit"
-execute if score +rKActive tbCore matches 1 run tellraw @s "placeholder text"
-execute if score +rKActive tbCore matches 1 run tellraw @s ""
-execute if score +rKActive tbCore matches 1 run tellraw @s "kit info:"
+execute if score +rKActive tbCore matches 1 run tellraw @s [{"text":"» ","color":"gray"},{"text":"You selected the medic kit!","color":"gold"}]
 
 # give items
 clear @s
