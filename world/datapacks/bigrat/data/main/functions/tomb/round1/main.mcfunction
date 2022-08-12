@@ -17,9 +17,9 @@ execute if score +countDown tbR1 matches 0 run title @a title {"text":"Start!","
 execute if score +countDown tbR1 matches 0 as @a run playsound minecraft:block.note_block.chime master @s ^0 ^ ^ 1 1.414214 1
 #setup spawners
 execute if score +countDown tbR1 matches 0 run setblock 5016 34 2 minecraft:spawner{SpawnCount:5,MinSpawnDelay:1,MaxSpawnDelay:0,SpawnData:{entity:{id:"zombie"}}} replace
-execute if score +countDown tbR1 matches 0 run setblock 5016 34 45 minecraft:spawner{SpawnCount:5,MinSpawnDelay:1,MaxSpawnDelay:0,SpawnData:{entity:{id:"zombie"}}} replace
-execute if score +countDown tbR1 matches 0 run setblock 5016 34 89 minecraft:spawner{SpawnCount:5,MinSpawnDelay:1,MaxSpawnDelay:0,SpawnData:{entity:{id:"zombie"}}} replace
-execute if score +countDown tbR1 matches 0 run setblock 5016 34 131 minecraft:spawner{SpawnCount:5,MinSpawnDelay:1,MaxSpawnDelay:0,SpawnData:{entity:{id:"zombie"}}} replace
+execute if score +countDown tbR1 matches 0 run setblock 5016 34 55 minecraft:spawner{SpawnCount:5,MinSpawnDelay:1,MaxSpawnDelay:0,SpawnData:{entity:{id:"zombie"}}} replace
+execute if score +countDown tbR1 matches 0 run setblock 5016 34 109 minecraft:spawner{SpawnCount:5,MinSpawnDelay:1,MaxSpawnDelay:0,SpawnData:{entity:{id:"zombie"}}} replace
+execute if score +countDown tbR1 matches 0 run setblock 5016 34 161 minecraft:spawner{SpawnCount:5,MinSpawnDelay:1,MaxSpawnDelay:0,SpawnData:{entity:{id:"zombie"}}} replace
 
 # timeLeft
 execute if score +countDown tbR1 matches ..0 run scoreboard players remove +timeLeft tbR1 1

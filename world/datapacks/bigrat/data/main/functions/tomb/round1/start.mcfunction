@@ -66,24 +66,24 @@ bossbar add tomb:r1timer ""
 
 # spawnpoints
 spawnpoint @a[team=Red] 5016 34 2
-spawnpoint @a[team=Blue] 5016 34 45
-spawnpoint @a[team=Green] 5016 34 89
-spawnpoint @a[team=Yellow] 5016 34 131
+spawnpoint @a[team=Blue] 5016 34 55
+spawnpoint @a[team=Green] 5016 34 109
+spawnpoint @a[team=Yellow] 5016 34 161
 
 # teleport players to arena
 tp @a[tag=red-1] 5016.5 34 -0.5 0 10
 tp @a[tag=red-2] 5016.5 34 5.5 -180 10
 tp @a[tag=red-3] 5013.5 34 2.5 -90 10
 tp @a[tag=red-4] 5019.5 34 2.5 90 10
-tp @a[tag=blue-1] 5016.5 34 42.5 0 10
-tp @a[tag=blue-2] 5016.5 34 48.5 -180 10
-tp @a[tag=blue-3] 5013.5 34 45.5 -90 10
-tp @a[tag=blue-4] 5019.5 34 45.5 90 10
-tp @a[tag=green-1] 5016.5 34 86.5 0 10
-tp @a[tag=green-2] 5016.5 34 92.5 0 10
-tp @a[tag=green-3] 5013.5 34 89.5 -90 10
-tp @a[tag=green-4] 5019.5 34 89.5 90 10
-tp @a[tag=yellow-1] 5016.5 34 128.5 0 10
-tp @a[tag=yellow-2] 5016.5 34 134.5 180 10
-tp @a[tag=yellow-3] 5013.5 34 131.5 -90 10
-tp @a[tag=yellow-4] 5019.5 34 131.5 90 10
+tp @a[tag=blue-1] 5016.5 34 52.5 0 10
+tp @a[tag=blue-2] 5016.5 34 58.5 -180 10
+tp @a[tag=blue-3] 5013.5 34 55.5 -90 10
+tp @a[tag=blue-4] 5019.5 34 55.5 90 10
+tp @a[tag=green-1] 5016.5 34 106.5 0 10
+tp @a[tag=green-2] 5016.5 34 112.5 0 10
+tp @a[tag=green-3] 5013.5 34 109.5 -90 10
+tp @a[tag=green-4] 5019.5 34 109.5 90 10
+tp @a[tag=yellow-1] 5016.5 34 158.5 0 10
+tp @a[tag=yellow-2] 5016.5 34 164.5 180 10
+tp @a[tag=yellow-3] 5013.5 34 161.5 -90 10
+tp @a[tag=yellow-4] 5019.5 34 161.5 90 10
