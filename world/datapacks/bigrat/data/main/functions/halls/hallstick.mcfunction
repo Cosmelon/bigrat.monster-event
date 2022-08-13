@@ -159,7 +159,7 @@ kill @e[type=item,nbt={Item:{id:"minecraft:iron_pickaxe"}}]
 #give tool
 give @a[tag=hallsAlive,x=-1025,dx=-10,y=18,dy=10,z=1031,dz=10,nbt=!{Inventory:[{id:"minecraft:iron_pickaxe",Count:1b,tag:{display:{Name:'[{"text":"Emerald Finder","italic":false,"color":"green"}]',Lore:['[{"text":"Use this to dig up the emerald!"}]']}}}]}] iron_pickaxe{Unbreakable:1,display:{Name:'[{"text":"Emerald Finder","italic":false,"color":"green"}]',Lore:['[{"text":"Use this to dig up the emerald!"}]']},Enchantments:[{id:"efficiency",lvl:1}],HideFlags:127,CanDestroy:[stone,andesite,emerald_ore]} 1
 execute as @a[tag=hallsAlive,scores={halls_emerald=1..}] run give @s tripwire_hook{display:{Name:'[{"text":"Emerald Mine Key","italic":false}]',Lore:['[{"text":"Take this to the center to","italic":false}]','[{"text":"activate!","italic":false}]']}}
-execute as @a[tag=hallsAlive,scores={halls_emerald=1..}] run tellraw @s "You got the Emerald Mine Key!"
+execute as @a[tag=hallsAlive,scores={halls_emerald=1..}] run tellraw @s {"text":"» You got the Emerald Mine Key!","color":"gray"}
 scoreboard players set @a halls_emerald 0
 # reset pit
 execute positioned -1030 24 1036 run scoreboard players enable @a[distance=..7] halls_emReset
@@ -168,11 +168,19 @@ execute as @a[team=Red,tag=hallsAlive,scores={halls_emReset=1..}] run place temp
 execute as @a[team=Red,tag=hallsAlive,scores={halls_emReset=1..}] run tp @a[tag=hallsAlive,x=-1025,dx=-10,y=18,dy=10,z=1031,dz=10] -1030 24 1036
 execute as @a[team=Red,tag=hallsAlive,scores={halls_emReset=1..}] run tellraw @a[tag=hallsAlive,x=-1025,dx=-10,y=18,dy=10,z=1031,dz=10] [{"text":"» ","color":"dark_red"},{"text":"Emerald Mine was reset by: ","color":"gold"},{"selector":"@s"}]
 scoreboard players set @a halls_emReset 0
+#keytag
+tag @a[tag=hallsAlive,nbt={Inventory:[{id:"minecraft:tripwire_hook",Count:1b,tag:{display:{Name:'[{"text":"Emerald Mine Key","italic":false}]',Lore:['[{"text":"Take this to the center to","italic":false}]','[{"text":"activate!","italic":false}]']}}}]}] add halls_keyEmerald
+tag @a[tag=hallsAlive,nbt=!{Inventory:[{id:"minecraft:tripwire_hook",Count:1b,tag:{display:{Name:'[{"text":"Emerald Mine Key","italic":false}]',Lore:['[{"text":"Take this to the center to","italic":false}]','[{"text":"activate!","italic":false}]']}}}]}] remove halls_keyEmerald
+
 
 # find the key
-item replace entity @a[scores={halls_carKeys=16}] inventory.13 with tripwire_hook
+item replace entity @a[scores={halls_carKeys=16}] inventory.13 with tripwire_hook{display:{Name:'[{"text":"Car Key","italic":false}]',Lore:['[{"text":"Take this to the center to","italic":false}]','[{"text":"activate!","italic":false}]']}}
 item replace entity @a[scores={halls_carKeys=1..15}] inventory.13 with air
 scoreboard players set @a[scores={halls_carKeys=16}] halls_carKeys 0
+#keytag
+tag @a[tag=hallsAlive,nbt={Inventory:[{id:"minecraft:tripwire_hook",Count:1b,tag:{display:{Name:'[{"text":"Car Key","italic":false}]',Lore:['[{"text":"Take this to the center to","italic":false}]','[{"text":"activate!","italic":false}]']}}}]}] add halls_keyCar
+tag @a[tag=hallsAlive,nbt=!{Inventory:[{id:"minecraft:tripwire_hook",Count:1b,tag:{display:{Name:'[{"text":"Car Key","italic":false}]',Lore:['[{"text":"Take this to the center to","italic":false}]','[{"text":"activate!","italic":false}]']}}}]}] remove halls_keyCar
+
 
 # craft activator rail
 #clear conditions out of room
@@ -209,9 +217,10 @@ scoreboard players enable @a[tag=hallsAlive,x=-1020,dx=-12,y=21,dy=8,z=996,dz=10
 execute as @a[tag=hallsAlive,scores={halls_craftReset=1..},x=-1020,dx=-12,y=21,dy=8,z=996,dz=10.5] run tp @a[x=-1020,dx=-12,y=21,dy=8,z=996,dz=10.5] -1029.5 22 1009.5 180 10
 execute as @a[tag=hallsAlive,scores={halls_craftReset=1..},x=-1020,dx=-12,y=21,dy=8,z=996,dz=10.5] run kill @e[tag=halls_craftVillager,type=villager,limit=1,sort=nearest]
 execute as @a[tag=hallsAlive,scores={halls_craftReset=1..},x=-1020,dx=-12,y=21,dy=8,z=996,dz=10.5] run place template main:halls/craftroom -1032 20 995
-
 scoreboard players set @a[scores={halls_craftReset=1..}] halls_craftReset 0
-
+#keytag
+tag @a[tag=hallsAlive,nbt={Inventory:[{id:"minecraft:tripwire_hook",Count:1b,tag:{display:{Name:'[{"text":"Craft Key","italic":false}]',Lore:['[{"text":"Take this to the center to","italic":false}]','[{"text":"activate!","italic":false}]']}}}]}] add halls_keyCraft
+tag @a[tag=hallsAlive,nbt=!{Inventory:[{id:"minecraft:tripwire_hook",Count:1b,tag:{display:{Name:'[{"text":"Craft Key","italic":false}]',Lore:['[{"text":"Take this to the center to","italic":false}]','[{"text":"activate!","italic":false}]']}}}]}] remove halls_keyCraft
 
 # halls_remote
 scoreboard players set @a[scores={halls_click=1..}] halls_click 0
