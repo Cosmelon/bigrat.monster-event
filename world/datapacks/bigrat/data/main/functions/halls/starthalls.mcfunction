@@ -4,11 +4,13 @@
 # run from <manual>
 
 # general settings
-clear @a[team=Admin]
+clear @a[team=!Admin]
 title @a times 0 40 5
+effect clear @a[team=!Admin]
 gamemode adventure @a[tag=player]
 gamemode spectator @a[tag=!player]
 tag @a[tag=player] add hallsAlive
+execute as @e[tag=halls_spawnpoint] run data modify entity @s Invisible set value true
 
 # declare objectives
 scoreboard objectives add hallsCore dummy
@@ -42,6 +44,7 @@ bossbar set halls:wrelease max 100
 
 # teleport players
 tp @a[tag=!player] -976.001 25 1044.001
+spawnpoint @a[team=Red] -976 25 1044
 execute unless score ~tpOff hallsCore matches 1 run tp @a[team=Red] -976.001 22 1044.001
 execute if score ~tpOff hallsCore matches 1 run msg @a[tag=admin] Players should have been teleported to the maze, but weren't because ~tpOff hallsCore == 1
 

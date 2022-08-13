@@ -39,38 +39,30 @@ tag @a[tag=player,scores={halls_death=0}] remove hallsDead
 tag @a[tag=player,scores={halls_death=1..}] add hallsDead
 tag @a[tag=player,scores={halls_death=1..}] remove hallsAlive
 
-##### OLD RESPAWN SYSTEM #####
+#RESPAWN SYSTEM
 # respawn
-#execute as @a[scores={halls_death=1}] run function main:halls/death
-#execute as @a[tag=hallsDead] at @s if block ~ ~2 ~ barrier run function main:halls/respawn
+execute as @a[scores={halls_death=1}] run function main:halls/death
+execute as @a[tag=hallsDead] at @s if block ~ ~2 ~ barrier run function main:halls/respawn
+# determine pit to respawn in
+execute as @a[team=Red] at @e[name="~redSpawn",limit=1,sort=nearest] run spawnpoint @s ~ ~ ~
+execute as @a[team=Blue] at @e[name="~blueSpawn",limit=1,sort=nearest] run spawnpoint @s ~ ~ ~
+execute as @a[team=Green] at @e[name="~greenSpawn",limit=1,sort=nearest] run spawnpoint @s ~ ~ ~
+execute as @a[team=Yellow] at @e[name="~yellowSpawn",limit=1,sort=nearest] run spawnpoint @s ~ ~ ~
+# rescue players
+execute as @a[tag=hallsAlive] at @s if block ~ 1 ~ black_concrete if block ~ ~-1 ~ barrier positioned ~ ~-20 ~ run effect give @a[tag=hallsDead,distance=..17] levitation 1 2 true
 
-# respawn locations
-#spawn locations
-#execute if score ~spawnLoc hallsCore matches 1 run spawnpoint @a[team=Red] -1004 2 1018 0
-#execute if score ~spawnLoc hallsCore matches 7 run spawnpoint @a[team=Red] -956 2 1019 0
-#execute if score ~spawnLoc hallsCore matches 13 run spawnpoint @a[team=Red] -945 2 1089 0
-#spawn clock
-#scoreboard players add ~spawnLoc hallsCore 1
-#execute if score ~spawnLoc hallsCore matches 18 run scoreboard players set ~spawnLoc hallsCore 1
-
-# resurrect players
-#red1
-#execute if entity @a[x=-1007,dx=7,y=20,dy=7,z=1014,dz=10,predicate=main:sneak_state] run effect give @a[x=-1003,dx=-4,y=2,dy=20,z=1017,dz=4] levitation 1 4 true
-#red2
-#execute if entity @a[x=-951,dx=9,y=20,dy=7,z=1014,dz=10,predicate=main:sneak_state] run effect give @a[x=-1003,dx=-4,y=2,dy=20,z=1017,dz=4] levitation 1 4 true
 ##### OLD RESPAWN SYSTEM #####
-
-# respawn
-gamemode spectator @a[tag=player,tag=hallsDead]
-scoreboard players set @a[tag=player,scores={halls_death=1}] halls_death 200
-scoreboard players remove @a[tag=player,scores={halls_death=2..}] halls_death 1
-execute as @a[scores={halls_death=2}] run function main:halls/respawn
-# until respawn
-execute as @a[scores={halls_death=60}] run title @s actionbar {"text":"Until respawn: 3","color":"gold"}
-execute as @a[scores={halls_death=40}] run title @s actionbar {"text":"Until respawn: 2","color":"gold"}
-execute as @a[scores={halls_death=20}] run title @s actionbar {"text":"Until respawn: 1","color":"gold"}
-execute as @a[scores={halls_death=2}] run title @s actionbar {"text":"Until respawn: 0","color":"gold"}
-
+## respawn
+#gamemode spectator @a[tag=player,tag=hallsDead]
+#scoreboard players set @a[tag=player,scores={halls_death=1}] halls_death 200
+#scoreboard players remove @a[tag=player,scores={halls_death=2..}] halls_death 1
+#execute as @a[scores={halls_death=2}] run function main:halls/respawn
+## until respawn
+#execute as @a[scores={halls_death=60}] run title @s actionbar {"text":"Until respawn: 3","color":"gold"}
+#execute as @a[scores={halls_death=40}] run title @s actionbar {"text":"Until respawn: 2","color":"gold"}
+#execute as @a[scores={halls_death=20}] run title @s actionbar {"text":"Until respawn: 1","color":"gold"}
+#execute as @a[scores={halls_death=2}] run title @s actionbar {"text":"Until respawn: 0","color":"gold"}
+##### OLD RESPAWN SYSTEM #####
 
 # enter info
 execute positioned -964.5 22 1090.5 as @a[tag=player,tag=!halls_enter1,distance=..2] run function main:halls/enters/wifi

@@ -54,6 +54,7 @@ fill -983 26 1041 -983 22 1038 tinted_glass
 # clear schedules
 schedule clear main:lobby
 schedule clear main:returnlobby
+execute as @e[tag=halls_spawnpoint] run data modify entity @s Invisible set value true
 
 # clear trigger
 execute as @a run trigger halls_emReset set 0
