@@ -36,6 +36,10 @@ scoreboard objectives add halls_craftCobble minecraft.mined:minecraft.cobbleston
 scoreboard objectives add halls_craftStone minecraft.mined:minecraft.stone
 scoreboard objectives add halls_craftWood minecraft.mined:minecraft.oak_log
 scoreboard objectives add halls_craftReset trigger
+scoreboard objectives remove halls_keys
+scoreboard objectives add halls_keys dummy
+scoreboard players set ~left_red halls_keys 7
+
 
 # bossbars
 bossbar add halls:wrelease "time until warden release"
