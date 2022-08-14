@@ -42,7 +42,13 @@ scoreboard objectives add halls_craftReset trigger
 scoreboard objectives remove halls_keys
 scoreboard objectives add halls_keys dummy
 scoreboard players set ~left_red halls_keys 7
+scoreboard players set ~left_blue halls_keys 7
+scoreboard players set ~left_green halls_keys 7
+scoreboard players set ~left_yellow halls_keys 7
 scoreboard players set ~redGate halls_keys 0
+scoreboard players set ~blueGate halls_keys 0
+scoreboard players set ~greenGate halls_keys 0
+scoreboard players set ~yellowGate halls_keys 0
 
 
 # bossbars
@@ -53,31 +59,78 @@ bossbar set halls:wrelease max 100
 # teleport players
 tp @a[tag=!player] -976.001 25 1044.001
 spawnpoint @a[team=Red] -976 25 1044
+spawnpoint @a[team=Blue] -1205 25 1044
+spawnpoint @a[team=Green] -1436 25 1044
+spawnpoint @a[team=Yellow] -1666 25 1044
 execute unless score ~tpOff hallsCore matches 1 run tp @a[team=Red] -976.001 22 1044.001
+execute unless score ~tpOff hallsCore matches 1 run tp @a[team=Blue] -1205.001 22 1044.001
+execute unless score ~tpOff hallsCore matches 1 run tp @a[team=Green] -1436.001 22 1044.001
+execute unless score ~tpOff hallsCore matches 1 run tp @a[team=Yellow] -1666.001 22 1044.001
 execute if score ~tpOff hallsCore matches 1 run msg @a[tag=admin] Players should have been teleported to the maze, but weren't because ~tpOff hallsCore == 1
 
 # setup soaproom
 kill @e[type=pig]
 place template main:halls/redsoap -1007 19 978
+place template main:halls/bluesoap -1037 19 978
+place template main:halls/greensoap -1467 19 978
+place template main:halls/yellowsoap -1697 19 978
 
 # setup emerald mine
 place template main:halls/emerald -1033 16 1031
+place template main:halls/emerald -1263 16 1031
+place template main:halls/emerald -1493 16 1031
+place template main:halls/emerald -1723 16 1031
 
 # setup craftroom
 kill @e[tag=halls_craftVillager]
 place template main:halls/craftroom -1032 20 995
+place template main:halls/craftroom -1262 20 995
+place template main:halls/craftroom -1462 20 995
+place template main:halls/craftroom -1722 20 995
 
 # setup gate
+#red
 fill -1000 26 1064 -1000 26 1061 minecraft:stripped_birch_log
 fill -1000 22 1064 -1000 22 1061 minecraft:stripped_birch_log
 fill -1000 25 1061 -1000 23 1064 minecraft:birch_planks
+#blue
+fill -1230 26 1064 -1230 26 1061 minecraft:stripped_birch_log
+fill -1230 22 1064 -1230 22 1061 minecraft:stripped_birch_log
+fill -1230 25 1061 -1230 23 1064 minecraft:birch_planks
+#green
+fill -1460 26 1064 -1460 26 1061 minecraft:stripped_birch_log
+fill -1460 22 1064 -1460 22 1061 minecraft:stripped_birch_log
+fill -1460 25 1061 -1460 23 1064 minecraft:birch_planks
+#yellow
+fill -1690 26 1064 -1690 26 1061 minecraft:stripped_birch_log
+fill -1690 22 1064 -1690 22 1061 minecraft:stripped_birch_log
+fill -1690 25 1061 -1690 23 1064 minecraft:birch_planks
 
 # setup box
+#red
 place template main:halls/startbox -979 22 1041
 fill -976 26 1037 -973 22 1037 tinted_glass
 fill -970 26 1041 -970 22 1043 tinted_glass
 fill -975 26 1050 -977 22 1050 tinted_glass
 fill -983 26 1041 -983 22 1038 tinted_glass
+#blue
+place template main:halls/startbox -1208 22 1041
+fill -1206 26 1037 -1203 22 1037 tinted_glass
+fill -1200 26 1041 -1200 22 1043 tinted_glass
+fill -1952 26 1050 -1207 22 1050 tinted_glass
+fill -2196 26 1041 -1213 22 1038 tinted_glass
+#green
+place template main:halls/startbox -1438 22 1041
+fill -1436 26 1037 -1433 22 1037 tinted_glass
+fill -1430 26 1041 -1430 22 1043 tinted_glass
+fill -2182 26 1050 -1437 22 1050 tinted_glass
+fill -2196 26 1041 -1443 22 1038 tinted_glass
+#yellow
+place template main:halls/startbox -1668 22 1041
+fill -1666 26 1037 -1663 22 1037 tinted_glass
+fill -1660 26 1041 -1660 22 1043 tinted_glass
+fill -2412 26 1050 -1667 22 1050 tinted_glass
+fill -2426 26 1041 -1673 22 1038 tinted_glass
 
 # basic tellraw for start
 tellraw @a {"text":"\nBackrooms","bold":true}

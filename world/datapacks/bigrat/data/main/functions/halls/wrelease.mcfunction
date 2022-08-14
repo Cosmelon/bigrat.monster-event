@@ -5,6 +5,9 @@
 
 # summon warden
 summon warden -976.001 22 1044.001
+summon warden -1206.001 22 1044.001
+summon warden -1436.001 22 1044.001
+summon warden -1666.001 22 1044.001
 
 # infostuff
 tellraw @a {"text":"\nWarden has been released!\n","bold":true}

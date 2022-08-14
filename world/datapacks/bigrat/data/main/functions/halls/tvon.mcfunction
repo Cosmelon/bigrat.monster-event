@@ -9,6 +9,15 @@
 
 # placeholder key item for now
 clear @s lever{display:{Name:'[{"text":"Dad\'s remote","italic":false,"color":"red"}]'}}
-summon item -928.5 24.00 1019.5 {Item:{id:"minecraft:tripwire_hook",Count:1b,tag:{display:{Name:'[{"text":"TV Key","italic":false}]',Lore:['[{"text":"Take this to the center to","italic":false}]','[{"text":"activate!","italic":false}]']}}}}
-execute positioned -928.5 24.00 1019.5 run data modify entity @e[type=item,limit=1,sort=nearest] CustomName set value '[{"text":"TV Key","color":"red"}]'
-execute positioned -928.5 24.00 1019.5 run data modify entity @e[type=item,limit=1,sort=nearest] CustomNameVisible set value true
+execute if entity @s[team=Red] run summon item -928.5 24.00 1019.5 {Item:{id:"minecraft:tripwire_hook",Count:1b,tag:{display:{Name:'[{"text":"TV Key","italic":false}]',Lore:['[{"text":"Take this to the center to","italic":false}]','[{"text":"activate!","italic":false}]']}}}}
+execute if entity @s[team=Red] positioned -928.5 24.00 1019.5 run data modify entity @e[type=item,limit=1,sort=nearest] CustomName set value '[{"text":"TV Key","color":"red"}]'
+execute if entity @s[team=Red] positioned -928.5 24.00 1019.5 run data modify entity @e[type=item,limit=1,sort=nearest] CustomNameVisible set value true
+execute if entity @s[team=Blue] run summon item -1163.5 24.00 1019.5 {Item:{id:"minecraft:tripwire_hook",Count:1b,tag:{display:{Name:'[{"text":"TV Key","italic":false}]',Lore:['[{"text":"Take this to the center to","italic":false}]','[{"text":"activate!","italic":false}]']}}}}
+execute if entity @s[team=Blue] positioned -1163.5 24.00 1019.5 run data modify entity @e[type=item,limit=1,sort=nearest] CustomName set value '[{"text":"TV Key","color":"red"}]'
+execute if entity @s[team=Blue] positioned -1163.5 24.00 1019.5 run data modify entity @e[type=item,limit=1,sort=nearest] CustomNameVisible set value true
+execute if entity @s[team=Green] run summon item -1393.5 24.00 1019.5 {Item:{id:"minecraft:tripwire_hook",Count:1b,tag:{display:{Name:'[{"text":"TV Key","italic":false}]',Lore:['[{"text":"Take this to the center to","italic":false}]','[{"text":"activate!","italic":false}]']}}}}
+execute if entity @s[team=Green] positioned -1393.5 24.00 1019.5 run data modify entity @e[type=item,limit=1,sort=nearest] CustomName set value '[{"text":"TV Key","color":"red"}]'
+execute if entity @s[team=Green] positioned -1393.5 24.00 1019.5 run data modify entity @e[type=item,limit=1,sort=nearest] CustomNameVisible set value true
+execute if entity @s[team=Yellow] run summon item -1623.5 24.00 1019.5 {Item:{id:"minecraft:tripwire_hook",Count:1b,tag:{display:{Name:'[{"text":"TV Key","italic":false}]',Lore:['[{"text":"Take this to the center to","italic":false}]','[{"text":"activate!","italic":false}]']}}}}
+execute if entity @s[team=Yellow] positioned -1623.5 24.00 1019.5 run data modify entity @e[type=item,limit=1,sort=nearest] CustomName set value '[{"text":"TV Key","color":"red"}]'
+execute if entity @s[team=Yellow] positioned -1623.5 24.00 1019.5 run data modify entity @e[type=item,limit=1,sort=nearest] CustomNameVisible set value true
