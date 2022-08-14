@@ -137,11 +137,7 @@ tag @a[nbt=!{Inventory:[{id:"minecraft:tripwire_hook",Count:1b,tag:{display:{Nam
 
 # take the shit
 #tag players in the place
-#execute positioned -1023.5 22.00 1053.5 run tag @a[distance=..3] add shitRoom
-#execute positioned -1023.5 22.00 1053.5 run tag @a[distance=3.1..] remove shitRoom
-#execute positioned -1023.5 22.00 1053.5 run scoreboard players set @a[tag=player,distance=..1] halls_shitter 1
-#execute positioned -1023.5 22.00 1053.5 run scoreboard players set @a[tag=player,distance=1.1..] halls_shitter 0
-execute as @a[tag=hallsAlive] at @s if block ~ ~-1 ~ smooth_quartz_stairs run tag @s add hallsShitting
+execute as @a[tag=hallsAlive,x=-1015,dx=-12,y=21,dy=6,z=1046,dz=15] at @s if block ~ ~-1 ~ smooth_quartz_stairs if block ~ ~4 ~ minecraft:redstone_lamp run tag @s add hallsShitting
 execute as @a[tag=hallsShitting] at @s if block ~ ~-1 ~ hay_block run tag @s remove hallsShitting
 tag @a[tag=hallsDead] remove hallsShitting
 execute as @a[tag=hallsShitting,predicate=main:sneak_state,scores={halls_shitterClock=..99}] run scoreboard players add @s halls_shitterClock 1
