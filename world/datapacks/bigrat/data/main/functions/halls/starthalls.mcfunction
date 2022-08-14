@@ -13,6 +13,7 @@ tag @a[tag=player] add hallsAlive
 execute as @e[tag=halls_spawnpoint] run data modify entity @s Invisible set value true
 
 # declare objectives
+scoreboard players set .halls currentGame 1
 scoreboard objectives add hallsCore dummy
 scoreboard players set ~gameActive hallsCore 1
 scoreboard players set ~countDown hallsCore 160
