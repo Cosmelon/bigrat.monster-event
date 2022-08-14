@@ -150,6 +150,8 @@ execute as @e[tag=halls_spawnpoint] run data modify entity @s Invisible set valu
 bossbar remove halls:wrelease
 scoreboard objectives remove hallsCore
 scoreboard objectives remove halls_death
+scoreboard objectives remove halls_soap
+scoreboard objectives remove halls_soapStat
 scoreboard objectives remove halls_soapDist
 scoreboard objectives remove halls_sneak
 scoreboard objectives remove halls_remote

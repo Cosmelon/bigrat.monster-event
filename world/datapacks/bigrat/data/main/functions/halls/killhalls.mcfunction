@@ -12,15 +12,8 @@ scoreboard objectives remove halls_death
 scoreboard objectives add halls_death deathCount
 
 # reset soap
-scoreboard players set ~red1 halls_soapStat 0
-scoreboard players set ~red2 halls_soapStat 0
-scoreboard players set ~red3 halls_soapStat 0
-scoreboard players set ~red4 halls_soapStat 0
-scoreboard players set ~red5 halls_soapStat 0
-scoreboard players set ~red6 halls_soapStat 0
-scoreboard players set ~red7 halls_soapStat 0
-scoreboard players set ~red8 halls_soapStat 0
-scoreboard players set ~red9 halls_soapStat 0
+scoreboard players reset * halls_soap
+scoreboard players reset * halls_soapStat
 scoreboard players set ~finishRed halls_soapStat 0
 function main:halls/soap/reset
 

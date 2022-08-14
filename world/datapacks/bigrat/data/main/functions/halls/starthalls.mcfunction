@@ -52,6 +52,10 @@ spawnpoint @a[team=Red] -976 25 1044
 execute unless score ~tpOff hallsCore matches 1 run tp @a[team=Red] -976.001 22 1044.001
 execute if score ~tpOff hallsCore matches 1 run msg @a[tag=admin] Players should have been teleported to the maze, but weren't because ~tpOff hallsCore == 1
 
+# setup soaproom
+kill @e[type=pig]
+place template main:halls/redsoap -1007 19 978
+
 # setup emerald mine
 place template main:halls/emerald -1033 16 1031
 
