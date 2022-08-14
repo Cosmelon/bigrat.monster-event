@@ -40,6 +40,7 @@ scoreboard objectives add halls_craftReset trigger
 scoreboard objectives remove halls_keys
 scoreboard objectives add halls_keys dummy
 scoreboard players set ~left_red halls_keys 7
+scoreboard players set ~redGate halls_keys 0
 
 
 # bossbars
@@ -63,6 +64,11 @@ place template main:halls/emerald -1033 16 1031
 # setup craftroom
 kill @e[tag=halls_craftVillager]
 place template main:halls/craftroom -1032 20 995
+
+# setup gate
+fill -1000 26 1064 -1000 26 1061 minecraft:stripped_birch_log
+fill -1000 22 1064 -1000 22 1061 minecraft:stripped_birch_log
+fill -1000 25 1061 -1000 23 1064 minecraft:birch_planks
 
 # setup box
 place template main:halls/startbox -979 22 1041

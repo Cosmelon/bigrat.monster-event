@@ -73,6 +73,15 @@ execute positioned -1026.5 22 1031.5 as @a[tag=player,tag=!halls_enter5,distance
 execute positioned -921.5 22 1080.5 as @a[tag=player,tag=!halls_enter6,distance=..2] run function main:halls/enters/car
 execute positioned -1029.5 22 1008.5 as @a[tag=player,tag=!halls_enter7,distance=..2] run function main:halls/enters/craft
 
+# gate
+execute if score ~redCooldown halls_keys matches 1.. run scoreboard players remove ~redCooldown halls_keys 1
+
+# Exit
+execute at @e[tag=halls_exit,type=armor_stand] run tag @a[tag=player,tag=hallsAlive,distance=..2] add halls_exit
+execute as @a[tag=halls_exit] run function main:halls/escape
+execute store result score ~escaped hallsCore if entity @a[tag=halls_escaped]
+execute if score ~escaped hallsCore = .players teamCheck run function main:halls/finish
+
 # take key to center
 execute as @a[nbt={Inventory:[{id:"minecraft:tripwire_hook"}]}] run tag @s add halls_key
 execute as @a[nbt=!{Inventory:[{id:"minecraft:tripwire_hook"}]}] run tag @s remove halls_key
