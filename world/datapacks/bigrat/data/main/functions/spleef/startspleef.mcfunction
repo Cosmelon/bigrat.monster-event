@@ -53,7 +53,8 @@ schedule function main:spleef/border/s2warn 170s replace
 schedule function main:spleef/border/s3warn 250s replace
 
 # give shovels and kb
-schedule function main:spleef/shovelsandkb 55s replace
+execute if score $round spleef matches 1 run schedule function main:spleef/shovelsandkb 55s replace
+execute if score $round spleef matches 2.. run schedule function main:spleef/shovelsandkb 20s replace
 scoreboard players set $toolsGiven spleef 0
 
 # reset spleefDeaths for everyone

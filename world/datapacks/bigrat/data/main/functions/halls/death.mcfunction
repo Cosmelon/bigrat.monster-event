@@ -13,6 +13,7 @@ execute if entity @s[team=Red] run tp @e[name="~redSpawn",limit=1,sort=nearest]
 execute if entity @s[team=Blue] run tp @e[name="~blueSpawn",limit=1,sort=nearest]
 execute if entity @s[team=Green] run tp @e[name="~greenSpawn",limit=1,sort=nearest]
 execute if entity @s[team=Yellow] run tp @e[name="~yellowSpawn",limit=1,sort=nearest]
+clear @s
 
 trigger halls_emReset set 0
 trigger halls_craftReset set 0

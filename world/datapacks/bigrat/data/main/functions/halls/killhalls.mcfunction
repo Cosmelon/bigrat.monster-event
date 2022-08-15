@@ -35,6 +35,14 @@ tag @a remove halls_enter4
 tag @a remove halls_enter5
 tag @a remove halls_enter6
 tag @a remove halls_enter7
+#keytags
+tag @a remove halls_subP1
+tag @a remove halls_subP2
+tag @a remove halls_subP3
+tag @a remove halls_subP4
+tag @a remove halls_subP5
+tag @a remove halls_subP6
+tag @a remove halls_subP7
 
 # spawnpoint reset
 spawnpoint @a[team=Red] -976 25 1044
@@ -50,23 +58,23 @@ fill -970 26 1041 -970 22 1043 tinted_glass
 fill -975 26 1050 -977 22 1050 tinted_glass
 fill -983 26 1041 -983 22 1038 tinted_glass
 #blue
-place template main:halls/startbox -1208 22 1041
+place template main:halls/startbox -1209 22 1041
 fill -1206 26 1037 -1203 22 1037 tinted_glass
 fill -1200 26 1041 -1200 22 1043 tinted_glass
-fill -1952 26 1050 -1207 22 1050 tinted_glass
-fill -2196 26 1041 -1213 22 1038 tinted_glass
+fill -1205 26 1050 -1207 22 1050 tinted_glass
+fill -1213 26 1041 -1213 22 1038 tinted_glass
 #green
-place template main:halls/startbox -1438 22 1041
+place template main:halls/startbox -1439 22 1041
 fill -1436 26 1037 -1433 22 1037 tinted_glass
 fill -1430 26 1041 -1430 22 1043 tinted_glass
-fill -2182 26 1050 -1437 22 1050 tinted_glass
-fill -2196 26 1041 -1443 22 1038 tinted_glass
+fill -1435 26 1050 -1437 22 1050 tinted_glass
+fill -1443 26 1041 -1443 22 1038 tinted_glass
 #yellow
-place template main:halls/startbox -1668 22 1041
+place template main:halls/startbox -1669 22 1041
 fill -1666 26 1037 -1663 22 1037 tinted_glass
 fill -1660 26 1041 -1660 22 1043 tinted_glass
-fill -2412 26 1050 -1667 22 1050 tinted_glass
-fill -2426 26 1041 -1673 22 1038 tinted_glass
+fill -1665 26 1050 -1667 22 1050 tinted_glass
+fill -1673 26 1041 -1673 22 1038 tinted_glass
 
 # clear schedules
 schedule clear main:lobby
@@ -75,6 +83,7 @@ execute as @e[tag=halls_spawnpoint] run data modify entity @s Invisible set valu
 
 # clear trigger
 execute as @a run trigger halls_emReset set 0
+execute as @a run trigger halls_craftReset set 0
 
 # text
 tellraw @a[tag=!admin] {"text":"\nKilled Backrooms!\n","color":"dark_red","bold":true}

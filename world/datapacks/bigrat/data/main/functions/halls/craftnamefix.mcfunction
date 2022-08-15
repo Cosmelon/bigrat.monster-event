@@ -3,4 +3,4 @@
 # Type: single
 # run from main:halls/craftkey main:halls/hallstick
 
-data modify entity @e[tag=halls_craftVillager,type=villager,limit=1,sort=nearest] CustomName set value '[{"text":"Craft an activator rail"}]'
+data modify entity @e[type=villager,limit=1,sort=nearest] CustomName set value '[{"text":"Craft an activator rail!"}]'

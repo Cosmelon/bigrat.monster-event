@@ -10,15 +10,25 @@ execute if score ~countDown hallsCore matches 60 run title @a subtitle {"text":"
 execute if score ~countDown hallsCore matches 60 as @a run playsound minecraft:block.note_block.chime ambient @s ~ ~100 ~ 10000 1.259921
 execute if score ~countDown hallsCore matches 40 run title @a subtitle {"text":">  2  <","color":"yellow"}
 execute if score ~countDown hallsCore matches 40 as @a run playsound minecraft:block.note_block.chime ambient @s ~ ~100 ~ 10000 1.259921
-execute if score ~countDown hallsCore matches 20 run title @a subtitle {"text":"> 1  <","color":"green"}
+execute if score ~countDown hallsCore matches 20 run title @a subtitle {"text":"> 1 <","color":"green"}
 execute if score ~countDown hallsCore matches 20 as @a run playsound minecraft:block.note_block.chime ambient @s ~ ~100 ~ 10000 1.259921
 execute if score ~countDown hallsCore matches 0 run title @a title ""
 execute if score ~countDown hallsCore matches 0 run title @a subtitle {"text":"Go!","color":"red"}
 execute if score ~countDown hallsCore matches 0 as @a run playsound minecraft:block.note_block.chime ambient @s ~ ~100 ~ 10000 1.414214
 
 # remove box
+#red
 execute if score ~countDown hallsCore matches 1 run fill -979 27 1046 -974 21 1041 air replace barrier
 execute if score ~countDown hallsCore matches -1 run fill -983 26 1037 -970 22 1050 air replace tinted_glass
+#blue
+execute if score ~countDown hallsCore matches 1 run fill -1213 26 1037 -1200 22 1050 air replace barrier
+execute if score ~countDown hallsCore matches -1 run fill -1213 26 1037 -1200 22 1050 air replace tinted_glass
+#green
+execute if score ~countDown hallsCore matches 1 run fill -1443 26 1037 -1430 22 1050 air replace barrier
+execute if score ~countDown hallsCore matches -1 run fill -1443 26 1037 -1430 22 1050 air replace tinted_glass
+#yellow
+execute if score ~countDown hallsCore matches 1 run fill -1673 26 1037 -1660 22 1050 air replace barrier
+execute if score ~countDown hallsCore matches -1 run fill -1673 26 1037 -1660 22 1050 air replace tinted_glass
 
 # warden release
 bossbar set halls:wrelease players @a
@@ -79,24 +89,24 @@ execute positioned -1159.99 22 1030.03 as @a[tag=player,tag=!halls_enter2,distan
 execute positioned -1224.5 22 984.5 as @a[tag=player,tag=!halls_enter3,distance=..2] run function main:halls/enters/soap
 execute positioned -1243.5 22 1053.5 as @a[tag=player,tag=!halls_enter4,distance=..2] run function main:halls/enters/shit
 execute positioned -1256.5 22 1031.5 as @a[tag=player,tag=!halls_enter5,distance=..2] run function main:halls/enters/emerald
-execute positioned -1256.5 22 1080.5 as @a[tag=player,tag=!halls_enter6,distance=..2] run function main:halls/enters/car
-execute positioned -1029.5 22 1008.5 as @a[tag=player,tag=!halls_enter7,distance=..2] run function main:halls/enters/craft
+execute positioned -1151.5 22 1080.5 as @a[tag=player,tag=!halls_enter6,distance=..2] run function main:halls/enters/car
+execute positioned -1259.5 22 1008.5 as @a[tag=player,tag=!halls_enter7,distance=..2] run function main:halls/enters/craft
 #green
 execute positioned -1424.5 22 1090.5 as @a[tag=player,tag=!halls_enter1,distance=..2] run function main:halls/enters/wifi
 execute positioned -1389.99 22 1030.03 as @a[tag=player,tag=!halls_enter2,distance=..3] run function main:halls/enters/remote
-execute positioned -1434.5 22 984.5 as @a[tag=player,tag=!halls_enter3,distance=..2] run function main:halls/enters/soap
+execute positioned -1454.5 22 984.5 as @a[tag=player,tag=!halls_enter3,distance=..2] run function main:halls/enters/soap
 execute positioned -1473.5 22 1053.5 as @a[tag=player,tag=!halls_enter4,distance=..2] run function main:halls/enters/shit
 execute positioned -1486.5 22 1031.5 as @a[tag=player,tag=!halls_enter5,distance=..2] run function main:halls/enters/emerald
-execute positioned -1486.5 22 1080.5 as @a[tag=player,tag=!halls_enter6,distance=..2] run function main:halls/enters/car
-execute positioned -1259.5 22 1008.5 as @a[tag=player,tag=!halls_enter7,distance=..2] run function main:halls/enters/craft
+execute positioned -1381.5 22 1080.5 as @a[tag=player,tag=!halls_enter6,distance=..2] run function main:halls/enters/car
+execute positioned -1489.5 22 1008.5 as @a[tag=player,tag=!halls_enter7,distance=..2] run function main:halls/enters/craft
 #yellow
-execute positioned -1424.5 22 1090.5 as @a[tag=player,tag=!halls_enter1,distance=..2] run function main:halls/enters/wifi
-execute positioned -1389.99 22 1030.03 as @a[tag=player,tag=!halls_enter2,distance=..3] run function main:halls/enters/remote
-execute positioned -1434.5 22 984.5 as @a[tag=player,tag=!halls_enter3,distance=..2] run function main:halls/enters/soap
-execute positioned -1473.5 22 1053.5 as @a[tag=player,tag=!halls_enter4,distance=..2] run function main:halls/enters/shit
-execute positioned -1486.5 22 1031.5 as @a[tag=player,tag=!halls_enter5,distance=..2] run function main:halls/enters/emerald
-execute positioned -1486.5 22 1080.5 as @a[tag=player,tag=!halls_enter6,distance=..2] run function main:halls/enters/car
-execute positioned -1259.5 22 1008.5 as @a[tag=player,tag=!halls_enter7,distance=..2] run function main:halls/enters/craft
+execute positioned -1654.5 22 1090.5 as @a[tag=player,tag=!halls_enter1,distance=..2] run function main:halls/enters/wifi
+execute positioned -1619.99 22 1030.03 as @a[tag=player,tag=!halls_enter2,distance=..3] run function main:halls/enters/remote
+execute positioned -1684.5 22 984.5 as @a[tag=player,tag=!halls_enter3,distance=..2] run function main:halls/enters/soap
+execute positioned -1703.5 22 1053.5 as @a[tag=player,tag=!halls_enter4,distance=..2] run function main:halls/enters/shit
+execute positioned -1716.5 22 1031.5 as @a[tag=player,tag=!halls_enter5,distance=..2] run function main:halls/enters/emerald
+execute positioned -1611.5 22 1080.5 as @a[tag=player,tag=!halls_enter6,distance=..2] run function main:halls/enters/car
+execute positioned -1719.5 22 1008.5 as @a[tag=player,tag=!halls_enter7,distance=..2] run function main:halls/enters/craft
 
 # gate
 execute if score ~redCooldown halls_keys matches 1.. run scoreboard players remove ~redCooldown halls_keys 1
@@ -126,10 +136,10 @@ execute as @a[x=-933,y=21,z=1028,dx=6,dy=6,dz=6] run scoreboard players reset @s
 execute as @a[x=-1163,y=21,z=1028,dx=6,dy=6,dz=6] run scoreboard players reset @s halls_remote
 execute as @a[x=-1393,y=21,z=1028,dx=6,dy=6,dz=6] run scoreboard players reset @s halls_remote
 execute as @a[x=-1623,y=21,z=1028,dx=6,dy=6,dz=6] run scoreboard players reset @s halls_remote
-execute positioned -928.5 23 1019.5 run scoreboard players reset @a[distance=10..] halls_remote
-execute positioned -1158.5 23 1019.5 run scoreboard players reset @a[distance=10..] halls_remote
-execute positioned -1388.5 23 1019.5 run scoreboard players reset @a[distance=10..] halls_remote
-execute positioned -1618.5 23 1019.5 run scoreboard players reset @a[distance=10..] halls_remote
+execute positioned -928.5 23 1019.5 run scoreboard players reset @a[distance=10..100] halls_remote
+execute positioned -1158.5 23 1019.5 run scoreboard players reset @a[distance=10..100] halls_remote
+execute positioned -1388.5 23 1019.5 run scoreboard players reset @a[distance=10..100] halls_remote
+execute positioned -1618.5 23 1019.5 run scoreboard players reset @a[distance=10..100] halls_remote
 item replace entity @a[scores={halls_remote=6}] inventory.13 with lever{display:{Name:'[{"text":"Dad\'s remote","italic":false,"color":"red"}]'}}
 item replace entity @a[scores={halls_remote=1..5}] inventory.13 with air
 scoreboard players set @a[scores={halls_remote=6}] halls_remote 0
@@ -175,10 +185,10 @@ execute as @a[tag=hallsSoap,scores={halls_click=1..}] at @s run function main:ha
 #get status of indiv mobs
 function main:halls/soap/mobstatus
 #7835 solution
-execute if score ~red7 halls_soapStat matches 1 if score ~red8 halls_soapStat matches 1 if score ~red3 halls_soapStat matches 1 if score ~red5 halls_soapStat matches 1 if score ~finishRed halls_soapStat matches 0 run function main:halls/soap/redcorrect
-execute if score ~blue7 halls_soapStat matches 1 if score ~blue8 halls_soapStat matches 1 if score ~blue3 halls_soapStat matches 1 if score ~blue5 halls_soapStat matches 1 if score ~finishBlue halls_soapStat matches 0 run function main:halls/soap/redcorrect
-execute if score ~green7 halls_soapStat matches 1 if score ~green8 halls_soapStat matches 1 if score ~green3 halls_soapStat matches 1 if score ~green5 halls_soapStat matches 1 if score ~finishgreen halls_soapStat matches 0 run function main:halls/soap/redcorrect
-execute if score ~yellow7 halls_soapStat matches 1 if score ~yellow8 halls_soapStat matches 1 if score ~yellow3 halls_soapStat matches 1 if score ~yellow5 halls_soapStat matches 1 if score ~finishyellow halls_soapStat matches 0 run function main:halls/soap/redcorrect
+execute if score ~red7 halls_soapStat matches 1 if score ~red8 halls_soapStat matches 1 if score ~red3 halls_soapStat matches 1 if score ~red5 halls_soapStat matches 1 if score ~finishRed halls_soapStat matches 0 as @a[tag=hallsAlive,x=-1007,dx=10,y=19,dy=8,z=978,dz=16,limit=1,sort=arbitrary] run function main:halls/soap/redcorrect
+execute if score ~blue7 halls_soapStat matches 1 if score ~blue8 halls_soapStat matches 1 if score ~blue3 halls_soapStat matches 1 if score ~blue5 halls_soapStat matches 1 if score ~finishBlue halls_soapStat matches 0 as @a[tag=hallsAlive,x=-1237,dx=10,y=19,dy=8,z=978,dz=16,limit=1,sort=arbitrary] run function main:halls/soap/redcorrect
+execute if score ~green7 halls_soapStat matches 1 if score ~green8 halls_soapStat matches 1 if score ~green3 halls_soapStat matches 1 if score ~green5 halls_soapStat matches 1 if score ~finishGreen halls_soapStat matches 0 as @a[tag=hallsAlive,x=-1467,dx=10,y=19,dy=8,z=978,dz=16,limit=1,sort=arbitrary] run function main:halls/soap/redcorrect
+execute if score ~yellow7 halls_soapStat matches 1 if score ~yellow8 halls_soapStat matches 1 if score ~yellow3 halls_soapStat matches 1 if score ~yellow5 halls_soapStat matches 1 if score ~finishYellow halls_soapStat matches 0 as @a[tag=hallsAlive,x=-1697,dx=10,y=19,dy=8,z=978,dz=16,limit=1,sort=arbitrary] run function main:halls/soap/redcorrect
 #keytag
 tag @a[nbt={Inventory:[{id:"minecraft:tripwire_hook",Count:1b,tag:{display:{Name:'[{"text":"Soap Key","italic":false}]',Lore:['[{"text":"Take this to the center to","italic":false}]','[{"text":"activate!","italic":false}]']}}}]}] add halls_keySoap
 tag @a[nbt=!{Inventory:[{id:"minecraft:tripwire_hook",Count:1b,tag:{display:{Name:'[{"text":"Soap Key","italic":false}]',Lore:['[{"text":"Take this to the center to","italic":false}]','[{"text":"activate!","italic":false}]']}}}]}] remove halls_keySoap
@@ -289,7 +299,10 @@ give @a[scores={halls_craftIron=1..}] iron_ingot
 give @a[scores={halls_craftGold=1..}] gold_ingot
 give @a[scores={halls_craftRedstone=1..}] redstone
 give @a[scores={halls_craftCobble=1..}] cobblestone
-give @a[scores={halls_craftStone=1..}] stone
+give @a[scores={halls_craftStone=1..},x=-1020,dx=-12,y=21,dy=8,z=996,dz=10.5] stone
+give @a[scores={halls_craftStone=1..},x=-1250,dx=-12,y=21,dy=8,z=996,dz=10.5] stone
+give @a[scores={halls_craftStone=1..},x=-1480,dx=-12,y=21,dy=8,z=996,dz=10.5] stone
+give @a[scores={halls_craftStone=1..},x=-1710,dx=-12,y=21,dy=8,z=996,dz=10.5] stone
 give @a[scores={halls_craftWood=1..}] oak_log
 scoreboard players reset @a[scores={halls_craftIron=1..}] halls_craftIron
 scoreboard players reset @a[scores={halls_craftGold=1..}] halls_craftGold
@@ -298,6 +311,12 @@ scoreboard players reset @a[scores={halls_craftCobble=1..}] halls_craftCobble
 scoreboard players reset @a[scores={halls_craftStone=1..}] halls_craftStone
 scoreboard players reset @a[scores={halls_craftWood=1..}] halls_craftWood
 #talking to villager
+#execute as @e[tag=halls_craftVillager,type=villager] at @s run tag @a[tag=player,tag=hallsAlive,distance=..7] add hallsCraft
+#execute as @e[tag=halls_craftVillager,type=villager] at @s run tag @a[tag=player,tag=hallsAlive,distance=7.1..20] remove hallsCraft
+#execute as @a[tag=hallsCraft,scores={halls_craftTalk=1..},nbt=!{SelectedItem:{id:"minecraft:activator_rail"}}] at @s run data modify entity @e[tag=halls_craftVillager,type=villager,limit=1,sort=nearest] CustomName set value '[{"text":"\\uE006 Incorrect! \\uE006","color":"red"}]'
+#execute as @a[tag=hallsCraft,scores={halls_craftTalk=1..},nbt=!{SelectedItem:{id:"minecraft:activator_rail"}}] run schedule function main:halls/craftnamefix 4s replace
+#execute as @a[tag=hallsCraft,scores={halls_craftTalk=1..},nbt={SelectedItem:{id:"minecraft:activator_rail"}}] at @e[tag=halls_craftVillager,type=villager,limit=1,sort=nearest] run function main:halls/craftkey
+#execute as @a[tag=hallsCraft,scores={halls_craftTalk=1..},nbt={SelectedItem:{id:"minecraft:activator_rail"}}] run clear @s activator_rail
 #red villager
 execute as @a[scores={halls_craftTalk=1..},x=-1020,dx=-12,y=21,dy=8,z=996,dz=10.5,nbt=!{SelectedItem:{id:"minecraft:activator_rail"}}] at @s run data modify entity @e[tag=halls_craftVillager,type=villager,limit=1,sort=nearest] CustomName set value '[{"text":"\\uE006 Incorrect! \\uE006","color":"red"}]'
 execute as @a[scores={halls_craftTalk=1..},x=-1020,dx=-12,y=21,dy=8,z=996,dz=10.5,nbt=!{SelectedItem:{id:"minecraft:activator_rail"}}] run schedule function main:halls/craftnamefix 4s replace

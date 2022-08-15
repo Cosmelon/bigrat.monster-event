@@ -3,6 +3,9 @@
 # Type: tick
 # run from main:halls/hallstick
 
+# pig invis
+effect give @e[type=pig] minecraft:invisibility 5 0 true
+
 # red
 scoreboard players operation ~red1 halls_soapStat = @e[tag=halls_redSoap1] halls_soap
 scoreboard players operation ~red2 halls_soapStat = @e[tag=halls_redSoap2] halls_soap
