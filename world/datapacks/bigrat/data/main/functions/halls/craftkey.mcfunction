@@ -3,6 +3,8 @@
 # Type: single
 # run from main:halls/hallstick
 
+# yeah this is an over-elaborate way to spawn the key and shit
+
 # success text
 data modify entity @e[type=villager,limit=1,sort=nearest] CustomName set value '[{"text":"\\uE007 Success! \\uE007","color":"green"}]'
 execute positioned ~ ~ ~ run schedule function main:halls/craftnamefix 7s replace

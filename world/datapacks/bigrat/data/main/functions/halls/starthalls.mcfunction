@@ -85,7 +85,7 @@ place template main:halls/emerald -1723 16 1031
 kill @e[tag=halls_craftVillager]
 place template main:halls/craftroom -1032 20 995
 place template main:halls/craftroom -1262 20 995
-place template main:halls/craftroom -1462 20 995
+place template main:halls/craftroom -1492 20 995
 place template main:halls/craftroom -1722 20 995
 
 # setup gate

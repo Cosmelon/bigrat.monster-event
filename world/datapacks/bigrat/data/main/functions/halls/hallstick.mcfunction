@@ -311,32 +311,18 @@ scoreboard players reset @a[scores={halls_craftCobble=1..}] halls_craftCobble
 scoreboard players reset @a[scores={halls_craftStone=1..}] halls_craftStone
 scoreboard players reset @a[scores={halls_craftWood=1..}] halls_craftWood
 #talking to villager
-#execute as @e[tag=halls_craftVillager,type=villager] at @s run tag @a[tag=player,tag=hallsAlive,distance=..7] add hallsCraft
-#execute as @e[tag=halls_craftVillager,type=villager] at @s run tag @a[tag=player,tag=hallsAlive,distance=7.1..20] remove hallsCraft
-#execute as @a[tag=hallsCraft,scores={halls_craftTalk=1..},nbt=!{SelectedItem:{id:"minecraft:activator_rail"}}] at @s run data modify entity @e[tag=halls_craftVillager,type=villager,limit=1,sort=nearest] CustomName set value '[{"text":"\\uE006 Incorrect! \\uE006","color":"red"}]'
-#execute as @a[tag=hallsCraft,scores={halls_craftTalk=1..},nbt=!{SelectedItem:{id:"minecraft:activator_rail"}}] run schedule function main:halls/craftnamefix 4s replace
-#execute as @a[tag=hallsCraft,scores={halls_craftTalk=1..},nbt={SelectedItem:{id:"minecraft:activator_rail"}}] at @e[tag=halls_craftVillager,type=villager,limit=1,sort=nearest] run function main:halls/craftkey
-#execute as @a[tag=hallsCraft,scores={halls_craftTalk=1..},nbt={SelectedItem:{id:"minecraft:activator_rail"}}] run clear @s activator_rail
+# old red villager code
+#execute as @a[scores={halls_craftTalk=1..},x=-1020,dx=-932,y=21,dy=8,z=996,dz=10.5,nbt=!{SelectedItem:{id:"minecraft:activator_rail"}}] at @s run data modify entity @e[tag=halls_craftVillager,type=villager,limit=1,sort=nearest] CustomName set value '[{"text":"\\uE006 Incorrect! \\uE006","color":"red"}]'
+#execute as @a[scores={halls_craftTalk=1..},x=-1020,dx=-932,y=21,dy=8,z=996,dz=10.5,nbt=!{SelectedItem:{id:"minecraft:activator_rail"}}] run schedule function main:halls/craftnamefix 4s replace
+#execute as @a[scores={halls_craftTalk=1..},x=-1020,dx=-932,y=21,dy=8,z=996,dz=10.5,nbt={SelectedItem:{id:"minecraft:activator_rail"}}] at @e[tag=halls_craftVillager,type=villager,limit=1,sort=nearest] run function main:halls/craftkey
+#execute as @a[scores={halls_craftTalk=1..},x=-1020,dx=-932,y=21,dy=8,z=996,dz=10.5,nbt={SelectedItem:{id:"minecraft:activator_rail"}}] run clear @s activator_rail
+execute at @e[tag=halls_craftVillager] run tag @a[tag=hallsAlive,distance=..10] add halls_craft
+execute at @e[tag=halls_craftVillager] run tag @a[tag=hallsAlive,distance=10.1..50] remove halls_craft
 #red villager
-execute as @a[scores={halls_craftTalk=1..},x=-1020,dx=-12,y=21,dy=8,z=996,dz=10.5,nbt=!{SelectedItem:{id:"minecraft:activator_rail"}}] at @s run data modify entity @e[tag=halls_craftVillager,type=villager,limit=1,sort=nearest] CustomName set value '[{"text":"\\uE006 Incorrect! \\uE006","color":"red"}]'
-execute as @a[scores={halls_craftTalk=1..},x=-1020,dx=-12,y=21,dy=8,z=996,dz=10.5,nbt=!{SelectedItem:{id:"minecraft:activator_rail"}}] run schedule function main:halls/craftnamefix 4s replace
-execute as @a[scores={halls_craftTalk=1..},x=-1020,dx=-12,y=21,dy=8,z=996,dz=10.5,nbt={SelectedItem:{id:"minecraft:activator_rail"}}] at @e[tag=halls_craftVillager,type=villager,limit=1,sort=nearest] run function main:halls/craftkey
-execute as @a[scores={halls_craftTalk=1..},x=-1020,dx=-12,y=21,dy=8,z=996,dz=10.5,nbt={SelectedItem:{id:"minecraft:activator_rail"}}] run clear @s activator_rail
-#blue villager
-execute as @a[scores={halls_craftTalk=1..},x=-1250,dx=-12,y=21,dy=8,z=996,dz=10.5,nbt=!{SelectedItem:{id:"minecraft:activator_rail"}}] at @s run data modify entity @e[tag=halls_craftVillager,type=villager,limit=1,sort=nearest] CustomName set value '[{"text":"\\uE006 Incorrect! \\uE006","color":"red"}]'
-execute as @a[scores={halls_craftTalk=1..},x=-1250,dx=-12,y=21,dy=8,z=996,dz=10.5,nbt=!{SelectedItem:{id:"minecraft:activator_rail"}}] run schedule function main:halls/craftnamefix 4s replace
-execute as @a[scores={halls_craftTalk=1..},x=-1250,dx=-12,y=21,dy=8,z=996,dz=10.5,nbt={SelectedItem:{id:"minecraft:activator_rail"}}] at @e[tag=halls_craftVillager,type=villager,limit=1,sort=nearest] run function main:halls/craftkey
-execute as @a[scores={halls_craftTalk=1..},x=-1250,dx=-12,y=21,dy=8,z=996,dz=10.5,nbt={SelectedItem:{id:"minecraft:activator_rail"}}] run clear @s activator_rail
-#green villager
-execute as @a[scores={halls_craftTalk=1..},x=-1480,dx=-12,y=21,dy=8,z=996,dz=10.5,nbt=!{SelectedItem:{id:"minecraft:activator_rail"}}] at @s run data modify entity @e[tag=halls_craftVillager,type=villager,limit=1,sort=nearest] CustomName set value '[{"text":"\\uE006 Incorrect! \\uE006","color":"red"}]'
-execute as @a[scores={halls_craftTalk=1..},x=-1480,dx=-12,y=21,dy=8,z=996,dz=10.5,nbt=!{SelectedItem:{id:"minecraft:activator_rail"}}] run schedule function main:halls/craftnamefix 4s replace
-execute as @a[scores={halls_craftTalk=1..},x=-1480,dx=-12,y=21,dy=8,z=996,dz=10.5,nbt={SelectedItem:{id:"minecraft:activator_rail"}}] at @e[tag=halls_craftVillager,type=villager,limit=1,sort=nearest] run function main:halls/craftkey
-execute as @a[scores={halls_craftTalk=1..},x=-1480,dx=-12,y=21,dy=8,z=996,dz=10.5,nbt={SelectedItem:{id:"minecraft:activator_rail"}}] run clear @s activator_rail
-#yellow villager
-execute as @a[scores={halls_craftTalk=1..},x=-1710,dx=-12,y=21,dy=8,z=996,dz=10.5,nbt=!{SelectedItem:{id:"minecraft:activator_rail"}}] at @s run data modify entity @e[tag=halls_craftVillager,type=villager,limit=1,sort=nearest] CustomName set value '[{"text":"\\uE006 Incorrect! \\uE006","color":"red"}]'
-execute as @a[scores={halls_craftTalk=1..},x=-1710,dx=-12,y=21,dy=8,z=996,dz=10.5,nbt=!{SelectedItem:{id:"minecraft:activator_rail"}}] run schedule function main:halls/craftnamefix 4s replace
-execute as @a[scores={halls_craftTalk=1..},x=-1710,dx=-12,y=21,dy=8,z=996,dz=10.5,nbt={SelectedItem:{id:"minecraft:activator_rail"}}] at @e[tag=halls_craftVillager,type=villager,limit=1,sort=nearest] run function main:halls/craftkey
-execute as @a[scores={halls_craftTalk=1..},x=-1710,dx=-12,y=21,dy=8,z=996,dz=10.5,nbt={SelectedItem:{id:"minecraft:activator_rail"}}] run clear @s activator_rail
+execute as @a[tag=halls_craft,scores={halls_craftTalk=1..},nbt=!{SelectedItem:{id:"minecraft:activator_rail"}}] run tellraw @s {"text":"» Incorrect Item!","color":"red"}
+execute as @a[tag=halls_craft,scores={halls_craftTalk=1..},nbt={SelectedItem:{id:"minecraft:activator_rail"}}] run give @s tripwire_hook{display:{Name:'[{"text":"Craft Key","italic":false}]',Lore:['[{"text":"Take this to the center to","italic":false}]','[{"text":"activate!","italic":false}]']}}
+execute as @a[tag=halls_craft,scores={halls_craftTalk=1..},nbt={SelectedItem:{id:"minecraft:activator_rail"}}] run clear @s activator_rail
+
 scoreboard players set @a[scores={halls_craftTalk=1..}] halls_craftTalk 0
 #reset room
 scoreboard players enable @a[tag=hallsAlive,x=-1020,dx=-12,y=21,dy=8,z=996,dz=10.5] halls_craftReset
