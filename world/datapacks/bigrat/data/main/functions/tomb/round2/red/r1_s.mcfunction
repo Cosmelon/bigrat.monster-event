@@ -2,7 +2,7 @@
 # Author: Cosmelon
 # Type: start
 # @s = <executor> (can be omitted when not used)
-# run from 
+# run from main:tomb/round2/main
 
 # establish objectives
 scoreboard objectives add tbR2_RedR1 dummy

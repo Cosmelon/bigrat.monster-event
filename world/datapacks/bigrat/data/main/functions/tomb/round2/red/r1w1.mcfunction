@@ -1,7 +1,7 @@
 # Description: red team room1 wave1
 # Author: Cosmelon
 # Type: wave start
-# run from main:tomb/round2/start
+# run from main:tomb/round2/red/r1_s
 
 # set variables
 scoreboard players set +wave tbR2_RedR1 1

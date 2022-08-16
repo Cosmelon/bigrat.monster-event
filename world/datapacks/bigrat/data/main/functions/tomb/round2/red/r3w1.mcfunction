@@ -1,15 +1,15 @@
-# Description: red team room1 wave1
+# Description: red team room 3 wave 1
 # Author: Cosmelon
-# Type: wave start
-# run from main:tomb/round2/red/r2_s
+# Type: single
+# run from main:tomb/round2/red/r3_s
 
 # set variables
-scoreboard players set +wave tbR2_RedR2 0
+scoreboard players set +wave tbR2_RedR3 0
 
 # wave 1 start
 title @a[team=Red] times 30 20 10
 title @a[team=Red] title {"text":"Wave 1","color":"red","bold":true}
-tellraw @a[tag=admin] {"text":"[Debug] Round2 Room2 Wave1 has started for RED TEAM","color":"gray"}
+tellraw @a[tag=admin] {"text":"[Debug] Round2 Room3 Wave1 has started for RED TEAM","color":"gray"}
 
 # summon the zombies
 summon zombie ~2 ~ ~ {CustomName:'{"text":"Edit: thanks for the silver kind stranger!"}',ArmorItems:[{id:"minecraft:leather_boots",Count:1},{id:"minecraft:leather_leggings",Count:1},{id:"minecraft:leather_chestplate",Count:1},{id:"minecraft:leather_helmet",Count:1}],PersistenceRequired:1b,DeathLootTable:"main:entity_empty"}
@@ -28,7 +28,7 @@ summon zombie ~3 ~ ~3 {CustomName:'{"text":"happy cake day"}',ArmorItems:[{id:"m
 summon zombie ~3 ~ ~-3 {CustomName:'{"text":"doesnt matter, had sex"}',ArmorItems:[{id:"minecraft:leather_boots",Count:1},{id:"minecraft:leather_leggings",Count:1},{id:"minecraft:leather_chestplate",Count:1},{id:"minecraft:leather_helmet",Count:1}],PersistenceRequired:1b,DeathLootTable:"main:entity_empty"}
 summon zombie ~-3 ~ ~3 {CustomName:'{"text":"are you me?"}',ArmorItems:[{id:"minecraft:leather_boots",Count:1},{id:"minecraft:leather_leggings",Count:1},{id:"minecraft:leather_chestplate",Count:1},{id:"minecraft:leather_helmet",Count:1}],PersistenceRequired:1b,DeathLootTable:"main:entity_empty"}
 summon zombie ~-3 ~ ~-3 {CustomName:'{"text":"risky click"}',ArmorItems:[{id:"minecraft:leather_boots",Count:1},{id:"minecraft:leather_leggings",Count:1},{id:"minecraft:leather_chestplate",Count:1},{id:"minecraft:leather_helmet",Count:1}],PersistenceRequired:1b,DeathLootTable:"main:entity_empty"}
-tag @e[type=zombie,distance=..12] add tbR2_r2w1Red
+tag @e[type=zombie,distance=..12] add tbR2_r3w1Red
 
 # set variables
-scoreboard players set +wave tbR2_RedR2 1
+scoreboard players set +wave tbR2_RedR3 1

@@ -1,7 +1,7 @@
 # Description: starts room2 for red team
 # Author: Cosmelon
 # Type: start
-# run from 
+# run from main:tomb/round2/main
 
 # turn off stuff from room1
 scoreboard objectives remove tbR2_RedR1

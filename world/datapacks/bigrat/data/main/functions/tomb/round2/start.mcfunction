@@ -21,27 +21,7 @@ scoreboard objectives add tbR2_RedR2 dummy
 scoreboard players set +wave tbR2_RedR2 0
 scoreboard objectives add tbR2_RedR3 dummy
 scoreboard players set +wave tbR2_RedR3 0
-#blue
-scoreboard objectives add tbR2_BlueR1 dummy
-scoreboard players set +wave tbR2_BlueR1 0
-scoreboard objectives add tbR2_BlueR2 dummy
-scoreboard players set +wave tbR2_BlueR2 0
-scoreboard objectives add tbR2_BlueR3 dummy
-scoreboard players set +wave tbR2_BlueR3 0
-#green
-scoreboard objectives add tbR2_GreenR1 dummy
-scoreboard players set +wave tbR2_GreenR1 0
-scoreboard objectives add tbR2_GreenR2 dummy
-scoreboard players set +wave tbR2_GreenR2 0
-scoreboard objectives add tbR2_GreenR3 dummy
-scoreboard players set +wave tbR2_GreenR3 0
-#yellow
-scoreboard objectives add tbR2_YellowR1 dummy
-scoreboard players set +wave tbR2_YellowR1 0
-scoreboard objectives add tbR2_YellowR2 dummy
-scoreboard players set +wave tbR2_YellowR2 0
-scoreboard objectives add tbR2_YellowR3 dummy
-scoreboard players set +wave tbR2_YellowR3 0
+
 scoreboard objectives add tbR2_Deaths deathCount
 
 # generate doors
