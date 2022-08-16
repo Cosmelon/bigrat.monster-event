@@ -1,7 +1,6 @@
 # Description: This ends round 2 for red team
 # Author: Cosmelon
 # Type: as single as I am
-# @s = <executor> (can be omitted when not used)
 # run from 
 
 # this is mostly just a placeholer thing for now

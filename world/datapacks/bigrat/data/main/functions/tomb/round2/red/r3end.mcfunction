@@ -1,8 +1,11 @@
-tellraw @a ""
-tellraw @a "good job!"
-tellraw @a "yeah this is now at the end of the script"
+# Description: room3 keydrop for red team
+# Author: Cosmelon
+# type: single
+# run from main:tomb/round2/red/r3_t
+
 tellraw @a "keydrop was ignored for debugging"
-tellraw @a ""
+tellraw @a "round ending in 5s"
+schedule function main:tomb/round2/red/r3_finish 5s
 
 scoreboard players set +wave tbR2_RedR3 -1
 

@@ -1,3 +1,8 @@
+# Description: room2 keydrop for blue team
+# Author: Cosmelon
+# Type: single
+# run from main:tomb/round2/red/r2_t
+
 tellraw @a ""
 tellraw @a "good job!"
 tellraw @a ""
