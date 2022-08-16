@@ -24,7 +24,7 @@ execute positioned 5095.5 41 2.5 store result score +redR2 tbR2_PC if entity @a[
 
 # wave start
 execute if score +countDown tbR2 matches 0 positioned 5059.5 42 2.5 run function main:tomb/round2/red/r1_s
-execute if score +redR2 tbR2_PC = .red teamCheck if score +wave tbR2_RedR2 matches 0 run function main:tomb/red/r2_s
+execute if score +redR2 tbR2_PC = .red teamCheck if score +wave tbR2_RedR2 matches 0 run function main:tomb/round2/red/r2_s
 
 #execute positioned 5059.5 42 2.5 store result score +zombies tbR2_r1w1Red if entity @e[type=zombie,distance=..12]
 

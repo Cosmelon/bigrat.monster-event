@@ -12,7 +12,7 @@ execute if score +countDown tbR1 matches 40 run title @a subtitle {"text":">  2 
 execute if score +countDown tbR1 matches 40 as @a run playsound minecraft:block.note_block.chime master @s ^0 ^ ^ 1 1.259921 1
 execute if score +countDown tbR1 matches 20 run title @a subtitle {"text":"> 1 <","color":"green"}
 execute if score +countDown tbR1 matches 20 as @a run playsound minecraft:block.note_block.chime master @s ^0 ^ ^ 1 1.259921 1
-execute if score +countDown tbR1 matches 0 run title @a title ""
+execute if score +countDown tbR1 matches 0 run title @a subtitle ""
 execute if score +countDown tbR1 matches 0 run title @a title {"text":"Start!","color":"dark_red"}
 execute if score +countDown tbR1 matches 0 as @a run playsound minecraft:block.note_block.chime master @s ^0 ^ ^ 1 1.414214 1
 #setup spawners

@@ -4,7 +4,7 @@
 # run from main:tomb/round2/start
 
 # set variables
-scoreboard players set +wave tbR2_RedR2 1
+scoreboard players set +wave tbR2_RedR2 0
 
 # wave 1 start
 title @a[team=Red] times 30 20 10
@@ -29,3 +29,6 @@ summon zombie ~3 ~ ~-3 {CustomName:'{"text":"doesnt matter, had sex"}',ArmorItem
 summon zombie ~-3 ~ ~3 {CustomName:'{"text":"are you me?"}',ArmorItems:[{id:"minecraft:leather_boots",Count:1},{id:"minecraft:leather_leggings",Count:1},{id:"minecraft:leather_chestplate",Count:1},{id:"minecraft:leather_helmet",Count:1}],PersistenceRequired:1b,DeathLootTable:"main:entity_empty"}
 summon zombie ~-3 ~ ~-3 {CustomName:'{"text":"risky click"}',ArmorItems:[{id:"minecraft:leather_boots",Count:1},{id:"minecraft:leather_leggings",Count:1},{id:"minecraft:leather_chestplate",Count:1},{id:"minecraft:leather_helmet",Count:1}],PersistenceRequired:1b,DeathLootTable:"main:entity_empty"}
 tag @e[type=zombie,distance=..12] add tbR2_r2w1Red
+
+# set variables
+scoreboard players set +wave tbR2_RedR2 1

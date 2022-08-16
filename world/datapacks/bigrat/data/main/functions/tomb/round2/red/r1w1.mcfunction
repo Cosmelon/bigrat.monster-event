@@ -8,6 +8,7 @@ scoreboard players set +wave tbR2_RedR1 1
 
 # wave 1 start
 title @a[team=Red] times 30 20 10
+title @a[team=Red] subtitle ""
 title @a[team=Red] title {"text":"Wave 1","color":"red","bold":true}
 tellraw @a[tag=admin] {"text":"[Debug] Round2 Room1 Wave1 has started for RED TEAM","color":"gray"}
 
