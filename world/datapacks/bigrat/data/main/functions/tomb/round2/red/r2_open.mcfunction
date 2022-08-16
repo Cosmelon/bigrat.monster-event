@@ -22,6 +22,10 @@ title @a[team=Red] title ""
 title @a[team=Red] subtitle ""
 title @a[team=Red] actionbar ""
 
+# vars
+scoreboard objectives add tbR2_RedR2 dummy
+scoreboard players set +wave tbR2_RedR2 0
+
 # respawn dead
 gamemode spectator @a[scores={tbR2_Deaths=1..},team=Red]
 tp @a[scores={tbR2_Deaths=1..},team=Red] 5059.5 40 2.5

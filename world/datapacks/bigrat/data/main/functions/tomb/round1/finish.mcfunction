@@ -16,9 +16,9 @@ bossbar remove tomb:r1timer
 # get rid of zombies
 kill @e[type=zombie]
 setblock 5016 34 2 air destroy
-setblock 5016 34 45 air destroy
-setblock 5016 34 89 air destroy
-setblock 5016 34 131 air destroy
+setblock 5016 34 55 air destroy
+setblock 5016 34 109 air destroy
+setblock 5016 34 161 air destroy 
 
 # leaderboard
 tellraw @a "Top Scoring teams:"

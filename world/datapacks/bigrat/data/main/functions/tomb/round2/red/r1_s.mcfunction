@@ -1,7 +1,6 @@
-# Description: starts room1 for red team
+# Description: starts room1 for blue team
 # Author: Cosmelon
 # Type: start
-# @s = <executor> (can be omitted when not used)
 # run from main:tomb/round2/main
 
 # establish objectives

@@ -19,17 +19,17 @@ execute as @e[tag=redKey1] run data modify entity @s CustomName set value '[{"te
 execute as @e[tag=redKey1] run data modify entity @s CustomNameVisible set value 1b
 
 # holding key
-execute as @a[nbt={Inventory:[{id:"minecraft:tripwire_hook",tag:{display:{Name:'[{"text":"Key 1","italic":false,"color":"red"}]'}}}]}] run tag @s add keyHolder
-execute as @a[tag=keyHolder,nbt={SelectedItem:{id:"minecraft:tripwire_hook",tag:{display:{Name:'[{"text":"Key 1","italic":false,"color":"red"}]'}}}}] run tag @s add holdingKey
-execute as @a[tag=keyHolder,nbt={SelectedItem:{id:"minecraft:tripwire_hook",tag:{display:{Name:'[{"text":"Key 1","italic":false,"color":"red"}]'}}}}] run item replace entity @s weapon.offhand with carrot_on_a_stick{Unbreakable:1b}
-execute as @a[tag=keyHolder,nbt=!{SelectedItem:{id:"minecraft:tripwire_hook",tag:{display:{Name:'[{"text":"Key 1","italic":false,"color":"red"}]'}}}}] if entity @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:carrot_on_a_stick"}]}] run item replace entity @s weapon.offhand with air
-execute as @a[tag=keyHolder,nbt=!{SelectedItem:{id:"minecraft:tripwire_hook",tag:{display:{Name:'[{"text":"Key 1","italic":false,"color":"red"}]'}}}}] if entity @s[nbt=!{Inventory:[{Slot:-106b,id:"minecraft:air"}]}] run tag @s remove holdingKey
-execute as @a[nbt=!{Inventory:[{id:"minecraft:tripwire_hook",tag:{display:{Name:'[{"text":"Key 1","italic":false,"color":"red"}]'}}}]}] run tag @s remove keyHolder
+execute as @a[nbt={Inventory:[{id:"minecraft:tripwire_hook",tag:{display:{Name:'[{"text":"Key 1","italic":false,"color":"red"}]'}}}]}] run tag @s add keyHolder_redR1
+execute as @a[tag=keyHolder_redR1,nbt={SelectedItem:{id:"minecraft:tripwire_hook",tag:{display:{Name:'[{"text":"Key 1","italic":false,"color":"red"}]'}}}}] run tag @s add holdingKey_redR1
+execute as @a[tag=keyHolder_redR1,nbt={SelectedItem:{id:"minecraft:tripwire_hook",tag:{display:{Name:'[{"text":"Key 1","italic":false,"color":"red"}]'}}}}] run item replace entity @s weapon.offhand with carrot_on_a_stick{Unbreakable:1b}
+execute as @a[tag=keyHolder_redR1,nbt=!{SelectedItem:{id:"minecraft:tripwire_hook",tag:{display:{Name:'[{"text":"Key 1","italic":false,"color":"red"}]'}}}}] if entity @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:carrot_on_a_stick"}]}] run item replace entity @s weapon.offhand with air
+execute as @a[tag=keyHolder_redR1,nbt=!{SelectedItem:{id:"minecraft:tripwire_hook",tag:{display:{Name:'[{"text":"Key 1","italic":false,"color":"red"}]'}}}}] if entity @s[nbt=!{Inventory:[{Slot:-106b,id:"minecraft:air"}]}] run tag @s remove holdingKey_redR1
+execute as @a[nbt=!{Inventory:[{id:"minecraft:tripwire_hook",tag:{display:{Name:'[{"text":"Key 1","italic":false,"color":"red"}]'}}}]}] run tag @s remove keyHolder_redR1
 kill @e[type=item,nbt={Item:{id:"minecraft:carrot_on_a_stick"}}]
 
 # open the next room
-execute as @a[tag=holdingKey,x=5067,dx=4,z=-3,dz=13,y=36,dy=6] run title @s actionbar {"text":"Right click to open the next room!","color":"gold"}
-execute as @a[tag=holdingKey,scores={tbR2_click=1..},x=5067,dx=4,z=-3,dz=13,y=36,dy=6] run function main:tomb/round2/red/r2_open
+execute as @a[tag=holdingKey_redR1,x=5067,dx=4,z=-3,dz=13,y=36,dy=6] run title @s actionbar {"text":"Right click to open the next room!","color":"gold"}
+execute as @a[tag=holdingKey_redR1,scores={tbR2_click=1..},x=5067,dx=4,z=-3,dz=13,y=36,dy=6] run function main:tomb/round2/red/r2_open
 scoreboard players reset @a tbR2_click
 
 # spectator

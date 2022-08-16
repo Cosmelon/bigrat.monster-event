@@ -12,9 +12,9 @@ title @a title "kit selection"
 
 # teleports
 tp @a[team=Red] 5017 17 2.5 180 10
-tp @a[team=Blue] 5017 17 44.5 180 10
-tp @a[team=Green] 5017 17 89.5 180 10
-tp @a[team=Yellow] 5017 17 131.5 180 10
+tp @a[team=Blue] 5017 17 54.5 180 10
+tp @a[team=Green] 5017 17 109.5 180 10
+tp @a[team=Yellow] 5017 17 161.5 180 10
 
 # turn on armorstand names
 execute as @e[tag=tombNPC] run data modify entity @s CustomNameVisible set value 1b

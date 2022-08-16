@@ -17,15 +17,25 @@ scoreboard objectives add tbR2_PC dummy
 #red
 scoreboard objectives add tbR2_RedR1 dummy
 scoreboard players set +wave tbR2_RedR1 0
-scoreboard objectives add tbR2_RedR2 dummy
-scoreboard players set +wave tbR2_RedR2 0
-scoreboard objectives add tbR2_RedR3 dummy
-scoreboard players set +wave tbR2_RedR3 0
+scoreboard objectives add tbR2_BlueR1 dummy
+scoreboard players set +wave tbR2_BlueR1 0
+scoreboard objectives add tbR2_GreenR1 dummy
+scoreboard players set +wave tbR2_GreenR1 0
+scoreboard objectives add tbR2_YellowR1 dummy
+scoreboard players set +wave tbR2_YellowR1 0
 
 scoreboard objectives add tbR2_Deaths deathCount
 
 # generate doors
 place template main:tb/tbdoor 5069 37 -1
+place template main:tb/tbdoor 5069 37 52
+place template main:tb/tbdoor 5069 37 106
+place template main:tb/tbdoor 5069 37 158
+
+place template main:tb/tbdoor 5113 37 -1
+place template main:tb/tbdoor 5113 37 52
+place template main:tb/tbdoor 5113 37 106
+place template main:tb/tbdoor 5113 37 158
 
 # regenerate kits
 execute as @a[tag=gladiatorKit] run function main:tomb/kits/gladiator
