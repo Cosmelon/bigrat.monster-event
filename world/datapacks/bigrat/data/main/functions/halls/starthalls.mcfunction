@@ -11,12 +11,15 @@ gamemode adventure @a[tag=player]
 gamemode spectator @a[tag=!player]
 tag @a[tag=player] add hallsAlive
 execute as @e[tag=halls_spawnpoint] run data modify entity @s Invisible set value true
+gamerule keepInventory true
+gamerule doImmediateRespawn false
+gamerule reducedDebugInfo true
 
 # declare objectives
 scoreboard players set .halls currentGame 1
 scoreboard objectives add hallsCore dummy
 scoreboard players set ~gameActive hallsCore 1
-scoreboard players set ~countDown hallsCore 160
+scoreboard players set ~countDown hallsCore 1100
 scoreboard players set ~wRelease hallsCore 100
 scoreboard objectives add halls_death deathCount
 scoreboard objectives add halls_soap dummy
@@ -45,16 +48,14 @@ scoreboard players set ~left_red halls_keys 7
 scoreboard players set ~left_blue halls_keys 7
 scoreboard players set ~left_green halls_keys 7
 scoreboard players set ~left_yellow halls_keys 7
+scoreboard players set ~red_finish halls_keys 0
+scoreboard players set ~blue_finish halls_keys 0
+scoreboard players set ~green_finish halls_keys 0
+scoreboard players set ~yellow_finish halls_keys 0 
 scoreboard players set ~redGate halls_keys 0
 scoreboard players set ~blueGate halls_keys 0
 scoreboard players set ~greenGate halls_keys 0
 scoreboard players set ~yellowGate halls_keys 0
-
-
-# bossbars
-bossbar add halls:wrelease "time until warden release"
-bossbar set halls:wrelease style notched_12
-bossbar set halls:wrelease max 100
 
 # teleport players
 tp @a[tag=!player] -976.001 25 1044.001
@@ -133,7 +134,7 @@ fill -1665 26 1050 -1667 22 1050 tinted_glass
 fill -1673 26 1041 -1673 22 1038 tinted_glass
 
 # basic tellraw for start
-tellraw @a {"text":"\nBackrooms","bold":true}
-tellraw @a {"text":"\nSo basically the objective of the game is to run around the maze and complete challenges."}
-tellraw @a {"text":"\nPoints are awarded for finding then completing a challenge, then bringing the trophy back to the center."}
-tellraw @a {"text":"\nBut be careful... something seems off about this place..."}
+#tellraw @a {"text":"\nBackrooms","bold":true}
+#tellraw @a {"text":"\nSo basically the objective of the game is to run around the maze and complete challenges."}
+#tellraw @a {"text":"\nPoints are awarded for finding then completing a challenge, then bringing the trophy back to the center."}
+#tellraw @a {"text":"\nBut be careful... something seems off about this place..."}

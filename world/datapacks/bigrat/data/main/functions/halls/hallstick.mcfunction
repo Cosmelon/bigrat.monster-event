@@ -15,6 +15,18 @@ execute if score ~countDown hallsCore matches 20 as @a run playsound minecraft:b
 execute if score ~countDown hallsCore matches 0 run title @a title ""
 execute if score ~countDown hallsCore matches 0 run title @a subtitle {"text":"Go!","color":"red"}
 execute if score ~countDown hallsCore matches 0 as @a run playsound minecraft:block.note_block.chime ambient @s ~ ~100 ~ 10000 1.414214
+# bossbars
+execute if score ~countDown hallsCore matches 0 run bossbar add halls:wrelease "time until monster release"
+execute if score ~countDown hallsCore matches 0 run bossbar set halls:wrelease style notched_12
+execute if score ~countDown hallsCore matches 0 run bossbar set halls:wrelease max 100
+
+# infotext
+execute if score ~countDown hallsCore matches 1000 run function main:halls/startinfo/begin
+execute if score ~countDown hallsCore matches 900 run function main:halls/startinfo/pos1
+execute if score ~countDown hallsCore matches 800 run function main:halls/startinfo/pos2
+execute if score ~countDown hallsCore matches 700 run function main:halls/startinfo/pos3
+execute if score ~countDown hallsCore matches 600 run function main:halls/startinfo/pos4
+execute if score ~countDown hallsCore matches 500 run function main:halls/startinfo/pos5
 
 # remove box
 #red
@@ -119,6 +131,12 @@ execute at @e[tag=halls_exit,type=armor_stand] run tag @a[tag=player,tag=hallsAl
 execute as @a[tag=halls_exit] run function main:halls/escape
 execute store result score ~escaped hallsCore if entity @a[tag=halls_escaped]
 execute if score ~escaped hallsCore = .players teamCheck run function main:halls/finish
+
+# finish game
+execute if score ~left_red halls_keys matches 0 as @a[team=Red] run function main:halls/escape
+execute if score ~left_blue halls_keys matches 0 as @a[team=Blue] run function main:halls/escape
+execute if score ~left_green halls_keys matches 0 as @a[team=Green] run function main:halls/escape
+execute if score ~left_yellow halls_keys matches 0 as @a[team=Yellow] run function main:halls/escape
 
 # take key to center
 execute as @a[nbt={Inventory:[{id:"minecraft:tripwire_hook"}]}] run tag @s add halls_key
