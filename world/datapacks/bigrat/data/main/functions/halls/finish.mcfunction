@@ -5,7 +5,7 @@
 
 scoreboard players set ~gameActive hallsCore 0
 title @a times 0 60 20
-title @a title {"text":"Finish!","color":"red","bold":true}
+title @a title {"text":"Game Over!","color":"red","bold":true}
 function main:sfx/gameend
 schedule function main:returnlobby 3s replace
 

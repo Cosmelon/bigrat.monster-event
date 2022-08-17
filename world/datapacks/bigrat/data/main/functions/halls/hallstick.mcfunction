@@ -15,7 +15,7 @@ execute if score ~countDown hallsCore matches 20 as @a run playsound minecraft:b
 execute if score ~countDown hallsCore matches 0 run title @a title ""
 execute if score ~countDown hallsCore matches 0 run title @a subtitle {"text":"Go!","color":"red"}
 execute if score ~countDown hallsCore matches 0 as @a run playsound minecraft:block.note_block.chime ambient @s ~ ~100 ~ 10000 1.414214
-# bossbars
+# warden bossbar
 execute if score ~countDown hallsCore matches 0 run bossbar add halls:wrelease "time until monster release"
 execute if score ~countDown hallsCore matches 0 run bossbar set halls:wrelease style notched_12
 execute if score ~countDown hallsCore matches 0 run bossbar set halls:wrelease max 100
@@ -48,6 +48,47 @@ execute store result bossbar halls:wrelease value run scoreboard players get ~wR
 execute if score ~countDown hallsCore matches -10 run bossbar set halls:wrelease visible true
 execute if score ~countDown hallsCore matches ..-10 run scoreboard players remove ~wRelease hallsCore 1
 execute if score ~wRelease hallsCore matches 0 run function main:halls/wrelease
+
+# timer
+#timeLeft
+execute if score ~countDown hallsCore matches ..0 run scoreboard players remove ~timeLeft hallsCore 1
+execute store result bossbar halls:redtimer value run scoreboard players get ~timeLeft hallsCore
+execute store result bossbar halls:bluetimer value run scoreboard players get ~timeLeft hallsCore
+execute store result bossbar halls:greentimer value run scoreboard players get ~timeLeft hallsCore
+execute store result bossbar halls:yellowtimer value run scoreboard players get ~timeLeft hallsCore
+bossbar set halls:redtimer max 6000
+bossbar set halls:bluetimer max 6000
+bossbar set halls:greentimer max 6000
+bossbar set halls:yellowtimer max 6000
+bossbar set halls:redtimer players @a[team=Red]
+bossbar set halls:bluetimer players @a[team=Blue]
+bossbar set halls:greentimer players @a[team=Green]
+bossbar set halls:yellowtimer players @a[team=Yellow]
+execute if score ~Min hallsCore matches 1.. if score ~Sec hallsCore matches 10.. run bossbar set halls:redtimer name [{"text":"Time Left: ","color":"gold"},{"score":{"name":"~Min","objective":"hallsCore"}},{"text":":"},{"score":{"name":"~Sec","objective":"hallsCore"}},{"text":" || ","color":"white"},{"score":{"name":"~capt_red","objective":"halls_keys"},"color":"red"},{"text":"/7 ","color":"red"},{"score":{"name": "~capt_blue","objective":"halls_keys"},"color":"blue"},{"text":"/7 ","color":"blue"},{"score":{"name": "~capt_green","objective":"halls_keys"},"color":"green"},{"text":"/7 ","color":"green"},{"score":{"name": "~capt_yellow","objective":"halls_keys"},"color":"yellow"},{"text":"/7","color":"yellow"}]
+execute if score ~Min hallsCore matches 1.. if score ~Sec hallsCore matches ..9 run bossbar set halls:redtimer name [{"text":"Time Left: ","color":"gold"},{"score":{"name":"~Min","objective":"hallsCore"}},{"text":":0"},{"score":{"name":"~Sec","objective":"hallsCore"}},{"text":" || ","color":"white"},{"score":{"name":"~capt_red","objective":"halls_keys"},"color":"red"},{"text":"/7 ","color":"red"},{"score":{"name": "~capt_blue","objective":"halls_keys"},"color":"blue"},{"text":"/7 ","color":"blue"},{"score":{"name": "~capt_green","objective":"halls_keys"},"color":"green"},{"text":"/7 ","color":"green"},{"score":{"name": "~capt_yellow","objective":"halls_keys"},"color":"yellow"},{"text":"/7","color":"yellow"}]
+execute if score ~Min hallsCore matches 0 if score ~Sec hallsCore matches 10.. if score ~Milli hallsCore matches 10.. run bossbar set halls:redtimer name [{"text":"Time Left: ","color":"gold"},{"score":{"name":"~Sec","objective":"hallsCore"}},{"text":"."},{"score":{"name":"~Milli","objective":"hallsCore"}},{"text":" || ","color":"white"},{"score":{"name": "~capt_red","objective":"halls_keys"},"color":"red"},{"text":"/7 ","color":"red"},{"score":{"name": "~capt_blue","objective":"halls_keys"},"color":"blue"},{"text":"/7 ","color":"blue"},{"score":{"name": "~capt_green","objective":"halls_keys"},"color":"green"},{"text":"/7 ","color":"green"},{"score":{"name": "~capt_yellow","objective":"halls_keys"},"color":"yellow"},{"text":"/7","color":"yellow"}]
+execute if score ~Min hallsCore matches 0 if score ~Sec hallsCore matches 10.. if score ~Milli hallsCore matches ..9 run bossbar set halls:redtimer name [{"text":"Time Left: ","color":"gold"},{"score":{"name":"~Sec","objective":"hallsCore"}},{"text":".0"},{"score":{"name":"~Milli","objective":"hallsCore"}},{"text":" || ","color":"white"},{"score":{"name": "~capt_red","objective":"halls_keys"},"color":"red"},{"text":"/7 ","color":"red"},{"score":{"name": "~capt_blue","objective":"halls_keys"},"color":"blue"},{"text":"/7 ","color":"blue"},{"score":{"name": "~capt_green","objective":"halls_keys"},"color":"green"},{"text":"/7 ","color":"green"},{"score":{"name": "~capt_yellow","objective":"halls_keys"},"color":"yellow"},{"text":"/7","color":"yellow"}]
+execute if score ~Min hallsCore matches 0 if score ~Sec hallsCore matches ..9 if score ~Milli hallsCore matches 10.. run bossbar set halls:redtimer name [{"text":"Time Left: ","color":"gold"},{"score":{"name":"~Sec","objective":"hallsCore"}},{"text":"."},{"score":{"name":"~Milli","objective":"hallsCore"}},{"text":" || ","color":"white"},{"score":{"name": "~capt_red","objective":"halls_keys"},"color":"red"},{"text":"/7 ","color":"red"},{"score":{"name": "~capt_blue","objective":"halls_keys"},"color":"blue"},{"text":"/7 ","color":"blue"},{"score":{"name": "~capt_green","objective":"halls_keys"},"color":"green"},{"text":"/7 ","color":"green"},{"score":{"name": "~capt_yellow","objective":"halls_keys"},"color":"yellow"},{"text":"/7","color":"yellow"}]
+execute if score ~Min hallsCore matches 0 if score ~Sec hallsCore matches ..9 if score ~Milli hallsCore matches ..9 run bossbar set halls:redtimer name [{"text":"Time Left: ","color":"gold"},{"score":{"name":"~Sec","objective":"hallsCore"}},{"text":".0"},{"score":{"name":"~Milli","objective":"hallsCore"}},{"text":" || ","color":"white"},{"score":{"name": "~capt_red","objective":"halls_keys"},"color":"red"},{"text":"/7 ","color":"red"},{"score":{"name": "~capt_blue","objective":"halls_keys"},"color":"blue"},{"text":"/7 ","color":"blue"},{"score":{"name": "~capt_green","objective":"halls_keys"},"color":"green"},{"text":"/7 ","color":"green"},{"score":{"name": "~capt_yellow","objective":"halls_keys"},"color":"yellow"},{"text":"/7","color":"yellow"}]
+execute if score ~countDown hallsCore matches 0 run bossbar set halls:redtimer visible true
+#+tickInput --> #tickMin
+scoreboard players operation #rem hallsCore = ~timeLeft hallsCore
+scoreboard players operation #tickMin hallsCore = #rem hallsCore
+scoreboard players operation #tickMin hallsCore /= #minConst hallsConst
+scoreboard players operation #rem hallsCore %= #minConst hallsConst
+# get sec
+scoreboard players operation #tickSec hallsCore = #rem hallsCore
+scoreboard players operation #tickSec hallsCore /= #secConst hallsConst
+scoreboard players operation #rem hallsCore %= #secConst hallsConst
+# get milli
+scoreboard players operation #tickMilli hallsCore = #rem hallsCore
+scoreboard players operation #tickMilli hallsCore *= #milliConst hallsConst
+scoreboard players operation #rem hallsCore %= #milliConst hallsConst
+# set math scores to named
+scoreboard players operation ~Min hallsCore = #tickMin hallsCore
+scoreboard players operation ~Sec hallsCore = #tickSec hallsCore
+scoreboard players operation ~Milli hallsCore = #tickMilli hallsCore
+scoreboard players operation ~remainder hallsCore = #rem hallsCore
 
 # sneak prevention
 execute as @a[tag=player,tag=hallsAlive,predicate=main:sneak_state,tag=!hallsShitting] run scoreboard players add @s halls_sneak 1
@@ -131,12 +172,13 @@ execute at @e[tag=halls_exit,type=armor_stand] run tag @a[tag=player,tag=hallsAl
 execute as @a[tag=halls_exit] run function main:halls/escape
 execute store result score ~escaped hallsCore if entity @a[tag=halls_escaped]
 execute if score ~escaped hallsCore = .players teamCheck run function main:halls/finish
+execute if score ~timeLeft hallsCore matches 0 run function main:halls/finish
 
 # finish game
-execute if score ~left_red halls_keys matches 0 as @a[team=Red] run function main:halls/escape
-execute if score ~left_blue halls_keys matches 0 as @a[team=Blue] run function main:halls/escape
-execute if score ~left_green halls_keys matches 0 as @a[team=Green] run function main:halls/escape
-execute if score ~left_yellow halls_keys matches 0 as @a[team=Yellow] run function main:halls/escape
+execute if score ~capt_red halls_keys matches 7 as @a[team=Red] run function main:halls/escape
+execute if score ~capt_blue halls_keys matches 7 as @a[team=Blue] run function main:halls/escape
+execute if score ~capt_green halls_keys matches 7 as @a[team=Green] run function main:halls/escape
+execute if score ~capt_yellow halls_keys matches 7 as @a[team=Yellow] run function main:halls/escape
 
 # take key to center
 execute as @a[nbt={Inventory:[{id:"minecraft:tripwire_hook"}]}] run tag @s add halls_key

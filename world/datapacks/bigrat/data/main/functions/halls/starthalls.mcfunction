@@ -44,10 +44,10 @@ scoreboard objectives add halls_craftWood minecraft.mined:minecraft.oak_log
 scoreboard objectives add halls_craftReset trigger
 scoreboard objectives remove halls_keys
 scoreboard objectives add halls_keys dummy
-scoreboard players set ~left_red halls_keys 7
-scoreboard players set ~left_blue halls_keys 7
-scoreboard players set ~left_green halls_keys 7
-scoreboard players set ~left_yellow halls_keys 7
+scoreboard players set ~capt_red halls_keys 0
+scoreboard players set ~capt_blue halls_keys 0
+scoreboard players set ~capt_green halls_keys 0
+scoreboard players set ~capt_yellow halls_keys 0
 scoreboard players set ~red_finish halls_keys 0
 scoreboard players set ~blue_finish halls_keys 0
 scoreboard players set ~green_finish halls_keys 0
@@ -56,6 +56,20 @@ scoreboard players set ~redGate halls_keys 0
 scoreboard players set ~blueGate halls_keys 0
 scoreboard players set ~greenGate halls_keys 0
 scoreboard players set ~yellowGate halls_keys 0
+#timer shit
+scoreboard players set ~timeLeft hallsCore 6000
+scoreboard objectives add hallsConst dummy
+scoreboard players set #milliConst hallsConst 50
+scoreboard players set #secConst hallsConst 20
+scoreboard players set #minConst hallsConst 1200
+bossbar add halls:redtimer ""
+bossbar add halls:bluetimer ""
+bossbar add halls:greentimer ""
+bossbar add halls:yellowtimer ""
+bossbar set halls:redtimer visible false
+bossbar set halls:bluetimer visible false
+bossbar set halls:greentimer visible false
+bossbar set halls:yellowtimer visible false
 
 # teleport players
 tp @a[tag=!player] -976.001 25 1044.001

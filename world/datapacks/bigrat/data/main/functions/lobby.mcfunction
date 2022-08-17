@@ -151,6 +151,10 @@ scoreboard objectives remove tombR3
 # reset stuff for backrooms
 execute as @e[tag=halls_spawnpoint] run data modify entity @s Invisible set value true
 bossbar remove halls:wrelease
+bossbar remove halls:redtimer
+bossbar remove halls:bluetimer
+bossbar remove halls:greentimer
+bossbar remove halls:yellowtimer
 scoreboard objectives remove hallsCore
 scoreboard objectives remove halls_death
 scoreboard objectives remove halls_keys
