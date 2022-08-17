@@ -42,12 +42,12 @@ execute if score +rKActive tbCore matches 1 at @e[tag=gladiatorNPC] as @a[distan
 #kitConfirm
 execute if score +rKActive tbCore matches 1 as @a[x=5015,dx=4,y=16,dy=5,z=-2.5,tag=hasKit] run function main:tomb/kits/confirm
 execute if score +rKActive tbCore matches 1 as @a[x=5015,dx=4,y=16,dy=5,z=7.5,tag=hasKit] run function main:tomb/kits/confirm
-execute if score +rKActive tbCore matches 1 as @a[x=5015,dx=4,y=16,dy=5,z=38.5,tag=hasKit] run function main:tomb/kits/confirm
 execute if score +rKActive tbCore matches 1 as @a[x=5015,dx=4,y=16,dy=5,z=49.5,tag=hasKit] run function main:tomb/kits/confirm
-execute if score +rKActive tbCore matches 1 as @a[x=5015,dx=4,y=16,dy=5,z=83.5,tag=hasKit] run function main:tomb/kits/confirm
-execute if score +rKActive tbCore matches 1 as @a[x=5015,dx=4,y=16,dy=5,z=94.5,tag=hasKit] run function main:tomb/kits/confirm
-execute if score +rKActive tbCore matches 1 as @a[x=5015,dx=4,y=16,dy=5,z=125.5,tag=hasKit] run function main:tomb/kits/confirm
-execute if score +rKActive tbCore matches 1 as @a[x=5015,dx=4,y=16,dy=5,z=136.5,tag=hasKit] run function main:tomb/kits/confirm
+execute if score +rKActive tbCore matches 1 as @a[x=5015,dx=4,y=16,dy=5,z=59.5,tag=hasKit] run function main:tomb/kits/confirm
+execute if score +rKActive tbCore matches 1 as @a[x=5015,dx=4,y=16,dy=5,z=104.5,tag=hasKit] run function main:tomb/kits/confirm
+execute if score +rKActive tbCore matches 1 as @a[x=5015,dx=4,y=16,dy=5,z=114.5,tag=hasKit] run function main:tomb/kits/confirm
+execute if score +rKActive tbCore matches 1 as @a[x=5015,dx=4,y=16,dy=5,z=156.5,tag=hasKit] run function main:tomb/kits/confirm
+execute if score +rKActive tbCore matches 1 as @a[x=5015,dx=4,y=16,dy=5,z=166.5,tag=hasKit] run function main:tomb/kits/confirm
 
 #execute at @e[limit=1,nbt={CustomNameVisible:1b},sort=nearest,type=minecraft:armor_stand] run data modify entity @e[nbt={CustomNameVisible:1b},limit=1,sort=nearest] CustomNameVisible set value 0b
 execute store result score +kitConfirm tbCore if entity @a[tag=kitConfirm]
