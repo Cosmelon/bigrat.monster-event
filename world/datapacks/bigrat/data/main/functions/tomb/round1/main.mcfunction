@@ -66,29 +66,11 @@ execute as @a[scores={tbR1_Deaths=3..100},tag=player] run scoreboard players rem
 # spectator pen
 # COSMELON - I HAVE NO IDEA WHAT IS FUCKING WITH THIS SHELVE IT FOR LATER
 execute positioned 5016.5 42 2.5 run tp @a[gamemode=spectator,team=!Admin,distance=18..20] 5016.5 36 2.5
-execute positioned 5016.5 42 45.5 run tp @a[gamemode=spectator,team=!Admin,distance=18..20] 5016.5 36 45.5
-execute positioned 5016.5 42 89.5 run tp @a[gamemode=spectator,team=!Admin,distance=18..20] 5016.5 36 89.5
-execute positioned 5016.5 42 131.5 run tp @a[gamemode=spectator,team=!Admin,distance=18..20] 5016.5 36 131.5
+execute positioned 5016.5 42 55.5 run tp @a[gamemode=spectator,team=!Admin,distance=18..20] 5016.5 36 55.5
+execute positioned 5016.5 42 109.5 run tp @a[gamemode=spectator,team=!Admin,distance=18..20] 5016.5 36 109.5
+execute positioned 5016.5 42 161.5 run tp @a[gamemode=spectator,team=!Admin,distance=18..20] 5016.5 36 161.5
 execute as @a[gamemode=spectator,scores={yCos=..32},team=!Admin] at @s run tp @s ~ ~5 ~
 execute as @a[gamemode=spectator,scores={yCos=49..},team=!Admin] at @s run tp @s ~ ~-5 ~
-
-# kill count
-execute as @a if score @s tbR1_aKill matches 1.. run scoreboard players add @s tbR1_iKills 1
-execute as @a[team=Red] if score @s tbR1_aKill matches 1.. run scoreboard players add +red tbR1_tKills 1
-execute as @a[team=Red] if score @s tbR1_aKill matches 1.. run scoreboard players add @s tbR1_tKills 1
-execute as @a[team=Blue] if score @s tbR1_aKill matches 1.. run scoreboard players add +blue tbR1_tKills 1
-execute as @a[team=Blue] if score @s tbR1_aKill matches 1.. run scoreboard players add @s tbR1_tKills 1
-execute as @a[team=Green] if score @s tbR1_aKill matches 1.. run scoreboard players add +green tbR1_tKills 1
-execute as @a[team=Green] if score @s tbR1_aKill matches 1.. run scoreboard players add @s tbR1_tKills 1
-execute as @a[team=Yellow] if score @s tbR1_aKill matches 1.. run scoreboard players add +yellow tbR1_tKills 1
-execute as @a[team=Yellow] if score @s tbR1_aKill matches 1.. run scoreboard players add @s tbR1_tKills 1
-execute as @a if score @s tbR1_aKill matches 1.. run scoreboard players reset @s tbR1_aKill
-
-# determine kill placement
-execute positioned 4983.5 4 -8 as @e[tag=tb_kKeeper] run function main:tomb/round1/teamplace_k
-
-# determine kill placement in team
-execute as @a[tag=player] run function main:tomb/round1/teamindiv_k
 
 # roundend
 execute if score +timeLeft tbR1 matches 0 run function main:tomb/round1/finish

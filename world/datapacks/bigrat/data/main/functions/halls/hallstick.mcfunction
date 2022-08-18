@@ -19,6 +19,21 @@ execute if score ~countDown hallsCore matches 0 as @a run playsound minecraft:bl
 execute if score ~countDown hallsCore matches 0 run bossbar add halls:wrelease "time until monster release"
 execute if score ~countDown hallsCore matches 0 run bossbar set halls:wrelease style notched_12
 execute if score ~countDown hallsCore matches 0 run bossbar set halls:wrelease max 100
+# warden release
+bossbar set halls:wrelease players @a
+execute store result bossbar halls:wrelease value run scoreboard players get ~wRelease hallsCore 
+execute if score ~countDown hallsCore matches -10 run bossbar set halls:wrelease visible true
+execute if score ~countDown hallsCore matches ..-10 run scoreboard players remove ~wRelease hallsCore 1
+execute if score ~wRelease hallsCore matches 0 run function main:halls/wrelease
+# respawn warden
+execute positioned -976.001 22 1044.001 store result score ~red_warden hallsCore if entity @e[type=warden,distance=..100]
+execute positioned -1206.001 22 1044.001 store result score ~blue_warden hallsCore if entity @e[type=warden,distance=..100]
+execute positioned -1436.001 22 1044.001 store result score ~green_warden hallsCore if entity @e[type=warden,distance=..100]
+execute positioned -1666.001 22 1044.001 store result score ~yellow_warden hallsCore if entity @e[type=warden,distance=..100]
+execute if score ~wRelease hallsCore matches ..-10 if score ~red_warden hallsCore matches 0 run summon warden -976.001 22 1044.001
+execute if score ~wRelease hallsCore matches ..-10 if score ~blue_warden hallsCore matches 0 run summon warden -1206.001 22 1044.001
+execute if score ~wRelease hallsCore matches ..-10 if score ~green_warden hallsCore matches 0 run summon warden -1436.001 22 1044.001
+execute if score ~wRelease hallsCore matches ..-10 if score ~yellow_warden hallsCore matches 0 run summon warden -1666.001 22 1044.001
 
 # infotext
 execute if score ~countDown hallsCore matches 1000 run function main:halls/startinfo/begin
@@ -41,13 +56,6 @@ execute if score ~countDown hallsCore matches -1 run fill -1443 26 1037 -1430 22
 #yellow
 execute if score ~countDown hallsCore matches 1 run fill -1673 26 1037 -1660 22 1050 air replace barrier
 execute if score ~countDown hallsCore matches -1 run fill -1673 26 1037 -1660 22 1050 air replace tinted_glass
-
-# warden release
-bossbar set halls:wrelease players @a
-execute store result bossbar halls:wrelease value run scoreboard players get ~wRelease hallsCore 
-execute if score ~countDown hallsCore matches -10 run bossbar set halls:wrelease visible true
-execute if score ~countDown hallsCore matches ..-10 run scoreboard players remove ~wRelease hallsCore 1
-execute if score ~wRelease hallsCore matches 0 run function main:halls/wrelease
 
 # timer
 #timeLeft

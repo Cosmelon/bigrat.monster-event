@@ -45,4 +45,4 @@ scoreboard objectives add tbR2 dummy
 scoreboard objectives add tbR3 dummy
 
 # teleport players to pre-game area
-tp @a 5006.48 4.00 -63.59 1488.84 2.63
+tp @a 5579.5 120 310.5 180 0

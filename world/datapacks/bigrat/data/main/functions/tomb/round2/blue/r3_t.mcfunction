@@ -28,7 +28,7 @@ execute as @a[nbt=!{Inventory:[{id:"minecraft:tripwire_hook",tag:{display:{Name:
 kill @e[type=item,nbt={Item:{id:"minecraft:carrot_on_a_stick"}}]
 
 # jump pad
-execute as @a[team=Blue] at @s if block ~ ~-1 ~ minecraft:slime_block run effect give @s minecraft:levitation 1 10 true
+execute as @a[team=Blue] at @s if block ~ ~-1 ~ minecraft:slime_block run effect give @s minecraft:levitation 1 6 true
 
 # open the next room
 #execute as @a[tag=holdingKey_blueR3,x=5110,dx=20,y=36,dy=6,z=50,dz=13] run title @s actionbar {"text":"Right click to open the next room!","color":"gold"}

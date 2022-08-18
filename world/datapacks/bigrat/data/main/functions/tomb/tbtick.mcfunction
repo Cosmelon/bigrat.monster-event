@@ -17,9 +17,11 @@ scoreboard players remove +countDown tbCore 1
 #execute if score +countDown tombCore matches 0 as @a run playsound minecraft:block.note_block.chime master @s ^0 ^ ^ 1 1.414214 1
 
 # infotext (built in extra time for future infotext)
-#execute if score +countDown tombCore matches 1400 run function main:tomb/startinfo/text1
-#execute if score +countDown tombCore matches 1200 run function main:tomb/startinfo/text2
-#execute if score +countDown tombCore matches 1000 run function main:tomb/startinfo/text3
+execute if score +countDown tombCore matches 1400 run function main:tomb/startinfo/text1
+execute if score +countDown tombCore matches 1200 run function main:tomb/startinfo/text2
+execute if score +countDown tombCore matches 1000 run function main:tomb/startinfo/text3
+execute if score +countDown tombCore matches 800 run function main:tomb/startinfo/text4
+execute if score +countDown tombCore matches 600 run function main:tomb/startinfo/text5
 
 
 #make tick files active
@@ -55,3 +57,22 @@ execute if score +rKActive tbCore matches 1 if score +kitConfirm tbCore = .playe
 
 # spawnpoints
 execute as @a[tag=player] at @s run spawnpoint @s ~ ~2 ~
+
+
+# kill count
+execute as @a if score @s tb_aKill matches 1.. run scoreboard players add @s tb_iKills 1
+execute as @a[team=Red,scores={tb_aKill=1..}] run scoreboard players add +red tb_iKills 1
+execute as @a[team=Red,scores={tb_aKill=1..}] run scoreboard players add @s tb_iKills 1
+execute as @a[team=Blue,scores={tb_aKill=1..}] run scoreboard players add +blue tb_iKills 1
+execute as @a[team=Blue,scores={tb_aKill=1..}] run scoreboard players add @s tb_iKills 1
+execute as @a[team=Green,scores={tb_aKill=1..}] run scoreboard players add +green tb_iKills 1
+execute as @a[team=Green,scores={tb_aKill=1..}] run scoreboard players add @s tb_iKills 1
+execute as @a[team=Yellow,scores={tb_aKill=1..}] run scoreboard players add +yellow tb_iKills 1
+execute as @a[team=Yellow,scores={tb_aKill=1..}] run scoreboard players add @s tb_iKills 1
+execute as @a if score @s tbR1_aKill matches 1.. run scoreboard players reset @s tb_iKills
+
+# determine kill placement
+execute positioned 4983.5 4 -8 as @e[tag=tb_kKeeper] run function main:tomb/teamplace_k
+
+# determine kill placement in team
+execute as @a[tag=player] run function main:tomb/teamindiv_k
