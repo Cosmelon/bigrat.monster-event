@@ -1,0 +1,10 @@
+tellraw @a [{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"translate":"space.-1"},{"text":"\uE004"}]
+tellraw @a ""
+tellraw @a [{"translate":"space.5"},{"text":"11th - "},{"selector":"@a[tag=br_indiv11]"},{"text":" - ","color":"white"},{"score":{"name":"@a[tag=br_indiv11,limit=1]","objective":"indivScore"},"color":"green"}]
+tellraw @a [{"translate":"space.5"},{"text":"12th - "},{"selector":"@a[tag=br_indiv12]"},{"text":" - ","color":"white"},{"score":{"name":"@a[tag=br_indiv12,limit=1]","objective":"indivScore"},"color":"green"}]
+tellraw @a [{"translate":"space.5"},{"text":"13th - "},{"selector":"@a[tag=br_indiv13]"},{"text":" - ","color":"white"},{"score":{"name":"@a[tag=br_indiv13,limit=1]","objective":"indivScore"},"color":"green"}]
+tellraw @a [{"translate":"space.5"},{"text":"14th - "},{"selector":"@a[tag=br_indiv14]"},{"text":" - ","color":"white"},{"score":{"name":"@a[tag=br_indiv14,limit=1]","objective":"indivScore"},"color":"green"}]
+tellraw @a [{"translate":"space.5"},{"text":"15th - "},{"selector":"@a[tag=br_indiv15]"},{"text":" - ","color":"white"},{"score":{"name":"@a[tag=br_indiv15,limit=1]","objective":"indivScore"},"color":"green"}]
+tellraw @a [{"translate":"space.5"},{"text":"16th - "},{"selector":"@a[tag=br_indiv16]"},{"text":" - ","color":"white"},{"score":{"name":"@a[tag=br_indiv16,limit=1]","objective":"indivScore"},"color":"green"}]
+tellraw @a [{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"translate":"space.-1"},{"text":"\uE004"}]
+schedule function main:lobby/end/indiv/text2 5s

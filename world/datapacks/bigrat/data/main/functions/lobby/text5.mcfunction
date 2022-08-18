@@ -9,7 +9,7 @@ tellraw @a ""
 tellraw @a [{"translate":"space.3"},{"color":"green","text":"For future updates, check out our Twitter: "},{"text":"@CosmelonSoftware","color":"yellow","clickEvent":{"action":"open_url","value":"https://www.twitter.com/SoftwareByCos"}}]
 tellraw @a ""
 tellraw @a ""
-tellraw @a "Enjoy the event!"
+tellraw @a [{"translate":"space.3"},{"text":"Enjoy the event!","color":"gray"}]
 tellraw @a ""
 tellraw @a ""
 tellraw @a [{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"translate":"space.-1"},{"text":"\uE004"}]
