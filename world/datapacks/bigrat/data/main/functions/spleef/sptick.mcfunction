@@ -33,13 +33,15 @@ execute if score $countDown spleef matches 480 run function main:spleef/startinf
 execute if score $countDown spleef matches 300 run function main:spleef/startinfo/text4
 # countDown text
 execute if score $countDown spleef matches 60 run title @a times 0 25 10
-execute if score $countDown spleef matches 60 run title @a title {"text":">   3   <","color":"red"}
+execute if score $countDown spleef matches 1..60 run title @a title {"text":"Starting in:","color":"gold"}
+execute if score $countDown spleef matches 60 run title @a subtitle {"text":">   3   <","color":"red"}
 execute if score $countDown spleef matches 60 run playsound minecraft:block.note_block.chime master @a ^0 ^ ^ 1 1.259921 1
-execute if score $countDown spleef matches 40 run title @a title {"text":">  2  <","color":"yellow"}
+execute if score $countDown spleef matches 40 run title @a subtitle {"text":">  2  <","color":"yellow"}
 execute if score $countDown spleef matches 40 run playsound minecraft:block.note_block.chime master @a ^0 ^ ^ 1 1.259921 1
-execute if score $countDown spleef matches 20 run title @a title {"text":"> 1 <","color":"green"}
+execute if score $countDown spleef matches 20 run title @a subtitle {"text":"> 1 <","color":"green"}
 execute if score $countDown spleef matches 20 run playsound minecraft:block.note_block.chime master @a ^0 ^ ^ 1 1.259921 1
 execute if score $countDown spleef matches 0 run title @a title {"text":"Spread out!","color":"red"}
+execute if score $countDown spleef matches 0 run title @a subtitle ""
 execute if score $countDown spleef matches 0 run playsound minecraft:block.note_block.chime master @a ^0 ^ ^ 1 1.414214 1
 execute if score $countDown spleef matches 0 run fill -491 60 -467 -503 65 -455 minecraft:air
 execute if score $countDown spleef matches -40 run function main:cleartitle

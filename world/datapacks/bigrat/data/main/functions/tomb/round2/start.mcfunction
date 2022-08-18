@@ -60,3 +60,6 @@ tp @a[tag=yellow-1] 5059.5 36 158.5 0 10
 tp @a[tag=yellow-2] 5059.5 36 164.5 10 10
 tp @a[tag=yellow-3] 5062.5 36 161.5 90 10
 tp @a[tag=yellow-4] 5056.5 36 161.5 -90 10
+
+# title
+title @a title {"text":"Round 2","bold":true,"color":"dark_red"}

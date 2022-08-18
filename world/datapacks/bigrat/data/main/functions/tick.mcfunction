@@ -102,7 +102,7 @@ function main:scores/teamscore
 function main:scores/teamnpcs
 
 # indivScore
-function main:scores/indivmath
+execute as @a[tag=player] run function main:scores/indivmath
 
 # funny fall thing
 execute if score !bones currentGame matches 1 as @a if score @s fall matches 900.. run function main:fallen

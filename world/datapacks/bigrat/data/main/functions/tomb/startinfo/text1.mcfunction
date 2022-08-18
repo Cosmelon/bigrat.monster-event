@@ -12,7 +12,7 @@ tellraw @a ""
 tellraw @a {"text":"Tomb","bold":true,"color":"gold"}
 tellraw @a ""
 tellraw @a ""
-tellraw @a {"text":"This is a PVE based suvival game comprised of 3 different rounds","color":"gray"}
+tellraw @a {"text":"This is a PVE based suvival game comprised of 2 different rounds","color":"gray"}
 tellraw @a ""
 tellraw @a ""
 tellraw @a ""
