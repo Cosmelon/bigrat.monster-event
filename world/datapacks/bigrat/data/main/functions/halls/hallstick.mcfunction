@@ -61,17 +61,8 @@ execute if score ~countDown hallsCore matches -1 run fill -1673 26 1037 -1660 22
 #timeLeft
 execute if score ~countDown hallsCore matches ..0 run scoreboard players remove ~timeLeft hallsCore 1
 execute store result bossbar halls:redtimer value run scoreboard players get ~timeLeft hallsCore
-execute store result bossbar halls:bluetimer value run scoreboard players get ~timeLeft hallsCore
-execute store result bossbar halls:greentimer value run scoreboard players get ~timeLeft hallsCore
-execute store result bossbar halls:yellowtimer value run scoreboard players get ~timeLeft hallsCore
 bossbar set halls:redtimer max 6000
-bossbar set halls:bluetimer max 6000
-bossbar set halls:greentimer max 6000
-bossbar set halls:yellowtimer max 6000
-bossbar set halls:redtimer players @a[team=Red]
-bossbar set halls:bluetimer players @a[team=Blue]
-bossbar set halls:greentimer players @a[team=Green]
-bossbar set halls:yellowtimer players @a[team=Yellow]
+bossbar set halls:redtimer players @a
 execute if score ~Min hallsCore matches 1.. if score ~Sec hallsCore matches 10.. run bossbar set halls:redtimer name [{"text":"Time Left: ","color":"gold"},{"score":{"name":"~Min","objective":"hallsCore"}},{"text":":"},{"score":{"name":"~Sec","objective":"hallsCore"}},{"text":" || ","color":"white"},{"score":{"name":"~capt_red","objective":"halls_keys"},"color":"red"},{"text":"/7 ","color":"red"},{"score":{"name": "~capt_blue","objective":"halls_keys"},"color":"blue"},{"text":"/7 ","color":"blue"},{"score":{"name": "~capt_green","objective":"halls_keys"},"color":"green"},{"text":"/7 ","color":"green"},{"score":{"name": "~capt_yellow","objective":"halls_keys"},"color":"yellow"},{"text":"/7","color":"yellow"}]
 execute if score ~Min hallsCore matches 1.. if score ~Sec hallsCore matches ..9 run bossbar set halls:redtimer name [{"text":"Time Left: ","color":"gold"},{"score":{"name":"~Min","objective":"hallsCore"}},{"text":":0"},{"score":{"name":"~Sec","objective":"hallsCore"}},{"text":" || ","color":"white"},{"score":{"name":"~capt_red","objective":"halls_keys"},"color":"red"},{"text":"/7 ","color":"red"},{"score":{"name": "~capt_blue","objective":"halls_keys"},"color":"blue"},{"text":"/7 ","color":"blue"},{"score":{"name": "~capt_green","objective":"halls_keys"},"color":"green"},{"text":"/7 ","color":"green"},{"score":{"name": "~capt_yellow","objective":"halls_keys"},"color":"yellow"},{"text":"/7","color":"yellow"}]
 execute if score ~Min hallsCore matches 0 if score ~Sec hallsCore matches 10.. if score ~Milli hallsCore matches 10.. run bossbar set halls:redtimer name [{"text":"Time Left: ","color":"gold"},{"score":{"name":"~Sec","objective":"hallsCore"}},{"text":"."},{"score":{"name":"~Milli","objective":"hallsCore"}},{"text":" || ","color":"white"},{"score":{"name": "~capt_red","objective":"halls_keys"},"color":"red"},{"text":"/7 ","color":"red"},{"score":{"name": "~capt_blue","objective":"halls_keys"},"color":"blue"},{"text":"/7 ","color":"blue"},{"score":{"name": "~capt_green","objective":"halls_keys"},"color":"green"},{"text":"/7 ","color":"green"},{"score":{"name": "~capt_yellow","objective":"halls_keys"},"color":"yellow"},{"text":"/7","color":"yellow"}]
@@ -100,7 +91,7 @@ scoreboard players operation ~remainder hallsCore = #rem hallsCore
 
 # sneak prevention
 execute as @a[tag=player,tag=hallsAlive,predicate=main:sneak_state,tag=!hallsShitting] run scoreboard players add @s halls_sneak 1
-tellraw @a[tag=player,scores={halls_sneak=100..}] {"text":"\n-5 points (sneaking like a lil bitch)\n","color":"dark_red"}
+tellraw @a[tag=player,scores={halls_sneak=100..}] {"text":"» -5 points (sneaking like a lil bitch)","color":"dark_red"}
 scoreboard players remove @a[tag=player,scores={halls_sneak=100..},tag=hallsShitting] indivScore 5
 scoreboard players reset @a[tag=player,scores={halls_sneak=100..}] halls_sneak
 

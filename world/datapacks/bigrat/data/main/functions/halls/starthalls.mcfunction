@@ -63,13 +63,7 @@ scoreboard players set #milliConst hallsConst 50
 scoreboard players set #secConst hallsConst 20
 scoreboard players set #minConst hallsConst 1200
 bossbar add halls:redtimer ""
-bossbar add halls:bluetimer ""
-bossbar add halls:greentimer ""
-bossbar add halls:yellowtimer ""
 bossbar set halls:redtimer visible false
-bossbar set halls:bluetimer visible false
-bossbar set halls:greentimer visible false
-bossbar set halls:yellowtimer visible false
 
 # teleport players
 tp @a[tag=!player] -976.001 25 1044.001
