@@ -44,18 +44,22 @@ execute as @a[tag=medicKit] run function main:tomb/kits/medic
 execute as @a[tag=tankKit] run function main:tomb/kits/tank
 
 # teleport players to round2
+tp @a[team=Red] 5059.5 36 2.5
 tp @a[tag=red-1] 5059.5 36 -0.5 0 10
 tp @a[tag=red-2] 5059.5 36 5.5 180 10
 tp @a[tag=red-3] 5062.5 36 2.5 90 10
 tp @a[tag=red-4] 5056.5 36 2.5 -90 10
+tp @a[team=Blue] 5059.5 36 55.5
 tp @a[tag=blue-1] 5059.5 36 52.5 0 10
 tp @a[tag=blue-2] 5059.5 36 58.5 180 10
 tp @a[tag=blue-3] 5062.5 36 55.5 90 10
 tp @a[tag=blue-4] 5056.5 36 55.5 -90 10
+tp @a[team=Green] 5059.5 36 109.5
 tp @a[tag=green-1] 5059.5 36 106.5 0 10
 tp @a[tag=green-2] 5059.5 36 112.5 180 10
 tp @a[tag=green-3] 5062.5 36 109.5 90 10
 tp @a[tag=green-4] 5056.5 36 109.5 -90 10
+tp @a[team=Yellow] 5059.5 36 161.5 
 tp @a[tag=yellow-1] 5059.5 36 158.5 0 10
 tp @a[tag=yellow-2] 5059.5 36 164.5 10 10
 tp @a[tag=yellow-3] 5062.5 36 161.5 90 10

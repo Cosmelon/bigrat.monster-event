@@ -6,5 +6,6 @@ tellraw @a [{"translate":"space.3"},{"text":"And now for the top 4...","color":"
 tellraw @a ""
 tellraw @a ""
 tellraw @a ""
+tellraw @a ""
 tellraw @a [{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"translate":"space.-1"},{"text":"\uE004"}]
 schedule function main:lobby/end/indiv/text4 5s

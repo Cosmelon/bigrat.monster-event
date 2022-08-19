@@ -66,6 +66,40 @@ scoreboard players operation .blue teamScores += @a[team=Blue] indivScore
 scoreboard players operation .green teamScores += @a[team=Green] indivScore
 scoreboard players operation .yellow teamScores += @a[team=Yellow] indivScore
 
+# scores fix
+tag @a remove br_indiv1
+tag @a remove br_indiv2
+tag @a remove br_indiv3
+tag @a remove br_indiv4
+tag @a remove br_indiv5
+tag @a remove br_indiv6
+tag @a remove br_indiv7
+tag @a remove br_indiv8
+tag @a remove br_indiv9
+tag @a remove br_indiv10
+tag @a remove br_indiv11
+tag @a remove br_indiv12
+tag @a remove br_indiv13
+tag @a remove br_indiv14
+tag @a remove br_indiv15
+tag @a remove br_indiv16
+scoreboard players set .p1 indivMath -2147483648
+scoreboard players set .p2 indivMath -2147483648
+scoreboard players set .p3 indivMath -2147483648
+scoreboard players set .p4 indivMath -2147483648
+scoreboard players set .p5 indivMath -2147483648
+scoreboard players set .p6 indivMath -2147483648
+scoreboard players set .p7 indivMath -2147483648
+scoreboard players set .p8 indivMath -2147483648
+scoreboard players set .p9 indivMath -2147483648
+scoreboard players set .p10 indivMath -2147483648
+scoreboard players set .p11 indivMath -2147483648
+scoreboard players set .p12 indivMath -2147483648
+scoreboard players set .p13 indivMath -2147483648
+scoreboard players set .p14 indivMath -2147483648
+scoreboard players set .p15 indivMath -2147483648
+scoreboard players set .p16 indivMath -2147483648
+
 # currentGame scoreboard lobby pos set
 scoreboard players set .lobby currentGame 1
 scoreboard players set .spleef currentGame 0

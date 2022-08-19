@@ -19,35 +19,35 @@ scoreboard objectives add tbR1_Deaths deathCount
 
 # kill boards
 # tbR1_aKill tracks the actual kill event, tbR1_iKills & tbR1_tKills recieve the data
-scoreboard objectives add tbR1_aKill killed:minecraft.zombie
-scoreboard objectives add tbR1_iKills dummy
-scoreboard objectives add tbR1_tKills dummy
-scoreboard objectives add tbR1_tKillsM dummy
-scoreboard players set +p1 tbR1_tKillsM -2147483648
-scoreboard players set +p2 tbR1_tKillsM -2147483648
-scoreboard players set +p3 tbR1_tKillsM -2147483648
-scoreboard players set +p4 tbR1_tKillsM -2147483648
-scoreboard objectives add tbR1_tiKillsM_Red dummy
-scoreboard players set +p1 tbR1_tiKillsM_Red -2147483648
-scoreboard players set +p2 tbR1_tiKillsM_Red -2147483648
-scoreboard players set +p3 tbR1_tiKillsM_Red -2147483648
-scoreboard players set +p4 tbR1_tiKillsM_Red -2147483648
-scoreboard objectives add tbR1_tiKillsM_Blue dummy
-scoreboard players set +p1 tbR1_tiKillsM_Blue -2147483648
-scoreboard players set +p2 tbR1_tiKillsM_Blue -2147483648
-scoreboard players set +p3 tbR1_tiKillsM_Blue -2147483648
-scoreboard players set +p4 tbR1_tiKillsM_Blue -2147483648
-scoreboard objectives add tbR1_tiKillsM_Green dummy
-scoreboard players set +p1 tbR1_tiKillsM_Green -2147483648
-scoreboard players set +p2 tbR1_tiKillsM_Green -2147483648
-scoreboard players set +p3 tbR1_tiKillsM_Green -2147483648
-scoreboard players set +p4 tbR1_tiKillsM_Green -2147483648
-scoreboard objectives add tbR1_tiKillsM_Yellow dummy
-scoreboard players set +p1 tbR1_tiKillsM_Yellow -2147483648
-scoreboard players set +p2 tbR1_tiKillsM_Yellow -2147483648
-scoreboard players set +p3 tbR1_tiKillsM_Yellow -2147483648
-scoreboard players set +p4 tbR1_tiKillsM_Yellow -2147483648
-scoreboard objectives add tbR1_tKillsPos dummy
+scoreboard objectives add tb_aKill killed:minecraft.zombie
+scoreboard objectives add tb_iKills dummy
+scoreboard objectives add tb_tKills dummy
+scoreboard objectives add tb_tKillsM dummy
+scoreboard players set +p1 tb_tKillsM -2147483648
+scoreboard players set +p2 tb_tKillsM -2147483648
+scoreboard players set +p3 tb_tKillsM -2147483648
+scoreboard players set +p4 tb_tKillsM -2147483648
+scoreboard objectives add tb_tiKillsM_Red dummy
+scoreboard players set +p1 tb_tiKillsM_Red -2147483648
+scoreboard players set +p2 tb_tiKillsM_Red -2147483648
+scoreboard players set +p3 tb_tiKillsM_Red -2147483648
+scoreboard players set +p4 tb_tiKillsM_Red -2147483648
+scoreboard objectives add tb_tiKillsM_Blue dummy
+scoreboard players set +p1 tb_tiKillsM_Blue -2147483648
+scoreboard players set +p2 tb_tiKillsM_Blue -2147483648
+scoreboard players set +p3 tb_tiKillsM_Blue -2147483648
+scoreboard players set +p4 tb_tiKillsM_Blue -2147483648
+scoreboard objectives add tb_tiKillsM_Green dummy
+scoreboard players set +p1 tb_tiKillsM_Green -2147483648
+scoreboard players set +p2 tb_tiKillsM_Green -2147483648
+scoreboard players set +p3 tb_tiKillsM_Green -2147483648
+scoreboard players set +p4 tb_tiKillsM_Green -2147483648
+scoreboard objectives add tb_tiKillsM_Yellow dummy
+scoreboard players set +p1 tb_tiKillsM_Yellow -2147483648
+scoreboard players set +p2 tb_tiKillsM_Yellow -2147483648
+scoreboard players set +p3 tb_tiKillsM_Yellow -2147483648
+scoreboard players set +p4 tb_tiKillsM_Yellow -2147483648
+scoreboard objectives add tb_tKillsPos dummy
 
 # scoring boards
 scoreboard objectives add tbR1_tPos dummy

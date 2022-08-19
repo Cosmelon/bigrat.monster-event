@@ -24,5 +24,6 @@ scoreboard objectives add tbR2_YellowR3 dummy
 scoreboard players set +wave tbR2_YellowR3 0
 
 # respawn dead
-gamemode spectator @a[scores={tbR2_Deaths=1..},team=Yellow]
-tp @a[scores={tbR2_Deaths=1..},team=Yellow] 5095.5 40 161.5
+scoreboard players set @a[team=Yellow] tbR2_Deaths 0
+tp @a[team=Yellow,gamemode=spectator] 5095.5 40 161.5
+gamemode adventure @a[team=Yellow,gamemode=spectator]

@@ -74,8 +74,8 @@ execute if score +active tbR2_YellowR3 matches 1 positioned 5144.5 42 161.5 run 
 
 ## deaths
 gamemode spectator @a[scores={tbR2_Deaths=1}]
-scoreboard players remove @a[scores={tbR2_Deaths=1}] indivScore 10
-tellraw @a[scores={tbR2_Deaths=1}] "-10 pts (death)"
+scoreboard players remove @a[scores={tbR2_Deaths=1}] indivScore 3
+tellraw @a[scores={tbR2_Deaths=1}] "-3 pts (death)"
 scoreboard players set @a[scores={tbR2_Deaths=1}] tbR2_Deaths 100
 scoreboard players remove @a[scores={tbR2_Deaths=3..}] tbR2_Deaths 1
 gamemode adventure @a[scores={tbR2_Deaths=2}]
@@ -100,4 +100,4 @@ scoreboard players reset @a[scores={tbR2_Deaths=2}] tbR2_Deaths
 
 
 # tomb click
-scoreboard players set @a[team=Yellow] tbR2_click 0
+scoreboard players set @a tbR2_click 0

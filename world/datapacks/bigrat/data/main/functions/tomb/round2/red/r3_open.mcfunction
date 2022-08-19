@@ -4,10 +4,6 @@
 # @s = @a[tag=keyHolder,scores={tbR2_click=1..}]
 # run from main:tomb/round2/red/r1_t
 
-# debug
-tellraw @a "ok yeah this is where the script stops"
-tellraw @a "SOLAR BUILD THE NEXT ROOM"
-
 # open the door
 fill 5114 37 -1 5113 42 5 air replace #main:tb/door
 
@@ -27,5 +23,6 @@ scoreboard objectives add tbR2_RedR3 dummy
 scoreboard players set +wave tbR2_RedR3 0
 
 # respawn dead
-gamemode spectator @a[scores={tbR2_Deaths=1..},team=Red]
-tp @a[scores={tbR2_Deaths=1..},team=Red] 5095.5 40 2.5
+scoreboard players set @a[team=Red] tbR2_Deaths 0
+tp @a[team=Red,gamemode=spectator] 5095.5 40 2.5
+gamemode adventure @a[team=Red,gamemode=spectator]

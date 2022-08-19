@@ -12,6 +12,6 @@ effect give @s slowness 4 250 true
 tag @s add kitConfirm
 
 execute if entity @s[team=Red] run tp @s 5016.5 34 2.5 180 10
-execute if entity @s[team=Blue] run tp @s 5016.5 34 45.5 180 10
-execute if entity @s[team=Green] run tp @s 5016.5 34 89.5 180 10
-execute if entity @s[team=Yellow] run tp @s 5016.5 34 131.5 180 10
+execute if entity @s[team=Blue] run tp @s 5016.5 34 55.5 180 10
+execute if entity @s[team=Green] run tp @s 5016.5 34 109.5 180 10
+execute if entity @s[team=Yellow] run tp @s 5016.5 34 161.5 180 10

@@ -61,6 +61,7 @@ execute as @a[tag=player] at @s run spawnpoint @s ~ ~2 ~
 
 # kill count
 execute as @a if score @s tb_aKill matches 1.. run scoreboard players add @s tb_iKills 1
+execute as @a if score @s tb_aKill matches 1.. run scoreboard players add @s indivScore 1
 execute as @a[team=Red,scores={tb_aKill=1..}] run scoreboard players add +red tb_iKills 1
 execute as @a[team=Red,scores={tb_aKill=1..}] run scoreboard players add @s tb_iKills 1
 execute as @a[team=Blue,scores={tb_aKill=1..}] run scoreboard players add +blue tb_iKills 1
@@ -69,7 +70,7 @@ execute as @a[team=Green,scores={tb_aKill=1..}] run scoreboard players add +gree
 execute as @a[team=Green,scores={tb_aKill=1..}] run scoreboard players add @s tb_iKills 1
 execute as @a[team=Yellow,scores={tb_aKill=1..}] run scoreboard players add +yellow tb_iKills 1
 execute as @a[team=Yellow,scores={tb_aKill=1..}] run scoreboard players add @s tb_iKills 1
-execute as @a if score @s tbR1_aKill matches 1.. run scoreboard players reset @s tb_iKills
+execute as @a if score @s tb_aKill matches 1.. run scoreboard players reset @s tb_aKill
 
 # determine kill placement
 execute positioned 4983.5 4 -8 as @e[tag=tb_kKeeper] run function main:tomb/teamplace_k

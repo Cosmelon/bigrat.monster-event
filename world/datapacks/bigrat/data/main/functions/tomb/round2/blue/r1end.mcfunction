@@ -3,9 +3,6 @@
 # Type: single
 # run from main:tomb/round2/blue/r1_t
 
-tellraw @a ""
-tellraw @a "good job!"
-tellraw @a ""
 
 scoreboard players set +wave tbR2_BlueR1 -1
 

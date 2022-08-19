@@ -50,7 +50,7 @@ execute if score @s indivMath = .p7 indivMath run tag @s add br_indiv7
 execute if score @s indivMath = .p7 indivMath run scoreboard players reset @s indivMath
 
 # 8th place
-execute if score @s indivMath > .p2 indivMath run scoreboard players operation .p8 indivMath > @s indivMath
+execute if score @s indivMath > .p8 indivMath run scoreboard players operation .p8 indivMath > @s indivMath
 execute if score @s indivMath = .p8 indivMath run tag @a remove br_indiv8
 execute if score @s indivMath = .p8 indivMath run tag @s add br_indiv8
 execute if score @s indivMath = .p8 indivMath run scoreboard players reset @s indivMath
@@ -86,13 +86,13 @@ execute if score @s indivMath = .p13 indivMath run tag @s add br_indiv13
 execute if score @s indivMath = .p13 indivMath run scoreboard players reset @s indivMath
 
 # 14th place
-execute if score @s indivMath > .p14 indivMath run scoreboard players operation .p16 indivMath > @s indivMath
+execute if score @s indivMath > .p14 indivMath run scoreboard players operation .p14 indivMath > @s indivMath
 execute if score @s indivMath = .p14 indivMath run tag @a remove br_indiv14
 execute if score @s indivMath = .p14 indivMath run tag @s add br_indiv14
 execute if score @s indivMath = .p14 indivMath run scoreboard players reset @s indivMath
 
 # 15th place
-execute if score @s indivMath > .p15 indivMath run scoreboard players operation .p16 indivMath > @s indivMath
+execute if score @s indivMath > .p15 indivMath run scoreboard players operation .p15 indivMath > @s indivMath
 execute if score @s indivMath = .p15 indivMath run tag @a remove br_indiv15
 execute if score @s indivMath = .p15 indivMath run tag @s add br_indiv15
 execute if score @s indivMath = .p15 indivMath run scoreboard players reset @s indivMath

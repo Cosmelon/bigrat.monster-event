@@ -15,3 +15,4 @@ scoreboard players set +active tbR2_RedR3 1
 
 # start the stuff
 execute positioned 5144.5 37 2.5 run function main:tomb/round2/red/r3w1
+execute positioned 5144.5 37 2.5 run tp @a[team=Red,distance=21..] 5144.5 37 2.5

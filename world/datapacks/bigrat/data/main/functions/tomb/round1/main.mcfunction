@@ -41,7 +41,7 @@ scoreboard players operation #rem tbR1_Timer = +tickInput tbR1_Timer
 scoreboard players operation #tickMin tbR1_Timer = #rem tbR1_Timer
 scoreboard players operation #tickMin tbR1_Timer /= #minConst tbConst
 scoreboard players operation #rem tbR1_Timer %= #minConst tbConst
-# get sec
+## get sec
 scoreboard players operation #tickSec tbR1_Timer = #rem tbR1_Timer
 scoreboard players operation #tickSec tbR1_Timer /= #secConst tbConst
 scoreboard players operation #rem tbR1_Timer %= #secConst tbConst
@@ -57,20 +57,20 @@ scoreboard players operation +remainder tbR1_Timer = #rem tbR1_Timer
 
 # dead players
 execute as @a[scores={tbR1_Deaths=1},tag=player] run gamemode spectator
-execute as @a[scores={tbR1_Deaths=1},tag=player] run scoreboard players remove @s indivScore 10
-execute as @a[scores={tbR1_Deaths=1},tag=player] run tellraw @s "-10 pts (death)"
+execute as @a[scores={tbR1_Deaths=1},tag=player] run scoreboard players remove @s indivScore 3
+execute as @a[scores={tbR1_Deaths=1},tag=player] run tellraw @s {"text":"» -3 pts (death)","color":"red"}
 execute as @a[scores={tbR1_Deaths=1},tag=player] run scoreboard players set @s tbR1_Deaths 100
 execute as @a[scores={tbR1_Deaths=2},tag=player] run function main:tomb/round1/respawn
-execute as @a[scores={tbR1_Deaths=3..100},tag=player] run scoreboard players remove @s tbR1_Deaths 1
+execute as @a[scores={tbR1_Deaths=3..101},tag=player] run scoreboard players remove @s tbR1_Deaths 1
 
 # spectator pen
 # COSMELON - I HAVE NO IDEA WHAT IS FUCKING WITH THIS SHELVE IT FOR LATER
-execute positioned 5016.5 42 2.5 run tp @a[gamemode=spectator,team=!Admin,distance=18..20] 5016.5 36 2.5
-execute positioned 5016.5 42 55.5 run tp @a[gamemode=spectator,team=!Admin,distance=18..20] 5016.5 36 55.5
-execute positioned 5016.5 42 109.5 run tp @a[gamemode=spectator,team=!Admin,distance=18..20] 5016.5 36 109.5
-execute positioned 5016.5 42 161.5 run tp @a[gamemode=spectator,team=!Admin,distance=18..20] 5016.5 36 161.5
-execute as @a[gamemode=spectator,scores={yCos=..32},team=!Admin] at @s run tp @s ~ ~5 ~
-execute as @a[gamemode=spectator,scores={yCos=49..},team=!Admin] at @s run tp @s ~ ~-5 ~
+#execute positioned 5016.5 42 2.5 run tp @a[gamemode=spectator,team=!Admin,distance=18..20] 5016.5 36 2.5
+#execute positioned 5016.5 42 55.5 run tp @a[gamemode=spectator,team=!Admin,distance=18..20] 5016.5 36 55.5
+#execute positioned 5016.5 42 109.5 run tp @a[gamemode=spectator,team=!Admin,distance=18..20] 5016.5 36 109.5
+#execute positioned 5016.5 42 161.5 run tp @a[gamemode=spectator,team=!Admin,distance=18..20] 5016.5 36 161.5
+#execute as @a[gamemode=spectator,scores={yCos=..32},team=!Admin] at @s run tp @s ~ ~5 ~
+#execute as @a[gamemode=spectator,scores={yCos=49..},team=!Admin] at @s run tp @s ~ ~-5 ~
 
 # roundend
 execute if score +timeLeft tbR1 matches 0 run function main:tomb/round1/finish

@@ -11,3 +11,4 @@ title @a[team=Green] title "you did it!"
 #debug
 tellraw @a[tag=admin] {"text":"[Debug] GREEN TEAM has finished ROUND 2 ROOM 3","color":"dark_gray"}
 tellraw @a[tag=admin] {"text":"[Debug] GREEN TEAM has finished ROUND 2","color":"dark_gray"}
+scoreboard players add ~finishers tbR2 1
