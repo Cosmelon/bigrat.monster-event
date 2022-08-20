@@ -8,7 +8,6 @@ scoreboard objectives remove tbR2_GreenR1
 
 # put door back
 place template main:tb/tbdoor 5069 37 106
-fill 5076 42 104 5076 36 112 barrier replace air
 
 # establish objectives
 scoreboard players set +active tbR2_GreenR2 1
