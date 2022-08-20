@@ -3,8 +3,6 @@
 # type: single
 # run from main:tomb/round2/yellow/r3_t
 
-tellraw @a "keydrop was ignored for debugging"
-tellraw @a "round ending in 5s"
 schedule function main:tomb/round2/yellow/r3_finish 5s
 
 scoreboard players set +wave tbR2_YellowR3 -1

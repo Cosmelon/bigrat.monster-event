@@ -6,7 +6,7 @@
 # this is mostly just a placeholer thing for now
 
 gamemode spectator @a[team=Yellow]
-title @a[team=Yellow] title "you did it!"
+tellraw @a {"text":"Yellow team has finished the game!","color":"yellow"}
 
 #debug
 tellraw @a[tag=admin] {"text":"[Debug] YELLOW TEAM has finished ROUND 2 ROOM 3","color":"dark_gray"}
