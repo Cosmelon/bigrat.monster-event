@@ -57,7 +57,7 @@ scoreboard players set ~blueGate halls_keys 0
 scoreboard players set ~greenGate halls_keys 0
 scoreboard players set ~yellowGate halls_keys 0
 #timer shit
-scoreboard players set ~timeLeft hallsCore 6000
+scoreboard players set ~timeLeft hallsCore 9000
 scoreboard objectives add hallsConst dummy
 scoreboard players set #milliConst hallsConst 50
 scoreboard players set #secConst hallsConst 20
