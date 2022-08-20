@@ -42,7 +42,7 @@ execute if score ~countDown hallsCore matches 800 run function main:halls/starti
 execute if score ~countDown hallsCore matches 700 run function main:halls/startinfo/pos3
 execute if score ~countDown hallsCore matches 600 run function main:halls/startinfo/pos4
 execute if score ~countDown hallsCore matches 500 run function main:halls/startinfo/pos5
-
+execute if score ~countDown hallsCore matches 0 run function main:halls/music
 # remove box
 #red
 execute if score ~countDown hallsCore matches 1 run fill -979 27 1046 -974 21 1041 air replace barrier

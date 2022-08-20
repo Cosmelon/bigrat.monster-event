@@ -86,7 +86,7 @@ execute as @s[scores={racePos=4..},team=Yellow] at @s run summon firework_rocket
 # scoring
 execute as @s[scores={raceLap=3}] run tellraw @s [{"text":"+","color":"green"},{"score":{"name":"!indivFinish","objective":"raceScores"},"color":"green"},{"text":" points (Finishing)","color":"green"}]
 execute as @s[scores={raceLap=3}] run scoreboard players operation !indivFinish race += @s indivScore
-execute as @s[scores={raceLap=3}] run scoreboard players remove !indivFinish race 1
+execute as @s[scores={raceLap=3}] run scoreboard players remove !indivFinish race 2
 
 # custom sound
 playsound minecraft:custom.race/lap voice @s ~ ~ ~ 100000 1.2

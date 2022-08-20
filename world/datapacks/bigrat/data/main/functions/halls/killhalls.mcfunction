@@ -10,6 +10,7 @@ scoreboard players set ~wRelease hallsCore 100
 scoreboard players reset * halls_sneak
 scoreboard objectives remove halls_death
 scoreboard objectives add halls_death deathCount
+schedule clear main:halls/music
 
 # reset soap
 scoreboard players reset * halls_soap

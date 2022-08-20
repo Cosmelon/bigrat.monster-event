@@ -65,7 +65,9 @@ scoreboard players set !posCounter3 racePos 0
 
 # score setup
 scoreboard objectives add raceScores dummy
+scoreboard players set #2 raceScores 2
 scoreboard players operation !indivFinish raceScores = .players teamCheck
+scoreboard players operation !indivFinish raceScores *= #2 raceScores
 scoreboard players set !teamScores raceScores 30
 scoreboard players set !redFinish raceScores 0
 scoreboard players set !blueFinish raceScores 0

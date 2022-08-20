@@ -23,5 +23,5 @@ tellraw @a [{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"trans
 title @a title ""
 title @a subtitle ""
 title @a actionbar ""
-schedule function main:fadeout 3s 
-schedule function main:spleef/startspleef 6s
+schedule function main:fadeout 10s 
+schedule function main:spleef/startspleef 13s

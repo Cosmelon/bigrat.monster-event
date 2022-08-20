@@ -46,6 +46,13 @@ execute positioned 1000.5 28 -6000.5 run tp @a[tag=!player,limit=1,sort=random,d
 kill @e[limit=1,name=".midL"]
 stopsound @a * entity.armor_stand.break
 
+# next game
+bossbar add br:nextgame {"text":"Time Until Next Game:","color":"gold","bold":true}
+bossbar set br:nextgame visible true
+bossbar set br:nextgame players @a
+bossbar set br:nextgame max 2400
+scoreboard players set .nextGame currentGame 2400
+
 # npc insurance
 data modify entity @e[type=armor_stand,tag=tScoreNPC,limit=1] Invisible set value 1b
 data modify entity @e[type=armor_stand,tag=tScoreNPC,limit=1] Invisible set value 1b
@@ -181,6 +188,7 @@ scoreboard objectives remove tombR1Timer
 scoreboard objectives remove tombR1
 scoreboard objectives remove tombR2
 scoreboard objectives remove tombR3
+function main:tomb/clearboards
 
 # reset stuff for backrooms
 execute as @e[tag=halls_spawnpoint] run data modify entity @s Invisible set value true
@@ -212,3 +220,4 @@ scoreboard objectives remove halls_craftCobble
 scoreboard objectives remove halls_craftStone
 scoreboard objectives remove halls_craftWood
 scoreboard objectives remove halls_craftReset
+schedule clear main:halls/music
