@@ -43,10 +43,12 @@ execute if score ?out bpFloor matches 27 run place template main:bp/pat1/p1l27 -
 execute if score ?out bpFloor matches 28 run place template main:bp/pat1/p1l28 -2013 56 2988
 execute if score ?out bpFloor matches 29 run place template main:bp/pat1/p1l29 -2013 56 2988
 execute if score ?out bpFloor matches 30 run place template main:bp/pat1/p1l30 -2013 56 2988
-execute if score ?out bpFloor matches 31 run place template main:bp/pat1/p1l31 -2013 56 2988
-execute if score ?out bpFloor matches 32 run place template main:bp/pat1/p1l32 -2013 56 2988
-execute if score ?out bpFloor matches 33 run place template main:bp/pat1/p1l33 -2013 56 2988
-execute if score ?out bpFloor matches 34 run place template main:bp/pat1/p1l34 -2013 56 2988
+# light blue was not included on floors 31-34, part of a building mistake, hacked this together to fix it
+execute if score ?out bpFloor matches 31 if score ?out bpColor matches 5 run place template main:bp/pat1/p1l31 -2013 56 2988
+execute if score ?out bpFloor matches 32 if score ?out bpColor matches 5 run place template main:bp/pat1/p1l32 -2013 56 2988
+execute if score ?out bpFloor matches 33 if score ?out bpColor matches 5 run place template main:bp/pat1/p1l33 -2013 56 2988
+execute if score ?out bpFloor matches 34 if score ?out bpColor matches 5 run place template main:bp/pat1/p1l34 -2013 56 2988
+# end hack
 execute if score ?out bpFloor matches 35 run place template main:bp/pat1/p1l35 -2013 56 2988
 execute if score ?out bpFloor matches 36 run place template main:bp/pat1/p1l36 -2013 56 2988
 execute if score ?out bpFloor matches 37 run place template main:bp/pat1/p1l37 -2013 56 2988

@@ -1,5 +1,14 @@
 # all these commands start spleef
 
+# prevent the game from starting if the teams aren't properly set
+execute if score .red teamCheck matches 0 if score .blue teamCheck matches 0 if score .green teamCheck matches 0 if score .yellow teamCheck matches 0 run function main:spleef/killspleef
+execute if score .red teamCheck matches 0 if score .blue teamCheck matches 0 if score .green teamCheck matches 0 if score .yellow teamCheck matches 0 run tellraw @a[tag=debug] {"text":"[Debug]: Team are not properly set!"}
+execute if score .red teamCheck matches 0 if score .blue teamCheck matches 1.. if score .green teamCheck matches 0 if score .yellow teamCheck matches 0 run function main:spleef/killspleef
+execute if score .red teamCheck matches 0 if score .blue teamCheck matches 1.. if score .green teamCheck matches 0 if score .yellow teamCheck matches 0 run function main:spleef/killspleef
+execute if score .red teamCheck matches 0 if score .blue teamCheck matches 1.. if score .green teamCheck matches 0 if score .yellow teamCheck matches 0 run function main:spleef/killspleef
+execute if score .red teamCheck matches 0 if score .blue teamCheck matches 1.. if score .green teamCheck matches 0 if score .yellow teamCheck matches 0 run function main:spleef/killspleef
+
+
 # lobby turn off
 scoreboard players set .lobby currentGame 0
 
