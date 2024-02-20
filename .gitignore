@@ -1,14 +1,14 @@
 # ignores advancements
-**bigrat.monster-event/world/advancements/
-**bigrat.monster-event/world/data/
-**bigrat.monster-event/world/DIM1
-**bigrat.monster-event/world/DIM-1
-**bigrat.monster-event/world/entities/
-**bigrat.monster-event/world/gc-logs/
-**bigrat.monster-event/world/playerdata/
-**bigrat.monster-event/world/poi/
-**bigrat.monster-event/world/region/
-**bigrat.monster-event/world/stats/
+**bigrat.monster-event/advancements/
+**bigrat.monster-event/data/
+**bigrat.monster-event/DIM1
+**bigrat.monster-event/DIM-1
+**bigrat.monster-event/entities/
+**bigrat.monster-event/gc-logs/
+**bigrat.monster-event/playerdata/
+**bigrat.monster-event/poi/
+**bigrat.monster-event/region/
+**bigrat.monster-event/stats/
 
 # ignores .mca
 *.mca
