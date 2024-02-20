@@ -1,58 +1,20 @@
 # ignores advancements
-**bigrat.monster/world/advancements/
-
-# ignores playerdata
-**bigrat.monster/world/playerdata/
-
-# ignores data
-**bigrat.monster/world/data/
-
-# ignores entities
-**bigrat.monster/world/entities/
-
-# ignores poi
-**bigrat.monster/world/poi/
-
-# ignores region
-**bigrat.monster/world/region/
-
-# ignores stats
-**bigrat.monster/world/stats/
+**bigrat.monster-event/world/advancements/
+**bigrat.monster-event/world/data/
+**bigrat.monster-event/world/DIM1
+**bigrat.monster-event/world/DIM-1
+**bigrat.monster-event/world/entities/
+**bigrat.monster-event/world/gc-logs/
+**bigrat.monster-event/world/playerdata/
+**bigrat.monster-event/world/poi/
+**bigrat.monster-event/world/region/
+**bigrat.monster-event/world/stats/
 
 # ignores .mca
 *.mca
-
-# ignores .thanos
-.thanos
-
-# ignores other stuff
-**bigrat.monster/world/level.dat
-**bigrat.monster/world/level.dat_old
-**bigrat.monster/world/session.lock
-**bigrat.monster/world/uid.dat
-
-# ignores player list
-**bigrat.monster/banned-ips.json
-**bigrat.monster/banned-players.json
-**bigrat.monster/whitelist.json
-**bigrat.monster/ops.json
-**bigrat.monster/eula.txt
-
-# ignores logs folder
-**bigrat.monster/logs/
-
-# ignores resourcepack
-**bigrat.monster/bigratResources
-
-# ignore other stuff
-**bigrat.monster/permissions.yml
-**bigrat.monster/help.yml
-**bigrat.monster/paper.yml
-**bigrat.monster/server-icon.png
-**bigrat.monster/spigot.yml
-**bigrat.monster/wepif.yml
-**bigrat.monster/ops.json
-**bigrat.monster/whitelist.json
-**bigrat.monster/bukkit.yml
-**bigrat.monster/eula.txt
-**bigrat.monster/server.properties
+*.dat
+*.dat_old
+*.yml
+*.lock
+*.dat
+*.png
