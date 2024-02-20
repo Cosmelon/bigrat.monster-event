@@ -14,7 +14,6 @@ Some basic documentation I made while in class
     - main:telemenu is the admin teleport panel, accessible with /op only
     - all gametick functions are run from main:tick but are only active when their gameActive score == 1
     - to return to the lobby, just use main:returnlobby in your win function and add specifics to main:lobby
-    - IMPORTANT: On push, code is sent to the minecraft server via GitHub Actions, disable the workflow to prevent it
 
 currently used prefixes
     .global
