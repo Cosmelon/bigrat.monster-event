@@ -11,9 +11,9 @@ tellraw @a [{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"trans
 tellraw @a ""
 tellraw @a [{"translate":"space.3"},{"text":"big hole game","color":"gold","bold":true}]
 tellraw @a ""
-tellraw @a [{"translate":"space.3"},{"text":"Do a dig and smack combo with your weapons"}]
-tellraw @a [{"translate":"space.5"},{"text":"to send players flying across the map!"}]
+tellraw @a [{"translate":"space.3"},{"text":"You get two weapons, a shovel and a knockback stick"}]
 tellraw @a ""
 tellraw @a [{"translate":"space.3"},{"text":"Breaking blocks will give you snowballs."}]
+tellraw @a ""
 tellraw @a ""
 tellraw @a [{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"translate":"space.-1"},{"text":"\uE004"}]

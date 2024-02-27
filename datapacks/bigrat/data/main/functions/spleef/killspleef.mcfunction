@@ -2,7 +2,7 @@
 title @a title ""
 title @a subtitle ""
 scoreboard players set $gameActive spleef 0
-scoreboard players set $round spleef 1
+scoreboard players set $round spleef 0
 scoreboard players reset * spleefDeaths
 effect clear @a
 scoreboard players set $countDown spleef 160

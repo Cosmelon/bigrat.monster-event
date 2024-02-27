@@ -45,7 +45,7 @@ execute if score !countDown race matches 1000 run function main:race/startinfo/p
 execute if score !countDown race matches 800 run function main:race/startinfo/pos3
 execute if score !countDown race matches 600 run function main:race/startinfo/pos4
 execute if score !countDown race matches 400 run function main:race/startinfo/pos5
-execute if score !countDown race matches 170 run function main:race/spreadp
+execute if score !countDown race matches 170 positioned 284.50 75 42.50 run function main:race/spreadp
 execute if score !countDown race matches 160 run gamerule sendCommandFeedback true
 execute if score !countDown race matches 110 run title @a title ""
 execute if score !countDown race matches 110 run title @a subtitle {"text":"Starting!","color":"dark_red"}
@@ -131,6 +131,7 @@ execute as @a[tag=player,scores={racePos=2,raceLap=4..}] run title @s actionbar 
 execute as @a[tag=player,scores={racePos=3,raceLap=4..}] run title @s actionbar [{"text":"You finished in ","color":"gold"},{"score":{"name":"@s","objective":"racePos"}},{"text":"rd place!"}]
 execute as @a[tag=player,scores={racePos=4..,raceLap=4..}] run title @s actionbar [{"text":"You finished in ","color":"gold"},{"score":{"name":"@s","objective":"racePos"}},{"text":"th place!"}]
 
+# gate
 #  intended be open for five seconds, then closed for two
 scoreboard players remove !gateOpen race 1
 scoreboard players remove !gateShut race 1
@@ -164,7 +165,6 @@ execute as @a[tag=player,gamemode=adventure] positioned as @s if block ~ ~-1 ~ m
 execute as @a[tag=player,gamemode=adventure] positioned as @s if block ~ ~-1 ~ lime_glazed_terracotta run effect give @s minecraft:jump_boost 1 7 true
 execute as @a[tag=player,gamemode=adventure] positioned as @s if block ~ ~-0.25 ~ air run effect clear @s minecraft:jump_boost
 # give elytra (light_blue_glazed_terracotta)
-# again credit to /u/PunchTunnel! They're carrying this ong
 execute as @a[tag=player,gamemode=adventure] at @s unless block ~ ~-0.25 ~ air run item replace entity @s armor.chest with air
 execute as @a[tag=player,gamemode=adventure] at @s if block ~ ~-0.25 ~ light_blue_glazed_terracotta run item replace entity @s armor.chest with elytra{Enchantments:[{id:"binding_curse",lvl:1},{id:"unbreaking",lvl:255}],HideFlags:1}
 execute as @a[tag=player,gamemode=adventure] at @s if block ~ ~-0.25 ~ light_blue_glazed_terracotta run title @s title {"text":"Elytra Given!","color":"gold"}

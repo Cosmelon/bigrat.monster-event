@@ -16,5 +16,4 @@ schedule function main:spleef/border/removetop 30s replace
 schedule function main:spleef/border/turnoffactual 20s replace
 
 # floor removal
-title @a times 0 100 0
-title @a actionbar {"text":"Top floor disappearing in 30 seconds!","color":"red"}
+tellraw @a [{"text":"» ","color":"gray"},{"text":"Top floor disappearing in 30 seconds!","color":"red"}]

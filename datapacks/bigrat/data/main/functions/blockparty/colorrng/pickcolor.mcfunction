@@ -98,15 +98,15 @@ execute if score ?out bpColor matches 8 run item replace entity @a[tag=bpAlive] 
 execute if score ?out bpColor matches 8 run item replace entity @a[tag=bpAlive] hotbar.8 with pink_concrete{display:{Name:'[{"text":"Get on Pink!","color":"#FFC0CB","italic":false}]'}}
 
 # if <selected color> == light_gray
-execute if score ?out bpColor matches 9 run item replace entity @a[tag=bpAlive] hotbar.0 with light_gray_concrete{display:{Name:'[{"text":"Get on Gray!","color":"light_gray","italic":false}]'}}
-execute if score ?out bpColor matches 9 run item replace entity @a[tag=bpAlive] hotbar.1 with light_gray_concrete{display:{Name:'[{"text":"Get on Gray!","color":"light_gray","italic":false}]'}}
-execute if score ?out bpColor matches 9 run item replace entity @a[tag=bpAlive] hotbar.2 with light_gray_concrete{display:{Name:'[{"text":"Get on Gray!","color":"light_gray","italic":false}]'}}
-execute if score ?out bpColor matches 9 run item replace entity @a[tag=bpAlive] hotbar.3 with light_gray_concrete{display:{Name:'[{"text":"Get on Gray!","color":"light_gray","italic":false}]'}}
-execute if score ?out bpColor matches 9 run item replace entity @a[tag=bpAlive] hotbar.4 with light_gray_concrete{display:{Name:'[{"text":"Get on Gray!","color":"light_gray","italic":false}]'}}
-execute if score ?out bpColor matches 9 run item replace entity @a[tag=bpAlive] hotbar.5 with light_gray_concrete{display:{Name:'[{"text":"Get on Gray!","color":"light_gray","italic":false}]'}}
-execute if score ?out bpColor matches 9 run item replace entity @a[tag=bpAlive] hotbar.6 with light_gray_concrete{display:{Name:'[{"text":"Get on Gray!","color":"light_gray","italic":false}]'}}
-execute if score ?out bpColor matches 9 run item replace entity @a[tag=bpAlive] hotbar.7 with light_gray_concrete{display:{Name:'[{"text":"Get on Gray!","color":"light_gray","italic":false}]'}}
-execute if score ?out bpColor matches 9 run item replace entity @a[tag=bpAlive] hotbar.8 with light_gray_concrete{display:{Name:'[{"text":"Get on Gray!","color":"light_gray","italic":false}]'}}
+execute if score ?out bpColor matches 9 run item replace entity @a[tag=bpAlive] hotbar.0 with light_gray_concrete{display:{Name:'[{"text":"Get on Gray!","color":"#D3D3D3","italic":false}]'}}
+execute if score ?out bpColor matches 9 run item replace entity @a[tag=bpAlive] hotbar.1 with light_gray_concrete{display:{Name:'[{"text":"Get on Gray!","color":"#D3D3D3","italic":false}]'}}
+execute if score ?out bpColor matches 9 run item replace entity @a[tag=bpAlive] hotbar.2 with light_gray_concrete{display:{Name:'[{"text":"Get on Gray!","color":"#D3D3D3","italic":false}]'}}
+execute if score ?out bpColor matches 9 run item replace entity @a[tag=bpAlive] hotbar.3 with light_gray_concrete{display:{Name:'[{"text":"Get on Gray!","color":"#D3D3D3","italic":false}]'}}
+execute if score ?out bpColor matches 9 run item replace entity @a[tag=bpAlive] hotbar.4 with light_gray_concrete{display:{Name:'[{"text":"Get on Gray!","color":"#D3D3D3","italic":false}]'}}
+execute if score ?out bpColor matches 9 run item replace entity @a[tag=bpAlive] hotbar.5 with light_gray_concrete{display:{Name:'[{"text":"Get on Gray!","color":"#D3D3D3","italic":false}]'}}
+execute if score ?out bpColor matches 9 run item replace entity @a[tag=bpAlive] hotbar.6 with light_gray_concrete{display:{Name:'[{"text":"Get on Gray!","color":"#D3D3D3","italic":false}]'}}
+execute if score ?out bpColor matches 9 run item replace entity @a[tag=bpAlive] hotbar.7 with light_gray_concrete{display:{Name:'[{"text":"Get on Gray!","color":"#D3D3D3","italic":false}]'}}
+execute if score ?out bpColor matches 9 run item replace entity @a[tag=bpAlive] hotbar.8 with light_gray_concrete{display:{Name:'[{"text":"Get on Gray!","color":"#D3D3D3","italic":false}]'}}
 
 
 # GUI for Dead/Spec/Admin

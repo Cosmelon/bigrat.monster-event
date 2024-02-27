@@ -59,5 +59,4 @@ team modify Spectator friendlyFire false
 
 # return to lobby option
 tellraw @a [{"text":"[","color":"dark_gray"},{"text":"bigrat.monster","color":"gold"},{"text":"]","color":"dark_gray"},{"text":" » ","color":"gray"},{"text":"Main pack loaded!","color":"white"}]
-tellraw @a[tag=admin] {"text":"[Reload again]","color":"gold","clickEvent":{"action":"run_command","value":"/function main:realreload"}}
-tellraw @a[tag=admin] {"text":"[Return to lobby]","color":"aqua","clickEvent":{"action":"run_command","value":"/function main:returnlobby"}}
+tellraw @a[tag=admin] [{"text":"[Reload again]","color":"gold","clickEvent":{"action":"run_command","value":"/reload confirm"}},{"text":"    [Return to lobby]","color":"aqua","clickEvent":{"action":"run_command","value":"/function main:returnlobby"}}]

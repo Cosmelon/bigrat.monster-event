@@ -21,7 +21,7 @@ execute if score $gameActive spleef matches 0 if score !gameActive race matches 
 execute if score $gameActive spleef matches 0 if score !gameActive race matches 0 if score ~gameActive hallsCore matches 0 if score ?gameActive blockParty matches 0 if score +gameActive tbCore matches 0 run scoreboard players set .lobby currentGame 1
 
 # lobby nextgame
-execute if score .lobby currentGame matches 1 run scoreboard players remove .nextGame currentGame 1
+execute if score .lobby currentGame matches 1 if score .eventActive currentGame matches 1 run scoreboard players remove .nextGame currentGame 1
 execute if score .nextGame currentGame matches 0 run bossbar set br:nextgame visible false
 execute store result bossbar br:nextgame value run scoreboard players get .nextGame currentGame
 
@@ -49,6 +49,20 @@ execute store result score .red teamCheck if entity @a[team=Red]
 execute store result score .blue teamCheck if entity @a[team=Blue]
 execute store result score .green teamCheck if entity @a[team=Green]
 execute store result score .yellow teamCheck if entity @a[team=Yellow]
+#validPlay -- determines if there exist at least two teams with > 0 players
+execute if score .red teamCheck matches 0 if score .blue teamCheck matches 0 if score .green teamCheck matches 0 if score .yellow teamCheck matches 0 run scoreboard players set .validPlay teamCheck 0
+execute if score .red teamCheck matches 1.. if score .blue teamCheck matches 0 if score .green teamCheck matches 0 if score .yellow teamCheck matches 0 run scoreboard players set .validPlay teamCheck 0
+execute if score .red teamCheck matches 0 if score .blue teamCheck matches 1.. if score .green teamCheck matches 0 if score .yellow teamCheck matches 0 run scoreboard players set .validPlay teamCheck 0
+execute if score .red teamCheck matches 0 if score .blue teamCheck matches 0 if score .green teamCheck matches 1.. if score .yellow teamCheck matches 0 run scoreboard players set .validPlay teamCheck 0
+execute if score .red teamCheck matches 0 if score .blue teamCheck matches 0 if score .green teamCheck matches 0 if score .yellow teamCheck matches 1.. run scoreboard players set .validPlay teamCheck 0
+
+execute if score .red teamCheck matches 1.. if score .blue teamCheck matches 1.. run scoreboard players set .validPlay teamCheck 1
+execute if score .red teamCheck matches 1.. if score .green teamCheck matches 1.. run scoreboard players set .validPlay teamCheck 1
+execute if score .red teamCheck matches 1.. if score .yellow teamCheck matches 1.. run scoreboard players set .validPlay teamCheck 1
+execute if score .blue teamCheck matches 1.. if score .green teamCheck matches 1.. run scoreboard players set .validPlay teamCheck 1
+execute if score .blue teamCheck matches 1.. if score .yellow teamCheck matches 1.. run scoreboard players set .validPlay teamCheck 1
+execute if score .green teamCheck matches 1.. if score .yellow teamCheck matches 1.. run scoreboard players set .validPlay teamCheck 1
+
 #all user track
 execute store result score .users teamCheck if entity @a
 #all player track

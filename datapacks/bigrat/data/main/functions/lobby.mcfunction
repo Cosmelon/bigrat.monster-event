@@ -47,11 +47,12 @@ kill @e[limit=1,name=".midL"]
 stopsound @a * entity.armor_stand.break
 
 # next game
-bossbar add br:nextgame {"text":"Time Until Next Game:","color":"gold","bold":true}
-bossbar set br:nextgame visible true
+bossbar remove br:nextgame
+execute if score .eventActive currentGame matches 1 run bossbar add br:nextgame {"text":"Time Until Next Game:","color":"gold","bold":true}
 bossbar set br:nextgame players @a
 bossbar set br:nextgame max 2400
 scoreboard players set .nextGame currentGame 2400
+bossbar set br:nextgame visible true
 
 # npc insurance
 data modify entity @e[type=armor_stand,tag=tScoreNPC,limit=1] Invisible set value 1b
@@ -121,6 +122,8 @@ scoreboard objectives remove spleefDeaths
 scoreboard objectives remove spleef_sb
 scoreboard objectives remove spleefSnowBall
 scoreboard objectives remove spleefBorder
+scoreboard objectives remove sp_numsb
+scoreboard objectives remove sp_numsblock
 bossbar set minecraft:spleefroundcount visible false
 schedule clear main:spleef/border/removetop
 schedule clear main:spleef/shovelsandkb
