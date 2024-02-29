@@ -4,8 +4,8 @@
 # run from source
 
 # manage currentGame objective
-execute if score $gameActive spleef matches 0 run scoreboard players set .spleef currentGame 0
-execute if score $gameActive spleef matches 1 run scoreboard players set .spleef currentGame 1
+execute if score .gameActive sp_main matches 0 run scoreboard players set .spleef currentGame 0
+execute if score .gameActive sp_main matches 1 run scoreboard players set .spleef currentGame 1
 execute if score !gameActive race matches 0 run scoreboard players set .race currentGame 0
 execute if score !gameActive race matches 1 run scoreboard players set .race currentGame 1
 execute if score ?gameActive blockParty matches 0 run scoreboard players set .blockParty currentGame 0
@@ -16,9 +16,9 @@ execute if score ~gameActive hallsCore matches 0 run scoreboard players set .hal
 execute if score ~gameActive hallsCore matches 1 run scoreboard players set .halls currentGame 1
 
 # manage lobby when games are inactive
-execute if score $gameActive spleef matches 0 if score !gameActive race matches 0 if score ~gameActive hallsCore matches 0 if score ?gameActive blockParty matches 0 if score +gameActive tbCore matches 0 run spawnpoint @a[tag=!lobbyPVP] 1000 28 -6000
-execute if score $gameActive spleef matches 0 if score !gameActive race matches 0 if score ~gameActive hallsCore matches 0 if score ?gameActive blockParty matches 0 if score +gameActive tbCore matches 0 run setworldspawn 1000 28 -6000
-execute if score $gameActive spleef matches 0 if score !gameActive race matches 0 if score ~gameActive hallsCore matches 0 if score ?gameActive blockParty matches 0 if score +gameActive tbCore matches 0 run scoreboard players set .lobby currentGame 1
+execute if score .gameActive sp_main matches 0 if score !gameActive race matches 0 if score ~gameActive hallsCore matches 0 if score ?gameActive blockParty matches 0 if score +gameActive tbCore matches 0 run spawnpoint @a[tag=!lobbyPVP] 1000 28 -6000
+execute if score .gameActive sp_main matches 0 if score !gameActive race matches 0 if score ~gameActive hallsCore matches 0 if score ?gameActive blockParty matches 0 if score +gameActive tbCore matches 0 run setworldspawn 1000 28 -6000
+execute if score .gameActive sp_main matches 0 if score !gameActive race matches 0 if score ~gameActive hallsCore matches 0 if score ?gameActive blockParty matches 0 if score +gameActive tbCore matches 0 run scoreboard players set .lobby currentGame 1
 
 # lobby nextgame
 execute if score .lobby currentGame matches 1 if score .eventActive currentGame matches 1 run scoreboard players remove .nextGame currentGame 1
@@ -30,9 +30,6 @@ xp set @a 0 levels
 xp set @a 0 points
 
 # permanant bossbar type beat
-bossbar set minecraft:spleefroundcount players @a
-bossbar set minecraft:spleefshrinkwarn players @a
-bossbar set minecraft:spleefshrinkactual players @a
 bossbar set minecraft:racetimer players @a
 
 # tagging player system
@@ -82,18 +79,18 @@ execute as @a[tag=br_rcNA] if score @s br_rcno matches 1 run tag @s add br_rcno
 execute as @a[tag=br_rcNA] if score @s br_rcno matches 1 run trigger br_rcyes add 0
 execute as @a[tag=br_rcNA] if score @s br_rcno matches 1 run tag @s remove br_rcNA
 
-# playersOnline (players will have a score of 1 when offline, 0 when online)
-execute as @a[scores={playersOnline=1..},team=!Admin] if score .lobby currentGame matches 1 run tp @s 1000.5 28 -6000.5 0 5
-execute as @a[scores={playersOnline=1..},team=!Admin] run gamemode adventure @s
-execute as @a[scores={playersOnline=1..},team=!Admin] run clear @s
-execute as @a[scores={playersOnline=1..}] if score .spleef currentGame matches 1 run tp @s -496.5 66 -459.5 0 5
-execute as @a[scores={playersOnline=1..}] if score .sg currentGame matches 1 run tp @s -1983.5 133 -1983.5 0 5
-execute as @a[tag=!player,scores={playersOnline=1..}] if score .blockParty currentGame matches 1 run tp @s -2000.5 61 3023.5 facing entity @e[limit=1,sort=nearest,name="?midL"]
-execute as @a[team=Red,scores={playersOnline=1..}] if score .blockParty currentGame matches 1 run tp @s -2018.5 62 3018.5 facing entity @e[limit=1,sort=nearest,name="?midL"]
-execute as @a[team=Blue,scores={playersOnline=1..}] if score .blockParty currentGame matches 1 run tp @s -1982.5 62 2982.5 facing entity @e[limit=1,sort=nearest,name="?midL"]
-execute as @a[team=Green,scores={playersOnline=1..}] if score .blockParty currentGame matches 1 run tp @s -2018.5 62 2982.5 facing entity @e[limit=1,sort=nearest,name="?midL"]
-execute as @a[team=Yellow,scores={playersOnline=1..}] if score .blockParty currentGame matches 1 run tp @s -1982.5 62 3018.5 facing entity @e[limit=1,sort=nearest,name="?midL"]
-execute as @a[scores={playersOnline=1..}] run scoreboard players set @s playersOnline 0
+# br_online (players will have a score of 1 when offline, 0 when online)
+execute as @a[scores={br_online=1..},team=!Admin] if score .lobby currentGame matches 1 run tp @s 1000.5 28 -6000.5 0 5
+execute as @a[scores={br_online=1..},team=!Admin] run gamemode adventure @s
+execute as @a[scores={br_online=1..},team=!Admin] run clear @s
+execute as @a[scores={br_online=1..}] if score .spleef currentGame matches 1 run tp @s -496.5 66 -459.5 0 5
+execute as @a[scores={br_online=1..}] if score .sg currentGame matches 1 run tp @s -1983.5 133 -1983.5 0 5
+execute as @a[tag=!player,scores={br_online=1..}] if score .blockParty currentGame matches 1 run tp @s -2000.5 61 3023.5 facing entity @e[limit=1,sort=nearest,name="?midL"]
+execute as @a[team=Red,scores={br_online=1..}] if score .blockParty currentGame matches 1 run tp @s -2018.5 62 3018.5 facing entity @e[limit=1,sort=nearest,name="?midL"]
+execute as @a[team=Blue,scores={br_online=1..}] if score .blockParty currentGame matches 1 run tp @s -1982.5 62 2982.5 facing entity @e[limit=1,sort=nearest,name="?midL"]
+execute as @a[team=Green,scores={br_online=1..}] if score .blockParty currentGame matches 1 run tp @s -2018.5 62 2982.5 facing entity @e[limit=1,sort=nearest,name="?midL"]
+execute as @a[team=Yellow,scores={br_online=1..}] if score .blockParty currentGame matches 1 run tp @s -1982.5 62 3018.5 facing entity @e[limit=1,sort=nearest,name="?midL"]
+execute as @a[scores={br_online=1..}] run scoreboard players set @s br_online 0
 
 # constant yCos (yPosition) tracker, can be used for multiple games
 execute as @a store result score @s yCos run data get entity @s Pos[1]
@@ -102,7 +99,7 @@ execute as @a store result score @s yCos run data get entity @s Pos[1]
 effect clear @a[tag=noNV] night_vision
 
 # kills games when nobody is online
-execute unless score .users teamCheck matches 1.. if score $gameActive spleef matches 1 run scoreboard objectives add killGames dummy
+execute unless score .users teamCheck matches 1.. if score .gameActive sp_main matches 1 run scoreboard objectives add killGames dummy
 execute unless score .users teamCheck matches 1.. if score !gameActive race matches 1 run scoreboard objectives add killGames dummy
 execute unless score .users teamCheck matches 1.. if score ~gameActive sg matches 1 run scoreboard objectives add killGames dummy
 execute unless score .users teamCheck matches 1.. if score ?gameActive blockParty matches 1 run scoreboard objectives add killGames dummy
@@ -136,7 +133,7 @@ execute if score .lobby currentGame matches 1 if score !lobbyEff currentGame mat
 tag @a[x=993.5,dx=13,y=30,dy=4,z=-5969.5,dz=13] add lobbyPVP
 spawnpoint @a[tag=lobbyPVP] 1000 28 -5973 0
 title @a[tag=lobbyPVP] times 0 100 2
-title @a[tag=lobbyPVP] actionbar {"text":"You in the slap box, slap box","color":"gold"}
+title @a[tag=lobbyPVP] actionbar {"text":"You in the slap box","color":"gold"}
 effect clear @a[tag=lobbyPVP] saturation
 effect clear @a[tag=lobbyPVP] weakness
 item replace entity @a[tag=lobbyPVP,nbt=!{Inventory:[{id:"minecraft:stick"}]}] hotbar.0 with stick{display:{Name:'[{"text":"Kinda sticky...","italic":false}]'},Enchantments:[{id:"minecraft:knockback",lvl:2}],HideFlags:27}
@@ -152,7 +149,7 @@ execute as @a[tag=!lobbyPVP] run clear @s stick{display:{Name:'[{"text":"Kinda s
 
 
 # spleeftick
-execute if score $gameActive spleef matches 1 run function main:spleef/sptick
+execute if score .gameActive sp_main matches 1 run function main:spleef/tick
 
 # racetick
 execute if score !gameActive race matches 1 run function main:race/racetick

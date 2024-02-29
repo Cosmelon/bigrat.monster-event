@@ -15,4 +15,4 @@ title @a[tag=player] actionbar {"text":"You got tools!","color":"gold"}
 title @a[tag=!player] actionbar {"text":"Tools given!","color":"gold"}
 
 # tools given score
-scoreboard players set $toolsGiven spleef 1
+scoreboard players set .tools sp_main 1

@@ -9,6 +9,7 @@
 **bigrat.monster-event/poi/
 **bigrat.monster-event/region/
 **bigrat.monster-event/stats/
+**bigrat.monster-event/datapacks/bukkit/
 
 # ignores .mca
 *.mca

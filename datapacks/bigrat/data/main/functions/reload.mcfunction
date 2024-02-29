@@ -4,7 +4,7 @@
 scoreboard objectives add currentGame dummy
 scoreboard objectives add yCos dummy
 scoreboard objectives add teamCheck dummy
-scoreboard objectives add playersOnline minecraft.custom:leave_game
+scoreboard objectives add br_online minecraft.custom:leave_game
 scoreboard objectives add indivScore dummy
 scoreboard objectives add teamScores dummy
 
@@ -58,5 +58,5 @@ team modify Spectator prefix {"text":"[Spectator] ","color":"gray"}
 team modify Spectator friendlyFire false
 
 # return to lobby option
-tellraw @a [{"text":"[","color":"dark_gray"},{"text":"bigrat.monster","color":"gold"},{"text":"]","color":"dark_gray"},{"text":" » ","color":"gray"},{"text":"Main pack loaded!","color":"white"}]
+tellraw @a [{"text":"[","color":"dark_gray"},{"text":"bigrat","color":"gold"},{"text":"]","color":"dark_gray"},{"text":" » ","color":"gray"},{"text":"Main pack loaded!","color":"white"}]
 tellraw @a[tag=admin] [{"text":"[Reload again]","color":"gold","clickEvent":{"action":"run_command","value":"/reload confirm"}},{"text":"    [Return to lobby]","color":"aqua","clickEvent":{"action":"run_command","value":"/function main:returnlobby"}}]

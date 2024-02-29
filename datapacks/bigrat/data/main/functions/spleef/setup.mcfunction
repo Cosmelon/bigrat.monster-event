@@ -12,7 +12,6 @@ title @a actionbar ""
 title @a times 0 25 0
 
 # teleport players to box
-gamerule sendCommandFeedback false
 gamemode adventure @a[tag=player]
 gamemode spectator @a[tag=!player]
 # make this differential tp in future
@@ -28,52 +27,73 @@ clear @a[team=!Admin]
 kill @e[type=item]
 effect clear @a
 
+# preserve round count
+scoreboard objectives add sp_round dummy
+scoreboard players operation .round sp_round = .round sp_main
+# remove scoreboards
+scoreboard objectives remove sp_main
+scoreboard objectives remove sp_deaths
+scoreboard objectives remove sp_balldata
+scoreboard objectives remove sp_snowball
+scoreboard objectives remove sp_border
+scoreboard objectives remove sp_numsb
+scoreboard objectives remove sp_numsblock
 # add scoreboards
-scoreboard objectives add spleef dummy
-scoreboard objectives add spleefDeaths deathCount
-scoreboard objectives add spleef_sb dummy
-scoreboard objectives add spleefSnowBall minecraft.mined:minecraft.snow_block
-scoreboard objectives add spleefBorder dummy
+scoreboard objectives add sp_main dummy
+scoreboard objectives add sp_deaths deathCount
+scoreboard objectives add sp_balldata dummy
+scoreboard objectives add sp_snowball minecraft.mined:minecraft.snow_block
+scoreboard objectives add sp_border dummy
 scoreboard objectives add sp_numsb dummy
 scoreboard objectives add sp_numsblock dummy
+#preserve round count pt2
+scoreboard players operation .round sp_main = .round sp_round
+scoreboard objectives remove sp_round
 
 # reset scoreboards
-execute if score $round spleef matches 2.. run scoreboard players set $countDown spleef 160
-execute unless score $round spleef matches 2.. run scoreboard players set $countDown spleef 900
-scoreboard players set $tick spleefBorder 0
-scoreboard players set $sec spleefBorder 30
-scoreboard players set $shrinkNum spleefBorder 0
-scoreboard players set $shrinkTimer spleefBorder -1
-scoreboard players set $shrinkActual spleefBorder 0
-scoreboard players set $shrink1Break spleefBorder 0
-scoreboard players set $shrink2Break spleefBorder 0
-scoreboard players set $shrink3Break spleefBorder 0
-execute unless score $round spleef matches 1.. run scoreboard players set $round spleef 1
+execute if score .round sp_main matches 2.. run scoreboard players set .countDown sp_main 160
+execute unless score .round sp_main matches 2.. run scoreboard players set .countDown sp_main 900
+scoreboard players set .tick sp_border 0
+scoreboard players set .sec sp_border 30
+scoreboard players set .shrinkNum sp_border 0
+scoreboard players set .shrinkTimer sp_border -1
+scoreboard players set .shrinkActual sp_border 0
+scoreboard players set .shrink1Break sp_border 0
+scoreboard players set .shrink2Break sp_border 0
+scoreboard players set .shrink3Break sp_border 0
+execute unless score .round sp_main matches 1.. run scoreboard players set .round sp_main 1
 schedule function main:spleef/border/s1warn 95s replace
 schedule function main:spleef/border/s2warn 170s replace
 schedule function main:spleef/border/s3warn 250s replace
 
 # give shovels and kb
-execute if score $round spleef matches 1 run schedule function main:spleef/shovelsandkb 55s replace
-execute if score $round spleef matches 2.. run schedule function main:spleef/shovelsandkb 20s replace
-scoreboard players set $toolsGiven spleef 0
+execute if score .round sp_main matches 1 run schedule function main:spleef/tools 55s replace
+execute if score .round sp_main matches 2.. run schedule function main:spleef/tools 20s replace
+scoreboard players set .tools sp_main 0
 
 # reset spleefDeaths for everyone
-scoreboard players reset * spleefDeaths
+scoreboard players reset * sp_deaths
 
 # bossbar visible
-execute if score $round spleef matches 2.. run bossbar set minecraft:spleefroundcount visible true
-bossbar set minecraft:spleefshrinkwarn visible false
-bossbar set minecraft:spleefshrinkactual visible false
+bossbar add main:sp_round {"text":"Round: ","color":"blue","bold":true}
+bossbar set main:sp_round color blue
+bossbar set main:sp_round max 3
+execute if score .round sp_main matches 2.. run bossbar set main:sp_round visible true
+bossbar set main:sp_shrinkwarn visible false
+#shrinkactual
+bossbar add main:sp_shrinkactual {"text":"Shrink Progress:","color":"aqua","bold":true}
+bossbar set main:sp_shrinkactual max 400
+bossbar set main:sp_shrinkactual color green
+bossbar set main:sp_shrinkactual visible false
 
 # reset notifs
-scoreboard players set $notifRedDead spleef 0
-scoreboard players set $notifBlueDead spleef 0
-scoreboard players set $notifGreenDead spleef 0
-scoreboard players set $notifYellowDead spleef 0
+scoreboard players set .notifRed sp_main 0
+scoreboard players set .notifBlue sp_main 0
+scoreboard players set .notifGreen sp_main 0
+scoreboard players set .notifYellow sp_main 0
 
 # border
 worldborder center -497 -461
 worldborder set 69 0
 
-scoreboard players set $gameActive spleef 1
+scoreboard players set .gameActive sp_main 1

@@ -117,14 +117,18 @@ scoreboard players set .tomb currentGame 0
 scoreboard players set .brawl currentGame 0
 
 # reset stuff for spleef
-scoreboard objectives remove spleef
-scoreboard objectives remove spleefDeaths
-scoreboard objectives remove spleef_sb
-scoreboard objectives remove spleefSnowBall
-scoreboard objectives remove spleefBorder
+scoreboard objectives remove sp_main
+scoreboard objectives remove sp_deaths
+scoreboard objectives remove sp_balldata
+scoreboard objectives remove sp_snowball
+scoreboard objectives remove sp_sb
+scoreboard objectives remove sp_border
 scoreboard objectives remove sp_numsb
 scoreboard objectives remove sp_numsblock
-bossbar set minecraft:spleefroundcount visible false
+scoreboard objectives remove sp_round
+bossbar remove main:sp_round
+bossbar remove main:sp_shrinkwarn
+bossbar remove main:sp_shrinkactual
 schedule clear main:spleef/border/removetop
 schedule clear main:spleef/shovelsandkb
 

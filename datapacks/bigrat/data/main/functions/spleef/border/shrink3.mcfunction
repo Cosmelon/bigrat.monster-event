@@ -5,12 +5,12 @@
 
 title @a title {"text":"Border shrinking!","color":"dark_red"}
 worldborder set 17 20
-scoreboard players set $shrinkActual spleefBorder 400
-scoreboard players set $shrink3Break spleefBorder 400
-scoreboard players set $tick spleefBorder 0
-scoreboard players set $sec spleefBorder 30
+scoreboard players set .shrinkActual sp_border 400
+scoreboard players set .shrink3Break sp_border 400
+scoreboard players set .tick sp_border 0
+scoreboard players set .sec sp_border 30
 playsound minecraft:block.note_block.banjo master @a ^0 ^ ^ 1 2.000000 1
-bossbar set minecraft:spleefshrinkactual visible true
+bossbar set main:sp_shrinkactual visible true
 schedule function main:cleartitle 3s replace
 schedule function main:spleef/border/removetop 30s replace
 schedule function main:spleef/border/turnoffactual 20s replace

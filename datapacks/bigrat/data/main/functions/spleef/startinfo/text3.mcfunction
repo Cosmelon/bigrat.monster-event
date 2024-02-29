@@ -11,9 +11,9 @@ tellraw @a [{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"trans
 tellraw @a ""
 tellraw @a [{"translate":"space.3"},{"text":"get ogar'd","color":"gold","bold":true}]
 tellraw @a ""
-tellraw @a [{"translate":"space.3"},{"text":"Outliving other players will earn you 1 point","color":"gray"}]
-tellraw @a [{"translate":"space.5"},{"text":"Winning the round will get you 10 points"}]
+tellraw @a [{"translate":"space.5"},{"text":"+1 point","color":"green"},{"text":" for each player you outlive"}]
+tellraw @a [{"translate":"space.5"},{"text":"+10 points","color":"green"},{"text":" to each member of the winning team."}]
 tellraw @a ""
-tellraw @a [{"translate":"space.3"},{"text":"There will be two shinks before a ","color":"gray"},{"text":"deathmatch","color":"red"}]
+tellraw @a [{"translate":"space.5"},{"text":"The play area will shrink twice before the "},{"text":"deathmatch","color":"red"},{"text":".","color":"gray"}]
 tellraw @a ""
 tellraw @a [{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"translate":"space.-1"},{"text":"\uE004"}]
