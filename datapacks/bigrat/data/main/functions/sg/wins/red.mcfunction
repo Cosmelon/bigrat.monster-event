@@ -48,5 +48,5 @@ kill @e[type=item]
 effect clear @a[team=!Admin]
 
 # solution to infinite game repeat problem
-execute if score .red br_teamCheck matches 1.. if score .blue br_teamCheck matches 0 if score .green br_teamCheck matches 0 if score .yellow br_teamCheck matches 0 run function main:sg/killsg
-execute if score .red br_teamCheck matches 0 if score .blue br_teamCheck matches 0 if score .green br_teamCheck matches 0 if score .yellow br_teamCheck matches 0 run function main:sg/killsg
+execute if score .red br_tcheck matches 1.. if score .blue br_tcheck matches 0 if score .green br_tcheck matches 0 if score .yellow br_tcheck matches 0 run function main:sg/killsg
+execute if score .red br_tcheck matches 0 if score .blue br_tcheck matches 0 if score .green br_tcheck matches 0 if score .yellow br_tcheck matches 0 run function main:sg/killsg

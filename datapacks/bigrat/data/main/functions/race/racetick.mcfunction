@@ -104,24 +104,24 @@ execute as @a[gamemode=adventure,scores={raceMilli=..9,raceSec=10..,raceMin=10..
 execute as @a[gamemode=adventure,scores={raceMilli=10..99,raceSec=10..,raceMin=10..}] run title @s actionbar [{"text":"Lap: ","color":"gold"},{"color":"green","score":{"name":"@s","objective":"raceLap"}},{"text":"/3   ","color":"green"},{"text":"Time: ","color":"gold"},{"score":{"name": "@s","objective":"raceMin"},"color":"green"},{"text":":","color":"green"},{"score":{"name":"@s","objective":"raceSec"},"color":"green"},{"text":".","color":"green"},{"score":{"name":"@s","objective":"raceMilli"},"color":"green"}]
 
 # scoring
-execute unless score .red br_teamCheck matches 0 store result score !doneRed raceScores if entity @a[team=Red,scores={raceLap=4..}]
-execute unless score .blue br_teamCheck matches 0 store result score !doneBlue raceScores if entity @a[team=Blue,scores={raceLap=4..}]
-execute unless score .green br_teamCheck matches 0 store result score !doneGreen raceScores if entity @a[team=Green,scores={raceLap=4..}]
-execute unless score .yellow br_teamCheck matches 0 store result score !doneYellow raceScores if entity @a[team=Yellow,scores={raceLap=4..}]
+execute unless score .red br_tcheck matches 0 store result score !doneRed raceScores if entity @a[team=Red,scores={raceLap=4..}]
+execute unless score .blue br_tcheck matches 0 store result score !doneBlue raceScores if entity @a[team=Blue,scores={raceLap=4..}]
+execute unless score .green br_tcheck matches 0 store result score !doneGreen raceScores if entity @a[team=Green,scores={raceLap=4..}]
+execute unless score .yellow br_tcheck matches 0 store result score !doneYellow raceScores if entity @a[team=Yellow,scores={raceLap=4..}]
 # team finish bonus
 #maybe add a point bonus in the future for specifically teams who don't come last?
-execute unless score .red br_teamCheck matches 0 if score !doneRed raceScores = .red br_teamCheck if score !redFinish raceScores matches 0 run scoreboard players add @a[team=Red] indivScore 10
-execute unless score .red br_teamCheck matches 0 if score !doneRed raceScores = .red br_teamCheck if score !redFinish raceScores matches 0 run tellraw @a[team=Red] {"text":"+10 points (team finish)","color":"green"}
-execute unless score .red br_teamCheck matches 0 if score !doneRed raceScores = .red br_teamCheck if score !redFinish raceScores matches 0 run scoreboard players set !redFinish raceScores 1
-execute unless score .blue br_teamCheck matches 0 if score !doneBlue raceScores = .blue br_teamCheck if score !blueFinish raceScores matches 0 run scoreboard players add @a[team=Blue] indivScore 10
-execute unless score .blue br_teamCheck matches 0 if score !doneBlue raceScores = .blue br_teamCheck if score !blueFinish raceScores matches 0 run tellraw @a[team=Blue] {"text":"+10 points (team finish)","color":"green"}
-execute unless score .blue br_teamCheck matches 0 if score !doneBlue raceScores = .blue br_teamCheck if score !blueFinish raceScores matches 0 run scoreboard players set !blueFinish raceScores 1
-execute unless score .green br_teamCheck matches 0 if score !doneGreen raceScores = .green br_teamCheck if score !greenFinish raceScores matches 0 run scoreboard players add @a[team=Green] indivScore 10
-execute unless score .green br_teamCheck matches 0 if score !doneGreen raceScores = .green br_teamCheck if score !greenFinish raceScores matches 0 run tellraw @a[team=Green] {"text":"+10 points (team finish)","color":"green"}
-execute unless score .green br_teamCheck matches 0 if score !doneGreen raceScores = .green br_teamCheck if score !greenFinish raceScores matches 0 run scoreboard players set !greenFinish raceScores 1
-execute unless score .yellow br_teamCheck matches 0 if score !doneYellow raceScores = .yellow br_teamCheck if score !yellowFinish raceScores matches 0 run scoreboard players add @a[team=Yellow] indivScore 10
-execute unless score .yellow br_teamCheck matches 0 if score !doneYellow raceScores = .yellow br_teamCheck if score !yellowFinish raceScores matches 0 run tellraw @a[team=Yellow] {"text":"+10 points (team finish)","color":"green"}
-execute unless score .yellow br_teamCheck matches 0 if score !doneYellow raceScores = .yellow br_teamCheck if score !yellowFinish raceScores matches 0 run scoreboard players set !yellowFinish raceScores 1
+execute unless score .red br_tcheck matches 0 if score !doneRed raceScores = .red br_tcheck if score !redFinish raceScores matches 0 run scoreboard players add @a[team=Red] indivScore 10
+execute unless score .red br_tcheck matches 0 if score !doneRed raceScores = .red br_tcheck if score !redFinish raceScores matches 0 run tellraw @a[team=Red] {"text":"+10 points (team finish)","color":"green"}
+execute unless score .red br_tcheck matches 0 if score !doneRed raceScores = .red br_tcheck if score !redFinish raceScores matches 0 run scoreboard players set !redFinish raceScores 1
+execute unless score .blue br_tcheck matches 0 if score !doneBlue raceScores = .blue br_tcheck if score !blueFinish raceScores matches 0 run scoreboard players add @a[team=Blue] indivScore 10
+execute unless score .blue br_tcheck matches 0 if score !doneBlue raceScores = .blue br_tcheck if score !blueFinish raceScores matches 0 run tellraw @a[team=Blue] {"text":"+10 points (team finish)","color":"green"}
+execute unless score .blue br_tcheck matches 0 if score !doneBlue raceScores = .blue br_tcheck if score !blueFinish raceScores matches 0 run scoreboard players set !blueFinish raceScores 1
+execute unless score .green br_tcheck matches 0 if score !doneGreen raceScores = .green br_tcheck if score !greenFinish raceScores matches 0 run scoreboard players add @a[team=Green] indivScore 10
+execute unless score .green br_tcheck matches 0 if score !doneGreen raceScores = .green br_tcheck if score !greenFinish raceScores matches 0 run tellraw @a[team=Green] {"text":"+10 points (team finish)","color":"green"}
+execute unless score .green br_tcheck matches 0 if score !doneGreen raceScores = .green br_tcheck if score !greenFinish raceScores matches 0 run scoreboard players set !greenFinish raceScores 1
+execute unless score .yellow br_tcheck matches 0 if score !doneYellow raceScores = .yellow br_tcheck if score !yellowFinish raceScores matches 0 run scoreboard players add @a[team=Yellow] indivScore 10
+execute unless score .yellow br_tcheck matches 0 if score !doneYellow raceScores = .yellow br_tcheck if score !yellowFinish raceScores matches 0 run tellraw @a[team=Yellow] {"text":"+10 points (team finish)","color":"green"}
+execute unless score .yellow br_tcheck matches 0 if score !doneYellow raceScores = .yellow br_tcheck if score !yellowFinish raceScores matches 0 run scoreboard players set !yellowFinish raceScores 1
 execute if score @a[limit=1] raceLap matches 4.. run gamerule sendCommandFeedback false
 
 #finish
@@ -152,7 +152,7 @@ bossbar set minecraft:racegateshut players @a[tag=gate]
 
 # game end condition when all players have finished
 execute store result score !finished racePos if entity @a[scores={raceLap=4..}]
-execute if score !finished racePos = .players br_teamCheck run function main:race/finish
+execute if score !finished racePos = .players br_tcheck run function main:race/finish
 
 # spectator anti-spoil
 execute positioned 310 100 0 run tp @a[team=!Admin,gamemode=spectator,distance=175..] 310 100 0

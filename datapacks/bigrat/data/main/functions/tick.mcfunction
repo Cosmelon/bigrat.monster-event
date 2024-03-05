@@ -41,29 +41,29 @@ tag @a[team=Admin] remove player
 tag @a[team=Spectator] remove player
 team join Spectator @a[team=]
 
-# br_teamCheck
-execute store result score .red br_teamCheck if entity @a[team=Red]
-execute store result score .blue br_teamCheck if entity @a[team=Blue]
-execute store result score .green br_teamCheck if entity @a[team=Green]
-execute store result score .yellow br_teamCheck if entity @a[team=Yellow]
+# br_tcheck
+execute store result score .red br_tcheck if entity @a[team=Red]
+execute store result score .blue br_tcheck if entity @a[team=Blue]
+execute store result score .green br_tcheck if entity @a[team=Green]
+execute store result score .yellow br_tcheck if entity @a[team=Yellow]
 #validPlay -- determines if there exist at least two teams with > 0 players
-execute if score .red br_teamCheck matches 0 if score .blue br_teamCheck matches 0 if score .green br_teamCheck matches 0 if score .yellow br_teamCheck matches 0 run scoreboard players set .validPlay br_teamCheck 0
-execute if score .red br_teamCheck matches 1.. if score .blue br_teamCheck matches 0 if score .green br_teamCheck matches 0 if score .yellow br_teamCheck matches 0 run scoreboard players set .validPlay br_teamCheck 0
-execute if score .red br_teamCheck matches 0 if score .blue br_teamCheck matches 1.. if score .green br_teamCheck matches 0 if score .yellow br_teamCheck matches 0 run scoreboard players set .validPlay br_teamCheck 0
-execute if score .red br_teamCheck matches 0 if score .blue br_teamCheck matches 0 if score .green br_teamCheck matches 1.. if score .yellow br_teamCheck matches 0 run scoreboard players set .validPlay br_teamCheck 0
-execute if score .red br_teamCheck matches 0 if score .blue br_teamCheck matches 0 if score .green br_teamCheck matches 0 if score .yellow br_teamCheck matches 1.. run scoreboard players set .validPlay br_teamCheck 0
+execute if score .red br_tcheck matches 0 if score .blue br_tcheck matches 0 if score .green br_tcheck matches 0 if score .yellow br_tcheck matches 0 run scoreboard players set .validPlay br_tcheck 0
+execute if score .red br_tcheck matches 1.. if score .blue br_tcheck matches 0 if score .green br_tcheck matches 0 if score .yellow br_tcheck matches 0 run scoreboard players set .validPlay br_tcheck 0
+execute if score .red br_tcheck matches 0 if score .blue br_tcheck matches 1.. if score .green br_tcheck matches 0 if score .yellow br_tcheck matches 0 run scoreboard players set .validPlay br_tcheck 0
+execute if score .red br_tcheck matches 0 if score .blue br_tcheck matches 0 if score .green br_tcheck matches 1.. if score .yellow br_tcheck matches 0 run scoreboard players set .validPlay br_tcheck 0
+execute if score .red br_tcheck matches 0 if score .blue br_tcheck matches 0 if score .green br_tcheck matches 0 if score .yellow br_tcheck matches 1.. run scoreboard players set .validPlay br_tcheck 0
 
-execute if score .red br_teamCheck matches 1.. if score .blue br_teamCheck matches 1.. run scoreboard players set .validPlay br_teamCheck 1
-execute if score .red br_teamCheck matches 1.. if score .green br_teamCheck matches 1.. run scoreboard players set .validPlay br_teamCheck 1
-execute if score .red br_teamCheck matches 1.. if score .yellow br_teamCheck matches 1.. run scoreboard players set .validPlay br_teamCheck 1
-execute if score .blue br_teamCheck matches 1.. if score .green br_teamCheck matches 1.. run scoreboard players set .validPlay br_teamCheck 1
-execute if score .blue br_teamCheck matches 1.. if score .yellow br_teamCheck matches 1.. run scoreboard players set .validPlay br_teamCheck 1
-execute if score .green br_teamCheck matches 1.. if score .yellow br_teamCheck matches 1.. run scoreboard players set .validPlay br_teamCheck 1
+execute if score .red br_tcheck matches 1.. if score .blue br_tcheck matches 1.. run scoreboard players set .validPlay br_tcheck 1
+execute if score .red br_tcheck matches 1.. if score .green br_tcheck matches 1.. run scoreboard players set .validPlay br_tcheck 1
+execute if score .red br_tcheck matches 1.. if score .yellow br_tcheck matches 1.. run scoreboard players set .validPlay br_tcheck 1
+execute if score .blue br_tcheck matches 1.. if score .green br_tcheck matches 1.. run scoreboard players set .validPlay br_tcheck 1
+execute if score .blue br_tcheck matches 1.. if score .yellow br_tcheck matches 1.. run scoreboard players set .validPlay br_tcheck 1
+execute if score .green br_tcheck matches 1.. if score .yellow br_tcheck matches 1.. run scoreboard players set .validPlay br_tcheck 1
 
 #all user track
-execute store result score .users br_teamCheck if entity @a
+execute store result score .users br_tcheck if entity @a
 #all player track
-execute store result score .players br_teamCheck if entity @a[tag=player]
+execute store result score .players br_tcheck if entity @a[tag=player]
 #ready player track
 execute store result score .ready br_rcdata if entity @a[tag=br_rcyes]
 execute store result score .nready br_rcdata if entity @a[tag=br_rcno]
@@ -99,11 +99,11 @@ execute as @a store result score @s br_yCos run data get entity @s Pos[1]
 effect clear @a[tag=noNV] night_vision
 
 # kills games when nobody is online
-execute unless score .users br_teamCheck matches 1.. if score .gameActive sp_main matches 1 run scoreboard objectives add killGames dummy
-execute unless score .users br_teamCheck matches 1.. if score !gameActive race matches 1 run scoreboard objectives add killGames dummy
-execute unless score .users br_teamCheck matches 1.. if score ~gameActive sg matches 1 run scoreboard objectives add killGames dummy
-execute unless score .users br_teamCheck matches 1.. if score ?gameActive blockParty matches 1 run scoreboard objectives add killGames dummy
-execute unless score .users br_teamCheck matches 1.. run scoreboard players set .main killGames 1
+execute unless score .users br_tcheck matches 1.. if score .gameActive sp_main matches 1 run scoreboard objectives add killGames dummy
+execute unless score .users br_tcheck matches 1.. if score !gameActive race matches 1 run scoreboard objectives add killGames dummy
+execute unless score .users br_tcheck matches 1.. if score ~gameActive sg matches 1 run scoreboard objectives add killGames dummy
+execute unless score .users br_tcheck matches 1.. if score ?gameActive blockParty matches 1 run scoreboard objectives add killGames dummy
+execute unless score .users br_tcheck matches 1.. run scoreboard players set .main killGames 1
 execute if score .main killGames matches 1.. run function main:spleef/killspleef
 execute if score .main killGames matches 1.. run function main:race/killrace
 execute if score .main killGames matches 1.. run function main:sg/killsg

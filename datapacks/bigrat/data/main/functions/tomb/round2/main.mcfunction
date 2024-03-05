@@ -38,21 +38,21 @@ execute positioned 5144.5 37 161.5 store result score +yellowR3 tbR2_PC if entit
 
 # wave start
 #red
-execute unless score .red br_teamCheck matches 0 if score +countDown tbR2 matches 0 positioned 5059.5 42 2.5 run function main:tomb/round2/red/r1_s
-execute unless score .red br_teamCheck matches 0 if score +redR2 tbR2_PC = .red br_teamCheck if score +wave tbR2_RedR2 matches 0 run function main:tomb/round2/red/r2_s
-execute unless score .red br_teamCheck matches 0 if score +redR3 tbR2_PC = .red br_teamCheck if score +wave tbR2_RedR3 matches 0 run function main:tomb/round2/red/r3_s
+execute unless score .red br_tcheck matches 0 if score +countDown tbR2 matches 0 positioned 5059.5 42 2.5 run function main:tomb/round2/red/r1_s
+execute unless score .red br_tcheck matches 0 if score +redR2 tbR2_PC = .red br_tcheck if score +wave tbR2_RedR2 matches 0 run function main:tomb/round2/red/r2_s
+execute unless score .red br_tcheck matches 0 if score +redR3 tbR2_PC = .red br_tcheck if score +wave tbR2_RedR3 matches 0 run function main:tomb/round2/red/r3_s
 #blue
-execute unless score .blue br_teamCheck matches 0 if score +countDown tbR2 matches 0 positioned 5059.5 42 55.5 run function main:tomb/round2/blue/r1_s
-execute unless score .blue br_teamCheck matches 0 if score +blueR2 tbR2_PC = .blue br_teamCheck if score +wave tbR2_BlueR2 matches 0 run function main:tomb/round2/blue/r2_s
-execute unless score .blue br_teamCheck matches 0 if score +blueR3 tbR2_PC = .blue br_teamCheck if score +wave tbR2_BlueR3 matches 0 run function main:tomb/round2/blue/r3_s
+execute unless score .blue br_tcheck matches 0 if score +countDown tbR2 matches 0 positioned 5059.5 42 55.5 run function main:tomb/round2/blue/r1_s
+execute unless score .blue br_tcheck matches 0 if score +blueR2 tbR2_PC = .blue br_tcheck if score +wave tbR2_BlueR2 matches 0 run function main:tomb/round2/blue/r2_s
+execute unless score .blue br_tcheck matches 0 if score +blueR3 tbR2_PC = .blue br_tcheck if score +wave tbR2_BlueR3 matches 0 run function main:tomb/round2/blue/r3_s
 #green
-execute unless score .green br_teamCheck matches 0 if score +countDown tbR2 matches 0 positioned 5059.5 42 108.5 run function main:tomb/round2/green/r1_s
-execute unless score .green br_teamCheck matches 0 if score +greenR2 tbR2_PC = .green br_teamCheck if score +wave tbR2_GreenR2 matches 0 run function main:tomb/round2/green/r2_s
-execute unless score .green br_teamCheck matches 0 if score +greenR3 tbR2_PC = .green br_teamCheck if score +wave tbR2_GreenR3 matches 0 run function main:tomb/round2/green/r3_s
+execute unless score .green br_tcheck matches 0 if score +countDown tbR2 matches 0 positioned 5059.5 42 108.5 run function main:tomb/round2/green/r1_s
+execute unless score .green br_tcheck matches 0 if score +greenR2 tbR2_PC = .green br_tcheck if score +wave tbR2_GreenR2 matches 0 run function main:tomb/round2/green/r2_s
+execute unless score .green br_tcheck matches 0 if score +greenR3 tbR2_PC = .green br_tcheck if score +wave tbR2_GreenR3 matches 0 run function main:tomb/round2/green/r3_s
 #yellow
-execute unless score .yellow br_teamCheck matches 0 if score +countDown tbR2 matches 0 positioned 5059.5 42 161.5 run function main:tomb/round2/yellow/r1_s
-execute unless score .yellow br_teamCheck matches 0 if score +yellowR2 tbR2_PC = .yellow br_teamCheck if score +wave tbR2_YellowR2 matches 0 run function main:tomb/round2/yellow/r2_s
-execute unless score .yellow br_teamCheck matches 0 if score +yellowR3 tbR2_PC = .yellow br_teamCheck if score +wave tbR2_YellowR3 matches 0 run function main:tomb/round2/yellow/r3_s
+execute unless score .yellow br_tcheck matches 0 if score +countDown tbR2 matches 0 positioned 5059.5 42 161.5 run function main:tomb/round2/yellow/r1_s
+execute unless score .yellow br_tcheck matches 0 if score +yellowR2 tbR2_PC = .yellow br_tcheck if score +wave tbR2_YellowR2 matches 0 run function main:tomb/round2/yellow/r2_s
+execute unless score .yellow br_tcheck matches 0 if score +yellowR3 tbR2_PC = .yellow br_tcheck if score +wave tbR2_YellowR3 matches 0 run function main:tomb/round2/yellow/r3_s
 
 ## manage OTHER tick files
 #red

@@ -82,7 +82,7 @@ execute if score ?stop bpTimer matches -99 if score ?colorTT bpTimer matches 5..
 #floor counter
 execute if score ?stop bpTimer matches -99 run scoreboard players add ?floorNum bpFloor 1
 execute store result score ?aliveAll blockParty if entity @a[tag=bpAlive]
-execute if score ?countDown blockParty matches ..0 run title @a actionbar [{"text":"Round: ","color":"gold"},{"score":{"name":"?floorNum","objective":"bpFloor"},"color":"aqua"},{"text":"     Players Alive: ","color":"gold"},{"score":{"name":"?aliveAll","objective":"blockParty"},"color":"aqua"},{"text":"/","color":"green"},{"score":{"name":".players","objective":"br_teamCheck"}}]
+execute if score ?countDown blockParty matches ..0 run title @a actionbar [{"text":"Round: ","color":"gold"},{"score":{"name":"?floorNum","objective":"bpFloor"},"color":"aqua"},{"text":"     Players Alive: ","color":"gold"},{"score":{"name":"?aliveAll","objective":"blockParty"},"color":"aqua"},{"text":"/","color":"green"},{"score":{"name":".players","objective":"br_tcheck"}}]
 
 # timer picker
 # the idea is that a random amount of time is picked after each elimination before it stops again

@@ -170,7 +170,7 @@ execute if score ~yellowCooldown halls_keys matches 1.. run scoreboard players r
 execute at @e[tag=halls_exit,type=armor_stand] run tag @a[tag=player,tag=hallsAlive,distance=..2] add halls_exit
 execute as @a[tag=halls_exit] run function main:halls/escape
 execute store result score ~escaped hallsCore if entity @a[tag=halls_escaped]
-execute if score ~escaped hallsCore = .players br_teamCheck run function main:halls/finish
+execute if score ~escaped hallsCore = .players br_tcheck run function main:halls/finish
 execute if score ~timeLeft hallsCore matches 0 run function main:halls/finish
 
 # finish game
