@@ -4,6 +4,28 @@ Adding a new feature:
     - create a branch with a relevant name
     - push it and it will be uploaded to the main server via GitHub Action
 
+Some basic documentation
+    - 4 player teams + Admin & Spectator
+    - all players on teams Red, Blue, Green, Yellow have the 'player' tag
+    - users with 'admin' tag can see specific debug messages in chat
+    - main:telemenu is the admin teleport panel, accessible with /op only
+    - all gametick functions are run from main:tick but are only active when their gameActive score == 1
+    - to return to the lobby, just use main:returnlobby in your win function and add specifics to main:lobby
+    - .<score> sb_scoreboard should be the format internal variables should be stored with
+    - individual game scoreboard objectives should be created when the game starts, erased when lobby is called
+        - these should also be named as <2 letter gamecode>_<descriptor>
+
+    - in elimination-based games, the start function must first check if .validPlay br_tcheck matches 1, 
+        otherwise game will loop uncontrollably
+    
+    br_bigrat (global/lobby)
+    sp_spleef
+    rc_race
+    sg_survivalgames
+    bp_blockparty
+    tb_tomb
+    hl_halls (backrooms)
+
 function template:
 # Description:
 # Author:

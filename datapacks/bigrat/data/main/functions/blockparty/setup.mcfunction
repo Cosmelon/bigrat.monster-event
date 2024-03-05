@@ -19,7 +19,7 @@ scoreboard players set #10000 bpConst 10000
 scoreboard players set #lcg bpConst 1103515245
 
 # set values for scoreboards
-scoreboard players set .lobby currentGame 0
+scoreboard players set .lobby br_cgame 0
 scoreboard players set ?gameActive blockParty 1
 scoreboard players add ?round blockParty 1
 scoreboard players set ?floorSwitch blockParty 0

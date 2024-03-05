@@ -10,6 +10,7 @@
 **bigrat.monster-event/region/
 **bigrat.monster-event/stats/
 **bigrat.monster-event/datapacks/bukkit/
+.vscode/
 
 # ignores .mca
 *.mca

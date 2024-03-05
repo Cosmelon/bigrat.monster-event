@@ -82,7 +82,7 @@ execute if score ?stop bpTimer matches -99 if score ?colorTT bpTimer matches 5..
 #floor counter
 execute if score ?stop bpTimer matches -99 run scoreboard players add ?floorNum bpFloor 1
 execute store result score ?aliveAll blockParty if entity @a[tag=bpAlive]
-execute if score ?countDown blockParty matches ..0 run title @a actionbar [{"text":"Round: ","color":"gold"},{"score":{"name":"?floorNum","objective":"bpFloor"},"color":"aqua"},{"text":"     Players Alive: ","color":"gold"},{"score":{"name":"?aliveAll","objective":"blockParty"},"color":"aqua"},{"text":"/","color":"green"},{"score":{"name":".players","objective":"teamCheck"}}]
+execute if score ?countDown blockParty matches ..0 run title @a actionbar [{"text":"Round: ","color":"gold"},{"score":{"name":"?floorNum","objective":"bpFloor"},"color":"aqua"},{"text":"     Players Alive: ","color":"gold"},{"score":{"name":"?aliveAll","objective":"blockParty"},"color":"aqua"},{"text":"/","color":"green"},{"score":{"name":".players","objective":"br_teamCheck"}}]
 
 # timer picker
 # the idea is that a random amount of time is picked after each elimination before it stops again
@@ -105,7 +105,7 @@ tag @a[tag=player,scores={bpDeaths=1..}] remove bpAlive
 
 
 # player death method
-kill @a[gamemode=adventure,tag=bpAlive,scores={yCos=40..46}]
+kill @a[gamemode=adventure,tag=bpAlive,scores={br_yCos=40..46}]
 gamemode spectator @a[scores={bpDeaths=1..}]
 execute as @a if score @s bpDeaths matches 1 run scoreboard players add @a[gamemode=adventure,tag=player,tag=bpAlive] indivScore 1
 execute as @a if score @s bpDeaths matches 1 run tellraw @a[gamemode=adventure,tag=player,tag=bpAlive] {"text":"+1 Invividual point (Survival)","color":"green"}
@@ -142,6 +142,6 @@ kill @e[type=item]
 kill @e[type=experience_orb]
 
 # killing players when they disconnect mid-game
-execute as @a[scores={playersOnline=1..},team=!Admin] run gamemode spectator @s
-execute as @a[scores={playersOnline=1..},tag=player] run scoreboard players set @s bpDeaths 1
-execute as @a[scores={playersOnline=1..},tag=player] run tellraw @s {"text":"You were killed because of a disconnect!","color":"dark_gray"}
+execute as @a[scores={br_online=1..},team=!Admin] run gamemode spectator @s
+execute as @a[scores={br_online=1..},tag=player] run scoreboard players set @s bpDeaths 1
+execute as @a[scores={br_online=1..},tag=player] run tellraw @s {"text":"You were killed because of a disconnect!","color":"dark_gray"}

@@ -16,7 +16,7 @@ gamerule doImmediateRespawn false
 gamerule reducedDebugInfo true
 
 # declare objectives
-scoreboard players set .halls currentGame 1
+scoreboard players set .halls br_cgame 1
 scoreboard objectives add hallsCore dummy
 scoreboard players set ~gameActive hallsCore 1
 scoreboard players set ~countDown hallsCore 1100

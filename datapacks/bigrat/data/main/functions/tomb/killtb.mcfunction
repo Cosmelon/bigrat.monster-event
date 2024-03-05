@@ -4,7 +4,7 @@
 # run from: <manual>
 
 # kills tomb
-scoreboard players set .tomb currentGame 0
+scoreboard players set .tomb br_cgame 0
 scoreboard players set +gameActive tbCore 0
 scoreboard players set +countDown tbCore 161
 scoreboard players set +rKActive tbCore 0

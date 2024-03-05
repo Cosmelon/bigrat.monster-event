@@ -6,7 +6,7 @@
 # get a state
 title @a title ""
 title @a subtitle ""
-scoreboard players set !lobbyEff currentGame 0
+scoreboard players set !lobbyEff br_cgame 0
 effect clear @a
 
 # debug

@@ -1,9 +1,9 @@
 # load
 
 # scoreboard remake
-scoreboard objectives add currentGame dummy
-scoreboard objectives add yCos dummy
-scoreboard objectives add teamCheck dummy
+scoreboard objectives add br_cgame dummy
+scoreboard objectives add br_yCos dummy
+scoreboard objectives add br_tcheck dummy
 scoreboard objectives add br_online minecraft.custom:leave_game
 scoreboard objectives add indivScore dummy
 scoreboard objectives add teamScores dummy

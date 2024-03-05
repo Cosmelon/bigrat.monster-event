@@ -1,7 +1,8 @@
 # all these commands setup spleef
 
 # lobby turn off
-scoreboard players set .lobby currentGame 0
+scoreboard players set .spleef br_cgame 1
+scoreboard players set .lobby br_cgame 0
 
 # reset arena floor
 function main:spleef/reloadfloor
@@ -79,6 +80,8 @@ bossbar add main:sp_round {"text":"Round: ","color":"blue","bold":true}
 bossbar set main:sp_round color blue
 bossbar set main:sp_round max 3
 execute if score .round sp_main matches 2.. run bossbar set main:sp_round visible true
+bossbar add main:sp_shrinkwarn ""
+bossbar set main:sp_shrinkwarn color red
 bossbar set main:sp_shrinkwarn visible false
 #shrinkactual
 bossbar add main:sp_shrinkactual {"text":"Shrink Progress:","color":"aqua","bold":true}

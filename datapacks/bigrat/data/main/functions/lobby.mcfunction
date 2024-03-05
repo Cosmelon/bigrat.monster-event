@@ -48,10 +48,10 @@ stopsound @a * entity.armor_stand.break
 
 # next game
 bossbar remove br:nextgame
-execute if score .eventActive currentGame matches 1 run bossbar add br:nextgame {"text":"Time Until Next Game:","color":"gold","bold":true}
+execute if score .eventactive br_cgame matches 1 run bossbar add br:nextgame {"text":"Time Until Next Game:","color":"gold","bold":true}
 bossbar set br:nextgame players @a
 bossbar set br:nextgame max 2400
-scoreboard players set .nextGame currentGame 2400
+scoreboard players set .nextGame br_cgame 2400
 bossbar set br:nextgame visible true
 
 # npc insurance
@@ -108,13 +108,13 @@ scoreboard players set .p14 indivMath -2147483648
 scoreboard players set .p15 indivMath -2147483648
 scoreboard players set .p16 indivMath -2147483648
 
-# currentGame scoreboard lobby pos set
-scoreboard players set .lobby currentGame 1
-scoreboard players set .spleef currentGame 0
-scoreboard players set .race currentGame 0
-scoreboard players set .blockParty currentGame 0
-scoreboard players set .tomb currentGame 0
-scoreboard players set .brawl currentGame 0
+# br_cgame scoreboard lobby pos set
+scoreboard players set .lobby br_cgame 1
+scoreboard players set .spleef br_cgame 0
+scoreboard players set .race br_cgame 0
+scoreboard players set .blockparty br_cgame 0
+scoreboard players set .tomb br_cgame 0
+scoreboard players set .brawl br_cgame 0
 
 # reset stuff for spleef
 scoreboard objectives remove sp_main

@@ -4,8 +4,8 @@
 # run from: <manual>
 
 # conditions set
-scoreboard players set .lobby currentGame 0
-scoreboard players set .tomb currentGame 1
+scoreboard players set .lobby br_cgame 0
+scoreboard players set .tomb br_cgame 1
 time set midnight
 clear @a
 effect clear @a

@@ -1,14 +1,7 @@
 # Description: spleef main tick file
 # Author: Cosmelon
 # Type: main tick
-# run from main:tick when $gameActive spleef matches 1
-
-# scoreboards associated with spleef:
-#  spleef           - main scoreboard for spleef
-#  spleefDeaths     - tracks spleef deaths; note - dont have a use for it yet
-#  spleefSnowBall   - tracks spleef giving snowball stuff
-#  sp_balldata        - tracks snowballs
-#  sp_border     - worldborder stuff
+# run from main:tick when .gameActive sp_main matches 1
 
 # prevents players from going out of the arena
 execute positioned -496 45 -461 run tp @a[gamemode=spectator,team=!Admin,distance=40..70] -497 69 -461
@@ -92,12 +85,12 @@ execute store result score .aliveGreen sp_main if entity @a[team=Green,gamemode=
 execute store result score .aliveYellow sp_main if entity @a[team=Yellow,gamemode=!spectator]
 
 # kills people who fell off L
-kill @a[gamemode=adventure,scores={yCos=27..30}]
-tp @a[team=!Admin,gamemode=spectator,scores={yCos=20}] -496 66 -459 -180 5
+kill @a[gamemode=adventure,scores={br_yCos=27..30}]
+tp @a[team=!Admin,gamemode=spectator,scores={br_yCos=20}] -496 66 -459 -180 5
 # transfers dead players to spectator
 gamemode spectator @a[scores={sp_deaths=1..}]
 execute as @a if score @s sp_deaths matches 1 run scoreboard players add @a[gamemode=adventure,tag=player] indivScore 1
-execute as @a if score @s sp_deaths matches 1 run tellraw @a[gamemode=adventure,tag=player] {"text":"+1 Invividual point (Survival)","color":"green"}
+execute as @a if score @s sp_deaths matches 1 run tellraw @a[gamemode=adventure,tag=player] {"text":"+1 Invividual Point (survival)","color":"green"}
 execute as @a if score @s sp_deaths matches 1 run scoreboard players add @s sp_deaths 1
 #execute as @a[scores={spleefDeaths=1},tag=player] run function main:spleef/death
 
@@ -124,7 +117,7 @@ scoreboard players remove .shrinkTimer sp_border 1
 execute if score .shrinkTimer sp_border matches 0..600 run scoreboard players add .tick sp_border 1
 execute if score .shrinkTimer sp_border matches 0..600 run bossbar set main:sp_shrinkwarn visible true
 execute if score .shrinkTimer sp_border matches 0..600 run bossbar set main:sp_shrinkwarn max 400
-execute if score .tick sp_border matches 20.. run scoreboard players remove $sec sp_border 1
+execute if score .tick sp_border matches 20.. run scoreboard players remove .sec sp_border 1
 execute if score .tick sp_border matches 20.. run scoreboard players set .tick sp_border 0
 execute if score .sec sp_border matches 10.. if score .shrinkNum sp_border matches 1 run bossbar set main:sp_shrinkwarn name [{"text":"First Shrink: ","color":"red","bold":true},{"text":"0:","color":"white","bold":true},{"score":{"name":".sec","objective":"sp_border"},"color":"white","bold":true}]
 execute if score .sec sp_border matches 0..9 if score .shrinkNum sp_border matches 1 run bossbar set main:sp_shrinkwarn name [{"text":"First Shrink: ","color":"red","bold":true},{"text":"0:0","color":"white","bold":true},{"score":{"name":".sec","objective":"sp_border"},"color":"white","bold":true}]

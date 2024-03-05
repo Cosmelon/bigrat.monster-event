@@ -19,4 +19,4 @@ execute at @a run playsound minecraft:entity.arrow.hit_player ambient @s ~ ~ ~ 1
 schedule function main:lobby/text2 6s replace
 
 # turn the event on
-scoreboard players set .eventActive currentGame 1
+scoreboard players set .eventactive br_cgame 1

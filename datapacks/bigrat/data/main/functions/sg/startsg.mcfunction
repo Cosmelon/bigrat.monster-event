@@ -4,7 +4,7 @@
 # run from <manual>, main:sg/wins/
 
 # lobby turn off
-scoreboard players set .lobby currentGame 0
+scoreboard players set .lobby br_cgame 0
 
 # gameActive
 scoreboard players set ~gameActive sg 1
