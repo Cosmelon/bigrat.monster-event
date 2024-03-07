@@ -53,4 +53,4 @@ bossbar remove main:rc_gateshut
 # get rid of the cinematic armor stand
 kill @e[type=armor_stand,name=".raceCine"]
 
-schedule function main:returnlobby 5s replace
+schedule function main:returnlobby 8s replace

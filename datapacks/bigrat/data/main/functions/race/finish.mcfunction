@@ -5,7 +5,7 @@
 
 
 #execute as @a run playsound minecraft:entity.splash_potion.break ambient @s ~ ~ ~ 100000 .5
-scoreboard players set .gameActive rc_race 0
+scoreboard players set .gameActive rc_main 0
 gamerule sendCommandFeedback false
 scoreboard players set @r rc_lap 5
 stopsound @a voice minecraft:custom.race/music
