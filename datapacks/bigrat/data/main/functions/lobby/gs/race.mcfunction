@@ -5,14 +5,14 @@
 
 # br_cgame
 scoreboard players set .lobby br_cgame 0
-scoreboard players set .race br_cgame 1
+scoreboard players set .rc_main br_cgame 1
 
 # text
 tellraw @a [{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"translate":"space.-1"},{"text":"\uE004"}]
 tellraw @a ""
 tellraw @a ""
 tellraw @a ""
-tellraw @a {"text":"The Second Game is Race!","color":"gold"}
+tellraw @a {"text":"The Second Game is Speed Demons!","color":"gold"}
 tellraw @a ""
 tellraw @a ""
 tellraw @a ""
@@ -24,4 +24,4 @@ title @a title ""
 title @a subtitle ""
 title @a actionbar ""
 schedule function main:fadeout 3s 
-schedule function main:race/startrace 6s
+schedule function main:race/start 6s

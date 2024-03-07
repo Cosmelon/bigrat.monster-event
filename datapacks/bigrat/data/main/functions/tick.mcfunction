@@ -6,8 +6,8 @@
 # manage br_cgame objective
 execute if score .gameActive sp_main matches 0 run scoreboard players set .spleef br_cgame 0
 execute if score .gameActive sp_main matches 1 run scoreboard players set .spleef br_cgame 1
-execute if score !gameActive race matches 0 run scoreboard players set .race br_cgame 0
-execute if score !gameActive race matches 1 run scoreboard players set .race br_cgame 1
+execute if score .gameActive rc_main matches 0 run scoreboard players set .race br_cgame 0
+execute if score .gameActive rc_main matches 1 run scoreboard players set .race br_cgame 1
 execute if score ?gameActive blockParty matches 0 run scoreboard players set .blockparty br_cgame 0
 execute if score ?gameActive blockParty matches 1 run scoreboard players set .blockparty br_cgame 1
 execute if score +gameActive tbCore matches 0 run scoreboard players set .tomb br_cgame 0
@@ -16,9 +16,9 @@ execute if score ~gameActive hallsCore matches 0 run scoreboard players set .hal
 execute if score ~gameActive hallsCore matches 1 run scoreboard players set .halls br_cgame 1
 
 # manage lobby when games are inactive
-execute if score .gameActive sp_main matches 0 if score !gameActive race matches 0 if score ~gameActive hallsCore matches 0 if score ?gameActive blockParty matches 0 if score +gameActive tbCore matches 0 run spawnpoint @a[tag=!lobbyPVP] 1000 28 -6000
-execute if score .gameActive sp_main matches 0 if score !gameActive race matches 0 if score ~gameActive hallsCore matches 0 if score ?gameActive blockParty matches 0 if score +gameActive tbCore matches 0 run setworldspawn 1000 28 -6000
-execute if score .gameActive sp_main matches 0 if score !gameActive race matches 0 if score ~gameActive hallsCore matches 0 if score ?gameActive blockParty matches 0 if score +gameActive tbCore matches 0 run scoreboard players set .lobby br_cgame 1
+execute if score .gameActive sp_main matches 0 if score .gameActive rc_main matches 0 if score ~gameActive hallsCore matches 0 if score ?gameActive blockParty matches 0 if score +gameActive tbCore matches 0 run spawnpoint @a[tag=!lobbyPVP] 1000 28 -6000
+execute if score .gameActive sp_main matches 0 if score .gameActive rc_main matches 0 if score ~gameActive hallsCore matches 0 if score ?gameActive blockParty matches 0 if score +gameActive tbCore matches 0 run setworldspawn 1000 28 -6000
+execute if score .gameActive sp_main matches 0 if score .gameActive rc_main matches 0 if score ~gameActive hallsCore matches 0 if score ?gameActive blockParty matches 0 if score +gameActive tbCore matches 0 run scoreboard players set .lobby br_cgame 1
 
 # lobby nextgame
 execute if score .lobby br_cgame matches 1 if score .eventactive br_cgame matches 1 run scoreboard players remove .nextGame br_cgame 1
@@ -28,9 +28,6 @@ execute store result bossbar br:nextgame value run scoreboard players get .nextG
 # xp gone
 xp set @a 0 levels
 xp set @a 0 points
-
-# permanant bossbar type beat
-bossbar set minecraft:racetimer players @a
 
 # tagging player system
 tag @a[team=Red] add player
@@ -100,12 +97,12 @@ effect clear @a[tag=noNV] night_vision
 
 # kills games when nobody is online
 execute unless score .users br_tcheck matches 1.. if score .gameActive sp_main matches 1 run scoreboard objectives add killGames dummy
-execute unless score .users br_tcheck matches 1.. if score !gameActive race matches 1 run scoreboard objectives add killGames dummy
+execute unless score .users br_tcheck matches 1.. if score !gameActive rc_main matches 1 run scoreboard objectives add killGames dummy
 execute unless score .users br_tcheck matches 1.. if score ~gameActive sg matches 1 run scoreboard objectives add killGames dummy
 execute unless score .users br_tcheck matches 1.. if score ?gameActive blockParty matches 1 run scoreboard objectives add killGames dummy
 execute unless score .users br_tcheck matches 1.. run scoreboard players set .main killGames 1
-execute if score .main killGames matches 1.. run function main:spleef/killspleef
-execute if score .main killGames matches 1.. run function main:race/killrace
+execute if score .main killGames matches 1.. run function main:spleef/kill
+execute if score .main killGames matches 1.. run function main:race/kill
 execute if score .main killGames matches 1.. run function main:sg/killsg
 execute if score .main killGames matches 1.. run function main:blockparty/killbp
 execute if score .main killGames matches 1.. run scoreboard objectives remove killGames
@@ -121,8 +118,8 @@ function main:scores/teamnpcs
 execute as @a[tag=player] run function main:scores/indivmath
 
 # lobbytick
-execute if score .lobby br_cgame matches 1 if score !lobbyEff br_cgame matches 1 run effect give @a[tag=!lobbyPVP] weakness infinite 100 true
-execute if score .lobby br_cgame matches 1 if score !lobbyEff br_cgame matches 1 run effect give @a[tag=!lobbyPVP] saturation infinite 100 true
+execute if score .lobby br_cgame matches 1 run effect give @a[tag=!lobbyPVP] weakness infinite 100 true
+execute if score .lobby br_cgame matches 1 run effect give @a[tag=!lobbyPVP] saturation infinite 100 true
 
 
 # lobby slap box
@@ -147,8 +144,8 @@ execute as @a[tag=!lobbyPVP] run clear @s stick{display:{Name:'[{"text":"Kinda s
 # spleeftick
 execute if score .gameActive sp_main matches 1 run function main:spleef/tick
 
-# racetick
-execute if score !gameActive race matches 1 run function main:race/racetick
+# race tick
+execute if score .gameActive rc_main matches 1 run function main:race/tick
 
 # As of 29/06/22, Survival Games has stopped development and is postponed indefinitely
 # sgtick 

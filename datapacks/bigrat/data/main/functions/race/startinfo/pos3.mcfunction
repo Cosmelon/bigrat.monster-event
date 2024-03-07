@@ -1,12 +1,12 @@
 # Description: race infotext 4, position 3
 # Author: Cosmelon
 # Type: single
-# run from main:race/racetick
+# run from main:race/tick
 
 # get out of spectate
-#tp @e[name="!raceCine"] @e[name="!racePos3",limit=1]
-tp @e[name="!raceCine"] 370.25 80.4 -18.5 90 8.4
-execute as @a run spectate
+#tp @e[name=".raceCine"] @e[name=".rc_pos3",limit=1]
+tp @e[name=".raceCine"] 370.25 80.4 -18.5 90 8.4
+gamemode spectator @a
 
 # sound
 schedule function main:sfx/infosound 5t

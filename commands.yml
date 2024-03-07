@@ -39,9 +39,9 @@ aliases:
   killspleef:
   - function main:spleef/killspleef
   startrace:
-  - function main:race/startrace
+  - function main:race/start
   killrace:
-  - function main:race/killrace
+  - function main:race/kill
   startbp:
   - function main:blockparty/startbp
   killbp:

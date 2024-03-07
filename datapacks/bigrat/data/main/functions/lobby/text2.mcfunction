@@ -24,6 +24,6 @@ schedule function main:lobby/text3 6s replace
 #tellraw @a [{"translate":"space.5"},{"text":"- \u00A7kPVE","color":"yellow"}]
 #tellraw @a [{"translate":"space.5"},{"text":"- \u00A7kSpleef","color":"yellow"}]
 #tellraw @a [{"translate":"space.5"},{"text":"- \u00A7kBrawl","color":"yellow"}]
-#tellraw @a [{"translate":"space.5"},{"text":"- \u00A7kRace","color":"yellow"}]
+#tellraw @a [{"translate":"space.5"},{"text":"- \u00A7kSpeed Demons","color":"yellow"}]
 #tellraw @a [{"translate":"space.5"},{"text":"- \u00A7kSurvival_Games","color":"yellow"}]
 #tellraw @a [{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"translate":"space.-1"},{"text":"\uE004"}]

@@ -11,6 +11,7 @@
 **bigrat.monster-event/stats/
 **bigrat.monster-event/datapacks/bukkit/
 .vscode/
+advancements/*.json
 
 # ignores .mca
 *.mca

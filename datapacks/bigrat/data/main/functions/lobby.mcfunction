@@ -133,27 +133,30 @@ schedule clear main:spleef/border/removetop
 schedule clear main:spleef/shovelsandkb
 
 # reset stuff for race
-scoreboard objectives remove race
-scoreboard objectives remove raceScores
-scoreboard objectives remove raceMilli
-scoreboard objectives remove raceSec
-scoreboard objectives remove raceMin
-scoreboard objectives remove raceLap
-scoreboard objectives remove racePos
-scoreboard objectives remove raceCP
-scoreboard objectives remove raceOMilli
-scoreboard objectives remove raceOSec
-scoreboard objectives remove raceOMin
-scoreboard objectives remove raceMilli1
-scoreboard objectives remove raceMilli2
-scoreboard objectives remove raceMilli3
-scoreboard objectives remove raceSec1
-scoreboard objectives remove raceSec2
-scoreboard objectives remove raceSec3
-scoreboard objectives remove raceMin1
-scoreboard objectives remove raceMin2
-scoreboard objectives remove raceMin3
-bossbar set minecraft:racetime visible false
+scoreboard objectives remove rc_main
+scoreboard objectives remove rc_scores
+scoreboard objectives remove rc_ms
+scoreboard objectives remove rc_milli
+scoreboard objectives remove rc_sec
+scoreboard objectives remove rc_min
+scoreboard objectives remove rc_lap
+scoreboard objectives remove rc_pos
+scoreboard objectives remove rc_checkpt
+scoreboard objectives remove rc_allms
+scoreboard objectives remove rc_alls
+scoreboard objectives remove rc_allmin
+scoreboard objectives remove rc_ms1
+scoreboard objectives remove rc_ms2
+scoreboard objectives remove rc_ms3
+scoreboard objectives remove rc_s1
+scoreboard objectives remove rc_s2
+scoreboard objectives remove rc_s3
+scoreboard objectives remove rc_min1
+scoreboard objectives remove rc_min2
+scoreboard objectives remove rc_min3
+bossbar remove main:rc_alltime
+bossbar remove main:rc_gateopen
+bossbar remove main:rc_gateshut
 
 # reset stuff for sg
 scoreboard objectives remove sg

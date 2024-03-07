@@ -7,4 +7,4 @@ playsound minecraft:custom.race/music voice @a 310 500 0 10000
 schedule function main:race/music 374s replace
 
 #debug
-tellraw @a[tag=debugView] {"text":"[Debug] Race music loop start","color":"dark_gray"}
+tellraw @a[tag=admin] {"text":"[Debug] race music loop start","color":"dark_gray"}

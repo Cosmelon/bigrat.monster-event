@@ -1,7 +1,7 @@
 # Description: main teleporting stuff
 # Author: Cosmelon
 # Type: single
-# run from main:race/startrace, main:race/racetick
+# run from main:race/start, main:race/tick
 
 effect clear @a
 gamemode adventure @a[tag=player]
