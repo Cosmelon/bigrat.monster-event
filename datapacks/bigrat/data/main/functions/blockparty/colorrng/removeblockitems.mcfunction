@@ -1,8 +1,8 @@
 # Description: clear selected block from alive players without removing their boots
 # Author: Cosmelon
 # Type: objective
-# @s = @a[tag=bpAlive]
-# run from main:blockparty/killbp when ?stop bpTimer == -200
+# @s = @a[tag=bp-alive]
+# run from main:blockparty/kill when .stop bp_timer == -200
 
 clear @s red_concrete
 clear @s orange_concrete

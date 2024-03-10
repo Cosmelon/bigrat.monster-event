@@ -3,8 +3,8 @@
 
 function main:blockparty/floorrng/lcg
 
-scoreboard players operation #temp bpFloor = ?out bpFloor
-scoreboard players operation ?out bpFloor %= #range bpFloor
-scoreboard players operation #temp bpFloor -= ?out bpFloor
-scoreboard players operation #temp bpFloor += #m1 bpFloor
-execute if score #temp blockParty matches ..-1 run function main:blockparty/floorrng/next_int
+scoreboard players operation #temp bp_floor = .out bp_floor
+scoreboard players operation .out bp_floor %= #range bp_floor
+scoreboard players operation #temp bp_floor -= .out bp_floor
+scoreboard players operation #temp bp_floor += #m1 bp_floor
+execute if score #temp bp_main matches ..-1 run function main:blockparty/floorrng/next_int

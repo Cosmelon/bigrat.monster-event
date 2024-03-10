@@ -2,7 +2,7 @@
 # Author: Cosmelon
 # Type: single
 # @s = @a
-# run from main:blockparty/bptick when ?countDown blockParty == 250
+# run from main:blockparty/tick when .countDown bp_main == 250
 
 tellraw @a [{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"translate":"space.-1"},{"text":"\uE004"}]
 tellraw @a ""

@@ -178,7 +178,7 @@ bossbar set minecraft:sgshrink visible false
 bossbar set minecraft:sgshrinkactual visible false
 
 # reset stuff for blockparty
-bossbar set minecraft:bproundcount visible false
+bossbar remove main:bp_roundcount
 scoreboard objectives remove blockParty
 scoreboard objectives remove bpTimer
 scoreboard objectives remove bpMath

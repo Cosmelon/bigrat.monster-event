@@ -163,10 +163,9 @@ execute if score .gameActive rc_main matches 1 run function main:race/tick
 #scoreboard players reset @a[scores={sgPowerCheck=1..}] sgPowerCheck
 
 # blockparty tick
-execute if score ?gameActive blockParty matches 1 run function main:blockparty/bptick
-bossbar set minecraft:bproundcount players @a
-tag @a[tag=bpDead] remove bpAlive
-tag @a[tag=bpAlive] remove bpDead
+execute if score .gameActive bp_main matches 1 run function main:blockparty/tick
+tag @a[tag=bp_dead] remove bp_alive
+tag @a[tag=bp_alive] remove bp_dead
 
 # brawl tick
 execute if score ?gameActive brawl matches 1 run function main:brawl/main

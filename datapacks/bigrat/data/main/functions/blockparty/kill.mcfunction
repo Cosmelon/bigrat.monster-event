@@ -3,31 +3,31 @@
 # Type: kill
 # run from <manual>
 
-scoreboard players set ?gameActive blockParty 0
-scoreboard players set ?round blockParty 0
-scoreboard players set ?floorSwitch blockParty 0
-scoreboard players set ?microTick blockParty 0
-scoreboard players set ?countDown blockParty 400
-scoreboard players set ?notifRedDead blockParty 0
-scoreboard players set ?notifBlueDead blockParty 0
-scoreboard players set ?notifGreenDead blockParty 0
-scoreboard players set ?notifYellowDead blockParty 0
-scoreboard players set ?stop bpTimer -2000
-scoreboard players set ?colorTT bpTimer 25
-scoreboard players set ?removeFloor bpFloor -60
-scoreboard players set ?floorNum bpFloor 0
-scoreboard players reset * bpDeaths
+scoreboard players set .gameActive bp_main 0
+scoreboard players set .round bp_main 0
+scoreboard players set .floorSwitch bp_main 0
+scoreboard players set .microTick bp_main 0
+scoreboard players set .countDown bp_main 400
+scoreboard players set .notifRedDead bp_main 0
+scoreboard players set .notifBlueDead bp_main 0
+scoreboard players set .notifGreenDead bp_main 0
+scoreboard players set .notifYellowDead bp_main 0
+scoreboard players set ?stop bp_timer -2000
+scoreboard players set ?colorTT bp_timer 25
+scoreboard players set ?removeFloor bp_floor -60
+scoreboard players set ?floorNum bp_floor 0
+scoreboard players reset * bp_deaths
 stopsound @a
 fill -1988 61 2987 -2014 57 3013 air replace barrier
-bossbar set minecraft:bproundcount visible false
+bossbar set main:bp_roundcount visible false
 schedule clear main:blockparty/bpmusic
 schedule clear main:blockparty/startbp
 schedule clear main:returnlobby
 schedule clear main:lobby
-kill @e[name="?music"]
-tag @a remove bpAlive
-tag @a remove bpDead
-tag @a remove bpDeaths
+kill @e[name=".music"]
+tag @a remove bp_alive
+tag @a remove bp_dead
+tag @a remove bp_deaths
 effect clear @a
 clear @a[team=!Admin]
 

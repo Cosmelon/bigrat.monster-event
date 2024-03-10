@@ -5,6 +5,6 @@
 # a = 1103515245, c = 12345
 # again piggybacked off sg
 
-scoreboard players operation #lcg bpFloor *= #lcg bpConst
-scoreboard players add #lcg bpFloor 12345
-scoreboard players operation ?out bpFloor = #lcg bpFloor
+scoreboard players operation #lcg bp_floor *= #lcg bp_const
+scoreboard players add #lcg bp_floor 12345
+scoreboard players operation ?out bp_floor = #lcg bp_floor
