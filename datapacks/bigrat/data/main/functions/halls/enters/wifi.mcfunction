@@ -15,4 +15,4 @@ title @s title {"text":"Password Hunt","color":"green"}
 title @s subtitle {"text":"Find the wifi password!"}
 
 # debug
-tellraw @a[tag=debugView] [{"text":"[Debug] ","color":"gray"},{"selector":"@s"},{"text":" has discovered the wifi room.","color":"gray"}]
+tellraw @a[tag=admin] [{"text":"[Debug] ","color":"gray"},{"selector":"@s"},{"text":" has discovered the wifi room.","color":"gray"}]

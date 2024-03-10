@@ -18,4 +18,4 @@ title @s subtitle {"text":"Find the emerald!"}
 tellraw @s [{"text":"» ","color":"gray"},{"text":"Click "},{"text":"here","color":"gray","bold":true,"underlined":true,"clickEvent":{"action":"run_command","value":"/trigger halls_emReset"}},{"text":" if you need to reset the mine.","color":"gray"}]
 
 # debug
-tellraw @a[tag=debugView] [{"text":"[Debug] ","color":"gray"},{"selector":"@s"},{"text":" has discovered the emerald room.","color":"gray"}]
+tellraw @a[tag=admin] [{"text":"[Debug] ","color":"gray"},{"selector":"@s"},{"text":" has discovered the emerald room.","color":"gray"}]

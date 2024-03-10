@@ -15,4 +15,4 @@ title @s title {"text":"turn on the right heads","color":"green"}
 title @s subtitle {"text":"dont drop the soap!"}
 
 # debug
-tellraw @a[tag=debugView] [{"text":"[Debug] ","color":"gray"},{"selector":"@s"},{"text":" has discovered the soap room.","color":"gray"}]
+tellraw @a[tag=admin] [{"text":"[Debug] ","color":"gray"},{"selector":"@s"},{"text":" has discovered the soap room.","color":"gray"}]

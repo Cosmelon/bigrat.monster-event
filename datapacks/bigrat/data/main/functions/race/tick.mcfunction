@@ -9,6 +9,7 @@ effect give @a[tag=player] speed infinite 0 true
 effect give @a[tag=player] weakness infinite 0 true
 effect give @a saturation infinite 100 true
 effect give @a resistance infinite 100 true
+effect give @a night_vision infinite 0 true
 gamemode spectator @a[tag=!player,team=!Admin]
 
 # stuff for the stopwatch

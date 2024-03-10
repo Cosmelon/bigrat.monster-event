@@ -15,4 +15,4 @@ title @s title {"text":"Craft an Activator Rail!","color":"green"}
 title @s subtitle {"text":"Do you actually know how?"}
 
 # debug
-tellraw @a[tag=debugView] [{"text":"[Debug] ","color":"gray"},{"selector":"@s"},{"text":" has discovered the craft room.","color":"gray"}]
+tellraw @a[tag=admin] [{"text":"[Debug] ","color":"gray"},{"selector":"@s"},{"text":" has discovered the craft room.","color":"gray"}]

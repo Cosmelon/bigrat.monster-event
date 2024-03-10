@@ -15,4 +15,4 @@ title @s title {"text":"Find the Remote!","color":"green"}
 title @s subtitle {"text":"Turn on the TV after you find it!"}
 
 # debug
-tellraw @a[tag=debugView] [{"text":"[Debug] ","color":"gray"},{"selector":"@s"},{"text":" has discovered the remote room.","color":"gray"}]
+tellraw @a[tag=admin] [{"text":"[Debug] ","color":"gray"},{"selector":"@s"},{"text":" has discovered the remote room.","color":"gray"}]

@@ -15,4 +15,4 @@ title @s title {"text":"Take the Shit","color":"green"}
 title @s subtitle {"text":"bottom text"}
 
 # debug
-tellraw @a[tag=debugView] [{"text":"[Debug] ","color":"gray"},{"selector":"@s"},{"text":" has discovered the shit room.","color":"gray"}]
+tellraw @a[tag=admin] [{"text":"[Debug] ","color":"gray"},{"selector":"@s"},{"text":" has discovered the shit room.","color":"gray"}]

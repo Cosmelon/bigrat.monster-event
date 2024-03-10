@@ -15,4 +15,4 @@ title @s title {"text":"Find Your Car Keys!","color":"green"}
 title @s subtitle {"text":"\"Dang I know I left them somewhere...\""}
 
 # debug
-tellraw @a[tag=debugView] [{"text":"[Debug] ","color":"gray"},{"selector":"@s"},{"text":" has discovered the keys room.","color":"gray"}]
+tellraw @a[tag=admin] [{"text":"[Debug] ","color":"gray"},{"selector":"@s"},{"text":" has discovered the keys room.","color":"gray"}]
