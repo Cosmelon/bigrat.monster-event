@@ -89,8 +89,8 @@ execute as @a[team=Green,scores={br_online=1..}] if score .blockparty br_cgame m
 execute as @a[team=Yellow,scores={br_online=1..}] if score .blockparty br_cgame matches 1 run tp @s -1982.5 62 3018.5 facing entity @e[limit=1,sort=nearest,name="?midL"]
 execute as @a[scores={br_online=1..}] run scoreboard players set @s br_online 0
 
-# constant br_yCos (yPosition) tracker, can be used for multiple games
-execute as @a store result score @s br_yCos run data get entity @s Pos[1]
+# constant br_yPos (yPosition) tracker, can be used for multiple games
+execute as @a store result score @s br_yPos run data get entity @s Pos[1]
 
 # night vision clear
 effect clear @a[tag=noNV] night_vision

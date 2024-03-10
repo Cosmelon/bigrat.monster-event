@@ -1,5 +1,5 @@
 # Description: ends race
-# Author: br_yCosmelon
+# Author: br_yPosmelon
 # Type: single
 # run from main:race/tick when @a[tag=player,scores={rc_lap=4..}] == all players
 

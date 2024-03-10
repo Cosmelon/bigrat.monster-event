@@ -177,7 +177,7 @@ execute as @a[tag=player,gamemode=adventure] at @s if block ~-0.4 ~-0.25 ~ light
 execute as @a[tag=player,gamemode=adventure] at @s if block ~-0.4 ~-0.25 ~ light_blue_glazed_terracotta run title @s subtitle [{"text":"+","color":"green"},{"translate":"space.1"},{"text":"\uE101","color":"white"}]
 stopsound @a * item.armor.equip_elytra
 
-kill @a[tag=player,gamemode=adventure,scores={br_yCos=..6}]
+kill @a[tag=player,gamemode=adventure,scores={br_yPos=..6}]
 
 # spawnpoints
 setworldspawn 287 75 42

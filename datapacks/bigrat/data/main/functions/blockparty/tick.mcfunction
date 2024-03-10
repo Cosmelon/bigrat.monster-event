@@ -107,7 +107,7 @@ tag @a[tag=player,scores={bp_deaths=1..}] remove bp_alive
 
 
 # player death method
-kill @a[gamemode=adventure,tag=bp_alive,scores={br_yCos=40..46}]
+kill @a[gamemode=adventure,tag=bp_alive,scores={br_yPos=40..46}]
 gamemode spectator @a[scores={bp_deaths=1..}]
 execute as @a if score @s bp_deaths matches 1 run scoreboard players add @a[gamemode=adventure,tag=player,tag=bpAlive] indivScore 1
 execute as @a if score @s bp_deaths matches 1 run tellraw @a[gamemode=adventure,tag=player,tag=bp_alive] {"text":"+1 Invividual point (Survival)","color":"green"}

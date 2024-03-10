@@ -2,7 +2,7 @@
 
 # scoreboard remake
 scoreboard objectives add br_cgame dummy
-scoreboard objectives add br_yCos dummy
+scoreboard objectives add br_yPos dummy
 scoreboard objectives add br_tcheck dummy
 scoreboard objectives add br_online minecraft.custom:leave_game
 scoreboard objectives add indivScore dummy

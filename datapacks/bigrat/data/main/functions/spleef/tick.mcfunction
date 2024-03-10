@@ -85,8 +85,8 @@ execute store result score .aliveGreen sp_main if entity @a[team=Green,gamemode=
 execute store result score .aliveYellow sp_main if entity @a[team=Yellow,gamemode=!spectator]
 
 # kills people who fell off L
-kill @a[gamemode=adventure,scores={br_yCos=27..30}]
-tp @a[team=!Admin,gamemode=spectator,scores={br_yCos=20}] -496 66 -459 -180 5
+kill @a[gamemode=adventure,scores={br_yPos=27..30}]
+tp @a[team=!Admin,gamemode=spectator,scores={br_yPos=20}] -496 66 -459 -180 5
 # transfers dead players to spectator
 gamemode spectator @a[scores={sp_deaths=1..}]
 execute as @a if score @s sp_deaths matches 1 run scoreboard players add @a[gamemode=adventure,tag=player] indivScore 1
