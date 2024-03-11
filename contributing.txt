@@ -52,6 +52,4 @@ single type is for a function that only runs once
 Global functions are located in main:
 Game-specific functions go in their own folder (ex: blockparty goes in main:blockparty/)
 
-scoreboard objectives and tags should be in the format <game>UpperCamelCase
-dummy scores are in the format <prefix>lowerCamelCase
 "boolean" scores follow the value: 1 = on, 0 = off
