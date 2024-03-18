@@ -2,11 +2,15 @@
 
 # scoreboard remake
 scoreboard objectives add br_cgame dummy
-scoreboard objectives add br_yPos dummy
 scoreboard objectives add br_tcheck dummy
 scoreboard objectives add br_online minecraft.custom:leave_game
 scoreboard objectives add indivScore dummy
 scoreboard objectives add teamScores dummy
+
+# position remake
+scoreboard objectives add br_xPos dummy
+scoreboard objectives add br_yPos dummy
+scoreboard objectives add br_zPos dummy
 
 # gamerules
 gamerule announceAdvancements false

@@ -21,7 +21,7 @@ stopsound @a
 fill -1988 61 2987 -2014 57 3013 air replace barrier
 bossbar set main:bp_roundcount visible false
 schedule clear main:blockparty/bpmusic
-schedule clear main:blockparty/startbp
+schedule clear main:blockparty/start
 schedule clear main:returnlobby
 schedule clear main:lobby
 kill @e[name=".music"]

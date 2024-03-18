@@ -11,7 +11,7 @@ tellraw @a ""
 tellraw @a [{"translate":"space.3"},{"text":"Team with most points at the end will take victory home!"}]
 tellraw @a ""
 tellraw @a ""
-tellraw @a [{"translate":"space.5"},{"text":"alterantively I'll send you an irl cookie...deadass -Cosmelon","color":"dark_gray","italic":true}]
+tellraw @a ""
 tellraw @a [{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"translate":"space.-1"},{"translate":"space.-1"},{"text":"\uE004"}]
 execute as @a run playsound minecraft:entity.arrow.hit_player ambient @s ~ ~ ~ 10000 0.70
 

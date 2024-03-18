@@ -135,12 +135,13 @@ schedule clear main:spleef/shovelsandkb
 # reset stuff for race
 scoreboard objectives remove rc_main
 scoreboard objectives remove rc_scores
+scoreboard objectives remove rc_lap
+scoreboard objectives remove rc_pos
+scoreboard objectives remove rc_tridentcount
 scoreboard objectives remove rc_ms
 scoreboard objectives remove rc_milli
 scoreboard objectives remove rc_sec
 scoreboard objectives remove rc_min
-scoreboard objectives remove rc_lap
-scoreboard objectives remove rc_pos
 scoreboard objectives remove rc_checkpt
 scoreboard objectives remove rc_allms
 scoreboard objectives remove rc_alls

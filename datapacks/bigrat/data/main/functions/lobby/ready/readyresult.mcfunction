@@ -24,7 +24,6 @@ execute if score .ready br_rcdata > .players br_tcheck run tellraw @a[tag=admin]
 tellraw @a ""
 
 # clear the triggers
-scoreboard objectives remove br_rcdata
 scoreboard objectives remove br_rcyes
 scoreboard objectives remove br_rcno
 
@@ -39,3 +38,4 @@ execute if score .ready br_rcdata < .players br_tcheck as @a run playsound entit
 
 # start event
 execute if score .ready br_rcdata = .players br_tcheck run schedule function main:lobby/startbr 3s
+scoreboard objectives remove br_rcdata

@@ -24,4 +24,4 @@ title @a title ""
 title @a subtitle ""
 title @a actionbar ""
 schedule function main:fadeout 10s 
-schedule function main:spleef/startspleef 13s
+schedule function main:spleef/start 13s

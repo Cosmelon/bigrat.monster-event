@@ -74,8 +74,8 @@ execute if score .countDown rc_main matches 60 run function main:race/music
 # checkpoints
 execute as @a[gamemode=adventure,tag=player,x=310.5,dx=3,y=81,dy=3,z=57.5,dz=1] run scoreboard players set @s rc_checkpt 1
 execute as @a[gamemode=adventure,tag=player,x=368,dx=4,y=81,dy=3,z=-18.5,dz=3] run scoreboard players set @s rc_checkpt 2
-execute positioned 292.5 39 -49.5 run scoreboard players set @a[gamemode=adventure,tag=player,distance=..5] rc_checkpt 3
-execute positioned 253.5 40 -73.5 run scoreboard players set @a[gamemode=adventure,tag=player,distance=..5] rc_checkpt 4
+scoreboard players set @a[gamemode=adventure,tag=player,scores={br_xPos=280..304,br_yPos=46..48,br_zPos=-50..26}] rc_checkpt 3
+scoreboard players set @a[gamemode=adventure,tag=player,scores={br_xPos=242..250,br_yPos=36..44,br_zPos=-86..-84}] rc_checkpt 4
 execute positioned 258.5 78 -32.5 run scoreboard players set @a[gamemode=adventure,tag=player,distance=..3] rc_checkpt 5
 execute positioned 247.5 87 10.5 run scoreboard players set @a[gamemode=adventure,tag=player,distance=..8] rc_checkpt 6
 execute as @a[gamemode=adventure,tag=player,x=294,dx=1,y=75,dy=10,z=37,dz=10] run execute if score @s rc_checkpt matches 6 run function main:race/newlap
@@ -166,30 +166,39 @@ execute as @a[tag=player,gamemode=adventure] positioned as @s if block ~ ~-1 ~ l
 execute as @a[tag=player,gamemode=adventure] positioned as @s if block ~ ~-0.25 ~ air run effect clear @s minecraft:jump_boost
 # give elytra (light_blue_glazed_terracotta)
 execute as @a[tag=player,gamemode=adventure,nbt={Inventory:[{id:"minecraft:elytra"}]}] at @s unless block ~ ~-0.25 ~ air run title @s title ""
-execute as @a[tag=player,gamemode=adventure,nbt={Inventory:[{id:"minecraft:elytra"}]}] at @s unless block ~ ~-0.25 ~ air run title @s subtitle [{"text":"-","color":"red"},{"translate":"space.1"},{"text":"\uE101","color":"white"}]
+execute as @a[tag=player,gamemode=adventure,nbt={Inventory:[{id:"minecraft:elytra"}]}] at @s unless block ~ ~-0.25 ~ air run title @s subtitle {"text":"\uE102","color":"white"}
 execute as @a[tag=player,gamemode=adventure] at @s unless block ~ ~-0.25 ~ air run item replace entity @s armor.chest with air
 execute as @a[tag=player,gamemode=adventure] at @s if block ~ ~-0.25 ~ light_blue_glazed_terracotta run item replace entity @s armor.chest with elytra{Enchantments:[{id:"binding_curse",lvl:1},{id:"unbreaking",lvl:255}],HideFlags:1}
 execute as @a[tag=player,gamemode=adventure] at @s if block ~ ~-0.25 ~ light_blue_glazed_terracotta run title @s title ""
-execute as @a[tag=player,gamemode=adventure] at @s if block ~ ~-0.25 ~ light_blue_glazed_terracotta run title @s subtitle [{"text":"+","color":"green"},{"translate":"space.1"},{"text":"\uE101","color":"white"}]
+execute as @a[tag=player,gamemode=adventure] at @s if block ~ ~-0.25 ~ light_blue_glazed_terracotta run title @s subtitle {"text":"\uE101","color":"white"}
 execute as @a[tag=player,gamemode=adventure] at @s unless block ~-0.4 ~-0.25 ~ air run item replace entity @s armor.chest with air
 execute as @a[tag=player,gamemode=adventure] at @s if block ~-0.4 ~-0.25 ~ light_blue_glazed_terracotta run item replace entity @s armor.chest with elytra{Enchantments:[{id:"binding_curse",lvl:1},{id:"unbreaking",lvl:255}],HideFlags:1}
 execute as @a[tag=player,gamemode=adventure] at @s if block ~-0.4 ~-0.25 ~ light_blue_glazed_terracotta run title @s title ""
-execute as @a[tag=player,gamemode=adventure] at @s if block ~-0.4 ~-0.25 ~ light_blue_glazed_terracotta run title @s subtitle [{"text":"+","color":"green"},{"translate":"space.1"},{"text":"\uE101","color":"white"}]
+execute as @a[tag=player,gamemode=adventure] at @s if block ~-0.4 ~-0.25 ~ light_blue_glazed_terracotta run title @s subtitle {"text":"\uE101","color":"white"}
 stopsound @a * item.armor.equip_elytra
+# riptide 3 trident
+title @a[tag=player,gamemode=adventure,scores={br_xPos=280..304,br_yPos=46..48,br_zPos=-50..26}] title ""
+title @a[tag=player,gamemode=adventure,scores={br_xPos=280..304,br_yPos=46..48,br_zPos=-50..26}] subtitle {"text":"\uE103","color":"white"}
+execute as @a[team=Red,scores={rc_checkpt=3}] run item replace entity @s armor.feet with leather_boots{display:{color:16066343},Unbreakable:1b,Enchantments:[{id:"binding_curse",lvl:1s}]}
+execute as @a[team=Blue,scores={rc_checkpt=3}] run item replace entity @s armor.feet with leather_boots{display:{color:2635263},Unbreakable:1b,Enchantments:[{id:"binding_curse",lvl:1s}]}
+execute as @a[team=Green,scores={rc_checkpt=3}] run item replace entity @s armor.feet with leather_boots{display:{color:1208897},Unbreakable:1b,Enchantments:[{id:"binding_curse",lvl:1s}]}
+execute as @a[team=Yellow,scores={rc_checkpt=3}] run item replace entity @s armor.feet with leather_boots{display:{color:16777000},Unbreakable:1b,Enchantments:[{id:"binding_curse",lvl:1s}]}
+item replace entity @a[tag=player,gamemode=adventure,predicate=main:in_water,scores={rc_checkpt=3},nbt=!{SelectedItem:{id:"minecraft:trident"}}] weapon.mainhand with minecraft:trident{Enchantments:[{id:"riptide",lvl:3}],Unbreakable:1}
+execute as @a store result score @s rc_tridentcount run clear @s trident 0
+clear @a[tag=player,gamemode=adventure,scores={rc_tridentcount=2..}] trident
+kill @e[type=item,nbt={Item:{id:"minecraft:trident"}}]
+# remove reptide trident at end of water section
+title @a[tag=player,gamemode=adventure,scores={br_xPos=242..250,br_yPos=36..44,br_zPos=-85..-84}] title ""
+title @a[tag=player,gamemode=adventure,scores={br_xPos=242..250,br_yPos=36..44,br_zPos=-85..-84}] subtitle {"text":"\uE104","color":"white"}
+item replace entity @a[team=Red,scores={br_xPos=242..250,br_yPos=36..44,br_zPos=-85..-84}] armor.feet with leather_boots{display:{color:16066343},Unbreakable:1b,Enchantments:[{id:"depth_strider",lvl:3s},{id:"binding_curse",lvl:1s}]}
+item replace entity @a[team=Blue,scores={br_xPos=242..250,br_yPos=36..44,br_zPos=-85..-84}] armor.feet with leather_boots{display:{color:2635263},Unbreakable:1b,Enchantments:[{id:"depth_strider",lvl:3s},{id:"binding_curse",lvl:1s}]}
+item replace entity @a[team=Green,scores={br_xPos=242..250,br_yPos=36..44,br_zPos=-85..-84}] armor.feet with leather_boots{display:{color:1208897},Unbreakable:1b,Enchantments:[{id:"depth_strider",lvl:3s},{id:"binding_curse",lvl:1s}]}
+item replace entity @a[team=Yellow,scores={br_xPos=242..250,br_yPos=36..44,br_zPos=-85..-84}] armor.feet with leather_boots{display:{color:16777000},Unbreakable:1b,Enchantments:[{id:"depth_strider",lvl:3s},{id:"binding_curse",lvl:1s}]}
+clear @a[scores={rc_checkpt=4}] trident
 
+# if there's a hole in the map
 kill @a[tag=player,gamemode=adventure,scores={br_yPos=..6}]
 
 # spawnpoints
 setworldspawn 287 75 42
 spawnpoint @a 287 75 42
-
-
-# old player GUI
-#this code is been commented out, it will be used at a later date so spectators can identify what area they're in. Will still need to modify it for that.
-#execute as @a[gamemode=adventure,scores={rc_checkpt=0}] run title @s actionbar [{"text":"In: ","color":"gold"},{"text":"Start   ","color":"green"},{"text":"Lap: ","color":"gold"},{"color":"green","score":{"name":"@s","objective":"rc_lap"}},{"text":"/3   ","color":"green"}]
-#execute as @a[gamemode=adventure,scores={rc_checkpt=1}] run title @s actionbar [{"text":"In: ","color":"gold"},{"text":"River   ","color":"green"},{"text":"Lap: ","color":"gold"},{"color":"green","score":{"name":"@s","objective":"rc_lap"}},{"text":"/3   ","color":"green"}]
-#execute as @a[gamemode=adventure,scores={rc_checkpt=2}] run title @s actionbar [{"text":"In: ","color":"gold"},{"text":"Elytra   ","color":"green"},{"text":"Lap: ","color":"gold"},{"color":"green","score":{"name":"@s","objective":"rc_lap"}},{"text":"/3"   ,"color":"green"}]
-#execute as @a[gamemode=adventure,scores={rc_checkpt=3}] run title @s actionbar [{"text":"In: ","color":"gold"},{"text":"Sewer   ","color":"green"},{"text":"Lap: ","color":"gold"},{"color":"green","score":{"name":"@s","objective":"rc_lap"}},{"text":"/3   ","color":"green"}]
-#execute as @a[gamemode=adventure,scores={rc_checkpt=4}] run title @s actionbar [{"text":"In: ","color":"gold"},{"text":"Block City   ","color":"green"},{"text":"Lap: ","color":"gold"},{"color":"green","score":{"name":"@s","objective":"rc_lap"}},{"text":"/3   ","color":"green"}]
-#execute as @a[gamemode=adventure,scores={rc_checkpt=5}] run title @s actionbar [{"text":"In: ","color":"gold"},{"text":"Block City 2   ","color":"green"},{"text":"Lap: ","color":"gold"},{"color":"green","score":{"name":"@s","objective":"rc_lap"}},{"text":"/3   ","color":"green"}]
-#execute as @a[gamemode=adventure,scores={rc_checkpt=6}] run title @s actionbar [{"text":"In: ","color":"gold"},{"text":"Finish!   ","color":"green"},{"text":"Lap: ","color":"gold"},{"color":"green","score":{"name":"@s","objective":"rc_lap"}},{"text":"/3   ","color":"green"}]

@@ -43,7 +43,6 @@ scoreboard players set @a rc_min 0
 scoreboard players set @a rc_checkpt 0
 scoreboard players set @a rc_lap 0
 scoreboard players reset * rc_pos
-effect clear @a
 clear @a
 title @a actionbar ""
 title @a title ""

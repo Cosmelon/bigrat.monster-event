@@ -8,17 +8,17 @@ execute if score .gameActive sp_main matches 0 run scoreboard players set .splee
 execute if score .gameActive sp_main matches 1 run scoreboard players set .spleef br_cgame 1
 execute if score .gameActive rc_main matches 0 run scoreboard players set .race br_cgame 0
 execute if score .gameActive rc_main matches 1 run scoreboard players set .race br_cgame 1
-execute if score ?gameActive blockParty matches 0 run scoreboard players set .blockparty br_cgame 0
-execute if score ?gameActive blockParty matches 1 run scoreboard players set .blockparty br_cgame 1
+execute if score .gameActive blockParty matches 0 run scoreboard players set .blockparty br_cgame 0
+execute if score .gameActive blockParty matches 1 run scoreboard players set .blockparty br_cgame 1
 execute if score +gameActive tbCore matches 0 run scoreboard players set .tomb br_cgame 0
 execute if score +gameActive tbCore matches 1 run scoreboard players set .tomb br_cgame 1
 execute if score ~gameActive hallsCore matches 0 run scoreboard players set .halls br_cgame 0
 execute if score ~gameActive hallsCore matches 1 run scoreboard players set .halls br_cgame 1
 
 # manage lobby when games are inactive
-execute if score .gameActive sp_main matches 0 if score .gameActive rc_main matches 0 if score ~gameActive hallsCore matches 0 if score ?gameActive blockParty matches 0 if score +gameActive tbCore matches 0 run spawnpoint @a[tag=!lobbyPVP] 1000 28 -6000
-execute if score .gameActive sp_main matches 0 if score .gameActive rc_main matches 0 if score ~gameActive hallsCore matches 0 if score ?gameActive blockParty matches 0 if score +gameActive tbCore matches 0 run setworldspawn 1000 28 -6000
-execute if score .gameActive sp_main matches 0 if score .gameActive rc_main matches 0 if score ~gameActive hallsCore matches 0 if score ?gameActive blockParty matches 0 if score +gameActive tbCore matches 0 run scoreboard players set .lobby br_cgame 1
+execute if score .gameActive sp_main matches 0 if score .gameActive rc_main matches 0 if score ~gameActive hallsCore matches 0 if score .gameActive blockParty matches 0 if score +gameActive tbCore matches 0 run spawnpoint @a[tag=!lobbyPVP] 1000 28 -6000
+execute if score .gameActive sp_main matches 0 if score .gameActive rc_main matches 0 if score ~gameActive hallsCore matches 0 if score .gameActive blockParty matches 0 if score +gameActive tbCore matches 0 run setworldspawn 1000 28 -6000
+execute if score .gameActive sp_main matches 0 if score .gameActive rc_main matches 0 if score ~gameActive hallsCore matches 0 if score .gameActive blockParty matches 0 if score +gameActive tbCore matches 0 run scoreboard players set .lobby br_cgame 1
 
 # lobby nextgame
 execute if score .lobby br_cgame matches 1 if score .eventactive br_cgame matches 1 run scoreboard players remove .nextGame br_cgame 1
@@ -89,11 +89,10 @@ execute as @a[team=Green,scores={br_online=1..}] if score .blockparty br_cgame m
 execute as @a[team=Yellow,scores={br_online=1..}] if score .blockparty br_cgame matches 1 run tp @s -1982.5 62 3018.5 facing entity @e[limit=1,sort=nearest,name="?midL"]
 execute as @a[scores={br_online=1..}] run scoreboard players set @s br_online 0
 
-# constant br_yPos (yPosition) tracker, can be used for multiple games
+# constant position tracker, can be used for multiple games
+execute as @a store result score @s br_xPos run data get entity @s Pos[0]
 execute as @a store result score @s br_yPos run data get entity @s Pos[1]
-
-# night vision clear
-effect clear @a[tag=noNV] night_vision
+execute as @a store result score @s br_zPos run data get entity @s Pos[2]
 
 # kills games when nobody is online
 execute unless score .users br_tcheck matches 1.. if score .gameActive sp_main matches 1 run scoreboard objectives add killGames dummy

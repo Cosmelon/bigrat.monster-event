@@ -24,4 +24,4 @@ title @a title ""
 title @a subtitle ""
 title @a actionbar ""
 schedule function main:fadeout 3s 
-schedule function main:blockparty/startbp 6s
+schedule function main:blockparty/start 6s
