@@ -7,4 +7,4 @@
 
 scoreboard players operation #lcg bp_floor *= #lcg bp_const
 scoreboard players add #lcg bp_floor 12345
-scoreboard players operation ?out bp_floor = #lcg bp_floor
+scoreboard players operation .out bp_floor = #lcg bp_floor

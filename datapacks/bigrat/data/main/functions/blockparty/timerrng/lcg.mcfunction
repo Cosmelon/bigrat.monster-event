@@ -7,4 +7,4 @@
 
 scoreboard players operation #lcg bp_timer *= #lcg bp_const
 scoreboard players add #lcg bp_timer 12345
-scoreboard players operation ?out bp_timer = #lcg bp_timer
+scoreboard players operation .out bp_timer = #lcg bp_timer

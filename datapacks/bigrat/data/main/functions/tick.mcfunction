@@ -80,6 +80,7 @@ execute as @a[tag=br_rcNA] if score @s br_rcno matches 1 run tag @s remove br_rc
 execute as @a[scores={br_online=1..}] run tp @s 1000.5 28 -6000.5 0 5
 execute as @a[scores={br_online=1..}] run clear @s
 execute as @a[scores={br_online=1..}] if score .lobby br_cgame matches 1 run gamemode adventure @s
+execute as @a[scores={br_online=1..}] if score .lobby br_cgame matches 1 run effect clear @s
 execute as @a[scores={br_online=1..}] if score .spleef br_cgame matches 1 run tp @s -496.5 66 -459.5 0 5
 #execute as @a[scores={br_online=1..}] if score .sg br_cgame matches 1 run tp @s -1983.5 133 -1983.5 0 5
 execute as @a[tag=!player,scores={br_online=1..}] if score .blockparty br_cgame matches 1 run tp @s -2000.5 61 3023.5 facing entity @e[limit=1,sort=nearest,name="?midL"]
@@ -125,7 +126,7 @@ execute if score .lobby br_cgame matches 1 run effect give @a[tag=!lobbyPVP] sat
 tag @a[x=993.5,dx=13,y=30,dy=4,z=-5969.5,dz=13] add lobbyPVP
 spawnpoint @a[tag=lobbyPVP] 1000 28 -5973 0
 title @a[tag=lobbyPVP] times 0 100 2
-title @a[tag=lobbyPVP] actionbar {"text":"You in the slap box","color":"gold"}
+#title @a[tag=lobbyPVP] actionbar {"text":"You in the slap box","color":"gold"}
 effect clear @a[tag=lobbyPVP] saturation
 effect clear @a[tag=lobbyPVP] weakness
 item replace entity @a[tag=lobbyPVP,nbt=!{Inventory:[{id:"minecraft:stick"}]}] hotbar.0 with stick{display:{Name:'[{"text":"Kinda sticky...","italic":false}]'},Enchantments:[{id:"minecraft:knockback",lvl:2}],HideFlags:27}

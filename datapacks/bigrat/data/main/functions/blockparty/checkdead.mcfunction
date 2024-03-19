@@ -1,4 +1,4 @@
-# Description: Checks for dead players, sets ?notif<team>Dead == 1 when players on <team> == 0
+# Description: Checks for dead players, sets .notif<team>Dead == 1 when players on <team> == 0
 # Author: Cosmelon
 # Type: tick
 # run from main:blockparty/bptick

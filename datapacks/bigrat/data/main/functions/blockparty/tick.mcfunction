@@ -1,7 +1,7 @@
 # Description: Block party tick
 # Author: Cosmelon
 # Type: main_tick
-# run from main:tick when ?gameActive blockParty == 1
+# run from main:tick when .gameActive bp_main == 1
 
 # effects
 effect give @a weakness infinite 100 true
@@ -33,11 +33,11 @@ execute if score .round bp_main matches 1 if score .countDown bp_main matches 15
 
 # Floor randomizer function when floor switcher is active
 execute if score .floorSwitch bp_main matches 1 run function main:blockparty/floorrng/floors
-execute if score .floorNum bp_floor matches ..10 run scoreboard players set .in bp_floor 30
-execute if score .floorNum bp_floor matches 11.. run scoreboard players set .in bp_floor 1
-execute if score .floorNum bp_floor matches 16.. run scoreboard players set .in1 bp_floor 29
+#execute if score .floorNum bp_floor matches ..10 run scoreboard players set .in bp_floor 30
+#execute if score .floorNum bp_floor matches 11.. run scoreboard players set .in bp_floor 1
+#execute if score .floorNum bp_floor matches 16.. run scoreboard players set .in1 bp_floor 29
 # removes the blocks
-#  ?removeFloor starts out at -60, but over time it gradually increases until its hard stop
+#  .removeFloor starts out at -60, but over time it gradually increases until its hard stop
 execute if score .stop bp_timer = .removeFloor bp_floor run function main:blockparty/floorrng/removefloor
 execute if score .stop bp_timer matches -99 run scoreboard players add .removeStage bp_floor 1
 
@@ -72,8 +72,9 @@ execute unless score .stop bp_timer <= .colorTT bpTimer as @a[tag=bp_alive] run 
 
 # color picker
 #  picks what color the players must stand on to avoid falling and dying 
-#  ?colorTT bpTimer is the maximum time when the color is being decided
+#  .colorTT bpTimer is the maximum time when the color is being decided
 #  After each round, this number is steadilly decreased, but there is a hard stop at 4
+execute if score .stop bp_timer > .colorTT bp_timer run scoreboard players set .out bp_color -2000
 execute if score .stop bp_timer matches 0.. if score .stop bp_timer <= .colorTT bp_timer run function main:blockparty/colorrng/pickcolor
 execute if score .stop bp_timer matches -99 if score .colorTT bp_timer matches 5.. run scoreboard players remove .colorTT bp_timer 4
 
@@ -87,18 +88,20 @@ execute store result score .aliveAll bp_main if entity @a[tag=bp_alive]
 execute if score .countDown bp_main matches ..0 run title @a actionbar [{"text":"Round: ","color":"gold"},{"score":{"name":".floorNum","objective":"bp_floor"},"color":"aqua"},{"translate":"space.5"},{"text":"Players Alive: ","color":"gold"},{"score":{"name":".aliveAll","objective":"bp_main"},"color":"aqua"},{"text":"/","color":"green"},{"score":{"name":".players","objective":"br_tcheck"}}]
 
 # timer picker
-# the idea is that a random amount of time is picked after each elimination before it stops again
+# the idea is that a random amount of time is picked after each floor removal before it stops again
+#  this way, the game has an extra bit of "randomness" to it that players must watch out for
 execute if score .stop bp_timer matches -99 unless score .in1 bp_timer matches ..65 run scoreboard players remove .in1 bp_timer 5
-execute if score .countDown bp_main matches ..0 run scoreboard players remove ?stop bp_timer 1
+execute if score .countDown bp_main matches ..0 run scoreboard players remove .stop bp_timer 1
 execute if score .stop bp_timer matches -100 run function main:blockparty/timerrng/range
-execute if score .stop bp_timer matches -100..0 run scoreboard players set ?floorSwitch bp_main 0
-execute unless score .stop bp_timer matches ..0 run scoreboard players set ?floorSwitch bp_main 1
+execute if score .stop bp_timer matches -100..0 run scoreboard players set .floorSwitch bp_main 0
+execute unless score .stop bp_timer matches ..0 run scoreboard players set .floorSwitch bp_main 1
+execute if score .stop bp_timer matches -100 run scoreboard players operation .stop bp_timer = .out bp_timer
 
 # player counter
-execute store result score ?aliveRed bp_main if entity @a[team=Red,tag=bp_alive]
-execute store result score ?aliveBlue bp_main if entity @a[team=Blue,tag=bp_alive]
-execute store result score ?aliveGreen bp_main if entity @a[team=Green,tag=bp_alive]
-execute store result score ?aliveYellow bp_main if entity @a[team=Yellow,tag=bp_alive]
+execute store result score .aliveRed bp_main if entity @a[team=Red,tag=bp_alive]
+execute store result score .aliveBlue bp_main if entity @a[team=Blue,tag=bp_alive]
+execute store result score .aliveGreen bp_main if entity @a[team=Green,tag=bp_alive]
+execute store result score .aliveYellow bp_main if entity @a[team=Yellow,tag=bp_alive]
 
 tag @a[tag=player,scores={bp_deaths=0}] add bp_alive
 tag @a[tag=player,scores={bp_deaths=0}] remove bp_deaths

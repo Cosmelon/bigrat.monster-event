@@ -4,7 +4,7 @@
 # run from main:blockparty/tick when .stop bp_timer == 0
 
 # color rng
-#?colorPC is short for .colorPickCycle
+#.colorPC is short for .colorPickCycle
 scoreboard players add .colorPC bp_color 1
 execute if score .colorPC bp_color matches 3.. store result score .out bp_color run random value 1..9
 execute if score .colorPC bp_color matches 3.. run scoreboard players set .colorPC bp_color 0

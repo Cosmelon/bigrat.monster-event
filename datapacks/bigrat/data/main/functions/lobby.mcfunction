@@ -179,16 +179,7 @@ bossbar set minecraft:sgshrink visible false
 bossbar set minecraft:sgshrinkactual visible false
 
 # reset stuff for blockparty
-bossbar remove main:bp_roundcount
-scoreboard objectives remove blockParty
-scoreboard objectives remove bpTimer
-scoreboard objectives remove bpMath
-scoreboard objectives remove bpColor
-scoreboard objectives remove bpFloor
-scoreboard objectives remove bpDeaths
-scoreboard objectives remove bpConst
-tag @a remove bpAlive
-tag @a remove bpDead
+function main:blockparty/cleardata
 
 # reset stuff for tomb
 bossbar remove tomb:r1timer

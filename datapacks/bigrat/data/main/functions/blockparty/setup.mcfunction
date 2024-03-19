@@ -58,11 +58,16 @@ item replace entity @a[team=Red] armor.feet with leather_boots{display:{color:16
 item replace entity @a[team=Blue] armor.feet with leather_boots{display:{color:2635263},Unbreakable:1b,Enchantments:[{id:"binding_curse",lvl:1}],HideFlags:123}
 item replace entity @a[team=Green] armor.feet with leather_boots{display:{color:1208897},Unbreakable:1b,Enchantments:[{id:"binding_curse",lvl:1}],HideFlags:123}
 item replace entity @a[team=Yellow] armor.feet with leather_boots{display:{color:16777000},Unbreakable:1b,Enchantments:[{id:"binding_curse",lvl:1}],HideFlags:123}
+
+# bossbar setup
+bossbar add main:bp_roundcount "bp_roundcount"
+bossbar set main:bp_roundcount color blue
+bossbar set main:bp_roundcount max 3
 bossbar set main:bp_roundcount visible true
 
 # randomizers set
 scoreboard players set .in bp_floor 1
-scoreboard players set .in1 bp_floor 38
+scoreboard players set .in1 bp_floor 11
 function main:blockparty/floorrng/floors
 
 scoreboard players set .in bp_timer 40
