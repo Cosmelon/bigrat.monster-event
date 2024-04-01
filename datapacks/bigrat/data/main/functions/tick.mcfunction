@@ -12,13 +12,13 @@ execute if score .gameActive blockParty matches 0 run scoreboard players set .bl
 execute if score .gameActive blockParty matches 1 run scoreboard players set .blockparty br_cgame 1
 execute if score +gameActive tbCore matches 0 run scoreboard players set .tomb br_cgame 0
 execute if score +gameActive tbCore matches 1 run scoreboard players set .tomb br_cgame 1
-execute if score ~gameActive hallsCore matches 0 run scoreboard players set .halls br_cgame 0
-execute if score ~gameActive hallsCore matches 1 run scoreboard players set .halls br_cgame 1
+execute if score .gameActive halls_main matches 0 run scoreboard players set .halls br_cgame 0
+execute if score .gameActive halls_main matches 1 run scoreboard players set .halls br_cgame 1
 
 # manage lobby when games are inactive
-execute if score .gameActive sp_main matches 0 if score .gameActive rc_main matches 0 if score ~gameActive hallsCore matches 0 if score .gameActive blockParty matches 0 if score +gameActive tbCore matches 0 run spawnpoint @a[tag=!lobbyPVP] 1000 28 -6000
-execute if score .gameActive sp_main matches 0 if score .gameActive rc_main matches 0 if score ~gameActive hallsCore matches 0 if score .gameActive blockParty matches 0 if score +gameActive tbCore matches 0 run setworldspawn 1000 28 -6000
-execute if score .gameActive sp_main matches 0 if score .gameActive rc_main matches 0 if score ~gameActive hallsCore matches 0 if score .gameActive blockParty matches 0 if score +gameActive tbCore matches 0 run scoreboard players set .lobby br_cgame 1
+execute if score .gameActive sp_main matches 0 if score .gameActive rc_main matches 0 if score .gameActive halls_main matches 0 if score .gameActive bp_main matches 0 if score +gameActive tbCore matches 0 run spawnpoint @a[tag=!lobbyPVP] 1000 28 -6000
+execute if score .gameActive sp_main matches 0 if score .gameActive rc_main matches 0 if score .gameActive halls_main matches 0 if score .gameActive bp_main matches 0 if score +gameActive tbCore matches 0 run setworldspawn 1000 28 -6000
+execute if score .gameActive sp_main matches 0 if score .gameActive rc_main matches 0 if score .gameActive halls_main matches 0 if score .gameActive bp_main matches 0 if score +gameActive tbCore matches 0 run scoreboard players set .lobby br_cgame 1
 
 # lobby nextgame
 execute if score .lobby br_cgame matches 1 if score .eventactive br_cgame matches 1 run scoreboard players remove .nextGame br_cgame 1
@@ -97,9 +97,8 @@ execute as @a store result score @s br_zPos run data get entity @s Pos[2]
 
 # kills games when nobody is online
 execute unless score .users br_tcheck matches 1.. if score .gameActive sp_main matches 1 run scoreboard objectives add killGames dummy
-execute unless score .users br_tcheck matches 1.. if score !gameActive rc_main matches 1 run scoreboard objectives add killGames dummy
-execute unless score .users br_tcheck matches 1.. if score ~gameActive sg matches 1 run scoreboard objectives add killGames dummy
-execute unless score .users br_tcheck matches 1.. if score ?gameActive blockParty matches 1 run scoreboard objectives add killGames dummy
+execute unless score .users br_tcheck matches 1.. if score .gameActive rc_main matches 1 run scoreboard objectives add killGames dummy
+execute unless score .users br_tcheck matches 1.. if score .gameActive bp_main matches 1 run scoreboard objectives add killGames dummy
 execute unless score .users br_tcheck matches 1.. run scoreboard players set .main killGames 1
 execute if score .main killGames matches 1.. run function main:spleef/kill
 execute if score .main killGames matches 1.. run function main:race/kill
@@ -147,21 +146,6 @@ execute if score .gameActive sp_main matches 1 run function main:spleef/tick
 # race tick
 execute if score .gameActive rc_main matches 1 run function main:race/tick
 
-# As of 29/06/22, Survival Games has stopped development and is postponed indefinitely
-# sgtick 
-#execute if score ~gameActive sg matches 1 run function main:sg/sgtick
-#scoreboard players enable @a[tag=admin] sgPowerCheck
-#execute as @a[tag=admin] if score ~gameActive sg matches 1 if score @s sgPowerCheck matches 1.. run tellraw @s [{"text":"Vampire Users: ","color":"green"},{"selector":"@a[tag=sgVampire]","color":"white"}]
-#execute as @a[tag=admin] if score ~gameActive sg matches 1 if score @s sgPowerCheck matches 1.. run tellraw @s [{"text":"Trainer Users: ","color":"green"},{"selector":"@a[tag=sgMedic]","color":"white"}]
-#execute as @a[tag=admin] if score ~gameActive sg matches 1 if score @s sgPowerCheck matches 1.. run tellraw @s [{"text":"Redditor Users: ","color":"green"},{"selector":"@a[tag=sgRedditor]","color":"white"}]
-#execute as @a[tag=admin] if score ~gameActive sg matches 1 if score @s sgPowerCheck matches 1.. run tellraw @s [{"text":"Creeper Users: ","color":"green"},{"selector":"@a[tag=sgCreeper]","color":"white"}]
-#execute as @a[tag=admin] if score ~gameActive sg matches 1 if score @s sgPowerCheck matches 1.. run tellraw @s [{"text":"Witch Users: ","color":"green"},{"selector":"@a[tag=sgWitch]","color":"white"}]
-#execute as @a[tag=admin] if score ~gameActive sg matches 1 if score @s sgPowerCheck matches 1.. run tellraw @s [{"text":"Leprechaun Users: ","color":"green"},{"selector":"@a[tag=sgLeprechaun]","color":"white"}]
-#execute as @a[tag=admin] if score ~gameActive sg matches 1 if score @s sgPowerCheck matches 1.. run tellraw @s [{"text":"Medic Users: ","color":"green"},{"selector":"@a[tag=sgMedic]","color":"white"}]
-#execute as @a[tag=admin] if score ~gameActive sg matches 1 if score @s sgPowerCheck matches 1.. run tellraw @s [{"text":"Pyro Users: ","color":"green"},{"selector":"@a[tag=sgPyro]","color":"white"}]
-#execute as @a[tag=admin] if score ~gameActive sg matches 0 if score @s sgPowerCheck matches 1.. run tellraw @s {"text":"Survival Games is currently inactive!","color":"red"}
-#scoreboard players reset @a[scores={sgPowerCheck=1..}] sgPowerCheck
-
 # blockparty tick
 execute if score .gameActive bp_main matches 1 run function main:blockparty/tick
 tag @a[tag=bp_dead] remove bp_alive
@@ -174,4 +158,4 @@ execute if score ?gameActive brawl matches 1 run function main:brawl/main
 execute if score +gameActive tbCore matches 1 run function main:tomb/tbtick
 
 # backrooms tick
-execute if score ~gameActive hallsCore matches 1 run function main:halls/hallstick
+execute if score .gameActive halls_main matches 1 run function main:halls/tick

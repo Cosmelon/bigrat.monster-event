@@ -1,20 +1,20 @@
 # Description: game end for halls
 # Author: Cosmelon
 # Type: single
-# run from main:halls/hallstick
+# run from main:halls/tick
 
-scoreboard players set ~gameActive hallsCore 0
+scoreboard players set .gameActive halls_main 0
 title @a times 0 60 20
 title @a title {"text":"Game Over!","color":"red","bold":true}
 function main:sfx/gameend
 schedule function main:returnlobby 3s replace
 
 # get rid of tags
-tag @a remove hallsAlive
-tag @a remove hallsDead
-tag @a remove wifiPass
-tag @a remove hallsShitting
-tag @a remove shitRoom
+tag @a remove halls_alive
+tag @a remove halls_dead
+tag @a remove halls_wifiPass
+tag @a remove halls_shitting
+tag @a remove halls_shitroom
 tag @a remove halls_exit
 tag @a remove halls_escaped
 tag @a remove halls_keyWifi

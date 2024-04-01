@@ -4,30 +4,30 @@
 # run from <manual>
 
 # manage variables
-scoreboard players set ~gameActive hallsCore 0
-scoreboard players set ~countDown hallsCore 160
-scoreboard players set ~wRelease hallsCore 100
+scoreboard players set .gameActive halls_main 0
+scoreboard players set .countDown halls_main 160
+scoreboard players set .wRelease halls_main 100
 scoreboard players reset * halls_sneak
 scoreboard objectives remove halls_death
 scoreboard objectives add halls_death deathCount
 schedule clear main:halls/music
 
 # reset soap
-scoreboard players reset * halls_soap
-scoreboard players reset * halls_soapStat
-scoreboard players set ~finishRed halls_soapStat 0
-scoreboard players set ~finishBlue halls_soapStat 0
-scoreboard players set ~finishGreen halls_soapStat 0
-scoreboard players set ~finishYellow halls_soapStat 0
+# scoreboard players reset * halls_soap
+# scoreboard players reset * halls_soapStat
+# scoreboard players set ~finishRed halls_soapStat 0
+# scoreboard players set ~finishBlue halls_soapStat 0
+# scoreboard players set ~finishGreen halls_soapStat 0
+# scoreboard players set ~finishYellow halls_soapStat 0
 
 # remove stuff
 bossbar remove halls:wrelease
 kill @e[type=minecraft:warden]
-tag @a remove hallsAlive
-tag @a remove hallsDead
-tag @a remove wifiPass
-tag @a remove hallsShitting
-tag @a remove shitRoom
+tag @a remove halls_alive
+tag @a remove halls_dead
+tag @a remove halls_wifiPass
+tag @a remove halls_shitting
+tag @a remove halls_shitroom
 #entertags
 tag @a remove halls_enter1
 tag @a remove halls_enter2
@@ -88,5 +88,6 @@ execute as @a run trigger halls_craftReset set 0
 
 # text
 tellraw @a[tag=!admin] {"text":"\nKilled Backrooms!\n","color":"dark_red","bold":true}
-tellraw @a[tag=admin] {"text":"\nKilled SG! fix @ https://paypal.me/CosmelonSoftware\n","color":"dark_red","bold":true,"clickEvent":{"action":"run_command","value":"/function main:returnlobby"}}
+tellraw @a[tag=admin] {"text":"\nKilled Backrooms! Return to lobby?","color":"dark_red","bold":true,"clickEvent":{"action":"run_command","value":"/function main:returnlobby"}}
+tellraw @a[tag=admin] [{"text":"[clear data]","color":"gold","clickEvent": {"action": "run_command","value": "/function main:halls/cleardata"}}]
 execute as @a run playsound minecraft:block.beacon.deactivate master @s ~ ~100 ~ 10000

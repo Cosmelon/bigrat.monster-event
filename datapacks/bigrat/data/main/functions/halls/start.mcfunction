@@ -9,18 +9,18 @@ title @a times 0 40 5
 effect clear @a[team=!Admin]
 gamemode adventure @a[tag=player]
 gamemode spectator @a[tag=!player]
-tag @a[tag=player] add hallsAlive
+tag @a[tag=player] add halls_alive
 execute as @e[tag=halls_spawnpoint] run data modify entity @s Invisible set value true
 gamerule keepInventory true
 gamerule doImmediateRespawn false
-gamerule reducedDebugInfo true
+#gamerule reducedDebugInfo true
 
 # declare objectives
 scoreboard players set .halls br_cgame 1
-scoreboard objectives add hallsCore dummy
-scoreboard players set ~gameActive hallsCore 1
-scoreboard players set ~countDown hallsCore 1100
-scoreboard players set ~wRelease hallsCore 100
+scoreboard objectives add halls_main dummy
+scoreboard players set .gameActive halls_main 1
+scoreboard players set .countDown halls_main 1100
+scoreboard players set .wRelease halls_main 100
 scoreboard objectives add halls_death deathCount
 scoreboard objectives add halls_soap dummy
 scoreboard objectives add halls_soapDist dummy
@@ -44,24 +44,27 @@ scoreboard objectives add halls_craftWood minecraft.mined:minecraft.oak_log
 scoreboard objectives add halls_craftReset trigger
 scoreboard objectives remove halls_keys
 scoreboard objectives add halls_keys dummy
-scoreboard players set ~capt_red halls_keys 0
-scoreboard players set ~capt_blue halls_keys 0
-scoreboard players set ~capt_green halls_keys 0
-scoreboard players set ~capt_yellow halls_keys 0
-scoreboard players set ~red_finish halls_keys 0
-scoreboard players set ~blue_finish halls_keys 0
-scoreboard players set ~green_finish halls_keys 0
-scoreboard players set ~yellow_finish halls_keys 0 
-scoreboard players set ~redGate halls_keys 0
-scoreboard players set ~blueGate halls_keys 0
-scoreboard players set ~greenGate halls_keys 0
-scoreboard players set ~yellowGate halls_keys 0
+scoreboard players set .capt_red halls_keys 0
+scoreboard players set .capt_blue halls_keys 0
+scoreboard players set .capt_green halls_keys 0
+scoreboard players set .capt_yellow halls_keys 0
+scoreboard players set .red_finish halls_keys 0
+scoreboard players set .blue_finish halls_keys 0
+scoreboard players set .green_finish halls_keys 0
+scoreboard players set .yellow_finish halls_keys 0 
+scoreboard players set .red_gate halls_keys 0
+scoreboard players set .blue_gate halls_keys 0
+scoreboard players set .green_gate halls_keys 0
+scoreboard players set .yellow_gate halls_keys 0
 #timer shit
-scoreboard players set ~timeLeft hallsCore 9000
+scoreboard players set .time_left halls_main 9000
 scoreboard objectives add hallsConst dummy
-scoreboard players set #milliConst hallsConst 50
-scoreboard players set #secConst hallsConst 20
-scoreboard players set #minConst hallsConst 1200
+#ms/t
+scoreboard players set #milli hallsConst 50
+# t/s
+scoreboard players set #sec hallsConst 20
+# t/min
+scoreboard players set #min hallsConst 1200
 bossbar add halls:redtimer ""
 bossbar set halls:redtimer visible false
 
@@ -71,18 +74,18 @@ spawnpoint @a[team=Red] -976 25 1044
 spawnpoint @a[team=Blue] -1205 25 1044
 spawnpoint @a[team=Green] -1436 25 1044
 spawnpoint @a[team=Yellow] -1666 25 1044
-execute unless score ~tpOff hallsCore matches 1 run tp @a[team=Red] -976.001 22 1044.001
-execute unless score ~tpOff hallsCore matches 1 run tp @a[team=Blue] -1206.001 22 1044.001
-execute unless score ~tpOff hallsCore matches 1 run tp @a[team=Green] -1436.001 22 1044.001
-execute unless score ~tpOff hallsCore matches 1 run tp @a[team=Yellow] -1666.001 22 1044.001
-execute if score ~tpOff hallsCore matches 1 run msg @a[tag=admin] Players should have been teleported to the maze, but weren't because ~tpOff hallsCore == 1
+execute unless score .tp_off halls_main matches 1 run tp @a[team=Red] -976.001 22 1044.001
+execute unless score .tp_off halls_main matches 1 run tp @a[team=Blue] -1206.001 22 1044.001
+execute unless score .tp_off halls_main matches 1 run tp @a[team=Green] -1436.001 22 1044.001
+execute unless score .tp_off halls_main matches 1 run tp @a[team=Yellow] -1666.001 22 1044.001
+execute if score .tp_off halls_main matches 1 run msg @a[tag=admin] Players should have been teleported to the maze, but weren't because .tp_off halls_main == 1
 
 # setup soaproom
-kill @e[type=pig]
-place template main:halls/redsoap -1007 19 978
-place template main:halls/bluesoap -1237 19 978
-place template main:halls/greensoap -1467 19 978
-place template main:halls/yellowsoap -1697 19 978
+# kill @e[type=pig]
+# place template main:halls/redsoap -1007 19 978
+# place template main:halls/bluesoap -1237 19 978
+# place template main:halls/greensoap -1467 19 978
+# place template main:halls/yellowsoap -1697 19 978
 
 # setup emerald mine
 place template main:halls/emerald -1033 16 1031
@@ -140,9 +143,3 @@ fill -1666 26 1037 -1663 22 1037 tinted_glass
 fill -1660 26 1041 -1660 22 1043 tinted_glass
 fill -1665 26 1050 -1667 22 1050 tinted_glass
 fill -1673 26 1041 -1673 22 1038 tinted_glass
-
-# basic tellraw for start
-#tellraw @a {"text":"\nBackrooms","bold":true}
-#tellraw @a {"text":"\nSo basically the objective of the game is to run around the maze and complete challenges."}
-#tellraw @a {"text":"\nPoints are awarded for finding then completing a challenge, then bringing the trophy back to the center."}
-#tellraw @a {"text":"\nBut be careful... something seems off about this place..."}

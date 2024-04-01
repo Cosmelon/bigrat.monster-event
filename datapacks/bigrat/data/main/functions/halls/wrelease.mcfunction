@@ -1,7 +1,7 @@
 # Description: release the warden
 # Author: Cosmelon
 # Type: single
-# run from main:halls/hallstick when ~wRelease hallCore == 0
+# run from main:halls/tick when .wRelease hallCore == 0
 
 # summon warden
 summon warden -976.001 22 1044.001

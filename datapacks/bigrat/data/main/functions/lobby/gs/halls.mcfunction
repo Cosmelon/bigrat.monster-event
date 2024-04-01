@@ -12,7 +12,7 @@ tellraw @a [{"text":"\uE004"},{"translate":"space.-1"},{"text":"\uE004"},{"trans
 tellraw @a ""
 tellraw @a ""
 tellraw @a ""
-tellraw @a {"text":"The Fifth Game is Halls!","color":"gold"}
+tellraw @a {"text":"The Fifth Game is Backrooms!","color":"gold"}
 tellraw @a ""
 tellraw @a ""
 tellraw @a ""
@@ -24,4 +24,4 @@ title @a title ""
 title @a subtitle ""
 title @a actionbar ""
 schedule function main:fadeout 3s 
-schedule function main:halls/starthalls 6s
+schedule function main:halls/start 6s

@@ -4,7 +4,7 @@
         "trigger": "minecraft:player_interacted_with_entity",
         "conditions": {
           "player": {
-            "nbt": "{Tags:[\"wifiPass\"]}"
+            "nbt": "{Tags:[\"halls_wifiPass\"]}"
           },
           "entity": {
             "nbt": "{Tags:[\"hallsMouse\"]}"

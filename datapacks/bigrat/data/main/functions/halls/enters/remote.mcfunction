@@ -2,7 +2,7 @@
 # Author: Cosmelon
 # Type: single
 # @s = @a in range of the remote room entrance
-# run from main:halls/hallstick
+# run from main:halls/tick
 
 # tag
 tag @s add halls_enter2
