@@ -22,9 +22,6 @@ scoreboard players set .gameActive halls_main 1
 scoreboard players set .countDown halls_main 1100
 scoreboard players set .wRelease halls_main 100
 scoreboard objectives add halls_death deathCount
-scoreboard objectives add halls_soap dummy
-scoreboard objectives add halls_soapDist dummy
-scoreboard objectives add halls_soapStat dummy
 scoreboard objectives add halls_remote minecraft.custom:minecraft.open_barrel
 scoreboard objectives add halls_click minecraft.used:minecraft.carrot_on_a_stick
 scoreboard objectives add halls_shitter dummy
@@ -79,13 +76,6 @@ execute unless score .tp_off halls_main matches 1 run tp @a[team=Blue] -1206.001
 execute unless score .tp_off halls_main matches 1 run tp @a[team=Green] -1436.001 22 1044.001
 execute unless score .tp_off halls_main matches 1 run tp @a[team=Yellow] -1666.001 22 1044.001
 execute if score .tp_off halls_main matches 1 run msg @a[tag=admin] Players should have been teleported to the maze, but weren't because .tp_off halls_main == 1
-
-# setup soaproom
-# kill @e[type=pig]
-# place template main:halls/redsoap -1007 19 978
-# place template main:halls/bluesoap -1237 19 978
-# place template main:halls/greensoap -1467 19 978
-# place template main:halls/yellowsoap -1697 19 978
 
 # setup emerald mine
 place template main:halls/emerald -1033 16 1031

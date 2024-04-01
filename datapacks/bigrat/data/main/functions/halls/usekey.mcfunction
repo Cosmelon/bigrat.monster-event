@@ -12,8 +12,8 @@
 
 # wifikey
 execute if entity @s[tag=halls_keyWifi,tag=!halls_subP1] run tellraw @a[tag=player,distance=..100] [{"text":"» ","color":"gray"},{"selector":"@s"},{"text":" captured the wifi key!","color":"gray"}]
-execute if entity @s[tag=halls_keyWifi,tag=!halls_subP1] run tellraw @s [{"text":"+20 pts (capturing a key)","color":"green"}]
-execute if entity @s[tag=halls_keyWifi,tag=!halls_subP1] run scoreboard players add @s indivScore 20
+# execute if entity @s[tag=halls_keyWifi,tag=!halls_subP1] run tellraw @s [{"text":"+20 pts (capturing a key)","color":"green"}]
+# execute if entity @s[tag=halls_keyWifi,tag=!halls_subP1] run scoreboard players add @s indivScore 20
 execute if entity @s[tag=halls_keyWifi,tag=halls_subP1] run tellraw @s [{"text":"» You already captured the wifi key!","color":"gray"}]
 tag @s[tag=halls_keyWifi] add halls_subP1
 execute if entity @s[team=Red,tag=halls_keyWifi] unless score .red_wifi halls_keys matches 1 run scoreboard players add .capt_red halls_keys 1
@@ -28,8 +28,8 @@ clear @s nether_wart{display:{Name:'[{"text":"Wifi Key","italic":false}]',Lore:[
 
 # remotekey
 execute if entity @s[tag=halls_keyRemote,tag=!halls_subP2] run tellraw @a[tag=player,distance=..100] [{"text":"» ","color":"gray"},{"selector":"@s"},{"text":" captured the remote key!","color":"gray"}]
-execute if entity @s[tag=halls_keyRemote,tag=!halls_subP2] run tellraw @s [{"text":"+20 pts (capturing a key)","color":"green"}]
-execute if entity @s[tag=halls_keyRemote,tag=!halls_subP2] run scoreboard players add @s indivScore 20
+# execute if entity @s[tag=halls_keyRemote,tag=!halls_subP2] run tellraw @s [{"text":"+20 pts (capturing a key)","color":"green"}]
+# execute if entity @s[tag=halls_keyRemote,tag=!halls_subP2] run scoreboard players add @s indivScore 20
 execute if entity @s[tag=halls_keyRemote,tag=halls_subP2] run tellraw @s [{"text":"» You already captured the remote key!","color":"gray"}]
 tag @s[tag=halls_keyRemote] add halls_subP2
 execute if entity @s[team=Red,tag=halls_keyRemote] unless score .red_remote halls_keys matches 1 run scoreboard players add .capt_red halls_keys 1
@@ -42,13 +42,28 @@ execute if entity @s[team=Yellow,tag=halls_keyRemote] unless score .yellow_remot
 execute if entity @s[team=Yellow,tag=halls_keyRemote] run scoreboard players set .yellow_remote halls_keys 1
 clear @s nether_wart{display:{Name:'[{"text":"TV Key","italic":false}]',Lore:['[{"text":"Take this to the center to","italic":false}]','[{"text":"activate!","italic":false}]']}}
 
-#
+# parkour key
+execute if entity @s[tag=halls_keyRemote,tag=!halls_subP3] run tellraw @a[tag=player,distance=..100] [{"text":"» ","color":"gray"},{"selector":"@s"},{"text":" captured the remote key!","color":"gray"}]
+# execute if entity @s[tag=halls_keyRemote,tag=!halls_subP3] run tellraw @s [{"text":"+20 pts (capturing a key)","color":"green"}]
+# execute if entity @s[tag=halls_keyRemote,tag=!halls_subP3] run scoreboard players add @s indivScore 20
+execute if entity @s[tag=halls_keyRemote,tag=halls_subP3] run tellraw @s [{"text":"» You already captured the parkour key!","color":"gray"}]
+tag @s[tag=halls_keyRemote] add halls_subP3
+execute if entity @s[team=Red,tag=halls_keyPk] unless score .red_pk halls_keys matches 1 run scoreboard players add .capt_red halls_keys 1
+execute if entity @s[team=Red,tag=halls_keyPk] run scoreboard players set .red_pk halls_keys 1
+execute if entity @s[team=Blue,tag=halls_keyPk] unless score .blue_pk halls_keys matches 1 run scoreboard players add .capt_blue halls_keys 1
+execute if entity @s[team=Blue,tag=halls_keyPk] run scoreboard players set .blue_pk halls_keys 1
+execute if entity @s[team=Green,tag=halls_keyPk] unless score .green_pk halls_keys matches 1 run scoreboard players add .capt_green halls_keys 1
+execute if entity @s[team=Green,tag=halls_keyPk] run scoreboard players set .green_pk halls_keys 1
+execute if entity @s[team=Yellow,tag=halls_keyPk] unless score .yellowpke halls_keys matches 1 run scoreboard players add .capt_yellow halls_keys 1
+execute if entity @s[team=Yellow,tag=halls_keyPk] run scoreboard players set .yellow_pk halls_keys 1
+clear @s nether_wart{display:{Name:'[{"text":"Parkour Key","italic":false}]',Lore:['[{"text":"Take this to the center to","italic":false}]','[{"text":"activate!","italic":false}]']}}
+
 
 
 # halls_shitterkey
 execute if entity @s[tag=halls_keyShitter,tag=!halls_subP4] run tellraw @a[tag=player,distance=..100] [{"text":"» ","color":"gray"},{"selector":"@s"},{"text":" captured the shitter key!","color":"gray"}]
-execute if entity @s[tag=halls_keyShitter,tag=!halls_subP4] run tellraw @s [{"text":"+20 pts (capturing a key)","color":"green"}]
-execute if entity @s[tag=halls_keyShitter,tag=!halls_subP4] run scoreboard players add @s indivScore 20
+# execute if entity @s[tag=halls_keyShitter,tag=!halls_subP4] run tellraw @s [{"text":"+20 pts (capturing a key)","color":"green"}]
+# execute if entity @s[tag=halls_keyShitter,tag=!halls_subP4] run scoreboard players add @s indivScore 20
 execute if entity @s[tag=halls_keyShitter,tag=halls_subP4] run tellraw @s [{"text":"» You already captured the shitter key!","color":"gray"}]
 tag @s[tag=halls_keyShitter] add halls_subP4
 execute if entity @s[team=Red,tag=halls_keyShitter] unless score .red_shitter halls_keys matches 1 run scoreboard players add .capt_red halls_keys 1
@@ -63,8 +78,8 @@ clear @s nether_wart{display:{Name:'[{"text":"Shitter Key","italic":false}]',Lor
 
 # emerald key
 execute if entity @s[tag=halls_keyEmerald,tag=!halls_subP5] run tellraw @a[tag=player,distance=..100] [{"text":"» ","color":"gray"},{"selector":"@s"},{"text":" captured the emerald mine key!","color":"gray"}]
-execute if entity @s[tag=halls_keyEmerald,tag=!halls_subP5] run tellraw @s [{"text":"+20 pts (capturing a key)","color":"green"}]
-execute if entity @s[tag=halls_keyEmerald,tag=!halls_subP5] run scoreboard players add @s indivScore 20
+# execute if entity @s[tag=halls_keyEmerald,tag=!halls_subP5] run tellraw @s [{"text":"+20 pts (capturing a key)","color":"green"}]
+# execute if entity @s[tag=halls_keyEmerald,tag=!halls_subP5] run scoreboard players add @s indivScore 20
 execute if entity @s[tag=halls_keyEmerald,tag=halls_subP5] run tellraw @s [{"text":"» You already captured the emerald key!","color":"gray"}]
 tag @s[tag=halls_keyEmerald] add halls_subP5
 execute if entity @s[team=Red,tag=halls_keyEmerald] unless score .red_emerald halls_keys matches 1 run scoreboard players add .capt_red halls_keys 1
@@ -79,8 +94,8 @@ clear @s nether_wart{display:{Name:'[{"text":"Emerald Mine Key","italic":false}]
 
 # car key
 execute if entity @s[tag=halls_keyCar,tag=!halls_subP6] run tellraw @a[tag=player,distance=..100] [{"text":"» ","color":"gray"},{"selector":"@s"},{"text":" captured the car key!","color":"gray"}]
-execute if entity @s[tag=halls_keyCar,tag=!halls_subP6] run tellraw @s [{"text":"+20 pts (capturing a key)","color":"green"}]
-execute if entity @s[tag=halls_keyCar,tag=!halls_subP6] run scoreboard players add @s indivScore 20
+# execute if entity @s[tag=halls_keyCar,tag=!halls_subP6] run tellraw @s [{"text":"+20 pts (capturing a key)","color":"green"}]
+# execute if entity @s[tag=halls_keyCar,tag=!halls_subP6] run scoreboard players add @s indivScore 20
 execute if entity @s[tag=halls_keyCar,tag=halls_subP6] run tellraw @s [{"text":"» You already captured the car key!","color":"gray"}]
 tag @s[tag=halls_keyCar] add halls_subP6
 execute if entity @s[team=Red,tag=halls_keyCar] unless score .red_car halls_keys matches 1 run scoreboard players add .capt_red halls_keys 1
@@ -95,8 +110,8 @@ clear @s nether_wart{display:{Name:'[{"text":"Car Key","italic":false}]',Lore:['
 
 # craft key
 execute if entity @s[tag=halls_keyCraft,tag=!halls_subP7] run tellraw @a[tag=player,distance=..100] [{"text":"» ","color":"gray"},{"selector":"@s"},{"text":" captured the craft key!","color":"gray"}]
-execute if entity @s[tag=halls_keyCraft,tag=!halls_subP7] run tellraw @s [{"text":"+20 pts (capturing a key)","color":"green"}]
-execute if entity @s[tag=halls_keyCraft,tag=!halls_subP7] run scoreboard players add @s indivScore 20
+# execute if entity @s[tag=halls_keyCraft,tag=!halls_subP7] run tellraw @s [{"text":"+20 pts (capturing a key)","color":"green"}]
+# execute if entity @s[tag=halls_keyCraft,tag=!halls_subP7] run scoreboard players add @s indivScore 20
 execute if entity @s[tag=halls_keyCraft,tag=halls_subP7] run tellraw @s [{"text":"» You already captured the craft key!","color":"gray"}]
 tag @s[tag=halls_keyCraft] add halls_subP7
 execute if entity @s[team=Red,tag=halls_keyCraft] unless score .red_craft halls_keys matches 1 run scoreboard players add .capt_red halls_keys 1

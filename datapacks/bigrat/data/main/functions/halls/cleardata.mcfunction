@@ -12,9 +12,7 @@ bossbar remove halls:yellowtimer
 scoreboard objectives remove halls_main
 scoreboard objectives remove halls_death
 scoreboard objectives remove halls_keys
-scoreboard objectives remove halls_soap
-scoreboard objectives remove halls_soapStat
-scoreboard objectives remove halls_soapDist
+scoreboard objectives remove halls_pk
 scoreboard objectives remove halls_sneak
 scoreboard objectives remove halls_remote
 scoreboard objectives remove halls_click

@@ -6,6 +6,6 @@
 
 scoreboard players set +wave tbR2_BlueR1 -1
 
-summon minecraft:item ~ ~ ~ {Item:{id:"tripwire_hook",Count:1,tag:{display:{Name:'[{"text":"Key 1","italic":false,"color":"blue"}]'}}},CustomName:'[{"text":"blue key"}]',CustomNameVisible:1b}
+summon minecraft:item ~ ~ ~ {Item:{id:"nether_wart",Count:1,tag:{display:{Name:'[{"text":"Key 1","italic":false,"color":"blue"}]'}}},CustomName:'[{"text":"blue key"}]',CustomNameVisible:1b}
 scoreboard players set +keyDropped tbR2_BlueR1 1
 scoreboard objectives add tbR2_click minecraft.used:carrot_on_a_stick

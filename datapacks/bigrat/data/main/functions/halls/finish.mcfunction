@@ -19,7 +19,7 @@ tag @a remove halls_exit
 tag @a remove halls_escaped
 tag @a remove halls_keyWifi
 tag @a remove halls_keyRemote
-tag @a remove halls_keySoap
+tag @a remove halls_keyPk
 tag @a remove halls_keyShitter
 tag @a remove halls_keyEmerald
 tag @a remove halls_keyCar

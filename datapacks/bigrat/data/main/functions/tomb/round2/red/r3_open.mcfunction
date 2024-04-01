@@ -11,7 +11,7 @@ fill 5114 37 -1 5113 42 5 air replace #main:tb/door
 execute as @a[team=Red] run playsound block.chest.open ambient @s ~ ~100 ~ 10000 0.6
 
 # remove key
-clear @a[team=Red] tripwire_hook{display:{Name:'[{"text":"Key 2","italic":false,"color":"red"}]'}}
+clear @a[team=Red] nether_wart{display:{Name:'[{"text":"Key 2","italic":false,"color":"red"}]'}}
 
 # title
 title @a[team=Red] title ""

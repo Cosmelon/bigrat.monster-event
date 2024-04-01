@@ -15,7 +15,7 @@ fill 5076 42 -2 5076 36 6 air replace barrier
 execute as @a[team=Red] run playsound block.chest.open ambient @s ~ ~100 ~ 10000 0.6
 
 # remove key
-clear @a[team=Red] tripwire_hook{display:{Name:'[{"text":"Key 1","italic":false,"color":"red"}]'}}
+clear @a[team=Red] nether_wart{display:{Name:'[{"text":"Key 1","italic":false,"color":"red"}]'}}
 
 # title
 title @a[team=Red] title ""

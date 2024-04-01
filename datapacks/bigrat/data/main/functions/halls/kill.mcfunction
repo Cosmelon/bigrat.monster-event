@@ -11,6 +11,7 @@ scoreboard players reset * halls_sneak
 scoreboard objectives remove halls_death
 scoreboard objectives add halls_death deathCount
 schedule clear main:halls/music
+stopsound @a
 
 # reset soap
 # scoreboard players reset * halls_soap
@@ -85,6 +86,12 @@ execute as @e[tag=halls_spawnpoint] run data modify entity @s Invisible set valu
 # clear trigger
 execute as @a run trigger halls_emReset set 0
 execute as @a run trigger halls_craftReset set 0
+
+# kill armorstands
+kill @e[tag=red_warden_pos]
+kill @e[tag=blue_warden_pos]
+kill @e[tag=green_warden_pos]
+kill @e[tag=yellow_warden_pos]
 
 # text
 tellraw @a[tag=!admin] {"text":"\nKilled Backrooms!\n","color":"dark_red","bold":true}

@@ -30,10 +30,14 @@ execute positioned -976.001 22 1044.001 store result score .red_warden halls_mai
 execute positioned -1206.001 22 1044.001 store result score .blue_warden halls_main if entity @e[type=warden,distance=..100]
 execute positioned -1436.001 22 1044.001 store result score .green_warden halls_main if entity @e[type=warden,distance=..100]
 execute positioned -1666.001 22 1044.001 store result score .yellow_warden halls_main if entity @e[type=warden,distance=..100]
-execute if score .wRelease halls_main matches ..-10 if score .red_warden halls_main matches 0 run summon warden -976.001 22 1044.001
-execute if score .wRelease halls_main matches ..-10 if score .blue_warden halls_main matches 0 run summon warden -1206.001 22 1044.001
-execute if score .wRelease halls_main matches ..-10 if score .green_warden halls_main matches 0 run summon warden -1436.001 22 1044.001
-execute if score .wRelease halls_main matches ..-10 if score .yellow_warden halls_main matches 0 run summon warden -1666.001 22 1044.001
+execute if score .wRelease halls_main matches ..-10 if score .red_warden halls_main matches 0 at @e[tag=red_warden_pos] run summon warden ~ ~ ~ {Tags:["red_warden"]}
+execute if score .wRelease halls_main matches ..-10 if score .blue_warden halls_main matches 0 at @e[tag=red_warden_pos] run summon warden ~ ~ ~ {Tags:["blue_warden"]}
+execute if score .wRelease halls_main matches ..-10 if score .green_warden halls_main matches 0 at @e[tag=red_warden_pos] run summon warden ~ ~ ~ {Tags:["green_warden"]}
+execute if score .wRelease halls_main matches ..-10 if score .yellow_warden halls_main matches 0 at @e[tag=red_warden_pos] run summon warden ~ ~ ~ {Tags:["yellow_warden"]}
+execute at @e[tag=red_warden] run tp @e[tag=red_warden_pos] ~ ~ ~
+execute at @e[tag=blue_warden] run tp @e[tag=blue_warden_pos] ~ ~ ~
+execute at @e[tag=green_warden] run tp @e[tag=green_warden_pos] ~ ~ ~
+execute at @e[tag=yellow_warden] run tp @e[tag=yellow_warden_pos] ~ ~ ~
 
 # infotext
 execute if score .countDown halls_main matches 1000 run function main:halls/startinfo/begin
@@ -91,7 +95,7 @@ scoreboard players operation .remainder halls_main = #rem halls_main
 
 # sneak prevention
 execute as @a[tag=player,tag=halls_alive,predicate=main:sneak_state,tag=!halls_shitting] run scoreboard players add @s halls_sneak 1
-tellraw @a[tag=player,scores={halls_sneak=100..}] {"text":"» -5 points (sneaking like a lil bitch)","color":"dark_red"}
+tellraw @a[tag=player,scores={halls_sneak=100..}] {"text":"  -5 points (sneaking like a lil bitch)","color":"dark_red"}
 scoreboard players remove @a[tag=player,scores={halls_sneak=100..},tag=halls_shitting] indivScore 5
 scoreboard players reset @a[tag=player,scores={halls_sneak=100..}] halls_sneak
 # this is a sample text
@@ -102,10 +106,10 @@ execute as @a[tag=player] store result score @s halls_compass_count run clear @s
 execute as @a[tag=player,scores={halls_compass_count=2..}] run clear @s compass
 kill @e[type=item,nbt={Item:{id:"minecraft:compass"}}]
 scoreboard objectives remove halls_compass_count
-item replace entity @a[tag=halls_alive,team=Red] hotbar.8 with compass{LodestoneDimension:"minecraft:overworld",LodestoneTracked:1b,LodestonePos:{X:-977,Y:19,Z:1043}}
-item replace entity @a[tag=halls_alive,team=Blue] hotbar.8 with compass{LodestoneDimension:"minecraft:overworld",LodestoneTracked:1b,LodestonePos:{X:-1207,Y:19,Z:1043}}
-item replace entity @a[tag=halls_alive,team=Green] hotbar.8 with compass{LodestoneDimension:"minecraft:overworld",LodestoneTracked:1b,LodestonePos:{X:-1437,Y:19,Z:1043}}
-item replace entity @a[tag=halls_alive,team=Yellow] hotbar.8 with compass{LodestoneDimension:"minecraft:overworld",LodestoneTracked:1b,LodestonePos:{X:-1667,Y:19,Z:1043}}
+item replace entity @a[tag=halls_alive,team=Red] hotbar.8 with compass{LodestoneDimension:"minecraft:overworld",LodestoneTracked:1b,LodestonePos:{X:-977,Y:29,Z:1043}}
+item replace entity @a[tag=halls_alive,team=Blue] hotbar.8 with compass{LodestoneDimension:"minecraft:overworld",LodestoneTracked:1b,LodestonePos:{X:-1207,Y:29,Z:1043}}
+item replace entity @a[tag=halls_alive,team=Green] hotbar.8 with compass{LodestoneDimension:"minecraft:overworld",LodestoneTracked:1b,LodestonePos:{X:-1437,Y:29,Z:1043}}
+item replace entity @a[tag=halls_alive,team=Yellow] hotbar.8 with compass{LodestoneDimension:"minecraft:overworld",LodestoneTracked:1b,LodestonePos:{X:-1667,Y:29,Z:1043}}
 
 
 # death tag management
@@ -120,9 +124,9 @@ execute as @a[scores={halls_death=1}] run function main:halls/death
 execute as @a[tag=halls_dead] at @s if block ~ ~2 ~ barrier run function main:halls/respawn
 # determine pit to respawn in
 execute at @e[type=armor_stand,name=".red_spawn"] run spawnpoint @a[team=Red] ~ ~ ~
-execute as @a[team=Blue] at @e[name=".blue_spawn",limit=1,sort=nearest] run spawnpoint @s ~ ~ ~
-execute as @a[team=Green] at @e[name=".green_spawn",limit=1,sort=nearest] run spawnpoint @s ~ ~ ~
-execute as @a[team=Yellow] at @e[name=".yellow_spawn",limit=1,sort=nearest] run spawnpoint @s ~ ~ ~
+execute as @a[team=Blue] at @e[name=".blue_spawn"] run spawnpoint @s ~ ~ ~
+execute as @a[team=Green] at @e[name=".green_spawn"] run spawnpoint @s ~ ~ ~
+execute as @a[team=Yellow] at @e[name=".yellow_spawn"] run spawnpoint @s ~ ~ ~
 # rescue players
 execute as @a[tag=halls_alive] at @s if block ~ ~-1 ~ barrier positioned ~ ~-20 ~ run effect give @a[tag=halls_dead,distance=..17] levitation 1 2 true
 
@@ -130,7 +134,7 @@ execute as @a[tag=halls_alive] at @s if block ~ ~-1 ~ barrier positioned ~ ~-20 
 #red
 execute positioned -964.5 22 1090.5 as @a[tag=player,tag=!halls_enter1,distance=..2] run function main:halls/enters/wifi
 execute positioned -929.99 22 1030.03 as @a[tag=player,tag=!halls_enter2,distance=..3] run function main:halls/enters/remote
-execute positioned -994.5 22 984.5 as @a[tag=player,tag=!halls_enter3,distance=..2] run function main:halls/enters/soap
+execute positioned -959.5 24 980.5 as @a[tag=player,tag=!halls_enter3,distance=..2] run function main:halls/enters/pk
 execute positioned -1013.5 22 1053.5 as @a[tag=player,tag=!halls_enter4,distance=..2] run function main:halls/enters/shit
 execute positioned -1026.5 22 1031.5 as @a[tag=player,tag=!halls_enter5,distance=..2] run function main:halls/enters/emerald
 execute positioned -921.5 22 1080.5 as @a[tag=player,tag=!halls_enter6,distance=..2] run function main:halls/enters/car
@@ -138,7 +142,7 @@ execute positioned -1029.5 22 1008.5 as @a[tag=player,tag=!halls_enter7,distance
 #blue
 execute positioned -1194.5 22 1090.5 as @a[tag=player,tag=!halls_enter1,distance=..2] run function main:halls/enters/wifi
 execute positioned -1159.99 22 1030.03 as @a[tag=player,tag=!halls_enter2,distance=..3] run function main:halls/enters/remote
-execute positioned -1224.5 22 984.5 as @a[tag=player,tag=!halls_enter3,distance=..2] run function main:halls/enters/soap
+# execute positioned -1224.5 22 984.5 as @a[tag=player,tag=!halls_enter3,distance=..2] run function main:halls/enters/soap
 execute positioned -1243.5 22 1053.5 as @a[tag=player,tag=!halls_enter4,distance=..2] run function main:halls/enters/shit
 execute positioned -1256.5 22 1031.5 as @a[tag=player,tag=!halls_enter5,distance=..2] run function main:halls/enters/emerald
 execute positioned -1151.5 22 1080.5 as @a[tag=player,tag=!halls_enter6,distance=..2] run function main:halls/enters/car
@@ -146,7 +150,7 @@ execute positioned -1259.5 22 1008.5 as @a[tag=player,tag=!halls_enter7,distance
 #green
 execute positioned -1424.5 22 1090.5 as @a[tag=player,tag=!halls_enter1,distance=..2] run function main:halls/enters/wifi
 execute positioned -1389.99 22 1030.03 as @a[tag=player,tag=!halls_enter2,distance=..3] run function main:halls/enters/remote
-execute positioned -1454.5 22 984.5 as @a[tag=player,tag=!halls_enter3,distance=..2] run function main:halls/enters/soap
+# execute positioned -1454.5 22 984.5 as @a[tag=player,tag=!halls_enter3,distance=..2] run function main:halls/enters/soap
 execute positioned -1473.5 22 1053.5 as @a[tag=player,tag=!halls_enter4,distance=..2] run function main:halls/enters/shit
 execute positioned -1486.5 22 1031.5 as @a[tag=player,tag=!halls_enter5,distance=..2] run function main:halls/enters/emerald
 execute positioned -1381.5 22 1080.5 as @a[tag=player,tag=!halls_enter6,distance=..2] run function main:halls/enters/car
@@ -154,7 +158,7 @@ execute positioned -1489.5 22 1008.5 as @a[tag=player,tag=!halls_enter7,distance
 #yellow
 execute positioned -1654.5 22 1090.5 as @a[tag=player,tag=!halls_enter1,distance=..2] run function main:halls/enters/wifi
 execute positioned -1619.99 22 1030.03 as @a[tag=player,tag=!halls_enter2,distance=..3] run function main:halls/enters/remote
-execute positioned -1684.5 22 984.5 as @a[tag=player,tag=!halls_enter3,distance=..2] run function main:halls/enters/soap
+# execute positioned -1684.5 22 984.5 as @a[tag=player,tag=!halls_enter3,distance=..2] run function main:halls/enters/soap
 execute positioned -1703.5 22 1053.5 as @a[tag=player,tag=!halls_enter4,distance=..2] run function main:halls/enters/shit
 execute positioned -1716.5 22 1031.5 as @a[tag=player,tag=!halls_enter5,distance=..2] run function main:halls/enters/emerald
 execute positioned -1611.5 22 1080.5 as @a[tag=player,tag=!halls_enter6,distance=..2] run function main:halls/enters/car
@@ -174,10 +178,10 @@ execute if score .escaped halls_main = .players br_tcheck run function main:hall
 execute if score .time_left halls_main matches 0 run function main:halls/finish
 
 # finish game
-execute if score .capt_red halls_keys matches 7 as @a[team=Red] run function main:halls/escape
-execute if score .capt_blue halls_keys matches 7 as @a[team=Blue] run function main:halls/escape
-execute if score .capt_green halls_keys matches 7 as @a[team=Green] run function main:halls/escape
-execute if score .capt_yellow halls_keys matches 7 as @a[team=Yellow] run function main:halls/escape
+execute if score .capt_red halls_keys matches 7 as @a[team=Red, tag=!halls_escaped] run function main:halls/escape
+execute if score .capt_blue halls_keys matches 7 as @a[team=Blue, tag=!halls_escaped] run function main:halls/escape
+execute if score .capt_green halls_keys matches 7 as @a[team=Green, tag=!halls_escaped] run function main:halls/escape
+execute if score .capt_yellow halls_keys matches 7 as @a[team=Yellow, tag=!halls_escaped] run function main:halls/escape
 
 # take key to center
 execute as @a[nbt={Inventory:[{id:"minecraft:nether_wart"}]}] run tag @s add halls_key
@@ -216,7 +220,12 @@ execute as @a[scores={halls_click=1..},nbt={SelectedItem:{id:"minecraft:lever",t
 tag @a[tag=halls_alive,nbt={Inventory:[{id:"minecraft:nether_wart",Count:1b,tag:{display:{Name:'[{"text":"TV Key","italic":false}]',Lore:['[{"text":"Take this to the center to","italic":false}]','[{"text":"activate!","italic":false}]']}}}]}] add halls_keyRemote
 tag @a[tag=halls_alive,nbt=!{Inventory:[{id:"minecraft:nether_wart",Count:1b,tag:{display:{Name:'[{"text":"TV Key","italic":false}]',Lore:['[{"text":"Take this to the center to","italic":false}]','[{"text":"activate!","italic":false}]']}}}]}] remove halls_keyRemote
 
-# # dropped the soap
+
+# parkour challenge
+#blocks being placed is done via physical command blocks, it's much easier
+execute at @e[type=armor_stand,limit=1,sort=random,tag=halls_pknpc] as @a[tag=halls_alive,tag=!halls_pkfinish,distance=..1] run function main:halls/pkfinish
+tag @a[nbt={Inventory:[{id:"minecraft:nether_wart",Count:1b,tag:{display:{Name:'[{"text":"Parkour Key","italic":false}]',Lore:['[{"text":"Take this to the center to","italic":false}]','[{"text":"activate!","italic":false}]']}}}]}] add halls_keyPk
+tag @a[nbt=!{Inventory:[{id:"minecraft:nether_wart",Count:1b,tag:{display:{Name:'[{"text":"Parkour Key","italic":false}]',Lore:['[{"text":"Take this to the center to","italic":false}]','[{"text":"activate!","italic":false}]']}}}]}] add halls_keyPk
 
 
 # take the shit
@@ -345,4 +354,3 @@ tag @a[tag=halls_alive,nbt=!{Inventory:[{id:"minecraft:nether_wart",Count:1b,tag
 
 # halls_remote
 scoreboard players set @a[scores={halls_click=1..}] halls_click 0
-

@@ -120,7 +120,6 @@ execute as @a[tag=player] run function main:scores/indivmath
 execute if score .lobby br_cgame matches 1 run effect give @a[tag=!lobbyPVP] weakness infinite 100 true
 execute if score .lobby br_cgame matches 1 run effect give @a[tag=!lobbyPVP] saturation infinite 100 true
 
-
 # lobby slap box
 tag @a[x=993.5,dx=13,y=30,dy=4,z=-5969.5,dz=13] add lobbyPVP
 spawnpoint @a[tag=lobbyPVP] 1000 28 -5973 0
@@ -138,6 +137,12 @@ tag @a[x=1007.5,dx=100000] remove lobbyPVP
 tag @a[z=-5955.5,dz=100000] remove lobbyPVP
 tag @a[z=-5969.5,dz=-100000] remove lobbyPVP
 execute as @a[tag=!lobbyPVP] run clear @s stick{display:{Name:'[{"text":"Kinda sticky...","italic":false}]'}}
+
+# parkour
+execute as @a[gamemode=adventure,tag=!br_pkfinish,scores={br_xPos=1052..1057, br_yPos=49..54, br_zPos=-6003..-5999}] run tellraw @a [{"selector":"@s"}, {"text":" is a sweaty nerd and finished the lobby parkour!","color":"gray"}]
+execute as @a[gamemode=adventure,tag=!br_pkfinish,scores={br_xPos=1052..1057, br_yPos=49..54, br_zPos=-6003..-5999}] run playsound block.sculk_shrieker.shriek ambient @a 1000 200 -6001 100 1
+tag @a[scores={br_xPos=1052..1057, br_yPos=49..54, br_zPos=-6003..-5999}] add br_pkfinish
+execute positioned 1055 53 -6001 run tag @a[tag=br_pkfinish,distance=10..] remove br_pkfinish
 
 
 # spleeftick

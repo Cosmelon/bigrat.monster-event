@@ -5,13 +5,10 @@
 # run from main:halls/tick
 
 tp @s -1184.00 4.00 749.97
-tellraw @s {"text":"You made it out!","color":"green"}
+tellraw @s {"text":"» You made it out!","color":"green"}
 
 scoreboard players set @s halls_death -1
 tag @s add halls_escaped
 tag @s remove halls_exit
 
-execute if entity @s[team=Red] run scoreboard players set .capt_red halls_keys -1
-execute if entity @s[team=Blue] run scoreboard players set .capt_blue halls_keys -1
-execute if entity @s[team=Green] run scoreboard players set .capt_green halls_keys -1
-execute if entity @s[team=Yellow] run scoreboard players set .capt_yellow halls_keys -1
+playsound entity.player.levelup voice @s ~ ~100 ~ 1000
